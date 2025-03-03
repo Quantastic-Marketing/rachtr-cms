@@ -7,5 +7,7 @@ use App\Http\Controllers\PageController;
 //     return view('welcome');
 // });
 
-
+Route::get('/product-page/{slug}', [PageController::class,'getProductPage']);
 Route::get('/{slug?}', [PageController::class,'getPage'])->where('slug', '.*');
+
+
