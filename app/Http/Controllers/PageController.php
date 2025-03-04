@@ -13,7 +13,7 @@ class PageController extends Controller
 
         try{ 
             if ($slug == "/" || $slug == null) {
-                $pageDetails = Pages::where('title', 'Home page')->with('header','footer')->first();
+                $pageDetails = Pages::where('is_homepage', true)->with('header','footer')->first();
                 if (!$pageDetails) {
                     return response()->json(["message" => "Page doesn't exist"], 404);
                 }
@@ -37,7 +37,6 @@ class PageController extends Controller
     public function getProductPage($slug){
         try{
             $product = Product::where('slug',$slug)->with('seo')->first();
-            // dd($product);
             if(!$product){
                 return response()->json(["message"=>"No product found"],404);
             }

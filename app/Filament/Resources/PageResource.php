@@ -12,6 +12,8 @@ use RalphJSmit\Filament\SEO\SEO;
 use App\Models\Pages as PageModel;
 use Filament\Forms\Components\Select;
 use App\Filament\Components\CustomSEO;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Checkbox;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
@@ -30,61 +32,54 @@ class PageResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('title')->label('Title name')->required(),
-                TextInput::make('slug')
-                        ->label('Slug')
-                        ->placeholder('Enter the slug')
-                        ->visible(fn (callable $get) => !$get('is_hompage')),
-                Select::make('parent_id')
-                        ->relationship('parent', 'title')
-                        ->nullable()
-                        ->label('Parent Page'),
-                Select::make('header_id')
-                        ->label('Header Template')
-                        ->options(function () {
-                            try {
-                                return CommonComponents::where('type', 'header')
-                                    ->pluck('type', 'id')
-                                    ->toArray() ?: [];
-                            } catch (\Exception $e) {
-                                return [];
-                            }
-                        })
-                        ->placeholder('Select Template'),
-                    
-                Select::make('footer_id')
-                        ->label('Footer Template')
-                        ->options(function () {
-                            try {
-                                return CommonComponents::where('type', 'footer')
-                                    ->pluck('type', 'id')
-                                    ->toArray() ?: [];
-                            } catch (\Exception $e) {
-                                return [];
-                            }
-                        })
-                        ->placeholder('Select Template'),
-                Select::make('status')
-                        ->options([
-                            'draft' => 'Draft',
-                            'archived' => 'Archived',
-                            'published' => 'Published',
-                        ]),
-                        SEO::make()
+                Section::make('Page')
+                    ->description('Basic page details and structure.')
+                    ->schema([
+                        TextInput::make('title')->label('Page name')->required(),
+                        TextInput::make('slug')
+                            ->label('Slug')
+                            ->placeholder('Enter the slug')
+                            ->visible(fn (callable $get) => !$get('is_hompage'))->required(),
+                        Checkbox::make('is_homepage')
+                            ->label('Set as Homepage')
+                            ->default(false)
+                            ->helperText('Only one post can be the homepage at a time.'),
+                        Select::make('status')
+                            ->options([
+                                'draft' => 'Draft',
+                                'archived' => 'Archived',
+                                'published' => 'Published',
+                            ])
+                            ->required(),
+                    ]),
+               
+                Section::make('SEO Details')
+                    ->description('Seo details for page')
+                    ->schema([
+                        SEO::make(['title', 'description', 'robots', 'canonical_url','meta'])
                         ->schema([
-                            Forms\Components\TextInput::make('title')->label('SEO Title'),
-                            Forms\Components\TextInput::make('description')->label('SEO Description'),
-                            Forms\Components\TextInput::make('robots')->label('Robots'),
-                            Forms\Components\TextInput::make('canonical_url')
+                            TextInput::make('title')->label('SEO Title'),
+                            TextInput::make('description')->label('SEO Description'),
+                            Select::make('robots')
+                                    ->label('Robots')
+                                    ->options([
+                                        'index, follow' => 'Index, Follow',
+                                        'noindex, follow' => 'NoIndex, Follow',
+                                        'index, nofollow' => 'Index, NoFollow',
+                                        'noindex, nofollow' => 'NoIndex, NoFollow',
+                                    ])
+                                    ->searchable(),
+                            TextInput::make('canonical_url')
                                 ->label('Canonical URL')
                                 ->url()
-                                ->nullable(),
+                                ->nullable()
+                                ,
                         ]),
-                TagsInput::make('seo.meta.focus_keywords')
+
+                        TagsInput::make('seo.meta.focus_keywords')
                         ->label('Focus Keywords')
                         ->placeholder('Enter keywords separated by commas...')
                         ->helperText('Add focus keywords for SEO analysis.')
-                        ->required()
                         ->afterStateHydrated(function ($component, $record) {
                             if ($record && $record->seo) {
                                 $meta = json_decode($record->seo->meta, true) ?? [];
@@ -92,16 +87,48 @@ class PageResource extends Resource
                                 $component->state($meta['focus_keywords'] ?? []);
             
                             }
-                        })
-                        ->afterStateUpdated(function ($state, $record) {
-                            if ($record && $record->seo) {
-                                $seo = $record->seo;
-                                $meta = json_decode($seo->meta, true) ?? []; // Decode the JSON
-                                $meta['focus_keywords'] = $state;  // Update focus_keywords
-                                $seo->update(['meta' => json_encode($meta)]);  // Re-encode the meta as JSON
-                            }
-                        }),
-            ]);
+                             }),
+                       
+                    ]),
+               
+                Section::make('Pate Template Details : ')
+                    ->description('Page details')
+                    ->schema([
+                        Select::make('parent_id')
+                                    ->relationship('parent', 'title')
+                                    ->nullable()
+                                    ->label('Parent Slug'),
+                        Select::make('header_id')
+                                    ->label('Header Template')
+                                    ->options(function () {
+                                        try {
+                                            return CommonComponents::where('type', 'header')
+                                                ->pluck('type', 'id')
+                                                ->toArray() ?: [];
+                                        } catch (\Exception $e) {
+                                            return [];
+                                        }
+                                    })
+                                    ->placeholder('Select Template')
+                                    ->required(),
+
+                        Select::make('footer_id')
+                                    ->label('Footer Template')
+                                    ->options(function () {
+                                        try {
+                                            return CommonComponents::where('type', 'footer')
+                                                ->pluck('type', 'id')
+                                                ->toArray() ?: [];
+                                        } catch (\Exception $e) {
+                                            return [];
+                                        }
+                                    })
+                                    ->placeholder('Select Template')
+                                    ->required(),
+                                    ])
+                       
+                            ]);
+                                
     }
 
     public static function table(Table $table): Table

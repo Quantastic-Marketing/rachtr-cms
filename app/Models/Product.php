@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Seo;
 use Illuminate\Database\Eloquent\Model;
 use RalphJSmit\Laravel\SEO\Support\HasSEO;
 
@@ -14,4 +15,9 @@ class Product extends Model
         'content' => 'array',   // Cast JSON to array
         'is_active' => 'boolean',
     ];
+
+    public function seo()
+    {
+        return $this->morphOne(Seo::class, 'model');
+    }
 }

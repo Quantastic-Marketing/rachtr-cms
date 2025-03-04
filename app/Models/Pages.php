@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\Seo;
 use App\Models\Pages;
 use App\Models\CommonComponents;
 use Illuminate\Database\Eloquent\Model;
 use RalphJSmit\Laravel\SEO\Support\HasSEO;
+
 
 class Pages extends Model
 {
@@ -16,7 +18,8 @@ class Pages extends Model
         'parent_id',
         'header_id',
         'footer_id',
-        'status'
+        'status',
+        'is_homepage'
     ];
 
     public function header()
@@ -40,6 +43,12 @@ class Pages extends Model
         return $this->hasMany(Pages::class, 'parent_id');
     }
 
+    public function seo()
+    {
+        return $this->morphOne(Seo::class, 'model');
+    }
+
+
     public function getFullSlugAttribute()
     {
         $slug = $this->slug;
@@ -49,6 +58,23 @@ class Pages extends Model
             $parent = $parent->parent;
         }
         return $slug;
+    }
+
+    /**
+     * Ensure only one post is marked as homepage.
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saving(function ($post) {
+            if ($post->is_homepage) {
+                // Unmark all other posts as homepage
+                static::where('id', '!=', $post->id)
+                    ->where('is_homepage', true)
+                    ->update(['is_homepage' => false]);
+            }
+        });
     }
 
 }

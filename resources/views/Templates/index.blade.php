@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <title>RachTR</title>
+
+        <title>{{ $page->seo->title }}</title>
+
+        <meta name="description" content="{{ $page->seo->description ?? 'Rahctr' }}">
+        <meta name="author" content="{{ $page->seo->author ?? 'Rachtr' }}">
+        @php
+            $metaData = json_decode($page->seo->meta ?? '{}', true);
+            $focusKeywords = isset($metaData['focus_keywords']) ? implode(', ', $metaData['focus_keywords']) : 'rachtr';
+        @endphp
+        <meta name="keywords" content="{{ $focusKeywords }}">
+        <link rel="canonical" href="{{ $page->seo->canonical_url ?? url()->current() }}">
+
+        <!-- Open Graph (Facebook, LinkedIn) -->
+        <meta property="og:title" content="{{ $page->seo->title ?? config('app.name') }}">
+        <meta property="og:description" content="{{ $page->seo->description ?? 'Rahctr' }}">
+        <meta property="og:image" content="{{ $page->seo->image ? asset($page->image) : asset('images/default-image.jpg') }}">
+        <meta property="og:url" content="{{ $page->seo->canonical_url ?? url()->current() }}">
+        <meta property="og:type" content="website">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ $page->seo->title ?? config('app.name') }}">
+        <meta name="twitter:description" content="{{ $page->seo->description ?? 'Rahctr' }}">
+        <meta name="twitter:image" content="{{ $page->seo->image ? asset($page->image) : asset('images/default-image.jpg') }}">
+
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--<link rel="stylesheet" href="css/hover-min.css" type="text/css">-->
         <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('css/slick.css')}}" type="text/css">
         <link rel="stylesheet" href="{{ asset('css/fancybox.css')}}"/>
-        <link href="{{ assect('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
-        <link  href="{{ assect('css/style.css') }}" type="text/css" rel="stylesheet">
-        <link href="{{ assect('css/responsive.css') }}" type="text/css" rel="stylesheet">
-        <link rel="shotcut icon" type="image/x-icon" href="{{ assect('images/favicon.ico') }}">
-        
+        <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
+        <link  href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
+        <link href="{{ asset('css/responsive.css') }}" type="text/css" rel="stylesheet">
+        <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
     </head>
 <body>
     <!-- This is a wrapper open -->
