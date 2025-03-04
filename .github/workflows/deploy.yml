@@ -39,6 +39,7 @@ jobs:
           script: |
             cd /var/www/rachtr
             git config --global --add safe.directory /var/www/rachtr
+            git reset --hard HEAD
             git pull origin main
             composer install --no-dev --optimize-autoloader
             php artisan migrate --force
