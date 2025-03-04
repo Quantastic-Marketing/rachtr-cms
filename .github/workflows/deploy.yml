@@ -1,0 +1,46 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+    steps:
+      - name: Checkout Repository
+        uses: 'actions/checkout@v2'
+        with:
+          ref: main
+          token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          
+      - name: Create GitHub deployment
+        uses: chrnorm/deployment-action@v2
+        id: deployment
+        with:
+          token: '${{ github.token }}'
+          environment-url: ${{ vars.MY_APP }}
+          environment: production
+        
+      - name: Set up SSH Key and Deploy my App on Server
+        uses: appleboy/ssh-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script_stop: true
+          ssh_known_hosts: false
+          script: |
+            cd /var/www/rachtr
+            git config --global --add safe.directory /var/www/rachtr
+            git reset --hard HEAD
+            git pull origin main
+            composer install --no-dev --optimize-autoloader
+            php artisan migrate --force
+            php artisan optimize:clear
