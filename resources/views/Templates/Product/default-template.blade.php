@@ -98,10 +98,10 @@
                 <!-- Image & Description -->
                 <div class="col-lg-7 product-left-part">
                         <div class="product-slider">
-                            @if(!empty($product->content['product_images']) && count($product->content['product_images']) == 1)
+                            @if(!empty($product->content['product_images']) && count($product->content['product_images']) == 1 &&  !is_null($product->content['product_images'][0]['product_image']))
                                 <div class="product-main-slider">
                                     <div class="image-wrapper">
-                                        <a href="https://static.wixstatic.com/media/f8ee4f_36c858739cc4438db37805af924d4480~mv2.jpg/v1/fill/w_698,h_698,al_c,q_85,usm_0.66_1.00_0.01/f8ee4f_36c858739cc4438db37805af924d4480~mv2.jpg" data-fancybox="gallery">
+                                        <a href="{{asset('/storage/'.$product->content['product_images'][0]['product_image'])}}" data-fancybox="gallery">
                                         <img src="{{asset('/storage/'.$product->content['product_images'][0]['product_image'])}}" alt="Product 1">
                                         </a>
                                     </div>
@@ -111,11 +111,13 @@
                                 <!-- Main Image Slider -->
                                 <div class="product-main-slider">
                                     @foreach($product->content['product_images'] as $image)
-                                        <div class="image-wrapper"> 
-                                            <a href="{{asset('/storage/'.$image['product_image'])}}" data-fancybox="gallery">
-                                            <img src="{{asset('/storage/'.$image['product_image'])}}" alt="Product 1">
-                                            </a>
-                                        </div>
+                                        @if(!empty($image['product_image']))
+                                            <div class="image-wrapper">
+                                                <a href="{{asset('/storage/'.$image['product_image'])}}" data-fancybox="gallery">
+                                                <img src="{{asset('/storage/'.$image['product_image'])}}" alt="Product 1">
+                                                </a>
+                                            </div>
+                                        @endif
                                     @endforeach
                                 </div>
                                 <!-- Thumbnail Slider -->

@@ -15,6 +15,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\Repeater;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -34,37 +35,32 @@ class ProductResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
-                TextInput::make('slug')
-                    ->required()
-                    ->unique(
-                        table: Product::class,
-                        column: 'slug',
-                        ignorable: fn ($record) => $record // Ignore the current record when editing
-                    )
-                    ->maxLength(255),
-                SEO::make()
+
+                Section::make('Page')
+                    ->description('Basic page details and structure.')
                     ->schema([
-                        TextInput::make('title')->label('SEO Title'),
-                        TextInput::make('description')->label('SEO Description'),
-                        TextInput::make('robots')->label('Robots'),
-                        TextInput::make('canonical_url')
-                            ->label('Canonical URL')
-                            ->url()
-                            ->nullable(),
+                            TextInput::make('name')
+                                ->required()
+                                ->maxLength(255),
+                            TextInput::make('slug')
+                                ->required()
+                                ->unique(
+                                    table: Product::class,
+                                    column: 'slug',
+                                    ignorable: fn ($record) => $record // Ignore the current record when editing
+                                )
+                                ->maxLength(255),
+                            Select::make('template')
+                                ->options([
+                                    'default-template' => 'Default Product Template'
+                                ])
+                                ->required()
+                                ->reactive() 
+                                ->afterStateUpdated(function ($state, callable $set) {
+                                    $set('content', []);
+                                }),
                     ]),
-                Select::make('template')
-                    ->options([
-                        'default-template' => 'Default Product Template'
-                    ])
-                    ->required()
-                    ->reactive() 
-                    ->afterStateUpdated(function ($state, callable $set) {
-                        $set('content', []);
-                    }),
-                    Section::make('content')
+                Section::make('Page content')
                     ->schema(function (callable $get) {
                         $template = $get('template');
 
@@ -76,7 +72,8 @@ class ProductResource extends Resource
                                         FileUpload::make('product_image')
                                             ->label('Image')
                                             ->image()
-                                            ->directory('images'),
+                                            ->directory('images')
+                                            ->required(),
                                     ])
                                     ->columns(1)
                                     ->defaultItems(0)
@@ -113,6 +110,40 @@ class ProductResource extends Resource
                         };
                     })
                     ->collapsible(),
+                Section::make('Product Page SEO')
+                    ->description('Basic page seo  details.')
+                    ->schema([
+                        SEO::make()
+                        ->schema([
+                            TextInput::make('title')->label('SEO Title'),
+                            TextInput::make('description')->label('SEO Description'),
+                            Select::make('robots')
+                            ->label('Robots')
+                            ->options([
+                                'index, follow' => 'Index, Follow',
+                                'noindex, follow' => 'NoIndex, Follow',
+                                'index, nofollow' => 'Index, NoFollow',
+                                'noindex, nofollow' => 'NoIndex, NoFollow',
+                            ])
+                            ->searchable(),
+                            TextInput::make('canonical_url')
+                                ->label('Canonical URL')
+                                ->url()
+                                ->nullable(),
+                        ]),
+                        TagsInput::make('seo.meta.focus_keywords')
+                                ->label('Focus Keywords')
+                                ->placeholder('Enter keywords separated by commas...')
+                                ->helperText('Add focus keywords for SEO analysis.')
+                                ->afterStateHydrated(function ($component, $record) {
+                                        if ($record && $record->seo) {
+                                            $meta = json_decode($record->seo->meta, true) ?? [];
+                                            // Set the focus_keywords state with the existing tags
+                                            $component->state($meta['focus_keywords'] ?? []);
+                        
+                                        }
+                                    }),
+                        ]),
             ]);
     }
 
