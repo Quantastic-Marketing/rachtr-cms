@@ -11,6 +11,7 @@ use Filament\Support\Colors\Color;
 use Filament\Http\Middleware\Authenticate;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
+use TomatoPHP\FilamentUsers\FilamentUsersPlugin;
 use Filament\Http\Middleware\AuthenticateSession;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
@@ -56,7 +57,8 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-                Blog::make()
+                Blog::make(),
+                FilamentUsersPlugin::make()
             ]);
     }
 }

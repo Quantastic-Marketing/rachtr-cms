@@ -43,7 +43,7 @@
                                 <input placeholder="Search" type="text" name="query" value="{{ request()->get('query') }}" class="w-full px-6 py-3 pl-12 text-sm font-medium text-gray-800 placeholder-gray-400 border rounded-full outline-none bg-white/10 placeholder:text-slate-500 focus:ring-0" />
                             </div>
                             @error('query')
-                            <span class="text-xs text-red-500">{{ $message }}</span>
+                                <span class="text-xs text-red-500">{{ $message }}</span>
                             @enderror
                         </div>
                     </form>
