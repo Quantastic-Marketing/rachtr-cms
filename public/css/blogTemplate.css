@@ -99,6 +99,26 @@
     font-size: 18px;
     line-height: 20px;
 }
+.recent-post-card .rec-post-title{
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+
+}
+.blogs-content .related-posts .related-post-desc a{
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+
+}
 .recent-post-card .rec-post-title:hover{
     color:#0064E6; 
 }
