@@ -97,7 +97,7 @@
             <div class="row">
                 <!-- Image & Description -->
                 <div class="col-lg-7 product-left-part">
-                        <div class="product-slider">
+                        <div class="product-slider mb-lg-2">
                             @if(!empty($product->content['product_images']) && count($product->content['product_images']) == 1 &&  !is_null($product->content['product_images'][0]['product_image']))
                                 <div class="product-main-slider">
                                     <div class="image-wrapper">
@@ -134,16 +134,8 @@
                     @isset($product->name)
                         <h2 class="py-2 product-title text-orange d-lg-none fs-3 text-center">RachTR SG 34</h2>
                     @endisset
-                    @isset($product->content['product_desc'])
-                        <p class="mt-3 fs-6">{{$product->content['product_desc']}}</p>
-                    @endisset
-
-                    @if(!empty($product->content['product_lists']))
-                        @foreach($product->content['product_lists'] as $item)
-                        <ul class="custom-list pb-3 pb-lg-0 ms-3 ms-lg-5">
-                            <li>{{ $item['list'] ?? '' }}</li>
-                        </ul>
-                        @endforeach
+                    @if(!empty($product->content['product_desc']))
+                        {!! $product->content['product_desc'] !!}
                     @endif
                 </div>
 
@@ -181,8 +173,8 @@
             
         </div>
         <div class="download-sec text-center mt-4 py-5 d-flex justify-content-center gap-2 gap-md-5">
-            <a href="{{ $product->content['download_sheet'] ?? '#' }}" class="btn btn-dark p-2 p-md-3 m-0">DOWNLOAD DATA SHEET</a>
-            <a href="{{ $product->content['download_cert'] ?? '#' }}" class="btn btn-dark p-2 p-md-3 m-0">DOWNLOAD CERTIFICATE</a>
+            <a href="{{ isset($product->content['download_sheet']) ? asset('/storage/'.$product->content['download_sheet']) : '#' }}" class="btn btn-dark p-2 p-md-3 m-0">DOWNLOAD DATA SHEET</a>
+            <a href="{{ isset($product->content['download_cert']) ? asset('/storage/'.$product->content['download_cert']) : '#' }}" class="btn btn-dark p-2 p-md-3 m-0">DOWNLOAD CERTIFICATE</a>
         </div>
        </section>
 

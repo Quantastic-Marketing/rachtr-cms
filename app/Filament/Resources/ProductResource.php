@@ -88,22 +88,17 @@ class ProductResource extends Resource
                                     ->columns(1)
                                     ->defaultItems(0)
                                     ->addActionLabel('Add Benefits Accordian'),
-                                TextInput::make('content.product_desc')->label('Description of Product'),
-                                Repeater::make('content.product_lists')
-                                    ->label('Product Bullet Lists')
-                                    ->schema([
-                                        TextInput::make('list')->label('Product Description List '),
-                                    ])
-                                    ->columns(1)
-                                    ->defaultItems(0),
-                                TextInput::make('content.download_sheet')
-                                    ->label('Product Download Sheet URL')
-                                    ->url()
-                                    ->placeholder('https://example.com'),
-                                TextInput::make('content.download_cert')
-                                    ->label('Product Download Certificate URL')
-                                    ->url()
-                                    ->placeholder('https://example.com'),
+                                RichEditor::make('content.product_desc')->label('Description of Product'),
+                                FileUpload::make('content.download_sheet')
+                                    ->label('Upload Sheets')
+                                    ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']) // Allow PDF & Word
+                                    ->maxSize(5120) // Optional: Limit file size (5MB)
+                                    ->directory('products'),
+                                FileUpload::make('content.download_cert')
+                                    ->label('Upload Certificate')
+                                    ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']) // Allow PDF & Word
+                                    ->maxSize(5120) // Optional: Limit file size (5MB)
+                                    ->directory('products')
                             
                             ],
                             default => [], // No fields until a template is selected
