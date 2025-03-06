@@ -30,8 +30,16 @@ class Product extends Model
         // When a product is updated
         static::updated(function ($product) {
             if ($product->isDirty('content')) {
-                \Log::info('here');
                 static::deleteRemovedImages($product);
+            }
+
+            $original = $product->getOriginal('content');
+            $disk = 'public';
+            if (isset($original['download_sheet']) && (!isset($product->content['download_sheet']) || $original['download_sheet'] !== $product->content['download_sheet'])) {
+                Storage::disk($disk)->delete($original['download_sheet']);
+            }
+            if (isset($original['download_cert']) && (!isset($product->content['download_cert']) || $original['download_cert'] !== $product->content['download_cert'])) {
+                Storage::disk($disk)->delete($original['download_cert']);
             }
         });
     }
