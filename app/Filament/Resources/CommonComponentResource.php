@@ -64,7 +64,7 @@ class CommonComponentResource extends Resource
                                                 })) // Show 'name', store 'slug'
                                                 ->searchable()
                                                 ->preload()
-                                                ->nullable()
+                                                ->required()
                                                 ->visible(fn ($get) => $get('has_link')),
                                         Repeater::make('sub_items')
                                         ->label('Add the Sub Menu Items')
@@ -81,7 +81,7 @@ class CommonComponentResource extends Resource
                                                 }))
                                                 ->searchable()
                                                 ->preload()
-                                                ->nullable()
+                                                ->required()
                                                 ->visible(fn ($get) => $get('has_link')),
                                             Repeater::make('sub_items')
                                                 ->label('Add the Sub Menu Items')
@@ -98,8 +98,8 @@ class CommonComponentResource extends Resource
                                                         }))
                                                         ->searchable()
                                                         ->preload()
-                                                        ->nullable()
-                                                        ->visible(fn ($get) => $get('has_link')),
+                                                        ->visible(fn ($get) => $get('has_link'))
+                                                        ->required(),
                                                             
                                                     ])
                                                     ->defaultItems(0)

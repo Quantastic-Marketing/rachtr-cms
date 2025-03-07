@@ -5,7 +5,7 @@
     $headerContent = $header->content ?? [];
 
     
-    
+  
 @endphp
 <div class="header">
            <div class="container">
@@ -26,16 +26,16 @@
                          <ul class="head-nav">
                          @foreach($headerContent['menu-items'] ?? [] as $menuItem)
                             <li class="">
-                              
                                 <a href="{{ $menuItem['has_link'] && !empty($menuItem['slug'])  ? url($menuItem['slug'])  :'#' }}">{{ $menuItem['item'] }}</a>
                                   @if(!empty($menuItem['sub_items']))
                                     <ul class="submenu">
                                         @foreach($menuItem['sub_items'] as $subItem)
+
                                           <li><a href="{{ $subItem['has_link'] && !empty($subItem['slug']) ? url($subItem['slug'])   :'#' }}">{{ $subItem['sub-item'] }}</a>
                                             @if(!empty($subItem['sub_items']))
                                               <ul class="submenu">
                                                 @foreach($subItem['sub_items'] as $subSubItem)
-                                                  <li><a href="{{ $subSubItem['has_link'] && !empty($subSubItem['slug']) ? url($subSubItem['slug'])  :'#' }}">{{ $subSubItem['sub-item'] }}</a></li>
+                                                  <li><a href="{{ $subSubItem['has_link'] && !empty($subSubItem['slug']) ? url($subSubItem['slug'])  : '#' }}">{{ $subSubItem['sub-item'] }}</a></li>
                                                 @endforeach
                                               </ul>
                                             @endif
