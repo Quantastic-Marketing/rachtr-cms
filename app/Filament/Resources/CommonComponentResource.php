@@ -6,10 +6,15 @@ use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use App\Models\Pages as Page;
 use App\Models\CommonComponents;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\CommonComponentResource\Pages;
@@ -25,13 +30,90 @@ class CommonComponentResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->label('Template name')->required(),
-                Select::make('type')
-                        ->options([
-                            'header' => 'Header',
-                            'footer' => 'Footer'
+
+                Section::make('Component')
+                    ->description('Basic Component details.')
+                    ->schema([
+                                TextInput::make('name')->label('Template name')->required(),
+                                Select::make('type')
+                                ->options([
+                                    'header' => 'Header',
+                                    'footer' => 'Footer'
+                                ]),
+                            ]),
+                Section::make('Component Content')
+                        ->description('Fill in the dynamic components')
+                        ->schema([
+                            FileUpload::make('content.logo')
+                                    ->label('Logo Image')
+                                    ->image()
+                                    ->directory('images')
+                                    ->required(),
+                            Repeater::make('content.menu-items')
+                                    ->label('Add the Menu Items')
+                                    ->schema([
+                                        TextInput::make('item')->label('Menu Item Name')->required(),
+                                        Checkbox::make('has_link')
+                                                ->label('Enable Link')
+                                                ->default(false)
+                                                ->reactive(),
+                                        Select::make('slug')
+                                                ->label('Select Page')
+                                                ->options(Page::all()->mapWithKeys(function ($page) {
+                                                    return [$page->full_slug => $page->title]; // Store 'full_slug', display 'title'
+                                                })) // Show 'name', store 'slug'
+                                                ->searchable()
+                                                ->preload()
+                                                ->nullable()
+                                                ->visible(fn ($get) => $get('has_link')),
+                                        Repeater::make('sub_items')
+                                        ->label('Add the Sub Menu Items')
+                                        ->schema([
+                                            TextInput::make('sub-item')->label('Sub Menu Item Name')->required(),
+                                            Checkbox::make('has_link')
+                                                ->label('Enable Link')
+                                                ->default(false)
+                                                ->reactive(),
+                                        Select::make('slug')
+                                                ->label('Select Page')
+                                                ->options(Page::all()->mapWithKeys(function ($page) {
+                                                    return [$page->full_slug => $page->title]; // Store 'full_slug', display 'title'
+                                                }))
+                                                ->searchable()
+                                                ->preload()
+                                                ->nullable()
+                                                ->visible(fn ($get) => $get('has_link')),
+                                            Repeater::make('sub_items')
+                                                ->label('Add the Sub Menu Items')
+                                                ->schema([
+                                                    TextInput::make('sub-item')->label('Sub Menu Item Name')->required(),
+                                                    Checkbox::make('has_link')
+                                                ->label('Enable Link')
+                                                ->default(false)
+                                                ->reactive(),
+                                                Select::make('slug')
+                                                        ->label('Select Page')
+                                                        ->options(Page::all()->mapWithKeys(function ($page) {
+                                                            return [$page->full_slug => $page->title]; // Store 'full_slug', display 'title'
+                                                        }))
+                                                        ->searchable()
+                                                        ->preload()
+                                                        ->nullable()
+                                                        ->visible(fn ($get) => $get('has_link')),
+                                                            
+                                                    ])
+                                                    ->defaultItems(0)
+                                                    ->addActionLabel('Sub Menu Content'),
+                                        ])
+                                        ->defaultItems(0)
+                                        ->addActionLabel('Sub menu Content'),
+                                        
+                                    ])
+                                    ->columns(1)
+                                    ->defaultItems(0)
+                                    ->addActionLabel('Menu Content'),
                         ]),
-                
+
                         
             ]);
     }
