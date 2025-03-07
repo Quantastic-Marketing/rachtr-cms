@@ -13,8 +13,7 @@
         <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
         <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
         <link href="{{ asset('css/responsive.css') }}" type="text/css" rel="stylesheet">
-        <!-- <link  href="css/epoxy.css" type="text/css" rel="stylesheet"> -->
-        <!-- <link rel="stylesheet" href="css/epoxyCost.css"> -->
+        <meta name="robots" content="index, follow">
         <link href="{{ asset('css/puFloor.css') }}" type="text/css" rel="stylesheet">
         <link href="{{ asset('css/contractual.css') }}" type="text/css" rel="stylesheet">
         <link href="{{ asset('css/contact.css') }}" type="text/css" rel="stylesheet">
@@ -123,14 +122,14 @@
                         <div class="card-body p-4 p-sm-5">
                             <div class="blog-content pb-4">
                                 <h2 class="blog-title mt-2">{{$post->title}}</h2>
-                                <p>Updated : 3 days ago</p>
+                                <p>Updated {{ $post->updated_at->diffForHumans() }}</p>
                             </div>
                             <div class="image-wrapper py-2">
                                 <img class="w-100 h-100 object-fit-cover" src="{{$post->feature_photo}}" alt="">
                             </div>
 
                             <div class="blog-body py-5">
-                               {!! $post->body !!}
+                               {!! str($post->body)->sanitizeHtml() !!}
                             </div>
 
                             <div class="category-links mb-4 mt-2">
