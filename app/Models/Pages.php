@@ -77,4 +77,6 @@ class Pages extends Model
         });
     }
 
+    
+
 }

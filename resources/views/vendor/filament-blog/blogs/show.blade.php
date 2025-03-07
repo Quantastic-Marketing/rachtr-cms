@@ -10,7 +10,7 @@
         $focusKeywords = isset($post->seoDetail->keywords) ? implode(', ',$post->seoDetail->keywords) : 'rachtr';
         @endphp
         <meta name="keywords" content="{{ $focusKeywords }}">
-
+        <meta name="robots" content="index, follow">
           <!-- Open Graph (Facebook, LinkedIn) -->
         <meta property="og:title" content="{{ $page->seoDetail->title ?? config('app.name') }}">
         <meta property="og:description" content="{{ $page->seoDetail->description ?? 'Rahctr' }}">
@@ -135,14 +135,14 @@
                         <div class="card-body p-4 p-sm-5">
                             <div class="blog-content pb-4">
                                 <h2 class="blog-title mt-2">{{$post->title ?? ''}}</h2>
-                                <p>Updated : 3 days ago</p>
+                                <p>Updated : {{ $post->updated_at->diffForHumans() }}</p>
                             </div>
                             <div class="image-wrapper py-2">
                                 <img class="w-100 h-100 object-fit-cover" src="{{$post->feature_photo}}" alt="">
                             </div>
 
                             <div class="blog-body py-5">
-                               {!! $post->body !!}
+                            {!! str($post->body)->sanitizeHtml() !!}
                             </div>
 
                             <div class="category-links mb-4 mt-2">
