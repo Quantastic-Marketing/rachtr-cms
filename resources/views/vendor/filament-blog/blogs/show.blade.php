@@ -216,13 +216,13 @@
                                     @foreach($post->relatedPosts(2) as $relatedPost)
                                         <!-- Blog Post 1 -->
                                         <div class="d-flex col-sm-6 me-2">
-                                            <div class="card recent-blog">
+                                            <div class="card recent-blog m-0 w-100">
                                                 <div class="rec-post-img">
                                                     <img src="{{$relatedPost->feature_photo}}" alt="Marble Floor Polishing">
                                                 </div>
                                                 
-                                                <div class="d-flex flex-column gap-4 p-4">
-                                                    <a href="{{ route('filamentblog.post.show', ['post' => $relatedPost->slug]) }}" class="rec-post-title ">{{$relatedPost->title ?? ''}}</a>
+                                                <div class="d-flex flex-column gap-4 justify-content-between p-4 m-0 rec-pos-style">
+                                                    <a href="{{ route('filamentblog.post.show', ['post' => $relatedPost->slug]) }}" class="rec-post-title m-0">{{$relatedPost->title ?? ''}}</a>
                                                     <div class="blog-stats d-flex flex-column m-0">
                                                         <hr class="d-md-block m-0 my-md-2 order-2 order-md-1">
                                                         <div class="d-flex justify-content-between align-items-center order-1 order-md-2 m-0 my-2">
