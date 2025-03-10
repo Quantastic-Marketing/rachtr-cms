@@ -59,9 +59,7 @@ class CommonComponentResource extends Resource
                                                 ->reactive(),
                                         Select::make('slug')
                                                 ->label('Select Page')
-                                                ->options(Page::all()->mapWithKeys(function ($page) {
-                                                    return [$page->full_slug => $page->title]; // Store 'full_slug', display 'title'
-                                                })) // Show 'name', store 'slug'
+                                                ->options(fn () => Page::query()->pluck('title', 'slug')->toArray()) // Show 'name', store 'slug'
                                                 ->searchable()
                                                 ->preload()
                                                 ->required()
@@ -76,9 +74,7 @@ class CommonComponentResource extends Resource
                                                 ->reactive(),
                                         Select::make('slug')
                                                 ->label('Select Page')
-                                                ->options(Page::all()->mapWithKeys(function ($page) {
-                                                    return [$page->full_slug => $page->title]; // Store 'full_slug', display 'title'
-                                                }))
+                                                ->options(fn () => Page::query()->pluck('title', 'slug')->toArray())
                                                 ->searchable()
                                                 ->preload()
                                                 ->required()
@@ -93,9 +89,7 @@ class CommonComponentResource extends Resource
                                                 ->reactive(),
                                                 Select::make('slug')
                                                         ->label('Select Page')
-                                                        ->options(Page::all()->mapWithKeys(function ($page) {
-                                                            return [$page->full_slug => $page->title]; // Store 'full_slug', display 'title'
-                                                        }))
+                                                        ->options(fn () => Page::query()->pluck('title', 'slug')->toArray())
                                                         ->searchable()
                                                         ->preload()
                                                         ->visible(fn ($get) => $get('has_link'))
