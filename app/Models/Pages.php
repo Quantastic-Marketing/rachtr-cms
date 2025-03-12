@@ -19,11 +19,16 @@ class Pages extends Model
         'header_id',
         'footer_id',
         'status',
-        'is_homepage'
+        'is_homepage',
+        'schema_data'
+    ];
+
+    protected $casts = [
+        'schema_data' => 'array',
     ];
 
     public function header()
-    {
+    {   
         return $this->belongsTo(CommonComponents::class, 'header_id');
     }
 

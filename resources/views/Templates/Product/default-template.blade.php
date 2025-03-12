@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="{{ asset('css/product-template.css') }}" type="text/css">
         <link href="{{ asset('css/responsive.css') }}" type="text/css" rel="stylesheet">
         <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
+        @if(!empty($product->schema_data))<script type="application/ld+json">{!! $product->schema_data !!}</script>@endif
         
     </head>
 <body>

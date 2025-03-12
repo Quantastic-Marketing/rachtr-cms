@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PageResource\RelationManagers;
+use Filament\Forms\Components\Textarea;
 
 class PageResource extends Resource
 {
@@ -73,7 +74,6 @@ class PageResource extends Resource
                                 ->label('Canonical URL')
                                 ->url()
                                 ->nullable()
-                                ,
                         ]),
 
                         TagsInput::make('seo.meta.focus_keywords')
@@ -88,6 +88,11 @@ class PageResource extends Resource
             
                             }
                              }),
+                        Textarea::make('schema_data')
+                             ->label('JSON Schema')
+                             ->rows(10) 
+                             ->rules(['nullable', 'json']) // Ensures valid JSON
+                             ->placeholder('Enter JSON here...')
                        
                     ]),
                

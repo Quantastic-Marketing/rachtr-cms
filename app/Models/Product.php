@@ -10,10 +10,11 @@ use RalphJSmit\Laravel\SEO\Support\HasSEO;
 class Product extends Model
 {
     use HasSEO;
-    protected $fillable = ['name', 'slug', 'template', 'content', 'is_active'];
+    protected $fillable = ['name', 'slug', 'template', 'content', 'is_active','schema_data'];
 
     protected $casts = [
-        'content' => 'array',   // Cast JSON to array
+        'content' => 'array',
+        'schema_data'=> 'array',  // Cast JSON to array
         'is_active' => 'boolean',
     ];
 
