@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('pages_and_products', function (Blueprint $table) {
+            Schema::table('pages', function (Blueprint $table) {
+                $table->json('schema_data')->nullable()->after('is_homepage');
+            });
+    
+            Schema::table('products', function (Blueprint $table) {
+                $table->json('schema_data')->nullable()->after('content');
+            });
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('pages', function (Blueprint $table) {
+            $table->dropColumn('schema_data');
+        });
+
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('schema_data');
+        });
+    }
+};

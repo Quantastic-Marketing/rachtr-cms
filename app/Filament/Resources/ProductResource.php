@@ -14,6 +14,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
@@ -138,6 +139,11 @@ class ProductResource extends Resource
                         
                                         }
                                     }),
+                        Textarea::make('schema_data')
+                                    ->label('JSON Schema')
+                                    ->rows(10) 
+                                    ->rules(['nullable', 'json']) // Ensures valid JSON
+                                    ->placeholder('Enter JSON here...')
                         ]),
             ]);
     }

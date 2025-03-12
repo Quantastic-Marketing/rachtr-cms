@@ -20,6 +20,7 @@
     <link href="{{ asset('css/puFloor.css') }}" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/architect.css') }}">
     <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
+    @if(!empty($page->schema_data))<script type="application/ld+json">{!! $page->schema_data !!}</script>@endif
 
 </head>
 
