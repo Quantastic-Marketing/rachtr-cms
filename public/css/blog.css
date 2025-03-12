@@ -190,6 +190,13 @@
     width: 100%;
     object-fit: cover;
 }
+.blogs-content .ul {
+    text-align: unset !important;
+    padding: unset !important;
+}
+.blogs-content ul li{
+    list-style-type: disc !important;
+}
 
 
 @media (min-width: 1400px) {
