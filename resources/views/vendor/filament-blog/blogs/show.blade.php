@@ -134,7 +134,7 @@
                     <div class="card border-sm  shadow-md  mb-4">
                         <div class="card-body p-4 p-sm-5">
                             <div class="blog-content pb-4">
-                                <h2 class="blog-title mt-2">{{$post->title ?? ''}}</h2>
+                                <h1 class="blog-title mt-2">{{$post->title ?? ''}}</h1>
                                 <p>Updated : {{ $post->updated_at->diffForHumans() }}</p>
                             </div>
                             <div class="image-wrapper py-2">
