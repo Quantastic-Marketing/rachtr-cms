@@ -15,7 +15,7 @@ class PageController extends Controller
             if ($slug == "/" || $slug == null) {
                 $pageDetails = Pages::where('is_homepage', true)->with('header','footer')->first();
                 if (!$pageDetails) {
-                    return response()->json(["message" => "Page doesn't exist"], 404);
+                    return view('fallback');
                 }
                 return view('Templates.index',['page' => $pageDetails]);
             } else {
@@ -23,7 +23,7 @@ class PageController extends Controller
                 $pageDetails = Pages::where('slug', $currentSlug)->with('header','footer')->first();
                 
                 if (!$pageDetails) {
-                    return response()->json(["message" => "Page doesn't exist"], 404);
+                    return view('fallback');
                 }
                 
                 return view("Templates.".str_replace('/', '.', $slug),['page' => $pageDetails]);
@@ -38,7 +38,7 @@ class PageController extends Controller
         try{
             $product = Product::where('slug',$slug)->with('seo')->first();
             if(!$product){
-                return response()->json(["message"=>"No product found"],404);
+                return view('fallback');
             }
 
             return view('Templates.Product.'.$product->template,['product'=>$product]);
