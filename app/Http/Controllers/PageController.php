@@ -21,12 +21,14 @@ class PageController extends Controller
             } else {
                 $currentSlug = collect(explode('/', $slug))->last();
                 $pageDetails = Pages::where('slug', $currentSlug)->with('header','footer')->first();
+                $templatePath = "Templates." . str_replace('/', '.', $slug);
                 
-                if (!$pageDetails) {
+                if (!$pageDetails || !view()->exists($templatePath) ) {
                     return view('fallback');
                 }
                 
-                return view("Templates.".str_replace('/', '.', $slug),['page' => $pageDetails]);
+                
+                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath]);
             }
         }catch(Exception $e){
             \Log::error('Page load error: ' . $e->getMessage());
@@ -40,8 +42,7 @@ class PageController extends Controller
             if(!$product){
                 return view('fallback');
             }
-
-            return view('Templates.Product.'.$product->template,['product'=>$product]);
+            return view('layouts.app',['page'=>$product,'template'=>$product->template]);
         }catch(Expression $e){
             \Log::error('Product load error: ' . $e->getMessage());
             return response()->json(["message"=>"Error occured while loading" . $e.message()],500);
