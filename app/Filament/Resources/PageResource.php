@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\Product;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use App\Models\CommonComponents;
@@ -14,9 +15,12 @@ use Filament\Forms\Components\Select;
 use App\Filament\Components\CustomSEO;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Repeater;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -31,6 +35,7 @@ class PageResource extends Resource
 
     public static function form(Form $form): Form
     {
+        $products = Product::pluck('name', 'id')->toArray();
         return $form
             ->schema([
                 Section::make('Page')
@@ -52,6 +57,13 @@ class PageResource extends Resource
                                 'published' => 'Published',
                             ])
                             ->required(),
+                        Checkbox::make('content.is_product_list')
+                            ->label('Is it a product list page?')
+                            ->reactive()
+                            ->afterStateHydrated(fn ($set, $record) => 
+                                    $set('content.is_product_list', isset($record->content['is_product_list']) ? (bool) $record->content['is_product_list'] : false)
+                            ),
+                                    
                     ]),
                
                 Section::make('SEO Details')
@@ -96,7 +108,7 @@ class PageResource extends Resource
                        
                     ]),
                
-                Section::make('Pate Template Details : ')
+                Section::make('Page Template Details : ')
                     ->description('Page details')
                     ->schema([
                         Select::make('parent_id')
@@ -130,9 +142,63 @@ class PageResource extends Resource
                                     })
                                     ->placeholder('Select Template')
                                     ->required(),
-                                    ])
+                                ]),
+                    Section::make('Add Page Content')
+                            ->description('Add section,images and products')
+                            ->schema([
+                                FileUpload::make('content.banner_image')
+                                            ->image()
+                                            ->disk('public')
+                                            ->directory('images')
+                                            ->label('Banner Image')
+                                            ->required(),
+                                TextInput::make('content.page_heading')
+                                            ->label('Page Heading')
+                                            ->required(),
+                                RichEditor::make('content.body')->label('The Body text')->required(),
+                                Checkbox::make('has_faq')
+                                            ->label('Does It have FAQ Section')
+                                            ->reactive()
+                                            ->afterStateHydrated(fn ($set, $record) => 
+                                                        $set('has_faq', isset($record->content['faq_section']) && count($record->content['faq_section']) > 0)
+                                                    ),
+                                Repeater::make('content.faq_section')
+                                            ->label('Faq Section')
+                                            ->schema([
+                                                RichEditor::make('acc_title')->label('Title for FAQ')->required(),
+                                                RichEditor::make('acc_body')->label('Dropdown description for FAQ')->required(),
+                                                    ])
+                                            ->addActionLabel('Adds FAQ Accordian')
+                                            ->hidden(fn (callable $get) => !$get('has_faq')),
+                                Repeater::make('content.sections')
+                                            ->label('Page Sections')
+                                            ->schema([
+                                                TextInput::make('section_heading')
+                                                        ->label('Section Heading')
+                                                        ,
+                                                Select::make('bg_color')
+                                                        ->label('Background Color for the Section')
+                                                        ->options([
+                                                            '#eeeeee' => 'Light Gray (#EEEEEE)',
+                                                            '#ffffff' => 'White (#FFFFFF)',
+                                                        ])
+                                                        ->default('#ffffff')
+                                                        ->required(),
+                                                Select::make('products')
+                                                        ->label('Select Products')
+                                                        ->options($products)
+                                                        ->searchable()
+                                                        ->preload()
+                                                        ->multiple()
+                                                        ->required(),
+                                                    ]),
+
+                                
+                            ])
+                            ->hidden(fn (callable $get) => !$get('content.is_product_list')),
                        
-                            ]);
+                    ]);
+                    
                                 
     }
 

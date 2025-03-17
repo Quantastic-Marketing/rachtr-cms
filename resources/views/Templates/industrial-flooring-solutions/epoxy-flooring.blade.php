@@ -1,6 +1,4 @@
 
-    <link  href="css/epoxy.css" type="text/css" rel="stylesheet">
-
     <div class="wrapper"> 
      
        <div class="bnr_sldr">

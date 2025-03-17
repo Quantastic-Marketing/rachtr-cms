@@ -20,11 +20,13 @@ class Pages extends Model
         'footer_id',
         'status',
         'is_homepage',
-        'schema_data'
+        'schema_data',
+        'content'
     ];
 
     protected $casts = [
         'schema_data' => 'array',
+        'content' => 'array',
     ];
 
     public function header()

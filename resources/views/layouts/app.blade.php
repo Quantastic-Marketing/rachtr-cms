@@ -60,6 +60,22 @@
         <link href="css/contractual.css" type="text/css" rel="stylesheet">
         <link href="css/contact.css" type="text/css" rel="stylesheet">  
         @endif
+        @if(!empty($page->content['is_product_list']) && $page->content['is_product_list'] == 1)
+            <link rel="stylesheet" href="{{ asset('css/epoxyIndustry.css') }}">
+        @endif
+        @if(request()->is('*pu-flooring'))
+        <link  href="{{ asset('css/epoxy.css') }}" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/epoxyCost.css') }}">
+        <link  href="{{ asset('css/puFloor.css') }}" type="text/css" rel="stylesheet">
+        @endif
+        @if(request()->is('*epoxy-flooring'))
+        <link  href="{{ asset('css/epoxy.css') }}" type="text/css" rel="stylesheet">
+        @endif
+        @if(request()->is('*epoxy-flooring-cost-price'))
+        <link  href="{{ asset('css/epoxy.css') }}" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/epoxyCost.css') }}">
+        @endif
+
         
        
         @if(!empty($page->schema_data))

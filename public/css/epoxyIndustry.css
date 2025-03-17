@@ -44,6 +44,16 @@
     text-align: center;
 }
 
+.industry-banner .banner-section .heading-holder h2{
+    font-weight: 700;
+}
+
+.industry-banner .banner-section .heading-holder a{
+    color: #ffffff;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
 .text-orange{
     color: #ff6600;
 }
@@ -89,7 +99,8 @@
 .product-card-section .product-description {
     color: #555;
     font-size: 16px;
-    margin: 10px 0;
+    margin: 16px 0;
+    text-align: justify;
 }
 
 .product-card-section .btn-orange {
@@ -106,6 +117,19 @@
 
 .product-card-section .btn-orange:hover {
     background-color: #F49966;
+}
+
+.product-card-section .heading-holder {
+    font-weight: 700;
+    text-align: center;
+}
+
+.system-overview .content >*{
+    font-size: 18px;
+}
+
+.accordion-wrapper {
+  border-bottom: 1px solid #0057E1;
 }
 
 @media (max-width:992px){
