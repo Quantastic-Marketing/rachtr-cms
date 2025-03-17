@@ -1236,3 +1236,9 @@ section.product-we-offer-section {
 .client-slide {
   margin: 0 7px;
 }
+
+  
+.banner .banner-section {
+  position: relative;
+  color: #ffffff;
+}

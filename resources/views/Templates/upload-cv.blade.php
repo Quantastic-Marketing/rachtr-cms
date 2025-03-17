@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <title>{{ $page->title }}</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!--<link rel="stylesheet" href="css/hover-min.css" type="text/css">-->
-        <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
-        <link rel="stylesheet" href="css/slick.css" type="text/css">
-        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-        <link href="css/style.css" type="text/css" rel="stylesheet">
-        <link href="css/responsive.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="css/uploadCV.css">
-        <link rel="shotcut icon" type="image/x-icon" href="images/favicon.ico">
-        
-    </head>
-<body>
-    <!-- This is a wrapper open -->
-    <div class="wrapper"> 
-      <!-- This is a header open -->
-      @if($page->header_id && $page->header->name)
-            @include('CommonTemplates.' . $page->header->name)
-        @endif
-       <!-- This is a banner open -->
-        
-       <section class="cv-banner">
+ <div class="wrapper"> 
+    <section class="cv-banner">
         <div class="row g-0">
         <div class="col-lg-12">  
             <div class="banner-section">
@@ -96,33 +69,5 @@
            
         </div>
     </section>
-
-
-       
-     
-    <!-- This is a section-9 open --> 
-        @if($page->footer_id && $page->footer->name)
-            @include('CommonTemplates.' . $page->footer->name)
-        @endif
-    <!-- This is a section-9 close -->     
    </div>
-    <!-- This is a wrapper close -->
-<script src="js/jquery.min.js" type="text/jscript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="js/slick.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/custom.js"></script>  
-  
-<script type="text/javascript">
-    $('#showLeft').click(function(){
-	$(this).toggleClass('open');
-	$(".nav").slideToggle();	
-});
-</script> 
-
-    
-    
-</body>   
-</html>
-
+ 

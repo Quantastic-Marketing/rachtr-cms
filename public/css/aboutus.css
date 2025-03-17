@@ -1,5 +1,13 @@
 .about-banner .banner-section .image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+
 }
 
 .about-banner .banner-section .heading-holder {
@@ -7,6 +15,36 @@
     left: 0;
     right: 0;
     bottom: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    flex-direction: column
+}
+.about-banner .banner-section {
+    height: 230px;
+    position: relative;
+    color: #ffffff;
+}
+
+.about-banner .banner-section .image-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+}
+.about-banner .banner-section .image-wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.about-banner {
+    margin-top: 90px;
 }
 
 .about-solution p{
@@ -295,6 +333,9 @@
     .cta-section .cta-box .cta-button {
         padding: 18px 23px;
     }
+    .about-banner{
+        margin-top: 58px;
+    }
 }
 
 
@@ -408,7 +449,9 @@
         width: 100px;
         height: 100px;
     }
-
+    .about-banner {
+        margin-top: 28px;
+    }
    
     
 }
