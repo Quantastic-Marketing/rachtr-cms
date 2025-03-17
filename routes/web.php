@@ -9,7 +9,7 @@ use App\Http\Controllers\PageController;
 // });
 Route::get('/update-slug',[BlogController::Class,'updatePublishedDates']);
 
-Route::get('/product-page/{slug}', [PageController::class,'getProductPage']);
+Route::get('/product-page/{slug}', [PageController::class,'getProductPage'])->name('product.page');
 Route::get('/{slug?}', [PageController::class,'getPage'])->where('slug', '.*');
 Route::fallback(function () {
     return response()->view('fallback', [], 404);

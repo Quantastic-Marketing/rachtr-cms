@@ -21,8 +21,13 @@ class PageController extends Controller
             } else {
                 $currentSlug = collect(explode('/', $slug))->last();
                 $pageDetails = Pages::where('slug', $currentSlug)->with('header','footer')->first();
-                $templatePath = "Templates." . str_replace('/', '.', $slug);
+                $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
                 
+                if ($isProductList) {
+                    $templatePath = 'Templates.product_list';
+                } else {
+                    $templatePath = "Templates." . str_replace('/', '.', $slug);
+                }
                 if (!$pageDetails || !view()->exists($templatePath) ) {
                     return view('fallback');
                 }

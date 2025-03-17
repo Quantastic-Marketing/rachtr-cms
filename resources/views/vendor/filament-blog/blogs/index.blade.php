@@ -62,7 +62,7 @@
                                     @endforeach
                                     <a href="{{route('filamentblog.post.show', ['post' => $post->slug]) }}" class="post_body">
                                         <h2 class="blog-title mt-2">{{$post->title}}</h2>
-                                        <p class="clamp-text">{{\Illuminate\Support\Str::limit(strip_tags($post->body), 150, '...')}}</p>
+                                        <p class="clamp-text">{{Str::limit(strip_tags(html_entity_decode($post->body)), 150)}}</p>
                                     </a>
                                     
                                 </div>
