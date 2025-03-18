@@ -13,7 +13,8 @@ class PageController extends Controller
 
         try{ 
             if ($slug == "/" || $slug == null) {
-                $pageDetails = Pages::where('is_homepage', true)->with('header','footer')->first();
+                    $pageDetails = Pages::where('is_homepage', true)->first();
+                    
                 if (!$pageDetails) {
                     return view('fallback');
                 }

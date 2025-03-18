@@ -14,10 +14,8 @@
         <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
         <link href="{{ asset('css/responsive.css') }}" type="text/css" rel="stylesheet">
         <link href="{{ asset('css/puFloor.css') }}" type="text/css" rel="stylesheet">
-        <link href="{{ asset('css/contractual.css') }}" type="text/css" rel="stylesheet">
-        <link href="{{ asset('css/contact.css') }}" type="text/css" rel="stylesheet">
+
         <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/architect.css') }}">
         <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
         
     </head>
@@ -26,7 +24,7 @@
     <div class="wrapper"> 
       
     <!-- header -->
-     @include('CommonTemplates.headerHome')
+     @includeIf('CommonTemplates.headerHome')
      <!-- header close -->
         
        <section class="blog-banner banner">
@@ -146,7 +144,7 @@
        
      
     <!-- This is a section-9 open --> 
-    @include('CommonTemplates.footerHome')
+    @includeIf('CommonTemplates.footerHome')
     <!-- This is a section-9 close -->     
    </div>
     <!-- This is a wrapper close -->

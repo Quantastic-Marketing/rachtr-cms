@@ -57,11 +57,8 @@ class CommonComponentResource extends Resource
                                                 ->label('Enable Link')
                                                 ->default(false)
                                                 ->reactive(),
-                                        Select::make('slug')
-                                                ->label('Select Page')
-                                                ->options(fn () => Page::query()->pluck('title', 'slug')->toArray()) // Show 'name', store 'slug'
-                                                ->searchable()
-                                                ->preload()
+                                        TextInput::make('slug')->label('Slug')
+                                                ->placeholder('e.g., about-us or support-center/architect-center etc')
                                                 ->required()
                                                 ->visible(fn ($get) => $get('has_link')),
                                         Repeater::make('sub_items')
@@ -72,11 +69,8 @@ class CommonComponentResource extends Resource
                                                 ->label('Enable Link')
                                                 ->default(false)
                                                 ->reactive(),
-                                        Select::make('slug')
-                                                ->label('Select Page')
-                                                ->options(fn () => Page::query()->pluck('title', 'slug')->toArray())
-                                                ->searchable()
-                                                ->preload()
+                                            TextInput::make('slug')->label('Slug')
+                                                ->placeholder('e.g., about-us or support-center/architect-center etc')
                                                 ->required()
                                                 ->visible(fn ($get) => $get('has_link')),
                                             Repeater::make('sub_items')
@@ -84,16 +78,13 @@ class CommonComponentResource extends Resource
                                                 ->schema([
                                                     TextInput::make('sub-item')->label('Sub Menu Item Name')->required(),
                                                     Checkbox::make('has_link')
-                                                ->label('Enable Link')
-                                                ->default(false)
-                                                ->reactive(),
-                                                Select::make('slug')
-                                                        ->label('Select Page')
-                                                        ->options(fn () => Page::query()->pluck('title', 'slug')->toArray())
-                                                        ->searchable()
-                                                        ->preload()
-                                                        ->visible(fn ($get) => $get('has_link'))
-                                                        ->required(),
+                                                        ->label('Enable Link')
+                                                        ->default(false)
+                                                        ->reactive(),
+                                                    TextInput::make('slug')->label('Slug')
+                                                        ->placeholder('e.g., about-us or support-center/architect-center etc')
+                                                        ->required()
+                                                        ->visible(fn ($get) => $get('has_link')),
                                                             
                                                     ])
                                                     ->defaultItems(0)
