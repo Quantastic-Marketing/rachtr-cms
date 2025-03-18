@@ -43,9 +43,7 @@
     <!-- This is a wrapper open -->
     <div class="wrapper"> 
       <!-- This is a header open -->
-       @if($page->header_id && $page->header->name)
-        @include('CommonTemplates.' . $page->header->name)
-       @endif
+        @includeIf('CommonTemplates.headerHome')
 
        <!-- This is a header close -->
        <!-- This is a banner open -->
@@ -1085,9 +1083,9 @@
      </section>    
     <!-- This is a section-8 close -->
     <!-- This is a section-9 open --> 
-       @if($page->footer_id && $page->footer->name)
-        @include('CommonTemplates.' . $page->footer->name)
-       @endif
+       
+        @includeIf('CommonTemplates.footerHome')
+       
     <!-- This is a section-9 close -->     
    </div>
     <!-- This is a wrapper close -->

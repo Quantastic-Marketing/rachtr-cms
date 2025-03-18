@@ -13,7 +13,8 @@ class PageController extends Controller
 
         try{ 
             if ($slug == "/" || $slug == null) {
-                $pageDetails = Pages::where('is_homepage', true)->with('header','footer')->first();
+                    $pageDetails = Pages::where('is_homepage', true)->first();
+                    
                 if (!$pageDetails) {
                     return view('fallback');
                 }
@@ -22,9 +23,8 @@ class PageController extends Controller
                 $currentSlug = collect(explode('/', $slug))->last();
                 $pageDetails = Pages::where('slug', $currentSlug)->with('header','footer')->first();
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
-                
                 if ($isProductList) {
-                    $templatePath = 'Templates.product_list';
+                    $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : '';
                 } else {
                     $templatePath = "Templates." . str_replace('/', '.', $slug);
                 }

@@ -60,7 +60,7 @@
                                     $productContent = $product ? $product->content : null;
                                     $productImage = $productContent['product_images'][0]['product_image'] ?? null;
                                     preg_match('/<p>(.*?)<\/p>/', $productContent['product_desc'] ?? '', $matches);
-                                    $productDescription = $matches[1] ?? 'No description available';
+                                    $productDescription = str_replace(['<br>', '&nbsp;'], '', $matches[1] ?? 'No description available');
                                 @endphp
                                 <div class="col-lg-9 px-5">
                                     <div class="row align-items-center product-card">
