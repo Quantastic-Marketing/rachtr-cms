@@ -4,12 +4,18 @@
     $header = CommonComponents::where('name', 'headerHome')->first();
     $headerContent = $header->content ?? [];
     
-    function getFullSlugUrl($slug, $hasLink) {
-        if ($hasLink && !empty($slug)) {
-            $page = Pages::where('slug', $slug)->first();
-            return $page ? url($page->full_slug) : '#';
-        }
-        return '#';
+    $allSlugs = collect($headerContent['menu-items'] ?? [])
+        ->pluck('slug')
+        ->merge(collect($headerContent['menu-items'] ?? [])->pluck('sub_items.*.slug')->flatten())
+        ->merge(collect($headerContent['menu-items'] ?? [])->pluck('sub_items.*.sub_items.*.slug')->flatten())
+        ->filter()
+        ->unique()
+        ->toArray();
+
+    $pagesBySlug = Pages::whereIn('slug', $allSlugs)->get()->keyBy('slug');
+
+    function getFullSlugUrl($slug, $hasLink, $pagesBySlug) {
+        return ($hasLink && !empty($slug) && isset($pagesBySlug[$slug])) ? url($pagesBySlug[$slug]->full_slug) : '#';
     }
 @endphp
 @if(!empty($headerContent))
@@ -32,16 +38,16 @@
                           <ul class="head-nav">
                           @foreach($headerContent['menu-items'] ?? [] as $menuItem)
                               <li class="">
-                                  <a href="{{ getFullSlugUrl($menuItem['slug'] ?? '', $menuItem['has_link'] ?? false)  }}">{{ $menuItem['item'] }}</a>
+                                  <a href="{{ getFullSlugUrl($menuItem['slug'] ?? '', $menuItem['has_link'] ?? false,$pagesBySlug)  }}">{{ $menuItem['item'] }}</a>
                                     @if(!empty($menuItem['sub_items']))
                                       <ul class="submenu">
                                           @foreach($menuItem['sub_items'] as $subItem)
 
-                                            <li><a href="{{ getFullSlugUrl($subItem['slug'] ?? '', $subItem['has_link'] ?? false)  }}">{{ $subItem['sub-item'] }}</a>
+                                            <li><a href="{{ getFullSlugUrl($subItem['slug'] ?? '', $subItem['has_link'] ?? false,$pagesBySlug)  }}">{{ $subItem['sub-item'] }}</a>
                                               @if(!empty($subItem['sub_items']))
                                                 <ul class="submenu">
                                                   @foreach($subItem['sub_items'] as $subSubItem)
-                                                    <li><a href="{{ getFullSlugUrl($subSubItem['slug'] ?? '', $subSubItem['has_link'] ?? false)  }}">{{ $subSubItem['sub-item'] }}</a></li>
+                                                    <li><a href="{{ getFullSlugUrl($subSubItem['slug'] ?? '', $subSubItem['has_link'] ?? false,$pagesBySlug)  }}">{{ $subSubItem['sub-item'] }}</a></li>
                                                   @endforeach
                                                 </ul>
                                               @endif
