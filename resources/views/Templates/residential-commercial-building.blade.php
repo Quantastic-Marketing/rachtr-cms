@@ -9,8 +9,8 @@
             <div class="item">
               <div class="banner-sec">
                 <img
-                  src="images/hero-banner-residential-commercial-building-pic.jpg"
-                  alt=""
+                  src= "images/hero-banner-residential-commercial-building-pic.jpg"
+                  alt="banner img"
                 />
                 <div class="banner_overlay col-lg-12">
                   <div class="content col-lg-10 col-md-12">

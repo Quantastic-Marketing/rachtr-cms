@@ -13,7 +13,6 @@
         @endphp
         <meta name="keywords" content="{{ $focusKeywords }}">
         <link rel="canonical" href="{{ $page->seo->canonical_url ?? url()->current() }}">
-
         <!-- Open Graph (Facebook, LinkedIn) -->
         <meta property="og:title" content="{{ $page->seo->title ?? config('app.name') }}">
         <meta property="og:description" content="{{ $page->seo->description ?? 'Rahctr' }}">
@@ -32,7 +31,7 @@
         <!--<link rel="stylesheet" href="css/hover-min.css" type="text/css">-->
         <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('css/slick.css')}}" type="text/css">
-        <link rel="stylesheet" href="{{ asset('css/fancybox.css')}}"/>
+        <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}" />
         <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
         <link  href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
         <link href="{{ asset('css/responsive.css') }}" type="text/css" rel="stylesheet">
@@ -45,6 +44,7 @@
             @if(request()->is('*contractor-center'))
             <link  href="{{ asset('css/puFloor.css') }}" type="text/css" rel="stylesheet">
             <link  href="{{ asset('css/contractual.css') }}" type="text/css" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('css/architect.css') }}">
             @endif
         @if(request()->is('*about-us') || request()->is('*support-center'))
         <link href="{{ asset('css/aboutus.css') }}" type="text/css" rel="stylesheet">
@@ -99,7 +99,7 @@
             <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
             <script src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
             <script src="{{ asset('js/slick.js') }}"></script>
-            <script src="{{ asset('js/fancybox.umd.js') }}"></script>
+            <script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
             <script src="{{ asset('js/custom.js') }}"></script>
             
             <script type="text/javascript">

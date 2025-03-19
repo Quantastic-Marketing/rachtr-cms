@@ -1,10 +1,10 @@
 
 
-    <div class="wrapper"> 
+    <div class="wrapper">
      
        <section class="banner">
         <div class="row g-0">
-        <div class="col-lg-12">  
+        <div class="col-lg-12">
             <div class="banner-section">
                 <div class="image-wrapper">
                     <img src="images/puFloor-bg.jpg" alt="img background" class="d-none d-md-block">
@@ -14,7 +14,7 @@
                     <h2>PU FLOORING</h2>
                     <p> <span>HOME > </span> <a class="text-decoration-underline text-white" href="">INDUSTRIAL FLOORING</a></p>
                 </div>
-            </div>                   
+            </div>
           </div>
          
         </div>

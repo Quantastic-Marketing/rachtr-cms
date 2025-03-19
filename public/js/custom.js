@@ -293,7 +293,6 @@ $(document).ready(function () {
   })
 
   // case studies slider close    
-console.log("reached here b4 fancy");
 
   $('[data-fancybox="gallery"]').fancybox({
 

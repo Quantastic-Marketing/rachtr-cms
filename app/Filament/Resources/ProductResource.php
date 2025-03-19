@@ -62,11 +62,7 @@ class ProductResource extends Resource
                                 }),
                     ]),
                 Section::make('Page content')
-                    ->schema(function (callable $get) {
-                        $template = $get('template');
-
-                        return match ($template) {
-                            'default-template' => [
+                    ->schema([
                                 Repeater::make('content.product_images')
                                     ->label('Product Images')
                                     ->schema([
@@ -89,7 +85,9 @@ class ProductResource extends Resource
                                     ->columns(1)
                                     ->defaultItems(0)
                                     ->addActionLabel('Add Benefits Accordian'),
-                                RichEditor::make('content.product_desc')->label('Description of Product'),
+                                RichEditor::make('content.product_desc')
+                                    ->label('Description of Product')
+                                    ,
                                 FileUpload::make('content.download_sheet')
                                     ->label('Upload Sheets')
                                     ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']) // Allow PDF & Word
@@ -101,15 +99,12 @@ class ProductResource extends Resource
                                     ->maxSize(5120) // Optional: Limit file size (5MB)
                                     ->directory('products')
                             
-                            ],
-                            default => [], // No fields until a template is selected
-                        };
-                    })
+                            ])
                     ->collapsible(),
                 Section::make('Product Page SEO')
                     ->description('Basic page seo  details.')
                     ->schema([
-                        SEO::make()
+                        SEO::make(['title', 'description', 'robots', 'canonical_url','meta'])
                         ->schema([
                             TextInput::make('title')->label('SEO Title'),
                             TextInput::make('description')->label('SEO Description'),
