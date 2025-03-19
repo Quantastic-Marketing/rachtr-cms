@@ -61,7 +61,7 @@
                                  <div class="content-details ms-0">
                                       <h2>Building Communities, Brick by Brick</h2>
                                       <p>RachTR empowers builders, architects, and artisans with high-performance coatings and adhesives. Together, we're shaping India's built environment.</p>
-                                      <p class="pt-0"><span class="wht">#Rich</span><span class="org">TRibe</span></p> 
+                                      <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p> 
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>
@@ -110,7 +110,7 @@
                                  <div class="content-details ms-0">
                                       <h2>Built on Trust</h2>
                                       <p>RachTR is your trusted partner for construction and industrial<br/> solutions. Made for diverse conditions.</p>
-                                      <p class="pt-0"><span class="wht">#Rich</span><span class="org">TRust</span></p> 
+                                      <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRust</span></p> 
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>
