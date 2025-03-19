@@ -748,7 +748,7 @@
                                     <h3 class="highlight-text">Zaishui Art Museum, China</h3>
 
                                     <div class="row">
-                                        <div class="icon-list d-flex  flex-wrap gy-4 ">
+                                        <div class="icon-list d-flex flex-column flex-md-row flex-md-wrap gy-4 ">
                                             <div class="col-md-6 m-0 ">
                                                 <div class="icon-text d-flex ">
                                                     <div class="icon-circle">
@@ -807,7 +807,7 @@
                                                             </g>
                                                         </svg>
                                                     </div>
-                                                    <div class="icon-desc d-flex flex-column">
+                                                    <div class="icon-desc-1 d-flex flex-column">
                                                         <p class="m-0"><strong>Architect:</strong></p>
                                                         <p class="m-0"> Junya Ishigami + Associates</p>
                                                     </div>
@@ -853,7 +853,7 @@
                                                             </g>
                                                         </svg>
                                                     </div>
-                                                    <div class="icon-desc d-flex flex-column m-0 ms-2 ">
+                                                    <div class="icon-desc-1 d-flex flex-column m-0 ms-2 ">
                                                         <p class="m-0"><strong>Built:</strong></p>
                                                         <p class="m-0"> 2023</p>
                                                     </div>
@@ -962,7 +962,7 @@
                                                             </g>
                                                         </svg>
                                                     </div>
-                                                    <div class="icon-desc d-flex flex-column">
+                                                    <div class="icon-desc-1 d-flex flex-column">
                                                         <p class="m-0"><strong>Purpose:</strong></p>
                                                         <p class="m-0"> Art Museum & visitor Path</p>
                                                     </div>
@@ -982,8 +982,8 @@
                                     </ul>
 
 
-                                    <div class="icon-text  gap-2">
-                                        <div class="icon-circle ">
+                                    <div class="icon-text d-flex flex-column flex-md-row gap-3 gap-md-2">
+                                        <div class="icon-circle align-self-start">
                                             <svg preserveAspectRatio="xMidYMid meet"
                                                 data-bbox="20.9 60.914 160.1 80.286" viewBox="20.9 60.914 160.1 80.286"
                                                 height="200" width="200" xmlns="http://www.w3.org/2000/svg"
@@ -1018,7 +1018,7 @@
                                                 </g>
                                             </svg>
                                         </div>
-                                        <div class="icon-desc d-flex flex-column m-0 ms-5 ">
+                                        <div class="icon-desc-2 d-flex flex-column m-0 ms-4 ms-md-5 ">
                                             <p class="m-0"><strong>Awards:</strong></p>
                                             <ul class="d-flex flex-column">
                                                 <li class="text-start m-0">1st Prize in Competition: Awarded for its
@@ -1069,7 +1069,7 @@
                                     <h3 class="highlight-text">House in the Trees</h3>
 
                                     <div class="row">
-                                        <div class="icon-list d-flex  flex-wrap gy-4 ">
+                                        <div class="icon-list d-flex flex-column flex-md-row flex-md-wrap gy-4 ">
                                             <div class="col-md-6 m-0 ">
                                                 <div class="icon-text d-flex ">
                                                     <div class="icon-circle">
@@ -1303,8 +1303,8 @@
                                     </ul>
 
 
-                                    <div class="icon-text  gap-2">
-                                        <div class="icon-circle ">
+                                    <div class="icon-text d-flex flex-column flex-md-row gap-3 gap-md-2">
+                                        <div class="icon-circle align-self-start">
                                             <svg preserveAspectRatio="xMidYMid meet"
                                                 data-bbox="20.9 60.914 160.1 80.286" viewBox="20.9 60.914 160.1 80.286"
                                                 height="200" width="200" xmlns="http://www.w3.org/2000/svg"
@@ -1339,7 +1339,7 @@
                                                 </g>
                                             </svg>
                                         </div>
-                                        <div class="icon-desc d-flex flex-column m-0 ms-5 ">
+                                        <div class="icon-desc-2 d-flex flex-column m-0 ms-4 ms-md-5 ">
                                             <p class="m-0"><strong>Awards:</strong></p>
                                             <ul class="d-flex flex-column">
                                                 <li class="text-start m-0">1st Prize in Competition: Awarded for its
@@ -1390,7 +1390,7 @@
                                     <h3 class="highlight-text">Vaas House</h3>
 
                                     <div class="row">
-                                        <div class="icon-list d-flex  flex-wrap gy-4 ">
+                                        <div class="icon-list d-flex flex-column flex-md-row  flex-md-wrap gy-4 ">
                                             <div class="col-md-6 m-0 ">
                                                 <div class="icon-text d-flex ">
                                                     <div class="icon-circle">
@@ -1449,7 +1449,7 @@
                                                             </g>
                                                         </svg>
                                                     </div>
-                                                    <div class="icon-desc d-flex flex-column">
+                                                    <div class="icon-desc-1 d-flex flex-column">
                                                         <p class="m-0"><strong>Architect:</strong></p>
                                                         <p class="m-0"> Junya Ishigami + Associates</p>
                                                     </div>
@@ -1495,7 +1495,7 @@
                                                             </g>
                                                         </svg>
                                                     </div>
-                                                    <div class="icon-desc d-flex flex-column m-0 ms-2 ">
+                                                    <div class="icon-desc-1 d-flex flex-column m-0 ms-2 ">
                                                         <p class="m-0"><strong>Built:</strong></p>
                                                         <p class="m-0"> 2023</p>
                                                     </div>
@@ -1604,7 +1604,7 @@
                                                             </g>
                                                         </svg>
                                                     </div>
-                                                    <div class="icon-desc d-flex flex-column">
+                                                    <div class="icon-desc-1 d-flex flex-column">
                                                         <p class="m-0"><strong>Purpose:</strong></p>
                                                         <p class="m-0"> Art Museum & visitor Path</p>
                                                     </div>
@@ -1624,8 +1624,8 @@
                                     </ul>
 
 
-                                    <div class="icon-text  gap-2">
-                                        <div class="icon-circle ">
+                                    <div class="icon-text d-flex flex-column flex-md-row gap-3 gap-md-2">
+                                        <div class="icon-circle align-self-start">
                                             <svg preserveAspectRatio="xMidYMid meet"
                                                 data-bbox="20.9 60.914 160.1 80.286" viewBox="20.9 60.914 160.1 80.286"
                                                 height="200" width="200" xmlns="http://www.w3.org/2000/svg"
@@ -1660,7 +1660,7 @@
                                                 </g>
                                             </svg>
                                         </div>
-                                        <div class="icon-desc d-flex flex-column m-0 ms-5 ">
+                                        <div class="icon-desc-2 d-flex flex-column m-0 ms-4 ms-md-5 ">
                                             <p class="m-0"><strong>Awards:</strong></p>
                                             <ul class="d-flex flex-column">
                                                 <li class="text-start m-0">1st Prize in Competition: Awarded for its

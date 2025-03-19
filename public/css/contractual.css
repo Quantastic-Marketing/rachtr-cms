@@ -70,6 +70,12 @@
     color: #ffffff;
  }
 
+.our_strengths .any_projects .projects_blogs .projects_img video{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
 
  @media (max-width:499px){
     .contact-banner .banner-section .heading-holder {
