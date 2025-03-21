@@ -37,6 +37,15 @@
         <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
         <link  href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
         <link href="{{ asset('css/responsive.css') }}" type="text/css" rel="stylesheet">
+        @if (!empty($page->schema_data) && is_array($page->schema_data))
+            @foreach ($page->schema_data as $schemaItem)
+                @if (isset($schemaItem['schema']))
+                    <script type="application/ld+json">
+                        {!! $schemaItem['schema'] !!}
+                    </script>
+                @endif
+            @endforeach
+        @endif
         <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
     </head>
 <body>
