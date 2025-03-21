@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Seo;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use RalphJSmit\Laravel\SEO\Support\HasSEO;
@@ -93,6 +94,11 @@ class Product extends Model
         } catch (\Exception $e) {
             \Log::error("Failed to delete image: {$imagePath}. Error: " . $e->getMessage());
         }
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'category_product');
     }
 
 }
