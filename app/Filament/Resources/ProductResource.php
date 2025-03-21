@@ -60,6 +60,12 @@ class ProductResource extends Resource
                                 ->afterStateUpdated(function ($state, callable $set) {
                                     $set('content', []);
                                 }),
+                            Select::make('categories')
+                                ->label('Categories')
+                                ->multiple()
+                                ->relationship('categories', 'name')
+                                ->preload()
+                                ->searchable(),
                     ]),
                 Section::make('Page content')
                     ->schema([
