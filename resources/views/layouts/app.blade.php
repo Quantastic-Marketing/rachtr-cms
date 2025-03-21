@@ -75,7 +75,7 @@
         <link  href="{{ asset('css/epoxy.css') }}" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/epoxyCost.css') }}">
         @endif
-  
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Rachtr","alternateName":"Rachtr","url":"https://www.rachtr.com/","logo":"https://static.wixstatic.com/media/386348_1185cc80ad414f0b866b359f72e3844b~mv2.png/v1/fill/w_108,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Asset%201%20copy.png","sameAs":["https://www.instagram.com/rachtr_/","https://www.facebook.com/rachtr1","https://www.linkedin.com/company/13608620/admin/dashboard/","https://www.youtube.com/@rachtrchemicals7185"]}</script>
         @if (!empty($page->schema_data) && is_array($page->schema_data))
             @foreach ($page->schema_data as $schemaItem)
                 @if (isset($schemaItem['schema']))
