@@ -58,7 +58,7 @@
         @if(request()->is('*contact-us'))
         <link  href="{{ asset('css/puFloor.css') }}" type="text/css" rel="stylesheet">
         <link href="css/contractual.css" type="text/css" rel="stylesheet">
-        <link href="css/contact.css" type="text/css" rel="stylesheet">  
+        <link href="css/contact.css" type="text/css" rel="stylesheet">
         @endif
         @if(!empty($page->content['is_product_list']) && $page->content['is_product_list'] == 1)
             <link rel="stylesheet" href="{{ asset('css/epoxyIndustry.css') }}">
@@ -75,11 +75,15 @@
         <link  href="{{ asset('css/epoxy.css') }}" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/epoxyCost.css') }}">
         @endif
-
-        
-       
-        @if(!empty($page->schema_data))
-        <script type="application/ld+json">{!! $page->schema_data !!}</script>
+  
+        @if (!empty($page->schema_data) && is_array($page->schema_data))
+            @foreach ($page->schema_data as $schemaItem)
+                @if (isset($schemaItem['schema']))
+                    <script type="application/ld+json">
+                        {!! $schemaItem['schema'] !!}
+                    </script>
+                @endif
+            @endforeach
         @endif
         <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
     </head>

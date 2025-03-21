@@ -95,16 +95,22 @@ class PageResource extends Resource
                         ->afterStateHydrated(function ($component, $record) {
                             if ($record && $record->seo) {
                                 $meta = json_decode($record->seo->meta, true) ?? [];
-                                // Set the focus_keywords state with the existing tags
+                                
                                 $component->state($meta['focus_keywords'] ?? []);
             
                             }
                              }),
-                        Textarea::make('schema_data')
-                             ->label('JSON Schema')
-                             ->rows(10) 
-                             ->rules(['nullable', 'json']) // Ensures valid JSON
-                             ->placeholder('Enter JSON here...')
+                        Repeater::make('schema_data')
+                             ->label('Json Schemas')
+                             ->schema([
+                                Textarea::make('schema')
+                                        ->label('JSON Schema')
+                                        ->rows(10) 
+                                        ->rules(['nullable', 'json']) // Ensures valid JSON
+                                        ->placeholder('Enter JSON here...')
+                                     ])
+                             ->addActionLabel('Adds Json Schema'),
+                        
                        
                     ]),
                

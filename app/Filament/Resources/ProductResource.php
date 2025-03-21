@@ -134,11 +134,16 @@ class ProductResource extends Resource
                         
                                         }
                                     }),
-                        Textarea::make('schema_data')
-                                    ->label('JSON Schema')
-                                    ->rows(10) 
-                                    ->rules(['nullable', 'json']) // Ensures valid JSON
-                                    ->placeholder('Enter JSON here...')
+                        Repeater::make('schema_data')
+                                    ->label('Json Schemas')
+                                    ->schema([
+                                       Textarea::make('schema')
+                                               ->label('JSON Schema')
+                                               ->rows(10) 
+                                               ->rules(['nullable', 'json']) // Ensures valid JSON
+                                               ->placeholder('Enter JSON here...')
+                                            ])
+                                    ->addActionLabel('Adds Json Schema'),
                         ]),
             ]);
     }
