@@ -51,19 +51,20 @@
                             @endif
                             @foreach($section['products'] as $productId)
                                 @php
-                                    $product = $products->where('id', $productId)->first();
-                                    $productContent = $product ? $product->content : null;
-                                    $productImage = $productContent['product_images'][0]['product_image'] ?? null;
-                                    $productDescription = $productContent['product_desc'] ?? 'No description available';
-                                    $productDescription = trim(html_entity_decode(strip_tags($productDescription)));
-                                    $productDescription = Str::limit(preg_replace('/\s+/', ' ', $productDescription), 120, '...');
+                                    $product = $products->firstWhere('id', $productId);
+                                    $productImage = optional(json_decode($product->product_images, true))[0]['product_image'] ?? null; 
+                                    $productDescription = Str::limit(
+                                                            preg_replace('/\s+/', ' ', strip_tags(html_entity_decode($product->product_desc ?? 'No description available'))), 
+                                                            120, 
+                                                            '...'
+                                                        );
                                 @endphp
                                 <div class="col-lg-9 px-5">
                                     <div class="row align-items-center product-card">
                                         <div class="col-md-6">
                                             <div class="product-image-wrapper">
-                                                @if (!empty($productContent['product_images'][0]['product_image']))
-                                                    <img src="{{ asset('storage/' . $productContent['product_images'][0]['product_image']) }}" alt="{{$product->title ?? 'Product Title'}}">
+                                                @if (!empty($productImage))
+                                                    <img src="{{ asset('storage/' . $productImage) }}" alt="{{$product->title ?? 'Product Title'}}">
                                                 @endif
                                             </div>
                                         </div>
@@ -71,7 +72,11 @@
                                             <div class="product-details">
                                                 <h2 class="product-title">{{$product->name ?? 'Product Title'}}</h2>
                                                 <p class="product-description">
+                                                    @if($productDescription != 'null')
                                                     {{$productDescription}}
+                                                    @else(!empty($productDescription))
+                                                    No description
+                                                    @endif
                                                 </p>
                                                 <a href="{{ route('product.page', ['slug' => $product->slug]) }}" class="btn btn-orange">View Details</a>
                                             </div>

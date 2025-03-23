@@ -39,11 +39,16 @@ class PageController extends Controller
                 if (!empty($pageDetails->content['sections'])) {
                     $productIds = collect($pageDetails->content['sections'])->pluck('products')->flatten()->unique();
 
-                    $products = Cache::remember("products_page_{$currentSlug}", 60, function () use ($productIds) {
-                        return Product::whereIn('id', $productIds)->get();
-                    });
+                    $products =  Product::whereIn('id', $productIds)
+                    ->select([
+                        'id',
+                        'name',
+                        'slug',
+                        'content->product_desc as product_desc',
+                        'content->product_images as product_images'
+                    ])
+                    ->get();
                 }
-                
                 
                 return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products' => $products]);
             }
