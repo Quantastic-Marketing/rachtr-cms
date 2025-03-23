@@ -41,11 +41,6 @@
             </section>
         @endif
 
-        @php
-            $productIds = collect($page->content['sections'])->pluck('products')->flatten()->unique();
-            $products = \App\Models\Product::whereIn('id', $productIds)->get();
-        @endphp
-
         @if(isset($pageContent['sections']))
             @foreach($pageContent['sections'] as $section)
                 <section class="product-card-section py-5" style="background-color: {{ $section['bg_color'] ?? '#ffffff' }};">
@@ -59,8 +54,9 @@
                                     $product = $products->where('id', $productId)->first();
                                     $productContent = $product ? $product->content : null;
                                     $productImage = $productContent['product_images'][0]['product_image'] ?? null;
-                                    preg_match('/<p>(.*?)<\/p>/', $productContent['product_desc'] ?? '', $matches);
-                                    $productDescription = str_replace(['<br>', '&nbsp;'], '', $matches[1] ?? 'No description available');
+                                    $productDescription = $productContent['product_desc'] ?? 'No description available';
+                                    $productDescription = trim(html_entity_decode(strip_tags($productDescription)));
+                                    $productDescription = Str::limit(preg_replace('/\s+/', ' ', $productDescription), 120, '...');
                                 @endphp
                                 <div class="col-lg-9 px-5">
                                     <div class="row align-items-center product-card">
