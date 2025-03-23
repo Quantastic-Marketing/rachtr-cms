@@ -41,11 +41,6 @@
             </section>
         @endif
 
-        @php
-            $productIds = collect($page->content['sections'])->pluck('products')->flatten()->unique();
-            $products = \App\Models\Product::whereIn('id', $productIds)->get();
-        @endphp
-
         @if(isset($pageContent['sections']))
             @foreach($pageContent['sections'] as $section)
                 <section class="product-card-section py-5" style="background-color: {{ $section['bg_color'] ?? '#ffffff' }};">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pages;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class PageController extends Controller
 {
@@ -21,7 +22,9 @@ class PageController extends Controller
                 return view('Templates.index',['page' => $pageDetails]);
             } else {
                 $currentSlug = collect(explode('/', $slug))->last();
-                $pageDetails = Pages::where('slug', $currentSlug)->with('header','footer')->first();
+                $pageDetails = Cache::remember("page_{$currentSlug}", 60, function () use ($currentSlug) {
+                    return Pages::where('slug', $currentSlug)->with('header', 'footer')->first();
+                });
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
                 if ($isProductList) {
                     $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : '';
@@ -31,9 +34,18 @@ class PageController extends Controller
                 if (!$pageDetails || !view()->exists($templatePath) ) {
                     return view('fallback');
                 }
+
+                $products = collect();
+                if (!empty($pageDetails->content['sections'])) {
+                    $productIds = collect($pageDetails->content['sections'])->pluck('products')->flatten()->unique();
+
+                    $products = Cache::remember("products_page_{$currentSlug}", 60, function () use ($productIds) {
+                        return Product::whereIn('id', $productIds)->get();
+                    });
+                }
                 
                 
-                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath]);
+                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products' => $products]);
             }
         }catch(Exception $e){
             \Log::error('Page load error: ' . $e->getMessage());
