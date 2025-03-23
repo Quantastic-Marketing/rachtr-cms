@@ -51,14 +51,18 @@
                             @endif
                             @foreach($section['products'] as $productId)
                                 @php
-                                    $product = $products->firstWhere('id', $productId);
-                                    $productImage = optional(json_decode($product->product_images, true))[0]['product_image'] ?? null; 
-                                    $productDescription = Str::limit(
+                                    $product = $products[$productId] ?? null;
+                                    if($product){
+                                        $productImage = optional(json_decode($product->product_images, true))[0]['product_image'] ?? null; 
+                                        $productDescription = Str::limit(
                                                             preg_replace('/\s+/', ' ', strip_tags(html_entity_decode($product->product_desc ?? 'No description available'))), 
                                                             120, 
                                                             '...'
                                                         );
+                                    }
+                                    
                                 @endphp
+                                @if($product)
                                 <div class="col-lg-9 px-5">
                                     <div class="row align-items-center product-card">
                                         <div class="col-md-6">
@@ -83,6 +87,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>
