@@ -77,7 +77,7 @@
                     case str_contains($currentPath, 'pu-flooring'):
                         $styles[] = ['css/epoxy.css', 'css/epoxyCost.css', 'css/puFloor.css'];
                         break;
-                    case str_contains($currentPath, 'epoxy-flooring'):
+                    case str_contains($currentPath, 'epoxy-flooring-services'):
                         $styles[] = 'css/epoxy.css';
                         break;
                     case str_contains($currentPath, 'epoxy-flooring-cost-price'):
