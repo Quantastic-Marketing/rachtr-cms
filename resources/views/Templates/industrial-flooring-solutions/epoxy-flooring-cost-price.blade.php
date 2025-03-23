@@ -2,11 +2,11 @@
     <div class="wrapper"> 
        <div class="bnr_sldr">
         <div class="row g-0">
-        <div class="col-lg-12">                     
+        <div class="col-lg-12">
            <div class="item">
                <div class="banner-sec">
                    <video width="100%" height="100%" autoplay muted loop class="desktop">
-                         <source id="#movie1" src="videos/banner-video.mp4" type="video/mp4">
+                         <source id="#movie1" src="{{ asset('videos/banner-video.mp4') }}" type="video/mp4">
                    </video>
                    <div class="banner_overlay col-lg-12">
                       <div class="content col-lg-9 col-md-12">
@@ -49,13 +49,13 @@
                             <h2>Our <span>clients</span></h2>
                         </div>
                         <div class="client-slider">
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 1"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 2"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 3"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 4"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 5"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 6"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 7"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 1"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 2"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 3"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 4"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 5"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 6"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 7"></div>
                         </div>
                     </div>
                 </div>
@@ -91,14 +91,14 @@
                 </div>
                 <div class="col-lg-6 me-0">
                     <div class="epoxy-img">
-                        <img src="images/what-epoxy.jpg" alt="">
+                        <img src="{{ asset('images/what-epoxy.jpg') }}" alt="">
                         <div class="bg-overlay"></div>
                         <div class="image-top">
                             <div class="bg-img-wrapper d-none d-lg-block">
-                                <img src="images/image-removebg-preview.png" alt="overlay">
+                                <img src="{{ asset('images/image-removebg-preview.png') }}" alt="overlay">
                             </div>
                             <div class="bg-img-wrapper d-block d-lg-none">
-                                <img src="images/image-mob.png" class="w-77" alt="">
+                                <img src="{{ asset('images/image-mob.png') }}" class="w-77" alt="">
                             </div>
                         </div>
                         
@@ -250,7 +250,7 @@
                             <h4>Major Components of Cost in Industrial Flooring</h4>
                             <div class="row pt-4">
                                 <div class="col-12 col-md-6">
-                                    <img src="images/component1.jpeg" alt="">
+                                    <img src="{{ asset('images/component1.jpeg')}}" alt="">
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="component-list">
@@ -422,7 +422,7 @@
 
         <div class="container factor-img py-5">
             <div class="image-wrapper">
-                <img src="images/factorsdiag.png" alt="diagram">
+                <img src="{{ asset('images/factorsdiag.png') }}" alt="diagram">
             </div>
         </div>
 
@@ -437,7 +437,7 @@
     
             <div class="row mt-4 new-color gap-3 mx-auto justify-content-center">
                     <div class="color-box" style="background-color: #A31D1D;">
-                        <a href="images/ral7035.jpg" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                        <a href="{{ asset('images/ral7035.jpg') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
                             <p class="d-flex justify-content-center align-items-center h-100 ">RAL 7034</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -446,7 +446,7 @@
                     </div>
                 
                     <div class="color-box" style="background-color: #C7C7C7;">
-                        <a href="images/ral7035.jpg" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                        <a href="{{ asset('images/ral7035.jpg')}}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
                             <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 7035</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -455,7 +455,7 @@
                     </div>
                
                     <div class="color-box" style="background-color: #808080;">
-                        <a href="images/RAL7037.jpg" data-fancybox="gallery" data-caption="Single image"class="w-100 h-100">
+                        <a href="{{ asset('images/RAL7037.jpg')}}" data-fancybox="gallery" data-caption="Single image"class="w-100 h-100">
                             <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 7037</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -464,7 +464,7 @@
                     </div>
                 
                     <div class="color-box" style="background-color: #A0A0A0;">
-                        <a href="images/RAL7040.jpg" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                        <a href="{{ asset('images/RAL7040.jpg') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
                             <p class="d-flex justify-content-center align-items-center h-100 ">RAL 7040</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -473,7 +473,7 @@
                     </div>
            
                     <div class="color-box" style="background-color: #5F9237;">
-                        <a href="images/Ral6018.jpg" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                        <a href="{{ asset('images/Ral6018.jpg') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
                             <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 6018</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -482,7 +482,7 @@
                     </div>
            
                     <div class="color-box" style="background-color: #006B39;">
-                        <a href="images/ral6029.jpg" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                        <a href="{{ asset('images/ral6029.jpg') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
                             <p class="d-flex justify-content-center align-items-center h-100 ">RAL 6029</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -491,7 +491,7 @@
                     </div>
         
                     <div class="color-box" style="background-color: #008F32;">
-                        <a href="images/ral6037.jpg" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                        <a href="{{ asset('images/ral6037.jpg') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
                             <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 6037</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -500,7 +500,7 @@
                     </div>
                
                     <div class="color-box" style="background-color: #004F91;">
-                        <a href="images/ral5005.jpg" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                        <a href="{{ asset('images/ral5005.jpg') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
                             <p class="d-flex justify-content-center align-items-center h-100 ">RAL 5005</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -509,7 +509,7 @@
                     </div>
                 
                     <div class="color-box" style="background-color: #0077C8;">
-                        <a href="images/ral5012.jpg" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                        <a href="{{ asset('images/ral5012.jpg') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
                             <p class="d-flex justify-content-center align-items-center h-100 ">RAL 5012</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -518,7 +518,7 @@
                     </div>
                 
                     <div class="color-box" style="background-color: #005FAD;">
-                        <a href="images/ral5015.jpg" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                        <a href="{{ asset('images/ral5015.jpg') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
                             <p class="d-flex justify-content-center align-items-center h-100 ">RAL 5015</p>
                             <button class="heart-btn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
@@ -549,7 +549,7 @@
                                       <a href="https://www.rachtr.com/_files/ugd/f8ee4f_49c135e9175b4329ba811ee263b633ff.pdf" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="images/delhivery.jpg"/>
+                                           <img src="{{ asset('images/delhivery.jpg')}}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -559,7 +559,7 @@
                                <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="images/delhivery.jpg"/>
+                                         <img src="{{ asset('images/delhivery.jpg')}}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -574,7 +574,7 @@
                                       <a href="https://www.rachtr.com/_files/ugd/f8ee4f_5514b35959b7459f858e43a4562aaee7.pdf" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="images/welspun%20epoxy.jpg"/>
+                                           <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -584,7 +584,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="images/welspun%20epoxy.jpg"/>
+                                         <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -600,7 +600,7 @@
                                       <a href="https://www.rachtr.com/post/solutions" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                            <img src="images/welspun%20epoxy.jpg"/>
+                                            <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -610,7 +610,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                        <img src="images/welspun%20epoxy.jpg"/>
+                                        <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -626,7 +626,7 @@
                                       <a href="https://www.rachtr.com/_files/ugd/f8ee4f_c3b0af2201184666aaa6c29513b7229f.pdf" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="images/itc%20before%20after%20rachtr.jpg"/>
+                                           <img src="{{ asset('images/itc%20before%20after%20rachtr.jpg') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -636,7 +636,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="images/itc%20before%20after%20rachtr.jpg"/>
+                                         <img src="{{ asset('images/itc%20before%20after%20rachtr.jpg') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -652,7 +652,7 @@
                                       <a href="https://www.rachtr.com/post/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="images/Escort%20Kubota%20Blog%20Banner.jpg"/>
+                                           <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.jpg') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -662,7 +662,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="images/Escort%20Kubota%20Blog%20Banner.jpg"/>
+                                         <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.jpg') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -684,7 +684,7 @@
                         <h2><span>Location's</span>  We've served</h2>
                      </div>
                      <div class="location-img ps-md-5">
-                        <img src="images/location-img.png" alt="loaction-map">
+                        <img src="{{ asset('images/location-img.png') }}" alt="loaction-map">
                      </div>
                 </div>   
             </div> 
@@ -773,23 +773,23 @@
                             <div class="container">
                                 <div class="experience-fade-efct experience-slide">
                                     <div class="img">
-                                        <img src="images/epoxy_floor.jpeg"/>
+                                        <img src="{{ asset ('images/epoxy_floor.jpeg') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="images/mortar.jpeg"/>
+                                        <img src="{{ asset ('images/mortar.jpeg') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="images/primer.jpeg"/>
+                                        <img src="{{ asset ('images/primer.jpeg') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="images/screed.jpg"/>
+                                        <img src="{{ asset('images/screed.jpg') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="images/topcoat.jpeg"/>
+                                        <img src="{{ asset('images/topcoat.jpeg') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                  </div>

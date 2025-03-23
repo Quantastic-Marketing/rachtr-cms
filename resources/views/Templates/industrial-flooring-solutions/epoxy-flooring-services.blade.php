@@ -7,7 +7,7 @@
            <div class="item">
                <div class="banner-sec">
                    <video width="100%" height="100%" autoplay muted loop class="desktop">
-                         <source id="#movie1" src="videos/banner-video.mp4" type="video/mp4">
+                         <source id="#movie1" src="{{ asset('videos/banner-video.mp4') }}" type="video/mp4">
                    </video>
                    <div class="banner_overlay col-lg-12">
                       <div class="content col-md-9">
@@ -49,13 +49,13 @@
                             <h2>Our <span>clients</span></h2>
                         </div>
                         <div class="client-slider">
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 1"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 2"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 3"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 4"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 5"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 6"></div>
-                            <div class="client-slide"><img src="images/client-1.webp" alt="Client 7"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 1"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 2"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 3"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 4"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 5"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 6"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 7"></div>
                         </div>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                                       <a href="https://www.rachtr.com/_files/ugd/f8ee4f_49c135e9175b4329ba811ee263b633ff.pdf" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="images/delhivery.jpg"/>
+                                           <img src="{{ asset('images/delhivery.jpg') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -173,7 +173,7 @@
                                <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="images/delhivery.jpg"/>
+                                         <img src="{{asset('images/delhivery.jpg') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -188,7 +188,7 @@
                                       <a href="https://www.rachtr.com/_files/ugd/f8ee4f_5514b35959b7459f858e43a4562aaee7.pdf" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="images/welspun%20epoxy.jpg"/>
+                                           <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -198,7 +198,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="images/welspun%20epoxy.jpg"/>
+                                         <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -214,7 +214,7 @@
                                       <a href="https://www.rachtr.com/post/solutions" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                            <img src="images/welspun%20epoxy.jpg"/>
+                                            <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -224,7 +224,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                        <img src="images/welspun%20epoxy.jpg"/>
+                                        <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -240,7 +240,7 @@
                                       <a href="https://www.rachtr.com/_files/ugd/f8ee4f_c3b0af2201184666aaa6c29513b7229f.pdf" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="images/itc%20before%20after%20rachtr.jpg"/>
+                                           <img src="{{ asset('images/itc%20before%20after%20rachtr.jpg') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -250,7 +250,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="images/itc%20before%20after%20rachtr.jpg"/>
+                                         <img src="{{ asset('images/itc%20before%20after%20rachtr.jpg') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -266,7 +266,7 @@
                                       <a href="https://www.rachtr.com/post/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="images/Escort%20Kubota%20Blog%20Banner.jpg"/>
+                                           <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.jpg') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -276,7 +276,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="images/Escort%20Kubota%20Blog%20Banner.jpg"/>
+                                         <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.jpg') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -301,7 +301,7 @@
                         <h2><span>Location's</span>  We've served</h2>
                      </div>
                      <div class="location-img ps-md-5">
-                        <img src="images/location-img.png" alt="loaction-map">
+                        <img src="{{ asset('images/location-img.png') }}" alt="loaction-map">
                      </div>
                 </div>   
             </div> 
@@ -390,23 +390,23 @@
                             <div class="container">
                                 <div class="experience-fade-efct experience-slide">
                                     <div class="img">
-                                        <img src="images/epoxy_floor.jpeg"/>
+                                        <img src="{{ asset('images/epoxy_floor.jpeg') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="images/mortar.jpeg"/>
+                                        <img src="{{ asset('images/mortar.jpeg') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="images/primer.jpeg"/>
+                                        <img src="{{ asset('images/primer.jpeg')}}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="images/screed.jpg"/>
+                                        <img src="{{ asset('images/screed.jpg') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="images/topcoat.jpeg"/>
+                                        <img src="{{ asset('images/topcoat.jpeg') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                  </div>
