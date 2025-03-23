@@ -45,7 +45,7 @@ class PageController extends Controller
                         ->filter();
                 
                     if ($productIds->isNotEmpty()) {
-                        $products = Product::whereIn('id', $productIds)
+                        Product::whereIn('id', $productIds)
                             ->select([
                                 'id',
                                 'name',
@@ -53,8 +53,15 @@ class PageController extends Controller
                                 'content->product_desc as product_desc',
                                 'content->product_images as product_images'
                             ])
-                            ->lazy();
+                            ->chunkById(20, function ($chunk) use ($products) {
+                                foreach ($chunk as $product) {
+                                    $products[$product->id] = $product;
+                                }
+                            }, 'id');
+
+                            \Log::info('Peak memory usage: ' . memory_get_peak_usage(true) / 1024 / 1024 . ' MB');
                     }
+                    
                 }
                 
                 return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products' => $products]);
