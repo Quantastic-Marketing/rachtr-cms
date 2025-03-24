@@ -95,18 +95,18 @@
                         <form action="/action_page.php">
                           <div class="row g-0">  
                               <div class="mb-2 pe-1 col">
-                                 <input type="name" class="form-control" id="name" placeholder="Name" name="name">
+                                 <input type="name" class="form-control" id="name" placeholder="Name" name="Name">
                               </div>
                               <div class="mb-2 ps-1 col">
-                                <input type="phone" class="form-control" id="phone" placeholder="Phone" name="phone">
+                                <input type="phone" class="form-control" id="phone" placeholder="Phone" name="Phone">
                               </div>
                           </div>
                           <div class="row g-0">  
                               <div class="mb-2 pe-1 col">
-                                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                                <input type="email" class="form-control" id="email" placeholder="Email" name="Email">
                               </div>
                               <div class="mb-2 ps-1 col">
-                                <input type="massage" class="form-control" id="msg" placeholder="Massage" name="msg">
+                                <input type="massage" class="form-control" id="msg" placeholder="Message" name="Message">
                               </div>
                           </div>   
                           <button type="submit" class="btn btn-primary">Submit</button>
@@ -124,7 +124,7 @@
                            </ul>
                        </div>
                        <div class="careers_btn">
-                           <a href="https://www.rachtr.com/careers" target="_blank";>CAREERS</a>
+                       <a href="{{ url('/careers') }}" target="_blank">CAREERS</a>
                       </div>     
                     </div>
                 </div>

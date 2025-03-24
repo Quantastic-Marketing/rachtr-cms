@@ -144,7 +144,7 @@
                                 <p class="founder-position">Co-Founder - Sales Head</p>
                             </div>
                             <div class="person-info  justify-content-center text-center align-items-center p-3 pt-3">
-                                <a href="https://www.linkedin.com/in/rk-pandey-82353734" class="linkedin-style mb-3"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/in/sameer-jakhar-36a7806" class="linkedin-style mb-3"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                                 <p>B.Tech & MBA (PGDM - IIM Ranchi), 16+Years Experience in Sales & Marketing. Ex - Kone Elevator</p>
                             </div>
                         </div>
@@ -162,7 +162,7 @@
                                 <p class="founder-position">Co-founder - Marketing</p>
                             </div>
                             <div class="person-info  justify-content-center text-center align-items-center p-3 pt-3">
-                                <a href="https://www.linkedin.com/in/rk-pandey-82353734" class="linkedin-style mb-3"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/in/nikhaarjain" class="linkedin-style mb-3"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
                                 <p> B.Tech - Chemical - IIT-BHU,12+Years Experience in Ops. & BDM. Ex - Tata Consulting Engineers(TCE)</p>
                             </div>
                         </div>
@@ -180,7 +180,7 @@
                                 <p class="founder-position">Co-Founder - Operations Head</p>
                             </div>
                             <div class="person-info  justify-content-center text-center align-items-center p-3 pt-3">
-                                <a href="https://www.linkedin.com/in/rk-pandey-82353734" class="linkedin-style mb-3"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/in/abhisek-poddar-1bab077" class="linkedin-style mb-3"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                                 <p> B.Tech - Chemical - IIT-BHU, 13+Years Experience in Operations & R&D. Ex - BPCL</p>
                             </div>
                         </div>
@@ -200,7 +200,7 @@
                         </div>
                         <h3 class="mentor-name">DEEPAK PAHWA</h3>
                         <p class="mentor-details">MD- Bry-Air.<br>Chairman - Pahwa Group</p>
-                        <a href="https://www.linkedin.com/in/rk-pandey-82353734" class="social-icon" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/deepak-pahwa-b402312/" class="social-icon" aria-label="LinkedIn">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -211,7 +211,7 @@
                         </div>
                         <h3 class="mentor-name">TARUN MALKANI</h3>
                         <p class="mentor-details">Ex - Bayer, Eastman, Berger, Nocil<br>Experience more than 35 Years</p>
-                        <a href="https://www.linkedin.com/in/rk-pandey-82353734" class="social-icon" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/tarun-malkani-88165a2/" class="social-icon" aria-label="LinkedIn">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -222,7 +222,7 @@
                         </div>
                         <h3 class="mentor-name">PROF. P.K MISHRA</h3>
                         <p class="mentor-details">Vice Chancellor AKTU University<br>Professor - IIT - BHU - Chem. Engg</p>
-                        <a href="https://www.linkedin.com/in/rk-pandey-82353734" class="social-icon" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/pradeep-kumar-mishra-3399243/" class="social-icon" aria-label="LinkedIn">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -240,7 +240,7 @@
                                 <h2 class="cta-text">Get Started with<br>RachTR Today</h2>
                             </div>
                             <div class="col-md-6 p-md-3 p-lg-5 d-flex text-center justify-content-center-md  align-items-center-md align-items-start">
-                                <a href="#" class="btn cta-button fw-bold">Speak to an Expert</a>
+                                <a href="https://api.whatsapp.com/send?phone=917827191824&text=Hey%2C%20greetings%2C%20I%20want%20to%20learn%20more%20about%20your%20business!" class="btn cta-button fw-bold">Speak to an Expert</a>
                             </div>
                         </div>
                     </div>
