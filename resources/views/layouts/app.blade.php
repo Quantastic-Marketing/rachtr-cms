@@ -37,6 +37,9 @@
             <meta name="twitter:description" content="{{ $seoDescription }}">
             <meta name="twitter:image" content="{{ $seoImage }}">
 
+            <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
             <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -141,13 +144,16 @@
             @endif
 
             @include('CommonTemplates.footerHome')
-            <script defer src="{{ asset('js/jquery.min.js') }}" type="text/jscript"></script>
+            <script  src="{{ asset('js/jquery.min.js') }}" type="text/jscript"></script>
             <script defer src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
             <script defer src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
             @if(empty($page->content['is_product_list']))
                 <script defer src="{{ asset('js/slick.js') }}"></script>
                 <script defer src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
                 <script defer src="{{ asset('js/custom.js') }}"></script>
+            @endif
+            @if(!empty($page->content['is_product_list']))
+                <script  src="{{ asset('js/productList.js') }}"></script>
             @endif
             
             <script defer type="text/javascript">

@@ -42,56 +42,21 @@
         @endif
 
         @if(isset($pageContent['sections']))
-            @foreach($pageContent['sections'] as $section)
-                <section class="product-card-section py-5" style="background-color: {{ $section['bg_color'] ?? '#ffffff' }};">
+            @foreach($pageContent['sections'] as $index => $section)
+             @if(!empty($section['products']))
+                <section class="product-card-section py-5" style="background-color: {{ $section['bg_color'] ?? '#ffffff' }};" 
+                data-section-key="{{ $index }}" 
+                data-product-ids="{{ json_encode($section['products']) }}"  >
                     <div class="container">
                         <div class="row justify-content-center gap-5">
                             @if(!is_null($section['section_heading']))
                             <h2 class="fs-1 fw-bold text-center">{{$section['section_heading']}}</h2>
                             @endif
-                            @foreach($section['products'] as $productId)
-                                @php
-                                    $product = $products[$productId] ?? null;
-                                    if($product){
-                                        $productImage = optional(json_decode($product->product_images, true))[0]['product_image'] ?? null; 
-                                        $productDescription = Str::limit(
-                                                            preg_replace('/\s+/', ' ', strip_tags(html_entity_decode($product->product_desc ?? 'No description available'))), 
-                                                            120, 
-                                                            '...'
-                                                        );
-                                    }
-                                    
-                                @endphp
-                                @if($product)
-                                <div class="col-lg-9 px-5">
-                                    <div class="row align-items-center product-card">
-                                        <div class="col-md-6">
-                                            <div class="product-image-wrapper">
-                                                @if (!empty($productImage))
-                                                    <img src="{{ asset('storage/' . $productImage) }}" alt="{{$product->title ?? 'Product Title'}}">
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="product-details">
-                                                <h2 class="product-title">{{$product->name ?? 'Product Title'}}</h2>
-                                                <p class="product-description">
-                                                    @if($productDescription != 'null')
-                                                    {{$productDescription}}
-                                                    @else(!empty($productDescription))
-                                                    No description
-                                                    @endif
-                                                </p>
-                                                <a href="{{ route('product.page', ['slug' => $product->slug]) }}" class="btn btn-orange">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endif
-                            @endforeach
+                        
                         </div>
                     </div>
                 </section>
+             @endif
             @endforeach
         @endif
         @if(!empty($pageContent['faq_section']))

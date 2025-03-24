@@ -1126,7 +1126,7 @@
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/slick.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
-<script src="{{ asset('js/fancybox.umd.js') }}"></script>    
+<script src="{{ asset('js/fancybox.umd.js') }}"></script>
 <script type="text/javascript">
     $('#showLeft').click(function(){
 	$(this).toggleClass('open');
