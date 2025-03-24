@@ -28,43 +28,15 @@ class PageController extends Controller
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
                 if ($isProductList) {
                     $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : '';
+                    return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath]);
                 } else {
                     $templatePath = "Templates." . str_replace('/', '.', $slug);
                 }
                 if (!$pageDetails || !view()->exists($templatePath) ) {
                     return view('fallback');
                 }
-
-                $products = collect();
-
-                if (!empty($pageDetails->content['sections'])) {
-                    $productIds = collect($pageDetails->content['sections'])
-                        ->pluck('products')
-                        ->flatten()
-                        ->unique()
-                        ->filter();
                 
-                    if ($productIds->isNotEmpty()) {
-                        Product::whereIn('id', $productIds)
-                            ->select([
-                                'id',
-                                'name',
-                                'slug',
-                                'content->product_desc as product_desc',
-                                'content->product_images as product_images'
-                            ])
-                            ->chunkById(20, function ($chunk) use ($products) {
-                                foreach ($chunk as $product) {
-                                    $products[$product->id] = $product;
-                                }
-                            }, 'id');
-
-                            \Log::info('Peak memory usage: ' . memory_get_peak_usage(true) / 1024 / 1024 . ' MB');
-                    }
-                    
-                }
-                
-                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products' => $products]);
+                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath]);
             }
         }catch(Exception $e){
             \Log::error('Page load error: ' . $e->getMessage());
@@ -84,4 +56,42 @@ class PageController extends Controller
             return response()->json(["message"=>"Error occured while loading" . $e.message()],500);
         }
     }
+
+    public function getProducts(Request $request)
+{
+    try {
+        $sections = $request->input('sections', []);
+
+        if (empty($sections)) {
+            return response()->json(['message' => 'No sections provided'], 400);
+        }
+
+        // Extract all product IDs from the request
+        $productIds = collect($sections)->pluck('product_ids')->flatten()->unique()->filter();
+
+        if ($productIds->isEmpty()) {
+            return response()->json(['message' => 'No products found'], 200);
+        }
+
+        // Fetch products using a single query and cache them for 10 minutes
+        $products = Product::whereIn('id', $productIds)
+                ->select(['id', 'name', 'slug', 'content->product_desc as product_desc', 'content->product_images as product_images'])
+                ->get()
+                ->keyBy('id');
+
+        // Group products by section
+        $sectionsWithProducts = collect($sections)->map(function ($section) use ($products) {
+            return [
+                'section_key' => $section['section_key'],
+                'products' => collect($section['product_ids'])->map(fn($id) => $products[$id] ?? null)->filter()->values()
+            ];
+        });
+
+        return response()->json(['products' => $sectionsWithProducts]);
+
+    } catch (Exception $e) {
+        \Log::error('Product fetch error: ' . $e->getMessage());
+        return response()->json(['message' => 'Error fetching products'], 500);
+    }
+}
 }
