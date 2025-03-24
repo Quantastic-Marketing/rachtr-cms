@@ -11,7 +11,19 @@
                         <div class="banner-section">
                             <div class="image-wrapper">
                             @if (!empty($pageContent['banner_image']))
-                                <img src="{{ asset('storage/'.$pageContent['banner_image']) }}" alt="Banner Image" width="100%">
+                            <img 
+                                src="{{ asset('storage/'.$pageContent['banner_image']) }}" 
+                                srcset="
+                                    {{ asset('storage/'.$pageContent['banner_image']) }}?w=480 480w, 
+                                    {{ asset('storage/'.$pageContent['banner_image']) }}?w=768 768w, 
+                                    {{ asset('storage/'.$pageContent['banner_image']) }}?w=1024 1024w, 
+                                    {{ asset('storage/'.$pageContent['banner_image']) }}?w=1440 1440w" 
+                                sizes="(max-width: 480px) 480px, 
+                                    (max-width: 768px) 768px, 
+                                    (max-width: 1024px) 1024px, 
+                                    1440px" 
+                                alt="Banner Image" 
+                                width="100%">
                             @endif
                             
                             </div>
