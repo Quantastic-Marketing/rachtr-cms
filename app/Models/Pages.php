@@ -58,13 +58,15 @@ class Pages extends Model
 
     public function getFullSlugAttribute()
     {
-        $slug = $this->slug;
-        $parent = $this->parent;
-        while ($parent) {
-            $slug = $parent->slug . '/' . $slug;
-            $parent = $parent->parent;
+        $slugs = [];
+        $page = $this;
+    
+        while ($page) {
+            $slugs[] = $page->slug; 
+            $page = $page->parent;
         }
-        return $slug;
+    
+        return implode('/', array_reverse($slugs)); 
     }
 
     /**

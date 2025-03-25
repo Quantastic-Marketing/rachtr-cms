@@ -46,8 +46,11 @@ class PageController extends Controller
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
                 \Log::info('Template Path is:'.$isProductList);
                 if ($isProductList) {
-                    $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : '';
+                    $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : null;
                     \Log::info('Template Path is:'.$templatePath);
+                    if(is_null($templatePath)){
+                        return view('fallback');
+                    }
                     return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath]);
                 } else {
                     $templatePath = "Templates." . str_replace('/', '.', $slug);
