@@ -22,9 +22,7 @@ class PageController extends Controller
                 return view('Templates.index',['page' => $pageDetails]);
             } else {
                 $currentSlug = collect(explode('/', $slug))->last();
-                $pageDetails = Cache::remember("page_{$currentSlug}", 60, function () use ($currentSlug) {
-                    return Pages::where('slug', $currentSlug)->with('header', 'footer')->first();
-                });
+                $pageDetails =  Pages::where('slug', $currentSlug)->with('header', 'footer')->first();
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
                 if ($isProductList) {
                     $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : '';
