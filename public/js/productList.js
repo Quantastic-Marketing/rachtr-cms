@@ -1,17 +1,18 @@
  
 $(document).ready(function () {
     let sectionsData = [];
-
+    let startAjax = performance.now();
     // Collect section data dynamically
     $('.product-card-section').each(function () {
         let sectionKey = $(this).data('section-key');
         let productIds = $(this).data('product-ids');
-
+        
         if (productIds.length > 0) {
             sectionsData.push({ section_key: sectionKey, product_ids: productIds });
         }
     });
 
+    console.log("Sending AJAX request with sections:", sectionsData);
     // Send a single AJAX request
     $.ajax({
         url: "/get-products",
@@ -19,9 +20,11 @@ $(document).ready(function () {
         data: { sections: sectionsData },
         headers: { "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')  },
         success: function (response) {
+            let endAjax = performance.now();
+            console.log("AJAX request completed in", ((endAjax - startAjax) / 1000).toFixed(4), "seconds");
             if (response.products) {
                 response.products.forEach(section => {
-
+                    console.log("there is response");
                     let sectionElement = $(`.product-card-section[data-section-key='${section.section_key}'] .row.justify-content-center.gap-5`);
                     let productHtml = '';
 
