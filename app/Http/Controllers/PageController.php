@@ -29,7 +29,7 @@ class PageController extends Controller
                 ]);
                 $startTime = microtime(true);
                 $startMemory = memory_get_usage(true);
-                $pageDetails =  Pages::where('slug', $currentSlug)->with('header', 'footer')->first();
+                $pageDetails =  Pages::where('slug', $currentSlug)->with('header', 'footer','parent')->first();
                 $endTime = microtime(true);
                 $endMemory = memory_get_usage(true);
 
@@ -45,6 +45,9 @@ class PageController extends Controller
                 ]);
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
                 \Log::info('Template Path is:'.$isProductList);
+                // dd($pageDetails->parent);
+                // \Log::info('Template Path is:'. $pageDetails->full_slug);
+                
                 if ($isProductList) {
                     $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : null;
                     \Log::info('Template Path is:'.$templatePath);
