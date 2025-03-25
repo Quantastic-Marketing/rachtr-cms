@@ -57,26 +57,7 @@
         @php \Log::info('Body section render time: ' . round(microtime(true) - $startBody, 4) . ' seconds'); @endphp
         @endif
 
-        @if(isset($pageContent['sections']))
-            @foreach($pageContent['sections'] as $index => $section)
-                @php $startSections = microtime(true); @endphp
-             @if(!empty($section['products']))
-                <section class="product-card-section py-5" style="background-color: {{ $section['bg_color'] ?? '#ffffff' }};" 
-                data-section-key="{{ $index }}" 
-                data-product-ids="{{ json_encode($section['products']) }}"  >
-                    <div class="container">
-                        <div class="row justify-content-center gap-5">
-                            @if(!is_null($section['section_heading']))
-                            <h2 class="fs-1 fw-bold text-center">{{$section['section_heading']}}</h2>
-                            @endif
-                        
-                        </div>
-                    </div>
-                </section>
-             @endif
-             @php \Log::info('Sections render time: ' . round(microtime(true) - $startSections, 4) . ' seconds'); @endphp
-            @endforeach
-        @endif
+       
         @if(!empty($pageContent['faq_section']))
         <section class="product-list-faq faqs py-lg-4 py-3 pb-lg-5 pb-3">
                 <div class="container faqs_detls">

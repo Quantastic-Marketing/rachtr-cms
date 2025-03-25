@@ -152,9 +152,7 @@
                 <script defer src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
                 <script defer src="{{ asset('js/custom.js') }}"></script>
             @endif
-            @if(!empty($page->content['is_product_list']))
-                <script  src="{{ asset('js/productList.js') }}"></script>
-            @endif
+            
             
             <script defer type="text/javascript">
                 $('#showLeft').click(function(){
