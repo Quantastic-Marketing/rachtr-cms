@@ -22,13 +22,36 @@ class PageController extends Controller
                 return view('Templates.index',['page' => $pageDetails]);
             } else {
                 $currentSlug = collect(explode('/', $slug))->last();
+                \Log::info('Page fetch start', [
+                    'time' => microtime(true),
+                    'memory_usage' => memory_get_usage(true) . ' bytes',
+                    'peak_memory_usage' => memory_get_peak_usage(true) . ' bytes'
+                ]);
+                $startTime = microtime(true);
+                $startMemory = memory_get_usage(true);
                 $pageDetails =  Pages::where('slug', $currentSlug)->with('header', 'footer')->first();
+                $endTime = microtime(true);
+                $endMemory = memory_get_usage(true);
+
+                \Log::info('Page fetch end', [
+                    'time' => microtime(true),
+                    'memory_usage' => memory_get_usage(true) . ' bytes',
+                    'peak_memory_usage' => memory_get_peak_usage(true) . ' bytes'
+                ]);
+                
+                \Log::info('Page fetch duration', [
+                    'duration' => ($endTime - $startTime) . ' seconds',
+                    'memory_used' => ($endMemory - $startMemory) . ' bytes'
+                ]);
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
+                \Log::info('Template Path is:'.$isProductList);
                 if ($isProductList) {
                     $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : '';
+                    \Log::info('Template Path is:'.$templatePath);
                     return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath]);
                 } else {
                     $templatePath = "Templates." . str_replace('/', '.', $slug);
+                    \Log::info('else part Template Path is:'.$templatePath);
                 }
                 if (!$pageDetails || !view()->exists($templatePath) ) {
                     return view('fallback');
