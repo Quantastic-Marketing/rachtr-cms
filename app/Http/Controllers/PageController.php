@@ -36,24 +36,24 @@ class PageController extends Controller
                     return view('fallback');
                 }
 
-
-                $productIds = collect($pageDetails->content ['sections'])
-                    ->pluck('products')
-                    ->flatten()
-                    ->unique()
-                    ->filter()
-                    ->values();
-                
                 $products = collect();
-                if ($productIds->isNotEmpty()) {
-                    $products = Product::whereIn('id', $productIds)
-                    ->select(['id', 'name', 'slug', 'content->product_desc as product_desc', 'content->product_images as product_images'])
-                    ->get()
-                    ->keyBy('id');
+                if (!empty($pageDetails->content) && isset($pageDetails->content['sections'])) {
+                    $productIds = collect($pageDetails->content['sections'])
+                        ->pluck('products')
+                        ->flatten()
+                        ->unique()
+                        ->filter()
+                        ->values();
+                    
+                    
+                    if ($productIds->isNotEmpty()) {
+                        $products = Product::whereIn('id', $productIds)
+                        ->select(['id', 'name', 'slug', 'content->product_desc as product_desc', 'content->product_images as product_images'])
+                        ->get()
+                        ->keyBy('id');
+                    }
                 }
-
-                // dd($products);
-                
+             
                 return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products'=>$products]);
             }
         }catch(Exception $e){
