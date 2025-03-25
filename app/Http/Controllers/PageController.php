@@ -60,9 +60,12 @@ class PageController extends Controller
     public function getProducts(Request $request)
 {
     try {
+        \Log::info('getProducts API called');
+        $startTime = microtime(true);
         $sections = $request->input('sections', []);
 
         if (empty($sections)) {
+            \Log::warning('No sections provided in request');
             return response()->json(['message' => 'No sections provided'], 400);
         }
 
@@ -70,6 +73,7 @@ class PageController extends Controller
         $productIds = collect($sections)->pluck('product_ids')->flatten()->unique()->filter();
 
         if ($productIds->isEmpty()) {
+            \Log::info('No product IDs found');
             return response()->json(['message' => 'No products found'], 200);
         }
 
@@ -78,6 +82,7 @@ class PageController extends Controller
                 ->select(['id', 'name', 'slug', 'content->product_desc as product_desc', 'content->product_images as product_images'])
                 ->get()
                 ->keyBy('id');
+        \Log::info('Fetched products count: ' . $products->count());
 
         // Group products by section
         $sectionsWithProducts = collect($sections)->map(function ($section) use ($products) {
@@ -86,6 +91,9 @@ class PageController extends Controller
                 'products' => collect($section['product_ids'])->map(fn($id) => $products[$id] ?? null)->filter()->values()
             ];
         });
+        \Log::info('Final response data', ['sections' => $sectionsWithProducts]);
+
+        \Log::info('getProducts execution time: ' . round(microtime(true) - $startTime, 4) . ' seconds');
 
         return response()->json(['products' => $sectionsWithProducts]);
 
