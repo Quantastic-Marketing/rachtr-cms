@@ -22,48 +22,39 @@ class PageController extends Controller
                 return view('Templates.index',['page' => $pageDetails]);
             } else {
                 $currentSlug = collect(explode('/', $slug))->last();
-                \Log::info('Page fetch start', [
-                    'time' => microtime(true),
-                    'memory_usage' => memory_get_usage(true) . ' bytes',
-                    'peak_memory_usage' => memory_get_peak_usage(true) . ' bytes'
-                ]);
-                $startTime = microtime(true);
-                $startMemory = memory_get_usage(true);
-                $pageDetails =  Pages::where('slug', $currentSlug)->with('header', 'footer','parent')->first();
-                $endTime = microtime(true);
-                $endMemory = memory_get_usage(true);
 
-                \Log::info('Page fetch end', [
-                    'time' => microtime(true),
-                    'memory_usage' => memory_get_usage(true) . ' bytes',
-                    'peak_memory_usage' => memory_get_peak_usage(true) . ' bytes'
-                ]);
-                
-                \Log::info('Page fetch duration', [
-                    'duration' => ($endTime - $startTime) . ' seconds',
-                    'memory_used' => ($endMemory - $startMemory) . ' bytes'
-                ]);
+                $pageDetails =  Pages::where('slug', $currentSlug)->with('header', 'footer','parent')->first();
+
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
-                \Log::info('Template Path is:'.$isProductList);
-                // dd($pageDetails->parent);
-                // \Log::info('Template Path is:'. $pageDetails->full_slug);
                 
                 if ($isProductList) {
-                    $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : null;
-                    \Log::info('Template Path is:'.$templatePath);
-                    if(is_null($templatePath)){
-                        return view('fallback');
-                    }
-                    return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath]);
+                    $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : ' ';
                 } else {
                     $templatePath = "Templates." . str_replace('/', '.', $slug);
-                    \Log::info('else part Template Path is:'.$templatePath);
                 }
                 if (!$pageDetails || !view()->exists($templatePath) ) {
                     return view('fallback');
                 }
-                
-                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath]);
+
+                $products = collect();
+                if (!empty($pageDetails->content) && isset($pageDetails->content['sections'])) {
+                    $productIds = collect($pageDetails->content['sections'])
+                        ->pluck('products')
+                        ->flatten()
+                        ->unique()
+                        ->filter()
+                        ->values();
+                    
+                    
+                    if ($productIds->isNotEmpty()) {
+                        $products = Product::whereIn('id', $productIds)
+                        ->select(['id', 'name', 'slug', 'content->product_desc as product_desc', 'content->product_images as product_images'])
+                        ->get()
+                        ->keyBy('id');
+                    }
+                }
+             
+                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products'=>$products]);
             }
         }catch(Exception $e){
             \Log::error('Page load error: ' . $e->getMessage());

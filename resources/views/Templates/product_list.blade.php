@@ -57,7 +57,59 @@
         @php \Log::info('Body section render time: ' . round(microtime(true) - $startBody, 4) . ' seconds'); @endphp
         @endif
 
-       
+        @if(isset($pageContent['sections']))
+            @foreach($pageContent['sections'] as $index => $section)
+                @php $startSections = microtime(true); @endphp
+             @if(!empty($section['products']))
+                <section class="product-card-section py-5" style="background-color: {{ $section['bg_color'] ?? '#ffffff' }};" 
+                data-section-key="{{ $index }}" 
+                data-product-ids="{{ json_encode($section['products']) }}"  >
+                    <div class="container">
+                        <div class="row justify-content-center gap-5">
+                            @if(!is_null($section['section_heading']))
+                            <h2 class="fs-1 fw-bold text-center">{{$section['section_heading']}}</h2>
+                            @endif
+                            @foreach($section['products'] as $productId)
+                                @php
+                                    $product = $products[$productId] ?? null;
+                                    if($product){
+                                            $productImage = optional(json_decode($product->product_images, true))[0]['product_image'] ?? null; 
+                                            $productDescription = Str::limit(
+                                                                preg_replace('/\s+/', ' ', strip_tags(html_entity_decode($product->product_desc ?? 'No description available'))), 
+                                                                120, 
+                                                                '...'
+                                                            );
+                                        }
+                                @endphp
+                                <div class="col-lg-9 px-5">
+                                    <div class="row align-items-center product-card">
+                                        <div class="col-md-6">
+                                            <div class="product-image-wrapper">
+                                                @if ($productImage)
+                                                    <img src="{{ asset('storage/' . $productImage) }}" alt="{{$product->name ?? 'Product Title'}}">
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="product-details">
+                                                <h2 class="product-title">{{$product->name ?? 'Product Title'}}</h2>
+                                                <p class="product-description">
+                                                    {{$productDescription}}
+                                                </p>
+                                                <a href="{{ route('product.page', ['slug' => $product->slug]) }}" class="btn btn-orange">View Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        
+                        </div>
+                    </div>
+                </section>
+             @endif
+             @php \Log::info('Sections render time: ' . round(microtime(true) - $startSections, 4) . ' seconds'); @endphp
+            @endforeach
+        @endif
         @if(!empty($pageContent['faq_section']))
         <section class="product-list-faq faqs py-lg-4 py-3 pb-lg-5 pb-3">
                 <div class="container faqs_detls">
