@@ -94,4 +94,17 @@ class PageController extends Controller
         return response()->json(['message' => 'Error fetching products'], 500);
     }
 }
+
+    public function getSitemap()
+    {
+        $path = public_path('sitemap.xml');
+
+        if (!file_exists($path)) {
+            return response()->json(['message' => 'Sitemap not found'], 404);
+        }
+
+        return Response::file($path, [
+            'Content-Type' => 'application/xml'
+        ]);
+    }
 }
