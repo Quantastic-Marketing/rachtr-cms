@@ -1,5 +1,4 @@
-
-    <div class="wrapper"> 
+<div class="wrapper"> 
        <div class="bnr_sldr">
         <div class="row g-0">
         <div class="col-lg-12">
@@ -21,9 +20,9 @@
 
                               </div>
                               <div class="banner-buttons d-flex  gap-md-3 py-md-5 gap-2 py-3">
-                                <button type="button" class="btn btn-primary w-auto p-md-3 text-normal fs-md-6 d-flex align-items-center gap-1 gap-md-2"><i class="fa fa-whatsapp fs-3"></i>
+                                <button type="button" class="btn btn-primary w-auto p-md-3 text-normal fs-md-6 d-flex align-items-center gap-1 gap-md-2" onclick="window.open('https://wa.link/xdnyq9', '_blank')"><i class="fa fa-whatsapp fs-3"></i>
                                     CHAT WITH US ON WHATSAPP</button>
-                                <button type="button" class="btn btn-outline-light fw-bold">GET AN INSTANT QUOTE</button>
+                                <button type="button" class="btn btn-outline-light fw-bold" id="openFormBtn">GET AN INSTANT QUOTE</button>
                               </div>
                               <div class="content-list ms-0 pt-md-5 pt-3">
                                      <p> *<span>Note:</span>RachTR doesn’t do Residential Interior Epoxy Flooring projects!</p>
@@ -708,38 +707,45 @@
                                     <p class="note">*Note: RachTR doesn’t do Residential Interior Epoxy Flooring projects!</p>
                                 </div>
                             
-                                <form class="px-5 py-3">
+                                <form class="epoxy-form" class="px-5 py-3" action="/submit-epoxy-form" method="POST">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label">Name <span>*</span></label>
-                                            <input type="text" class="form-control" required>
+                                            <input type="text" class="form-control" name="Name" required>
                                         </div>
                                         <div class="col-md-6 mb-3 ">
                                             <label class="form-label">Email <span>*</span></label>
-                                            <input type="email" class="form-control" required>
+                                            <input type="email" class="form-control" name="Email" required>
                                         </div>
                                     </div>
                             
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label">Phone <span>*</span></label>
-                                            <input type="mobile" placeholder="Phone" class="form-control" required>
+                                            <input type="tel" placeholder="Phone" pattern="[6-9]\d{9}"  title="Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9" name="Phone"  class="form-control" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label">Company Name <span>*</span></label>
-                                            <input type="text" class="form-control" required>
+                                            <input type="text" class="form-control" name="Company Name" required>
                                         </div>
                                     </div>
                             
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label">City Name <span>*</span></label>
-                                            <input type="text" class="form-control" required>
+                                            <input type="text" class="form-control" name="City" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label">Preferences <span>*</span></label>
-                                            <select class="form-select" required>
-                                                <option selected disabled>Select</option>
+                                            <select class="form-select" name="Preferences" required>
+                                            <option value="" selected disabled>Preferences</option>
+                                            <option value="Commercial Space">Commercial Space</option>
+                                            <option value="Factory">Factory</option>
+                                            <option value="Car Parking">Car Parking</option>
+                                            <option value="Basement">Basement</option>
+                                            <option value="Covered">Covered</option>
+                                            <option value="Hospital">Hospital</option>
                                             </select>
                                         </div>
                                     </div>
@@ -747,24 +753,32 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label">Select Unit (SQ Feet / SQ Meter) <span>*</span></label>
-                                            <select class="form-select" required>
-                                                <option selected disabled>Select</option>
+                                            <select class="form-select" name="Select Unit" required>
+                                            <option value="" selected disabled>Select Unit (SQ Feet / SQ Meter)</option>
+                                            <option value="sq feet">SQ Feet</option>
+                                            <option value="sq meter">SQ Meter</option>
                                             </select>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label">Select Area (SQ Feet / SQ Meter) <span>*</span></label>
-                                            <select class="form-select" required>
-                                                <option selected disabled>Select</option>
+                                            <select class="form-select" name="Select Area" required>
+                                            <option value="" selected disabled>Select Area (SQ Feet / SQ Meter)</option>
+                                                <option value="4000-10000">4000-10000</option>
+                                                <option value="10000-15000">10000-15000</option>
+                                                <option value="15000-20000">15000-20000</option>
+                                                <option value="20000-25000">20000-25000</option>
+                                                <option value="25000-50000">25000-50000</option>
+                                                <option value="50000-1 lac">50000-1 lac</option>
                                             </select>
                                         </div>
                                     </div>
                             
                                     <div class="mb-3">
                                         <label class="form-label">Comment Or Message <span>*</span></label>
-                                        <textarea class="form-control" rows="4" placeholder="Add Answer Here" required></textarea>
+                                        <textarea class="form-control" rows="4" placeholder="Add Answer Here" name="Message" required></textarea>
                                     </div>
                             
-                                    <button type="submit" class="btn btn-submit">SUBMIT ></button>
+                                    <button type="submit" class="btn btn-submit submit-btn-form">SUBMIT ></button>
                                 </form>
                             </div>
                         </div>
@@ -878,9 +892,9 @@
                                 Transform Your Floors Today</h2>
                         </div>
                         <div class="banner-buttons d-flex justify-content-center gap-3 py-5 flex-column flex-md-row">
-                            <button type="button" class="btn btn-primary w-auto p-3 text-normal fs-6 d-flex align-items-center gap-2 justify-center"><i class="fa fa-whatsapp fs-3 m-0"></i>
+                            <button type="button" class="btn btn-primary w-auto p-3 text-normal fs-6 d-flex align-items-center gap-2 justify-center" onclick="window.open('https://wa.link/xdnyq9', '_blank')"><i class="fa fa-whatsapp fs-3 m-0"></i>
                                 CHAT WITH US ON WHATSAPP</button>
-                            <button type="button" class="btn btn-outline-light fw-bold">GET AN INSTANT QUOTE</button>
+                            <button type="button" class="btn btn-outline-light fw-bold" id="openFormBtn">GET AN INSTANT QUOTE</button>
                         </div>
                     </div>
                 </div>
@@ -888,6 +902,83 @@
         </div>  
         <div class="banner_overlay"></div>
      </section>
+
+
+       <!-- Blur Overlay -->
+    <div class="blur-overlay" id="blurOverlay"></div>
+
+<!-- Form Popup -->
+<div class="form-popup" id="formPopup">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <h2 class="form-title">Request a Custom Epoxy Flooring Solution</h2>
+    
+    <form class="epoxy-form" action="/submit-epoxy-form" method="POST">
+        @csrf
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="name" name="Name" placeholder="Name" required>
+            </div>
+            <div class="col-md-6">
+                <input type="email" class="form-control" id="email" name="Email" placeholder="Email" required>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <input type="tel" class="form-control" id="phone" pattern="[6-9]\d{9}" title="Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9" name="Phone" placeholder="Phone" required>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="company" name="Company Name" placeholder="Company Name" required>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="city" name="City" placeholder="City Name" required>
+            </div>
+            <div class="col-md-6">
+                <select class="form-select" name="Preferences" id="Preferences" required>
+                    <option value="" selected disabled>Preferences</option>
+                    <option value="Commercial Space">Commercial Space</option>
+                    <option value="Factory">Factory</option>
+                    <option value="Car Parking">Car Parking</option>
+                    <option value="Basement">Basement</option>
+                    <option value="Covered">Covered</option>
+                    <option value="Hospital">Hospital</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <select class="form-select" name="Select Unit" id="Select Unit" required>
+                    <option value="" selected disabled>Select Unit (SQ Feet / SQ Meter)</option>
+                    <option value="sq feet">SQ Feet</option>
+                    <option value="sq meter">SQ Meter</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <select class="form-select" name="Select Area" id="Select Area" required>
+                    <option value="" selected disabled>Select Area (SQ Feet / SQ Meter)</option>
+                    <option value="4000-10000">4000-10000</option>
+                    <option value="10000-15000">10000-15000</option>
+                    <option value="15000-20000">15000-20000</option>
+                    <option value="20000-25000">20000-25000</option>
+                    <option value="25000-50000">25000-50000</option>
+                    <option value="50000-1 lac">50000-1 lac</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <textarea class="form-control" id="message" name="Message" placeholder="Comment Or Message *" required></textarea>
+            </div>
+        </div>
+        
+        <button type="submit" class="submit-btn submit-btn-form">SUBMIT ></button>
+    </form>
+</div>
    
    </div>
 

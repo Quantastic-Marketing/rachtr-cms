@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +41,7 @@
 
             <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
-            <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css')}}">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <!--<link rel="stylesheet" href="css/hover-min.css" type="text/css">-->
             <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}" type="text/css">
             <link rel="stylesheet" href="{{ asset('css/slick.css')}}" type="text/css">
@@ -100,7 +99,6 @@
             @endforeach
 
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Rachtr","alternateName":"Rachtr","url":"https://www.rachtr.com/","logo":"https://static.wixstatic.com/media/386348_1185cc80ad414f0b866b359f72e3844b~mv2.png/v1/fill/w_108,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Asset%201%20copy.png","sameAs":["https://www.instagram.com/rachtr_/","https://www.facebook.com/rachtr1","https://www.linkedin.com/company/13608620/admin/dashboard/","https://www.youtube.com/@rachtrchemicals7185"]}</script>
-        
         @if (!empty($page->schema_data) && is_array($page->schema_data))
             @foreach ($page->schema_data as $schemaItem)
                 @if (isset($schemaItem['schema']))
@@ -136,6 +134,42 @@
     <body>
         
             @include('CommonTemplates.headerHome')
+
+            <!-- Success Modal -->
+<div class="modal micromodal-slide" id="success-modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title">Success</h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content">
+                <p id="success-message" >Form submitted successfully!</p>
+            </main>
+            <footer class="modal__footer">
+                <button class="modal__btn" data-micromodal-close>Close</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div class="modal micromodal-slide" id="error-modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title">Error</h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content">
+                <p id="error-message">Something went wrong. Please try again.</p>
+            </main>
+            <footer class="modal__footer">
+                <button class="modal__btn" data-micromodal-close>Close</button>
+            </footer>
+        </div>
+    </div>
+</div>
             
             @if(request()->is('*product-page*'))
                @includeIf('Templates.Product.'.$template,['product'=> $page])
@@ -147,12 +181,13 @@
             <script  src="{{ asset('js/jquery.min.js') }}" type="text/jscript"></script>
             <script defer src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
             <script defer src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
+            <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
             @if(empty($page->content['is_product_list']))
                 <script defer src="{{ asset('js/slick.js') }}"></script>
                 <script defer src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
                 <script defer src="{{ asset('js/custom.js') }}"></script>
             @endif
-            
+            <script defer src="{{ asset('js/forms.js') }}" type="text/javascript"></script>
             
             <script defer type="text/javascript">
                 $('#showLeft').click(function(){

@@ -7,21 +7,22 @@
                   </div>
                   <div class="form_sec mbl py-5">
                         <h3 class="fw-bold py-2">GET IN TOUCH</h3>
-                        <form action="/action_page.php">
+                        <form  action="{{ route('connect') }}" method="POST">
+                        @csrf
                           <div class="row g-0">  
                               <div class="mb-2 pe-1 col">
-                                 <input type="name" class="form-control" id="name" placeholder="Name" name="name">
+                                 <input type="name" class="form-control" id="Name" placeholder="Njkjjame" name="Name" required>
                               </div>
                               <div class="mb-2 ps-1 col">
-                                <input type="phone" class="form-control" id="phone" placeholder="Phone" name="phone">
+                                <input type="phone" class="form-control" id="Phone" placeholder="Phone" name="Phone" required>
                               </div>
                           </div>
                           <div class="row g-0">  
                               <div class="mb-2 pe-1 col">
-                                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                                <input type="email" class="form-control" id="Email" placeholder="Email" name="Email" required>
                               </div>
                               <div class="mb-2 ps-1 col">
-                                <input type="massage" class="form-control" id="msg" placeholder="Massage" name="msg">
+                                <input type="massage" class="form-control" id="Message" placeholder="Message" name="Message" required>
                               </div>
                           </div>   
                           <button type="submit" class="btn btn-primary">Submit</button>
@@ -92,24 +93,25 @@
                 <div class="col-lg-4 ms-0">
                     <div class="form_sec desk py-5">
                         <h3 class="fw-bold py-2">GET IN TOUCH</h3>
-                        <form action="/action_page.php">
+                        <form id="connect-form" action="{{ route('connect') }}" method="POST">
+                            @csrf
                           <div class="row g-0">  
                               <div class="mb-2 pe-1 col">
-                                 <input type="name" class="form-control" id="name" placeholder="Name" name="Name">
+                                 <input type="name" class="form-control" id="Name" placeholder="Name" name="Name" required>
                               </div>
                               <div class="mb-2 ps-1 col">
-                                <input type="phone" class="form-control" id="phone" placeholder="Phone" name="Phone">
+                                <input type="tel" class="form-control" id="Phone" pattern="[6-9]\d{9}" title="Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9" placeholder="Phone" name="Phone" required>
                               </div>
                           </div>
                           <div class="row g-0">  
                               <div class="mb-2 pe-1 col">
-                                <input type="email" class="form-control" id="email" placeholder="Email" name="Email">
+                                <input type="email" class="form-control" id="Email" placeholder="Email" name="Email" required>
                               </div>
                               <div class="mb-2 ps-1 col">
-                                <input type="massage" class="form-control" id="msg" placeholder="Message" name="Message">
+                                <input type="massage" class="form-control" id="Message" placeholder="Message" name="Message" required>
                               </div>
                           </div>   
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                          <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
                         </form>
                     </div>
                     <div class="follow_us pt-5">

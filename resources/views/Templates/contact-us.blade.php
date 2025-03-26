@@ -1,7 +1,4 @@
-
-   
-    <div class="wrapper"> 
-    
+<div class="wrapper"> 
         
        <section class="contact-banner banner">
         <div class="row g-0">
@@ -72,15 +69,16 @@
                         <!-- Right Side: Contact Form -->
                         <div class="col-md-7">
                             <div class="contact-box p-4 shadow-sm rounded-4">
-                                <form class="contact-form">
+                           <form class="contact-form" id="contact-form" action="/contact-submit" method="POST">
+                                    @csrf
                                     <div class="mb-2">
-                                        <input type="text" class="form-control" placeholder="Name" required>
+                                        <input type="text" class="form-control" name="Name" placeholder="Name" required>
                                     </div>
                                     <div class="mb-2">
-                                        <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                        <input type="tel" class="form-control" pattern="[6-9]\d{9}" title="Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9" name="Phone" placeholder="Phone Number" required>
                                     </div>
                                     <div class="mb-2">
-                                        <select class="form-control">
+                                        <select class="form-control" name="Profession" required>
                                             <option value="" disabled selected>Profession</option>
                                             <option>Student</option>
                                             <option>Engineer</option>
@@ -89,18 +87,18 @@
                                         </select>
                                     </div>
                                     <div class="mb-2">
-                                        <input type="email" class="form-control" placeholder="Email id" required>
+                                        <input type="email" name="Email" class="form-control" placeholder="Email id" required>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-2">
-                                            <input type="text" class="form-control" placeholder="City">
+                                            <input type="text" name="City" class="form-control" placeholder="City">
                                         </div>
                                         <div class="col-md-6 mb-2">
-                                            <input type="text" class="form-control" placeholder="Product Name">
+                                            <input type="text" name="Product Name" class="form-control" placeholder="Product Name">
                                         </div>
                                     </div>
                                     <div class="mb-2">
-                                        <textarea class="form-control" placeholder="Message"></textarea>
+                                        <textarea class="form-control" name="Message" placeholder="Message"></textarea>
                                     </div>
                                     <div class="d-flex  w-md-50 me-md-0">
                                         <button type="submit" class="btn btn-primary w-100 ">SUBMIT</button>
@@ -131,7 +129,7 @@
                 <div class="col-12 col-md-6 p-4">
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7018.07150760237!2d77.040755!3d28.418178!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0319846ab45d%3A0xcebbb501e5193504!2sRachTR%20Chemicals%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1739867428225!5m2!1sen!2sin" 
-                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                             style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
