@@ -19,7 +19,7 @@ class PageController extends Controller
                 if (!$pageDetails) {
                     return view('fallback');
                 }
-                return view('Templates.index',['page' => $pageDetails]);
+                return view('layouts.app',['page' => $pageDetails,'templatePath'=>'Templates.index']);
             } else {
                 $currentSlug = collect(explode('/', $slug))->last();
 
