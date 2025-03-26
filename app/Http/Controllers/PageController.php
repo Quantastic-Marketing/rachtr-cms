@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Pages;
 use App\Models\Product;
+use Spatie\Sitemap\Sitemap;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Spatie\Sitemap\Tags\Url;
+use Firefly\FilamentBlog\Models\Post;
 use Illuminate\Support\Facades\Cache;
 
 class PageController extends Controller
@@ -75,62 +79,73 @@ class PageController extends Controller
         }
     }
 
-    public function getProducts(Request $request)
-{
-    try {
-        \Log::info('getProducts API called');
-        $startTime = microtime(true);
-        $sections = $request->input('sections', []);
-
-        if (empty($sections)) {
-            \Log::warning('No sections provided in request');
-            return response()->json(['message' => 'No sections provided'], 400);
-        }
-
-        // Extract all product IDs from the request
-        $productIds = collect($sections)->pluck('product_ids')->flatten()->unique()->filter();
-
-        if ($productIds->isEmpty()) {
-            \Log::info('No product IDs found');
-            return response()->json(['message' => 'No products found'], 200);
-        }
-
-        // Fetch products using a single query and cache them for 10 minutes
-        $products = Product::whereIn('id', $productIds)
-                ->select(['id', 'name', 'slug', 'content->product_desc as product_desc', 'content->product_images as product_images'])
-                ->get()
-                ->keyBy('id');
-        \Log::info('Fetched products count: ' . $products->count());
-
-        // Group products by section
-        $sectionsWithProducts = collect($sections)->map(function ($section) use ($products) {
-            return [
-                'section_key' => $section['section_key'],
-                'products' => collect($section['product_ids'])->map(fn($id) => $products[$id] ?? null)->filter()->values()
-            ];
-        });
-        \Log::info('Final response data', ['sections' => $sectionsWithProducts]);
-
-        \Log::info('getProducts execution time: ' . round(microtime(true) - $startTime, 4) . ' seconds');
-
-        return response()->json(['products' => $sectionsWithProducts]);
-
-    } catch (Exception $e) {
-        \Log::error('Product fetch error: ' . $e->getMessage());
-        return response()->json(['message' => 'Error fetching products'], 500);
-    }
-}
 
     public function getSitemap()
-    {
-        $path = public_path('sitemap.xml');
+    {   
+        \Log::info('Sitemap generation started');
 
-        if (!file_exists($path)) {
-            return response()->json(['message' => 'Sitemap not found'], 404);
+        try {
+            $sitemap = Sitemap::create();
+            $baseUrl = config('app.url');
+
+            \Log::info('Base URL:', ['url' => $baseUrl]);
+
+            // Add Home URL
+            $sitemap->add(Url::create("{$baseUrl}")
+                ->setPriority(1.0)
+                ->setChangeFrequency('daily'));
+            \Log::info('Added Home URL to sitemap');
+
+            // Add Pages
+            $pages = Pages::select(['slug', 'updated_at', 'parent_id'])->with('parent')->get();
+
+            foreach ($pages as $page) {
+                $url = "{$baseUrl}/{$page->full_slug}";
+                $sitemap->add(Url::create($url)
+                    ->setLastModificationDate($page->updated_at)
+                    ->setPriority(0.7));
+                \Log::info('Added Page to sitemap', ['url' => $url]);
+            }
+
+            // Add Products
+            $products = Product::select(['slug', 'updated_at'])->get();
+    
+            foreach ($products as $product) {
+                $url = "{$baseUrl}/product-page/{$product->slug}";
+                $sitemap->add(Url::create($url)
+                    ->setLastModificationDate($product->updated_at)
+                    ->setPriority(0.6));
+                \Log::info('Added Product to sitemap', ['url' => $url]);
+            }
+
+            // Add Blog Posts
+            $posts = Post::select(['slug', 'updated_at'])->get();
+
+            foreach ($posts as $post) {
+                $url = "{$baseUrl}/blogs/{$post->slug}";
+                $sitemap->add(Url::create($url)
+                    ->setLastModificationDate($post->updated_at)
+                    ->setPriority(0.5));
+                \Log::info('Added Blog Post to sitemap', ['url' => $url]);
+            }
+
+            // Save Sitemap
+            $sitemapPath = public_path('sitemap.xml');
+            $sitemap->writeToFile($sitemapPath);
+
+            \Log::info('Sitemap saved', ['path' => $sitemapPath]);
+
+            if (!file_exists($sitemapPath)) {
+                return response()->json(['message' => 'Sitemap not found'], 404);
+            }
+    
+            return Response::file($sitemapPath, [
+                'Content-Type' => 'application/xml'
+            ]);
+            
+        } catch (\Exception $e) {
+            \Log::error('Error generating sitemap', ['error' => $e->getMessage()]);
+            return response()->json(['message' => 'Sitemap Generation error'], 404);
         }
-
-        return Response::file($path, [
-            'Content-Type' => 'application/xml'
-        ]);
     }
 }
