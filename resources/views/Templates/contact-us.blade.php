@@ -91,14 +91,14 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-2">
-                                            <input type="text" name="City" class="form-control" placeholder="City">
+                                            <input type="text" name="City" class="form-control" placeholder="City" required>
                                         </div>
                                         <div class="col-md-6 mb-2">
-                                            <input type="text" name="Product Name" class="form-control" placeholder="Product Name">
+                                            <input type="text" name="Product Name" class="form-control" placeholder="Product Name" required>
                                         </div>
                                     </div>
                                     <div class="mb-2">
-                                        <textarea class="form-control" name="Message" placeholder="Message"></textarea>
+                                        <textarea class="form-control" name="Message" placeholder="Message" required></textarea>
                                     </div>
                                     <div class="d-flex  w-md-50 me-md-0">
                                         <button type="submit" class="btn btn-primary w-100 ">SUBMIT</button>
