@@ -3,23 +3,38 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <title>{{$post->seoDetail->title ?? 'rachtr'}}</title>
-        <meta name="description" content="{{ $post->seoDetail->description ?? 'Rahctr' }}">
-        <meta name="author" content="{{ $post->user->name ?? 'Rachtr' }}">
         @php
-        $focusKeywords = isset($post->seoDetail->keywords) ? implode(', ',$post->seoDetail->keywords) : 'rachtr';
-        @endphp
-        <meta name="keywords" content="{{ $focusKeywords }}">
-        <meta name="robots" content="index, follow">
-          <!-- Open Graph (Facebook, LinkedIn) -->
-        <meta property="og:title" content="{{ $page->seoDetail->title ?? config('app.name') }}">
-        <meta property="og:description" content="{{ $page->seoDetail->description ?? 'Rahctr' }}">
-        <meta property="og:type" content="website">
+            $seo = $page->seoDetail ?? (object)[];
+            $seoTitle = $seo->title ?? config('app.name');
+            $seoDescription = $seo->description ?? 'Rachtr';
+            $seoAuthor = $seo->author ?? 'Rachtr';
+            $canonicalUrl = $seo->canonical_url ?? url()->current();
+            $seoImage = $seo->image ?? asset('images/default-image.jpg');
 
-         <!-- Twitter Card -->
-         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="{{ $page->seoDetail->title ?? config('app.name')  }}">
-        <meta name="twitter:description" content="{{ $page->seoDetail->description ?? 'Rahctr' }}">
+            $metaData = json_decode($seo->meta ?? '{}', true);
+            $focusKeywords = isset($metaData['focus_keywords']) ? implode(', ', $metaData['focus_keywords']) : 'rachtr';
+
+            $currentPath = request()->path();
+        @endphp
+        <title>{{ $seoTitle }}</title>
+            <meta name="description" content="{{ $seoDescription }}">
+            <meta name="author" content="{{ $seoAuthor }}">
+            <meta name="keywords" content="{{ $focusKeywords }}">
+            <link rel="canonical" href="{{ $canonicalUrl }}">
+
+            <!-- Open Graph (Facebook, LinkedIn) -->
+            <meta property="og:title" content="{{ $seoTitle }}">
+            <meta property="og:description" content="{{ $seoDescription }}">
+            <meta property="og:image" content="{{ $seoImage }}">
+            <meta property="og:url" content="{{ $canonicalUrl }}">
+            <meta property="og:type" content="website">
+
+            <!-- Twitter Card -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="{{ $seoTitle }}">
+            <meta name="twitter:description" content="{{ $seoDescription }}">
+            <meta name="twitter:image" content="{{ $seoImage }}">
+            <meta name="robots" content="index,follow">
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -57,7 +72,7 @@
 <meta name="google-site-verification" content="CH-Fx7-BhdxpR3zCWKu8yDohtQt5iGrXBd4oDnjFdHs" />
         
     </head>
-<body>
+<body x-data="{ query: new URLSearchParams(window.location.search).get('query') || '' }">
     <!-- This is a wrapper open -->
     <div class="wrapper"> 
       @includeIf('CommonTemplates.headerHome');

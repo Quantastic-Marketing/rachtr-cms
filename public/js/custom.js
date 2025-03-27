@@ -463,3 +463,22 @@ handleSlider();
 $(window).on('resize', function () {
   handleSlider();
 });
+
+$(document).ready(function() {
+  $('#load-more').on('click', function() {
+      let nextPageUrl = $(this).attr('data-next-page');
+
+      if (nextPageUrl) {
+          $.get(nextPageUrl, function(data) {
+              $('#product-container').append($(data).find('#product-container').html());
+              
+              let newNextPage = $(data).find('#load-more').attr('data-next-page');
+              if (newNextPage) {
+                  $('#load-more').attr('data-next-page', newNextPage);
+              } else {
+                  $('#load-more').remove();
+              }
+          });
+      }
+  });
+});

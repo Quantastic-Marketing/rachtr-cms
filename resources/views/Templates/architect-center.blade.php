@@ -67,7 +67,7 @@
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
                                             <video preload="none" autoplay="" loop="" playsinline="true"
-                                                src="{{asset('videos/video-shoowcase-1.mp4') }}"></video>
+                                                src="{{asset('videos/video-showcase-1.mp4') }}"></video>
                                         </div>
                                         <div class="projects_txt">
                                             <h6>Industrial Flooring</h6>
@@ -93,7 +93,7 @@
                                                             fill="#FF5200" data-color="1"></path>
                                                     </g>
                                                 </svg>
-                                            </div>
+                                            </div>anshika
                                         </div>
                                     </div>
                                 </li>

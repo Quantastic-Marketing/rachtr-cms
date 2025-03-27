@@ -85,6 +85,9 @@
                     case str_contains($currentPath, 'epoxy-flooring-cost-price'):
                         $styles[] = ['css/epoxy.css', 'css/epoxyCost.css'];
                         break;
+                    case str_contains($currentPath, 'category'):
+                        $styles[] = ['css/allProduct.css'];
+                        break;
                 }
             @endphp
 
@@ -99,6 +102,10 @@
             @endforeach
 
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Rachtr","alternateName":"Rachtr","url":"https://www.rachtr.com/","logo":"https://static.wixstatic.com/media/386348_1185cc80ad414f0b866b359f72e3844b~mv2.png/v1/fill/w_108,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Asset%201%20copy.png","sameAs":["https://www.instagram.com/rachtr_/","https://www.facebook.com/rachtr1","https://www.linkedin.com/company/13608620/admin/dashboard/","https://www.youtube.com/@rachtrchemicals7185"]}</script>
+        @if(request()->is('*product-lists*'))
+        <link rel="stylesheet" href="{{ asset('css/search.css') }}">
+        @endif
+  
         @if (!empty($page->schema_data) && is_array($page->schema_data))
             @foreach ($page->schema_data as $schemaItem)
                 @if (isset($schemaItem['schema']))
@@ -131,7 +138,7 @@
 
     </head>
 
-    <body>
+    <body  x-data="{ query: new URLSearchParams(window.location.search).get('query') || '' }">
         
             @include('CommonTemplates.headerHome')
 
@@ -173,8 +180,10 @@
             
             @if(request()->is('*product-page*'))
                @includeIf('Templates.Product.'.$template,['product'=> $page])
-            @else
-                @includeIf($templatePath,['page'=> $page])
+            @elseif(request()->is('*product-lists*'))
+               @includeIf('Templates.search',['products'=>$products,'blogs'=>$blogs,'categories'=>$categories])
+            @elseif(request()->is('*category*'))
+                @includeIf('Templates.all-products')
             @endif
 
             @include('CommonTemplates.footerHome')
@@ -182,10 +191,14 @@
             <script defer src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
             <script defer src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
             <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+            <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
             @if(empty($page->content['is_product_list']))
                 <script defer src="{{ asset('js/slick.js') }}"></script>
                 <script defer src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
                 <script defer src="{{ asset('js/custom.js') }}"></script>
+            @endif
+            @if(request()->is('*product-lists*'))
+                <script src="{{ asset('js/customTab.js') }}"></script>
             @endif
             <script defer src="{{ asset('js/forms.js') }}" type="text/javascript"></script>
             

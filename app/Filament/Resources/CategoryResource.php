@@ -30,11 +30,12 @@ class CategoryResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')
-                    ->required()
-                    ->unique(Category::class, 'name'),
+                        ->required()
+                        ->unique(Category::class, 'name', ignoreRecord: true),
+
                 TextInput::make('slug')
-                    ->required()
-                    ->unique(Category::class, 'slug'),
+                        ->required()
+                        ->unique(Category::class, 'slug', ignoreRecord: true),
                 Textarea::make('description')->nullable(),
             ]);
     }

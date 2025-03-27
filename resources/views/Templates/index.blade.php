@@ -6,7 +6,7 @@
        <!-- This is a banner open -->
        <div class="bnr_sldr">
            <div class="row g-0">
-           <div class="banr col-lg-12">                     
+           <div class="banr col-lg-12">
               <div class="item">
                   <div class="banner-sec">
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
@@ -18,7 +18,7 @@
                                  <div class="content-details ms-0">
                                       <h2>Building Communities, Brick by Brick</h2>
                                       <p>RachTR empowers builders, architects, and artisans with high-performance coatings and adhesives. Together, we're shaping India's built environment.</p>
-                                      <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p> 
+                                      <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p>
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>
@@ -27,13 +27,13 @@
                                         <li><a href="#">⦿ Industrial Flooring</a></li>
                                      </ul>
                                  </div>
-                             </div> 
+                             </div>
                          </div>
                      </div>
-                 </div> 
+                 </div>
                </div>
                <div class="item">
-                  <div class="banner-sec"> 
+                  <div class="banner-sec">
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
                             <source id="#movie1" src="videos/file-2.mp4" type="video/mp4">
                       </video>
@@ -51,13 +51,13 @@
                                         <li><a href="#">⦿ Industrial Flooring</a></li>
                                      </ul>
                                  </div>
-                             </div> 
+                             </div>
                          </div>
                      </div>
-                  </div>  
+                  </div>
                </div>
                <div class="item">
-                  <div class="banner-sec"> 
+                  <div class="banner-sec">
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
                             <source id="#movie1" src="videos/file-3.mp4" type="video/mp4">
                       </video>
