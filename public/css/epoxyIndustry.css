@@ -2,6 +2,14 @@
     margin-top:120px;
 }
 
+ul li {
+    list-style: disc;
+}
+
+ul{
+    text-align: unset;
+    padding: revert;
+}
 .industry-banner .banner-section {
     position: relative;
     height: 230px;
@@ -72,14 +80,16 @@
 
 .product-card-section .product-image-wrapper {
     overflow: hidden;
-    /* border-radius: 10px; */
+    width: auto;
+    height: 380px;
 }
 
 .product-image-wrapper img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     transition: transform 0.3s ease-in-out;
+    object-fit: cover;
 }
 
 .product-card-section .product-image-wrapper:hover img {
