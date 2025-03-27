@@ -4,13 +4,15 @@ namespace App\Models;
 
 use App\Models\Seo;
 use App\Models\Category;
+use Laravel\Scout\Searchable;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use RalphJSmit\Laravel\SEO\Support\HasSEO;
 
 class Product extends Model
 {
-    use HasSEO;
+    use HasSEO,Searchable;
     protected $fillable = ['name', 'slug', 'template', 'content', 'is_active','schema_data'];
 
     protected $casts = [
@@ -44,6 +46,11 @@ class Product extends Model
                 Storage::disk($disk)->delete($original['download_cert']);
             }
         });
+
+        static::saved(fn () => Cache::forget('categories_with_products'));
+        static::saved(fn () => Cache::forget('products_name_slug'));
+        static::deleted(fn () => Cache::forget('categories_with_products'));
+        static::deleted(fn () => Cache::forget('products_name_slug'));
     }
 
     /**
@@ -99,6 +106,16 @@ class Product extends Model
     public function categories()
     {
         return $this->belongsToMany(Category::class, 'category_product');
+    }
+
+    public function toSearchableArray(): array
+    {
+	      
+        return [
+            'name' => $this->name,
+            'slug' => $this->slug,
+            'content' => json_encode($this->content),
+        ];
     }
 
 }

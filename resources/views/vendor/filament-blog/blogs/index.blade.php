@@ -40,7 +40,7 @@
         <meta name="google-site-verification" content="CH-Fx7-BhdxpR3zCWKu8yDohtQt5iGrXBd4oDnjFdHs" />
         
     </head>
-<body>
+<body x-data="{ query: new URLSearchParams(window.location.search).get('query') || '' }">
     <!-- This is a wrapper open -->
     <div class="wrapper"> 
       

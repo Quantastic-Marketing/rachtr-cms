@@ -11,7 +11,7 @@
                         @csrf
                           <div class="row g-0">  
                               <div class="mb-2 pe-1 col">
-                                 <input type="name" class="form-control" id="Name" placeholder="Njkjjame" name="Name" required>
+                                 <input type="name" class="form-control" id="Name" placeholder="Name" name="Name" required>
                               </div>
                               <div class="mb-2 ps-1 col">
                                 <input type="phone" class="form-control" id="Phone" placeholder="Phone" name="Phone" required>

@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Providers;
-
+use App\Models\Post;
 use App\Models\Pages;
+
 use App\Observers\PageObserver;
+
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,12 +23,15 @@ class AppServiceProvider extends ServiceProvider
         }
     }
 
-    /**
+    /** 
      * Bootstrap any application services.
      */
     public function boot(): void
     {
         // Pages::observe(PageObserver::class);
+        Route::bind('post', function ($value) {
+            return Post::where('slug', $value)->published()->firstOrFail();
+        });
         Paginator::useBootstrap();
     }
 }
