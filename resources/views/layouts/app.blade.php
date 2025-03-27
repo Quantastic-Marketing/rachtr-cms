@@ -184,6 +184,8 @@
                @includeIf('Templates.search',['products'=>$products,'blogs'=>$blogs,'categories'=>$categories])
             @elseif(request()->is('*category*'))
                 @includeIf('Templates.all-products')
+            @else
+                @includeIf($templatePath,['page'=> $page])
             @endif
 
             @include('CommonTemplates.footerHome')
