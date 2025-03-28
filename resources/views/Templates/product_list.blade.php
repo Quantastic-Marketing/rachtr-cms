@@ -74,11 +74,7 @@
                                     $product = $products[$productId] ?? null;
                                     if($product){
                                             $productImage = optional(json_decode($product->product_images, true))[0]['product_image'] ?? null; 
-                                            $productDescription = Str::limit(
-                                                                preg_replace('/\s+/', ' ', strip_tags(html_entity_decode($product->product_desc ?? 'No description available'))), 
-                                                                120, 
-                                                                '...'
-                                                            );
+                                            $productDescription = preg_replace('/\s+/', ' ', strip_tags(html_entity_decode($product->product_desc ?? 'No description available')));
                                         }
                                 @endphp
                                 <div class="col-lg-9 px-5">

@@ -14,8 +14,8 @@
 
 .blogs-content .blog-title {
     /* font-size: 28px; */
-    /* font-weight: 700; */
-    /* line-height: 40px; */
+    font-weight: 700; 
+    line-height: 35px !important;
 }
 .blogs-content h1{
     font-size: 34px !important;

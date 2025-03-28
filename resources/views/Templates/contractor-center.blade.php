@@ -2,7 +2,7 @@
 
     <div class="wrapper"> 
 
-       <section class="contact-banner banner">
+       <section class="contact-contract contact-banner banner">
         <div class="row g-0">
         <div class="col-lg-12">  
             <div class="banner-section">
@@ -20,7 +20,7 @@
         </div>
     </section>
         <!-- This is a banner close -->
-            <section class="contact-contract contract-innvo innovation-solutions py-3 py-sm-5">
+            <section class="contract-innvo innovation-solutions py-3 py-sm-5">
                 <div class="container">
                     <div class="row align-items-center">
                             <div class="col-md-10">
@@ -183,32 +183,32 @@
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="https://youtu.be/lHCzLmkVm-M" data-fancybox="gallery">
                                     <img src="{{asset('images/thumbnail-3.webp')}}" alt="">       
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/adani-ahemdabad.webm')}}" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-4.webp')}}" alt="">                  
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/Lake-Estate-Nagpur.webm')}}" data-fancybox="gallery">
                                      <img src="{{asset('images/thumbnail-5.webp')}}" alt="">                     
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/Surat-Bunglow.webm')}}" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-6.webp')}}" alt="">      
                                     </a>             
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/Travertine-Punjab.webm')}}" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-7.webp')}}" alt="">      
                                     </a>             
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/Lemon-Tree.webm')}}" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-9.webp')}}" alt="">      
                                     </a>             
                                 </div>
