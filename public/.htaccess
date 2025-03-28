@@ -13,6 +13,10 @@
     RewriteCond %{HTTP:x-xsrf-token} .
     RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
 
+    # Allow access to static files
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule \.(png|jpe?g|gif|svg|webp|ico|css|js|woff|woff2|ttf|eot|mp4|mov|webm|ogg)$ - [L,NC]
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
