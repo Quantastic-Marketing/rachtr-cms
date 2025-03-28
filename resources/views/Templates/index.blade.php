@@ -117,7 +117,7 @@
                <div class="row g-0">
                    <div class="col-lg-4">
                        <div class="about_techTr_img">
-                           <img src="images/about-RachTr.jpg"/>
+                           <img src="images/about-RachTr.webp"/>
                        </div>
                    </div>
                    <div class="col-lg-6 ps-0">
@@ -207,7 +207,7 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
-                                        <img src="images/Innovative%20Research%20&%20Development.jpg"/>
+                                        <img src="images/Innovative%20Research%20&%20Development.webp"/>
                                       </div>
                                       <div class="projects_txt">
                                         <h6>Innovative Research & Development</h6>
@@ -227,7 +227,7 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12 mx-5">
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
-                                        <img src="images/Advanced%20Manufacturing.jpg"/>
+                                        <img src="images/Advanced%20Manufacturing.webp"/>
                                       </div>
                                       <div class="projects_txt">
                                         <h6>Advanced Manufacturing</h6>
@@ -247,7 +247,7 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
-                                        <img src="images/Comprehensive%20Solutions.jpg"/>
+                                        <img src="images/Comprehensive%20Solutions.webp"/>
                                       </div>
                                       <div class="projects_txt">
                                         <h6>Comprehensive Solutions</h6>
@@ -285,7 +285,7 @@
                                     <p>At RachTR, we are relentless in our pursuit of innovation. Our team of brilliant minds is dedicated to developing solutions. We are proud to unveil our latest advancements in:</p>
                                </div>
                                 <div class="res_dev_btn col-lg-3 col-md-3 col-sm-12 pt-4 me-1">
-                                    <a href="https://www.rachtr.com/blog/categories/latest-research-solutions" target="_blank">VIEW ALL</a>
+                                    <a href="{{ config('app.url') . '/blogs/categories/latest-research-solutions'}}" target="_blank">VIEW ALL</a>
                                 </div>
                                 <i class="clear"></i>
                              </div>
@@ -294,7 +294,7 @@
                          <ul class="padd0">
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
-                                   <img src='images/Tailormade.jpg'/>
+                                   <img src='images/Tailormade.webp'/>
                                 </div>
                                 <div class="letst_advermnt_contnt">
                                    <div class="top_cont">
@@ -309,7 +309,7 @@
                             </li>
                              <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
-                                   <img src='images/Abrasion.jpg'/>
+                                   <img src='images/Abrasion.webp'/>
                                 </div>
                                 <div class="letst_advermnt_contnt">
                                    <div class="top_cont">
@@ -324,7 +324,7 @@
                             </li>
                              <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
-                                   <img src='images/Perfect-White-Marble.jpg'/>
+                                   <img src='images/Perfect-White-Marble.webp'/>
                                 </div>
                                 <div class="letst_advermnt_contnt">
                                    <div class="top_cont">
@@ -452,13 +452,13 @@
                       <div class="case_studies_contn">
                           <h5 class="fw-bold pb-2">Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor</h5>
                           <p class="pb-5 mb-5">Delhivery, since 2011, is a top e-commerce logistics provider in India, handling last-mile delivery, warehousing, and freight. Its tech and network are vital for Indian e-commerce.</p>
-                          <a href="https://www.rachtr.com/_files/ugd/f8ee4f_49c135e9175b4329ba811ee263b633ff.pdf" target="_blank">View Case Study</a>
+                          <a href="{{asset('pdfFile/Delhivery_carousel.pdf')}}" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/delhivery.jpg"/>
+                             <img src="images/delhivery.webp"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -488,13 +488,13 @@
                       <div class="case_studies_contn">
                           <h5 class="fw-bold pb-2">Epoxy Flooring Solution on Oil-Prone Areas for Welspun</h5>
                           <p class="pb-5 mb-5">Welspun, a global leader in textiles, offers high-quality home textiles & flooring solutions. Their diverse reach and focus on innovation & sustainability set them apart. They aim to be a top brand, prioritizing customer experience and social responsibility.</p>
-                          <a href="https://www.rachtr.com/_files/ugd/f8ee4f_5514b35959b7459f858e43a4562aaee7.pdf" target="_blank">View Case Study</a>
+                          <a href="{{ asset('pdfFile/Welpsun_Carousel.pdf') }}" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/welspun%20epoxy.jpg"/>
+                             <img src="images/welspun%20epoxy.webp"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -525,13 +525,13 @@
                           <h5 class="fw-bold pb-2">White Marble being difficult to install, as white marble is susceptible to stains, yellowness of joints, etc.</h5>
                           <p>8/10 contractors refuse to install white marble owing to project failure rate which is exorbitantly high.</p>
                           <p class="pb-5 mb-5">Problem starts immediately and keep on coming at regular intervals upto 2-3 years which is a...</p>
-                          <a href="https://www.rachtr.com/post/solutions" target="_blank">View Case Study</a>
+                          <a href="{{ config('app.url') . '/post/solutions'}}" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/Perfect-White-Marble.jpg"/>
+                             <img src="images/Perfect-White-Marble.webp"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -562,13 +562,13 @@
                           <h5 class="fw-bold pb-2">Achieved a Seamless and Hygienic Flooring Solution at FMCG Factory, Haridwar</h5>
                           <p>FMCG Haridwar, a prominent player in the food industry, required a seamless flooring solution to inhibit microorganism growth and ensure product safety.</p>
                           <p class="pb-2 mb-2">The existing epoxy flooring was damaged, and the plant operations could not be halted, necessitating a swift, dust-free maintenance solution.</p>
-                          <a href="https://www.rachtr.com/_files/ugd/f8ee4f_c3b0af2201184666aaa6c29513b7229f.pdf" target="_blank">View Case Study</a>
+                          <a href="{{ asset('pdfFile/Case_Study_ITC.pdf')}}" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/itc%20before%20after%20rachtr.jpg"/>
+                             <img src="images/itc%20before%20after%20rachtr.webp"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -599,13 +599,13 @@
                           <h5 class="fw-bold pb-2">Successful Delivery of Complex Flooring in Just 3 Days for Escorts Kubota</h5>
                           <p>We had just 72 hours to transform a large industrial space for Escorts Kubota into a showroom-ready floor, complete with intricate designs, multiple colors, and precision-aligned white lines.</p>
                           <p class="pb-2 mb-2">Read more to know how we successfully delivered complex flooring for Escorts Kubota in record time</p>
-                          <a href="https://www.rachtr.com/post/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota" target="_blank">View Case Study</a>
+                          <a href="{{ config('app.url') . '/post/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/Escort%20Kubota%20Blog%20Banner.jpg"/>
+                             <img src="images/Escort%20Kubota%20Blog%20Banner.webp"/>
                           </div>
                           <div class="downd_txt px-4 py-4">
                              <ul>
@@ -645,7 +645,7 @@
                          <ul class="padd0">
                             <li class="col-lg-4 mx-3">
                                 <div class="blogs_img">
-                                   <img src='images/blog-1.jpg'/>
+                                   <img src='images/blog-1.webp'/>
                                 </div>
                                 <div class="blogs_contnt">
                                    <div class="top_cont">
@@ -660,7 +660,7 @@
                             </li>
                              <li class="col-lg-4 mx-3">
                                 <div class="blogs_img">
-                                   <img src='images/blog-2.jpg'/>
+                                   <img src='images/blog-2.webp'/>
                                 </div>
                                 <div class="blogs_contnt">
                                    <div class="top_cont">
@@ -675,7 +675,7 @@
                             </li>
                              <li class="col-lg-4 mx-3">
                                 <div class="blogs_img">
-                                   <img src='images/blog-3.jpg'/>
+                                   <img src='images/blog-3.webp'/>
                                 </div>
                                 <div class="blogs_contnt">
                                    <div class="top_cont">
@@ -690,7 +690,7 @@
                             </li>
                           </ul>
                          <div class="view_btn col-lg-3 py-5">
-                             <a href="https://www.rachtr.com/blog" target="_blank">VIEW ALL</a>
+                             <a href="{{ config('app.url') . '/blogs'}}" target="_blank">VIEW ALL</a>
                         </div>
                       </div>
                   </div>    
@@ -710,31 +710,31 @@
                  <div class="faqs_detls row g-0">
                     <div class="col-lg-4 faq_fade_effct">
                        <div class="img">
-                           <img src="images/faq-1.jpg"/>
+                           <img src="images/faq-1.webp"/>
                         </div>
                         <div class="img">
-                           <img src="images/faq-2.jpg"/>
+                           <img src="images/faq-2.webp"/>
                         </div>
                         <div class="img">
-                           <img src="images/faq-3.jpg"/>
+                           <img src="images/faq-3.webp"/>
                         </div>
                         <div class="img">
-                           <img src="images/faq-4.jpg"/>
+                           <img src="images/faq-4.webp"/>
                         </div>
                         <div class="img">
-                           <img src="images/faq-5.jpg"/>
+                           <img src="images/faq-5.webp"/>
                         </div>
                         <div class="img">
-                           <img src="images/faq-6.jpg"/>
+                           <img src="images/faq-6.webp"/>
                         </div>
                         <div class="img">
-                           <img src="images/faq-7.jpg"/>
+                           <img src="images/faq-7.webp"/>
                         </div>
                         <div class="img">
-                           <img src="images/faq-8.jpg"/>
+                           <img src="images/faq-8.webp"/>
                         </div>
                         <div class="img">
-                           <img src="images/faq-9.jpg"/>
+                           <img src="images/faq-9.webp"/>
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -771,7 +771,7 @@
                                     <h6 class="mb-0">How do I know which RachTR product is right for my project?</h6>
                                   </div>
                                   <div class="acc-body">
-                                        <p>We recommend visiting the specific industry pages (<a href="https://www.rachtr.com/residential-commercial-building" target="_blank" class="org">Residential & Commercial Buildings,</a> <a href="https://www.rachtr.com/stone-processing-industry" target="_blank" class="org">Stone Processing Industry,</a> <a href="https://www.rachtrindia.com/industrial-flooring-solutions" target="_blank" class="org">Industrial Flooring</a>) for detailed information and product recommendations. Our team is also happy to assist you. <a href="https://www.rachtr.com/contact-us" target="_blank" class="org">Contact us</a> for personalized advice.</p>
+                                        <p>We recommend visiting the specific industry pages (<a href="{{ config('app.url') . '/residential-commercial-building'}}" target="_blank" class="org">Residential & Commercial Buildings,</a> <a href="{{ config('app.url') . '/stone-processing-industry'}}" target="_blank" class="org">Stone Processing Industry,</a> <a href="https://www.rachtrindia.com/industrial-flooring-solutions" target="_blank" class="org">Industrial Flooring</a>) for detailed information and product recommendations. Our team is also happy to assist you. <a href="{{ config('app.url') . '/contact-us'}}" target="_blank" class="org">Contact us</a> for personalized advice.</p>
                                     </div>
                                 </div>
                                 <div class="accordion-wrapper">
@@ -880,7 +880,7 @@
                                     <h6 class="mb-0">Where can I purchase RachTR products for my residential or commercial project?</h6>
                                   </div>
                                   <div class="acc-body">
-                                        <p>RachTR products can be purchased through our authorized distributors or directly by <a href="https://www.rachtr.com/contact-us" target="_blank" class="org">contacting us</a>. For large commercial projects, we offer customized solutions and bulk purchasing options. Contact our sales team for more information.</p>
+                                        <p>RachTR products can be purchased through our authorized distributors or directly by <a href="{{ config('app.url') . '/contact-us'}}" target="_blank" class="org">contacting us</a>. For large commercial projects, we offer customized solutions and bulk purchasing options. Contact our sales team for more information.</p>
                                     </div>
                                 </div>
                             </div>
@@ -949,7 +949,7 @@
                                     <h6 class="mb-0">Where can I purchase RachTR products for stone processing?</h6>
                                   </div>
                                   <div class="acc-body">
-                                        <p>RachTR stone processing products can be purchased through our authorized distributors or you can <a href="https://www.rachtr.com/contact-us" target="_blank" class="org">contact us</a> directly. For bulk orders and customized solutions, you can contact our sales team for assistance and to find the best options for your specific needs.</p>
+                                        <p>RachTR stone processing products can be purchased through our authorized distributors or you can <a href="{{ config('app.url') . '/contact-us'}}" target="_blank" class="org">contact us</a> directly. For bulk orders and customized solutions, you can contact our sales team for assistance and to find the best options for your specific needs.</p>
                                     </div>
                                 </div>
                             </div>

@@ -7,8 +7,8 @@
         <div class="col-lg-12">  
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="{{ asset('images/contractual_bg.jpeg') }}" alt="img background" class="d-none d-md-block">
-                    <img src="{{ asset('images/loor_mob_bg.jpg') }}" alt="img background" class=" d-block d-md-none">
+                    <img src="{{ asset('images/contractual_bg.webp') }}" alt="img background" class="d-none d-md-block">
+                    <img src="{{ asset('images/loor_mob_bg.webp') }}" alt="img background" class=" d-block d-md-none">
                 </div>
                 <div class="heading-holder">
                     <h2>CONTRACT CENTER</h2>
@@ -20,7 +20,7 @@
         </div>
     </section>
         <!-- This is a banner close -->
-            <section class="contract-innvo innovation-solutions py-3 py-sm-5">
+            <section class="contact-contract contract-innvo innovation-solutions py-3 py-sm-5">
                 <div class="container">
                     <div class="row align-items-center">
                             <div class="col-md-10">
@@ -28,11 +28,11 @@
                                     <div class="col-lg-6 order-2 order-md-1">
                                         <div class="image-container">
                                             <!-- <div class="background-box"></div> -->
-                                            <img src="{{ asset('images/contract_innovation.jpeg') }}"  alt="PU Flooring">
+                                            <img src="{{ asset('images/contract_innovation.webp') }}"  alt="PU Flooring">
                                             <!-- <div class="overlay-box"></div> -->
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 px-4 order-1 order-md-2">
+                                    <div class="col-lg-6 px-4 order-1 order-md-2 py-md-5">
                                         <div class="heading-holder">
                                             <h2>Innovative Solutions for Contractors</h2>
                                         </div>
@@ -62,7 +62,9 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
-                                        <video preload="none" autoplay="" loop="" playsinline="true" src="https://video.wixstatic.com/video/386348_48be672ac14345a79d6dedb4e37515d5/720p/mp4/file.mp4"></video>
+                                        <video  autoplay loop playsinline="true" muted>
+                                            <source src="{{ asset('videos/video-showcase-1.mp4') }}" type="video/mp4">  
+                                        </video>
                                       </div>
                                       <div class="projects_txt">
                                         <h6>Industrial Flooring</h6>
@@ -82,7 +84,10 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12 mx-5">
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
-                                        <video preload="none" autoplay="" loop="" playsinline="true" src="https://video.wixstatic.com/video/386348_4e7dbb9062fa424c8f17291c9ddf9f48/720p/mp4/file.mp4"></video>                                      </div>
+                                        <video autoplay loop playsinline="true" muted>
+                                            <source src="{{ asset('videos/video-showcase-2.mp4') }}" type="video/mp4">
+                                        </video>                                      
+                                      </div>
                                       <div class="projects_txt">
                                         <h6>Residential & Commercial Buildings</h6>
                                         <p>From dream homes to iconic landmarks, RachTR offers reliable solutions for all your building needs.</p>
@@ -101,7 +106,10 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
-                                        <video preload="none" autoplay="" loop="" playsinline="true" src="https://video.wixstatic.com/video/386348_099665904c644aa69df788ebf7f94ed3/720p/mp4/file.mp4"></video>                                      </div>
+                                        <video  autoplay="" loop="" muted playsinline="true">
+                                            <source src="{{ asset('videos/video-showcase-3.mp4') }}" type="video/mp4">
+                                        </video>                                      
+                                      </div>
                                       <div class="projects_txt">
                                         <h6>Stone Processing Industry</h6>
                                         <p>Enhance the beauty and durability of natural stone with our specialized coatings and adhesives.</p>
@@ -151,7 +159,6 @@
                             <a href="#" class="cta-btn mt-3">Call us Now</a>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -167,31 +174,43 @@
                             <div class="app-video-slider">
                                 <div class="app-video mx-1">
                                     <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
-                                        <picture><source srcset="https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 1x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_942,h_530,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 2x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1413,h_795,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 3x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1884,h_1060,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 4x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1919,h_1079,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 5x" type="image/webp"><source srcset="https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 1x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_942,h_530,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 2x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1413,h_795,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 3x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1884,h_1060,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 4x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1919,h_1079,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 5x" type="image/png"><img id="12" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="12" src="https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png" alt="" loading="eager" style="width: 471px; height: 265px;"></picture>
+                                        <img src="{{asset('images/thumbnail-1.webp')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="app-video mx-1 ">
                                     <a href="https://youtu.be/lHCzLmkVm-M" data-fancybox="gallery">
-                                        <img id="5" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="5" src="https://static.wixstatic.com/media/f8ee4f_6ffc7ae0f62e4aa183af1c00eb0ab577~mv2.png/v1/fill/w_1911,h_1075,q_90/f8ee4f_6ffc7ae0f62e4aa183af1c00eb0ab577~mv2.png" alt="" loading="eager" style="width: 471px; height: 265px; user-select: none;">                                    </a>
-                                </div>
-                                <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
-                                        <picture><source srcset="https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 1x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_942,h_530,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 2x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1413,h_795,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 3x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1884,h_1060,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 4x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1919,h_1079,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 5x" type="image/webp"><source srcset="https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 1x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_942,h_530,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 2x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1413,h_795,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 3x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1884,h_1060,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 4x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1919,h_1079,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 5x" type="image/png"><img id="12" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="12" src="https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png" alt="" loading="eager" style="width: 471px; height: 265px;"></picture>
+                                        <img src="{{asset('images/thumbnail-2.webp')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
                                     <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
-                                        <picture><source srcset="https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 1x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_942,h_530,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 2x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1413,h_795,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 3x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1884,h_1060,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 4x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1919,h_1079,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.webp 5x" type="image/webp"><source srcset="https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 1x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_942,h_530,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 2x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1413,h_795,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 3x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1884,h_1060,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 4x, https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_1919,h_1079,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png 5x" type="image/png"><img id="12" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="12" src="https://static.wixstatic.com/media/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_c68489bd294645babeb69fe61c519fb4~mv2.png" alt="" loading="eager" style="width: 471px; height: 265px;"></picture>
+                                    <img src="{{asset('images/thumbnail-3.webp')}}" alt="">       
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
                                     <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
-                                        <img id="6" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="6" src="https://static.wixstatic.com/media/f8ee4f_eaf8bccf49af4bc8b8f7501f94b1663a~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_eaf8bccf49af4bc8b8f7501f94b1663a~mv2.png" alt="" loading="eager" style="width: 471px; height: 265px;">                                    </a>
+                                        <img src="{{asset('images/thumbnail-4.webp')}}" alt="">                  
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
                                     <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
-                                        <img id="6" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="6" src="https://static.wixstatic.com/media/f8ee4f_eaf8bccf49af4bc8b8f7501f94b1663a~mv2.png/v1/fill/w_471,h_265,q_90/f8ee4f_eaf8bccf49af4bc8b8f7501f94b1663a~mv2.png" alt="" loading="eager" style="width: 471px; height: 265px;">                                    </a>
+                                     <img src="{{asset('images/thumbnail-5.webp')}}" alt="">                     
+                                    </a>
+                                </div>
+                                <div class="app-video mx-1">
+                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                        <img src="{{asset('images/thumbnail-6.webp')}}" alt="">      
+                                    </a>             
+                                </div>
+                                <div class="app-video mx-1">
+                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                        <img src="{{asset('images/thumbnail-7.webp')}}" alt="">      
+                                    </a>             
+                                </div>
+                                <div class="app-video mx-1">
+                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                        <img src="{{asset('images/thumbnail-9.webp')}}" alt="">      
+                                    </a>             
                                 </div>
                             </div>
                         </div>

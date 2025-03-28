@@ -6,7 +6,7 @@
         <div class="col-lg-12">  
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="images/career.jpeg" alt="img background">
+                    <img src="images/career.webp" alt="img background">
                    
                 </div>
                 <div class="banner-content">
@@ -31,20 +31,20 @@
                         <div class="slider-container d-flex align-items-center m-auto">
                             <!-- Main Slider -->
                             <div class="vertical-slider d-none d-lg-block">
-                                <div class="life-at-img-small"><img src="images/life1.jpg" alt="Slide 1"></div>
-                                <div class="life-at-img-small"><img src="images/life2.jpg" alt="Slide 2"></div>
-                                <div class="life-at-img-small"><img src="images/life3.jpg" alt="Slide 3"></div>
-                                <div class="life-at-img-small"><img src="images/life4.jpg" alt="Slide 4"></div>
-                                <div class="life-at-img-small"><img src="images/life5.jpg" alt="Slide 4"></div>
+                                <div class="life-at-img-small"><img src="images/life1.webp" alt="Slide 1"></div>
+                                <div class="life-at-img-small"><img src="images/life2.webp" alt="Slide 2"></div>
+                                <div class="life-at-img-small"><img src="images/life3.webp" alt="Slide 3"></div>
+                                <div class="life-at-img-small"><img src="images/life4.webp" alt="Slide 4"></div>
+                                <div class="life-at-img-small"><img src="images/life5.webp" alt="Slide 4"></div>
                             </div>
 
                             <!-- Thumbnail Navigation -->
                             <div class="main-slider">
-                                <div class="life-at-img"><a href="https://static.wixstatic.com/media/386348_db04d11825834b9a80439ac084f04be2~mv2.jpg/v1/fit/w_668,h_547,q_90,enc_avif,quality_auto/386348_db04d11825834b9a80439ac084f04be2~mv2.jpg" data-fancybox="gallery"><img src="images/life1.jpg" alt="Slide 1"></a></div>
-                                <div class="life-at-img"><a href="https://static.wixstatic.com/media/386348_4a59b1a3dfda4882b30590146266c0cb~mv2.jpg/v1/fit/w_668,h_547,q_90,enc_avif,quality_auto/386348_4a59b1a3dfda4882b30590146266c0cb~mv2.jpg" data-fancybox="gallery"><img src="images/life2.jpg" alt="Slide 2"></a></div>
-                                <div class="life-at-img"><a href="https://static.wixstatic.com/media/386348_3fd59d8a49bc439697465238f8339264~mv2.jpg/v1/fit/w_698,h_525,q_90,enc_avif,quality_auto/386348_3fd59d8a49bc439697465238f8339264~mv2.jpg" data-fancybox="gallery"><img src="images/life3.jpg" alt="Slide 3"></a></div>
-                                <div class="life-at-img"><a href="https://static.wixstatic.com/media/386348_c7f4df0d11384986b205fbb803dd5d50~mv2.jpg/v1/fit/w_698,h_525,q_90,enc_avif,quality_auto/386348_c7f4df0d11384986b205fbb803dd5d50~mv2.jpg" data-fancybox="gallery"><img src="images/life4.jpg" alt="Slide 4"></a></div>
-                                <div class="life-at-img"><a href="https://static.wixstatic.com/media/386348_bf2e79b469134e0ca1136838b3e98f66~mv2.jpg/v1/fit/w_698,h_525,q_90,enc_avif,quality_auto/386348_bf2e79b469134e0ca1136838b3e98f66~mv2.jpg" data-fancybox="gallery"><img src="images/life5.jpg" alt="Slide 4"></a></div>
+                                <div class="life-at-img"><a href="{{ asset('images/life1.webp')}}" data-fancybox="gallery"><img src="images/life1.webp" alt="Slide 1"></a></div>
+                                <div class="life-at-img"><a href="{{ asset('images/life2.webp')}}" data-fancybox="gallery"><img src="images/life2.webp" alt="Slide 2"></a></div>
+                                <div class="life-at-img"><a href="{{ asset('images/life3.webp')}}" data-fancybox="gallery"><img src="images/life3.webp" alt="Slide 3"></a></div>
+                                <div class="life-at-img"><a href="{{ asset('images/life4.webp')}}" data-fancybox="gallery"><img src="images/life4.webp" alt="Slide 4"></a></div>
+                                <div class="life-at-img"><a href="{{ asset('images/life5.webp')}}" data-fancybox="gallery"><img src="images/life5.webp" alt="Slide 4"></a></div>
                             </div>
                         </div>
 
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 p-0">
-                            <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay="" src="https://video.wixstatic.com/video/386348_8b027ed89cbb4c0d863d6e8a8c4c1859/480p/mp4/file.mp4" style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;"></video>
+                            <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay="" src="{{ asset('videos/carrer_video.mp4') }}" style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;"></video>
                         </div> 
                     <!-- </div> -->
                      
@@ -138,7 +138,7 @@
             <div class="row">
                 <div class="col-lg-11 col-xl-10">
                     <div class="company-section flex-column flex-lg-row  my-3 p-3 p-md-5 d-flex">
-                        <img src="images/btm-logo.png" alt="RachTR Logo" class="company-logo">
+                        <img src="images/btm-logo.webp" alt="RachTR Logo" class="company-logo">
                         <div class="jobs-container">
                             <div class="company-header ps-md-2">  
                                 <div class="flex-grow-1 text-center text-lg-start">

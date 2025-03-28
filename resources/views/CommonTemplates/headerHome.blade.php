@@ -9,7 +9,7 @@
                 <div class="row g-0"> 
                     <div class="col-lg-2 col-md-2">
                       <div class="logo">
-                            <a href="{{ url('/')  }}"><img src=" {{ asset('storage/'.$headerContent['logo'] ?? 'images/logo.png') }}" alt ="logo"></a>
+                            <a href="{{ url('/')  }}"><img src=" {{ asset('storage/'.$headerContent['logo'] ?? 'images/logo.webp') }}" alt ="logo"></a>
                       </div>
                       </div>
                     <div class="col-lg-10 col-md-10">

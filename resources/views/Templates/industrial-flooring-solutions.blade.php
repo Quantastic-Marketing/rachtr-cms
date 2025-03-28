@@ -8,7 +8,7 @@
             <div class="item">
               <div class="banner-sec">
                 <img
-                  src="images/Industria-Flooring-hero-banner.jpg"
+                  src="images/Industria-Flooring-hero-banner.webp"
                   alt="Industrial Flooring"
                   style="object-position: top"
                 />
@@ -44,12 +44,12 @@
                   <div class="image-container">
                     <!-- <div class="background-box"></div> -->
                     <img
-                      src="images/Industrial-Flooring-Solutions-about.jpg"
+                      src="images/Industrial-Flooring-Solutions-about.webp"
                       alt="Industrial Flooring Solutions"
                       class="d-none d-lg-block"
                     />
                     <img
-                      src="images/Industrial-Flooring-Solutions-about.jpg"
+                      src="images/Industrial-Flooring-Solutions-about.webp"
                       alt="Industrial Flooring Solutions"
                       class="s-block d-lg-none"
                     />
@@ -110,7 +110,7 @@
                   >
                   <figure>
                     <img
-                      src="images/Food-Beverages-Pharma-Industry.jpg"
+                      src="images/Food-Beverages-Pharma-Industry.webp"
                       alt="Food, Beverages & Pharma Industry"
                       class="img-fluid h-100 w-100 object-fit-cover"
                     />
@@ -142,7 +142,7 @@
                   >
                   <figure>
                     <img
-                      src="images/Automotive-Electronics-Meta-Industry.jpg"
+                      src="images/Automotive-Electronics-Meta-Industry.webp"
                       alt="Automotive, Electronics, & Metal Industry"
                       class="img-fluid h-100 w-100 object-fit-cover"
                     />
@@ -176,7 +176,7 @@
                   >
                   <figure>
                     <img
-                      src="images/Chemicals-Fertilizers-Industry.jpg"
+                      src="images/Chemicals-Fertilizers-Industry.webp"
                       alt="Chemicals & Fertilizers Industry"
                       class="img-fluid h-100 w-100 object-fit-cover"
                     />
@@ -207,7 +207,7 @@
                     >Chemicals & Fertilizers <br />Industry</span>
                   <figure>
                     <img
-                      src="images/Shipping-Railway-Aviation-Industry.jpg"
+                      src="images/Shipping-Railway-Aviation-Industry.webp"
                       alt="Shipping, Railway & Aviation Industry"
                       class="img-fluid h-100 w-100 object-fit-cover"
                     />
@@ -237,7 +237,7 @@
                     >Chemicals & Fertilizers <br /> Industry</span>
                   <figure>
                     <img
-                      src="images/Warehousing-Logistics.jpg"
+                      src="images/Warehousing-Logistics.webp"
                       alt="Warehousing & Logistics"
                       class="img-fluid h-100 w-100 object-fit-cover"
                     />
@@ -288,13 +288,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="https://static.wixstatic.com/media/f8ee4f_5fd809b64cab444fa1b11427e80455da~mv2.jpg"
+                        src="images/3010product.webp"
                         alt="RachTR Floor 3010 N"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="images/RachTR-Floor-3010-N.jpg"
+                        href="{{ config('app.url') . '/product-page/rachtr-floor-3010-n' }}"
                         class="text-black fs-6 fw-bold"
                         >RachTR Floor 3010 N</a
                       >
@@ -305,13 +305,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="images/RachTR-EC-500.jpg"
+                        src="images/RachTR-EC-500.webp"
                         alt="RachTR EC 500"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="https://www.rachtr.com/product-page/rachtr-ec-500"
+                        href="{{ config('app.url') . '/product-page/rachtr-ec-500' }}"
                         class="text-black fs-6 fw-bold"
                         >RachTR EC 500</a
                       >
@@ -322,13 +322,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="images/RachTR-Floor-2010-N.jpg"
+                        src="images/RachTR-Floor-2010-N.webp"
                         alt="RachTR Floor 2010 N"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="https://www.rachtr.com/product-page/rachtr-floor-2010-n"
+                        href="{{ config('app.url') . '/product-page/rachtr-floor-2010-n' }}"
                         class="text-black fs-6 fw-bold"
                         >RachTR Floor 2010 N</a
                       >
@@ -339,13 +339,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="images/Screed-EP-81.jpg"
+                        src="images/Screed-EP-81.webp"
                         alt="Screed EP 81"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="https://www.rachtr.com/product-page/screed-ep-81"
+                        href="{{ config('app.url') . '/product-page/screed-ep-81' }}"
                         class="text-black fs-6 fw-bold"
                         >Screed EP 81</a
                       >
@@ -356,13 +356,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="images/Screed-EP-91.jpg"
+                        src="images/Screed-EP-91.webp"
                         alt="Screed EP 91"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="https://www.rachtr.com/product-page/screed-ep-91"
+                        href="{{ config('app.url') . '/product-page/screed-ep-91' }}"
                         class="text-black fs-6 fw-bold"
                         >Screed EP 91</a
                       >
@@ -373,13 +373,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="images/RachTR-Floor-1010-N.jpg"
+                        src="images/RachTR-Floor-1010-N.webp"
                         alt="RachTR Floor 1010 N"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="https://www.rachtr.com/product-page/rachtr-floor-1010-n"
+                        href="{{ config('app.url') . '/product-page/rachtr-floor-1010-n'}}"
                         class="text-black fs-6 fw-bold"
                         >RachTR Floor 1010 N</a
                       >
@@ -390,13 +390,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="images/RachTR-EP-402.jpg"
+                        src="images/RachTR-EP-402.webp"
                         alt="RachTR EP 402"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="https://www.rachtr.com/product-page/rachtr-ep-402"
+                        href="{{ config('app.url') . '/product-page/rachtr-ep-402' }}"
                         class="text-black fs-6 fw-bold"
                         >RachTR EP 402</a
                       >
@@ -407,13 +407,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="images/RachTR-EC-250.jpg"
+                        src="images/RachTR-EC-250.webp"
                         alt="RachTR EC 250"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="https://www.rachtr.com/product-page/rachtr-ec-250"
+                        href="{{ config('app.url') . '/product-page/rachtr-ec-250' }}"
                         class="text-black fs-6 fw-bold"
                         >RachTR EC 250</a
                       >
@@ -424,13 +424,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="images/RachTR-Floor-Screed-EP-85.jpg"
+                        src="images/RachTR-Floor-Screed-EP-85.webp"
                         alt="RachTR Floor Screed EP 85"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="https://www.rachtr.com/product-page/rachtr-floor-screed-ep-85"
+                        href="{{ config('app.url') . '/product-page/rachtr-floor-screed-ep-85'}}"
                         class="text-black fs-6 fw-bold"
                         >RachTR Floor Screed EP 85</a
                       >
@@ -441,13 +441,13 @@
                   <div class="offer-product">
                     <figure>
                       <img
-                        src="images/RachTR-EP-101.jpg"
+                        src="images/RachTR-EP-101.webp"
                         alt="RachTR EP 101"
                       />
                     </figure>
                     <h6 class="text-center heading-underline">
                       <a
-                        href="https://www.rachtr.com/product-page/rachtr-ep-101"
+                        href="{{ config('app.url') . '/product-page/rachtr-ep-101' }}"
                         class="text-black fs-6 fw-bold"
                         >RachTR EP 101</a
                       >
@@ -485,7 +485,7 @@
                   class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                 >
                   <img
-                    src="images/quality-assurance.png"
+                    src="images/quality-assurance.webp"
                     alt="QUALITY ASSURANCE"
                   />
                   <h6 class="text-center text-md-start">
@@ -502,7 +502,7 @@
                   class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                 >
                   <img
-                    src="images/customized-solution.png"
+                    src="images/customized-solution.webp"
                     alt="RANGE OF OPTIONS"
                   />
                   <h6 class="text-center text-md-start">
@@ -517,7 +517,7 @@
                 <div
                   class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                 >
-                  <img src="images/innovative-products.png" alt="INNOVATIVE PRODUCTS" />
+                  <img src="images/innovative-products.webp" alt="INNOVATIVE PRODUCTS" />
                   <h6 class="text-center text-md-start">
                     INNOVATIVE <br />
                     PRODUCTS
@@ -532,7 +532,7 @@
                   class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                 >
                   <img
-                    src="images/technical-support.png"
+                    src="images/technical-support.webp"
                     alt="TECHNICAL SUPPORT"
                   />
                   <h6 class="text-center text-md-start">
@@ -569,14 +569,14 @@
                     </p>
                    
                     <a
-                      href="https://www.rachtr.com/_files/ugd/f8ee4f_49c135e9175b4329ba811ee263b633ff.pdf"
+                      href="{{ asset('/pdfFile/Delhivery_carousel.pdf')}}"
                       target="_blank"
                       >View Case Study</a
                     >
                     <div class="case_studies_downd d-md-none mt-4">
                       <div class="downd_img">
                         <img
-                          src="images/Restoration-of-Delhivery-Damaged-Floor.jpg"
+                          src="images/Restoration-of-Delhivery-Damaged-Floor.webp"
                         />
                       </div>
                     </div>
@@ -588,7 +588,7 @@
                   <div class="case_studies_downd">
                     <div class="downd_img">
                       <img
-                        src="images/Restoration-of-Delhivery-Damaged-Floor.jpg"
+                        src="images/Restoration-of-Delhivery-Damaged-Floor.webp"
                       />
                     </div>
                     <div
@@ -601,8 +601,8 @@
                         </h4>
                       </div>
                       <div class="study-link">
-                        <a href="https://www.rachtr.com/_files/ugd/f8ee4f_49c135e9175b4329ba811ee263b633ff.pdf" target="_blank"
-                          ><img src="images/arrow-icon.png" alt="Arrow"
+                        <a href="{{ asset('/pdfFile/Delhivery_carousel.pdf')}}" target="_blank"
+                          ><img src="images/arrow-icon.webp" alt="Arrow"
                         /></a>
                       </div>
                     </div>
@@ -620,14 +620,14 @@
                     </p>
                    
                     <a
-                      href="https://www.rachtr.com/_files/ugd/f8ee4f_5514b35959b7459f858e43a4562aaee7.pdf"
+                      href="{{asset('pdfFile/Welpsun_carousel.pdf')}}"
                       target="_blank"
                       >View Case Study</a
                     >
                     <div class="case_studies_downd d-md-none mt-4">
                       <div class="downd_img">
                         <img
-                          src="images/Epoxy-Flooring-Solution-for-Welspun.png"
+                          src="images/Epoxy-Flooring-Solution-for-Welspun.webp"
                         />
                       </div>
                     </div>
@@ -639,7 +639,7 @@
                   <div class="case_studies_downd">
                     <div class="downd_img">
                       <img
-                        src="images/Epoxy-Flooring-Solution-for-Welspun.png"
+                        src="images/Epoxy-Flooring-Solution-for-Welspun.webp"
                       />
                     </div>
                     <div
@@ -652,8 +652,8 @@
                         </h4>
                       </div>
                       <div class="study-link">
-                        <a href="https://www.rachtr.com/_files/ugd/f8ee4f_5514b35959b7459f858e43a4562aaee7.pdf" target="_blank"
-                          ><img src="images/arrow-icon.png" alt="Arrow"
+                        <a href="{{asset('pdfFile/Welpsun_carousel.pdf')}}" target="_blank"
+                          ><img src="images/arrow-icon.webp" alt="Arrow"
                         /></a>
                       </div>
                     </div>
@@ -673,14 +673,14 @@
                       The existing epoxy flooring was damaged, and the plant operations could not be halted, necessitating a swift, dust-free maintenance solution.
                     </p>
                     <a
-                      href="https://www.rachtr.com/_files/ugd/f8ee4f_c3b0af2201184666aaa6c29513b7229f.pdf"
+                      href="{{ asset('pdfFile/Case_study_ITC.pdf')}}"
                       target="_blank"
                       >View Case Study</a
                     >
                     <div class="case_studies_downd d-md-none mt-4">
                       <div class="downd_img">
                         <img
-                          src="images/Hygienic-Flooring-Solution-for-FMCG-Factory-Haridwar.jpg"
+                          src="images/Hygienic-Flooring-Solution-for-FMCG-Factory-Haridwar.webp"
                         />
                       </div>
                     </div>
@@ -692,7 +692,7 @@
                   <div class="case_studies_downd">
                     <div class="downd_img">
                       <img
-                        src="images/Hygienic-Flooring-Solution-for-FMCG-Factory-Haridwar.jpg"
+                        src="images/Hygienic-Flooring-Solution-for-FMCG-Factory-Haridwar.webp"
                       />
                     </div>
                     <div
@@ -705,8 +705,8 @@
                         </h4>
                       </div>
                       <div class="study-link">
-                        <a href="https://www.rachtr.com/_files/ugd/f8ee4f_c3b0af2201184666aaa6c29513b7229f.pdf" target="_blank"
-                          ><img src="images/arrow-icon.png" alt="Arrow"
+                        <a href="{{ asset('pdfFile/Case_study_ITC.pdf')}}" target="_blank"
+                          ><img src="images/arrow-icon.webp" alt="Arrow"
                         /></a>
                       </div>
                     </div>
@@ -738,7 +738,7 @@
                   <li>
                     <div class="blogs_img">
                       <img
-                        src="images/Natural-Stone-Wet-Cladding-and-Dry-Cladding-A-Face-off.jpg"
+                        src="images/Natural-Stone-Wet-Cladding-and-Dry-Cladding-A-Face-off.webp"
                       />
                     </div>
                     <div class="blogs_contnt">
@@ -750,7 +750,7 @@
                       <div class="btm_cont">
                         <h5>
                           <a
-                            href="https://www.rachtr.com/post/natural-stone-wet-and-dry-cladding"
+                            href="#"
                           >
                             <strong
                               >Natural Stone Wet Cladding and Dry Cladding: A Face-off</strong
@@ -763,7 +763,7 @@
                   <li>
                     <div class="blogs_img">
                       <img
-                        src="images/Unlock-all-you-need-to-know.jpg"
+                        src="images/Unlock-all-you-need-to-know.webp"
                       />
                     </div>
                     <div class="blogs_contnt">
@@ -775,7 +775,7 @@
                       <div class="btm_cont">
                         <h5>
                           <a
-                            href="https://www.rachtr.com/post/know-about-marble-floor-polishing"
+                            href="#"
                           >
                             <strong
                               >Unlock all you need to know about Marble Floor Polishing</strong
@@ -787,7 +787,7 @@
                   </li>
                 </ul>
                 <div class="view_btn col-lg-3 py-lg-5 py-3">
-                  <a href="https://www.rachtr.com/blog" target="_blank"
+                  <a href="{{ config('app.url') . '/blogs'}}" target="_blank"
                     >VIEW ALL</a
                   >
                 </div>
@@ -806,76 +806,76 @@
                 </div>
                 <div class="client-slider col-12 col-lg-10">
                   <div class="client-slide">
-                    <img src="images/studio-logo.jpg" alt="Studio" />
+                    <img src="images/studio-logo.webp" alt="Studio" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/genpact-logo.jpg" alt="Genpact" />
+                    <img src="images/genpact-logo.webp" alt="Genpact" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/novotel.jpg" alt="Novotel" />
+                    <img src="images/novotel.webp" alt="Novotel" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/godrej-logo.jpg" alt="godrej" />
+                    <img src="images/godrej-logo.webp" alt="godrej" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/unilever.jpg" alt="Unilever" />
+                    <img src="images/unilever.webp" alt="Unilever" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/kamala-pasand.jpg" alt="Kamala Pasand" />
+                    <img src="images/kamala-pasand.webp" alt="Kamala Pasand" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/wonder-logo.jpg" alt="Wonder" />
+                    <img src="images/wonder-logo.webp" alt="Wonder" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/honeywell-logo.jpg" alt="Honeywell" />
+                    <img src="images/honeywell-logo.webp" alt="Honeywell" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/temple-logo.jpg" alt="Temple" />
+                    <img src="images/temple-logo.webp" alt="Temple" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/vimal-logo.jpg" alt="Vimal" />
+                    <img src="images/vimal-logo.webp" alt="Vimal" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/delhi-metro-logo.jpg" alt="Delhi Metro" />
+                    <img src="images/delhi-metro-logo.webp" alt="Delhi Metro" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/grand-hyat-logo.jpg" alt="Grand Hyat" />
+                    <img src="images/grand-hyat-logo.webp" alt="Grand Hyat" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/ramada-logo.jpg" alt="Ramada" />
+                    <img src="images/ramada-logo.webp" alt="Ramada" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/india-bulls-logo.jpg" alt="India Bulls" />
+                    <img src="images/india-bulls-logo.webp" alt="India Bulls" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/ds-group-logo.jpg" alt="DS Group" />
+                    <img src="images/ds-group-logo.webp" alt="DS Group" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/rajashree-logo.jpg" alt="Rajashree" />
+                    <img src="images/rajashree-logo.webp" alt="Rajashree" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/kent-logo.jpg" alt="Kent" />
+                    <img src="images/kent-logo.webp" alt="Kent" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/taj-logo.jpg" alt="Taj" />
+                    <img src="images/taj-logo.webp" alt="Taj" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/gulshan-logo.jpg" alt="Gulshan" />
+                    <img src="images/gulshan-logo.webp" alt="Gulshan" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/punj-lyod-logo.jpg" alt="Punj Llyod" />
+                    <img src="images/punj-lyod-logo.webp" alt="Punj Llyod" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/mahagun-logo.jpg" alt="Mahagun" />
+                    <img src="images/mahagun-logo.webp" alt="Mahagun" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/ace-logo.jpg" alt="ACE" />
+                    <img src="images/ace-logo.webp" alt="ACE" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/ds-food-logo.jpg" alt="DS Food" />
+                    <img src="images/ds-food-logo.webp" alt="DS Food" />
                   </div>
                   <div class="client-slide">
-                    <img src="images/dlf-logo.jpg" alt="DLF" />
+                    <img src="images/dlf-logo.webp" alt="DLF" />
                   </div>
                 </div>
               </div>
@@ -891,32 +891,30 @@
               <h2 class="mb-4">FAQs</h2>
               <p>
                 Find answers to common questions about RachTR's products, services, ordering process, and technical inquiries.
-
-
               </p>
             </div>
             <div class="faqs_detls row g-0">
               <div class="col-lg-4 faq_fade_effct">
                 <div class="img">
-                  <img src="images/industry-solution-pic1.jpg" />
+                  <img src="images/industry-solution-pic1.webp" />
                 </div>
                 <div class="img">
-                  <img src="images/industry-solution-pic2.jpg" />
+                  <img src="images/industry-solution-pic2.webp" />
                 </div>
                 <div class="img">
-                  <img src="images/industry-solution-pic3.jpg" />
+                  <img src="images/industry-solution-pic3.webp" />
                 </div>
                 <div class="img">
-                  <img src="images/industry-solution-pic4.jpg" />
+                  <img src="images/industry-solution-pic4.webp" />
                 </div>
                 <div class="img">
-                  <img src="images/industry-solution-pic5.jpg" />
+                  <img src="images/industry-solution-pic5.webp" />
                 </div>
                 <div class="img">
-                  <img src="images/industry-solution-pic6.jpg" />
+                  <img src="images/industry-solution-pic6.webp" />
                 </div>
                 <div class="img">
-                  <img src="images/industry-solution-pic7.jpg" />
+                  <img src="images/industry-solution-pic7.webp" />
                 </div>
               </div>
               <div class="col-lg-7">
@@ -1031,7 +1029,7 @@
                         </div>
                         <div class="acc-body">
                           <p>
-                           Simply fill out the form by <a href="https://nquantastic1.wixsite.com/rachtr/epoxy-flooring#lp-form"><span class="color-orange">clicking here</span></a>, and a RachTR representative will contact you to discuss your project and provide a free quote.
+                           Simply fill out the form by <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-services#epoxy-form-sec'}}"><span class="color-orange">clicking here</span></a>, and a RachTR representative will contact you to discuss your project and provide a free quote.
                           </p>
                         </div>
                       </div>
