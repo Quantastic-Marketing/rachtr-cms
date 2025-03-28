@@ -67,7 +67,7 @@
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
                                             <video preload="none" autoplay="" loop="" muted playsinline="true"
-                                                src="{{asset('videos/video-showcase-1.mp4') }}"></video>
+                                                src="{{asset('videos/video-showcase-1.webm') }}"></video>
                                         </div>
                                         <div class="projects_txt">
                                             <h6>Industrial Flooring</h6>
@@ -93,7 +93,7 @@
                                                             fill="#FF5200" data-color="1"></path>
                                                     </g>
                                                 </svg>
-                                            </div>anshika
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -101,7 +101,7 @@
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
                                             <video preload="none" autoplay="" loop="" muted playsinline="true"
-                                                src="{{asset('videos/video-showcase-2.mp4') }}"></video>
+                                                src="{{asset('videos/video-showcase-2.webm') }}"></video>
                                         </div>
                                         <div class="projects_txt">
                                             <h6>Residential & Commercial Buildings</h6>
@@ -135,7 +135,7 @@
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
                                             <video preload="none" autoplay="" loop="" muted playsinline="true"
-                                                src="{{asset('videos/video-showcase-3.mp4') }}"></video>
+                                                src="{{asset('videos/video-showcase-3.webm') }}"></video>
                                         </div>
                                         <div class="projects_txt">
                                             <h6>Stone Processing Industry</h6>

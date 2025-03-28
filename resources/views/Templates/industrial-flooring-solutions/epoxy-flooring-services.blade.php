@@ -7,7 +7,7 @@
            <div class="item">
                <div class="banner-sec">
                    <video width="100%" height="100%" autoplay muted loop class="desktop">
-                         <source id="#movie1" src="{{ asset('videos/banner-video.mp4') }}" type="video/mp4">
+                         <source id="#movie1" src="{{ asset('videos/banner-video.webm') }}" type="video/mp4">
                    </video>
                    <div class="banner_overlay col-lg-12">
                       <div class="content col-md-9">

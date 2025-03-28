@@ -10,7 +10,7 @@
               <div class="item">
                   <div class="banner-sec">
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
-                            <source id="#movie1" src="videos/file-1.mp4" type="video/mp4">
+                            <source id="#movie1" src="videos/file-1.webm" type="video/mp4">
                       </video>
                       <div class="banner_overlay col-lg-12">
                          <div class="content">
@@ -35,7 +35,7 @@
                <div class="item">
                   <div class="banner-sec">
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
-                            <source id="#movie1" src="videos/file-2.mp4" type="video/mp4">
+                            <source id="#movie1" src="videos/file-2.webm" type="video/mp4">
                       </video>
                       <div class="banner_overlay col-lg-12">
                          <div class="content">
@@ -59,7 +59,7 @@
                <div class="item">
                   <div class="banner-sec">
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
-                            <source id="#movie1" src="videos/file-3.mp4" type="video/mp4">
+                            <source id="#movie1" src="videos/file-3.webm" type="video/mp4">
                       </video>
                       <div class="banner_overlay col-lg-12">
                          <div class="content">
@@ -84,7 +84,7 @@
                <div class="item">
                   <div class="banner-sec"> 
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
-                            <source id="#movie1" src="videos/file-4.mp4" type="video/mp4">
+                            <source id="#movie1" src="videos/file-4.webm" type="video/mp4">
                       </video>
                       <div class="banner_overlay col-lg-12">
                          <div class="content">

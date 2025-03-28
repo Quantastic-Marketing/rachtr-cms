@@ -63,7 +63,7 @@
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
                                         <video  autoplay loop playsinline="true" muted>
-                                            <source src="{{ asset('videos/video-showcase-1.mp4') }}" type="video/mp4">  
+                                            <source src="{{ asset('videos/video-showcase-1.webm') }}" type="video/mp4">  
                                         </video>
                                       </div>
                                       <div class="projects_txt">
@@ -85,7 +85,7 @@
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
                                         <video autoplay loop playsinline="true" muted>
-                                            <source src="{{ asset('videos/video-showcase-2.mp4') }}" type="video/mp4">
+                                            <source src="{{ asset('videos/video-showcase-2.webm') }}" type="video/mp4">
                                         </video>                                      
                                       </div>
                                       <div class="projects_txt">
@@ -107,7 +107,7 @@
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
                                         <video  autoplay="" loop="" muted playsinline="true">
-                                            <source src="{{ asset('videos/video-showcase-3.mp4') }}" type="video/mp4">
+                                            <source src="{{ asset('videos/video-showcase-3.webm') }}" type="video/mp4">
                                         </video>                                      
                                       </div>
                                       <div class="projects_txt">

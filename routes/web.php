@@ -19,6 +19,7 @@ Route::post('/submit-epoxy-form', [FormController::class, 'addEpoxyDetail'])->na
 Route::get('/category/{slug}',[ProductController::class,'getAllProducts'])->name('all-products');
 Route::get('/product-lists', [ProductController::class, 'index'])->name ('product-lists');
 Route::get('/search/products', [ProductController::class, 'loadMoreProducts'])->name ('search-product');
+Route::get('/publish-blogs',[PageController::class, 'publishPendingPosts'] );
 Route::get('/{slug?}', [PageController::class,'getPage'])->where('slug', '.*');
 Route::fallback(function () {
     return response()->view('fallback', [], 404);
