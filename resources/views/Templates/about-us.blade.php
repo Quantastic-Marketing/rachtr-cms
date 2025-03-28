@@ -8,8 +8,8 @@
                 <div class="col-lg-12">
                     <div class="banner-section">
                         <div class="image-wrapper">
-                            <img src="images/about_Desk_banner.png" alt="img background" class="d-none d-md-block">
-                            <img src="images/about_mob_banner.png" alt="img background" class=" d-block d-md-none">
+                            <img src="images/about_Desk_banner.webp" alt="img background" class="d-none d-md-block">
+                            <img src="images/about_mob_banner.webp" alt="img background" class=" d-block d-md-none">
                         </div>
                         <div class="heading-holder">
                             <h2>Revolutionizing Coatings and Adhesives for India</h2>
@@ -28,8 +28,8 @@
                             <div class="col-lg-6 order-2 ">
                                 <div class="image-container">
                                     <!-- <div class="background-box"></div> -->
-                                    <img src="images/about.png" alt="PU Flooring" class="d-none d-lg-block">
-                                    <img src="images/about_innov_mob.png" alt="about innovations" class="s-block d-lg-none">
+                                    <img src="images/about.webp" alt="PU Flooring" class="d-none d-lg-block">
+                                    <img src="images/about_innov_mob.webp" alt="about innovations" class="s-block d-lg-none">
                                     <!-- <div class="overlay-box"></div> -->
                                 </div>
                             </div>
@@ -116,7 +116,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 col-lg-3 founder-card">
                         <div class="founder-img-container">
-                            <img src="images/ramakank.jpg" alt="Ramakant Pandey" class="founder-img">
+                            <img src="images/ramakank.webp" alt="Ramakant Pandey" class="founder-img">
                         </div>
                         <h3 class="founder-name">RAMAKANT PANDEY</h3>
                         <p class="founder-position">Founder & CEO</p>
@@ -134,7 +134,7 @@
                     
                     <div class="col-12 col-sm-6 col-lg-3 founder-card">
                         <div class="founder-img-container">
-                            <img src="images/sameer.jpg" alt="Sameer Jakhar" class="founder-img">
+                            <img src="images/sameer.webp" alt="Sameer Jakhar" class="founder-img">
                         </div>
                         <h3 class="founder-name">SAMEER JAKHAR</h3>
                         <p class="founder-position">Co-Founder - Sales Head</p>
@@ -152,7 +152,7 @@
                     
                     <div class="col-12 col-sm-6 col-lg-3 founder-card">
                         <div class="founder-img-container">
-                            <img src="images/nikhaar.jpg" alt="Nikhaar Jain" class="founder-img">
+                            <img src="images/nikhaar.webp" alt="Nikhaar Jain" class="founder-img">
                         </div>
                         <h3 class="founder-name">NIKHAAR JAIN</h3>
                         <p class="founder-position">Co-founder - Marketing</p>
@@ -170,7 +170,7 @@
                     
                     <div class="col-12 col-sm-6 col-lg-3 founder-card">
                         <div class="founder-img-container">
-                            <img src="images/abhishek.jpg" alt="Abhisek Poddar" class="founder-img">
+                            <img src="images/abhishek.webp" alt="Abhisek Poddar" class="founder-img">
                         </div>
                         <h3 class="founder-name">ABHISEK PODDAR</h3>
                         <p class="founder-position">Co-Founder - Operations Head</p>
@@ -196,7 +196,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-4 col-sm-10 mentor-card">
                         <div class="mentor-img-container">
-                            <img src="images/deepak.jpg" alt="Deepak Pahwa" class="mentor-img">
+                            <img src="images/deepak.webp" alt="Deepak Pahwa" class="mentor-img">
                         </div>
                         <h3 class="mentor-name">DEEPAK PAHWA</h3>
                         <p class="mentor-details">MD- Bry-Air.<br>Chairman - Pahwa Group</p>
@@ -207,7 +207,7 @@
                     
                     <div class="col-md-4 col-sm-10 mentor-card">
                         <div class="mentor-img-container">
-                            <img src="images/tarun.jpg" alt="Tarun Malkani" class="mentor-img">
+                            <img src="images/tarun.webp" alt="Tarun Malkani" class="mentor-img">
                         </div>
                         <h3 class="mentor-name">TARUN MALKANI</h3>
                         <p class="mentor-details">Ex - Bayer, Eastman, Berger, Nocil<br>Experience more than 35 Years</p>
@@ -218,7 +218,7 @@
                     
                     <div class="col-md-4 col-sm-10 mentor-card">
                         <div class="mentor-img-container">
-                            <img src="images/mishra.jpg" alt="Prof. P.K Mishra" class="mentor-img">
+                            <img src="images/mishra.webp" alt="Prof. P.K Mishra" class="mentor-img">
                         </div>
                         <h3 class="mentor-name">PROF. P.K MISHRA</h3>
                         <p class="mentor-details">Vice Chancellor AKTU University<br>Professor - IIT - BHU - Chem. Engg</p>

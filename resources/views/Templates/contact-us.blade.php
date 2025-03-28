@@ -5,7 +5,7 @@
         <div class="col-lg-12">  
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="images/contactUs.jpeg" alt="img background">
+                    <img src="images/contactUs.webp" alt="img background">
                    
                 </div>
                 <div class="heading-holder">

@@ -3,7 +3,7 @@
             <div class="row g-0">
                 <div class="col-lg-6 ml-0">
                   <div class="ftr_logo pt-5 pb-4">
-                     <img src=" {{ asset('images/btm-logo.png') }}"/>  
+                     <img src=" {{ asset('images/btm-logo.webp') }}"/>  
                   </div>
                   <div class="form_sec mbl py-5">
                         <h3 class="fw-bold py-2">GET IN TOUCH</h3>
@@ -86,7 +86,7 @@
                        <i class="clear"></i>
                     </div>
                   <div class="copyright py-4">
-                        <span><a href="https://www.rachtr.com/_files/ugd/f8ee4f_5d08419c6e0b4ae781c5c0c138005ab0.pdf?index=true" target="_blank">>> ISO 9001:2015</a></span>
+                        <span><a href="{{ asset('pdfFile/ISO_RachTR.pdf')}}" target="_blank">>> ISO 9001:2015</a></span>
                        <p class="py-3">© 2024 RachTR. All Rights Reserved.</p>
                     </div>
                 </div>
@@ -118,11 +118,11 @@
                        <div class="social_icon">
                            <p class="mb-2">FOLLOW US</p>
                            <ul>
-                               <li><a href="https://www.instagram.com/rachtr_/" target="_blank"><img src=" {{ asset('images/instagram.png') }} "/></a></li>
-                               <li><a href="https://www.linkedin.com/company/rachtr/" target="_blank"><img src=" {{ asset('images/linkdin.png') }} "/></a></li>
-                               <li><a href="https://www.facebook.com/rachtr1" target="_blank"><img src=" {{ asset('images/facebook.png') }} "/></a></li>
-                               <li><a href="https://x.com/Rachtr1" target="_blank"><img src=" {{ asset('images/twitter.png') }} "/></a></li>
-                               <li><a href="https://www.youtube.com/channel/UCU5-owLC-ataazxOK0_sb8w" target="_blank"><img src=" {{ asset('images/youtube.png') }} "/></a></li>
+                               <li><a href="https://www.instagram.com/rachtr_/" target="_blank"><img src=" {{ asset('images/instagram.webp') }} "/></a></li>
+                               <li><a href="https://www.linkedin.com/company/rachtr/" target="_blank"><img src=" {{ asset('images/linkdin.webp') }} "/></a></li>
+                               <li><a href="https://www.facebook.com/rachtr1" target="_blank"><img src=" {{ asset('images/facebook.webp') }} "/></a></li>
+                               <li><a href="https://x.com/Rachtr1" target="_blank"><img src=" {{ asset('images/twitter.webp') }} "/></a></li>
+                               <li><a href="https://www.youtube.com/channel/UCU5-owLC-ataazxOK0_sb8w" target="_blank"><img src=" {{ asset('images/youtube.webp') }} "/></a></li>
                            </ul>
                        </div>
                        <div class="careers_btn">

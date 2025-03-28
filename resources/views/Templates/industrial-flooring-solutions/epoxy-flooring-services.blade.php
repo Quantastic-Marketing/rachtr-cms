@@ -49,13 +49,21 @@
                             <h2>Our <span>clients</span></h2>
                         </div>
                         <div class="client-slider">
-                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 1"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 2"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 3"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 4"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 5"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 6"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-1.webp') }}" alt="Client 7"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-1.webp') }}" alt="Client 1"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-2.webp') }}" alt="Client 2"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-3.webp') }}" alt="Client 3"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-4.webp') }}" alt="Client 4"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-5.webp') }}" alt="Client 5"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-6.webp') }}" alt="Client 6"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-7.webp') }}" alt="Client 7"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-8.webp') }}" alt="Client 8"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-9.webp') }}" alt="Client 9"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-10.webp') }}" alt="Client 10"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-11.webp') }}" alt="Client 11"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-12.webp') }}" alt="Client 12"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-13.webp') }}" alt="Client 13"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-14.webp') }}" alt="Client 14"></div>
+                            <div class="client-slide"><img src="{{ asset('images/client-slide-15.webp') }}" alt="Client 15  "></div>
                         </div>
                     </div>
                 </div>
@@ -139,7 +147,7 @@
                                 </div>
                                 <div class="benefits-note mx-md-5 px-md-5 px-3 px-sm-5">
                                     <p>When considering epoxy flooring price per sq ft, these factors play a critical role in determining the overall budget for your industrial epoxy flooring project.</p>
-                                    <p><a href="https://www.rachtr.com/industrial-flooring-solutions/epoxy-flooring-cost-price">Click here</a> to get a customized epoxy flooring quote!</p>
+                                    <p><a href="{{ config('app.url') .'/industrial-flooring-solutions/epoxy-flooring-cost-price'}}">Click here</a> to get a customized epoxy flooring quote!</p>
                                 </div>
                             </div>
                         </div>
@@ -160,10 +168,10 @@
                                   <div class="case_studies_contn">
                                       <h5 class="fw-bold pb-2">Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor</h5>
                                       <p class="pb--md-5 mb-md--5">Delhivery, since 2011, is a top e-commerce logistics provider in India, handling last-mile delivery, warehousing, and freight. Its tech and network are vital for Indian e-commerce.</p>
-                                      <a href="https://www.rachtr.com/_files/ugd/f8ee4f_49c135e9175b4329ba811ee263b633ff.pdf" target="_blank">View Case Study</a>
+                                      <a href="{{ asset('images/delhivery.webp') }}" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/delhivery.jpg') }}"/>
+                                           <img src="{{ asset('images/delhivery.webp') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -173,7 +181,7 @@
                                <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="{{asset('images/delhivery.jpg') }}"/>
+                                         <img src="{{asset('images/delhivery.webp') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -185,10 +193,10 @@
                                   <div class="case_studies_contn">
                                       <h5 class="fw-bold pb-2">Epoxy Flooring Solution on Oil-Prone Areas for Welspun</h5>
                                       <p class="pb-md-5 mb-md-5">Welspun, a global leader in textiles, offers high-quality home textiles & flooring solutions. Their diverse reach and focus on innovation & sustainability set them apart. They aim to be a top brand, prioritizing customer experience and social responsibility.</p>
-                                      <a href="https://www.rachtr.com/_files/ugd/f8ee4f_5514b35959b7459f858e43a4562aaee7.pdf" target="_blank">View Case Study</a>
+                                      <a href="{{ asset('pdfFile/Welpsun_carousel.pdf') }}" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
+                                           <img src="{{ asset('images/welspun%20epoxy.webp') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -198,7 +206,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
+                                         <img src="{{ asset('images/welspun%20epoxy.webp') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -211,10 +219,10 @@
                                       <h5 class="fw-bold pb-2">White Marble being difficult to install, as white marble is susceptible to stains, yellowness of joints, etc.</h5>
                                       <p>8/10 contractors refuse to install white marble owing to project failure rate which is exorbitantly high.</p>
                                       <p class="pb-md-5 mb-md-5">Problem starts immediately and keep on coming at regular intervals upto 2-3 years which is a...</p>
-                                      <a href="https://www.rachtr.com/post/solutions" target="_blank">View Case Study</a>
+                                      <a href="{{ config('app.url') .'/blogs/solutions'}}" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                            <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
+                                            <img src="{{ asset('images/welspun%20epoxy.webp') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -224,7 +232,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                        <img src="{{ asset('images/welspun%20epoxy.jpg') }}"/>
+                                        <img src="{{ asset('images/welspun%20epoxy.webp') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -237,10 +245,10 @@
                                       <h5 class="fw-bold pb-2">Achieved a Seamless and Hygienic Flooring Solution at FMCG Factory, Haridwar</h5>
                                       <p>Delhivery, a logistics company, likely faced the challenge of needing a durable and chemical-resistant floor for one of their warehouses in Faridabad.</p>
                                       <p class="pb-2 mb-2">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
-                                      <a href="https://www.rachtr.com/_files/ugd/f8ee4f_c3b0af2201184666aaa6c29513b7229f.pdf" target="_blank">View Case Study</a>
+                                      <a href="{{ asset('pdfFile/Case_study_ITC.pdf') }}" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/itc%20before%20after%20rachtr.jpg') }}"/>
+                                           <img src="{{ asset('images/itc%20before%20after%20rachtr.webp') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -250,7 +258,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="{{ asset('images/itc%20before%20after%20rachtr.jpg') }}"/>
+                                         <img src="{{ asset('images/itc%20before%20after%20rachtr.webp') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -263,10 +271,10 @@
                                       <h5 class="fw-bold pb-2">Successful Delivery of Complex Flooring in Just 3 Days for Escorts Kubota</h5>
                                       <p>We had just 72 hours to transform a large industrial space for Escorts Kubota into a showroom-ready floor, complete with intricate designs, multiple colors, and precision-aligned white lines.</p>
                                       <p class="pb-2 mb-2">Read more to know how we successfully delivered complex flooring for Escorts Kubota in record time</p>
-                                      <a href="https://www.rachtr.com/post/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota" target="_blank">View Case Study</a>
+                                      <a href="{{ config('app.url') . '/blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota' }}" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.jpg') }}"/>
+                                           <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.webp') }}"/>
                                         </div>
                                         <div class="before-block">Before</div>
                                         <div class="after-block">After</div>
@@ -276,7 +284,7 @@
                                <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.jpg') }}"/>
+                                         <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.webp') }}"/>
                                       </div>
                                       <div class="before-block">Before</div>
                                       <div class="after-block">After</div>
@@ -301,7 +309,7 @@
                         <h2><span>Location's</span>  We've served</h2>
                      </div>
                      <div class="location-img ps-md-5">
-                        <img src="{{ asset('images/location-img.png') }}" alt="loaction-map">
+                        <img src="{{ asset('images/location-img.webp') }}" alt="loaction-map">
                      </div>
                 </div>   
             </div> 
@@ -310,7 +318,7 @@
        <!-- This is a section-7 close  -->
 
         <!-- This is a section-8 open -->   
-     <section class="experience-rachtr py-5">   
+     <section id="epoxy-form-sec" class="experience-rachtr py-5">   
         <div class="container-fluid p-0">
             <div class="row g-0">
                 <div class="experience-content d-flex flex-column gap-5">
@@ -405,23 +413,23 @@
                             <div class="container">
                                 <div class="experience-fade-efct experience-slide">
                                     <div class="img">
-                                        <img src="{{ asset('images/epoxy_floor.jpeg') }}"/>
+                                        <img src="{{ asset('images/epoxy_floor.webp') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="{{ asset('images/mortar.jpeg') }}"/>
+                                        <img src="{{ asset('images/mortar.webp') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="{{ asset('images/primer.jpeg')}}"/>
+                                        <img src="{{ asset('images/primer.webp')}}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="{{ asset('images/screed.jpg') }}"/>
+                                        <img src="{{ asset('images/screed.webp') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="{{ asset('images/topcoat.jpeg') }}"/>
+                                        <img src="{{ asset('images/topcoat.webp') }}"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                  </div>

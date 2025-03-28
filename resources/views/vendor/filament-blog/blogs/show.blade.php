@@ -82,7 +82,7 @@
         <div class="col-lg-12">  
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="{{ asset('images/blog-bg.jpg')}}" alt="img background">
+                    <img src="{{ asset('images/blog-bg.webp')}}" alt="img background">
                    
                 </div>
                 <div class="heading-holder">

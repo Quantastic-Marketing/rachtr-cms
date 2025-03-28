@@ -76,6 +76,13 @@
     object-fit: contain;
 }
 
+.contact-banner .banner-section{
+    height: 230px;
+}
+
+.contact-contract .image-container{
+    padding:20px 0;
+}
 
  @media (max-width:499px){
     .contact-banner .banner-section .heading-holder {
@@ -85,4 +92,8 @@
     .contact-banner .image-container {
         height: auto;
     }
+    .contact-contract .image-container{
+        height: auto;
+    }
+    
  }

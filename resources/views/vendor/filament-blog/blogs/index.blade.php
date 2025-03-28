@@ -53,7 +53,7 @@
         <div class="col-lg-12">  
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="images/blog-bg.jpg" alt="img background">
+                    <img src="images/blog-bg.webp" alt="img background">
                    
                 </div>
                 <div class="heading-holder">

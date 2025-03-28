@@ -7,8 +7,8 @@
         <div class="col-lg-12">
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="images/puFloor-bg.jpg" alt="img background" class="d-none d-md-block">
-                    <img src="images/loor_mob_bg.jpg" alt="img background" class=" d-block d-md-none">
+                    <img src="{{ asset('images/puFloor-bg.webp') }}" alt="img background" class="d-none d-md-block">
+                    <img src="{{ asset('images/loor_mob_bg.webp') }}" alt="img background" class=" d-block d-md-none">
                 </div>
                 <div class="heading-holder">
                     <h2>PU FLOORING</h2>
@@ -28,7 +28,7 @@
                                     <div class="col-lg-6">
                                         <div class="image-container">
                                             <!-- <div class="background-box"></div> -->
-                                            <img src="images/pufloor_section_img.jpg"  alt="PU Flooring">
+                                            <img src="{{ asset('images/pufloor_section_img.webp') }}"  alt="PU Flooring">
                                             <!-- <div class="overlay-box"></div> -->
                                         </div>
                                     </div>
@@ -64,12 +64,12 @@
                         </div>
                     </div>
                     <div class="col-lg-6 order-2">
-                        <img src="images/polyurethene.jpg" alt="PU Concrete" class="flooring-img">
+                        <img src="{{ asset('images/polyurethene.webp') }}" alt="PU Concrete" class="flooring-img">
                     </div>
         
                     <!-- Polyurea Flooring Section -->
                     <div class="col-lg-6 order-4 order-md-3">
-                        <img src="images/polyurethene2.jpg" alt="Polyurea Flooring" class="flooring-img">
+                        <img src="{{ asset('images/polyurethene2.webp') }}" alt="Polyurea Flooring" class="flooring-img">
                     </div>
                     <div class="col-lg-6 d-flex align-items-center p-3 p-sm-5 flooring-content order-3 order-md-4 py-sm-5">
                         <div class="mx-lg-2 px-lg-2 mx-xl-4 px-xl-4 mx-xxl-5 px-xxl-5">

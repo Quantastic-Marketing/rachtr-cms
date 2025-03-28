@@ -76,7 +76,7 @@
 }
 
 .build-to-last {
-    background: url(../images/build-last-bg.jpeg);
+    background: url(../images/build-last-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -293,7 +293,7 @@
 
 
 .get-free-quote{
-    background: url(../images/get-free-quote-bg.jpg);
+    background: url(../images/get-free-quote-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
