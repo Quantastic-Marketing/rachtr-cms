@@ -29,7 +29,7 @@
                             
                             </div>
                             <div class="heading-holder">
-                                <h2>{!! html_entity_decode($pageContent['page_heading'] ?? '') !!}</h2>
+                                <h1 class="fw-bold">{!! html_entity_decode($pageContent['page_heading'] ?? '') !!}</h1>
                                 @if(!empty($parentName) && !empty($fullParentSlug))
                                     <p><span class="text-orange">HOME ></span><a href="{{ url($fullParentSlug) }}">{{ $parentName }}</a></p>
                                 @endif
