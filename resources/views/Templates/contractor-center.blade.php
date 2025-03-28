@@ -11,7 +11,7 @@
                     <img src="{{ asset('images/loor_mob_bg.webp') }}" alt="img background" class=" d-block d-md-none">
                 </div>
                 <div class="heading-holder">
-                    <h2>CONTRACT CENTER</h2>
+                    <h1 class="fw-bold">CONTRACT CENTER</h1>
                     <p>Welcome to the RachTR Contractor Center, a dedicated hub designed to support contractors and builders in executing exceptional construction projects.</p>
                 </div>
             </div>                   
@@ -134,35 +134,7 @@
      <!-- This is a section-2 close -->
 
 
-     <div class="collaboration contact-collab">
-        <div class="container-fluid">
-            <div class="row collab-section">
-                <!-- Left Section (White Background) -->
-                <div class="col-lg-6 collab-left d-flex flex-column justify-content-center">
-                    <div class="row">
-                        <div class="col-md-9 col-xxl-7 ">
-                            <h2 class="fw-bold">Collaboration <span class="highlight">Opportunities</span></h2>
-                             <p>Partner with RachTR for your next project and benefit from our collaborative approach.</p>
-                        </div>
-                    </div>  
-                </div>
-
-                <!-- Right Section (Black Background) -->
-                <div class="col-lg-6 collab-right d-flex flex-column justify-content-center">
-                    <div class="row">
-                        <div class="col-md-9 col-xxl-7 ">
-                            <p>We work closely with contractors to develop customized solutions that meet the specific needs and
-                                challenges of each project.</p>
-                            <hr class="my-2" style="border-color: #E87722; width: 50px;">
-                            <p>We’re here to help you achieve your construction goals with innovative and reliable solutions.
-                            </p>
-                            <a href="#" class="cta-btn mt-3">Call us Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+     
 
         <section class="application-videos py-5">
             <div class="container">
@@ -219,6 +191,36 @@
                 </div>
             </div>
         </section>
+
+        <div class="collaboration contact-collab">
+        <div class="container-fluid">
+            <div class="row collab-section">
+                <!-- Left Section (White Background) -->
+                <div class="col-lg-6 collab-left d-flex flex-column justify-content-center">
+                    <div class="row">
+                        <div class="col-md-9 col-xxl-7 ">
+                            <h2 class="fw-bold">Collaboration <span class="highlight">Opportunities</span></h2>
+                             <p>Partner with RachTR for your next project and benefit from our collaborative approach.</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <!-- Right Section (Black Background) -->
+                <div class="col-lg-6 collab-right d-flex flex-column justify-content-center">
+                    <div class="row">
+                        <div class="col-md-9 col-xxl-7 ">
+                            <p>We work closely with contractors to develop customized solutions that meet the specific needs and
+                                challenges of each project.</p>
+                            <hr class="my-2" style="border-color: #E87722; width: 50px;">
+                            <p>We’re here to help you achieve your construction goals with innovative and reliable solutions.
+                            </p>
+                            <a href="#" class="cta-btn mt-3">Call us Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
    </div>
 
 
