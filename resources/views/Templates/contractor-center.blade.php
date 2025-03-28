@@ -183,32 +183,32 @@
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="https://youtu.be/lHCzLmkVm-M" data-fancybox="gallery">
                                     <img src="{{asset('images/thumbnail-3.webp')}}" alt="">       
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/adani-ahemdabad.webm')}}" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-4.webp')}}" alt="">                  
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/Lake-Estate-Nagpur.webm')}}" data-fancybox="gallery">
                                      <img src="{{asset('images/thumbnail-5.webp')}}" alt="">                     
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/Surat-Bunglow.webm')}}" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-6.webp')}}" alt="">      
                                     </a>             
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/Travertine-Punjab.webm')}}" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-7.webp')}}" alt="">      
                                     </a>             
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="{{asset('videos/Lemon-Tree.webm')}}" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-9.webp')}}" alt="">      
                                     </a>             
                                 </div>
