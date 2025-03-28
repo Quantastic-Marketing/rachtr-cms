@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Pages;
 use App\Models\Product;
 use Spatie\Sitemap\Sitemap;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
 use Spatie\Sitemap\Tags\Url;
-use Firefly\FilamentBlog\Models\Post;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Response;
+use Firefly\FilamentBlog\Enums\PostStatus;
 
 class PageController extends Controller
 {
@@ -19,6 +20,7 @@ class PageController extends Controller
         try{ 
             if ($slug == "/" || $slug == null) {
                     $pageDetails = Pages::where('is_homepage', true)->first();
+                    // $blogs = Post::latest()->take(3)->get(['title', 'slug' ,'cover_photo_path']);
                     
                 if (!$pageDetails) {
                     return view('fallback');
@@ -148,4 +150,25 @@ class PageController extends Controller
             return response()->json(['message' => 'Sitemap Generation error'], 404);
         }
     }
+
+    public static function publishPendingPosts()
+    {
+        try {
+            $updatedRows = Post::where('status', PostStatus::PENDING)
+                ->update([
+                    'status' => PostStatus::PUBLISHED,
+                ]);
+    
+            return response()->json([
+                'success' => true,
+                'message' => "$updatedRows pending posts have been updated to published."
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Error updating posts: ' . $e->getMessage()
+            ], 500);
+        }
+    }
+
 }

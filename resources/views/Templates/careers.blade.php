@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 p-0">
-                            <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay="" src="{{ asset('videos/carrer_video.mp4') }}" style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;"></video>
+                            <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay="" src="{{ asset('videos/carrer_video.webm') }}" style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;"></video>
                         </div> 
                     <!-- </div> -->
                      
@@ -105,7 +105,7 @@
                         <p class="join-text">Join us and be part of a dynamic environment where your skills and ideas can make a real impact.</p>
                     </div>
                     <div class="image-content">
-                        <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay="" src="https://video.wixstatic.com/video/386348_8b027ed89cbb4c0d863d6e8a8c4c1859/480p/mp4/file.mp4" style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;"></video>
+                        <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay="" src="https://video.wixstatic.com/video/386348_8b027ed89cbb4c0d863d6e8a8c4c1859/480p/mp4/file.webm" style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;"></video>
                     </div>
                 </div>
             </div> -->
