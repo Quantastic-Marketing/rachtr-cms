@@ -86,7 +86,7 @@
                    
                 </div>
                 <div class="heading-holder">
-                    <h2>OUR BLOG</h2>
+                    <h1 class="fw-bold">OUR BLOG</h1>
                 </div>
             </div>                   
           </div>

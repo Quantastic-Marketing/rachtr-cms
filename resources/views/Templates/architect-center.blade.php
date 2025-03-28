@@ -9,7 +9,7 @@
                             <img src="{{ asset('images/arch_mob_bg.webp')}}" alt="img background" class=" d-block d-md-none">
                         </div>
                         <div class="heading-holder">
-                            <h2>ARCHITECT CENTER</h2>
+                            <h1 class="fw-bold">ARCHITECT CENTER</h1>
                             <p> Welcome to the RachTR Architect Center, a dedicated hub designed to support architects
                                 and designers in creating exceptional spaces.</a></p>
                         </div>
