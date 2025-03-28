@@ -2,7 +2,7 @@
 
     <div class="wrapper"> 
 
-       <section class="contact-banner banner">
+       <section class="contact-contract contact-banner banner">
         <div class="row g-0">
         <div class="col-lg-12">  
             <div class="banner-section">
@@ -20,7 +20,7 @@
         </div>
     </section>
         <!-- This is a banner close -->
-            <section class="contact-contract contract-innvo innovation-solutions py-3 py-sm-5">
+            <section class="contract-innvo innovation-solutions py-3 py-sm-5">
                 <div class="container">
                     <div class="row align-items-center">
                             <div class="col-md-10">
