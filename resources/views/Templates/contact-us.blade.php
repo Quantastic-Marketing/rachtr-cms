@@ -9,7 +9,7 @@
                    
                 </div>
                 <div class="heading-holder">
-                    <h2>CONTACT US</h2>
+                    <h1 class="fw-bold">CONTACT US</h1>
                 </div>
             </div>                   
           </div>

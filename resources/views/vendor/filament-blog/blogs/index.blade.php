@@ -57,7 +57,7 @@
                    
                 </div>
                 <div class="heading-holder">
-                    <h2>BLOGS & ARTICLES</h2>
+                    <h1 class="fw-bold">BLOGS & ARTICLES</h1>
                 </div>
             </div>                   
           </div>
