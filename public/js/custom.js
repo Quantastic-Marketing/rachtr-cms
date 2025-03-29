@@ -40,7 +40,6 @@ if(document.getElementById('cvUpload') !== null){
 
 
 $(document).ready(function () {
-  // console.log("Slick is initializing...");
   $('.product-main-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -59,6 +58,7 @@ $(document).ready(function () {
     ]
 
   });
+
   $('.product-thumbnail-slider').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -290,7 +290,7 @@ $(document).ready(function () {
       $(this).next().slideToggle(500);
       $(this).toggleClass('active');
     })
-  })
+  });
 
   // case studies slider close    
 

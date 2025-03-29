@@ -194,16 +194,25 @@
             <script defer src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
             <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
             <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-            <script defer src="{{ asset('js/custom.js') }}"></script>
             @if(empty($page->content['is_product_list']))
                 <script defer src="{{ asset('js/slick.js') }}"></script>
                 <script defer src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
-                
+                <script defer src="{{ asset('js/custom.js') }}"></script>
             @endif
             @if(request()->is('*product-lists*'))
                 <script src="{{ asset('js/customTab.js') }}"></script>
             @endif
             <script defer src="{{ asset('js/forms.js') }}" type="text/javascript"></script>
+            @if(!empty($page->content['is_product_list']))
+                <script defer type="text/javascript">
+                    $(document).ready(function () {
+                        $('.acc-head').click(function () {
+                        $(this).next().slideToggle(500);
+                        $(this).toggleClass('active');
+                        })
+                    });
+                </script>
+            @endif
             
             <script defer type="text/javascript">
                 $('#showLeft').click(function(){
