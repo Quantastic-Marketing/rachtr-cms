@@ -68,11 +68,12 @@
                                     $product = $products[$productId] ?? null;
                                     
                                     if($product){
-
                                             $productImage = optional(json_decode($product->product_images, true))[0]['product_image'] ?? null; 
                                             $descriptionHtml = html_entity_decode($product->product_desc ?? 'No description available');
-                                            preg_match('/<p>(.*?)<\/p>/s', $descriptionHtml, $matches);
-                                            $productDescription = trim($matches[1] ?? 'No description available');
+                                            $cleanedDescription = preg_replace('/<br\s*\/?>|&nbsp;|\s+/', ' ', $descriptionHtml);
+                                            $productDescription = preg_match('/<p>(.*?)<\/p>/is', $cleanedDescription, $matches) 
+                                                ? $matches[1] 
+                                                : strip_tags($cleanedDescription);
                                         }
                                 @endphp
                                 <div class="col-lg-9 px-5">
