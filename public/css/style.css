@@ -102,6 +102,10 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
 }
+.head-nav li.active > a {
+  color: #ee6e25 !important; 
+  font-weight: bold;
+}
 .header .nav ul li a:hover {
   color: #cf1c1c;
 }

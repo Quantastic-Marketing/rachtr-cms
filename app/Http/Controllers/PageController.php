@@ -37,9 +37,11 @@ class PageController extends Controller
                         ->select(['id', 'title', 'slug', 'published_at', 'cover_photo_path'])
                         ->get();
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
+                $parentName=null;
                 
                 if ($isProductList) {
                     $templatePath = (request()->path() == $pageDetails->full_slug) ? 'Templates.product_list' : ' ';
+                    $parentName = explode('/', $pageDetails->full_slug)[0];
                 } else {
                     $templatePath = "Templates." . str_replace('/', '.', $slug);
                 }
@@ -65,7 +67,7 @@ class PageController extends Controller
                     }
                 }
              
-                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products'=>$products,'blogs' => $blogs]);
+                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products'=>$products,'blogs' => $blogs,'parentName' => $parentName]);
             }
         }catch(Exception $e){
             \Log::error('Page load error: ' . $e->getMessage());
