@@ -18,14 +18,14 @@ class PageController extends Controller
 
 
         try{ 
+            $blogs = Post::latest()->take(3)->get(['title', 'slug' ,'published_at','cover_photo_path']);
             if ($slug == "/" || $slug == null) {
                     $pageDetails = Pages::where('is_homepage', true)->first();
-                    // $blogs = Post::latest()->take(3)->get(['title', 'slug' ,'cover_photo_path']);
                     
                 if (!$pageDetails) {
                     return view('fallback');
                 }
-                return view('layouts.app',['page' => $pageDetails,'templatePath'=>'Templates.index']);
+                return view('layouts.app',['page' => $pageDetails,'templatePath'=>'Templates.index' ,'blogs' => $blogs]);
             } else {
                 $currentSlug = collect(explode('/', $slug))->last();
 
@@ -60,7 +60,7 @@ class PageController extends Controller
                     }
                 }
              
-                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products'=>$products]);
+                return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products'=>$products,'blogs' => $blogs]);
             }
         }catch(Exception $e){
             \Log::error('Page load error: ' . $e->getMessage());

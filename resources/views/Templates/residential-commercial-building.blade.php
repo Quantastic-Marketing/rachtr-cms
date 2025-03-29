@@ -953,7 +953,7 @@
       </section>
       <section class="why-trust-rachtr-section">
         <video autoplay muted loop playsinline class="bg-video">
-          <source src="videos/why-trust.mp4" type="video/mp4" />
+          <source src="videos/why-trust.webm" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>
@@ -1129,81 +1129,29 @@
                   </p>
                 </div>
                 <ul class="padd0">
+                  @foreach($blogs as $blog)
                   <li class="col-lg-4 mx-3">
                     <div class="blogs_img">
-                      <img src="images/white-marble-installation.webp" />
+                      <img src="{{ asset($blog->featurePhoto) }}" />
                     </div>
                     <div class="blogs_contnt">
                       <div class="top_cont">
-                        <span>Sep 25, 2024</span>
+                        <span>{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
                         <sup>.</sup>
                         <span>4 min read</span>
                       </div>
                       <div class="btm_cont">
-                        <h5>
-                          <a
-                            href="{{ config('app.url') . '/post/enhancing-durability-treatment-of-expansion-joints-in-marble-tile-flooring' }}"
-                          >
-                            <strong
-                              >Enhancing Durability: Treatment of Expansion
-                              Joints in Marble & Tile Flooring</strong
+                        <h1 >
+                          <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                            <strong class="title-blog"
+                              >{{$blog->title}}</strong
                             ></a
                           >
-                        </h5>
+                        </h1>
                       </div>
                     </div>
                   </li>
-                  <li class="col-lg-4 mx-3">
-                    <div class="blogs_img">
-                      <img
-                        src="images/Salt-Issues-in-Egyptian-and-Turkish-Marble.webp"
-                      />
-                    </div>
-                    <div class="blogs_contnt">
-                      <div class="top_cont">
-                        <span>Sep 2, 2024 </span>
-                        <sup>.</sup>
-                        <span>4 min read</span>
-                      </div>
-                      <div class="btm_cont">
-                        <h5>
-                          <a
-                            href="{{ config('app.url') . '/post/how-rachtr-resolved-salt-issues-in-egyptian-and-turkish-marble-installations-for-mukul-agarwal' }}"
-                          >
-                            <strong
-                              >How RachTR Resolved Salt Issues in Egyptian and
-                              Turkish Marble Installations for Mukul Agarwal,
-                              the owner of Kals Tex</strong
-                            >
-                          </a>
-                        </h5>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="col-lg-4 mx-3">
-                    <div class="blogs_img">
-                      <img src="images/Natural-Stone-Cladding.webp" />
-                    </div>
-                    <div class="blogs_contnt">
-                      <div class="top_cont">
-                        <span>Aug 23, 2024</span>
-                        <sup>.</sup>
-                        <span>4 min read </span>
-                      </div>
-                      <div class="btm_cont">
-                        <h5>
-                          <a
-                            href="{{ config('app.url') . '/post/natural-stone-cladding-in-exterior-wet-cladding-vs-dry-cladding' }}"
-                          >
-                            <strong
-                              >Natural Stone Cladding in Exterior: Wet Cladding
-                              vs. Dry Cladding</strong
-                            >
-                          </a>
-                        </h5>
-                      </div>
-                    </div>
-                  </li>
+                  @endforeach
                 </ul>
                 <div class="view_btn col-lg-3 py-lg-5 py-3">
                   <a href="{{ config('app.url') . '/blogs'}}" target="_blank"

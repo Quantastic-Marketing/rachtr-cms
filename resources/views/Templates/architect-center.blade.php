@@ -188,7 +188,7 @@
                                         of our products in various construction projects.:</p>
                                 </div>
                                 <div class="res_dev_btn col-lg-3 col-md-3 col-sm-12 pt-4 me-1">
-                                    <a href="{{ config('app.url') . '/blogs/categories/latest-research-solutions' }}"
+                                    <a href="{{ config('app.url') . '/blogs' }}"
                                         target="_blank">VIEW ALL</a>
                                 </div>
                                 <i class="clear"></i>
@@ -196,52 +196,25 @@
                         </div>
                         <div class="res_dev_sec py-5">
                             <ul class="padd0">
+                                @foreach($blogs as $blog)
                                 <li class="col-lg-4 mx-3">
                                     <div class="letst_advermnt_img">
-                                        <img src= "{{ asset('images/Tailormade.webp') }}" />
+                                        <img src= "{{ asset($blog->featurePhoto) }}" />
                                     </div>
                                     <div class="letst_advermnt_contnt">
                                         <div class="top_cont">
-                                            <span>Aug 30</span>
+                                            <span>{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
                                             <sup>.</sup>
                                             <span>5 min read</span>
                                         </div>
                                         <div class="btm_cont">
-                                            <h5><strong>Tailormade Solutions for Stone/Marble Processing</strong></h5>
+                                            <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                                                <h2 class="title-blog"><strong>{{$blog->title}}</strong></h2>
+                                            </a>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="col-lg-4 mx-3">
-                                    <div class="letst_advermnt_img">
-                                        <img src= "{{ asset('images/Abrasion.webp') }}" />
-                                    </div>
-                                    <div class="letst_advermnt_contnt">
-                                        <div class="top_cont">
-                                            <span>Jul 27</span>
-                                            <sup>.</sup>
-                                            <span>5 min read</span>
-                                        </div>
-                                        <div class="btm_cont">
-                                            <h5><strong>Abrasion Resistant Epoxy Flooring Top Coats</strong></h5>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-4 mx-3">
-                                    <div class="letst_advermnt_img">
-                                        <img src= "{{ asset('images/Perfect-White-Marble.webp') }}" />
-                                    </div>
-                                    <div class="letst_advermnt_contnt">
-                                        <div class="top_cont">
-                                            <span>May 15</span>
-                                            <sup>.</sup>
-                                            <span>5 min read</span>
-                                        </div>
-                                        <div class="btm_cont">
-                                            <h5><strong>Perfect White Marble Installation Methodology &
-                                                    Products</strong></h5>
-                                        </div>
-                                    </div>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

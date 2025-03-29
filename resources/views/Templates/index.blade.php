@@ -292,51 +292,25 @@
                       </div>
                       <div class="res_dev_sec py-5">
                          <ul class="padd0">
+                            @foreach($blogs as $blog)
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
-                                   <img src='images/Tailormade.webp'/>
+                                   <img src="{{asset($blog->featurePhoto)}}"/>
                                 </div>
                                 <div class="letst_advermnt_contnt">
                                    <div class="top_cont">
-                                       <span>Aug 30</span>
+                                       <span>{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
                                        <sup>.</sup>
                                        <span>5 min read</span>
                                     </div>
                                     <div class="btm_cont">
-                                       <h5><strong>Tailormade Solutions for Stone/Marble Processing</strong></h5>
+                                        <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                                            <h2 class="title-blog"><strong>{{$blog->title}}</strong></h2>
+                                        </a>
                                     </div>
                                 </div>
                             </li>
-                             <li class="col-lg-4 mx-3">
-                                <div class="letst_advermnt_img">
-                                   <img src='images/Abrasion.webp'/>
-                                </div>
-                                <div class="letst_advermnt_contnt">
-                                   <div class="top_cont">
-                                       <span>Jul 27</span>
-                                       <sup>.</sup>
-                                       <span>5 min read</span>
-                                    </div>
-                                    <div class="btm_cont">
-                                       <h5><strong>Abrasion Resistant Epoxy Flooring Top Coats</strong></h5>
-                                    </div>
-                                </div>
-                            </li>
-                             <li class="col-lg-4 mx-3">
-                                <div class="letst_advermnt_img">
-                                   <img src='images/Perfect-White-Marble.webp'/>
-                                </div>
-                                <div class="letst_advermnt_contnt">
-                                   <div class="top_cont">
-                                       <span>May 15</span>
-                                       <sup>.</sup>
-                                       <span>5 min read</span>
-                                    </div>
-                                    <div class="btm_cont">
-                                       <h5><strong>Perfect White Marble Installation Methodology & Products</strong></h5>
-                                    </div>
-                                </div>
-                            </li>
+                            @endforeach
                           </ul>
                       </div>
                   </div>
@@ -643,51 +617,26 @@
                      <div class="blogs_sec py-5">
                          <h2>Blogs</h2>
                          <ul class="padd0">
+                            @foreach($blogs as $blog)                           
                             <li class="col-lg-4 mx-3">
                                 <div class="blogs_img">
-                                   <img src='images/blog-1.webp'/>
+                                   <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture"/>
                                 </div>
                                 <div class="blogs_contnt">
                                    <div class="top_cont">
-                                       <span>Aug 30</span>
+                                       <span>{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
                                        <sup>.</sup>
                                        <span>5 min read</span>
                                     </div>
                                     <div class="btm_cont">
-                                       <h5><strong>How RachTR Resolved Salt Issues in Egyptian and Turkish Marble Installations for Mukul</strong></h5>
+                                        <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                                            <h1 class="title-blog"><strong>{{$blog->title}}</strong></h1>
+                                        </a>
+                                       
                                     </div>
                                 </div>
                             </li>
-                             <li class="col-lg-4 mx-3">
-                                <div class="blogs_img">
-                                   <img src='images/blog-2.webp'/>
-                                </div>
-                                <div class="blogs_contnt">
-                                   <div class="top_cont">
-                                       <span>Jul 27</span>
-                                       <sup>.</sup>
-                                       <span>5 min read</span>
-                                    </div>
-                                    <div class="btm_cont">
-                                       <h5><strong>Natural Stone Cladding in Exterior: Wet Cladding vs. Dry Cladding</strong></h5>
-                                    </div>
-                                </div>
-                            </li>
-                             <li class="col-lg-4 mx-3">
-                                <div class="blogs_img">
-                                   <img src='images/blog-3.webp'/>
-                                </div>
-                                <div class="blogs_contnt">
-                                   <div class="top_cont">
-                                       <span>May 15</span>
-                                       <sup>.</sup>
-                                       <span>5 min read</span>
-                                    </div>
-                                    <div class="btm_cont">
-                                       <h5><strong>Why go for Epoxy Flooring in the first place?</strong></h5>
-                                    </div>
-                                </div>
-                            </li>
+                            @endforeach
                           </ul>
                          <div class="view_btn col-lg-3 py-5">
                              <a href="{{ config('app.url') . '/blogs'}}" target="_blank">VIEW ALL</a>

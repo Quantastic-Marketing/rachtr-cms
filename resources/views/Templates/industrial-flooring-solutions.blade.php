@@ -465,7 +465,7 @@
       <section class="why-trust-rachtr-section">
         <video autoplay muted loop playsinline class="bg-video">
           <source
-            src="videos/why-trust.mp4"
+            src="videos/why-trust.webm"
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -735,56 +735,34 @@
                   </p>
                 </div>
                 <ul class="custom-blog-design padd0 col-lg-10 mx-auto">
+                  @php $blogs = $blogs->take(2); @endphp
+                  @foreach($blogs as $blog)
                   <li>
                     <div class="blogs_img">
                       <img
-                        src="images/Natural-Stone-Wet-Cladding-and-Dry-Cladding-A-Face-off.webp"
+                        src="{{$blog->featurePhoto}}"
                       />
                     </div>
                     <div class="blogs_contnt">
                       <div class="top_cont">
-                        <span>Jan 20</span>
+                        <span>{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
                         <sup>.</sup>
                         <span>2 min read</span>
                       </div>
                       <div class="btm_cont">
                         <h5>
                           <a
-                            href="#"
+                            href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}"
                           >
-                            <strong
-                              >Natural Stone Wet Cladding and Dry Cladding: A Face-off</strong
+                            <strong class="title-blog"
+                              >{{$blog->title}}</strong
                             ></a
                           >
                         </h5>
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <div class="blogs_img">
-                      <img
-                        src="images/Unlock-all-you-need-to-know.webp"
-                      />
-                    </div>
-                    <div class="blogs_contnt">
-                      <div class="top_cont">
-                        <span>Jan 20 </span>
-                        <sup>.</sup>
-                        <span>2 min read</span>
-                      </div>
-                      <div class="btm_cont">
-                        <h5>
-                          <a
-                            href="#"
-                          >
-                            <strong
-                              >Unlock all you need to know about Marble Floor Polishing</strong
-                            >
-                          </a>
-                        </h5>
-                      </div>
-                    </div>
-                  </li>
+                  @endforeach
                 </ul>
                 <div class="view_btn col-lg-3 py-lg-5 py-3">
                   <a href="{{ config('app.url') . '/blogs'}}" target="_blank"
