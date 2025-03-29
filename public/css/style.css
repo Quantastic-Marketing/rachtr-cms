@@ -972,6 +972,7 @@ section.commercial-building-solutions span.banner-overlay {
   display: block;
   margin: 0;
   min-height: 450px;
+  width: 100%;
 }
 .custom-list {
   list-style: none;

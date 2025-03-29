@@ -579,8 +579,8 @@
                                         </div>
                                         <div class="projects_txt">
                                             <p>Location: Surat</p>
-                                            <p>Architect: Jigar Talati</p>
-                                            <p>Contractor: Murari Lal Sharma</p>
+                                            <p>Architect: Ajit Jariwala</p>
+                                            <p>Contractor: Quality Civl Decor, Mumba</p>
                                         </div>
 
                                     </div>
@@ -679,9 +679,9 @@
                                             </div>
                                         </div>
                                         <div class="projects_txt">
-                                            <p>Location: Surat</p>
-                                            <p>Architect: Jigar Talati</p>
-                                            <p>Contractor: Murari Lal Sharma</p>
+                                            <p>Location: Palacia, Jaipur</p>
+                                            <p>Architect: Theme Design Studio</p>
+                                            <p>Contractor: Swati Interior</p>
                                         </div>
 
                                     </div>
