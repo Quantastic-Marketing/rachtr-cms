@@ -199,7 +199,7 @@
                                     </svg>
                                 </div>
                                  
-                                <p>Metal Fbrication</p>
+                                <p>Metal Fabrication</p>
                             </div>
                             <div class="solution">
                                 <div class="img-wrapper">
@@ -228,7 +228,7 @@
                                     </svg>
                                 </div>
                                  
-                                <p>Wrehouse and Godowns</p>
+                                <p>Warehouse and Godowns</p>
                             </div>
                         </div>
                     </div>

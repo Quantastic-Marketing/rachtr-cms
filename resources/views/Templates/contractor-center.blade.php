@@ -58,72 +58,108 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="any_projects pt-5">
-                            <ul class="col-lg-12 col-md-12 col-sm-12">
+                        <ul class="col-lg-12 col-md-12 col-sm-12">
                                 <li class="col-lg-4 col-md-4 col-sm-12">
-                                  <div class="projects_blogs">
-                                      <div class="projects_img pb-1">
-                                        <video  autoplay loop playsinline="true" muted>
-                                            <source src="{{ asset('videos/video-showcase-1.webm') }}" type="video/mp4">  
-                                        </video>
-                                      </div>
-                                      <div class="projects_txt">
-                                        <h6>Industrial Flooring</h6>
-                                        <p>Ensure high-performance and safety for your industrial spaces with our robust flooring solutions. </p>
-                                      </div>
-                                      <div class="blog_tranprnt">
-                                          <div class="blogs_icon">
-                                              <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
-        <g>
-            <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
-        </g>
-    </svg>
-                                          </div>
-                                    </div>      
-                                  </div>
+                                    <div class="projects_blogs">
+                                        <div class="projects_img pb-1">
+                                            <video preload="none" autoplay="" loop="" muted playsinline="true"
+                                                src="{{asset('videos/video-showcase-2.webm') }}"></video>
+                                        </div>
+                                        <div class="projects_txt">
+                                            <h6 class="fw-bold">Residential & Commercial Buildings</h6>
+                                            <p>From dream homes to iconic landmarks, RachTR offers reliable solutions
+                                                for all your building needs.</p>
+                                        </div>
+                                        <div class="blog_tranprnt">
+                                            <div class="blogs_icon">
+                                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155"
+                                                    viewBox="20 22.5 160 155" height="200" width="200"
+                                                    xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                    role="presentation" aria-hidden="true" aria-label="">
+                                                    <defs>
+                                                        <style>
+                                                            #comp-lu9g83n7 svg [data-color="1"] {
+                                                                fill: #FFFFFF;
+                                                            }
+                                                        </style>
+                                                    </defs>
+                                                    <g>
+                                                        <path
+                                                            d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z"
+                                                            fill="#FF5200" data-color="1"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="col-lg-4 col-md-4 col-sm-12 mx-5">
-                                  <div class="projects_blogs">
-                                      <div class="projects_img pb-1">
-                                        <video autoplay loop playsinline="true" muted>
-                                            <source src="{{ asset('videos/video-showcase-2.webm') }}" type="video/mp4">
-                                        </video>                                      
-                                      </div>
-                                      <div class="projects_txt">
-                                        <h6>Residential & Commercial Buildings</h6>
-                                        <p>From dream homes to iconic landmarks, RachTR offers reliable solutions for all your building needs.</p>
-                                      </div>
-                                      <div class="blog_tranprnt">
-                                          <div class="blogs_icon">
-                                              <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
-        <g>
-            <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
-        </g>
-    </svg>
-                                          </div>
+                                    <div class="projects_blogs">
+                                        <div class="projects_img pb-1">
+                                            <video preload="none" autoplay="" loop="" muted playsinline="true"
+                                                src="{{asset('videos/video-showcase-1.webm') }}"></video>
+                                        </div>
+                                        <div class="projects_txt">
+                                            <h6 class="fw-bold">Stone Processing Industry</h6>
+                                            <p>Enhance the beauty and durability of natural stone with our specialized
+                                                coatings and adhesives.</p>
+                                        </div>
+                                        <div class="blog_tranprnt">
+                                            <div class="blogs_icon">
+                                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155"
+                                                    viewBox="20 22.5 160 155" height="200" width="200"
+                                                    xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                    role="presentation" aria-hidden="true" aria-label="">
+                                                    <defs>
+                                                        <style>
+                                                            #comp-lu9g83n7 svg [data-color="1"] {
+                                                                fill: #FFFFFF;
+                                                            }
+                                                        </style>
+                                                    </defs>
+                                                    <g>
+                                                        <path
+                                                            d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z"
+                                                            fill="#FF5200" data-color="1"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
                                     </div>
-                                  </div>
                                 </li>
                                 <li class="col-lg-4 col-md-4 col-sm-12">
-                                  <div class="projects_blogs">
-                                      <div class="projects_img pb-1">
-                                        <video  autoplay="" loop="" muted playsinline="true">
-                                            <source src="{{ asset('videos/video-showcase-3.webm') }}" type="video/mp4">
-                                        </video>                                      
-                                      </div>
-                                      <div class="projects_txt">
-                                        <h6>Stone Processing Industry</h6>
-                                        <p>Enhance the beauty and durability of natural stone with our specialized coatings and adhesives.</p>
-                                      </div>
-                                      <div class="blog_tranprnt">
-                                          <div class="blogs_icon">
-                                              <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
-        <g>
-            <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
-        </g>
-    </svg>
-                                          </div>
+                                    <div class="projects_blogs">
+                                        <div class="projects_img pb-1">
+                                            <video preload="none" autoplay="" loop="" muted playsinline="true"
+                                                src="{{asset('videos/video-showcase-3.webm') }}"></video>
+                                        </div>
+                                        <div class="projects_txt">
+                                            <h6 class="fw-bold">Industrial Flooring</h6>
+                                            <p>Ensure high-performance and safety for your industrial spaces with our
+                                                robust flooring solutions. </p>
+                                        </div>
+                                        <div class="blog_tranprnt">
+                                            <div class="blogs_icon">
+                                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155"
+                                                    viewBox="20 22.5 160 155" height="200" width="200"
+                                                    xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                    role="presentation" aria-hidden="true" aria-label="">
+                                                    <defs>
+                                                        <style>
+                                                            #comp-lu9g83n7 svg [data-color="1"] {
+                                                                fill: #FFFFFF;
+                                                            }
+                                                        </style>
+                                                    </defs>
+                                                    <g>
+                                                        <path
+                                                            d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z"
+                                                            fill="#FF5200" data-color="1"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
                                     </div>
-                                  </div>
                                 </li>
                             </ul>
                         </div>

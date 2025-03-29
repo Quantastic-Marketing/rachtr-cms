@@ -78,7 +78,7 @@
 </g>
 </svg>  
                              </div>
-                             <div class="txt ms-0">
+                             <div class="txt ms-2">
                                  <a href="mailto:marketing@rachtr.com" target="_blank">marketing@rachtr.com</a>
                              </div>
                           </li>

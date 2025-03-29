@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use Filament\Forms;
+use App\Models\Post;
 use Filament\Tables;
 use App\Models\Product;
 use Filament\Forms\Form;
@@ -16,6 +17,7 @@ use App\Filament\Components\CustomSEO;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
@@ -25,7 +27,6 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\PageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PageResource\RelationManagers;
-use Filament\Forms\Components\Textarea;
 
 class PageResource extends Resource
 {
@@ -202,6 +203,20 @@ class PageResource extends Resource
                                 
                             ])
                             ->hidden(fn (callable $get) => !$get('content.is_product_list')),
+                
+                Section::make('Add Blogs for page : ')
+                            ->description('Select blogs for the page')
+                            ->schema([
+                                Select::make('content.blogs')
+                                        ->label('Select Blogs')
+                                        ->options(Post::pluck('title', 'id'))
+                                        ->searchable()
+                                        ->multiple()
+                                        ->maxItems(3) 
+                                        ->preload()
+                                        ->required()
+                                        ->helperText('Select up to 3 blog posts.'),
+                                        ]),
                        
                     ]);
                     
