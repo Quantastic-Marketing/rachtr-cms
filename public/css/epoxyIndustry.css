@@ -144,11 +144,11 @@
 
 .product-strip{
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; 
-    max-height: 5em; 
+    max-height: 7.5em; 
     line-height: 1.5em; 
 }
 
