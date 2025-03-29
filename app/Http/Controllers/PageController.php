@@ -18,10 +18,12 @@ class PageController extends Controller
 
 
         try{ 
-            $blogs = Post::latest()->take(3)->get(['title', 'slug' ,'published_at','cover_photo_path']);
             if ($slug == "/" || $slug == null) {
                     $pageDetails = Pages::where('is_homepage', true)->first();
-                    
+                    $blogIds = $pageDetails->content['blogs'] ?? [];
+                    $blogs = Post::whereIn('id', $blogIds)
+                        ->select(['id', 'title', 'slug', 'published_at', 'cover_photo_path'])
+                        ->get();
                 if (!$pageDetails) {
                     return view('fallback');
                 }
@@ -30,7 +32,10 @@ class PageController extends Controller
                 $currentSlug = collect(explode('/', $slug))->last();
 
                 $pageDetails =  Pages::where('slug', $currentSlug)->with('header', 'footer','parent')->first();
-
+                $blogIds = $pageDetails->content['blogs'] ?? []; // Ensure it's an array
+                $blogs = Post::whereIn('id', $blogIds)
+                        ->select(['id', 'title', 'slug', 'published_at', 'cover_photo_path'])
+                        ->get();
                 $isProductList = !empty($pageDetails->content['is_product_list']) && $pageDetails->content['is_product_list'] == 1;
                 
                 if ($isProductList) {

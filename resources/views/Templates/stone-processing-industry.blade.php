@@ -250,10 +250,10 @@
 
       <section class="product-we-offer-section">
         <div class="container">
-          <h2 class="text-center text-black mb-lg-5 mb-4">
+          <h1 class="text-center text-black mb-lg-5 mb-4">
             Products
             <span style="color: #ef6e25">We Offer </span>
-          </h2>
+          </h1>
           <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
             <div class="header-part mb-lg-5 mb-4">
               <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
@@ -783,7 +783,7 @@
         <div class="container">
           <div class="row g-0">
             <div class="faqs_headng col-lg-12 py-lg-5 py-4">
-              <h2 class="mb-4">FAQs</h2>
+              <h2 class="mb-4 fw-bold">FAQs</h2>
               <p>
                 Find answers to common questions about RachTR's products,
                 services, ordering process, and technical inquiries.

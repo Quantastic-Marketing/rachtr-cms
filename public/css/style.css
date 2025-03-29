@@ -937,7 +937,7 @@ nav:after {
 }
 
 .commercial-building-solutions {
-  background: url("../images/commercial-building-solutions.jpg") no-repeat
+  background: url("../images/stone-process-bg.webp") no-repeat
     center center;
   background-size: cover;
 }
@@ -951,7 +951,7 @@ section.commercial-building-solutions span.banner-overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ffffffbd;
+  /* background: #ffffffbd; */
 }
 .commercial-building-solutions .container {
   position: relative;
