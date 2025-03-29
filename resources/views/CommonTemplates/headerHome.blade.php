@@ -32,7 +32,10 @@
                                               @if(!empty($subItem['sub_items']))
                                                 <ul class="submenu">
                                                   @foreach($subItem['sub_items'] as $subSubItem)
-                                                    <li><a href="{{ $subSubItem['has_link'] && !empty($subSubItem['slug']) ? url($subSubItem['slug']) : '#'  }}">{{ $subSubItem['sub-item'] }}</a></li>
+                                                  @php 
+                                                    $isSubSubActive = Request::is(ltrim($subSubItem['slug'] ?? '', '/'));
+                                                  @endphp
+                                                    <li class="{{ $isSubSubActive ? 'active' : '' }}"><a href="{{ $subSubItem['has_link'] && !empty($subSubItem['slug']) ? url($subSubItem['slug']) : '#'  }}">{{ $subSubItem['sub-item'] }}</a></li>
                                                   @endforeach
                                                 </ul>
                                               @endif

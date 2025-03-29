@@ -28,10 +28,10 @@
                             </div>
                             <div class="heading-holder">
                                 <h1 class="fw-bold">{!! html_entity_decode($pageContent['page_heading'] ?? '') !!}</h1>
-                                @if(!empty($parentName) && !empty($fullParentSlug))
-                                    <p><span class="text-orange">HOME ></span><a href="{{ url($fullParentSlug) }}">{{ $parentName }}</a></p>
-                                @endif
-                                <!-- <p><span class="text-orange"></span>{{ $parentName ?? '' }}</p> -->
+                                
+                                <p class="mt-3"><span class="text-orange">HOME ></span><a href="{ config('app.url') . '/' . $parentName }}">{{ $parentName }}</a></p>
+                                
+                                <!-- <p><span class="text-orange"> <a href="{{ config('app.url') . '/$parentName'  }}"> </span>{{ $parentName ?? '' }} </a></p> -->
                             </div>
                         </div>                   
                     </div>
