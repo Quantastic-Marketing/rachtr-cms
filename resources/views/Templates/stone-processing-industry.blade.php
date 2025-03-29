@@ -657,75 +657,29 @@
                   </p>
                 </div>
                 <ul class="padd0">
+                  @foreach($blogs as $blog)
                   <li class="col-lg-4 mx-3">
                     <div class="blogs_img">
-                      <img src="images/stone-classification.webp" />
+                      <img src="{{$blog->featurePhoto}}" />
                     </div>
                     <div class="blogs_contnt">
                       <div class="top_cont">
-                        <span>Feb 8, 2017</span>
+                        <span>{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
                         <sup>.</sup>
                         <span>3 min read</span>
                       </div>
                       <div class="btm_cont">
                         <h5>
                           <a
-                            href="{{ config('app.url') . '/post/stone-classification' }}"
+                            href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}"
                           >
-                            <strong>Stone Classification</strong></a
+                            <strong class="title-blog">{{$blog->title}}</strong></a
                           >
                         </h5>
                       </div>
                     </div>
                   </li>
-                  <li class="col-lg-4 mx-3">
-                    <div class="blogs_img">
-                      <img src="images/salt-problem.webp" />
-                    </div>
-                    <div class="blogs_contnt">
-                      <div class="top_cont">
-                        <span>Sep 21, 2016 </span>
-                        <sup>.</sup>
-                        <span>5 min read</span>
-                      </div>
-                      <div class="btm_cont">
-                        <h5>
-                          <a
-                            href="{{ config('app.url') . '/post/salt-problems-in-egyptian-turkish-marbles' }}"
-                          >
-                            <strong
-                              >Salt Problems in Egyptian & Turkish
-                              Marbles</strong
-                            >
-                          </a>
-                        </h5>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="col-lg-4 mx-3">
-                    <div class="blogs_img">
-                      <img src="images/advantages-Epoxy-Resin.webp" />
-                    </div>
-                    <div class="blogs_contnt">
-                      <div class="top_cont">
-                        <span>Sep 1, 2016</span>
-                        <sup>.</sup>
-                        <span>5 min read </span>
-                      </div>
-                      <div class="btm_cont">
-                        <h5>
-                          <a
-                            href="{{ config('app.url') . '/post/the-advantages-of-epoxy-resin-versus-polyester-in-marbles-stones' }}"
-                          >
-                            <strong
-                              >The Advantages of Epoxy Resin vs Polyester In
-                              Marbles & Stones</strong
-                            >
-                          </a>
-                        </h5>
-                      </div>
-                    </div>
-                  </li>
+                  @endforeach
                 </ul>
                 <div class="view_btn col-lg-3 py-lg-5 py-3">
                   <a href="{{ config('app.url') . '/blogs' }}" target="_blank"

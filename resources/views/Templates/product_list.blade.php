@@ -1,11 +1,9 @@
-@php $startRender = microtime(true); @endphp
 <div class="wrapper">
         @php 
          $pageContent = $page->content;
         @endphp
 
     @if(!empty($pageContent))
-    @php $startBanner = microtime(true); @endphp
             <section class="industry-banner">
                 <div class="row g-0">
                     <div class="col-lg-12">  
@@ -40,9 +38,7 @@
                     
                     </div>
             </section>
-    @php \Log::info('Banner section render time: ' . round(microtime(true) - $startBanner, 4) . ' seconds'); @endphp
         @if(isset($pageContent['body']))
-        @php $startBody = microtime(true); @endphp
             <section class="system-overview py-5">
                 <div class="container">
                     <div class="row">
@@ -54,12 +50,10 @@
                     </div>
                 </div>
             </section>
-        @php \Log::info('Body section render time: ' . round(microtime(true) - $startBody, 4) . ' seconds'); @endphp
         @endif
 
         @if(isset($pageContent['sections']))
             @foreach($pageContent['sections'] as $index => $section)
-                @php $startSections = microtime(true); @endphp
              @if(!empty($section['products']))
                 <section class="product-card-section py-5" style="background-color: {{ $section['bg_color'] ?? '#ffffff' }};" 
                 data-section-key="{{ $index }}" 
@@ -76,7 +70,7 @@
                                             $productImage = optional(json_decode($product->product_images, true))[0]['product_image'] ?? null; 
                                             $productDescription = Str::limit(
                                                                 preg_replace('/\s+/', ' ', strip_tags(html_entity_decode($product->product_desc ?? 'No description available'))), 
-                                                                120, 
+                                                                190, 
                                                                 '...'
                                                             );
                                         }
@@ -93,7 +87,7 @@
                                         <div class="col-md-6">
                                             <div class="product-details">
                                                 <h2 class="product-title">{{$product->name ?? 'Product Title'}}</h2>
-                                                <p class="product-description">
+                                                <p class="product-description product-strip">
                                                     {{$productDescription}}
                                                 </p>
                                                 <a href="{{ route('product.page', ['slug' => $product->slug]) }}" class="btn btn-orange">View Details</a>
@@ -107,7 +101,6 @@
                     </div>
                 </section>
              @endif
-             @php \Log::info('Sections render time: ' . round(microtime(true) - $startSections, 4) . ' seconds'); @endphp
             @endforeach
         @endif
         @if(!empty($pageContent['faq_section']))
@@ -145,8 +138,6 @@
                 </div>
         </section>
         @endif
-
-        @php \Log::info('Total page render time without faq: ' . round(microtime(true) - $startRender, 4) . ' seconds'); @endphp
    @endif
    </div>
 

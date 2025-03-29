@@ -4,11 +4,11 @@
         <div class="col-lg-12">  
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="images/uploadbg.jpeg" alt="img background">
+                    <img src="{{asset('images/uploadbg.webp')}}" alt="img background">
                    
                 </div>
                 <div class="banner-content">
-                        <h2 class="heading-holder">Submit your CV</h2>
+                        <h1 class="heading-holder fw-bold">Submit your CV</h1>
                 </div>
             </div>                   
           </div>
