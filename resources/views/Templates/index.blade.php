@@ -291,21 +291,21 @@
                              </div>
                       </div>
                       <div class="res_dev_sec py-5">
-                         <ul class="padd0 d-md-flex">
+                         <ul class="padd0 flex-column flex-md-row d-flex align-items-stretch gap-3">
                             @foreach($blogs as $blog)
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
                                    <img src="{{asset($blog->featurePhoto)}}"/>
                                 </div>
                                 <div class="letst_advermnt_contnt">
-                                   <div class="top_cont">
+                                   <div class="top_cont m-0 ms-2 mt-2">
                                        <span>{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
                                        <sup>.</sup>
                                        <span>5 min read</span>
                                     </div>
                                     <div class="btm_cont">
                                         <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
-                                            <h2 class="title-blog"><strong>{{$blog->title}}</strong></h2>
+                                            <h2 class="title-blog ms-2"><strong>{{$blog->title}}</strong></h2>
                                         </a>
                                     </div>
                                 </div>

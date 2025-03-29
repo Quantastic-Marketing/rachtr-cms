@@ -429,7 +429,11 @@ nav:after {
   font-weight: 700;
   padding: 24px;
   text-align: left;
-  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  height: 100%;
 }
 .letst_advermnt_img img{
 
@@ -1363,3 +1367,23 @@ section.product-we-offer-section {
     max-height: 3em; 
     line-height: 1.5em; 
 }
+ul.padd0 li {
+  position: relative;
+  overflow: hidden;
+}
+
+ul.padd0 li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* .letst_advermnt_contnt {
+  position: relative;
+  z-index: 2;
+  color: white; 
+} */
