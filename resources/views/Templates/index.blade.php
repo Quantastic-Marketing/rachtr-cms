@@ -291,7 +291,7 @@
                              </div>
                       </div>
                       <div class="res_dev_sec py-5">
-                         <ul class="padd0">
+                         <ul class="padd0 d-md-flex">
                             @foreach($blogs as $blog)
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">

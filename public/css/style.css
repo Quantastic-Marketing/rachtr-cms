@@ -425,6 +425,14 @@ nav:after {
   font-weight: 700;
   padding: 24px;
   text-align: left;
+  background: rgba(0, 0, 0, 0.5);
+}
+.letst_advermnt_img img{
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
 }
 .intive_res_dev .res_dev_sec .letst_advermnt_contnt .btm_cont {
   padding-top: 140px;
