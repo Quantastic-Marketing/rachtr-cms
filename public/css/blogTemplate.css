@@ -144,9 +144,9 @@
 }
 
 .blog-body table{
-    width: 100%;
+    width: 100% !important;
     overflow-x: auto;
-    white-space: nowrap;
+    white-space: nowrap !important;
     display: block;
 }
 
