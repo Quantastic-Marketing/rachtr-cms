@@ -5,7 +5,7 @@
                 <div class="col-lg-12">
                     <div class="banner-section">
                         <div class="image-wrapper">
-                            <img src="{{ asset('images/architect_bg.webp')}}" alt="img background" class="d-none d-md-block">
+                            <img src="{{ asset('images/architect_bg.webp')}}" alt="RachTR Architect Center solutions" class="d-none d-md-block">
                             <img src="{{ asset('images/arch_mob_bg.webp')}}" alt="img background" class=" d-block d-md-none">
                         </div>
                         <div class="heading-holder">
@@ -27,7 +27,7 @@
                             <div class="col-lg-6 order-2 order-lg-1">
                                 <div class="image-container">
                                     <!-- <div class="background-box"></div> -->
-                                    <img src="{{ asset('images/innovation.webp')}}" alt="PU Flooring">
+                                    <img src="{{ asset('images/innovation.webp')}}" alt="Modern Architect Center with sleek glass buildings and innovative design">
                                     <!-- <div class="overlay-box"></div> -->
                                 </div>
                             </div>
@@ -199,7 +199,7 @@
                                 @foreach($blogs as $blog)
                                 <li class="col-lg-4 mx-3">
                                     <div class="letst_advermnt_img">
-                                        <img src= "{{ asset($blog->featurePhoto) }}" />
+                                        <img src= "{{ asset($blog->featurePhoto) }}" alt="{{$blog->title}}" />
                                     </div>
                                     <div class="letst_advermnt_contnt">
                                         <div class="top_cont m-0 ms-2 mt-2">
@@ -249,7 +249,7 @@
                             <div class="col-lg-7 col-md-12">
                                 <div class="case_studies_downd">
                                     <div class="downd_img">
-                                        <img src="{{ asset('images/delhivery.webp')}}" />
+                                        <img src="{{ asset('images/delhivery.webp')}}" alt="Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor" />
                                     </div>
                                     <div class="downd_txt px-5 py-4">
                                         <ul>
