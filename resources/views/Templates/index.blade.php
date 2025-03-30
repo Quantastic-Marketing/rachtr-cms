@@ -285,7 +285,7 @@
                                     <p>At RachTR, we are relentless in our pursuit of innovation. Our team of brilliant minds is dedicated to developing solutions. We are proud to unveil our latest advancements in:</p>
                                </div>
                                 <div class="res_dev_btn col-lg-3 col-md-3 col-sm-12 pt-4 me-1">
-                                    <a href="{{ config('app.url') . '/blogs/categories/latest-research-solutions'}}" target="_blank">VIEW ALL</a>
+                                    <a href="{{ config('app.url') . '/blogs'}}" target="_blank">VIEW ALL</a>
                                 </div>
                                 <i class="clear"></i>
                              </div>
