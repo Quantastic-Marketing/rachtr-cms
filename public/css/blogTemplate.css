@@ -135,8 +135,24 @@
     min-height: 170px;
 }
 
+.card{
+    width: 100% ;
+}
 
+.card-body {
+    width: inherit;
+}
 
+.blog-body table{
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: block;
+}
+
+.recent-post-card .blog-slider{
+    overflow: hidden;
+}
 
 
 @media (min-width: 1400px) {
