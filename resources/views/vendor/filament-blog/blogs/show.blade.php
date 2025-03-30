@@ -180,10 +180,50 @@
                                 <a href="#" class="mx-0 d-flex">See All</a>
                             </div>
                             @if($post->relatedPosts(2)->count() >= 1)
-                                <div class="blog-slider d-flex">    
+                                <div class="d-flex">    
                                     @foreach($post->relatedPosts(2) as $relatedPost)
                                         <!-- Blog Post 1 -->
-                                        <div class="d-flex col-sm-6 me-2">
+                                        <div class="d-none d-sm-flex col-sm-6 me-2">
+                                            <div class="card recent-blog m-0 w-100">
+                                                <div class="rec-post-img">
+                                                    <img src="{{$relatedPost->feature_photo}}" alt="Marble Floor Polishing">
+                                                </div>
+                                                
+                                                <div class="d-flex flex-column gap-4 justify-content-between p-4 m-0 rec-pos-style">
+                                                    <a href="{{ route('filamentblog.post.show', ['post' => $relatedPost->slug]) }}" class="rec-post-title m-0">{{$relatedPost->title ?? ''}}</a>
+                                                    <div class="blog-stats d-flex flex-column m-0">
+                                                        <hr class="d-md-block m-0 my-md-2 order-2 order-md-1">
+                                                        <div class="d-flex justify-content-between align-items-center order-1 order-md-2 m-0 my-2">
+                                                            <div class="d-flex gap-4 gap-md-3 m-0 align-items-center">
+                                                                <div class="d-flex gap-2">
+                                                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                    <p id="viewsCount" class="views-comments m-0">60</p>
+                                                                </div>
+                                                                <div class="d-flex gap-2">
+                                                                    <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                                                    <p id="viewsCount" class="views-comments m-0">0</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex m-0 ">
+                                                                <p id="likeCount"></p>
+                                                                <button class="like-btn">
+                                                                <i class="fa fa-heart"></i>
+                                                                </button>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endif
+                            @if($post->relatedPosts(3)->count() >= 1)
+                                <div class="blog-slider d-flex">    
+                                    @foreach($post->relatedPosts(3) as $relatedPost)
+                                        <!-- Blog Post 1 -->
+                                        <div class="d-flex d-sm-none col-sm-6 me-2">
                                             <div class="card recent-blog m-0 w-100">
                                                 <div class="rec-post-img">
                                                     <img src="{{$relatedPost->feature_photo}}" alt="Marble Floor Polishing">
