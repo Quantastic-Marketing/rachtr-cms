@@ -326,6 +326,14 @@ nav:after {
   width: 40px;
   height: auto;
 }
+
+.about_techTr .about_techTr_content h2,
+.our_strengths .our_strengths_contnt h2,
+.comprnsive_solution .cmp_solutn_heding h2,
+.blogs .blogs_sec h2,
+.faqs .faqs_headng h2 {
+  font-size: 34px;
+}
 .our_strengths {
   background: #ededed;
 }
@@ -1388,3 +1396,11 @@ ul.padd0 li::before {
   z-index: 2;
   color: white; 
 } */
+
+.footer .follow_us .copyright-bottom{
+  display:none;
+}
+.footer .follow_us .copyright-bottom a{
+  text-decoration: underline;
+  font-weight: 500;
+}

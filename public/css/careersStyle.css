@@ -309,6 +309,10 @@
     background: #E8E6E6;
 }
 
+.opening-form .company-section iframe{
+    max-height: 410px;
+}
+
 .bg-style {
     color: #ffffff;
 }

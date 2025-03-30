@@ -953,7 +953,8 @@
       </section>
       <section class="why-trust-rachtr-section">
         <video autoplay muted loop playsinline class="bg-video">
-          <source src="videos/why-trust.webm" type="video/mp4" />
+          <<source src="{{ asset('videos/why-trust.webm') }}" type="video/webm">
+          <source src="{{ asset('videos/why-trust.mp4') }}" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>

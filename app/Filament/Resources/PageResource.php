@@ -214,7 +214,6 @@ class PageResource extends Resource
                                         ->multiple()
                                         ->maxItems(3) 
                                         ->preload()
-                                        ->required()
                                         ->helperText('Select up to 3 blog posts.'),
                                         ]),
                        

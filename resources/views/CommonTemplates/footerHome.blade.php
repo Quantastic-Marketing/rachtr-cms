@@ -127,7 +127,11 @@
                        </div>
                        <div class="careers_btn">
                        <a href="{{ url('/careers') }}" target="_blank">CAREERS</a>
-                      </div>     
+                       </div> 
+                       <div class="copyright-bottom pt-2">
+                        <span><a href="{{ asset('pdfFile/ISO_RachTR.pdf')}}" target="_blank">>> ISO 9001:2015</a></span>
+                        <p class="py-3">© 2024 RachTR. All Rights Reserved.</p>
+                       </div>    
                     </div>
                 </div>
             </div>

@@ -86,7 +86,10 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 p-0">
-                            <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay="" src="{{ asset('videos/carrer_video.webm') }}" style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;"></video>
+                            <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay=""  style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;">
+                                <source src="{{ asset('videos/carrer_video.webm') }}" type="video/webm">
+                                <source src="{{ asset('videos/carrer_video.mp4') }}" type="video/mp4">
+                            </video>
                         </div> 
                     <!-- </div> -->
                      
@@ -138,56 +141,7 @@
             <div class="row">
                 <div class="col-lg-11 col-xl-10">
                     <div class="company-section flex-column flex-lg-row  my-3 p-3 p-md-5 d-flex">
-                        <img src="images/btm-logo.webp" alt="RachTR Logo" class="company-logo">
-                        <div class="jobs-container">
-                            <div class="company-header ps-md-2">  
-                                <div class="flex-grow-1 text-center text-lg-start">
-                                    <h1 class="company-name">RachTR</h1>
-                                    <p class="company-location">Chemical Manufacturing Gurgaon, Haryana</p>
-                                    <p class="followers-count">6,494 Followers</p>
-                                    <button class="follow-btn">&#x2B; Follow</button>
-                                </div>
-                            </div>
-
-                            <div class="jobs d-flex flex-column flex-lg-row gap-3 gap-lg-0">
-                                <div class="job-card">
-                                    <div class="job-header">
-                                        <a href=""> Key Accounts and Specification - Building Materials Industry</a>
-                                    </div>
-                                    <div class="job-body">
-                                        <p class="text-muted mb-0">1 day ago</p>
-                                    </div>
-                                    <div class="job-footer">
-                                        <button class="apply-btn">Apply now</button>
-                                    </div>
-                                </div>
-                                <div class="job-card">
-                                    <div class="job-header">
-                                       <a href="">Key Accounts and Specification - Building Materials Industry</a> 
-                                    </div>
-                                    <div class="job-body">
-                                        <p class="text-muted mb-0">1 day ago</p>
-                                    </div>
-                                    <div class="job-footer">
-                                        <button class="apply-btn">Apply now</button>
-                                    </div>
-                                </div>
-                                <div class="job-card">
-                                    <div class="job-header">
-                                        <a href="">Key Accounts and Specification - Building Materials Industry</a>
-                                    </div>
-                                    <div class="job-body">
-                                        <p class="text-muted mb-0">1 day ago</p>
-                                    </div>
-                                    <div class="job-footer">
-                                        <button class="apply-btn">Apply now</button>
-                                    </div>
-                                </div>                                
-                            </div>
-                            <div class="embed-link">
-                                <a href="#">Embed LinkedIn Page Jobs on your website</a>
-                            </div>
-                        </div>  
+                        <iframe src='https://widgets.sociablekit.com/linkedin-page-jobs/iframe/25519516' frameborder='0' width='100%' height='1000'></iframe>
                     </div>
                 </div>
             </div>

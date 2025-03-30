@@ -10,7 +10,8 @@
               <div class="item">
                   <div class="banner-sec">
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
-                            <source id="#movie1" src="videos/file-1.webm" type="video/mp4">
+                            <source id="#movie1" src="{{ asset('videos/file-1.webm') }}" type="video/webm">
+                            <source id="#movie1" src="{{ asset('videos/file-1.mp4') }}" type="video/mp4">
                       </video>
                       <div class="banner_overlay col-lg-12">
                          <div class="content">
@@ -35,7 +36,8 @@
                <div class="item">
                   <div class="banner-sec">
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
-                            <source id="#movie1" src="videos/file-2.webm" type="video/mp4">
+                            <source id="#movie1" src="{{ asset('videos/file-2.webm') }}" type="video/webm">
+                            <source id="#movie1" src="{{ asset('videos/file-2.mp4') }}" type="video/mp4">
                       </video>
                       <div class="banner_overlay col-lg-12">
                          <div class="content">
@@ -59,7 +61,8 @@
                <div class="item">
                   <div class="banner-sec">
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
-                            <source id="#movie1" src="videos/file-3.webm" type="video/mp4">
+                            <source id="#movie1" src="{{ asset('videos/file-3.webm') }}" type="video/webm">
+                            <source id="#movie1" src="{{ asset('videos/file-3.mp4') }}" type="video/mp4">
                       </video>
                       <div class="banner_overlay col-lg-12">
                          <div class="content">
@@ -84,7 +87,8 @@
                <div class="item">
                   <div class="banner-sec"> 
                       <video width="100%" height="100%" autoplay muted loop class="desktop">
-                            <source id="#movie1" src="videos/file-4.webm" type="video/mp4">
+                            <source id="#movie1" src="{{ asset('videos/file-4.webm') }}" type="video/webm">
+                            <source id="#movie1" src="{{ asset('videos/file-4.mp4') }}" type="video/mp4">
                       </video>
                       <div class="banner_overlay col-lg-12">
                          <div class="content">
@@ -122,7 +126,7 @@
                    </div>
                    <div class="col-lg-6 ps-0">
                        <div class="about_techTr_content">
-                            <h1 class="pb-3">About <span class="org">RachTR</span></h1>
+                            <h2 class="pb-3 fw-bold">About <span class="org">RachTR</span></h2>
                             <p>At RachTR, we specialize in developing, manufacturing, and selling coatings and <span>marble tile adhesives</span> for construction and industrial sectors.</p>
                            <p>We also provide <span>industrial epoxy flooring services</span> cater to diverse sectors, including Automobile, Pharmaceutical, Electronics, Food & Beverages, Metal Fabrication, Chemical, and Warehouses & Godowns.</p>
                            <p>Since 2013, our pioneering efforts have focused on revolutionizing products tailored for Indian conditions, ensuring optimal performance and customer satisfaction.</p>
@@ -196,7 +200,7 @@
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
                         <div class="our_strengths_contnt">
-                            <h1 class="pb-3">Our <span class="org">Strengths</span></h1>
+                            <h2 class="pb-3 fw-bold">Our <span class="org">Strengths</span></h2>
                             <p>At RachTR, we are dedicated to providing top-notch services tailored to meet your needs. Our team of experts is committed to delivering exceptional results and ensuring your satisfaction.</p>
                             <p>With our extensive experience and dedication to excellence, you can trust us to handle any project, big or small.</p>
                         </div>
@@ -210,7 +214,7 @@
                                         <img src="images/Innovative%20Research%20&%20Development.webp"/>
                                       </div>
                                       <div class="projects_txt">
-                                        <h6>Innovative Research & Development</h6>
+                                        <h6 class="fw-bold">Innovative Research & Development</h6>
                                         <p>Driven by innovation, our brilliant team is dedicated to developing cutting-edge solutions. </p>
                                       </div>
                                       <div class="blog_tranprnt">
@@ -230,7 +234,7 @@
                                         <img src="images/Advanced%20Manufacturing.webp"/>
                                       </div>
                                       <div class="projects_txt">
-                                        <h6>Advanced Manufacturing</h6>
+                                        <h6 class="fw-bold">Advanced Manufacturing</h6>
                                         <p>Our advanced manufacturing sets us apart. We're committed to producing high-quality products.</p>
                                       </div>
                                       <div class="blog_tranprnt">
@@ -250,7 +254,7 @@
                                         <img src="images/Comprehensive%20Solutions.webp"/>
                                       </div>
                                       <div class="projects_txt">
-                                        <h6>Comprehensive Solutions</h6>
+                                        <h6 class="fw-bold">Comprehensive Solutions</h6>
                                         <p>Achieve exceptional results through our informative blog posts & case studies on industries, companies, products, and application tips.</p>
                                       </div>
                                       <div class="blog_tranprnt">
@@ -278,7 +282,7 @@
               <div class="row g-0">
                   <div class="col-lg-12">
                       <div class="res_dev_contnt col-lg-10 col-md-12">
-                         <h2>Innovative Research & Development</h2>
+                         <h2 class="fw-bold">Innovative Research & Development</h2>
                          
                           <div class="row g-0">
                                <div class="res_dev_txt col-lg-8 col-md-8 col-sm-12 mx-0 pt-4">  
@@ -323,7 +327,7 @@
         <div class="row g-0">
            <div class="col-lg-4">
               <div class="advce_manufrng_contnt">
-                 <h2>Advanced Manufacturing</h2>
+                 <h2 class="fw-bold">Advanced Manufacturing</h2>
                   <p><strong>At RachTR,</strong> our advanced manufacturing capabilities set us apart in the industry.</p>
                   <p>We are committed to <strong>producing high-quality products</strong> that meet the stringent demands of our clients across various sectors.</p>
                   <p>Here’s a closer look at what makes our manufacturing processes exceptional:</p>
@@ -416,8 +420,8 @@
         <div class="container">
             <div class="row g-0">
                 <div class="cmp_solutn_heding col-lg-8 col-md-12 py-5">
-                    <h2>Comprehensive Solutions</h2>
-                    <h3 class="py-4">Case Studies</h3>
+                    <h2 class="fw-bold">Comprehensive Solutions</h2>
+                    <h3 class="py-4 fw-bold">Case Studies</h3>
                     <p class="px-5">Check out some of our informative blog posts on topics like construction trends, product knowledge, application tips, etc.</p>
                 </div>
                <div class="case-studies-item">
@@ -615,7 +619,7 @@
               <div class="row g-0">
                   <div class="col-lg-12">
                      <div class="blogs_sec py-5">
-                         <h2>Blogs</h2>
+                         <h2 class="fw-bold">Blogs</h2>
                          <ul class="padd0">
                             @foreach($blogs as $blog)                           
                             <li class="col-lg-4 mx-3">
@@ -653,7 +657,7 @@
          <div class="container">
                  <div class="row g-0">
                  <div class="faqs_headng col-lg-12 py-5">
-                      <h2 class="mb-4">FAQs</h2>
+                      <h2 class="mb-4 fw-bold">FAQs</h2>
                      <p>Find answers to common questions about RachTR's products, services, ordering process, and technical inquiries.</p>
                  </div>
                  <div class="faqs_detls row g-0">
