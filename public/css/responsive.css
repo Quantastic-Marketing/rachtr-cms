@@ -577,6 +577,20 @@
     .service-solution-hero.bnr_sldr .item .banner-sec .banner_overlay .content {
       padding: 28% 0 0 3%;
     }
+    .about_techTr .about_techTr_content h2,
+    .our_strengths .our_strengths_contnt h2,
+    .comprnsive_solution .cmp_solutn_heding h2,
+    .blogs .blogs_sec h2,
+    .faqs .faqs_headng h2 {
+      font-size: 28px;
+    }
+
+    .comprnsive_solution .cmp_solutn_heding h3{
+      font-size: 26px;
+    }
+    .our_strengths .our_strengths_contnt {
+      text-align: unset;
+  }
   }
   
   @media (max-width: 480px) {
@@ -659,7 +673,7 @@
     }
     .footer .form_sec {
       text-align: center;
-      padding: 0 !important;
+      /* padding: 0 !important; */
     }
     .footer .follow_us p {
       text-align: center;
@@ -679,5 +693,15 @@
     .footer .copyright {
       display: none;
     }
+
+    .footer .follow_us .copyright-bottom{
+      display: flex;
+      flex-direction: column;
+    }
+    .footer .follow_us .copyright-bottom a {
+      text-decoration: underline;
+      font-weight: 700;
+      color: #000000;
+  }
   }
   

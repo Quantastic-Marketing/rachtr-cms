@@ -7,7 +7,6 @@ document.querySelectorAll('.heart-btn').forEach(button => {
 });
 
 
-console.log("here ayt start");
 let count = 0;
 const likeBtn = document.querySelector('.like-btn');
 const likeCount = document.querySelector('#likeCount');

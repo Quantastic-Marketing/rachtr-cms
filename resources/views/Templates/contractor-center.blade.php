@@ -62,8 +62,10 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
-                                            <video preload="none" autoplay="" loop="" muted playsinline="true"
-                                                src="{{asset('videos/video-showcase-2.webm') }}"></video>
+                                            <video preload="none" autoplay="" loop="" muted playsinline="true">
+                                            <source src="{{asset('videos/video-showcase-2.webm') }}" type="video/webm">
+                                            <source src="{{asset('videos/video-showcase-2.mp4') }}" type="video/mp4">
+                                            </video>
                                         </div>
                                         <div class="projects_txt">
                                             <h6 class="fw-bold">Residential & Commercial Buildings</h6>
@@ -96,8 +98,10 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12 mx-5">
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
-                                            <video preload="none" autoplay="" loop="" muted playsinline="true"
-                                                src="{{asset('videos/video-showcase-1.webm') }}"></video>
+                                            <video preload="none" autoplay="" loop="" muted playsinline="true">
+                                            <source src="{{asset('videos/video-showcase-1.webm') }}" type="video/webm">
+                                            <source src="{{asset('videos/video-showcase-1.mp4') }}" type="video/mp4">
+                                            </video>
                                         </div>
                                         <div class="projects_txt">
                                             <h6 class="fw-bold">Stone Processing Industry</h6>
@@ -130,8 +134,10 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
-                                            <video preload="none" autoplay="" loop="" muted playsinline="true"
-                                                src="{{asset('videos/video-showcase-3.webm') }}"></video>
+                                            <video preload="none" autoplay="" loop="" muted playsinline="true">
+                                                <source src="{{asset('videos/video-showcase-3.webm') }}" type="video/webm">
+                                                <source src="{{asset('videos/video-showcase-3.mp4') }}" type="video/mp4">
+                                            </video>
                                         </div>
                                         <div class="projects_txt">
                                             <h6 class="fw-bold">Industrial Flooring</h6>
@@ -181,44 +187,44 @@
                             <p class="ms-5">Watch our videos to learn more about RachTR's products, application techniques, customer testimonials, and industry insights.</p>
                             <div class="app-video-slider">
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/GG7zBf_A2Nk" data-fancybox="gallery">
+                                    <a href="https://www.youtube.com/embed/GG7zBf_A2Nk" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-1.webp')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="app-video mx-1 ">
-                                    <a href="https://youtu.be/lHCzLmkVm-M" data-fancybox="gallery">
+                                    <a href="https://www.youtube.com/embed/lHCzLmkVm-M" data-fancybox="gallery">
                                         <img src="{{asset('images/thumbnail-2.webp')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
-                                    <a href="https://youtu.be/lHCzLmkVm-M" data-fancybox="gallery">
-                                    <img src="{{asset('images/thumbnail-3.webp')}}" alt="">       
+                                    <a href="https://www.youtube.com/embed/lHCzLmkVm-M" data-fancybox="gallery">
+                                    <img src="{{asset('images/thumbnail-3.webp')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
                                     <a href="{{asset('videos/adani-ahemdabad.webm')}}" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-4.webp')}}" alt="">                  
+                                        <img src="{{asset('images/thumbnail-4.webp')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
                                     <a href="{{asset('videos/Lake-Estate-Nagpur.webm')}}" data-fancybox="gallery">
-                                     <img src="{{asset('images/thumbnail-5.webp')}}" alt="">                     
+                                     <img src="{{asset('images/thumbnail-5.webp')}}" alt="">
                                     </a>
                                 </div>
                                 <div class="app-video mx-1">
                                     <a href="{{asset('videos/Surat-Bunglow.webm')}}" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-6.webp')}}" alt="">      
+                                        <img src="{{asset('images/thumbnail-6.webp')}}" alt="">
                                     </a>             
                                 </div>
                                 <div class="app-video mx-1">
                                     <a href="{{asset('videos/Travertine-Punjab.webm')}}" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-7.webp')}}" alt="">      
+                                        <img src="{{asset('images/thumbnail-7.webp')}}" alt="">
                                     </a>             
                                 </div>
                                 <div class="app-video mx-1">
                                     <a href="{{asset('videos/Lemon-Tree.webm')}}" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-9.webp')}}" alt="">      
-                                    </a>             
+                                        <img src="{{asset('images/thumbnail-9.webp')}}" alt="">
+                                    </a>
                                 </div>
                             </div>
                         </div>
