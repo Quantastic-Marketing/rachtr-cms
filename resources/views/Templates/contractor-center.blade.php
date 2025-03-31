@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="col-lg-6 px-4 order-1 order-md-2 py-md-5">
                                         <div class="heading-holder">
-                                            <h2>Innovative Solutions for Contractors</h2>
+                                            <h2 class="fw-bold">Innovative Solutions for Contractors</h2>
                                         </div>
                                         <p> At RachTR, we understand the unique challenges and demands faced by contractor.</p>
                                         <p><strong>Our Contractor Center</strong>  offers a <strong>range of resources </strong> and <strong>expertise</strong>  to help you achieve outstanding results with our advanced industrial solutions and products.</p>
@@ -47,12 +47,12 @@
             </section>
 
          <!-- This is a section-2 open -->
-         <section class="our_strengths py-5">
+         <section class="contract-sec our_strengths py-5">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
                         <div class="our_strengths_contnt">
-                            <h1 class="pb-3">Our <span class="org">Industries</span></h1>
+                            <h2 class="pb-3 fw-bold">Our <span class="org">Industries</span></h2>
                             <p>Innovative Solutions For Every Industrial Challenge</p>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="application-content">
-                            <h2 class="ms-5">Application Videos</h2>
+                            <h2 class="ms-5 fw-bold">Application Videos</h2>
                             <p class="ms-5">Watch our videos to learn more about RachTR's products, application techniques, customer testimonials, and industry insights.</p>
                             <div class="app-video-slider">
                                 <div class="app-video mx-1">

@@ -16,7 +16,7 @@
                   <div class="content col-lg-10 col-md-12">
                     <div class="container">
                       <div class="content-details ms-0">
-                        <h1 class="text-white">
+                        <h1 class="text-white fw-bold">
                           <span style="color: #ef6e25">Solutions</span> for
                           <br />
                           Residential & Commercial Buildings
@@ -358,7 +358,7 @@
 
       <section class="product-we-offer-section">
         <div class="container">
-          <h2 class="text-center text-black mb-lg-5 mb-4">
+          <h2 class="text-center text-black mb-lg-5 mb-4 fw-bold">
             Products
             <span style="color: #ef6e25">We Offer </span>
           </h2>
@@ -1170,7 +1170,7 @@
             <div class="col-12 col-md-12">
               <div class="clients-content row align-items-center">
                 <div class="heading-holder col-12 col-lg-2 mb-4 mb-lg-0">
-                  <h2 class="mb-0 color-orange fs-2">Our clients</h2>
+                  <h2 class="mb-0 color-orange fs-2 fw-bold">Our clients</h2>
                 </div>
                 <div class="client-slider col-12 col-lg-10">
                   <div class="client-slide">
@@ -1256,7 +1256,7 @@
         <div class="container">
           <div class="row g-0">
             <div class="faqs_headng col-lg-12 py-lg-5 py-4">
-              <h2 class="mb-4">FAQs</h2>
+              <h2 class="mb-4 fw-bold">FAQs</h2>
               <p>
                 Find answers to common questions about RachTR's products,
                 services, ordering process, and technical inquiries.

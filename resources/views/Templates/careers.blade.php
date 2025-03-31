@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-lg-6 py-lg-5 d-flex flex-column align-items-end align-self-end">
                         <div class="life-at-content d-flex flex-column gap-lg-2 gap-xl-3 text-center text-lg-start">
-                            <h2 class="heading-holder text-center text-lg-start mb-3 m-lg-0 ">LIFE AT RACHTR</h2>
+                            <h2 class="heading-holder text-center text-lg-start mb-3 m-lg-0 fw-bold ">LIFE AT RACHTR</h2>
                             <p>We believe in fostering a culture of collaboration, creativity, and continuous learning.
                                 At RachTR, you’ll find a workplace where you can grow both personally and
                                 professionally. ​</p>
@@ -67,7 +67,7 @@
 
             </div>
         </section>
-       <section class="rachtribe-section pt-5 pb-0 py-lg-5">
+       <section class="rachtribe-section py-5 py-lg-5">
          <div class="container-fluid container-lg">
              <div class="row "> 
                 <h1 class="main-heading d-block d-lg-none text-center">Why be a part of <span class="hashtag">#RachTRibe</span>?</h1>
@@ -78,7 +78,7 @@
                             <div class="text-content p-5">
                                 <h1 class="main-heading d-none d-lg-block">Why be a part of <span class="hashtag">#RachTRibe</span>?</h1>
                                 
-                                <p class="description">At RachTR, we're more than just a company—we're a team of passionate professionals dedicated to innovation in the construction and industrial sectors.</p>
+                                <p class="description"><strong>At RachTR,</strong> we're more than just a company—we're a team of passionate professionals dedicated to innovation in the construction and industrial sectors.</p>
                                 
                                 <p class="description">Our expertise in coatings and adhesives drives us to develop cutting-edge solutions that meet the highest industry standards.</p>
                                 
@@ -121,7 +121,7 @@
                     <div class="col-md-10 col-lg-9">
                         <div class="openings-content">
                             <div class="heading-holder text-center pb-4">
-                                <h2><span class="highlight">Current Opening</span></h2>
+                                <h2 class="fw-bold"><span class="highlight">Current Opening</span></h2>
                             </div>
 
                             <div class="text-part justify-content-center text-center d-flex flex-column gap-4">
@@ -155,7 +155,7 @@
                     <!-- Left Section (White Background) -->
                     <div class="col-lg-5 collab-left d-flex flex-column justify-content-center career-left">
                         <div class="row py-lg-5">
-                            <div class="col-md-10 col-xxl-7 ">
+                            <div class="col-md-10  col-xl-9 col-xxl-8 ">
                                 <h2 class="fw-bold">Don’t See a Role That Fits?</h2>
                                  <p>We’re growing rapidly, and new opportunities are always on the horizon.</p>
                             </div>

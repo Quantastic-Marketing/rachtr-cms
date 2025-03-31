@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-lg-6 px-4 order-1 order-lg-2">
                                 <div class="heading-holder">
-                                    <h2>Innovative Solutions for Architects</h2>
+                                    <h2 class="fw-bold">Innovative Solutions for Architects</h2>
                                 </div>
                                 <p> <strong>At RachTR</strong>, we understand the unique challenges and demands faced by
                                     architects.</p>
@@ -51,12 +51,12 @@
         </section>
 
         <!-- This is a section-2 open -->
-        <section class="our_strengths py-5">
+        <section class="architect-our our_strengths py-5">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
                         <div class="our_strengths_contnt">
-                            <h1 class="pb-3">Our <span class="org">Industries</span></h1>
+                            <h2 class="pb-3 fw-bold">Our <span class="org">Industries</span></h2>
                             <p>Innovative Solutions For Every Industrial Challenge</p>
                         </div>
                     </div>
@@ -185,7 +185,7 @@
                 <div class="row g-0">
                     <div class="col-lg-12">
                         <div class="res_dev_contnt col-lg-10 col-md-12">
-                            <h2>Technoical Resources</h2>
+                            <h2 class="fw-bold">Technoical Resources</h2>
 
                             <div class="row g-0">
                                 <div class="res_dev_txt col-lg-8 col-md-8 col-sm-12 mx-0 pt-4">
@@ -234,7 +234,7 @@
             <div class="container">
                 <div class="row g-0">
                     <div class="cmp_solutn_heding ps-3 col-md-12 py-5">
-                        <h2 class="ps-3">Case Study</h2>
+                        <h2 class="ps-3 fw-bold">Case Study</h2>
                         <!-- <h3 class="py-4">Check out some of our informative blog posts on topics like construction trends, product knowledge, application tips, etc.</h3> -->
                         <p class="ps-3">Check out some of our informative blog posts on topics like construction trends,
                             product knowledge, application tips, etc.</p>
@@ -519,12 +519,12 @@
         <!-- This is a section-6 close -->
 
         <!-- This is a section-2 open -->
-        <section class="our-industries our_strengths py-5">
+        <section class="architect-our our-industries our_strengths py-5">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
                         <div class="our_strengths_contnt">
-                            <h1 class="pb-3">Projects Showcase</h1>
+                            <h2 class="pb-3 fw-bold">Projects Showcase</h2>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12">

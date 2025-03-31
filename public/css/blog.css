@@ -207,6 +207,9 @@ nav ul.pagination li {
     text-align: center !important;
 }
 
+.blog-banner .banner-section h1{
+    font-size: 34px;
+}
 
 @media (min-width: 1400px) {
     .blogs-content .container {
@@ -278,6 +281,9 @@ nav ul.pagination li {
         font-size: 15px !important;
     }
 
+    .blog-banner .banner-section h1{
+        font-size: 24spx;
+    }
 }
 
 

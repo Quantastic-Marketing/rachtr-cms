@@ -352,6 +352,15 @@
     object-fit: cover;
 }
 
+.architect-banner .banner-section .heading-holder h1,
+.architect-our .our_strengths_contnt h2,
+.architect-center .cmp_solutn_heding h2,
+.architectural-marvels .slide-title,
+.collaboration .collab-section .collab-left h2
+{
+    font-size: 42px;
+}
+
 
 @media (max-width:1220px) {
     /* .blog_list {
@@ -409,6 +418,14 @@
 
     .app-video{
         height: 200px;
+    }
+    .architect-banner .banner-section .heading-holder h1,
+    .architect-our .our_strengths_contnt h2,
+    .architect-center .cmp_solutn_heding h2,
+    .architectural-marvels .slide-title,
+    .collaboration .collab-section .collab-left h2
+    {
+        font-size: 24px;
     }
 }
 
