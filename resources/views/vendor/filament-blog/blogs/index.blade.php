@@ -115,10 +115,8 @@
                         </div>
                     @endforeach
                     
-                    <div class="container d-flex align-items-start">
-                        <!-- <nav aria-label="Page navigation"> -->
-                          {{$posts->links('pagination::bootstrap-4')}}  
-                        <!-- </nav> -->
+                    <div class="container d-flex align-items-start px-0 pb-3">
+                        {{$posts->links('CommonTemplates.custom-pagination')}}
                     </div>
                 </div>
         
