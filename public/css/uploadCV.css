@@ -110,6 +110,15 @@
   font-weight: 500;
 }
 
+.cv-banner .banner-section .banner-content h1{
+  font-size: 34px;
+}
+
+.upload-cv-form h2{
+  font-size: 34px;
+}
+
+
 @media (max-width:998px){
   .cv-banner .banner-section {
     margin-top: 80px;
@@ -120,11 +129,18 @@
   .cv-banner .banner-section {
       margin-top: 80px;
   }
+  .cv-banner .banner-section .banner-content h1{
+    font-size: 24px;
+  }
+  .upload-cv-form h2{
+    font-size: 34px;
+  }
+  
 }
 
 @media (max-width:499px){
   .upload-cv-form .apply-section {
-    max-width: 600px;
+    max-width: 550px;
   }
   .upload-cv-form .apply-section input,
   .upload-cv-form .apply-section select {

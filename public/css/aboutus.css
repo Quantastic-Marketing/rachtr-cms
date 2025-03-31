@@ -27,7 +27,7 @@
     flex-direction: column
 }
 .about-banner .banner-section {
-    height: 230px;
+    height: 300px;
     position: relative;
     color: #ffffff;
 }
@@ -319,6 +319,10 @@
     color: #e6f2f5;
 }
 
+.about-banner .banner-section .heading-holder h1{
+    font-size:42px;
+}
+
 @media (max-width:996px){
     .about-solution .image-container {
         height: 285px;
@@ -346,7 +350,7 @@
     }
     
     .founder-section .founder-title {
-        font-size: 2rem;
+        font-size: 1,5rem;
     }
     .mentor-img-container {
         width: 180px;
@@ -354,7 +358,7 @@
     }
     
     .mentor-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .mentor-details {
@@ -380,6 +384,14 @@
     .about-points .point-card .image-wrap{
         width: 120px;
         height: 120px;
+    }
+
+    .about-banner .banner-section .heading-holder h1{
+        font-size:24px;
+        padding: 0 34px;
+    }
+    .about-banner .banner-section {
+        height: 260px;
     }
 }
 

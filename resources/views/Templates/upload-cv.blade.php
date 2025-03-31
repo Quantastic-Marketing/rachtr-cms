@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-10">
-                    <h2 class="">Apply Now: Share Your Details</h2>
+                    <h2>Apply Now: Share Your Details</h2>
                     <p class="fs-6">We receive a high number of resumes from applicants. To enhance your chances of finding a suitable opportunity, please explore and apply for a position here.</p>
                 </div>
 

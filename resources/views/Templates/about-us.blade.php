@@ -12,7 +12,7 @@
                             <img src="images/about_mob_banner.webp" alt="img background" class=" d-block d-md-none">
                         </div>
                         <div class="heading-holder">
-                            <h1 class="fw-bold">Revolutionizing Coatings and Adhesives for India</h1>
+                            <h1 class="fw-bold">Revolutionizing Coatings and <br> Adhesives for India</h1>
                         </div>
                     </div>
                 </div>

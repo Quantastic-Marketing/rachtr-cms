@@ -83,6 +83,34 @@
 .contact-contract .image-container{
     padding:21px 0;
 }
+.contact-contract .heading-holder h1{
+    font-size:42px;
+}
+
+.contract-innvo .heading-holder h2,
+.application-videos .application-content h2 {
+    font-size: 34px;
+}
+
+@media (max-width:786px){
+    .contract-innvo .heading-holder h2,
+    .application-videos .application-content h2,
+    .contract-sec .our_strengths_contnt h2{
+        font-size: 24px;
+    }
+
+    .contact-contract .heading-holder h1{
+        font-size: 28px;
+    }
+
+    .contact-contract .banner-section .heading-holder {
+        text-align: left;
+    }
+    .contact-contract .heading-holder h1 {
+        align-self: flex-start;
+        margin: 10px 0;
+    }
+}
 
  @media (max-width:499px){
     .contact-banner .banner-section .heading-holder {

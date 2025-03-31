@@ -14,7 +14,8 @@
 
 
 .contact-form input, .contact-form select, .contact-form textarea {
-    border: 1px solid #3C4052;
+    border: 2px solid #373B4D;
+    height:42px;
 }
 
 .contact-form input::placeholder,
@@ -41,6 +42,44 @@
     background: #232733;
     border: #232733;
     color: #ffffff;
+}
+
+.contact-banner .heading-holder h1{
+    font-size: 42px;
+}
+
+.contact-form h2{
+    font-size: 34px;
+}
+
+.contact-form .contact-section .contact-box p{
+    line-height:27px;
+}
+
+.contact-form .contact-section .contact-box h5{
+    font-size: 18px;
+}
+
+.contact-form .contact-section .contact-box a,
+.contact-box p a{
+    color: #000000;
+    text-decoration: underline;
+}
+
+.button-div {
+    width:50%;
+}
+@media (max-width: 768px) {
+    .contact-banner .heading-holder h1{
+        font-size: 24px;
+    }
+    
+    .contact-form h2{
+        font-size: 24px;
+    } 
+    .button-div {
+        width:100%;
+    }
 }
 
 /* .contact-map iframe{
