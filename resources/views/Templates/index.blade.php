@@ -1,10 +1,8 @@
 <div class="wrapper"> 
-      <!-- This is a header open -->
-        @includeIf('CommonTemplates.headerHome')
-
+    
        <!-- This is a header close -->
        <!-- This is a banner open -->
-       <div class="bnr_sldr">
+       <div class="homepg-banner bnr_sldr">
            <div class="row g-0">
            <div class="banr col-lg-12">
               <div class="item">
@@ -17,7 +15,7 @@
                          <div class="content">
                              <div class="container">
                                  <div class="content-details ms-0">
-                                      <h2>Building Communities, Brick by Brick</h2>
+                                      <h1 class="fw-bold" >Building Communities, Brick by Brick</h1>
                                       <p>RachTR empowers builders, architects, and artisans with high-performance coatings and adhesives. Together, we're shaping India's built environment.</p>
                                       <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p>
                                  </div>
@@ -43,7 +41,7 @@
                          <div class="content">
                              <div class="container">
                                  <div class="content-details ms-0">
-                                      <h2><span class="org">RachTR,</span><br/>World-Class Quality, <br/>Made for Local Conditions</h2>
+                                      <h1 class="fw-bold" ><span class="org">RachTR,</span><br/>World-Class Quality, <br/>Made for Local Conditions</h1>
                                       <p>Coatings & Adhesives Designed for<br/> Diverse Conditions</p>
                                  </div>
                                  <div class="content-list ms-0">
@@ -68,7 +66,7 @@
                          <div class="content">
                              <div class="container">
                                  <div class="content-details ms-0">
-                                      <h2>Built on Trust</h2>
+                                      <h1 class="fw-bold" >Built on Trust</h1>
                                       <p>RachTR is your trusted partner for construction and industrial<br/> solutions. Made for diverse conditions.</p>
                                       <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRust</span></p> 
                                  </div>
@@ -94,7 +92,7 @@
                          <div class="content">
                              <div class="container">
                                  <div class="content-details ms-0">
-                                      <h2>Innovating for the Future, At the Forefront</h2>
+                                      <h1 class="fw-bold" >Innovating for the Future, At the Forefront</h1>
                                       <p>RachTR is at the forefront of construction technology, developing solutions for the future of Indian infrastructure.</p>
                                       <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRend</span></p> 
                                  </div>

@@ -1,7 +1,7 @@
 
     <div class="wrapper"> 
      
-       <div class="bnr_sldr">
+       <div class="epoxy-service-banner bnr_sldr">
         <div class="row g-0">
         <div class="col-lg-12">                     
            <div class="item">
@@ -14,8 +14,8 @@
                       <div class="content col-md-9">
                           <div class="container">
                               <div class="content-details ms-0">
-                                   <h2>Upgrade to <span>RachTR</span><br>
-                                    for durable, sleek Industrial <span>Epoxy</span> flooring</h2>
+                                   <h1 class="fw-bold">Upgrade to <span>RachTR</span><br>
+                                    for durable, sleek Industrial <span>Epoxy</span> flooring</h1>
                                    <p>Upgrade your floors with RachTR's high-performance epoxy coatings. Designed for superior strength, chemical resistance, and easy maintenance.
                                 </p>
                                     
@@ -47,7 +47,7 @@
                 <div class="col-12 col-md-11">
                     <div class="clients-content ms-md-3">
                         <div class="heading-holder pb-3">
-                            <h2>Our <span>clients</span></h2>
+                            <h2 class="fw-bold">Our <span>clients</span></h2>
                         </div>
                         <div class="client-slider">
                             <div class="client-slide"><img src="{{ asset('images/client-slide-1.webp') }}" alt="Client 1"></div>
@@ -81,7 +81,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="heading-holder py-2">
-                                    <h2>Built to Last:<br>
+                                    <h2 class="fw-bold">Built to Last:<br>
                                        <span>Benefits of RachTR Epoxy Flooring</span></h2>
                                     <p>Experience the superior performance and lasting beauty of floors designed for diverse conditions.</p>
                                 </div>
@@ -161,7 +161,7 @@
                     <div class="container">
                         <div class="row g-0">
                             <div class="cmp_solutn_heding col-lg-8 col-md-12 py-5">
-                                <h2>Our Projects</h2>
+                                <h2 class="fw-bold">Our Projects</h2>
                             </div>
                            <div class="case-studies-item">
                             <div class="case_studies row g-0">
@@ -307,7 +307,7 @@
             <div class="row g-0">
                 <div class="locations-block d-flex flex-column justify-content-center align-items-center gap-5">
                     <div class="heading-holder">
-                        <h2><span>Location's</span>  We've served</h2>
+                        <h2 class="fw-bold"><span>Location's</span>  We've served</h2>
                      </div>
                      <div class="location-img ps-md-5">
                         <img src="{{ asset('images/location-img.webp') }}" alt="loaction-map">
@@ -324,7 +324,7 @@
             <div class="row g-0">
                 <div class="experience-content d-flex flex-column gap-5">
                     <div class="heading-holder">
-                        <h2>Experience the <br> <span>RachTR</span> Difference</h2>
+                        <h2 class="fw-bold">Experience the <br> <span>RachTR</span> Difference</h2>
                     </div>
                     <div class="row g-0">
                         <div class="col-12 col-lg-6 pe-md-3 order-2 order-lg-1">
@@ -455,14 +455,14 @@
             <div class="row g-0">
                 <div class="common-faq-block">
                     <div class="heading-holder py-5 text-center">
-                        <h2>Common FAQs related to <br>
+                        <h2 class="fw-bold">Common FAQs related to <br>
                            <span>RachTR Epoxy Solutions</span> </h2>
                     </div>
                     <div class="faq-block  ">
                     <div class="faq-block px-md-5 mx-md-5 px-sm-3 mx-sm-3">
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -470,7 +470,7 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -478,7 +478,7 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -486,7 +486,7 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -494,7 +494,7 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>

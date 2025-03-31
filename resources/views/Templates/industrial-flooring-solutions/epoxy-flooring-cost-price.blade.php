@@ -1,5 +1,5 @@
 <div class="wrapper"> 
-       <div class="bnr_sldr">
+       <div class=" cost-price-banner bnr_sldr">
         <div class="row g-0">
         <div class="col-lg-12">
            <div class="item">
@@ -12,8 +12,8 @@
                       <div class="content col-lg-9 col-md-12">
                           <div class="container">
                               <div class="content-details ms-0">
-                                   <h2>Revamp Your Industrial Space with <br>
-                                    <span> Durable Epoxy Flooring Solutions</span></h2>
+                                   <h1 class="fw-bold">Revamp Your Industrial Space with <br>
+                                    <span> Durable Epoxy Flooring Solutions</span></h1>
                                    <p>RachTR offers durable and cost-effective epoxy flooring solutions for automobile, pharmaceutical, electronics, food & beverages, metal fabrications, chemical industry, and warehouses & godowns.</p>
                                    <p>Our seamless non-slip surface is easy to clean and can withstand heavy traffic, enhancing the safety and functionality of your workspace.</p>
                                    <p>Choose RachTR for the best industrial epoxy flooring solutions.</p>
@@ -46,7 +46,7 @@
                 <div class="col-12 col-md-11">
                     <div class="clients-content ms-md-3">
                         <div class="heading-holder pb-3">
-                            <h2>Our <span>clients</span></h2>
+                            <h2 class="fw-bold">Our <span>clients</span></h2>
                         </div>
                         <div class="client-slider">
                             <div class="client-slide"><img src="{{ asset('images/client-slide-1.webp') }}" alt="Client 1"></div>
@@ -79,7 +79,7 @@
                     <div class="container py-5">
                         <div class="why-epoxy-content d-flex flex-column gap-3">
                             <div class="heading-holder m-0">
-                                <h2>What is <span>Epoxy Flooring?</span> </h2>
+                                <h2 class="fw-bold">What is <span>Epoxy Flooring?</span> </h2>
                             </div>
                             <div class="text-holder">
                                 <p> <strong>Epoxy Flooring</strong> is a type of synthetic resin floor system, in which especially formulated epoxy coatings are laid on top of concrete substrates as a form of protection and decoration layer.</p>
@@ -122,7 +122,7 @@
                 <div class="col-12">
                     <div class="epoxy-solution-content">
                         <div class="heading-holder">
-                            <h2>Epoxy Flooring Solutions for <span>Multiple Industries</span></h2>
+                            <h2 class="fw-bold">Epoxy Flooring Solutions for <span>Multiple Industries</span></h2>
                         </div>
                         <div class="text-content px-md-5 mx-md-5 text-center">
                             <p>We at RachTR specialize in providing high-quality epoxy flooring solutions for a variety of industries. Our services are tailored to meet the unique needs of <strong>epoxy flooring for warehouses, pharma industries, metal fabrication, food and beverages, electronics, chemical, and automobile industries.</strong></p>
@@ -245,7 +245,7 @@
                 <div class="col-12">
                     <div class="epoxy-floor-content d-flex flex-column  position-relative z-1 text-white gap-1 gap-md-5">
                         <div class="heading-holder text-center">
-                            <h2> <span>EPOXY FLOORING COST:</span> </h2>
+                            <h2 class="fw-bold"> <span>EPOXY FLOORING COST:</span> </h2>
                         </div>
                         <div class="components-factors text-center">
                             <p>Components and Factors</p>
@@ -546,7 +546,7 @@
                     <div class="container">
                         <div class="row g-0">
                             <div class="cmp_solutn_heding col-lg-8 col-md-12 py-5">
-                                <h2>Our Projects</h2>
+                                <h2 class="fw-bold">Our Projects</h2>
                             </div>
                            <div class="case-studies-item">
                             <div class="case_studies row g-0">
@@ -689,7 +689,7 @@
             <div class="row g-0">
                 <div class="locations-block d-flex flex-column justify-content-center align-items-center gap-5">
                     <div class="heading-holder">
-                        <h2><span>Location's</span>  We've served</h2>
+                        <h2 class="fw-bold"><span>Location's</span>  We've served</h2>
                      </div>
                      <div class="location-img ps-md-5">
                         <img src="{{ asset('images/location-img.webp') }}" alt="loaction-map">
@@ -706,7 +706,7 @@
             <div class="row g-0">
                 <div class="experience-content d-flex flex-column gap-5">
                     <div class="heading-holder">
-                        <h2>Experience the <br> <span>RachTR</span> Difference</h2>
+                        <h2 class="fw-bold">Experience the <br> <span>RachTR</span> Difference</h2>
                     </div>
                     <div class="row g-0">
                         <div class="col-12 col-lg-6 pe-md-3 order-2 order-lg-1">
@@ -837,14 +837,14 @@
             <div class="row g-0">
                 <div class="common-faq-block">
                     <div class="heading-holder py-5 text-center">
-                        <h2>Common FAQs related to <br>
+                        <h2 class="fw-bold">Common FAQs related to <br>
                            <span>RachTR Epoxy Solutions</span> </h2>
                     </div>
                     <div class="faq-block  ">
                     <div class="faq-block px-md-5 mx-md-5 px-sm-3 mx-sm-3">
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -852,7 +852,7 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -860,7 +860,7 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -868,7 +868,7 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -876,7 +876,7 @@
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                             </div>
                             <div class="acc-body">
                                   <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -897,7 +897,7 @@
                 <div class="col-12">
                     <div class="get-free-content d-flex flex-column">
                         <div class="heading-holder pt-5 text-center">
-                            <h2>Don't Wait! Get a Free Quote & <br>
+                            <h2 class="fw-bold">Don't Wait! Get a Free Quote & <br>
                                 Transform Your Floors Today</h2>
                         </div>
                         <div class="banner-buttons d-flex justify-content-center gap-3 py-5 flex-column flex-md-row">

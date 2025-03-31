@@ -485,7 +485,19 @@ textarea.form-control {
     content: "■" !important;
 }
 
+.our-clients .clients-content .heading-holder h2,
+.section-ordering .build-to-last .heading-holder h2,
+.locations-served .locations-block .heading-holder h2,
+.experience-rachtr .experience-content .heading-holder h2,
+.common-faqs .common-faq-block .heading-holder h2{
+    font-size: 34px;
+}
 
+
+.epoxy-service-banner .banner-sec .banner_overlay .content-details h1{
+    font-size: 40px;
+    color: #ffffff;
+}
 
 
 
@@ -502,6 +514,18 @@ textarea.form-control {
     }
     
     .form-title {
+        font-size: 24px;
+    }
+
+    .our-clients .clients-content .heading-holder h2,
+    .section-ordering .build-to-last .heading-holder h2,
+    .locations-served .locations-block .heading-holder h2,
+    .experience-rachtr .experience-content .heading-holder h2,
+    .common-faqs .common-faq-block .heading-holder h2{
+        font-size: 24px;
+    }
+    
+    .epoxy-service-banner .banner-sec .banner_overlay .content-details h1{
         font-size: 24px;
     }
 }
@@ -644,6 +668,8 @@ textarea.form-control {
         font-size: 20px;
         font-weight: 600;
     }
+
+    
 }
 
 @media (max-width:480px) {
@@ -776,10 +802,6 @@ textarea.form-control {
 
 }
 
-@media (max-width:768px) {
-   
-
-}
 
 @media (max-width:990px) {
     .experience-fade-efct {
