@@ -286,7 +286,16 @@ nav ul.pagination li {
     }
 }
 
-
+@media (max-width: 500px) {
+    .pagination {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: center;
+    }
+    .pagination .page-item {
+        flex: 0 0 auto;
+    }
+}
 
 @media (max-width:499px) {
     .related-posts{
