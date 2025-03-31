@@ -66,7 +66,7 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
-                                            <video preload="none" autoplay="" loop="" muted playsinline="true"
+                                            <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls="" 
                                                 >
                                                 <source src="{{asset('videos/video-showcase-2.webm') }}" type="video/webm">
                                                 <source src="{{asset('videos/video-showcase-2.mp4') }}" type="video/mp4"></video>
@@ -102,7 +102,7 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12 mx-5">
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
-                                            <video preload="none" autoplay="" loop="" muted playsinline="true">
+                                            <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls="" >
                                             <source src="{{asset('videos/video-showcase-1.webm') }}" type="video/webm">
                                             <source src="{{asset('videos/video-showcase-1.mp4') }}" type="video/mp4">
                                             </video>
@@ -138,7 +138,7 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
-                                            <video preload="none" autoplay="" loop="" muted playsinline="true">
+                                            <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls="" >
                                             <source src="{{asset('videos/video-showcase-3.webm') }}" type="video/webm">
                                             <source src="{{asset('videos/video-showcase-3.mp4') }}" type="video/mp4">
                                             </video>

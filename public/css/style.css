@@ -476,6 +476,8 @@ nav:after {
 }
 .advce_manufrng_steps .item-slidr ul li .icon svg {
   width: 60px;
+  height: 60px;
+  fill: #ffffff;
 }
 .advce_manufrng_steps .item-slidr ul li .icon svg [data-color="1"] {
   fill: #ffffff;
@@ -1389,7 +1391,7 @@ ul.padd0 li::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* .letst_advermnt_contnt {
@@ -1417,4 +1419,8 @@ ul.padd0 li::before {
 .homepg-banner .banner-sec .banner_overlay .content-details h1{
   font-size:42px;
   color: #ffffff;
+}
+
+.intive_res_dev .res_dev_sec ul li {
+  display: flex;
 }
