@@ -92,6 +92,9 @@
     font-size: 34px;
 }
 
+.contact-banner {
+    margin-top: 40px;
+}
 @media (max-width:786px){
     .contract-innvo .heading-holder h2,
     .application-videos .application-content h2,

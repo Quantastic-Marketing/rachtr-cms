@@ -138,8 +138,8 @@
       width: 35px;
       height: 25px;
       position: absolute;
-      top: 18px;
-      right: 10px;
+      top: 5px;
+      right: 5px;
       cursor: pointer;
       display: block;
       background: transparent;
@@ -363,6 +363,10 @@
     .comprnsive_solution .case_studies .case_studies_downd img {
       min-height: 100%;
     }
+
+    .intive_res_dev .res_dev_sec .letst_advermnt_contnt {
+      padding: 10px;
+  }
   }
   
   @media (max-width: 992px) {
@@ -526,6 +530,7 @@
     .homepg-banner .banner-sec .banner_overlay .content-details h1{
       font-size:24px;
     }
+    
   }
   
   @media (max-width: 767px) {
@@ -614,7 +619,25 @@
     }
     .our_strengths .our_strengths_contnt {
       text-align: unset;
+    }
+    .intive_res_dev .res_dev_sec ul li, 
+    .blogs .blogs_sec ul li{
+     height: 351px;
+    }
+
+    .intive_res_dev .res_dev_sec .letst_advermnt_img{
+      width: inherit;
+      margin: 0;
+      flex: 1;
+    }
+    
   }
+
+  @media (max-width:499px){
+    .intive_res_dev .res_dev_sec ul li,
+    .blogs .blogs_sec ul li {
+      height: 217px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -676,7 +699,7 @@
       font-size: 16px;
       line-height: 20px;
     }
-    .intive_res_dev .res_dev_sec .letst_advermnt_contnt .btm_cont,
+
     .blogs .blogs_sec .blogs_contnt .btm_cont {
       padding-top: 45%;
     }
@@ -726,6 +749,6 @@
       text-decoration: underline;
       font-weight: 700;
       color: #000000;
-  }
+    }
   }
   

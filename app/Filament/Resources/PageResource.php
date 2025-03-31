@@ -212,7 +212,7 @@ class PageResource extends Resource
                                         ->options(Post::pluck('title', 'id'))
                                         ->searchable()
                                         ->multiple()
-                                        ->maxItems(3) 
+                                        ->maxItems(6) 
                                         ->preload()
                                         ->helperText('Select up to 3 blog posts.'),
                                         ]),
