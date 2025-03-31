@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 p-0">
-                            <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls=""  tabindex="-1"  style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;">
+                            <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   tabindex="-1"  style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;">
                                 <source src="{{ asset('videos/carrer_video.webm') }}" type="video/webm">
                                 <source src="{{ asset('videos/carrer_video.mp4') }}" type="video/mp4">
                             </video>
