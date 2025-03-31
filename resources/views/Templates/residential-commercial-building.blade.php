@@ -952,7 +952,7 @@
         </div>
       </section>
       <section class="why-trust-rachtr-section">
-        <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls=""  class="bg-video">
+        <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="bg-video">
           <<source src="{{ asset('videos/why-trust.webm') }}" type="video/webm">
           <source src="{{ asset('videos/why-trust.mp4') }}" type="video/mp4">
           Your browser does not support the video tag.

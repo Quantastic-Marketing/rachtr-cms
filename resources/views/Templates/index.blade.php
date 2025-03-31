@@ -7,7 +7,7 @@
            <div class="banr col-lg-12">
               <div class="item">
                   <div class="banner-sec">
-                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls=""  class="desktop">
+                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
                             <source id="#movie1" src="{{ asset('videos/file-1.webm') }}" type="video/webm">
                             <source id="#movie1" src="{{ asset('videos/file-1.mp4') }}" type="video/mp4">
                       </video>
@@ -33,7 +33,7 @@
                </div>
                <div class="item">
                   <div class="banner-sec">
-                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls=""  class="desktop">
+                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
                             <source id="#movie1" src="{{ asset('videos/file-2.webm') }}" type="video/webm">
                             <source id="#movie1" src="{{ asset('videos/file-2.mp4') }}" type="video/mp4">
                       </video>
@@ -58,7 +58,7 @@
                </div>
                <div class="item">
                   <div class="banner-sec">
-                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls=""  class="desktop">
+                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
                             <source id="#movie1" src="{{ asset('videos/file-3.webm') }}" type="video/webm">
                             <source id="#movie1" src="{{ asset('videos/file-3.mp4') }}" type="video/mp4">
                       </video>
@@ -84,7 +84,7 @@
                </div>
                <div class="item">
                   <div class="banner-sec"> 
-                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls=""  class="desktop">
+                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
                             <source id="#movie1" src="{{ asset('videos/file-4.webm') }}" type="video/webm">
                             <source id="#movie1" src="{{ asset('videos/file-4.mp4') }}" type="video/mp4">
                       </video>
@@ -333,7 +333,7 @@
            </div>
            <div class="col-lg-8">
                <div class="advce_manufrng_vdo">
-                    <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" controls=""   class="desktop">
+                    <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"    class="desktop">
                         <source id="movie1" src="videos/Advanced-Manufacturing.mp4" type="video/mp4">
                   </video>
                </div>
