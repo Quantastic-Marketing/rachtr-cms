@@ -1413,3 +1413,8 @@ ul.padd0 li::before {
 .product-we-offer-section h2{
   font-size:34px;
 }
+
+.homepg-banner .banner-sec .banner_overlay .content-details h1{
+  font-size:42px;
+  color: #ffffff;
+}
