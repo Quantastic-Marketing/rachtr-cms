@@ -657,7 +657,7 @@
                   </p>
                 </div>
                 <ul class="padd0">
-                  @foreach($blogs as $blog)
+                  @foreach($blogs->take(3) as $blog)
                   <li class="col-lg-4 mx-3">
                     <div class="blogs_img">
                       <img src="{{$blog->featurePhoto}}" />

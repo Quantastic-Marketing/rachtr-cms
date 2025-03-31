@@ -294,7 +294,7 @@
                       </div>
                       <div class="res_dev_sec py-5">
                          <ul class="padd0 flex-column flex-md-row d-flex align-items-stretch gap-3">
-                            @foreach($blogs as $blog)
+                            @foreach($blogs->skip(max(0, $blogs->count() - 3))->take(3) as $blog)
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
                                    <img src="{{asset($blog->featurePhoto)}}" alt="blog picture" loading="lazy"/>
@@ -663,7 +663,7 @@
                      <div class="blogs_sec py-5">
                          <h2 class="fw-bold">Blogs</h2>
                          <ul class="padd0">
-                            @foreach($blogs as $blog)                           
+                            @foreach($blogs->take(3) as $blog)                           
                             <li class="col-lg-4 mx-3">
                                 <div class="blogs_img">
                                    <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture" loading="lazy"/>
