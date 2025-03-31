@@ -297,7 +297,7 @@
                             @foreach($blogs as $blog)
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
-                                   <img src="{{asset($blog->featurePhoto)}}"/>
+                                   <img src="{{asset($blog->featurePhoto)}}" alt="blog picture" loading="lazy"/>
                                 </div>
                                 <div class="letst_advermnt_contnt">
                                    <div class="top_cont m-0 ms-2 mt-2">
@@ -478,7 +478,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/delhivery.webp"/>
+                             <img src="images/delhivery.webp" loading="lazy"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -514,7 +514,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/welspun%20epoxy.webp"/>
+                             <img src="images/welspun%20epoxy.webp" loading="lazy"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -551,7 +551,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/Perfect-White-Marble.webp"/>
+                             <img src="images/Perfect-White-Marble.webp" loading="lazy"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -588,7 +588,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/itc%20before%20after%20rachtr.webp"/>
+                             <img src="images/itc%20before%20after%20rachtr.webp" alt="Rachtr Image" loading="lazy"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -625,7 +625,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/Escort%20Kubota%20Blog%20Banner.webp"/>
+                             <img src="images/Escort%20Kubota%20Blog%20Banner.webp" loading="lazy"/>
                           </div>
                           <div class="downd_txt px-4 py-4">
                              <ul>
@@ -666,7 +666,7 @@
                             @foreach($blogs as $blog)                           
                             <li class="col-lg-4 mx-3">
                                 <div class="blogs_img">
-                                   <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture"/>
+                                   <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture" loading="lazy"/>
                                 </div>
                                 <div class="blogs_contnt">
                                    <div class="top_cont">
@@ -705,31 +705,31 @@
                  <div class="faqs_detls row g-0">
                     <div class="col-lg-4 faq_fade_effct">
                        <div class="img">
-                           <img src="images/faq-1.webp"/>
+                           <img src="images/faq-1.webp" loading="lazy" />
                         </div>
                         <div class="img">
-                           <img src="images/faq-2.webp"/>
+                           <img src="images/faq-2.webp" loading="lazy" />
                         </div>
                         <div class="img">
-                           <img src="images/faq-3.webp"/>
+                           <img src="images/faq-3.webp" loading="lazy" />
                         </div>
                         <div class="img">
-                           <img src="images/faq-4.webp"/>
+                           <img src="images/faq-4.webp" loading="lazy" />
                         </div>
                         <div class="img">
-                           <img src="images/faq-5.webp"/>
+                           <img src="images/faq-5.webp" loading="lazy" />
                         </div>
                         <div class="img">
-                           <img src="images/faq-6.webp"/>
+                           <img src="images/faq-6.webp" loading="lazy" />
                         </div>
                         <div class="img">
-                           <img src="images/faq-7.webp"/>
+                           <img src="images/faq-7.webp" loading="lazy" />
                         </div>
                         <div class="img">
-                           <img src="images/faq-8.webp"/>
+                           <img src="images/faq-8.webp" loading="lazy" />
                         </div>
                         <div class="img">
-                           <img src="images/faq-9.webp"/>
+                           <img src="images/faq-9.webp" loading="lazy" />
                         </div>
                     </div>
                     <div class="col-lg-7">

@@ -3,7 +3,7 @@
             <div class="row g-0">
                 <div class="col-lg-6 ml-0">
                   <div class="ftr_logo pt-5 pb-4">
-                     <img src=" {{ asset('images/btm-logo.webp') }}"/>  
+                     <img src=" {{ asset('images/btm-logo.webp') }}" alt="footer Logo" loading="lazy"/>  
                   </div>
                   <div class="form_sec mbl py-5">
                         <h3 class="fw-bold py-2">GET IN TOUCH</h3>
