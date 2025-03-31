@@ -42,7 +42,7 @@
                             @endif
                         </div>
                     @isset($product->name)
-                        <h2 class="py-2 product-title text-orange d-lg-none fs-3 text-center">RachTR SG 34</h2>
+                        <h2 class="py-2 product-title text-orange d-lg-none fs-3 text-center">{{$product->name}}</h2>
                     @endisset
                     @if(!empty($product->content['product_desc']))
                         {!! $product->content['product_desc'] !!}

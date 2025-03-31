@@ -1075,7 +1075,7 @@
                     <div class="case_studies_downd d-md-none mt-4">
                       <div class="downd_img">
                         <img
-                          src="images/casestudy-slide-img-1"
+                          src="images/casestudy-slide-img-1.webp"
                         />
                       </div>
                     </div>
@@ -1130,7 +1130,7 @@
                   </p>
                 </div>
                 <ul class="padd0">
-                  @foreach($blogs as $blog)
+                  @foreach($blogs->take(3) as $blog)
                   <li class="col-lg-4 mx-3">
                     <div class="blogs_img">
                       <img src="{{ asset($blog->featurePhoto) }}" />

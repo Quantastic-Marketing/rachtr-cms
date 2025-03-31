@@ -425,6 +425,7 @@
     }
     .intive_res_dev .res_dev_sec .letst_advermnt_contnt .btm_cont {
       padding-top: 40px;
+      margin:0;
     }
     .intive_res_dev .res_dev_sec .letst_advermnt_contnt .btm_cont h5 {
       font-size: 14px;
@@ -442,6 +443,9 @@
     .blogs .blogs_sec .blogs_contnt .btm_cont h5 {
       font-size: 12px;
       line-height: 14px;
+    }
+    .blogs .blogs_sec .blogs_contnt .btm_cont {
+      margin:0;
     }
     .blogs .blogs_sec .blogs_contnt .top_cont span {
       font-size: 14px;
@@ -529,6 +533,12 @@
     }
     .homepg-banner .banner-sec .banner_overlay .content-details h1{
       font-size:24px;
+    }
+    .intive_res_dev .res_dev_sec .letst_advermnt_contnt .btm_cont h2{
+      font-size: 18px;
+    }
+    .blogs .blogs_sec .blogs_contnt .btm_cont h2{
+      font-size: 18px;
     }
     
   }
@@ -637,6 +647,10 @@
     .intive_res_dev .res_dev_sec ul li,
     .blogs .blogs_sec ul li {
       height: 217px;
+    }
+
+    .accordion-wrapper .acc-head h6{
+      font-weight:bold;
     }
   }
   

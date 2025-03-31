@@ -202,7 +202,7 @@
                         </div>
                         <div class="res_dev_sec py-5">
                             <ul class="padd0 flex-column flex-md-row d-flex align-items-stretch gap-3">
-                                @foreach($blogs as $blog)
+                                @foreach($blogs->take(3) as $blog)
                                 <li class="col-lg-4 mx-3">
                                     <div class="letst_advermnt_img">
                                         <img src= "{{ asset($blog->featurePhoto) }}" alt="{{$blog->title}}" />

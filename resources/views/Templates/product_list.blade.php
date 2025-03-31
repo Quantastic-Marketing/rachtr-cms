@@ -91,7 +91,7 @@
                                                 <p class="product-description product-strip">
                                                     {{$productDescription}}
                                                 </p>
-                                                <a href="{{ route('product.page', ['slug' => $product->slug]) }}" class="btn btn-orange">View Details</a>
+                                                <a href="{{ route('product.page', ['slug' => $product->slug]) }}" class="btn btn-orange">READ MORE</a>
                                             </div>
                                         </div>
                                     </div>
