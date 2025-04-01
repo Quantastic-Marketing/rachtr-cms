@@ -39,16 +39,27 @@
             <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-            <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <!--<link rel="stylesheet" href="css/hover-min.css" type="text/css">-->
-            <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}" type="text/css">
-            <link rel="stylesheet" href="{{ asset('css/slick.css')}}" type="text/css">
-            <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}" />
-            <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
-            <link  href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
-            <link href="{{ asset('css/responsive.css') }}" type="text/css" rel="stylesheet">
+                        <!-- Preload Google Fonts (critical for typography) -->
+            <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"></noscript>
+
+            <!-- Preload Font Awesome (if used above the fold) -->
+            <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
+
+            <!-- Preload Critical CSS (style.css + responsive.css) -->
+            <link rel="preload" href="{{ asset('css/style.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <link rel="preload" href="{{ asset('css/responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript>
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+            </noscript>
+
+            <!-- Defer Non-Critical CSS (Bootstrap, plugins, etc.) -->
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" media="print" onload="this.media='all'">
+            <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}" media="print" onload="this.media='all'">
+            <link rel="stylesheet" href="{{ asset('css/slick.css') }}" media="print" onload="this.media='all'">
+            <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}" media="print" onload="this.media='all'">
             @php
                 $styles = [];
                 switch (true) {
