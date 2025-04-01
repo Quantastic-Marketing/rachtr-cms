@@ -43,7 +43,7 @@
 
 
 .product-section .product-features .product-feature-block .accordion-wrapper .acc-body{
-    margin-left: 50px;
+    padding-left:50px;
 }
 .product-section .product-features .product-feature-block .accordion-wrapper .acc-body ul,
 .product-section ul:not(.slick-dots):last-of-type{
