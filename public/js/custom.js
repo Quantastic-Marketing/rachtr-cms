@@ -39,6 +39,40 @@ if(document.getElementById('cvUpload') !== null){
 
 
 $(document).ready(function () {
+  if ($(window).width() < 1239) {
+    $('.head-nav li').each(function() {
+      var $this = $(this);
+      var $submenu = $this.children('.submenu');
+      var $link = $this.find('a');
+      
+      if ($submenu.length) {
+          var submenuOpened = false;
+
+          // When clicking on the menu item
+          $this.on('click', function(e) {
+              // If the submenu is already opened, allow navigation
+              if (submenuOpened) {
+                  return true; // Allow navigation to the link
+              }
+
+              // Prevent default action if submenu is not opened
+              e.preventDefault();
+
+              // Toggle the submenu visibility
+              $submenu.toggleClass('active');
+              submenuOpened = $submenu.hasClass('active'); // Track the submenu state
+          });
+
+          // When clicking the link
+          $link.on('click', function(e) {
+              // If submenu is not opened, prevent the link redirection
+              if (!submenuOpened) {
+                  e.preventDefault();
+              }
+          });
+      }
+    });
+  }
   $('.product-main-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,

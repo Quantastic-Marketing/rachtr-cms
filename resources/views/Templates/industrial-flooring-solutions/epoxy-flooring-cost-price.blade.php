@@ -718,34 +718,34 @@
                             
                                 <form class="epoxy-form" class="px-5 py-3" action="/submit-epoxy-form" method="POST">
                                     @csrf
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
+                                    <div class="row g-0 gx-md-3">
+                                        <div class="col-11 col-md-6 mb-3">
                                             <label class="form-label">Name <span>*</span></label>
                                             <input type="text" class="form-control" name="Name" required>
                                         </div>
-                                        <div class="col-md-6 mb-3 ">
+                                        <div class="col-11 col-md-6 mb-3 ">
                                             <label class="form-label">Email <span>*</span></label>
                                             <input type="email" class="form-control" name="Email" required>
                                         </div>
                                     </div>
                             
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
+                                    <div class="row g-0 gx-md-3">
+                                        <div class="col-11 col-md-6 mb-3">
                                             <label class="form-label">Phone <span>*</span></label>
                                             <input type="tel" placeholder="Phone" pattern="[6-9]\d{9}"  title="Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9" name="Phone"  class="form-control" required>
                                         </div>
-                                        <div class="col-md-6 mb-3">
+                                        <div class="col-11 col-md-6 mb-3">
                                             <label class="form-label">Company Name <span>*</span></label>
                                             <input type="text" class="form-control" name="Company Name" required>
                                         </div>
                                     </div>
                             
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
+                                    <div class="row g-0 gx-md-3">
+                                        <div class="col-11 col-md-6 mb-3">
                                             <label class="form-label">City Name <span>*</span></label>
                                             <input type="text" class="form-control" name="City" required>
                                         </div>
-                                        <div class="col-md-6 mb-3">
+                                        <div class="col-11 col-md-6 mb-3">
                                             <label class="form-label">Preferences <span>*</span></label>
                                             <select class="form-select" name="Preferences" required>
                                             <option value="" selected disabled>Preferences</option>
@@ -759,8 +759,8 @@
                                         </div>
                                     </div>
                             
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
+                                    <div class="row g-0 gx-md-3">
+                                        <div class="col-11 col-md-6 mb-3">
                                             <label class="form-label">Select Unit (SQ Feet / SQ Meter) <span>*</span></label>
                                             <select class="form-select" name="Select Unit" required>
                                             <option value="" selected disabled>Select Unit (SQ Feet / SQ Meter)</option>
@@ -768,7 +768,7 @@
                                             <option value="sq meter">SQ Meter</option>
                                             </select>
                                         </div>
-                                        <div class="col-md-6 mb-3">
+                                        <div class="col-11 col-md-6 mb-3">
                                             <label class="form-label">Select Area (SQ Feet / SQ Meter) <span>*</span></label>
                                             <select class="form-select" name="Select Area" required>
                                             <option value="" selected disabled>Select Area (SQ Feet / SQ Meter)</option>
@@ -782,7 +782,7 @@
                                         </div>
                                     </div>
                             
-                                    <div class="mb-3">
+                                    <div class="mb-3 col-11 col-md-12">
                                         <label class="form-label">Comment Or Message <span>*</span></label>
                                         <textarea class="form-control" rows="4" placeholder="Add Answer Here" name="Message" required></textarea>
                                     </div>

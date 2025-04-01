@@ -29,7 +29,7 @@
                             <div class="heading-holder">
                                 <h1 class="fw-bold">{!! html_entity_decode($pageContent['page_heading'] ?? '') !!}</h1>
                                 
-                                <p class="mt-3"><span class="text-orange">HOME ></span><a href="{{ config('app.url') . '/' . $parentName }}">{{ ucwords(str_replace('-', ' ', $parentName)) }}</a></p>
+                                <p class="mt-3 px-3 fw-bold"><span class="text-orange">HOME ></span><a href="{{ config('app.url') . '/' . $parentName }}" class="fw-bold">{{ ucwords(str_replace('-', ' ', $parentName)) }}</a></p>
                                 
                                 <!-- <p><span class="text-orange"> <a href="{{ config('app.url') . '/$parentName'  }}"> </span>{{ $parentName ?? '' }} </a></p> -->
                             </div>
