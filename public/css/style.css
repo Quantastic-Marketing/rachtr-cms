@@ -230,7 +230,7 @@ nav:after {
   background-color: rgb(0 0 0 / 65%);
 }
 .bnr_sldr.service-banner {
-  height: 520px;
+  /* height: 520px; */
   overflow: hidden;
 }
 .bnr_sldr.service-banner .item .banner-sec {
@@ -255,6 +255,8 @@ nav:after {
 .bnr_sldr .item .banner-sec .banner_overlay .content .content-details p {
   color: #ffffff;
   padding: 20px 0;
+  font-size: 20px;
+  
 }
 .bnr_sldr .item .banner-sec .banner_overlay .content .content-details p span {
   font-size: 38px;
@@ -1409,7 +1411,7 @@ ul.padd0 li::before {
 }
 
 .service-banner .banner-sec .banner_overlay .content-details h1{
-  font-size:34px;
+  font-size:38px;
 }
 
 .product-we-offer-section h2{
@@ -1423,4 +1425,22 @@ ul.padd0 li::before {
 
 .intive_res_dev .res_dev_sec ul li {
   display: flex;
+}
+
+.about-solution .image-container{
+  box-shadow: -9px 9px 0 0 #FEEFE8;
+    width: 330px;
+    height: 100%;
+}
+.about-solution .image-container img{
+  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+.commercial-comprnsive svg{
+  fill:#ee6e25;
+  width: 60px;
+  height: 60px;
 }
