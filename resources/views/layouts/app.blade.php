@@ -56,6 +56,7 @@
             <link rel="preload" href="{{ asset('css/bootstrap.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
             <link rel="preload" href="{{ asset('css/style.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
             <link rel="preload" href="{{ asset('css/responsive.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <link rel="preload" href="http://q.rachtr.com/images/about-RachTr.webp" as="image">
             <noscript>
             <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
             <link rel="stylesheet" href="{{ asset('css/style.css') }}">
