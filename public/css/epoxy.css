@@ -658,9 +658,10 @@ textarea.form-control {
         height: 63px;
     }
     .experience-rachtr .experience-content .form-container form button {
-        width: 100%;
+        width: 90%;
         height: 63px;
         font-size: 25px;
+        margin-left:18px;
     }
     .experience-rachtr .experience-content .form-container form select,
     .experience-rachtr .experience-content .form-container form input,
@@ -670,6 +671,13 @@ textarea.form-control {
     }
 
     
+}
+
+@media(max-width:499px){
+    .experience-rachtr .experience-content .form-container form button {
+        width: 90%;
+        margin-left:18px;
+    }
 }
 
 @media (max-width:480px) {
@@ -779,9 +787,7 @@ textarea.form-control {
         font-size: 15px;
         font-weight: 700;
     }
-    .experience-rachtr .experience-content .form-container form button{
-        width: 100%;
-    }
+    
 
     .experience-fade-efct .slick-next,.experience-fade-efct .slick-prev {
        display: none !important; ;
