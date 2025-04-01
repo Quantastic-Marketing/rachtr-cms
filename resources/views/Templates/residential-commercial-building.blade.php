@@ -21,7 +21,7 @@
                           <br />
                           Residential & Commercial Buildings
                         </h1>
-                        <p class="fs-5">
+                        <p class="">
                           We offer a comprehensive range of products
                           specifically formulated for various applications in
                           residential and commercial buildings
@@ -40,7 +40,7 @@
           <div class="row align-items-center d-flex">
             <div class="col-md-10">
               <div class="row d-flex">
-                <div class="col-lg-6 order-2">
+                <div class="col-lg-6 order-2 d-none d-lg-block">
                   <div class="image-container">
                     <!-- <div class="background-box"></div> -->
                     <img
@@ -66,6 +66,21 @@
                     <span style="color: #ef6e25">RachTR</span> Residential &amp;
                     Commercial Buildings Solutions
                   </h2>
+                  
+                  <div class="image-container d-flex d-lg-none my-3">
+                    <!-- <div class="background-box"></div> -->
+                    <img
+                      src="images/residential-commercial-building-solution.webp"
+                      alt="Residential commercial building solution"
+                      class="d-none d-lg-block"
+                    />
+                    <img
+                      src="images/residential-commercial-building-solution.webp"
+                      alt="Residential commercial building solution"
+                      class="s-block d-lg-none"
+                    />
+                    <!-- <div class="overlay-box"></div> -->
+                  </div> 
                   <p>
                     Flooring is the major highlight for any residential or
                     commercial building project. However, selection of right
@@ -135,7 +150,7 @@
                     </li>
                     <li>
                       <img src="images/tickmark-icon.webp" alt="Tick Mark" /> UV
-                      exposure and
+                      exposure
                     </li>
                     <li>
                       <img src="images/tickmark-icon.webp" alt="Tick Mark" />
@@ -185,7 +200,7 @@
                       Tall structures
                     </li>
                     <li>
-                      <img src="images/tickmark-icon.webp" alt="Tick Mark" /> UV
+                      <img src="images/tickmark-icon.webp" alt="Tick Mark" />
                       Providing superior durability
                     </li>
                     <li>
@@ -236,7 +251,7 @@
                       Residential spaces
                     </li>
                     <li>
-                      <img src="images/tickmark-icon.webp" alt="Tick Mark" /> UV
+                      <img src="images/tickmark-icon.webp" alt="Tick Mark" />
                       Offering protection against wear
                     </li>
                     <li>
@@ -287,7 +302,7 @@
                       Schools
                     </li>
                     <li>
-                      <img src="images/tickmark-icon.webp" alt="Tick Mark" /> UV
+                      <img src="images/tickmark-icon.webp" alt="Tick Mark" />
                       Hospitals
                     </li>
                     <li>
@@ -337,7 +352,7 @@
                       Leaks
                     </li>
                     <li>
-                      <img src="images/tickmark-icon.webp" alt="Tick Mark" /> UV
+                      <img src="images/tickmark-icon.webp" alt="Tick Mark" />
                       Cracks
                     </li>
                     <li>
@@ -356,693 +371,695 @@
         <span class="banner-overlay"></span>
       </section>
 
-      <section class="product-we-offer-section">
-        <div class="container">
-          <h2 class="text-center text-black mb-lg-5 mb-4 fw-bold">
-            Products
-            <span style="color: #ef6e25">We Offer </span>
-          </h2>
-          <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
-            <div class="header-part mb-lg-5 mb-4">
-              <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
-                INSTALLATION SYSTEMS
-              </h3>
-              <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">
-                ​TILE ADHESIVE
-              </h4>
-              <p class="text-center fs-6">
-                Our high-quality tile adhesive ensures strong and durable bonds,
-                making installations secure and long-lasting.
-              </p>
-            </div>
-
-            <div
-              class="offer-product-lists six-col-block bg-white px-3 py-4 mb-3 mb-lg-5"
-            >
-              <div class="row">
-                <div class="col-6 col-lg-2 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-LTX-133.webp"
-                        alt="RachTR LTX 133"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-ltx-133'}}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR LTX 133</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-2 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-AdFlex-206.webp"
-                        alt="RachTR AdFlex 206"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-adflex-206'}}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR AdFlex 206</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-2 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-TSA-PR.webp"
-                        alt="RachTR TSA PR"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-tsa-pr' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR TSA PR</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-2 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-TSA-ST.webp"
-                        alt="RachTR TSA ST"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-tsa-st' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR TSA ST</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-
-                <div class="col-6 col-lg-2 mb-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-TSA-ECO-plus.webp"
-                        alt="RachTR TSA ECO +"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-tsa-eco-1' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR TSA ECO +</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-2 mb-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-TSA-ECO.webp"
-                        alt="RachTR TSA ECO"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-tsa-eco' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR TSA ECO</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="header-part mb-lg-5 mb-4">
-              <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">GROUTS</h4>
-              <p class="text-center fs-6 w-70">
-                With our epoxy grout, you get a seamless finish that resists
-                stains and is easy to clean, enhancing the appearance of your
-                tiles.
-              </p>
-            </div>
-
-            <div class="offer-product-lists bg-white px-3 py-4 mb-3 mb-lg-5">
-              <div class="row">
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="offer-product">
-                    <figure>
-                      <img src="images/RACHTR-EG-200.webp" alt="RACHTR EG 200" />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/eg-200' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RACHTR EG 200</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-PULU-G-30.webp"
-                        alt="RachTR PULU-G 30"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-pulu-g-30' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR PULU-G 30</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-MH-103-THIXO.webp"
-                        alt="RachTR MH 103 THIXO"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-mh-103-thixo' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR MH 103 THIXO</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="offer-product">
-                    <figure>
-                      <img src="images/RachTR-PULU-G.webp" alt="RachTR PULU-G" />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-pulu-g' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR PULU-G</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-R-105-THIXO.webp"
-                        alt="RachTR R 105 THIXO"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-r-105-thixo' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR R 105 THIXO</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-PULU-75.webp"
-                        alt="RachTR PULU 75"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-pulu-75' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR PULU 75</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-0 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/ractr-eg-150.webp"
-                        class="big-height m-block-height"
-                        alt="RachTR EG 150"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-eg-150' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR EG 150</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-0 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-EG-150.webp"
-                        alt="RachTR Epoxy 201 G"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">  
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-epoxy-201-g' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR Epoxy 201 G</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-3">
-            <div class="header-part mb-lg-5 mb-4">
-              <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
-                POLISHING SYSTEMS
-              </h3>
-
-              <p class="text-center fs-6 w-70">
-                Achieve a brilliant shine and smooth finish for your marble
-                surfaces with our advanced marble tile polish, bringing out the
-                natural beauty of the stone.
-              </p>
-            </div>
-
-            <div class="offer-product-lists bg-white px-3 py-4 mb-3 mb-lg-5">
-              <div class="row">
-                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-R-105-LIQUID.webp"
-                        class="big-height"
-                        alt="RachTR R 105 LIQUID"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-r-105-liquid' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR R 105 LIQUID</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-Stone-Power.webp"
-                        class="big-height"
-                        alt="RachTR Stone Power"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-stone-power' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR Stone Power</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-Top-Fill.webp"
-                        class="big-height"
-                        alt="RachTR Top Fill"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-top-fill' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR Top Fill</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-Epoxy-201-L.webp"
-                        class="big-height"
-                        alt="RachTR Epoxy 201 L"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-epoxy-201-l' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR Epoxy 201 L</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-3 mb-lg-5">
-            <div class="header-part mb-lg-5 mb-4">
-              <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
-                PROTECTION SYSTEMS​
-              </h3>
-
-              <p class="text-center fs-6 w-70">
-                Protect your marble surfaces from stains, moisture, and wear
-                with our range of marble sealers, extending the life of your
-                installations and preserving their elegance.
-              </p>
-            </div>
-
-            <div class="offer-product-lists bg-white px-3 py-4 mb-3 mb-lg-5">
-              <div class="row justify-content-start">
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="offer-product">
-                    <figure>
-                      <img src="images/RachTR-BLEEDX.webp" alt="RachTR BLEEDX" />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-bleedx' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR BLEEDX</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-TOP-SEAL.webp"
-                        alt="RachTR TOP SEAL"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-top-seal' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR TOP SEAL</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-COLOR-ENHANCER.webp"
-                        alt="RachTR COLOR ENHANCER"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-color-enhancer' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR COLOR ENHANCER</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-BACK-SEAL.webp"
-                        alt="RachTR BACK SEAL"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-back-seal' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR BACK SEAL</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-DEFENDOR.webp"
-                        alt="RachTR DEFENDOR"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-defendor' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR DEFENDOR</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-WL-BARRIER.webp"
-                        alt="RachTR WL BARRIER"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-wl-barrier' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR WL BARRIER</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-SS-SEALER.webp"
-                        alt="RachTR SS SEALER"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-ss-sealer' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR SS SEALER</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-md-3 d-md-block d-none"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-3">
-            <div class="header-part mb-lg-5 mb-4">
-              <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
-                CLEANING AND MAINTENANCE
-              </h3>
-
-              <p class="text-center fs-6 w-70">
-                Keep your marble surfaces pristine with our effective marble
-                cleaners, designed to remove dirt, grime, and stains without
-                damaging the stone.
-              </p>
-            </div>
-
-            <div class="offer-product-lists bg-white px-3 py-4 mb-3 mb-lg-5">
-              <div class="row">
-                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-Stain-R.webp"
-                        class="fixed-height"
-                        alt="RachTR Stain R"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-stain-r' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR Stain R</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-XC-4.webp"
-                        class="fixed-height"
-                        alt="RachTR XC 4"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-xc-4' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR XC 4</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-XC-1.webp"
-                        class="fixed-height"
-                        alt="RachTR XC 1"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-xc-1' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR XC 1</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <div class="offer-product">
-                    <figure>
-                      <img
-                        src="images/RachTR-XC-2.webp"
-                        class="fixed-height"
-                        alt="RachTR XC 2"
-                      />
-                    </figure>
-                    <h6 class="text-center heading-underline">
-                      <a
-                        href="{{ config('app.url') . '/product-page/rachtr-xc-2' }}"
-                        class="text-black fs-6 fw-bold"
-                        >RachTR XC 2</a
-                      >
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="why-trust-rachtr-section">
-        <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="bg-video">
-          <<source src="{{ asset('videos/why-trust.webm') }}" type="video/webm">
-          <source src="{{ asset('videos/why-trust.mp4') }}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="why-trust-inner-block p-lg-5 p-4">
-            <h2
-              class="text-left display-6 display-md-3 fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
-            >
-              Why Trust <span class="color-orange">RachTR</span> for <br />
-              Residential and Commercial Buildings?
+      <div class="section-ordering d-flex flex-column g-0">
+        <section class="product-we-offer-section order-2 order-md-1 m-0">
+          <div class="container-fluid px-2 px-md-5 ">
+            <h2 class="text-center text-black mb-lg-5 mb-4 fw-bold">
+              Products
+              <span style="color: #ef6e25">We Offer </span>
             </h2>
-            <div class="row">
-              <div class="col-xl-3 col-6">
-                <div
-                  class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
-                >
-                  <img
-                    src="images/quality-assurance.webp"
-                    alt="QUALITY ASSURANCE"
-                  />
-                  <h6 class="text-center text-md-start">
-                    QUALITY <br />
-                    ASSURANCE
-                  </h6>
-                </div>
-                <p class="text-black text-center text-md-start fs-6">
-                  We test our products for quality, performance, durability, and
-                  safety.
+            <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
+              <div class="header-part mb-lg-5 mb-4">
+                <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                  INSTALLATION SYSTEMS
+                </h3>
+                <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">
+                  ​TILE ADHESIVE
+                </h4>
+                <p class="text-center fs-6">
+                  Our high-quality tile adhesive ensures strong and durable bonds,
+                  making installations secure and long-lasting.
                 </p>
               </div>
-              <div class="col-xl-3 col-6">
-                <div
-                  class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
-                >
-                  <img
-                    src="images/customized-solution.webp"
-                    alt="CUSTOMIZED SOLUTIONS"
-                  />
-                  <h6 class="text-center text-md-start">
-                    CUSTOMIZED <br />
-                    SOLUTIONS
-                  </h6>
+
+              <div
+                class="offer-product-lists six-col-block bg-white px-3 py-4 mb-3 mb-lg-5"
+              >
+                <div class="row">
+                  <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-LTX-133.webp"
+                          alt="RachTR LTX 133"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-ltx-133'}}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR LTX 133</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-AdFlex-206.webp"
+                          alt="RachTR AdFlex 206"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-adflex-206'}}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR AdFlex 206</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-TSA-PR.webp"
+                          alt="RachTR TSA PR"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-tsa-pr' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR TSA PR</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-TSA-ST.webp"
+                          alt="RachTR TSA ST"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-tsa-st' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR TSA ST</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-lg-2 mb-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-TSA-ECO-plus.webp"
+                          alt="RachTR TSA ECO +"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-tsa-eco-1' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR TSA ECO +</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-2 mb-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-TSA-ECO.webp"
+                          alt="RachTR TSA ECO"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-tsa-eco' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR TSA ECO</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
                 </div>
-                <p class="text-black text-center text-md-start fs-6">
-                  We customize solutions for your project to ensure satisfaction
+              </div>
+
+              <div class="header-part mb-lg-5 mb-4">
+                <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">GROUTS</h4>
+                <p class="text-center fs-6 w-70">
+                  With our epoxy grout, you get a seamless finish that resists
+                  stains and is easy to clean, enhancing the appearance of your
+                  tiles.
                 </p>
               </div>
-              <div class="col-xl-3 col-6">
-                <div
-                  class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
-                >
-                  <img src="images/expert-support.webp" alt="EXPERT SUPPORT" />
-                  <h6>
-                    EXPERT <br />
-                    SUPPORT
-                  </h6>
+
+              <div class="offer-product-lists bg-white px-3 py-4 mb-3 mb-lg-5">
+                <div class="row">
+                  <div class="col-6 col-lg-3 mb-4">
+                    <div class="offer-product">
+                      <figure>
+                        <img src="images/RACHTR-EG-200.webp" alt="RACHTR EG 200" />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/eg-200' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RACHTR EG 200</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-PULU-G-30.webp"
+                          alt="RachTR PULU-G 30"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-pulu-g-30' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR PULU-G 30</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-MH-103-THIXO.webp"
+                          alt="RachTR MH 103 THIXO"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-mh-103-thixo' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR MH 103 THIXO</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4">
+                    <div class="offer-product">
+                      <figure>
+                        <img src="images/RachTR-PULU-G.webp" alt="RachTR PULU-G" />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-pulu-g' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR PULU-G</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-R-105-THIXO.webp"
+                          alt="RachTR R 105 THIXO"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-r-105-thixo' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR R 105 THIXO</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-PULU-75.webp"
+                          alt="RachTR PULU 75"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-pulu-75' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR PULU 75</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-0 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/ractr-eg-150.webp"
+                          class="big-height m-block-height"
+                          alt="RachTR EG 150"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-eg-150' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR EG 150</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-0 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-EG-150.webp"
+                          alt="RachTR Epoxy 201 G"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">  
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-epoxy-201-g' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR Epoxy 201 G</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
                 </div>
-                <p class="text-black text-center text-md-start fs-6">
-                  Our team of experts provides technical support, application
-                  guidance, and product recommendations to help you achieve
-                  professional results.
+              </div>
+            </div>
+
+            <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-3">
+              <div class="header-part mb-lg-5 mb-4">
+                <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                  POLISHING SYSTEMS
+                </h3>
+
+                <p class="text-center fs-6 w-70">
+                  Achieve a brilliant shine and smooth finish for your marble
+                  surfaces with our advanced marble tile polish, bringing out the
+                  natural beauty of the stone.
                 </p>
               </div>
-              <div class="col-xl-3 col-6">
-                <div
-                  class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
-                >
-                  <img
-                    src="images/proven-track-record.webp"
-                    alt="PROVEN TRACK RECORD"
-                  />
-                  <h6 class="text-center text-md-start">
-                    PROVEN TRACK <br />
-                    RECORD
-                  </h6>
+
+              <div class="offer-product-lists bg-white px-3 py-4 mb-3 mb-lg-5">
+                <div class="row">
+                  <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-R-105-LIQUID.webp"
+                          class="big-height"
+                          alt="RachTR R 105 LIQUID"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-r-105-liquid' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR R 105 LIQUID</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-Stone-Power.webp"
+                          class="big-height"
+                          alt="RachTR Stone Power"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-stone-power' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR Stone Power</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-Top-Fill.webp"
+                          class="big-height"
+                          alt="RachTR Top Fill"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-top-fill' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR Top Fill</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-Epoxy-201-L.webp"
+                          class="big-height"
+                          alt="RachTR Epoxy 201 L"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-epoxy-201-l' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR Epoxy 201 L</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
                 </div>
-                <p class="text-black text-center text-md-start fs-6">
-                  Fill this form if your supervisor team needs a session on the
-                  selection of the right product & application process.
+              </div>
+            </div>
+
+            <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-3 mb-lg-5">
+              <div class="header-part mb-lg-5 mb-4">
+                <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                  PROTECTION SYSTEMS​
+                </h3>
+
+                <p class="text-center fs-6 w-70">
+                  Protect your marble surfaces from stains, moisture, and wear
+                  with our range of marble sealers, extending the life of your
+                  installations and preserving their elegance.
                 </p>
+              </div>
+
+              <div class="offer-product-lists bg-white px-3 py-4 mb-3 mb-lg-5">
+                <div class="row justify-content-start">
+                  <div class="col-6 col-lg-3 mb-4">
+                    <div class="offer-product">
+                      <figure>
+                        <img src="images/RachTR-BLEEDX.webp" alt="RachTR BLEEDX" />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-bleedx' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR BLEEDX</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-TOP-SEAL.webp"
+                          alt="RachTR TOP SEAL"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-top-seal' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR TOP SEAL</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-COLOR-ENHANCER.webp"
+                          alt="RachTR COLOR ENHANCER"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-color-enhancer' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR COLOR ENHANCER</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-BACK-SEAL.webp"
+                          alt="RachTR BACK SEAL"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-back-seal' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR BACK SEAL</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-DEFENDOR.webp"
+                          alt="RachTR DEFENDOR"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-defendor' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR DEFENDOR</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-WL-BARRIER.webp"
+                          alt="RachTR WL BARRIER"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-wl-barrier' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR WL BARRIER</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-SS-SEALER.webp"
+                          alt="RachTR SS SEALER"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-ss-sealer' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR SS SEALER</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-md-3 d-md-block d-none"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-3">
+              <div class="header-part mb-lg-5 mb-4">
+                <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                  CLEANING AND MAINTENANCE
+                </h3>
+
+                <p class="text-center fs-6 w-70">
+                  Keep your marble surfaces pristine with our effective marble
+                  cleaners, designed to remove dirt, grime, and stains without
+                  damaging the stone.
+                </p>
+              </div>
+
+              <div class="offer-product-lists bg-white px-3 py-4 mb-3 mb-lg-5">
+                <div class="row">
+                  <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-Stain-R.webp"
+                          class="fixed-height"
+                          alt="RachTR Stain R"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-stain-r' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR Stain R</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-XC-4.webp"
+                          class="fixed-height"
+                          alt="RachTR XC 4"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-xc-4' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR XC 4</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-XC-1.webp"
+                          class="fixed-height"
+                          alt="RachTR XC 1"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-xc-1' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR XC 1</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-3">
+                    <div class="offer-product">
+                      <figure>
+                        <img
+                          src="images/RachTR-XC-2.webp"
+                          class="fixed-height"
+                          alt="RachTR XC 2"
+                        />
+                      </figure>
+                      <h6 class="text-center heading-underline">
+                        <a
+                          href="{{ config('app.url') . '/product-page/rachtr-xc-2' }}"
+                          class="text-black fs-6 fw-bold"
+                          >RachTR XC 2</a
+                        >
+                      </h6>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <section class="why-trust-rachtr-section order-1 order-md-2 m-0">
+          <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="bg-video">
+            <<source src="{{ asset('videos/why-trust.webm') }}" type="video/webm">
+            <source src="{{ asset('videos/why-trust.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="why-trust-inner-block p-lg-5 p-4">
+              <h2
+                class="text-left display-6 display-md-3 fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
+              >
+                Why Trust <span class="color-orange">RachTR</span> for <br />
+                Residential and Commercial Buildings?
+              </h2>
+              <div class="row">
+                <div class="col-xl-3 col-6">
+                  <div
+                    class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
+                  >
+                    <img
+                      src="images/quality-assurance.webp"
+                      alt="QUALITY ASSURANCE"
+                    />
+                    <h6 class="text-center text-md-start">
+                      QUALITY <br />
+                      ASSURANCE
+                    </h6>
+                  </div>
+                  <p class="text-black text-center text-md-start fs-6">
+                    We test our products for quality, performance, durability, and
+                    safety.
+                  </p>
+                </div>
+                <div class="col-xl-3 col-6">
+                  <div
+                    class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
+                  >
+                    <img
+                      src="images/customized-solution.webp"
+                      alt="CUSTOMIZED SOLUTIONS"
+                    />
+                    <h6 class="text-center text-md-start">
+                      CUSTOMIZED <br />
+                      SOLUTIONS
+                    </h6>
+                  </div>
+                  <p class="text-black text-center text-md-start fs-6">
+                    We customize solutions for your project to ensure satisfaction
+                  </p>
+                </div>
+                <div class="col-xl-3 col-6">
+                  <div
+                    class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
+                  >
+                    <img src="images/expert-support.webp" alt="EXPERT SUPPORT" />
+                    <h6>
+                      EXPERT <br />
+                      SUPPORT
+                    </h6>
+                  </div>
+                  <p class="text-black text-center text-md-start fs-6">
+                    Our team of experts provides technical support, application
+                    guidance, and product recommendations to help you achieve
+                    professional results.
+                  </p>
+                </div>
+                <div class="col-xl-3 col-6">
+                  <div
+                    class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
+                  >
+                    <img
+                      src="images/proven-track-record.webp"
+                      alt="PROVEN TRACK RECORD"
+                    />
+                    <h6 class="text-center text-md-start">
+                      PROVEN TRACK <br />
+                      RECORD
+                    </h6>
+                  </div>
+                  <p class="text-black text-center text-md-start fs-6">
+                    Fill this form if your supervisor team needs a session on the
+                    selection of the right product & application process.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <section
-        class="comprnsive_solution case-study-block-section py-lg-5 py-3"
+        class="commercial-comprnsive comprnsive_solution case-study-block-section py-lg-5 py-3"
       >
         <div class="container">
           <div class="row g-0">
@@ -1051,6 +1068,13 @@
                 Case <span class="color-orange">Studies</span>
               </h2>
             </div>
+            <div class="case_studies_downd d-md-none mt-4">
+                      <div class="downd_img">
+                        <img
+                          src="images/casestudy-slide-img-1.webp"
+                        />
+                      </div>
+                    </div>
             <div class="case-studies-item">
               <div class="case_studies row g-0">
                 <div class="col-md-4 col-12 order-2 order-md-1">
@@ -1072,13 +1096,7 @@
                       target="_blank"
                       >View Case Study</a
                     >
-                    <div class="case_studies_downd d-md-none mt-4">
-                      <div class="downd_img">
-                        <img
-                          src="images/casestudy-slide-img-1.webp"
-                        />
-                      </div>
-                    </div>
+                    
                   </div>
                 </div>
                 <div
@@ -1101,8 +1119,11 @@
                       </div>
                       <div class="study-link">
                         <a href="{{ config('app.url') . '/post/solutions' }}"
-                          ><img src="images/case-study-1.webp" alt="Arrow"
-                        /></a>
+                          ><svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
+                          <g>
+                              <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                          </g>
+                      </svg></a>
                       </div>
                     </div>
                   </div>
