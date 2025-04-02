@@ -450,6 +450,12 @@ $(document).ready(function () {
     ]
   });
 
+
+    $('#showLeft').click(function(){
+      $(this).toggleClass('open');
+      $(".nav").slideToggle();
+  });
+
    
 
 });

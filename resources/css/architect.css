@@ -1,6 +1,9 @@
+.architect-banner {
+    margin-top:96px;
+}
 .architect-banner .banner-section .heading-holder {
     position: absolute;
-    top: 50px;
+    top: 0;
     height: 100%;
     width: 70%;
     display: flex;
@@ -23,6 +26,9 @@
 
 .innovation-solutions .image-container img {
     box-shadow: 15px 15px 0 rgba(239, 117, 3, 0.958);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .our_strengths .any_projects ul li div.projects_blogs video {
@@ -109,7 +115,7 @@
     margin-bottom: 30px;
 }
 
-.image-container img {
+.arch-solution .image-container img {
     border-radius: 15px;
     width: 100%;
     height: auto;
@@ -327,7 +333,7 @@
 }
 
 .architectural-marvels .marvels-slider .slick-dots li button:before {
-    font-size: 26px;
+    font-size: 16px;
 }
 
 .architect-banner .banner-section .image-wrapper::before {
@@ -396,7 +402,7 @@
         right: 2px;
     }
 }
-@media (max-width:996px) {
+@media (max-width:998px) {
     .project-slider {
         max-width: unset;
         height: 400px;
@@ -408,6 +414,9 @@
 
     .project-slide {
         height: 400px;
+    }
+    .architect-banner {
+        margin-top:56px;
     }
 }
 
@@ -467,6 +476,12 @@
     .architectural-marvels .marvels-slider .slick-prev,
     .architectural-marvels .marvels-slider .slick-next {
         
+    }
+    .innovation-solutions .image-container img {
+        object-position: top;
+    }
+    .architect-banner {
+        margin-top:36px;
     }
 
 }

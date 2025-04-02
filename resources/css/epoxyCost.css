@@ -139,7 +139,6 @@
 }
 
 .epoxy-floor-cost {
-    background: url("../images/y-floor-bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -382,6 +381,21 @@
     font-size: 41px;
     color: #ffffff;
 }
+
+.faq-block ul {
+    text-align: left !important;
+    padding:revert; 
+   
+}
+.faq-block ul li{
+    list-style-type: disc !important;
+}
+.faq-block img{
+    justify-content: center;
+    display: flex;
+    object-fit: cover;
+}
+
 
 @media (min-width:1700px){
     .bnr_sldr .item .banner-sec .banner_overlay .content {

@@ -896,7 +896,7 @@ nav:after {
   margin: 0 2px;
 }
 .case-studies-item .slick-dots li button:before {
-  font-size: 30px;
+  /* font-size: 30px; */
   color: #ef6e25;
   opacity: 1;
 }
@@ -1443,4 +1443,10 @@ ul.padd0 li::before {
   fill:#ee6e25;
   width: 60px;
   height: 60px;
+}
+.banr .item:not(:first-child) {
+    display: none;
+}
+.bnr_sldr .slick-initialized .slick-slide{
+    display: block !important;
 }

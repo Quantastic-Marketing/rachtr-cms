@@ -24,7 +24,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-10">
                         <div class="row d-flex">
-                            <div class="col-lg-6 order-2 order-lg-1">
+                            <div class="col-lg-6 order-2 order-lg-1 py-3">
                                 <div class="image-container">
                                     <!-- <div class="background-box"></div> -->
                                     <img src="{{ asset('images/innovation.webp')}}" alt="Modern Architect Center with sleek glass buildings and innovative design">
@@ -707,7 +707,7 @@
                     <div class="col-lg-6 collab-left d-flex flex-column justify-content-center">
                         <div class="row">
                             <div class="col-md-9 col-xxl-6 me-xxl-4">
-                                <h2 class="fw-bold">Collaboration <span class="highlight">Opportunities</span></h2>
+                                <h2 class="fw-bold">Collaboration <span class="color-orange">Opportunities</span></h2>
                                  <p>Partner with RachTR for your next project and benefit from our collaborative approach.</p>
                             </div>
                         </div>  

@@ -7,7 +7,6 @@
 
 
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/product_banner.webp');
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -98,7 +97,6 @@
 .footer {
     background-color: #f8f9fa;
     padding: 50px 0 20px;
-    margin-top: 50px;
 }
 
 .footer-logo {

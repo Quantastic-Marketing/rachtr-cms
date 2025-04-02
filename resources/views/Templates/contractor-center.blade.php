@@ -25,7 +25,7 @@
                     <div class="row align-items-center">
                             <div class="col-md-10">
                                 <div class="row d-flex flex-row-reverse">
-                                    <div class="col-lg-6 order-2 order-md-1">
+                                    <div class="col-lg-6 order-2 order-md-1 py-3">
                                         <div class="image-container">
                                             <!-- <div class="background-box"></div> -->
                                             <img src="{{ asset('images/contract_innovation.webp') }}"  alt="PU Flooring">
@@ -178,7 +178,7 @@
 
      
 
-        <section class="application-videos py-5">
+        <section class="application-videos py-5" style="background: url('{{ asset('images/application-bg.avif') }}') no-repeat center center; background-size: cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -241,7 +241,7 @@
                 <div class="col-lg-6 collab-left d-flex flex-column justify-content-center">
                     <div class="row">
                         <div class="col-md-9 col-xxl-7 ">
-                            <h2 class="fw-bold">Collaboration <span class="highlight">Opportunities</span></h2>
+                            <h2 class="fw-bold">Collaboration <span class="color-orange">Opportunities</span></h2>
                              <p>Partner with RachTR for your next project and benefit from our collaborative approach.</p>
                         </div>
                     </div>  

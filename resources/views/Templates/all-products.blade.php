@@ -1,6 +1,6 @@
 <div class="wrapper">  
     <!-- Hero Section -->
-        <div class="hero-section">
+        <div class="hero-section" style="background-image: url('{{ asset('/images/product_banner.webp')}}' ); ">
             <div class="container">
                 <h1 class="text-center">ALL PRODUCTS</h1>
             </div>

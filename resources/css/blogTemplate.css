@@ -17,6 +17,7 @@
         color: #F0702A;
 }
 
+
 .x-icon{
     width: 15px;
     height: 19px;
@@ -161,6 +162,9 @@
     object-fit: cover;
 }
 
+.blog-banner .banner-section .heading-holder h3 {
+    font-size: 38px;
+}
 
 @media (min-width: 1400px) {
     .blogs-content .container {
@@ -176,6 +180,9 @@
     .category-link {
         padding: 8px 20px;
         font-size: 14px;
+    }
+    .blog-banner .banner-section .heading-holder h3 {
+        font-size: 28px;
     }
 }
 
