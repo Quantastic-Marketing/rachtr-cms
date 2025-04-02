@@ -21,7 +21,7 @@
                           <br />
                           Industrial Flooring
                         </h1>
-                        <p class="fs-5">
+                        <p class="">
                           We offer a comprehensive range of products
                           specifically formulated for various industrial
                           floorings

@@ -16,7 +16,7 @@
                           <br />
                           Stone Processing Industry
                         </h1>
-                        <p class="fs-5">
+                        <p class="">
                           We offer a comprehensive range of products
                           specifically formulated for various applications in
                           the stone processing industry.
