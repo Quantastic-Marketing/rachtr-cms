@@ -6,7 +6,7 @@
 }
 
 .blog-banner {
-    margin-top:95px;
+    margin-top:72px;
 }
 .blogs-content .container {
     width: 85%;
@@ -211,6 +211,22 @@ nav ul.pagination li {
     font-size: 34px;
 }
 
+.blog-banner .banner-section .heading-holder {
+    position: absolute;
+    top: 16px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+
+
 @media (min-width: 1400px) {
     .blogs-content .container {
         max-width: 1120px;
@@ -234,9 +250,8 @@ nav ul.pagination li {
         margin-right: 10px;
     }
     .blog-banner {
-        margin-top: 56px;
+        margin-top: 30px;
     }
-
 }
 
 
@@ -310,7 +325,7 @@ nav ul.pagination li {
         font-size: 18px !important;
     }
     .blog-banner {
-        margin-top: 28px;
+        margin-top: 16px;
     }
 }
 

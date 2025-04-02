@@ -39,15 +39,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--<link rel="stylesheet" href="css/hover-min.css" type="text/css">-->
-        <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ asset('css/slick.css') }}" type="text/css">
-        <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
-        <link href="{{ asset('css/style.css') }}" type="text/css" rel="stylesheet">
-        <link href="{{ asset('css/responsive.css') }}" type="text/css" rel="stylesheet">
-        <link href="{{ asset('css/puFloor.css') }}" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/blogTemplate.css') }}">
+        @vite([
+                'resources/css/bootstrap.min.css',
+                'resources/css/jquery.fancybox.min.css',
+                'resources/css/slick.css',
+                'resources/css/slick-theme.css',
+                'resources/css/style.css',
+                'resources/css/responsive.css',
+                'resources/css/puFloor.css',
+                'resources/css/blog.css',
+                'resources/css/blogTemplate.css',
+                'resources/js/jquery.min.js',
+                'resources/js/slick.js',
+                'resources/js/bootstrap.min.js',
+                'resources/js/bootstrap.bundle.min.js',
+                'resources/js/jquery.fancybox.min.js',
+                'resources/js/cdn.min.js',
+                'resources/js/micromodal.min.js',
+                'resources/js/custom.js'
+            ])
         <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
 
          <!-- Google Tag Manager -->
@@ -86,7 +96,7 @@
                    
                 </div>
                 <div class="heading-holder">
-                    <h1 class="fw-bold color-orange">OUR BLOG</h1>
+                    <h3 class="fw-bold color-orange">OUR BLOG</h3>
                 </div>
             </div>                   
           </div>
@@ -315,19 +325,7 @@
     @includeIf('CommonTemplates.footerHome');
    </div>
     <!-- This is a wrapper close -->
-<script src="{{ asset('js/jquery.min.js') }}" type="text/jscript"></script>
-<script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('js/slick.js') }}"></script>
-<script src="{{ asset('js/jquery.fancybox.min.js') }}"></script>
-<script src="{{ asset('js/custom.js') }}"></script>  
-  
-<script type="text/javascript">
-    $('#showLeft').click(function(){
-	$(this).toggleClass('open');
-	$(".nav").slideToggle();	
-});
-</script> 
+
 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZ869XPN"

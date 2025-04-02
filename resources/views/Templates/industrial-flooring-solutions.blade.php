@@ -89,7 +89,8 @@
         </div>
       </section>
 
-      <section class="commercial-building-solutions comprnsive_solution">
+      <section class="commercial-building-solutions comprnsive_solution" style="background: url(' {{ asset('images/stone-process-bg.webp') }}') no-repeat
+    center center; background-size: cover;">
         <div class="container">
           <div class="header-heading-part pb-5">
             <h2 class="text-center display-6 display-lg-4 fw-bold text-black mb-2">

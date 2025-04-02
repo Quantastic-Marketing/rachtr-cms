@@ -76,7 +76,6 @@
 }
 
 .build-to-last {
-    background: url(../images/build-last-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -293,7 +292,6 @@
 
 
 .get-free-quote{
-    background: url(../images/get-free-quote-bg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -398,7 +396,7 @@
     display: none;
 }
 
-.form-title {
+.form-popup .form-title {
     color: #FF5500;
     font-size: 28px;
     font-weight: bold;
@@ -406,7 +404,7 @@
     text-align: center;
 }
 
-.form-control {
+.form-popup .form-control {
     border: 1px solid #FF5500;
     border-radius: 0;
     padding: 12px 15px;
@@ -414,12 +412,12 @@
     background-color: #FFF5F0;
 }
 
-.form-control.error {
+.form-popup .form-control.error {
     border-color: #FF0000;
     background-color: #FFF0F0;
 }
 
-.form-select {
+.form-popup .form-select {
     border: 1px solid #FF5500;
     border-radius: 0;
     padding: 12px 15px;
@@ -427,7 +425,7 @@
     background-color: #FFF5F0;
 }
 
-.submit-btn {
+.form-popup .submit-btn {
     background-color: #FF5500;
     color: white;
     border: none;
@@ -440,11 +438,11 @@
     width: 200px;
 }
 
-.submit-btn:hover {
+.form-popup .submit-btn:hover {
     background-color: #E04800;
 }
 
-.close-btn {
+.form-popup .close-btn {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -457,7 +455,7 @@
 
 
 
-.trigger-btn {
+.form-popup .trigger-btn {
     background-color: #FF5500;
     color: white;
     border: none;
@@ -467,11 +465,11 @@
     cursor: pointer;
 }
 
-.trigger-btn:hover {
+.form-popup .trigger-btn:hover {
     background-color: #E04800;
 }
 
-textarea.form-control {
+.form-popup textarea.form-control {
     min-height: 150px;
 }
 

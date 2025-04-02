@@ -2,7 +2,7 @@
 
     <div class="wrapper">
      
-       <section class="banner">
+       <section class="pu-banner banner">
         <div class="row g-0">
         <div class="col-lg-12">
             <div class="banner-section">
@@ -90,7 +90,7 @@
             <div class="container advantage-section">
                 <div class="row">
                     <div class="col-12 col-lg-10">
-                        <h2 class="section-title">ADVANTAGES OF <span class="highlight">PU FLOORING</span></h2>
+                        <h2 class="section-title">ADVANTAGES OF <span class="color-orange">PU FLOORING</span></h2>
                         <p class="text-start text-md-center">PU flooring has been used for decades, and over fifty years, it has become the most standard type of surface in the world. With its modern and durable design, it is sure that this floor will serve a long time. Here are some advantages:</p>
                         <div class="row text-center px-3 px-md-0 advantage-list gy-4">
                             <div class="col-12 col-sm-6 col-lg-3 advantage-box d-flex flex-column gap-3 p-0 p-sm-2">

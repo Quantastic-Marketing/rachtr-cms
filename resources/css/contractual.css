@@ -1,3 +1,6 @@
+.contact-contract{
+    margin-top: 96px;
+}
 .contact-banner .banner-section .image-wrapper {
     height: 211px;
 }
@@ -40,9 +43,6 @@
     position: relative;
 }
 
-.application-videos{
-    background: url(../images/application-bg.avif);
-}
 
 .application-videos .app-video-slider .slick-next:before{
     font-family: FontAwesome;
@@ -92,6 +92,18 @@
     font-size: 34px;
 }
 
+.collaboration .collab-section .collab-right a:hover{
+    background-color: #fff;
+    color: #000;
+    letter-spacing: 2px;
+   
+}
+
+@media (max-width:998px){
+    .contact-contract {
+        margin-top: 56px;
+    }
+}
 
 @media (max-width:786px){
     .contract-innvo .heading-holder h2,
@@ -123,6 +135,9 @@
     }
     .contact-contract .image-container{
         height: auto;
+    }
+    .contact-contract {
+        margin-top: 36px;
     }
     
  }

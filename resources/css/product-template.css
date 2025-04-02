@@ -128,6 +128,9 @@
     margin-left: 40px;
 }
 
+.product-page .product-title {
+    font-size: 24px;
+}
 
 @media (min-width:1240px) {
     .product-section .container {
@@ -164,9 +167,7 @@
     .product-section .product-left-part  .product-slider .product-main-slider .slick-dots li {
         margin: 0;
     }
-    .slick-dots li button:before {
-        font-size: 35px;
-    }
+    
 }
 
 @media (max-width:768px) {

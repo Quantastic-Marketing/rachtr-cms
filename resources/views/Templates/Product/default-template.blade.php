@@ -2,7 +2,7 @@
     <!-- This is a wrapper open -->
     <div class="wrapper">
        @if(!empty($product->content))
-       <section class="product-section py-2 py-lg-5">
+       <section class="product-page product-section py-2 py-lg-5">
         <div class="container">
             <div class="row">
                 <!-- Image & Description -->
@@ -42,7 +42,7 @@
                             @endif
                         </div>
                     @isset($product->name)
-                        <h2 class="py-2 product-title text-orange d-lg-none fs-3 text-center">{{$product->name}}</h2>
+                        <h2 class="py-2 product-title color-orange d-lg-none fs-3 text-center">{{$product->name}}</h2>
                     @endisset
                     @if(!empty($product->content['product_desc']))
                         {!! $product->content['product_desc'] !!}
@@ -52,7 +52,7 @@
                 <!-- Accordion for Details -->
                 <div class="col-lg-5 align-items-start">
                     @isset($product->name)
-                     <h2 class="product-title text-orange d-none d-lg-block">{{ $product->name }}</h2>
+                     <h2 class="product-title color-orange d-none d-lg-block">{{ $product->name }}</h2>
                     @endisset
 
                     @if(!empty($product->content['product_benefits']))

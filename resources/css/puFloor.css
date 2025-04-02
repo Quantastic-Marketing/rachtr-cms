@@ -1,7 +1,10 @@
 .banner .banner-section {
     position: relative;
-    color: #ffffff;
-    
+    color: #ffffff;   
+}
+
+.pu-banner{
+    margin-top: 96px;
 }
 
 .banner .banner-section .image-wrapper{
@@ -164,9 +167,7 @@
     max-width: 200px;
 }
 
-.banner{
-    margin-top: 120px;
-}
+
 
 .banner .banner-section .heading-holder span{
     color: #E77530;
@@ -187,7 +188,7 @@
         padding: 3px;
     }
     .banner{
-        margin-top: 80px;
+        margin-top: 56px;
     }
 
     .banner .banner-section .heading-holder h2{
@@ -211,7 +212,7 @@
 
 @media (max-width:499px){
     .banner {
-        margin-top: 50px;
+        margin-top: 36px;
     }
     .banner .banner-section .heading-holder h2 {
         font-size: 24px;

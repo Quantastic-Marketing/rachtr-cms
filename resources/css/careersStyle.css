@@ -112,10 +112,10 @@
     font-weight: 600;
 }
 
-.main-heading {
+.rachtribe-section .main-heading {
     font-size: 36px;
     font-weight: 700;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .description {
@@ -161,6 +161,7 @@
     text-decoration: none;
     display: inline-block;
     font-weight: bold;
+    transition: background-color 0.3s ease, letter-spacing 0.3s ease;
 }
 
 .cta-btn:hover {
@@ -427,6 +428,12 @@ align-self: baseline;
     font-size: 34px;
  }
 
+.carrer-collaborate .collaboration .collab-section .collab-right a:hover{
+    background-color: #fff;
+    color: #000;
+    letter-spacing: 2px;
+}
+
 
 @media (max-width:1200px) {
     .career-banner .banner-section .banner-content {
@@ -457,8 +464,18 @@ align-self: baseline;
    
   .rachtribe-section .text-content p{
     text-align: center;
+    }
+
+    .rachtribe-section .main-heading {
+        background: #E8E6E6;
+        margin:0;
+        text-align: center;
+    }
+    .rachtribe-section .text-content .text-desc{
+        padding: 40px;
+    }
 }
-}
+
 
 @media (max-width:768px){
     .career-banner .banner-section {
@@ -494,6 +511,7 @@ align-self: baseline;
 @media (max-width:499px) {
     .career-banner .banner-section .banner-content {
        top: 23%;
+       padding: 37px;
     }
 
     .career-banner .banner-section button {

@@ -239,7 +239,7 @@
         </div>
        </section>
 
-       <section class="epoxy-floor-cost position-relative py-5">
+       <section class="epoxy-floor-cost position-relative py-5" style="background: url('{{ asset('images/y-floor-bg.webp') }}'); ">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -844,43 +844,96 @@
                     <div class="faq-block px-md-5 mx-md-5 px-sm-3 mx-sm-3">
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">What are the benefits of RachTR epoxy flooring?</h6>
                             </div>
                             <div class="acc-body">
-                                  <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
+                                  <p> 
+                                    <ul>
+                                        <li><strong>Durability & Long-Lasting:</strong> Our epoxy floors are highly resistant to scratches, cracks, chemicals, and abrasions, ensuring a long lifespan compared to traditional options.</li>
+                                        <li><strong>Easy to Maintain:</strong> The smooth, seamless surface is easy to clean and requires minimal maintenance.</li>
+                                        <li><strong>Wide Range of Applications:</strong> RachTR epoxy flooring is suitable for various settings, including homes, garages, warehouses, retail spaces, and more.</li>
+                                    </ul>
+                                  </p>
                               </div>
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">How much does RachTR epoxy flooring cost?</h6>
                             </div>
                             <div class="acc-body">
-                                  <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
+                                <p>
+                                    The cost of epoxy flooring is typically priced per square foot (Rs. / sq. ft.) or per square meter (Rs. / sq. meter).<br>
+                                    <strong>Several factors influence the total cost of your project, including:</strong>
+                                    <ul>
+                                       <li>Surface on which it is being done - - if it is Plain concrete floor(pcc), or RCC, or Old Epoxy floor,</li>  
+                                       <li>Undulations in the surface,</li> 
+                                       <li>Properties required from Epoxy flooring</li> 
+                                       <li>Type of Surface preparation Required</li>
+                                       <li>Area or size of the floor size</li> 
+                                    </ul>
+                                    <strong>And cost has three component:</strong>
+                                    <ul>
+                                       <li>Material or epoxy coatings cost,</li>  
+                                       <li>Application charges or labor cost,</li> 
+                                       <li>Surface preparation or treatment cost</li>
+                                    </ul>
+                                    To know more about the pricing, you can visit our page by clicking <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-services?utm_source=gads_Q_faq_section_price_details_epoxy&utm_medium=gads_Q_faq_section_price_details_epoxy&utm_campaign=gads_Q_faq_section_price_details_epoxy' }}" class="org" target="_blank">here</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-wrapper">
+                            <div class="acc-head py-4">
+                              <h6 class="mb-0 fw-bold">What is the warranty on RachTR epoxy flooring?</h6>
+                            </div>
+                            <div class="acc-body">
+                                  <p>RachTR offers a comprehensive warranty on its epoxy flooring products. Please refer to our official page or contact us for details.</p>
                               </div>
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">How does volume affect resin cure?</h6>
                             </div>
                             <div class="acc-body">
-                                  <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
+                                  <p>Heat is released during the chemical reaction that converts liquid part A and part B into solid epoxy. The amount of heat released depends on the epoxy’s chemistry and the amount of epoxy used. That is, a certain amount of mixed part A and part B will result in the release in a certain amount of heat.</p>
+                                  <p>The curing epoxy must be able to shed the heat it generates efficiently enough to avoid overheating. The ability to shed heat is largely governed by the ratio of top surface area that is open to the air relative to the volume.</p>
+                                  <p>For the same resin system, thinner castings  will have greater top surface areas in comparison to overall volume and will shed heat more efficiently. Thicker castings cannot shed heat as efficiently and may overheat.</p>
+                                  <p>For the same volume of epoxy, a thinner casting will have a larger top surface area and will shed heat more efficiently compared to a thicker casting with a smaller top surface area.</p>
+                                  <img src="{{ asset('images/resin_faq.webp') }}" alt="resin faq img"/>
+                                  <p>EcoPoxy systems are developed to have reactivity levels suited to their intended applications. Always consult your product’s Technical Data Sheet or Application Guide for recommended volume and thickness.</p>
+
                               </div>
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">How do I dispose of epoxy resins and hardeners?</h6>
                             </div>
                             <div class="acc-body">
-                                  <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
+                                  <p>Cured epoxy resin is inert and should be disposed of as you would other solid non-hazardous waste. Uncured resin, or residue left over in jugs, must be disposed of properly as the hardener and resin are unreacted. If the jugs have been sufficiently drained, they may be recycled but the amount of allowable residue will be determined by your local hazardous waste collection center and the prevailing regulations. When contacting your local waste collection center, you will need the Safety Data Sheets that are available for download from our website.</p>
                               </div>
                         </div>
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
-                              <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
+                              <h6 class="mb-0 fw-bold">Why did my epoxy overheat and turn yellow?</h6>
                             </div>
                             <div class="acc-body">
-                                  <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
+                                  <p>Epoxy releases heat when curing. EcoPoxy makes recommendations for maximum project volumes and/or thicknesses to allow projects to shed heat efficiently and  prevent overheating and yellowing. If the recommended maximum pour depth and volume are exceeded, the epoxy will not be able to shed heat quickly enough, and the temperature will increase uncontrollably. Cure temperatures that reach 100°C (212°F) for extended periods are known to cause yellowing, and extremely high temperatures can cause epoxy to amber and form cracks. If a deeper pour is required for a project, it is recommended to pour multiple layers to build up to the desired final thickness.</p>
                               </div>
+                        </div>
+                        <div class="accordion-wrapper">
+                            <div class="acc-head py-4">
+                              <h6 class="mb-0 fw-bold">Are epoxies biodegradable or recyclable?</h6>
+                            </div>
+                            <div class="acc-body">
+                                <p>During the curing process, epoxy resins and hardeners form crosslinks that cannot easily be broken. Technologies are being developed to break down these types of plastics for recycling, or via other biodegradation methods, but none are readily accessible. Practically, this means that all epoxy resin systems are neither biodegradable nor recyclable.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-wrapper">
+                            <div class="acc-head py-4">
+                              <h6 class="mb-0 fw-bold">How can I get a free quote for RachTR epoxy flooring?</h6>
+                            </div>
+                            <div class="acc-body">
+                                <p>Simply fill out the form by clicking <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-services#epoxy-form-sec' }}"  class="org" target="_blank">here</a>, and a RachTR representative will contact you to discuss your project and provide a free quote.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -891,7 +944,7 @@
        <!-- This is a section-8 close  -->
 
         <!-- This is a section-9 open -->   
-     <section class="get-free-quote py-5">   
+     <section class="get-free-quote py-5" style=" background: url({{asset('images/get-free-quote-bg.webp')}});">   
         <div class="container">
             <div class="row g-0">
                 <div class="col-12">
