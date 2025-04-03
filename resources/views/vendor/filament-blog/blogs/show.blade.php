@@ -184,7 +184,7 @@
                         <div class="row">
                             <div class="heading-holder d-flex justify-content-between align-items-center mx-0 py-3 ">
                                 <h2 class="mx-0">Recent Posts</h2>
-                                <a href="#" class="mx-0 d-flex">See All</a>
+                                <a href="{{ route('filamentblog.post.index') }}" class="mx-0 d-flex">See All</a>
                             </div>
                             @if($post->relatedPosts(2)->count() >= 1)
                                 <div class="d-flex">    

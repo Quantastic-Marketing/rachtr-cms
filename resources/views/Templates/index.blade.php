@@ -21,9 +21,9 @@
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>
-                                        <li><a href="#">⦿ Residential & Commercial Buildings</a></li>
-                                        <li><a href="#">⦿ Stone Processing Industry</a></li>
-                                        <li><a href="#">⦿ Industrial Flooring</a></li>
+                                        <li><a href="{{ config('app.url') . '/residential-commercial-building'}}">⦿ Residential & Commercial Buildings</a></li>
+                                        <li><a href="{{ config('app.url') . '/stone-processing-industry'}}">⦿ Stone Processing Industry</a></li>
+                                        <li><a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">⦿ Industrial Flooring</a></li>
                                      </ul>
                                  </div>
                              </div>
@@ -46,9 +46,9 @@
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>
-                                        <li><a href="#">⦿ Residential & Commercial Buildings</a></li>
-                                        <li><a href="#">⦿ Stone Processing Industry</a></li>
-                                        <li><a href="#">⦿ Industrial Flooring</a></li>
+                                        <li><a href="{{ config('app.url') . '/residential-commercial-building'}}">⦿ Residential & Commercial Buildings</a></li>
+                                        <li><a href="{{ config('app.url') . '/stone-processing-industry'}}">⦿ Stone Processing Industry</a></li>
+                                        <li><a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">⦿ Industrial Flooring</a></li>
                                      </ul>
                                  </div>
                              </div>
@@ -72,9 +72,9 @@
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>
-                                        <li><a href="#">⦿ Residential & Commercial Buildings</a></li>
-                                        <li><a href="#">⦿ Stone Processing Industry</a></li>
-                                        <li><a href="#">⦿ Industrial Flooring</a></li>
+                                        <li><a href="{{ config('app.url') . '/residential-commercial-building'}}">⦿ Residential & Commercial Buildings</a></li>
+                                        <li><a href="{{ config('app.url') . '/stone-processing-industry'}}">⦿ Stone Processing Industry</a></li>
+                                        <li><a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">⦿ Industrial Flooring</a></li>
                                      </ul>
                                  </div>
                              </div> 
@@ -98,9 +98,9 @@
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>
-                                        <li><a href="#">⦿ Residential & Commercial Buildings</a></li>
-                                        <li><a href="#">⦿ Stone Processing Industry</a></li>
-                                        <li><a href="#">⦿ Industrial Flooring</a></li>
+                                        <li><a href="{{ config('app.url') . '/residential-commercial-building'}}">⦿ Residential & Commercial Buildings</a></li>
+                                        <li><a href="{{ config('app.url') . '/stone-processing-industry'}}">⦿ Stone Processing Industry</a></li>
+                                        <li><a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">⦿ Industrial Flooring</a></li>
                                      </ul>
                                  </div>
                              </div> 
@@ -217,11 +217,13 @@
                                       </div>
                                       <div class="blog_tranprnt">
                                           <div class="blogs_icon">
+                                            <a href="{{ route('filamentblog.post.index')}}">
                                               <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
-        <g>
-            <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
-        </g>
-    </svg>
+                                                <g>
+                                                    <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
+                                                </g>
+                                              </svg>
+                                            </a>
                                           </div>
                                     </div>      
                                   </div>
@@ -237,11 +239,13 @@
                                       </div>
                                       <div class="blog_tranprnt">
                                           <div class="blogs_icon">
+                                            
                                               <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
-        <g>
-            <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
-        </g>
-    </svg>
+                                                <g>
+                                                    <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
+                                                </g>
+                                              </svg>
+                                            
                                           </div>
                                     </div>
                                   </div>
@@ -258,10 +262,10 @@
                                       <div class="blog_tranprnt">
                                           <div class="blogs_icon">
                                               <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
-        <g>
-            <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
-        </g>
-    </svg>
+                                                <g>
+                                                    <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
+                                                </g>
+                                              </svg>
                                           </div>
                                     </div>
                                   </div>
@@ -545,7 +549,7 @@
                           <h5 class="fw-bold pb-2">White Marble being difficult to install, as white marble is susceptible to stains, yellowness of joints, etc.</h5>
                           <p>8/10 contractors refuse to install white marble owing to project failure rate which is exorbitantly high.</p>
                           <p class="pb-5 mb-5">Problem starts immediately and keep on coming at regular intervals upto 2-3 years which is a...</p>
-                          <a href="{{ config('app.url') . '/post/solutions'}}" target="_blank">View Case Study</a>
+                          <a href="#" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">
@@ -619,7 +623,7 @@
                           <h5 class="fw-bold pb-2">Successful Delivery of Complex Flooring in Just 3 Days for Escorts Kubota</h5>
                           <p>We had just 72 hours to transform a large industrial space for Escorts Kubota into a showroom-ready floor, complete with intricate designs, multiple colors, and precision-aligned white lines.</p>
                           <p class="pb-2 mb-2">Read more to know how we successfully delivered complex flooring for Escorts Kubota in record time</p>
-                          <a href="{{ config('app.url') . '/post/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}" target="_blank">View Case Study</a>
+                          <a href="{{ config('app.url') . '/blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">
