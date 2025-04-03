@@ -6,8 +6,11 @@
         <title>RachTR</title>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script  src="{{ asset('js/jquery.min.js') }}" type="text/jscript"></script>
+        <script defer src="{{ asset('js/slick.js') }}"></script>
         <!--<link rel="stylesheet" href="css/hover-min.css" type="text/css">-->
         @vite([
+                'resources/js/app.js',
                 'resources/css/bootstrap.min.css',
                 'resources/css/jquery.fancybox.min.css',
                 'resources/css/slick.css',
@@ -16,14 +19,8 @@
                 'resources/css/responsive.css',
                 'resources/css/puFloor.css',
                 'resources/css/blog.css',
-                'resources/js/jquery.min.js',
-                'resources/js/slick.js',
-                'resources/js/bootstrap.min.js',
-                'resources/js/bootstrap.bundle.min.js',
-                'resources/js/jquery.fancybox.min.js',
                 'resources/js/cdn.min.js',
-                'resources/js/micromodal.min.js',
-                'resources/js/custom.js'
+                'resources/js/micromodal.min.js'
             ])
         <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
 
