@@ -141,6 +141,9 @@
 .product-list-faq .accordion-wrapper {
   border-bottom: 1px solid #0057E1;
 }
+.product-list-faq .accordion-wrapper .acc-head p {
+    font-weight:bold;
+  }
 
 .product-strip{
     display: -webkit-box;
