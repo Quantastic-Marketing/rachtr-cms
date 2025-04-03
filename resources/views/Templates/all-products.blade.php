@@ -1,8 +1,8 @@
 <div class="wrapper">  
     <!-- Hero Section -->
-        <div class="hero-section" style="background-image: url('{{ asset('/images/product_banner.webp')}}' ); ">
+        <div class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ asset('/images/product_banner.webp')}}' ); ">
             <div class="container">
-                <h1 class="text-center">ALL PRODUCTS</h1>
+                <h1 class="text-center fw-bold">ALL PRODUCTS</h1>
             </div>
         </div>
 

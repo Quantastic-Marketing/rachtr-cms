@@ -165,6 +165,7 @@
 
 .hero-section h1 {
     margin-top: 80px;
+    font-size: 38px;
 }
 
 .product-container{
@@ -186,6 +187,10 @@
     .sidebar li {
         margin-right: 15px;
     }
+    .hero-section h1 {
+        font-size: 28px;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -197,5 +202,11 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+}
+
+@media (max-width:499px){
+    .hero-section h1 {
+        font-size: 24px;
     }
 }
