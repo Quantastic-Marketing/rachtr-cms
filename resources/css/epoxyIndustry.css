@@ -155,6 +155,13 @@
 .industry-banner .banner-section .heading-holder h1{
     font-size: 34px;
 }
+    
+.product-card-section .product-image-wrapper img{
+    /* max-height: none !important; */
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
 
 @media (max-width:992px){
