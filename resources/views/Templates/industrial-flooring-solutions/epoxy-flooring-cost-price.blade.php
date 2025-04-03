@@ -4,7 +4,7 @@
         <div class="col-lg-12">
            <div class="item">
                <div class="banner-sec">
-                   <video width="100%" height="100%" autoplay muted loop class="desktop">
+                   <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" class="desktop">
                          <source id="#movie1" src="{{ asset('videos/banner-video.webm') }}" type="video/webm">
                          <source id="#movie1" src="{{ asset('videos/banner-video.mp4') }}" type="video/mp4">
                    </video>
