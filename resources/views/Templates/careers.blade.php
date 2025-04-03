@@ -57,7 +57,7 @@
                                 <div class="life-at-img"><a href="{{ asset('images/life5.webp')}}" data-fancybox="gallery"><img src="images/life5.webp" alt="Slide 4"></a></div>
                                 <div class="life-at-img"><a href="{{ asset('images/gallery1.webp')}}" data-fancybox="gallery"><img src="images/gallery1.webp" alt="Slide 1"></a></div>
                                 <div class="life-at-img"><a href="{{ asset('images/gallery2.webp')}}" data-fancybox="gallery"><img src="images/gallery2.webp" alt="Slide 2"></a></div>
-                                <div class="life-at-img"><a href="{{ asset('images/gallery3.webp')}}" data-fancybox="gallery"><img src="images/gallery3.wecbp" alt="Slide 3"></a></div>
+                                <div class="life-at-img"><a href="{{ asset('images/gallery3.webp')}}" data-fancybox="gallery"><img src="images/gallery3.webp" alt="Slide 3"></a></div>
                                 <div class="life-at-img"><a href="{{ asset('images/gallery4.webp')}}" data-fancybox="gallery"><img src="images/gallery4.webp" alt="Slide 4"></a></div>
                                 <div class="life-at-img"><a href="{{ asset('images/gallery5.webp')}}" data-fancybox="gallery"><img src="images/gallery5.webp" alt="Slide 4"></a></div>
                                 <div class="life-at-img"><a href="{{ asset('images/gallery7.webp')}}" data-fancybox="gallery"><img src="images/gallery7.webp" alt="Slide 1"></a></div>
