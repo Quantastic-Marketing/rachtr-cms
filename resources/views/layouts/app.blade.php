@@ -48,8 +48,11 @@
                 <!-- Preload Font Awesome (if used above the fold) -->
                 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
                 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
-
+                <script  src="{{ asset('js/jquery.min.js') }}" type="text/jscript"></script>
+                <script defer src="{{ asset('js/slick.js') }}"></script>
+                
             @vite([
+                'resources/js/app.js',
                 'resources/css/bootstrap.min.css',
                 'resources/css/jquery.fancybox.min.css',
                 'resources/css/slick.css',
@@ -67,14 +70,8 @@
                 'resources/css/epoxyIndustry.css',
                 'resources/css/allProduct.css',
                 'resources/css/search.css',
-                'resources/js/jquery.min.js',
-                'resources/js/slick.js',
-                'resources/js/bootstrap.min.js',
-                'resources/js/bootstrap.bundle.min.js',
-                'resources/js/jquery.fancybox.min.js',
                 'resources/js/cdn.min.js',
                 'resources/js/micromodal.min.js',
-                'resources/js/custom.js',
                 'resources/js/customTab.js',
                 'resources/js/forms.js'
 

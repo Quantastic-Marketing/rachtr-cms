@@ -5,6 +5,7 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
+                'resources/js/app.js',
                 'resources/css/bootstrap.min.css',
                 'resources/css/style.css',
                 'resources/css/responsive.css',
@@ -27,18 +28,15 @@ export default defineConfig({
                 'resources/css/blog.css',
                 'resources/css/blogTemplate.css',
                 'resources/css/blogArchive.css',
-                'resources/js/jquery.min.js',
-                'resources/js/bootstrap.min.js',
-                'resources/js/bootstrap.bundle.min.js',
-                'resources/js/slick.js',
-                'resources/js/jquery.fancybox.min.js',
                 'resources/js/cdn.min.js',
                 'resources/js/micromodal.min.js',
-                'resources/js/custom.js',
                 'resources/js/customTab.js',
                 'resources/js/forms.js',
-            ],
+            ],  
             refresh: true,
         }),
     ],
+    
+    
+
 });
