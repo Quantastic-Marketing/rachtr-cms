@@ -318,6 +318,7 @@
     /* width :275px; */
     flex: 0 0 19%;
     max-width: 19%;
+    padding: 0;
 }
 
 .colors-available .color-box a p{
