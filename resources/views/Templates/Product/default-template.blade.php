@@ -61,7 +61,7 @@
                                 @foreach($product->content['product_benefits'] as $benefit)
                                     <div class="accordion-wrapper">
                                         @isset($benefit['benefit_title'])
-                                            <div class="acc-head text-orange py-4">
+                                            <div class="acc-head text-orange py-4 fw-bold">
                                                 <h6 class="mb-0 fs-6">{{ $benefit['benefit_title'] }}</h6>
                                             </div>
                                         @endisset

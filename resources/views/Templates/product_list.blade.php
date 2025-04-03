@@ -120,7 +120,7 @@
                     <div  class="tab-content current">
                         @foreach($pageContent['faq_section'] as $faq)
                         <div class="accordion-wrapper">
-                        <div class="acc-head py-3 pb-3">
+                        <div class="acc-head py-3 pb-3 fw-bold">
                             <!-- <h6 class="mb-0">
                             What is the purpose of RachTR's Block Reinforcement
                             System?
