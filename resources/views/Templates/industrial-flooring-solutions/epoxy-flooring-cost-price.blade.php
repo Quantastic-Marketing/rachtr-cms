@@ -258,7 +258,7 @@
                             <h4>Major Components of Cost in Industrial Flooring</h4>
                             <div class="row pt-4">
                                 <div class="col-12 col-md-6">
-                                    <img src="{{ asset('images/component1.webp')}}" alt="">
+                                    <img src="{{ asset('images/epoxy_cost_svg_img.webp')}}" alt="epoxy cost img">
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="component-list">
