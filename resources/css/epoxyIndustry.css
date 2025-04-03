@@ -145,6 +145,14 @@
     font-weight:bold;
   }
 
+.product-list-faq ul {
+    text-align: left;
+    padding: revert;
+}
+.product-list-faq ul li {
+    list-style: disc;
+}
+
 .product-strip{
     display: -webkit-box;
     -webkit-line-clamp: 5;
