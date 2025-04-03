@@ -138,7 +138,7 @@
     font-size: 18px;
 }
 
-.accordion-wrapper {
+.product-list-faq .accordion-wrapper {
   border-bottom: 1px solid #0057E1;
 }
 
@@ -155,7 +155,7 @@
 .industry-banner .banner-section .heading-holder h1{
     font-size: 34px;
 }
-    
+
 .product-card-section .product-image-wrapper img{
     /* max-height: none !important; */
     width:100%;
