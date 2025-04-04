@@ -331,9 +331,27 @@ $(document).ready(function () {
   $('[data-fancybox="gallery"]').fancybox({
 
   });
-  // $('[data-fancybox]').fancybox({
+  $('[data-fancybox="gallery-1"]').fancybox({
 
-  // });
+  });
+  $('[data-fancybox="gallery-2"]').fancybox({
+
+  });
+  $('[data-fancybox="gallery-3"]').fancybox({
+
+  });
+  $('[data-fancybox="gallery-4"]').fancybox({
+
+  });
+  $('[data-fancybox="gallery-5"]').fancybox({
+
+  });
+  $('[data-fancybox="surat-gallery"]').fancybox({
+
+  });
+  $('[data-fancybox="Palacia-gallery"]').fancybox({
+
+  });
 
   $('.project-slider').slick({
     slidesToShow: 1,
