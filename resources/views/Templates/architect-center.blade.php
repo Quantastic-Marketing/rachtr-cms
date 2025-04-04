@@ -542,49 +542,49 @@
                                         <div class="project-slider mb-1">
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project-slide-1.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="gallery" data-caption="Surat">
                                                     <img alt="Surat" data-ssr-src-done="true" fetchpriority="high"
                                                         src="{{asset('images/project-slide-1.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project-slide-2.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="gallery" data-caption="Surat">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project-slide-2.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project-slide-3.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="gallery" data-caption="Surat">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project-slide-3.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href=" {{asset('images/project-slide-4.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="gallery" data-caption="Surat">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project-slide-4.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project-slide-5.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="gallery" data-caption="Surat">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project-slide-5.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project-slide-6.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="gallery" data-caption="Surat">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project-slide-6.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project-slide-7.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="gallery" data-caption="Surat">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project-slide-7.webp')}}">
                                                 </a>
@@ -603,21 +603,21 @@
                                         <div class="project-slider mb-1">
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project2-slide-1.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="surat-gallery" data-caption="Surat">
                                                     <img alt="Surat" data-ssr-src-done="true" fetchpriority="high"
                                                         src="{{asset('images/project2-slide-1.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project2-slide-2.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="surat-gallery" data-caption="Surat">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project2-slide-2.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project2-slide-3.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="surat-gallery" data-caption="Surat">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project2-slide-3.webp')}}">
                                                 </a>
@@ -636,56 +636,56 @@
                                         <div class="project-slider mb-1">
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project3-slide-1.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="Palacia-gallery" data-caption="Palacia">
                                                     <img alt="Surat" data-ssr-src-done="true" fetchpriority="high"
                                                         src="{{asset('images/project3-slide-1.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project3-slide-2.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="Palacia-gallery" data-caption="Palacia">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project3-slide-2.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project3-slide-3.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="Palacia-gallery" data-caption="Palacia">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project3-slide-3.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href=" {{asset('images/project3-slide-4.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="Palacia-gallery" data-caption="Palacia">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project3-slide-4.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project3-slide-5.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="Palacia-gallery" data-caption="Palacia">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project3-slide-5.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project3-slide-6.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="Palacia-gallery" data-caption="Palacia">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project3-slide-6.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project3-slide-7.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="Palacia-gallery" data-caption="Palacia">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project3-slide-7.webp')}}">
                                                 </a>
                                             </div>
                                             <div class="project-slide">
                                                 <a href="{{asset('images/project3-slide-8.webp')}}"
-                                                    data-fancybox="gallery" data-caption="Single image">
+                                                    data-fancybox="Palacia-gallery" data-caption="Palacia">
                                                     <img alt="" data-ssr-src-done="true" fetchpriority="high"
                                                         src=" {{asset('images/project3-slide-8.webp')}}">
                                                 </a>
@@ -750,25 +750,25 @@
                             <div class="col-12 col-lg-5 pe-0">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slideImage.webp')}}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slideImage.webp')}}" data-fancybox="gallery-1">
                                             <img src="{{ asset('images/slideImage.webp')}}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slideImage2.webp')}}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slideImage2.webp')}}" data-fancybox="gallery-1">
                                             <img src="{{ asset('images/slideImage2.webp')}}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slideImage3.webp')}}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slideImage3.webp')}}" data-fancybox="gallery-1">
                                             <img src="{{ asset('images/slideImage3.webp')}}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slideImage4.webp')}}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slideImage4.webp')}}" data-fancybox="gallery-1">
                                             <img src="{{ asset('images/slideImage4.webp')}}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
@@ -1043,31 +1043,31 @@
                             <div class="col-12 col-lg-5 pe-0">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/tree-1.webp')}}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/tree-1.webp')}}" data-fancybox="gallery-2">
                                             <img src="{{ asset('images/tree-1.webp')}}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/tree-2.webp')}}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/tree-2.webp')}}" data-fancybox="gallery-2">
                                             <img src="{{ asset('images/tree-2.webp')}}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/tree-3.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/tree-3.webp') }}" data-fancybox="gallery-2">
                                             <img src="{{ asset('images/tree-3.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/tree-4.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/tree-4.webp') }}" data-fancybox="gallery-2">
                                             <img src="{{ asset('images/tree-4.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/tree-5.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/tree-5.webp') }}" data-fancybox="gallery-2">
                                             <img src="{{ asset('images/tree-5.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
@@ -1339,31 +1339,31 @@
                             <div class="col-12 col-lg-5 pe-0">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/bluff-1.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/bluff-1.webp') }}" data-fancybox="gallery-3">
                                             <img src="{{ asset('images/bluff-1.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/bluff-2.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/bluff-2.webp') }}" data-fancybox="gallery-3">
                                             <img src="{{ asset('images/bluff-2.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/bluff-3.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/bluff-3.webp') }}" data-fancybox="gallery-3">
                                             <img src="{{ asset('images/bluff-3.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/bluff-4.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/bluff-4.webp') }}" data-fancybox="gallery-3">
                                             <img src="{{ asset('images/bluff-4.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/bluff-5.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/bluff-5.webp') }}" data-fancybox="gallery-3">
                                             <img src="{{ asset('images/bluff-5.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
@@ -1570,49 +1570,49 @@
                             <div class="col-12 col-lg-5 pe-0">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slide2-pic1.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slide2-pic1.webp') }}" data-fancybox="gallery-4">
                                             <img src="{{ asset('images/slide2-pic1.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slide2-pic2.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slide2-pic2.webp') }}" data-fancybox="gallery-4">
                                             <img src="{{ asset('images/slide2-pic2.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slide2-pic3.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slide2-pic3.webp') }}" data-fancybox="gallery-4">
                                             <img src="{{ asset('images/slide2-pic3.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slide2-pic4.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slide2-pic4.webp') }}" data-fancybox="gallery-4">
                                             <img src="{{ asset('images/slide2-pic4.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slide2-pic5.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slide2-pic5.webp') }}" data-fancybox="gallery-4">
                                             <img src="{{ asset('images/slide2-pic5.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slide2-pic6.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slide2-pic6.webp') }}" data-fancybox="gallery-4">
                                             <img src="{{ asset('images/slide2-pic6.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slide2-pic7.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slide2-pic7.webp') }}" data-fancybox="gallery-4">
                                             <img src="{{ asset('images/slide2-pic7.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/slide2-pic8.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/slide2-pic8.webp') }}" data-fancybox="gallery-4">
                                             <img src="{{ asset('images/slide2-pic8.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
@@ -1885,38 +1885,38 @@
                             <div class="col-12 col-lg-5 pe-0">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/delugen-1.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/delugen-1.webp') }}" data-fancybox="gallery-5">
                                             <img src="{{ asset('images/delugen-1.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/delugen-2.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/delugen-2.webp') }}" data-fancybox="gallery-5">
                                             <img src="{{ asset('images/delugen-2.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/delugen-3.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/delugen-3.webp') }}" data-fancybox="gallery-5">
                                             <img src="{{ asset('images/delugen-3.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/delugen-4.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/delugen-4.webp') }}" data-fancybox="gallery-5">
                                             <img src="{{ asset('images/delugen-4.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/delugen-5.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/delugen-5.webp') }}" data-fancybox="gallery-5">
                                             <img src="{{ asset('images/delugen-5.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
                                     </div>
                                     <div class="image-container">
-                                        <a href= "{{ asset('images/delugen-6.webp') }}" data-fancybox="gallery">
+                                        <a href= "{{ asset('images/delugen-6.webp') }}" data-fancybox="gallery-5">
                                             <img src="{{ asset('images/delugen-6.webp') }}" alt="Building Image">
                                         </a>
                                         <div class="hover-overlay"></div>
