@@ -759,7 +759,7 @@
                             <div id="tab-1" class="tab-content current">
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What industries do you cater to?</h6>
+                                    <h6 class="mb-0 fw-bold">What industries do you cater to?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>We cater to a wide range of industries, including residential and commercial buildings, stone processing, industrial flooring, and more. Our versatile coatings and adhesives are designed to meet the unique needs of each industry segment.</p>
@@ -767,7 +767,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">How do I know which RachTR product is right for my project?</h6>
+                                    <h6 class="mb-0 fw-bold">How do I know which RachTR product is right for my project?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>We recommend visiting the specific industry pages (<a href="{{ config('app.url') . '/residential-commercial-building'}}" target="_blank" class="org">Residential & Commercial Buildings,</a> <a href="{{ config('app.url') . '/stone-processing-industry'}}" target="_blank" class="org">Stone Processing Industry,</a> <a href="https://www.rachtrindia.com/industrial-flooring-solutions" target="_blank" class="org">Industrial Flooring</a>) for detailed information and product recommendations. Our team is also happy to assist you. <a href="{{ config('app.url') . '/contact-us'}}" target="_blank" class="org">Contact us</a> for personalized advice.</p>
@@ -775,7 +775,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">I need help choosing the right products for my specific project. Can you assist me?</h6>
+                                    <h6 class="mb-0 fw-bold">I need help choosing the right products for my specific project. Can you assist me?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Absolutely! Our team is also happy to provide personalized recommendations. Contact us for expert advice by filling this form here.</p>
@@ -783,7 +783,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">How can I place an order or request a quote?</h6>
+                                    <h6 class="mb-0 fw-bold">How can I place an order or request a quote?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>You can place an order or request a quote by clicking here (fill the form). We'll provide pricing, availability, and delivery options based on your requirements.</p>
@@ -791,7 +791,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Do you offer technical support for your products?</h6>
+                                    <h6 class="mb-0 fw-bold">Do you offer technical support for your products?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Yes, we have a team of experienced professionals who can provide technical support and guidance on product application and selection.</p>
@@ -799,7 +799,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Do your products come with warranties?</h6>
+                                    <h6 class="mb-0 fw-bold">Do your products come with warranties?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Yes, many RachTR products come with warranties that guarantee their performance for a specified period. Please refer to the individual product specifications for warranty details.</p>
@@ -807,7 +807,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Are RachTR products suitable for both new construction and renovation projects?</h6>
+                                    <h6 class="mb-0 fw-bold">Are RachTR products suitable for both new construction and renovation projects?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Yes, our products are well-suited for both new construction and renovation projects. We offer a wide range of solutions for various stages of building, from waterproofing basements to applying finishing touches.</p>
@@ -815,7 +815,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Do you offer training or instructional resources for applying your products?</h6>
+                                    <h6 class="mb-0 fw-bold">Do you offer training or instructional resources for applying your products?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Our products are formulated for user-friendliness. We offer comprehensive installation guides and technical data sheets for each product. Additionally, consider contacting us for any specific application inquiries.</p>
@@ -828,7 +828,7 @@
                             <div id="tab-2" class="tab-content">
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What products does RachTR offer for tile installation systems?</h6>
+                                    <h6 class="mb-0 fw-bold">What products does RachTR offer for tile installation systems?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR offers a range of tile adhesives and grouts designed for various tile installations. Our tile adhesives ensure strong bonding and prevent vertical slip, while our epoxy grouts provide durability and resistance to stains and chemicals.</p>
@@ -836,7 +836,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">How do RachTR tile adhesives prevent vertical slip during installation?</h6>
+                                    <h6 class="mb-0 fw-bold">How do RachTR tile adhesives prevent vertical slip during installation?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR tile adhesives are formulated with high bond strength and non-slip properties, ensuring that tiles stay in place during the installation process. This makes them ideal for vertical surfaces and large-format tiles.</p>
@@ -844,7 +844,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What are the benefits of using RachTR grouts?</h6>
+                                    <h6 class="mb-0 fw-bold">What are the benefits of using RachTR grouts?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR grouts are highly durable, resistant to chemicals, stains, and moisture. They provide a seamless and aesthetically pleasing finish, making them ideal for both residential and commercial applications.</p>
@@ -852,7 +852,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Can RachTR polishing systems be used on various types of floors?</h6>
+                                    <h6 class="mb-0 fw-bold">Can RachTR polishing systems be used on various types of floors?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Yes, RachTR polishing systems are versatile and can be used on a variety of floor types, including concrete, terrazzo, and natural stone. Our systems provide a high-gloss finish and enhance the durability of the floors.</p>
@@ -860,7 +860,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">How do RachTR cleaning and maintenance products benefit property owners?</h6>
+                                    <h6 class="mb-0 fw-bold">How do RachTR cleaning and maintenance products benefit property owners?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR cleaning and maintenance products are designed to keep surfaces looking new and extend their longevity. They are effective in removing dirt, grime, and stains without damaging the surfaces, making them ideal for routine maintenance.</p>
@@ -868,7 +868,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What support does RachTR provide for product installation and use?</h6>
+                                    <h6 class="mb-0 fw-bold">What support does RachTR provide for product installation and use?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR offers comprehensive support, including detailed product manuals, installation guides, and access to our technical support team. We provide training and consultation services to ensure proper product application and usage.</p>
@@ -876,7 +876,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Where can I purchase RachTR products for my residential or commercial project?</h6>
+                                    <h6 class="mb-0 fw-bold">Where can I purchase RachTR products for my residential or commercial project?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR products can be purchased through our authorized distributors or directly by <a href="{{ config('app.url') . '/contact-us'}}" target="_blank" class="org">contacting us</a>. For large commercial projects, we offer customized solutions and bulk purchasing options. Contact our sales team for more information.</p>
@@ -889,7 +889,7 @@
                             <div id="tab-3" class="tab-content">
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What is the purpose of RachTR's Block Reinforcement System?</h6>
+                                    <h6 class="mb-0 fw-bold">What is the purpose of RachTR's Block Reinforcement System?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR's Block Reinforcement System is designed to enhance the structural integrity of stone blocks, preventing cracks and breakage during handling, transportation, and processing. This system ensures that stone blocks remain intact and easier to work with.</p>
@@ -897,7 +897,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">How does RachTR's Resin Line System benefit stone processing?</h6>
+                                    <h6 class="mb-0 fw-bold">How does RachTR's Resin Line System benefit stone processing?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR's Resin Line System improves the quality and durability of stone slabs by filling in micro-cracks and pores. This results in a smoother, stronger surface that is less prone to damage and provides a better finish for further processing.</p>
@@ -905,7 +905,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What types of cracks can RachTR's Crack Repairing Systems handle?</h6>
+                                    <h6 class="mb-0 fw-bold">What types of cracks can RachTR's Crack Repairing Systems handle?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR's Crack Repairing Systems are versatile and can handle a wide range of cracks, from hairline fractures to more significant breaks in stone. These systems provide a durable repair that blends seamlessly with the stone's natural appearance.</p>
@@ -913,7 +913,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What are the advantages of using RachTR's Color & Gloss Enhancer Systems?</h6>
+                                    <h6 class="mb-0 fw-bold">What are the advantages of using RachTR's Color & Gloss Enhancer Systems?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR's Color & Gloss Enhancer Systems enhance the natural beauty of stone by deepening its color and adding a high-gloss finish. These systems also provide a protective layer that makes the stone more resistant to stains and environmental damage.</p>
@@ -921,7 +921,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Can RachTR's Block Reinforcement System be used on all types of natural stones?</h6>
+                                    <h6 class="mb-0 fw-bold">Can RachTR's Block Reinforcement System be used on all types of natural stones?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Yes, RachTR's Block Reinforcement System is suitable for a wide variety of natural stones, including marble, granite, limestone, and sandstone. It is designed to work effectively across different stone types to enhance their structural integrity.</p>
@@ -929,7 +929,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Are RachTR's Crack Repairing Systems visible after application?</h6>
+                                    <h6 class="mb-0 fw-bold">Are RachTR's Crack Repairing Systems visible after application?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>No, RachTR's Crack Repairing Systems are designed to blend seamlessly with the stone, making the repairs virtually invisible. The repaired areas maintain the stone's natural appearance and structural integrity.</p>
@@ -937,7 +937,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What maintenance is required for stones treated with RachTR's Color & Gloss Enhancer Systems?</h6>
+                                    <h6 class="mb-0 fw-bold">What maintenance is required for stones treated with RachTR's Color & Gloss Enhancer Systems?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Stones treated with RachTR's Color & Gloss Enhancer Systems require minimal maintenance. Regular cleaning with non-abrasive products will help maintain the enhanced appearance. Periodic reapplication may be necessary to sustain the gloss and color intensity over time.</p>
@@ -945,7 +945,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Where can I purchase RachTR products for stone processing?</h6>
+                                    <h6 class="mb-0 fw-bold">Where can I purchase RachTR products for stone processing?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR stone processing products can be purchased through our authorized distributors or you can <a href="{{ config('app.url') . '/contact-us'}}" target="_blank" class="org">contact us</a> directly. For bulk orders and customized solutions, you can contact our sales team for assistance and to find the best options for your specific needs.</p>
@@ -958,7 +958,7 @@
                             <div id="tab-4" class="tab-content">
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What types of industrial flooring solutions does RachTR offer?</h6>
+                                    <h6 class="mb-0 fw-bold">What types of industrial flooring solutions does RachTR offer?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR offers a range of industrial flooring solutions, including Epoxy Flooring and Polyurethane (PU) Flooring. These solutions are designed to meet the specific needs of various industries, providing durability, chemical resistance, and ease of maintenance.</p>
@@ -966,7 +966,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What are the benefits of using Epoxy Flooring in industrial settings?</h6>
+                                    <h6 class="mb-0 fw-bold">What are the benefits of using Epoxy Flooring in industrial settings?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Epoxy Flooring provides excellent durability, chemical resistance, and a seamless finish that is easy to clean and maintain. It is ideal for high-traffic areas and environments where a strong, long-lasting floor is essential.</p>
@@ -974,7 +974,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">How does PU Flooring differ from Epoxy Flooring?</h6>
+                                    <h6 class="mb-0 fw-bold">How does PU Flooring differ from Epoxy Flooring?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>PU Flooring is more flexible and can withstand higher levels of thermal shock and UV exposure compared to Epoxy Flooring. This makes it suitable for environments with significant temperature fluctuations and where outdoor exposure is common.</p>
@@ -982,7 +982,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">What industries can benefit from RachTR's industrial flooring solutions?</h6>
+                                    <h6 class="mb-0 fw-bold">What industries can benefit from RachTR's industrial flooring solutions?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR's industrial flooring solutions are suitable for various industries, including Automobile, Pharmaceutical, Electronics, Food & Beverages, Metal Fabrication, Chemical Industry, and Warehouses & Godowns.</p>
@@ -990,7 +990,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Are RachTR's flooring solutions resistant to chemicals and stains?</h6>
+                                    <h6 class="mb-0 fw-bold">Are RachTR's flooring solutions resistant to chemicals and stains?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Yes, both Epoxy and PU Flooring solutions from RachTR offer high resistance to chemicals and stains, making them ideal for industries where spills and exposure to harsh substances are common.</p>
@@ -998,7 +998,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">How do RachTR's flooring solutions contribute to safety in the workplace?</h6>
+                                    <h6 class="mb-0 fw-bold">How do RachTR's flooring solutions contribute to safety in the workplace?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR's flooring solutions can be customized with anti-slip properties, enhancing safety by reducing the risk of slips and falls. They also create a seamless surface that minimizes tripping hazards.</p>
@@ -1006,7 +1006,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">Can RachTR's flooring solutions withstand heavy machinery and high traffic?</h6>
+                                    <h6 class="mb-0 fw-bold">Can RachTR's flooring solutions withstand heavy machinery and high traffic?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Yes, RachTR's Epoxy and PU Flooring solutions are designed to withstand heavy machinery, high foot traffic, and the wear and tear typical in industrial environments. They provide a durable surface that maintains its integrity over time.</p>
@@ -1014,7 +1014,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">How do RachTR's flooring solutions ensure hygiene in the food and pharmaceutical industries?</h6>
+                                    <h6 class="mb-0 fw-bold">How do RachTR's flooring solutions ensure hygiene in the food and pharmaceutical industries?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>RachTR's flooring solutions provide seamless, non-porous surfaces that are easy to clean and sanitize. This is crucial for maintaining hygiene standards in food and pharmaceutical industries, preventing contamination and ensuring a safe production environment.</p>
@@ -1022,7 +1022,7 @@
                                 </div>
                                 <div class="accordion-wrapper">
                                   <div class="acc-head py-3">
-                                    <h6 class="mb-0">How do I get a free quote for RachTR epoxy flooring?</h6>
+                                    <h6 class="mb-0 fw-bold">How do I get a free quote for RachTR epoxy flooring?</h6>
                                   </div>
                                   <div class="acc-body">
                                         <p>Simply fill out the form by clicking here, and a RachTR representative will contact you to discuss your project and provide a free quote.</p>
