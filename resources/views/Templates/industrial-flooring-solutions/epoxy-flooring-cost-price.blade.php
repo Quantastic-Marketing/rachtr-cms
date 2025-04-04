@@ -552,132 +552,82 @@
                             <div class="case_studies row g-0">
                                <div class="col-md-4 col-12 order-2 order-md-1">
                                   <div class="case_studies_contn">
-                                      <h5 class="fw-bold pb-2">Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor</h5>
-                                      <p class="pb--md-5 mb-md--5">Delhivery, since 2011, is a top e-commerce logistics provider in India, handling last-mile delivery, warehousing, and freight. Its tech and network are vital for Indian e-commerce.</p>
-                                      <a href="https://www.rachtr.com/_files/ugd/f8ee4f_49c135e9175b4329ba811ee263b633ff.pdf" target="_blank">View Case Study</a>
+                                      <h5 class="fw-bold pb-2">RachTR solves Welspun's Epoxy Flooring debonding issue caused by excessive oil</h5>
+                                      <p class="pb--md-5 mb-md--5">Welspun were facing issues of excessive oil on the floor, which caused the debonding between epoxy flooring and concrete.</p>
+                                      <p class="pb--md-5 mb-md--5">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
+                                      <a href="#" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/delhivery.webp')}}"/>
+                                           <img src="{{ asset('images/welspun_pro_img.webp')}}"/>
                                         </div>
-                                        <div class="before-block">Before</div>
-                                        <div class="after-block">After</div>
+                                        <!-- <div class="before-block">Before</div>
+                                        <div class="after-block">After</div> -->
                                      </div>
                                    </div>
                                </div>
                                <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="{{ asset('images/delhivery.webp')}}"/>
+                                         <img src="{{ asset('images/welspun_pro_img.webp')}}"/>
                                       </div>
-                                      <div class="before-block">Before</div>
-                                      <div class="after-block">After</div>
+                                      <!-- <div class="before-block">Before</div>
+                                      <div class="after-block">After</div> -->
                                    </div>
                               </div>    
                             </div>
                             <div class="case_studies row g-0">
-                               <div class="col-md-4 col-12 lft-cont order-2 order-md-1">
+                               <div class="col-md-4 col-12 order-2 order-md-1">
                                   <div class="case_studies_contn">
-                                      <h5 class="fw-bold pb-2">Epoxy Flooring Solution on Oil-Prone Areas for Welspun</h5>
-                                      <p class="pb-md-5 mb-md-5">Welspun, a global leader in textiles, offers high-quality home textiles & flooring solutions. Their diverse reach and focus on innovation & sustainability set them apart. They aim to be a top brand, prioritizing customer experience and social responsibility.</p>
-                                      <a href="{{asset('pdfFile/Welpsun_carousel.pdf')}}" target="_blank">View Case Study</a>
+                                      <h5 class="fw-bold pb-2">RachTR completed Epoxy Flooring at ITC, Haridwar</h5>
+                                      <p class="pb--md-5 mb-md--5">ITC facility at Haridwar faced themselves with issues of broken tiles and slippery surface which often caused an issue for the workers at the facility.</p>
+                                      <p class="pb--md-5 mb-md--5">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
+                                      <a href="#" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/welspun%20epoxy.webp') }}"/>
+                                           <img src="{{ asset('images/itc_project_img.webp')}}"/>
                                         </div>
-                                        <div class="before-block">Before</div>
-                                        <div class="after-block">After</div>
+                                        <!-- <div class="before-block">Before</div>
+                                        <div class="after-block">After</div> -->
                                      </div>
                                    </div>
                                </div>
-                               <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
+                               <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="{{ asset('images/welspun%20epoxy.webp') }}"/>
+                                         <img src="{{ asset('images/itc_project_img.webp')}}"/>
                                       </div>
-                                      <div class="before-block">Before</div>
-                                      <div class="after-block">After</div>
+                                      <!-- <div class="before-block">Before</div>
+                                      <div class="after-block">After</div> -->
                                    </div>
                               </div>    
                             </div>
                             <div class="case_studies row g-0">
-                               <div class="col-md-4 col-12 lft-cont order-2 order-md-1">
+                               <div class="col-md-4 col-12 order-2 order-md-1">
                                   <div class="case_studies_contn">
-                                      <h5 class="fw-bold pb-2">White Marble being difficult to install, as white marble is susceptible to stains, yellowness of joints, etc.</h5>
-                                      <p>8/10 contractors refuse to install white marble owing to project failure rate which is exorbitantly high.</p>
-                                      <p class="pb-md-5 mb-md-5">Problem starts immediately and keep on coming at regular intervals upto 2-3 years which is a...</p>
-                                      <a href="{{ config('app.url') . '/blogs/solutions' }}" target="_blank">View Case Study</a>
-                                      <div class="case_studies_downd d-md-none">
-                                        <div class="downd_img">
-                                            <img src="{{ asset('images/welspun%20epoxy.webp') }}"/>
-                                        </div>
-                                        <div class="before-block">Before</div>
-                                        <div class="after-block">After</div>
-                                     </div>
-                                   </div>
-                               </div>
-                               <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
-                                   <div class="case_studies_downd">
-                                      <div class="downd_img">
-                                        <img src="{{ asset('images/welspun%20epoxy.webp') }}"/>
-                                      </div>
-                                      <div class="before-block">Before</div>
-                                      <div class="after-block">After</div>
-                                   </div>
-                              </div>    
-                            </div>
-                            <div class="case_studies row g-0">
-                               <div class="col-md-4 col-12 lft-cont order-2 order-md-1">
-                                  <div class="case_studies_contn">
-                                      <h5 class="fw-bold pb-2">Achieved a Seamless and Hygienic Flooring Solution at FMCG Factory, Haridwar</h5>
-                                      <p>Delhivery, a logistics company, likely faced the challenge of needing a durable and chemical-resistant floor for one of their warehouses in Faridabad.</p>
+                                      <h5 class="fw-bold pb-2">Epoxy flooring installation for a Delhivery warehouse in Faridabad</h5>
+                                      <p class="pb--md-5 mb-md--5">Delhivery, a logistics company, likely faced the challenge of needing a durable and chemical-resistant floor for one of their warehouses in Faridabad.</p>
                                       <p class="pb-2 mb-2">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
-                                      <a href="{{asset('pdfFile/Case_study_ITC.pdf')}}" target="_blank">View Case Study</a>
+                                      <a href="#" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/itc%20before%20after%20rachtr.webp') }}"/>
+                                           <img src="{{ asset('images/faridabad_proj_img.webp')}}"/>
                                         </div>
-                                        <div class="before-block">Before</div>
-                                        <div class="after-block">After</div>
+                                        <!-- <div class="before-block">Before</div>
+                                        <div class="after-block">After</div> -->
                                      </div>
                                    </div>
                                </div>
-                               <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
+                               <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="{{ asset('images/itc%20before%20after%20rachtr.webp') }}"/>
+                                         <img src="{{ asset('images/faridabad_proj_img.webp')}}"/>
                                       </div>
-                                      <div class="before-block">Before</div>
-                                      <div class="after-block">After</div>
+                                      <!-- <div class="before-block">Before</div>
+                                      <div class="after-block">After</div> -->
                                    </div>
                               </div>    
                             </div>
-                            <div class="case_studies row g-0">
-                               <div class="col-md-4 col-12 lft-cont order-2 order-md-1">
-                                  <div class="case_studies_contn">
-                                      <h5 class="fw-bold pb-2">Successful Delivery of Complex Flooring in Just 3 Days for Escorts Kubota</h5>
-                                      <p>We had just 72 hours to transform a large industrial space for Escorts Kubota into a showroom-ready floor, complete with intricate designs, multiple colors, and precision-aligned white lines.</p>
-                                      <p class="pb-2 mb-2">Read more to know how we successfully delivered complex flooring for Escorts Kubota in record time</p>
-                                      <a href="{{ config('app.url') . '/blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota' }}" target="_blank">View Case Study</a>
-                                      <div class="case_studies_downd d-md-none">
-                                        <div class="downd_img">
-                                           <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.webp') }}"/>
-                                        </div>
-                                        <div class="before-block">Before</div>
-                                        <div class="after-block">After</div>
-                                     </div>
-                                   </div>
-                               </div>
-                               <div class="col-md-4 col-12 order-1 order-md-2 d-none d-md-block">
-                                   <div class="case_studies_downd">
-                                      <div class="downd_img">
-                                         <img src="{{ asset('images/Escort%20Kubota%20Blog%20Banner.webp') }}"/>
-                                      </div>
-                                      <div class="before-block">Before</div>
-                                      <div class="after-block">After</div>
-                                   </div>
-                              </div>    
-                            </div>    
-                            </div>   
+                           </div>
                         </div> 
                     </div>
         </section> 
