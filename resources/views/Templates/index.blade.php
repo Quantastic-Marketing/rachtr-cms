@@ -514,7 +514,7 @@
                       <div class="case_studies_contn">
                           <h5 class="fw-bold pb-2">Epoxy Flooring Solution on Oil-Prone Areas for Welspun</h5>
                           <p class="pb-5 mb-5">Welspun, a global leader in textiles, offers high-quality home textiles & flooring solutions. Their diverse reach and focus on innovation & sustainability set them apart. They aim to be a top brand, prioritizing customer experience and social responsibility.</p>
-                          <a href="{{ asset('pdfFile/Welpsun_Carousel.pdf') }}" target="_blank">View Case Study</a>
+                          <a href="{{ asset('pdfFile/Welpsun_carousel.pdf') }}" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">
@@ -588,7 +588,7 @@
                           <h5 class="fw-bold pb-2">Achieved a Seamless and Hygienic Flooring Solution at FMCG Factory, Haridwar</h5>
                           <p>FMCG Haridwar, a prominent player in the food industry, required a seamless flooring solution to inhibit microorganism growth and ensure product safety.</p>
                           <p class="pb-2 mb-2">The existing epoxy flooring was damaged, and the plant operations could not be halted, necessitating a swift, dust-free maintenance solution.</p>
-                          <a href="{{ asset('pdfFile/Case_Study_ITC.pdf')}}" target="_blank">View Case Study</a>
+                          <a href="{{ asset('pdfFile/Case_study_ITC.pdf')}}" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">

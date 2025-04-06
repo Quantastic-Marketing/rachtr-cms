@@ -417,7 +417,7 @@
                                     <p class="pb-2 mb-2">The existing epoxy flooring was damaged, and the plant
                                         operations could not be halted, necessitating a swift, dust-free maintenance
                                         solution.</p>
-                                    <a href="{{asset('pdfFile/Case_Study_ITC.pdf')}}"
+                                    <a href="{{asset('pdfFile/Case_study_ITC.pdf')}}"
                                         target="_blank">View Case Study</a>
                                 </div>
                             </div>
