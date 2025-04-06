@@ -5,32 +5,6 @@
        <div class="homepg-banner bnr_sldr">
            <div class="row g-0">
            <div class="banr col-lg-12">
-              <div class="item">
-                  <div class="banner-sec">
-                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
-                            <source id="#movie1" src="{{ asset('videos/file-1.webm') }}" type="video/webm">
-                            <source id="#movie1" src="{{ asset('videos/file-1.mp4') }}" type="video/mp4">
-                      </video>
-                      <div class="banner_overlay col-lg-12">
-                         <div class="content">
-                             <div class="container">
-                                 <div class="content-details ms-0">
-                                      <h1 class="fw-bold" >Building Communities, Brick by Brick</h1>
-                                      <p>RachTR empowers builders, architects, and artisans with high-performance coatings and adhesives. Together, we're shaping India's built environment.</p>
-                                      <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p>
-                                 </div>
-                                 <div class="content-list ms-0">
-                                    <ul>
-                                        <li><a href="{{ config('app.url') . '/residential-commercial-building'}}">⦿ Residential & Commercial Buildings</a></li>
-                                        <li><a href="{{ config('app.url') . '/stone-processing-industry'}}">⦿ Stone Processing Industry</a></li>
-                                        <li><a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">⦿ Industrial Flooring</a></li>
-                                     </ul>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-               </div>
                <div class="item">
                   <div class="banner-sec">
                       <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
@@ -43,6 +17,32 @@
                                  <div class="content-details ms-0">
                                       <h1 class="fw-bold" ><span class="org">RachTR,</span><br/>World-Class Quality, <br/>Made for Local Conditions</h1>
                                       <p>Coatings & Adhesives Designed for<br/> Diverse Conditions</p>
+                                 </div>
+                                 <div class="content-list ms-0">
+                                    <ul>
+                                        <li><a href="{{ config('app.url') . '/residential-commercial-building'}}">⦿ Residential & Commercial Buildings</a></li>
+                                        <li><a href="{{ config('app.url') . '/stone-processing-industry'}}">⦿ Stone Processing Industry</a></li>
+                                        <li><a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">⦿ Industrial Flooring</a></li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <div class="banner-sec">
+                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
+                            <source id="#movie1" src="{{ asset('videos/file-1.webm') }}" type="video/webm">
+                            <source id="#movie1" src="{{ asset('videos/file-1.mp4') }}" type="video/mp4">
+                      </video>
+                      <div class="banner_overlay col-lg-12">
+                         <div class="content">
+                             <div class="container">
+                                 <div class="content-details ms-0">
+                                      <h1 class="fw-bold" >Building Communities, Brick by Brick</h1>
+                                      <p>RachTR empowers builders, architects, and artisans with high-performance coatings and adhesives. Together, we're shaping India's built environment.</p>
+                                      <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p>
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>
@@ -239,13 +239,13 @@
                                       </div>
                                       <div class="blog_tranprnt">
                                           <div class="blogs_icon">
-                                            
-                                              <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
-                                                <g>
-                                                    <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
-                                                </g>
-                                              </svg>
-                                            
+                                            <a href="#advce_manufrng">
+                                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
+                                                    <g>
+                                                        <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
+                                                    </g>
+                                                </svg>
+                                            </a>
                                           </div>
                                     </div>
                                   </div>
@@ -261,11 +261,13 @@
                                       </div>
                                       <div class="blog_tranprnt">
                                           <div class="blogs_icon">
-                                              <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
+                                            <a href="#comprehensive_Solution">
+                                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
                                                 <g>
                                                     <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
                                                 </g>
                                               </svg>
+                                            </a> 
                                           </div>
                                     </div>
                                   </div>
@@ -325,7 +327,7 @@
       </section>    
     <!-- This is a section-3 close -->    
     <!-- This is a section-4 open -->  
-     <section class="advce_manufrng">
+     <section class="advce_manufrng" id="advce_manufrng">
         <div class="row g-0">
            <div class="col-lg-4">
               <div class="advce_manufrng_contnt">
@@ -462,7 +464,7 @@
     </section>    
     <!-- This is a section-5 close -->
     <!-- This is a section-6 open -->   
-     <section class="comprnsive_solution">   
+     <section class="comprnsive_solution" id="comprehensive_Solution">   
         <div class="container">
             <div class="row g-0">
                 <div class="cmp_solutn_heding col-lg-8 col-md-12 py-5">

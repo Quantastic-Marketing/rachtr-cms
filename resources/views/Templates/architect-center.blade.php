@@ -729,7 +729,7 @@
                                 <hr class="my-2" style="border-color: #E87722; width: 50px;">
                                 <p>We’re here to help you achieve your construction goals with innovative and reliable solutions.
                                 </p>
-                                <a href="#" class="cta-btn mt-3">Call us Now</a>
+                                <a href="tel:+91-124-4453999" class="cta-btn mt-3">Call us Now</a>
                             </div>
                         </div>
                         
