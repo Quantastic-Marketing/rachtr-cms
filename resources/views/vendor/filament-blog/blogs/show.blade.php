@@ -55,7 +55,7 @@
                 'resources/js/cdn.min.js',
                 'resources/js/micromodal.min.js'
             ])
-        <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
+        <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon_img.webp') }}">
 
          <!-- Google Tag Manager -->
          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

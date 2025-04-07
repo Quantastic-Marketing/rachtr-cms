@@ -10,8 +10,7 @@
             $seoDescription = $seo->description ?? 'Rachtr';
             $seoAuthor = $seo->author ?? 'Rachtr';
             $canonicalUrl = $seo->canonical_url ?? url()->current();
-            $seoImage = $seo->image ?? asset('images/default-image.jpg');
-
+            $seoImage = $seo->image ?? asset('images/favicon_img.webp');
             $metaData = json_decode($seo->meta ?? '{}', true);
             $focusKeywords = isset($metaData['focus_keywords']) ? implode(', ', $metaData['focus_keywords']) : 'rachtr';
 
@@ -96,7 +95,7 @@
                 @endif
             @endforeach
         @endif
-        <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
+        <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon_img.webp') }}">
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
