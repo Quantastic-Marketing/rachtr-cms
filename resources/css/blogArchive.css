@@ -32,6 +32,17 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: normal;
+    color:#000;
+}
+.blogs-archive .blog-content p:last-child {
+    color: #000;
+}
+
+@media(max-width:998px){
+    .blogs-content .post-list>* {
+        max-width: 97%;
+        flex: 0 0 97%;
+    }
 }
 
 @media (max-width:768px){
@@ -50,4 +61,10 @@
     .blogs-archive .blog-title{
             display: block;
         }
+}
+
+@media (max-width:499px){
+    .blogs-content .blog-title {
+        line-height: 28px !important;
+    }
 }
