@@ -112,6 +112,7 @@
 .blogs-content .related-posts .related-post-desc p{
     color: #4C89EA !important;
     margin: 0;
+    font-size: 14px !important;
 }
 .blogs-content .related-posts .related-post-desc a:hover{
     color: #0064E6 !important; 
