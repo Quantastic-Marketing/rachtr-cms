@@ -24,6 +24,7 @@ Route::redirect('/post', '/blogs', 301);
 Route::get('/post/{slug}', function ($slug) {
     return redirect("/blogs/{$slug}", 301);
 });
+Route::redirect('/blog', '/blogs', 301);
 Route::redirect('/support-center/architect-center', '/architect-center', 301);
 Route::redirect('/support-center/contractor-center', '/contractor-center', 301);
 Route::redirect('/epoxy-flooring', '/industrial-flooring-solutions/epoxy-flooring-services', 301);
