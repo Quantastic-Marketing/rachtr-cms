@@ -42,7 +42,7 @@
                                  <div class="content-details ms-0">
                                       <h1 class="fw-bold" >Building Communities, Brick by Brick</h1>
                                       <p>RachTR empowers builders, architects, and artisans with high-performance coatings and adhesives. Together, we're shaping India's built environment.</p>
-                                      <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p>
+                                      <p class="pt-0 p-xxl-0 m-xxl-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p>
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>
@@ -94,7 +94,7 @@
                                  <div class="content-details ms-0">
                                       <h1 class="fw-bold" >Innovating for the Future, At the Forefront</h1>
                                       <p>RachTR is at the forefront of construction technology, developing solutions for the future of Indian infrastructure.</p>
-                                      <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRend</span></p> 
+                                      <p class="pt-0 p-xxl-0 m-xxl-0"><span class="wht">#Rach</span><span class="org">TRend</span></p> 
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>

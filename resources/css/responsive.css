@@ -2,8 +2,16 @@
   .bnr_sldr .item .banner-sec .banner_overlay .content {
     padding: 15% 0 0 2%;
     /* margin: 0 16%; */
+  }
 }
+
+@media(min-width:1600px){
+  .bnr_sldr .item .banner-sec .banner_overlay .content .content-list ul {
+    text-align: left;
+    padding-top: 110px;
+  }
 }
+
 @media (max-width: 1399px) {
     .container {
       width: 96%;
