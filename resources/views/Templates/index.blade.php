@@ -119,11 +119,7 @@
                <div class="row g-0">
                    <div class="col-lg-4">
                        <div class="about_techTr_img">
-                           <img src="images/about-RachTr-499.webp" srcset="images/about-RachTr-499.webp 499w, images/about-RachTr-780.webp 768w, images/about-RachTr.webp 1299w" sizes="(max-width: 480px) 45vw,
-                        (max-width: 768px) 40vw,
-                        (min-width: 1920px) 25vw,
-                        33vw
-" width="320" height="180" alt="About rachtr image">
+                           <img src="images/about-RachTr-499.webp" srcset="images/about-RachTr-499.webp 499w, images/about-RachTr-780.webp 768w, images/about-RachTr.webp 1299w" sizes="(max-width: 600px) 100vw, 50vw" width="320" height="180" alt="About rachtr image">
                        </div>
                    </div>
                    <div class="col-lg-6 ps-0">
