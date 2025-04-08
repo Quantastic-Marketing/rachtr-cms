@@ -100,41 +100,43 @@ document.addEventListener('DOMContentLoaded', function() {
     if(connectForm) {
         connectForm.addEventListener("submit", function (event) {
             event.preventDefault();
-
+            let form = this;
             let submitButton = this.querySelector("#submit-btn"); 
             submitButton.disabled = true;
 
-            let formData = new FormData(this);
-            fetch("/connect", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Inside data then [part');
-                if (data.success) {
-                    document.getElementById("success-message").innerText = "Form submitted successfully!";
-                    console.log('here in success');
-                    MicroModal.show('success-modal'); // Show success modal
-                    document.getElementById("connect-form").reset();
-                } else {
-                    document.getElementById("error-message").innerText = data.message || "Failed to send data.";
-                    console.log('here in else of data.sucess');
-                    MicroModal.show('error-modal'); // Show error modal
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                document.getElementById("error-message").innerText = "An unexpected error occurred. Please try again later.";
-                MicroModal.show('error-modal');
-            })
-            .finally(() => {
-                submitButton.disabled = false;
+            grecaptcha.ready(function() {
+                grecaptcha.execute(window.RECAPTCHA_SITE_KEY, {action: 'submit'}).then(function(token) {
+                let formData = new FormData(form);
+                formData.append('recaptcha_token', token);
+                fetch("/connect", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById("success-message").innerText = "Form submitted successfully!";
+                        MicroModal.show('success-modal'); // Show success modal
+                        document.getElementById("connect-form").reset();
+                    } else {
+                        document.getElementById("error-message").innerText = data.message || "Failed to send data.";
+                        MicroModal.show('error-modal'); // Show error modal
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    document.getElementById("error-message").innerText = "An unexpected error occurred. Please try again later.";
+                    MicroModal.show('error-modal');
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                });
             });
         });
+    });
     }
     
     let uploadCV = document.getElementById("uploadcv-form");
@@ -155,47 +157,50 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                 }
             } else {
-                alert("Please upload a CV file.");
+                document.getElementById("error-message").innerText = "Please upload a file.";
+                MicroModal.show('error-modal');
                 return;
             }
 
             let submitButton = this.querySelector("#submit-btn");
             submitButton.disabled = true;     
             let form = this;
-            let formData = new FormData(form);
-            
-            fetch(form.action, {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById("success-message").innerText = "Application submitted successfully!";
-                    MicroModal.show('success-modal');
-                   
-                    // Reset form and file name display after submission
-                    form.reset();
-                    document.getElementById("file-name").innerText = "";
-                } else {
-                    console.log("here in data not sucess");
-                    document.getElementById("error-message").innerText = data.message || "Failed to submit application.";
-                    MicroModal.show('error-modal');
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                document.getElementById("error-message").innerText = "An unexpected error occurred. Please try again.";
-                MicroModal.show('error-modal');
-            })
-            .finally(() => {
-                submitButton.disabled = false;
+
+            grecaptcha.ready(function() {
+                grecaptcha.execute(window.RECAPTCHA_SITE_KEY, {action: 'submit'}).then(function(token) {
+                    let formData = new FormData(form);
+                    formData.append('recaptcha_token', token);
+                    fetch(form.action, {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            document.getElementById("success-message").innerText = "Application submitted successfully!";
+                            MicroModal.show('success-modal');
+                        
+                            form.reset();
+                            document.getElementById("file-name").innerText = "";
+                        } else {
+                            document.getElementById("error-message").innerText = data.message || "Failed to submit application.";
+                            MicroModal.show('error-modal');
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        document.getElementById("error-message").innerText = "An unexpected error occurred. Please try again.";
+                        MicroModal.show('error-modal');
+                    })
+                    .finally(() => {
+                        submitButton.disabled = false;
+                    });
+                });
             });
         });
-
         document.getElementById("cvUpload").addEventListener("change", function () {
             let fileName = this.files.length > 0 ? this.files[0].name : "";
             document.getElementById("file-name").innerText = fileName;
@@ -211,34 +216,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (submitButton) {
                     submitButton.disabled = true; // Disable button
                 }
-                console.log(submitButton);
-
-                let formData = new FormData(form);
-    
-                fetch(form.action, {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                        "X-CSRF-TOKEN": form.querySelector('input[name="_token"]').value
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        MicroModal.show('success-modal'); // Show success modal
-                        form.reset(); // Reset form after successful submission
-                    } else {
-                        document.getElementById("error-message").innerText = data.message || "Failed to submit form.";
-                        MicroModal.show('error-modal'); // Show error modal
-                    }
-                })
-                .catch(error => {
-                    console.error("Error:", error);
-                    document.getElementById("error-message").innerText = "An unexpected error occurred.";
-                    MicroModal.show('error-modal');
-                })
-                .finally(() => {
-                    submitButton.disabled = false;
+                grecaptcha.ready(function() {
+                    grecaptcha.execute(window.RECAPTCHA_SITE_KEY, {action: 'submit'}).then(function(token) {
+                    let formData = new FormData(form);
+                    formData.append('recaptcha_token', token);
+                    fetch(form.action, {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            "X-CSRF-TOKEN": form.querySelector('input[name="_token"]').value
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            MicroModal.show('success-modal'); // Show success modal
+                            form.reset(); // Reset form after successful submission
+                        } else {
+                            document.getElementById("error-message").innerText = data.message || "Failed to submit form.";
+                            MicroModal.show('error-modal'); // Show error modal
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        document.getElementById("error-message").innerText = "An unexpected error occurred.";
+                        MicroModal.show('error-modal');
+                    })
+                    .finally(() => {
+                        if(submitButton)
+                        submitButton.disabled = false;
+                    });
+                    });
                 });
             });
         });
@@ -254,45 +262,48 @@ document.addEventListener('DOMContentLoaded', function() {
             if (submitButton) {
                 submitButton.disabled = true; // Disable submit button
             }
+            let form = this;
+            grecaptcha.ready(function() {
+                grecaptcha.execute(window.RECAPTCHA_SITE_KEY, {action: 'submit'}).then(function(token) {
+                    let formData = new FormData(form);
+                    formData.append('recaptcha_token', token);
+                    let csrfTokenInput = form.querySelector('input[name="_token"]');
 
-            console.log("Submit button disabled:", submitButton);
+                    if (!csrfTokenInput) {
+                        console.error("CSRF token not found!");
+                        if (submitButton) submitButton.disabled = false;
+                        return;
+                    }
 
-            let formData = new FormData(this);
-            let csrfTokenInput = this.querySelector('input[name="_token"]');
-
-            if (!csrfTokenInput) {
-                console.error("CSRF token not found!");
-                if (submitButton) submitButton.disabled = false;
-                return;
-            }
-
-            fetch(this.action, {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "X-CSRF-TOKEN": csrfTokenInput.value
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById("success-message").innerText = "Application submitted successfully!";
-                    MicroModal.show('success-modal');
-                    this.reset(); 
-                } else {
-                    document.getElementById("error-message").innerText = data.message || "Failed to submit form.";
-                    MicroModal.show('error-modal');
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                document.getElementById("error-message").innerText = "An unexpected error occurred.";
-                MicroModal.show('error-modal');
-            })
-            .finally(() => {
-                if (submitButton) submitButton.disabled = false;
+                    fetch(form.action, {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            "X-CSRF-TOKEN": csrfTokenInput.value
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            document.getElementById("success-message").innerText = "Application submitted successfully!";
+                            MicroModal.show('success-modal');
+                            form.reset(); 
+                        } else {
+                            document.getElementById("error-message").innerText = data.message || "Failed to submit form.";
+                            MicroModal.show('error-modal');
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        document.getElementById("error-message").innerText = "An unexpected error occurred.";
+                        MicroModal.show('error-modal');
+                    })
+                    .finally(() => {
+                        if (submitButton) submitButton.disabled = false;
+                    });
+                    });
+                });
             });
-        });
     }
     
 

@@ -100,6 +100,7 @@
                                     <div class="mb-4">
                                         <textarea class="form-control" name="Message" placeholder="Message" required></textarea>
                                     </div>
+                                    <input type="hidden" name="recaptcha_token" id="recaptcha_token"> 
                                     <div class="d-flex button-div me-md-0">
                                         <button type="submit" class="btn btn-primary w-100 ">SUBMIT</button>
                                     </div>

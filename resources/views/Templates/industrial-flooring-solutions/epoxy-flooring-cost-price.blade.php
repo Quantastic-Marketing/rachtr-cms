@@ -736,7 +736,7 @@
                                         <label class="form-label">Comment Or Message <span>*</span></label>
                                         <textarea class="form-control" rows="4" placeholder="Add Answer Here" name="Message" required></textarea>
                                     </div>
-                            
+                                    <input type="hidden" name="recaptcha_token" id="recaptcha_token">
                                     <button type="submit" class="btn btn-submit submit-btn-form">SUBMIT ></button>
                                 </form>
                             </div>
@@ -987,7 +987,7 @@
                 <textarea class="form-control" id="message" name="Message" placeholder="Comment Or Message *" required></textarea>
             </div>
         </div>
-        
+        <input type="hidden" name="recaptcha_token" id="recaptcha_token">
         <button type="submit" class="submit-btn submit-btn-form">SUBMIT ></button>
     </form>
 </div>

@@ -19,6 +19,7 @@ class FormController extends Controller
                 'City' => 'required|string|max:100',
                 'Product_Name' => 'required|string|max:255',
                 'Message' => 'required|string',
+                'recaptcha_token' => 'required|string',
             ]);
 
             $formData = [
@@ -32,10 +33,24 @@ class FormController extends Controller
             ];
     
             if ($validator->fails()) {
-                return response()->json(['success' => false, 'message' => $validator]);
+                return response()->json(['success' => false, 'message' => $validator->errors()->first()]);
             }
-    
-            \Log::info($request->all());
+            
+            $recaptchaResponse  = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+                'secret' => config('services.recaptcha.secret') ?? env('RECAPTCHA_SECRET_KEY'),
+                'response' => $request->recaptcha_token,
+                'remoteip' => $request->ip(),
+            ]);
+
+            $recaptchaResult = $recaptchaResponse->json();
+            if (
+                !isset($recaptchaResult['success']) || !$recaptchaResult['success'] ||
+                ($recaptchaResult['action'] ?? '') !== 'submit' ||
+                ($recaptchaResult['score'] ?? 0) < 0.5
+            ) {
+                return response()->json(['success' => false, 'message' => 'reCAPTCHA Verification failed']);
+            }
+            
            
             $externalUrl ="https://script.google.com/macros/s/AKfycbzXDS62prNmiWr3f0rrnxEtSPQFLMXLnJtDAlGWCyaJFkY6T60af-ucnv_1_EBi-K_pFQ/exec";
     
@@ -60,10 +75,24 @@ class FormController extends Controller
                 'Phone' => 'required|string|max:10',
                 'Email' => 'required|email',
                 'Message' => 'nullable|string|max:500',
+                'recaptcha_token' => 'required|string',
             ]);
-
+            
             if ($validator->fails()) {
-                return redirect()->back()->withErrors($validator)->withInput();
+                return response()->json(['success' => false, 'message' =>  $validator->errors()->first()]);
+            }
+            $recaptchaResponse  = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+                'secret' => config('services.recaptcha.secret') ?? env('RECAPTCHA_SECRET_KEY'),
+                'response' => $request->recaptcha_token,
+                'remoteip' => $request->ip(),
+            ]);
+            $recaptchaResult = $recaptchaResponse->json();
+            if (
+                !isset($recaptchaResult['success']) || !$recaptchaResult['success'] ||
+                ($recaptchaResult['action'] ?? '') !== 'submit' ||
+                ($recaptchaResult['score'] ?? 0) < 0.5
+            ) {
+                return response()->json(['success' => false, 'message' => 'reCAPTCHA Verification failed']);
             }
 
             $webhookUrl = "https://script.google.com/macros/s/AKfycbyfreQySQeRmarwqccBgta2UFde9YhCI57d3PseeWlbbxspX1GLIc-UKyANJFzF7bVjDw/exec";
@@ -84,7 +113,6 @@ class FormController extends Controller
     public function addCvDetail(Request $request){
         try {
             // Validate form inputs
-            // dd($request->all());
             $request->validate([
                 'Name' => 'required|string|max:255',
                 'Email' => 'required|email',
@@ -93,6 +121,7 @@ class FormController extends Controller
                 'Pincode' => 'required|string|max:10',
                 'Position' => 'required|string',
                 'cv' => 'required|mimes:pdf,doc,docx|max:2048',
+                'recaptcha_token' => 'required|string',
             ]);
 
             $formData = [
@@ -104,6 +133,21 @@ class FormController extends Controller
                 'Position' => $request->input('Position'),
             ];
 
+            $recaptchaResponse  = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+                'secret' => config('services.recaptcha.secret') ?? env('RECAPTCHA_SECRET_KEY'),
+                'response' => $request->recaptcha_token,
+                'remoteip' => $request->ip(),
+            ]);
+
+            $recaptchaResult = $recaptchaResponse->json();
+
+            if (
+                !isset($recaptchaResult['success']) || !$recaptchaResult['success'] ||
+                ($recaptchaResult['action'] ?? '') !== 'submit' ||
+                ($recaptchaResult['score'] ?? 0) < 0.5
+            ) {
+                return response()->json(['success' => false, 'message' => 'reCAPTCHA Verification failed']);
+            }
            
             if ($request->hasFile('cv')) {
                 $cvPath = $request->file('cv')->store('cvs', 'public');
@@ -124,7 +168,7 @@ class FormController extends Controller
             }
         } catch (\Exception $e) {
             \Log::error('Form submission error: ' . $e->getMessage());
-            return response()->json(['success' => false, 'message' => 'Error While submitting form!']);
+            return response()->json(['success' => false, 'message' => $e->getMessage()]);
         }
     }
 
@@ -143,6 +187,7 @@ class FormController extends Controller
                 'Select_Unit' => 'nullable|string',
                 'Select_Area' => 'nullable|string',
                 'Message' => 'required|string',
+                'recaptcha_token' => 'required|string',
             ]);
 
             // Prepare data for the webhook
@@ -157,7 +202,21 @@ class FormController extends Controller
                 'Select Area' => $request->input('Select_Area'),
                 'Message' => $request->input('Message'),
             ];
-            // dd($formData);
+            
+            $recaptchaResponse  = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+                'secret' => config('services.recaptcha.secret') ?? env('RECAPTCHA_SECRET_KEY'),
+                'response' => $request->recaptcha_token,
+                'remoteip' => $request->ip(),
+            ]);
+
+            $recaptchaResult = $recaptchaResponse->json();
+            if (
+                !isset($recaptchaResult['success']) || !$recaptchaResult['success'] ||
+                ($recaptchaResult['action'] ?? '') !== 'submit' ||
+                ($recaptchaResult['score'] ?? 0) < 0.5
+            ) {
+                return response()->json(['success' => false, 'message' => 'reCAPTCHA Verification failed']);
+            }
             // Replace with your actual webhook URL
             $webhookUrl = 'https://script.google.com/macros/s/AKfycbyb7Vez8W5klHybeYWfSHYQtz6m3VvY7P9vS5I3nCA4VgFK-dMuicmJ6bpDUS2imCX3Lg/exec';
 
@@ -172,7 +231,7 @@ class FormController extends Controller
             }
         } catch (\Exception $e) {
             \Log::error('Form submission error: ' . $e->getMessage());
-            return response()->json(['success' => false, 'message' => 'Error While submitting form!']);
+            return response()->json(['success' => false, 'message' =>  $e->getMessage()]);
         }
        
     }
