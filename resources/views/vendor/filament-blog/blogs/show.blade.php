@@ -143,7 +143,9 @@
                                     <div class="d-flex m-0 align-items-center align-self-start">
                                         @if($post->categories)
                                             @foreach($post->categories as $categories)
-                                                <p class="m-0 fs-14">{{$categories['name'] ?? ''}}</p>
+                                                <a href="{{route('filamentblog.category.post',['category' => $categories['slug']])}}">
+                                                    <p class="m-0 fs-14">{{$categories['name'] ?? ''}}</p>
+                                                </a>
                                             @endforeach
                                         @endif
                                     </div>

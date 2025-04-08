@@ -849,7 +849,7 @@ nav:after {
   font-size: 50px;
 }
 .bnr_sldr .slick-dots {
-  display: none;
+  display: none !important;
 }
 
 .advce_manufrng_steps .item-slidr ul.multiple-items .slick-dots li {

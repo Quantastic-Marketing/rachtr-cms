@@ -117,7 +117,7 @@
                                     <div class="blog-content">
                                         <p class="fs-12 text-muted mb-1">{{ \Carbon\Carbon::parse($post->published_at)->format('M d')}}</p>
                                         @foreach ($post->categories as $category)
-                                            <a href="#" class="blog-category">{{$category->name}}</a>
+                                            <a href="{{route('filamentblog.category.post',['category' => $category->slug])}}" class="blog-category">{{$category->name}}</a>
                                         @endforeach
                                         <a href="{{route('filamentblog.post.show', ['post' => $post->slug]) }}">
                                             <h2 class="blog-title mt-2">{{$post->title}}</h2>
@@ -165,7 +165,9 @@
                             <div class="related-post-desc">
                                 <a href="{{ route('filamentblog.post.show', ['post' => $relatedPost->slug]) }}" class="text-dark text-decoration-none">{{\Illuminate\Support\Str::limit(strip_tags($relatedPost->title), 50, '...')}}</a>
                                 @foreach ($relatedPost->categories as $category)
-                                <p class="text-muted small">{{$category->name}}</p>
+                                <a href="{{route('filamentblog.category.post',['category' => $category->slug])}}">
+                                    <p class="text-muted small">{{$category->name}}</p>
+                                </a>
                                 @endforeach
                             </div>
                             <img src="{{$relatedPost->feature_photo}}" alt="{{$relatedPost->photo_alt_text}}">

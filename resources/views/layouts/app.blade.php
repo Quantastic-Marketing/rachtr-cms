@@ -47,7 +47,7 @@
                 <!-- Preload Font Awesome (if used above the fold) -->
                 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
                 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
-                <script  src="{{ asset('js/jquery.min.js') }}" type="text/jscript"></script>
+                <script  src="{{ asset('js/jquery.min.js') }}" type="text/jscript" defer></script>
                 <script defer src="{{ asset('js/slick.js') }}"></script>
                 
             @vite([
