@@ -110,7 +110,8 @@
                               <div class="mb-2 ps-1 col">
                                 <input type="massage" class="form-control" id="Message" placeholder="Message" name="Message" required>
                               </div>
-                          </div>   
+                          </div>  
+                          <input type="hidden" name="recaptcha_token" id="recaptcha_token"> 
                           <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
                         </form>
                     </div>
@@ -137,3 +138,8 @@
             </div>
         </div>
     </section>  
+
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.key') ?? env('RECAPTCHA_SITE_KEY') }}"></script>
+<script>
+     window.RECAPTCHA_SITE_KEY = "{{ config('services.recaptcha.key') ?? env('RECAPTCHA_SITE_KEY') }}";
+</script>
