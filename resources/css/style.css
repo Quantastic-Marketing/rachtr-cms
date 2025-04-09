@@ -1450,3 +1450,6 @@ ul.padd0 li::before {
 .bnr_sldr .slick-initialized .slick-slide{
     display: block !important;
 }
+.grecaptcha-badge{
+  display: none;
+}
