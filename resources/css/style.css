@@ -589,8 +589,8 @@ nav:after {
   background: #eeeeee;
 }
 .blogs .blogs_sec h2 {
-  text-align: center;
-  padding: 30px 0;
+  /* text-align: center;
+  padding: 30px 0; */
 }
 .blogs .blogs_sec ul {
   text-align: center;
