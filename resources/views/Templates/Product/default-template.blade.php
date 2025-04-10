@@ -54,7 +54,7 @@
                 <!-- Accordion for Details -->
                 <div class="col-lg-5 align-items-start">
                     @isset($product->name)
-                     <h2 class="product-title color-orange d-none d-lg-block">{{ $product->name }}</h2>
+                     <h1 class="product-title color-orange d-none d-lg-block">{{ $product->name }}</h1>
                     @endisset
 
                     @if(!empty($product->content['product_benefits']))
