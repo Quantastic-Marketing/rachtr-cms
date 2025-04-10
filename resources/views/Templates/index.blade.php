@@ -40,7 +40,7 @@
                          <div class="content">
                              <div class="container">
                                  <div class="content-details ms-0">
-                                      <h1 class="fw-bold" >Building Communities, Brick by Brick</h1>
+                                      <h2 class="fw-bold" >Building Communities, Brick by Brick</h2>
                                       <p>RachTR empowers builders, architects, and artisans with high-performance coatings and adhesives. Together, we're shaping India's built environment.</p>
                                       <p class="pt-0 p-xxl-0 m-xxl-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p>
                                  </div>
@@ -66,7 +66,7 @@
                          <div class="content">
                              <div class="container">
                                  <div class="content-details ms-0">
-                                      <h1 class="fw-bold" >Built on Trust</h1>
+                                      <h2 class="fw-bold" >Built on Trust</h2>
                                       <p>RachTR is your trusted partner for construction and industrial<br/> solutions. Made for diverse conditions.</p>
                                       <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRust</span></p> 
                                  </div>
@@ -92,7 +92,7 @@
                          <div class="content">
                              <div class="container">
                                  <div class="content-details ms-0">
-                                      <h1 class="fw-bold" >Innovating for the Future, At the Forefront</h1>
+                                      <h2 class="fw-bold" >Innovating for the Future, At the Forefront</h2>
                                       <p>RachTR is at the forefront of construction technology, developing solutions for the future of Indian infrastructure.</p>
                                       <p class="pt-0 p-xxl-0 m-xxl-0"><span class="wht">#Rach</span><span class="org">TRend</span></p> 
                                  </div>
@@ -682,7 +682,7 @@
                                     </div>
                                     <div class="btm_cont">
                                         <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
-                                            <h1 class="title-blog"><strong>{{$blog->title}}</strong></h1>
+                                            <h2 class="title-blog"><strong>{{$blog->title}}</strong></h2>
                                         </a>
                                        
                                     </div>

@@ -491,7 +491,8 @@
     .case-studies-item .slick-arrow {
       display: none !important;
     }
-    .homepg-banner .banner-sec .banner_overlay .content-details h1{
+    .homepg-banner .banner-sec .banner_overlay .content-details h1,
+    .homepg-banner .banner-sec .banner_overlay .content-details h2{
       font-size:34px;
       color: #ffffff;
     }
@@ -543,7 +544,8 @@
     .product-we-offer-section h2{
       font-size:24px;
     }
-    .homepg-banner .banner-sec .banner_overlay .content-details h1{
+    .homepg-banner .banner-sec .banner_overlay .content-details h1,
+    .homepg-banner .banner-sec .banner_overlay .content-details h2{
       font-size:24px;
     }
     .intive_res_dev .res_dev_sec .letst_advermnt_contnt .btm_cont h2{

@@ -1418,7 +1418,8 @@ ul.padd0 li::before {
   font-size:34px;
 }
 
-.homepg-banner .banner-sec .banner_overlay .content-details h1{
+.homepg-banner .banner-sec .banner_overlay .content-details h1,
+.homepg-banner .item .banner-sec .banner_overlay .content .content-details h2{
   font-size:42px;
   color: #ffffff;
 }
