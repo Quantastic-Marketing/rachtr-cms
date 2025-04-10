@@ -13,6 +13,7 @@
             $seoImage = $seo->image ?? asset('images/favicon_img.webp');
             $metaData = json_decode($seo->meta ?? '{}', true);
             $focusKeywords = isset($metaData['focus_keywords']) ? implode(', ', $metaData['focus_keywords']) : 'rachtr';
+            $robots = $seo->robots ?? 'not specified';
 
             $currentPath = request()->path();
         @endphp
@@ -21,7 +22,7 @@
             <meta name="author" content="{{ $seoAuthor }}">
             <meta name="keywords" content="{{ $focusKeywords }}">
             <link rel="canonical" href="{{ $canonicalUrl }}">
-
+            <meta name="robots" content="{{ $robots }}">
             <!-- Open Graph (Facebook, LinkedIn) -->
             <meta property="og:title" content="{{ $seoTitle }}">
             <meta property="og:description" content="{{ $seoDescription }}">
