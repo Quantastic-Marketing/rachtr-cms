@@ -3,7 +3,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <title>RachTR</title>
+        <title>RachTR Blog | Insights on Industrial Flooring, Epoxy, and More</title>
+            <meta name="description" content="Explore the RachTR blog for expert insights on industrial flooring, epoxy solutions, and construction technologies. Learn about the latest trends in commercial and residential flooring.">
+            <meta name="author" content="Ramakant Pandey">
+            <meta name="keywords" content="epoxy flooring blogs,tile adhesive blog,blogs">
+            <link rel="canonical" href="https://www.rachtr.com/blogs">
+            <meta name="robots" content="index,follow">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script  src="{{ asset('js/jquery.min.js') }}" type="text/jscript"></script>
