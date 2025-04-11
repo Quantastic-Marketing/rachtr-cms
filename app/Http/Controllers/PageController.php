@@ -106,13 +106,30 @@ class PageController extends Controller
             \Log::info('Added Home URL to sitemap');
 
             // Add Pages
-            $pages = Pages::select(['slug', 'updated_at', 'parent_id'])->with('parent')->get();
+            $pages = Pages::select(['id', 'slug', 'updated_at', 'parent_id'])
+                            ->with(['parent' => function ($query) {
+                                $query->select('id', 'slug', 'parent_id');
+                            }])->get();
 
             foreach ($pages as $page) {
-                $url = "{$baseUrl}/{$page->full_slug}";
+                $slug = $page->slug;
+                $current = $page->parent;
+                $visited = [$page->id];
+                $depth = 0;
+                $maxDepth = 2; 
+                while ($current && !in_array($current->id, $visited) && $depth < $maxDepth) {
+                    $slug = "{$current->slug}/{$slug}";
+                    $visited[] = $current->id;
+                    $current = $current->parent;
+                    $depth++;
+                }
+                
+                $slug = ltrim($slug, '/'); 
+                $url = rtrim($baseUrl, '/') . '/' . $slug;
                 $sitemap->add(Url::create($url)
                     ->setLastModificationDate($page->updated_at)
                     ->setPriority(0.7));
+         
                 \Log::info('Added Page to sitemap', ['url' => $url]);
             }
 
