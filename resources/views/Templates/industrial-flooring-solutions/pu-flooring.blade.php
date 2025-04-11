@@ -11,7 +11,7 @@
                     <img src="{{ asset('images/loor_mob_bg.webp') }}" alt="img background" class=" d-block d-md-none">
                 </div>
                 <div class="heading-holder">
-                    <h2>PU FLOORING</h2>
+                    <h1 class="fw-bold">PU FLOORING</h1>
                     <p> <span>HOME > </span> <a class="text-decoration-underline text-white" href="">INDUSTRIAL FLOORING</a></p>
                 </div>
             </div>

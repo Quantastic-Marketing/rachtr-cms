@@ -333,7 +333,8 @@ nav:after {
 .our_strengths .our_strengths_contnt h2,
 .comprnsive_solution .cmp_solutn_heding h2,
 .advce_manufrng .advce_manufrng_contnt h2,
-.faqs .faqs_headng h2 {
+.faqs .faqs_headng h2,
+.pu-banner h1 {
   font-size: 34px;
 }
 
