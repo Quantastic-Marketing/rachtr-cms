@@ -46,10 +46,11 @@ class PageResource extends Resource
                         TextInput::make('slug')
                             ->label('Slug')
                             ->placeholder('Enter the slug')
-                            ->visible(fn (callable $get) => !$get('is_hompage'))->required(),
+                            ->visible(fn (callable $get) => !$get('is_homepage')),
                         Checkbox::make('is_homepage')
                             ->label('Set as Homepage')
                             ->default(false)
+                            ->reactive()
                             ->helperText('Only one post can be the homepage at a time.'),
                         Select::make('status')
                             ->options([
