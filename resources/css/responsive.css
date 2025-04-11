@@ -531,7 +531,8 @@
     .offer-product figure img.big-height.m-block-height {
       height: 220px;
     }
-    .bnr_sldr .item .banner-sec .banner_overlay .content .content-details h2 {
+    .bnr_sldr .item .banner-sec .banner_overlay .content .content-details h2,
+    .pu-banner h1 {
       font-size: 24px;
     }
     .bnr_sldr .item .banner-sec .banner_overlay .content .content-details p {
@@ -557,6 +558,7 @@
     .commercial-comprnsive .case_studies_downd .downd_img img{
       border-radius: 10px;
     }
+
     
   }
   
@@ -687,7 +689,8 @@
     .about-solution h2,
     .commercial-building-solutions .header-heading-part h2,
     .why-trust-rachtr-section .why-trust-inner-block h2,
-    .blogs .blogs_sec h2{
+    .blogs .blogs_sec h2,
+    .pu-banner h1{
       font-size:20px;
     }
     .our_strengths .any_projects ul li div.projects_blogs .projects_txt.projects_txt {

@@ -1164,13 +1164,13 @@
                         <span>4 min read</span>
                       </div>
                       <div class="btm_cont">
-                        <h1 >
+                        <h2 >
                           <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
                             <strong class="title-blog"
                               >{{$blog->title}}</strong
                             ></a
                           >
-                        </h1>
+                        </h2>
                       </div>
                     </div>
                   </li>
