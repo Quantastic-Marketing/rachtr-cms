@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin
 Disallow: /admin/login
 
-Sitemap: https://rachtr.com/sitemap.xml
+Sitemap: https://www.rachtr.com/sitemap.xml
