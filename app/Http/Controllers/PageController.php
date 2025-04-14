@@ -50,14 +50,30 @@ class PageController extends Controller
                 }
 
                 $products = collect();
-                if (!empty($pageDetails->content) && isset($pageDetails->content['sections'])) {
-                    $productIds = collect($pageDetails->content['sections'])
+                $productIds = collect();
+                if (!empty($pageDetails->content) ) {
+
+                    if(isset($pageDetails->content['sections'])){
+                        $productIds = collect($pageDetails->content['sections'])
                         ->pluck('products')
                         ->flatten()
                         ->unique()
                         ->filter()
                         ->values();
-                    
+                    }elseif(isset($pageDetails->content['systems'])){
+                        $productIds = collect($pageDetails->content['systems'])
+                            ->flatMap(function ($system) {
+                                return collect($system['products'] ?? [])
+                                    ->merge(
+                                        collect($system['product_category'] ?? [])
+                                            ->pluck('products')
+                                            ->flatten()
+                                    );
+                            })
+                            ->filter()
+                            ->unique()
+                            ->values();
+                    }
                     
                     if ($productIds->isNotEmpty()) {
                         $products = Product::whereIn('id', $productIds)
@@ -66,7 +82,7 @@ class PageController extends Controller
                         ->keyBy('id');
                     }
                 }
-             
+                
                 return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products'=>$products,'blogs' => $blogs,'parentName' => $parentName]);
             }
         }catch(Exception $e){
@@ -92,7 +108,7 @@ class PageController extends Controller
     public function getSitemap()
     {   
         \Log::info('Sitemap generation started');
-
+        // dd('here');
         try {
             $sitemap = Sitemap::create();
             $baseUrl = config('app.url');
