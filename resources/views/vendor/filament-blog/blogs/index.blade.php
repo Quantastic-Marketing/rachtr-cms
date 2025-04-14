@@ -83,7 +83,9 @@
                 <div class="col-lg-8 ">
                     @foreach($posts as $post)
                         <div class="card border-0 shadow-sm mb-4">
-                            <img src="{{ asset($post->featurePhoto) }}" class="card-img-top card-img-style" alt="{{ $post->photo_alt_text}}">
+                            <a href="{{route('filamentblog.post.show', ['post' => $post->slug]) }}" >
+                                <img src="{{ asset($post->featurePhoto) }}" class="card-img-top card-img-style" alt="{{ $post->photo_alt_text}}">
+                            </a>
                             <div class="card-body p-4 p-sm-5 m-0">
                                 <div class="blog-content pb-4">
                                     <p class="fs-12 text-muted mb-1">{{ \Carbon\Carbon::parse($post->published_at)->format('M d')}}</p>
@@ -145,7 +147,9 @@
                                        </a>
                                     @endforeach
                                 </div>
-                                <img src="{{ asset($post->featurePhoto) }}" alt="{{ $post->photo_alt_text}}">
+                                <a href="{{route('filamentblog.post.show', ['post' => $post->slug]) }}" class="me-0">
+                                    <img src="{{ asset($post->featurePhoto) }}" alt="{{ $post->photo_alt_text}}">
+                                </a>
                             </div>
                         @endforeach
                     </div>

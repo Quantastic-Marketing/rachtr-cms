@@ -1260,6 +1260,7 @@ section.product-we-offer-section {
   display: block;
   object-fit: cover;
   max-width: 100%;
+  height: 100%;
 }
 .faq_fade_effct .img img {
   height: 420px;
@@ -1458,4 +1459,12 @@ ul.padd0 li::before {
 }
 .grecaptcha-badge{
   display: none;
+}
+
+.letst_advermnt_contnt a{
+  display: contents;
+}
+.letst_advermnt_contnt .top_cont,
+.blogs_contnt .top_cont{
+  color: #ffffff;
 }
