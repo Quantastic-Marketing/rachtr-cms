@@ -303,7 +303,9 @@
                             @foreach($blogs->skip(max(0, $blogs->count() - 3))->take(3) as $blog)
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
-                                   <img src="{{asset($blog->featurePhoto)}}" alt="blog picture" loading="lazy"/>
+                                    <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                                        <img src="{{asset($blog->featurePhoto)}}" alt="blog picture" loading="lazy"/>
+                                    </a> 
                                 </div>
                                 <div class="letst_advermnt_contnt">
                                    <div class="top_cont m-0 ms-2 mt-2">
@@ -672,7 +674,9 @@
                             @foreach($blogs->take(3) as $blog)                           
                             <li class="col-lg-4 mx-3">
                                 <div class="blogs_img">
-                                   <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture" loading="lazy"/>
+                                   <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                                    <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture" loading="lazy"/>
+                                   </a> 
                                 </div>
                                 <div class="blogs_contnt">
                                    <div class="top_cont">
