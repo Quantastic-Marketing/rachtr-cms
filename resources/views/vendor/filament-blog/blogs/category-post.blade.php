@@ -111,7 +111,9 @@
                         <div class="card border-0 shadow-sm mb-4 d-flex flex-column flex-md-row">
                             <div class="d-flex flex-column flex-md-row row-md">
                                 <div class="col-md-6 card-image-wrapper">
-                                    <img src="{{ asset($post->featurePhoto) }}" class="" alt="{{ $post->photo_alt_text}}">
+                                    <a href="{{route('filamentblog.post.show', ['post' => $post->slug]) }}">
+                                        <img src="{{ asset($post->featurePhoto) }}" class="" alt="{{ $post->photo_alt_text}}">
+                                    </a>
                                 </div>
                                 <div class="col-md-6 card-body p-4  p-md-3 py-md-4">
                                     <div class="blog-content">
@@ -170,7 +172,9 @@
                                 </a>
                                 @endforeach
                             </div>
-                            <img src="{{$relatedPost->feature_photo}}" alt="{{$relatedPost->photo_alt_text}}">
+                            <a href="{{ route('filamentblog.post.show', ['post' => $relatedPost->slug]) }}" class="me-0">
+                                <img src="{{$relatedPost->feature_photo}}" alt="{{$relatedPost->photo_alt_text}}">
+                            </a>
                         </div>
                       @endforeach
                     </div>

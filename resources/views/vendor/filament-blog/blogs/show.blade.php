@@ -195,7 +195,9 @@
                                         <div class="d-none d-sm-flex col-sm-6 me-2">
                                             <div class="card recent-blog m-0 w-100">
                                                 <div class="rec-post-img">
-                                                    <img src="{{$relatedPost->feature_photo}}" alt="Marble Floor Polishing">
+                                                    <a href="{{ route('filamentblog.post.show', ['post' => $relatedPost->slug]) }}">
+                                                        <img src="{{$relatedPost->feature_photo}}" alt="Marble Floor Polishing">
+                                                    </a>
                                                 </div>
                                                 
                                                 <div class="d-flex flex-column gap-4 justify-content-between p-4 m-0 rec-pos-style">
@@ -235,7 +237,9 @@
                                         <div class="d-flex d-sm-none col-sm-6 me-2">
                                             <div class="card recent-blog m-0 w-100">
                                                 <div class="rec-post-img">
-                                                    <img src="{{$relatedPost->feature_photo}}" alt="Marble Floor Polishing">
+                                                    <a href="{{ route('filamentblog.post.show', ['post' => $relatedPost->slug]) }}">
+                                                        <img src="{{$relatedPost->feature_photo}}" alt="Marble Floor Polishing">
+                                                    </a>
                                                 </div>
                                                 
                                                 <div class="d-flex flex-column gap-4 justify-content-between p-4 m-0 rec-pos-style">
@@ -294,7 +298,9 @@
                                         <a href="{{ route('filamentblog.post.show', ['post' => $relatedPost->slug]) }}" class="text-dark text-decoration-none">{{$relatedPost->title ?? ''}}</a>
                                         <p class="small text-muted">{{ \Carbon\Carbon::parse($relatedPost->published_at)->format('M d')}}</p>
                                     </div>
-                                    <img src="{{$relatedPost->feature_photo}}" alt="Post Image">
+                                    <a href="{{route('filamentblog.post.show', ['post' => $relatedPost->slug]) }}" class="me-0">
+                                        <img src="{{$relatedPost->feature_photo}}" alt="Post Image">
+                                    </a>
                                 </div>
                             @endforeach
                         </div>
