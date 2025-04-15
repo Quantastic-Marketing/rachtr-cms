@@ -140,6 +140,6 @@
     </section>  
 
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.key') ?? env('RECAPTCHA_SITE_KEY') }}" async defer></script>
-<script>
+<script async defer>
      window.RECAPTCHA_SITE_KEY = "{{ config('services.recaptcha.key') ?? env('RECAPTCHA_SITE_KEY') }}";
 </script>
