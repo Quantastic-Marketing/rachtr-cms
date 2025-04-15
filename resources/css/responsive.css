@@ -500,6 +500,9 @@
       width: 100%;
       height: 100%;
   }
+  .header .menuBar-wrap div.search-container{
+    width:300px;
+  }
   }
   
   @media (max-width: 768px) {
@@ -699,6 +702,9 @@
     .service-banner .item .banner-sec .banner_overlay .content .content-details p{
       font-size: 12px;
     }
+    .header .menuBar-wrap div.search-container{
+      width:150px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -811,5 +817,15 @@
       font-weight: 700;
       color: #000000;
     }
+    .header .menuBar-wrap div.search-container:first-of-type svg {
+      width: 9px;
+    }
+    
+    .header .menuBar-wrap div.search-container:first-of-type input{
+      font-size: 11px;
+      height: 30px;
+      width:100px;
+    }
+    
   }
   

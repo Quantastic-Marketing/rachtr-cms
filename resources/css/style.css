@@ -109,19 +109,28 @@ body {
 .header .nav ul li a:hover {
   color: #cf1c1c;
 }
-.header .nav ul li:last-child div.search-container {
+.header .nav ul li:last-child div.search-container,
+.header .menuBar-wrap div.search-container:first-of-type {
   background: #ee6e25;
   margin-top: 6px;
   border-radius: 100px;
 }
-.header .nav ul li div.search-container {
+
+.header .nav ul li div.search-container,
+.header .menuBar-wrap div.search-container:first-of-type {
   padding: 0 10px;
 }
-.header .nav ul li div.search-container svg {
+.header .nav ul li div.search-container ,
+.header .menuBar-wrap div.search-container:first-of-type{
+  padding: 0 10px;
+}
+.header .nav ul li div.search-container svg,
+.header .menuBar-wrap div.search-container:first-of-type svg {
   width: 15px;
   color: #ffffff;
 }
-.header .nav ul li div.search-container input {
+.header .nav ul li div.search-container input ,
+.header .menuBar-wrap div.search-container:first-of-type input{
   background: transparent;
   border: 0;
   width: 120px;
@@ -132,11 +141,15 @@ body {
   border-radius: 100px;
 }
 .header .nav ul li div.search-container:hover,
-.header .nav ul li div.search-container input:hover {
+.header .nav ul li div.search-container input:hover,
+.header .menuBar-wrap div.search-container:first-of-type:hover,
+.header .menuBar-wrap div.search-container:first-of-type input:hover {
   background: rgba(199, 199, 199);
 }
 .header .nav ul li div.search-container:hover svg,
-.header .nav ul li div.search-container input:hover svg {
+.header .nav ul li div.search-container input:hover svg,
+.header .menuBar-wrap div.search-container:first-of-type:hover svg,
+.header .menuBar-wrap div.search-container:first-of-type input:hover svg {
   color: #ee6e25;
 }
 
@@ -204,7 +217,8 @@ nav:after {
 
 /*li > a:only-child:after { content: ''; }*/
 
-.header .nav ul li div.search-container input::placeholder {
+.header .nav ul li div.search-container input::placeholder,
+.header .menuBar-wrap div.search-container:first-of-type input::placeholder {
   color: rgba(255, 255, 255, 1);
 }
 .bnr_sldr .item .banner-sec {
