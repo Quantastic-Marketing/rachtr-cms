@@ -83,7 +83,7 @@
                 <div class="col-lg-8 ">
                     @foreach($posts as $post)
                         <div class="card border-0 shadow-sm mb-4">
-                            <a href="{{route('filamentblog.post.show', ['post' => $post->slug]) }}" >
+                            <a href="{{route('filamentblog.post.show', ['post' => $post->slug]) }}" class="m-0">
                                 <img src="{{ asset($post->featurePhoto) }}" class="card-img-top card-img-style" alt="{{ $post->photo_alt_text}}">
                             </a>
                             <div class="card-body p-4 p-sm-5 m-0">
