@@ -24,14 +24,14 @@
                 <div class="row align-items-center">
                     <div class="col-md-10">
                         <div class="row d-flex">
-                            <div class="col-lg-6 order-2 order-lg-1 py-3">
+                            <div class="col-lg-6 order-2 py-3">
                                 <div class="image-container">
                                     <!-- <div class="background-box"></div> -->
                                     <img src="{{ asset('images/innovation.webp')}}" alt="Modern Architect Center with sleek glass buildings and innovative design">
                                     <!-- <div class="overlay-box"></div> -->
                                 </div>
                             </div>
-                            <div class="col-lg-6 px-4 order-1 order-lg-2">
+                            <div class="col-lg-6 px-4 order-1">
                                 <div class="heading-holder">
                                     <h2 class="fw-bold">Innovative Solutions for Architects</h2>
                                 </div>

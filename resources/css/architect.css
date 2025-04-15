@@ -116,7 +116,6 @@
 }
 
 .arch-solution .image-container img {
-    border-radius: 15px;
     width: 100%;
     height: auto;
     object-fit: cover;
