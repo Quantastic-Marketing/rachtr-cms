@@ -668,6 +668,12 @@
     .service-banner .banner-sec .banner_overlay .content-details p{
       font-size:18px;
     }
+    .header .menuBar-wrap div.search-container{
+      width:196px;
+    }
+    .header .menuBar-wrap div.search-container:first-of-type input{
+      width:96px;
+    }
   }
 
   @media (max-width:499px){
@@ -703,7 +709,10 @@
       font-size: 12px;
     }
     .header .menuBar-wrap div.search-container{
-      width:150px;
+      width:120px;
+    }
+    .header .menuBar-wrap div.search-container:first-of-type input{
+      width:80px;
     }
   }
   
@@ -820,11 +829,13 @@
     .header .menuBar-wrap div.search-container:first-of-type svg {
       width: 9px;
     }
-    
+    .header .menuBar-wrap div.search-container{
+      width:110px;
+    }
     .header .menuBar-wrap div.search-container:first-of-type input{
       font-size: 11px;
       height: 30px;
-      width:100px;
+      width:70px;
     }
     
   }
