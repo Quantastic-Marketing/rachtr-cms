@@ -125,8 +125,8 @@
                    <div class="col-lg-6 ps-0">
                        <div class="about_techTr_content">
                             <h2 class="pb-3 fw-bold">About <span class="org">RachTR</span></h2>
-                            <p>At RachTR, we specialize in developing, manufacturing, and selling coatings and <span>marble tile adhesives</span> for construction and industrial sectors.</p>
-                           <p>We also provide <span>industrial epoxy flooring services</span> cater to diverse sectors, including Automobile, Pharmaceutical, Electronics, Food & Beverages, Metal Fabrication, Chemical, and Warehouses & Godowns.</p>
+                            <p>At RachTR, we specialize in developing, manufacturing, and selling coatings and <a href="https://www.rachtr.com/residential-commercial-building/installation-systems" target="_blank"><span>marble tile adhesives</span></a> for construction and industrial sectors.</p>
+                           <p>We also provide <a href="https://www.rachtr.com/industrial-flooring-solutions/epoxy-flooring-services"><span>industrial epoxy flooring services</span></a> cater to diverse sectors, including Automobile, Pharmaceutical, Electronics, Food & Beverages, Metal Fabrication, Chemical, and Warehouses & Godowns.</p>
                            <p>Since 2013, our pioneering efforts have focused on revolutionizing products tailored for Indian conditions, ensuring optimal performance and customer satisfaction.</p>
                            <p><span class="text-decoration-none">At RachTR, we believe in 3 principles:</span></p>
                            
