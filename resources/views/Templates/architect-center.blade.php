@@ -192,7 +192,7 @@
                 <div class="row g-0">
                     <div class="col-lg-12">
                         <div class="res_dev_contnt col-lg-10 col-md-12">
-                            <h2 class="fw-bold">Technoical Resources</h2>
+                            <h2 class="fw-bold">Technical Resources</h2>
 
                             <div class="row g-0">
                                 <div class="res_dev_txt col-lg-8 col-md-8 col-sm-12 mx-0 pt-4">
