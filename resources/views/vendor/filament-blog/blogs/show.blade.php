@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         @php
-            $seo = $page->seoDetail ?? (object)[];
+            $seo = $post->seoDetail ?? (object)[];
             $seoTitle = $seo->title ?? config('app.name');
             $seoDescription = $seo->description ?? 'Rachtr';
             $seoAuthor = $seo->author ?? 'Rachtr';
