@@ -671,7 +671,7 @@
                          <ul class="padd0">
                             @foreach($blogs->take(3) as $blog)                           
                             <li class="col-lg-4 mx-3">
-                                <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}" class="d-block text-decoration-none text-dark h-100">
+                                <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}" class="d-block text-decoration-none text-dark h-100 m-0">
                                     <div class="blogs_img">
                                         <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture" loading="lazy"/>
                                     </div>
