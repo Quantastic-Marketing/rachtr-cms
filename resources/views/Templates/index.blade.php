@@ -671,21 +671,21 @@
                          <ul class="padd0">
                             @foreach($blogs->take(3) as $blog)                           
                             <li class="col-lg-4 mx-3">
-                                <div class="blogs_img">
-                                    <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture" loading="lazy"/>
-                                </div>
-                                <div class="blogs_contnt">
-                                  <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
-                                    <div class="top_cont">
-                                       <span class="fw-bold">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
-                                       <sup class="fw-bold">.</sup>
-                                       <span class="fw-bold">5 min read</span>
+                                <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}" class="d-block text-decoration-none text-dark h-100">
+                                    <div class="blogs_img">
+                                        <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture" loading="lazy"/>
                                     </div>
-                                    <div class="btm_cont">
-                                        <h2 class="title-blog"><strong>{{$blog->title}}</strong></h2>
+                                    <div class="blogs_contnt">
+                                        <div class="top_cont">
+                                        <span class="fw-bold">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
+                                        <sup class="fw-bold">.</sup>
+                                        <span class="fw-bold">5 min read</span>
+                                        </div>
+                                        <div class="btm_cont">
+                                            <h2 class="title-blog"><strong>{{$blog->title}}</strong></h2>
+                                        </div>
                                     </div>
-                                  </a>
-                                </div>
+                                </a>
                             </li>
                             @endforeach
                           </ul>
