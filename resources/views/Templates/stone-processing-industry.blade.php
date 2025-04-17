@@ -76,7 +76,7 @@
                   <h2
                       class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4"
                     >
-                      Welcome to <br />
+                      Welcome to
                       <span style="color: #ef6e25">RachTR</span> Stone Processing
                       Industry Solutions
                     </h2>
@@ -161,7 +161,7 @@
                   >
                     <span class="slider-nav-block right-nav">{!! html_entity_decode($slide['right_tab'] ?? '') !!}</span>
                     <div
-                      class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                      class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                     >
                       <h3 class="fw-bold m-0 pb-4">{{ $slide['heading'] ?? '' }}</h3>
                       <p class="mb-4 m-0">
@@ -189,7 +189,7 @@
                     >
                       <span class="slider-nav-block right-nav">Granite</span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Marble</h3>
                         <p class="mb-4 m-0">
@@ -217,7 +217,7 @@
                     >
                       <span class="slider-nav-block right-nav">Travertine </span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Granite</h3>
                         <p class="mb-4 m-0">
@@ -245,7 +245,7 @@
                     >
                       <span class="slider-nav-block right-nav">Quartzite </span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Travertine</h3>
                         <p class="mb-4 m-0">
@@ -273,7 +273,7 @@
                     >
                       <span class="slider-nav-block right-nav">Sandstone </span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Quartzite</h3>
                         <p class="mb-4 m-0">
@@ -301,7 +301,7 @@
                     >
                       <span class="slider-nav-block right-nav">Marble </span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Sandstone</h3>
                         <p class="mb-4 m-0">
@@ -353,7 +353,7 @@
                 >
                   <span class="slider-nav-block right-nav">Granite</span>
                   <div
-                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                   >
                     <h3 class="fw-bold m-0 pb-4">Marble</h3>
                     <p class="mb-4 m-0">
@@ -381,7 +381,7 @@
                 >
                   <span class="slider-nav-block right-nav">Travertine </span>
                   <div
-                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                   >
                     <h3 class="fw-bold m-0 pb-4">Granite</h3>
                     <p class="mb-4 m-0">
@@ -409,7 +409,7 @@
                 >
                   <span class="slider-nav-block right-nav">Quartzite </span>
                   <div
-                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                   >
                     <h3 class="fw-bold m-0 pb-4">Travertine</h3>
                     <p class="mb-4 m-0">
@@ -437,7 +437,7 @@
                 >
                   <span class="slider-nav-block right-nav">Sandstone </span>
                   <div
-                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                   >
                     <h3 class="fw-bold m-0 pb-4">Quartzite</h3>
                     <p class="mb-4 m-0">
@@ -465,7 +465,7 @@
                 >
                   <span class="slider-nav-block right-nav">Marble </span>
                   <div
-                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                    class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                   >
                     <h3 class="fw-bold m-0 pb-4">Sandstone</h3>
                     <p class="mb-4 m-0">
@@ -908,7 +908,7 @@
                         src="{{ asset('storage/' . $feature['image']) }}"
                         alt="{{ strip_tags($feature['title']) }}"
                       />
-                      <h6 class="text-center text-md-start">
+                      <h6 class="text-center fw-bold text-md-start">
                       {!! $feature['title'] !!}
                       </h6>
                     </div>
@@ -925,7 +925,7 @@
                             src="images/industry-expertise.webp"
                             alt="INDUSTRY EXPERTISE"
                           />
-                          <h6 class="text-center text-md-start">
+                          <h6 class="text-center fw-bold text-md-start">
                             INDUSTRY <br />
                             EXPERTISE
                           </h6>
@@ -943,7 +943,7 @@
                           src="images/quality-assurance.webp"
                           alt="QUALITY ASSURANCE"
                         />
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           QUALITY <br />
                           ASSURANCE
                         </h6>
@@ -961,7 +961,7 @@
                           src="images/comprehensive-range.webp"
                           alt="COMPREHENSIVE RANGE"
                         />
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           COMPREHENSIVE <br />
                           RANGE
                         </h6>
@@ -979,7 +979,7 @@
                           src="images/specialize-solution.webp"
                           alt="SPECIALIZED SOLUTIONS"
                         />
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           SPECIALIZED <br />
                           SOLUTIONS
                         </h6>
@@ -1016,7 +1016,7 @@
                       src="images/industry-expertise.webp"
                       alt="INDUSTRY EXPERTISE"
                     />
-                    <h6 class="text-center text-md-start">
+                    <h6 class="text-center fw-bold text-md-start">
                       INDUSTRY <br />
                       EXPERTISE
                     </h6>
@@ -1034,7 +1034,7 @@
                       src="images/quality-assurance.webp"
                       alt="QUALITY ASSURANCE"
                     />
-                    <h6 class="text-center text-md-start">
+                    <h6 class="text-center fw-bold text-md-start">
                       QUALITY <br />
                       ASSURANCE
                     </h6>
@@ -1052,7 +1052,7 @@
                       src="images/comprehensive-range.webp"
                       alt="COMPREHENSIVE RANGE"
                     />
-                    <h6 class="text-center text-md-start">
+                    <h6 class="text-center fw-bold text-md-start">
                       COMPREHENSIVE <br />
                       RANGE
                     </h6>
@@ -1070,7 +1070,7 @@
                       src="images/specialize-solution.webp"
                       alt="SPECIALIZED SOLUTIONS"
                     />
-                    <h6 class="text-center text-md-start">
+                    <h6 class="text-center fw-bold text-md-start">
                       SPECIALIZED <br />
                       SOLUTIONS
                     </h6>
@@ -1094,7 +1094,7 @@
               <div class="blogs_sec py-lg-5 py-2">
                 <div class="mb-lg-5 mb-2 px-lg-5 mx-lg-5">
                   <h2
-                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold text-start"
+                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold blog-case-heading text-dark text-start"
                   >
                     Blogs related to
                     <span class="color-orange">Stone Processing Industry</span>
@@ -1107,27 +1107,21 @@
                 <ul class="padd0">
                   @foreach($blogs->take(3) as $blog)
                   <li class="col-lg-4 mx-3">
-                    <div class="blogs_img">
-                      <img src="{{$blog->featurePhoto}}" />
-                    </div>
-                    <div class="blogs_contnt">
-                      <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                    <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                      <div class="blogs_img">
+                        <img src="{{$blog->featurePhoto}}" />
+                      </div>
+                      <div class="blogs_contnt">
                         <div class="top_cont">
-                          <span class="fw-bold">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
-                          <sup class="fw-bold">.</sup>
-                          <span lass="fw-bold">3 min read</span>
+                            <span class="fw-bold">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
+                            <sup class="fw-bold">.</sup>
+                            <span lass="fw-bold">3 min read</span>
                         </div>
                         <div class="btm_cont">
-                          <h5>
-                            <a
-                              href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}"
-                            >
-                              <strong class="title-blog">{{$blog->title}}</strong></a
-                            >
-                          </h5>
+                            <h5><strong class="title-blog">{{$blog->title}}</strong></h5>
                         </div>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </li>
                   @endforeach
                 </ul>
@@ -1245,29 +1239,50 @@
               {{ $faq['title'] ?? 'FAQs' }}
             </div>
             <div class="faqs_detls row g-0">
-              <div class="col-lg-4 faq_fade_effct">
+              <div class="col-lg-4 faq_fade_effct pt-lg-5">
                 @forelse ($faq['images'] ?? [] as $faqImage)
                     <div class="img">
-                      <img src="{{ asset('storage/' . $faqImage['image']) }}"  alt="{{$faqImage['img_alt'] ?? ''}}"/>
+                      <a href="{{asset('storage/' . $faqImage['image']) }}" data-fancybox="gallery" data-caption="A luxurious room with white marble floors">
+                        <img src="{{ asset('storage/' . $faqImage['image']) }}"  alt="{{$faqImage['img_alt'] ?? ''}}"/>
+                        <p></p>
+                      </a>
                     </div>
                   @empty
                     <div class="img">
-                      <img src="images/stone-processing-pic1.avif" />
+                      <a href="{{asset('images/stone-processing-pic1.avif') }}" data-fancybox="gallery" data-caption="Marble slab in a factory">
+                        <img src="images/stone-processing-pic1.avif" />
+                        <p>Marble slab in a factory</p>
+                      </a>
                     </div>
                     <div class="img">
-                      <img src="images/stone-processing-pic2.avif" />
+                      <a href="{{asset('images/stone-processing-pic2.avif') }}" data-fancybox="gallery" data-caption="Worker applying RachTR GLE 33 on a marble slab in a factory">
+                        <img src="images/stone-processing-pic2.avif" />
+                        <p>Worker applying RachTR GLE 33 on a marble slab in a factory</p>
+                      </a>
                     </div>
                     <div class="img">
-                      <img src="images/stone-processing-pic3.avif" />
+                      <a href="{{asset('images/stone-processing-pic3.avif') }}" data-fancybox="gallery" data-caption="Marble slab in a factory">
+                        <img src="images/stone-processing-pic3.avif" />
+                        <p>Marble slab in a factory</p>
+                      </a>
                     </div>
                     <div class="img">
-                      <img src="images/stone-processing-pic4.avif" />
+                      <a href="{{asset('images/stone-processing-pic4.avif') }}" data-fancybox="gallery" data-caption="Marble slab in a factory getting ready for curing">
+                        <img src="images/stone-processing-pic4.avif" />
+                        <p>Marble slab in a factory getting ready for curing</p>
+                      </a>
                     </div>
                     <div class="img">
-                      <img src="images/stone-processing-pic5.webp" />
+                      <a href="{{asset('images/stone-processing-pic5.webp') }}" data-fancybox="gallery" data-caption="A factory worker applying RachTR GLE 34 on a white marble slab">
+                        <img src="images/stone-processing-pic5.webp" />
+                        <p>A factory worker applying RachTR GLE 34 on a white marble slab</p>
+                      </a>
                     </div>
                     <div class="img">
-                      <img src="images/stone-processing-pic6.webp" />
+                      <a href="{{asset('images/stone-processing-pic6.webp') }}" data-fancybox="gallery" data-caption="A factory worker applying RachTR MLE 33 on a marble slab">
+                        <img src="images/stone-processing-pic6.webp" />
+                        <p>A factory worker applying RachTR MLE 33 on a marble slab</p>
+                      </a>
                     </div>
                 @endforelse  
               </div>
@@ -1281,7 +1296,7 @@
                       @forelse($faq['questions'] ?? [] as $faq)
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                             {!! $faq['acc_title'] !!}
                             </h6>
                           </div>
@@ -1292,7 +1307,7 @@
                         @empty
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               What is the purpose of RachTR's Block Reinforcement
                               System?
                             </h6>
@@ -1310,7 +1325,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               How does RachTR's Resin Line System benefit stone
                               processing?
                             </h6>
@@ -1327,7 +1342,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               What types of cracks can RachTR's Crack Repairing
                               Systems handle?
                             </h6>
@@ -1344,7 +1359,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               What are the advantages of using RachTR's Color &
                               Gloss Enhancer Systems?
                             </h6>
@@ -1361,7 +1376,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               Can RachTR's Block Reinforcement System be used on
                               all types of natural stones?
                             </h6>
@@ -1378,7 +1393,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               Are RachTR's Crack Repairing Systems visible after
                               application?
                             </h6>
@@ -1394,7 +1409,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               What maintenance is required for stones treated with
                               RachTR's Color & Gloss Enhancer Systems?
                             </h6>
@@ -1412,7 +1427,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               Where can I purchase RachTR products for stone
                               processing?
                             </h6>

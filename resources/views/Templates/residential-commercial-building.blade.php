@@ -121,7 +121,7 @@
         $subHeading = $typeSlider['sub_title'] ?? '';
         $slides = $typeSlider['slides'] ?? [];
       @endphp
-        <section class="commercial-building-solutions comprnsive_solution" style="background: url('{{ asset( empty ($backgroundImage) ? 'images/stone-process-bg.webp' : 'storage/' . $backgroundImage) }}') no-repeat center center; background-size: cover;">
+        <section class="commercial-building-solutions residential comprnsive_solution" style="background: url('{{ asset( empty ($backgroundImage) ? 'images/commercial-building-solutions.webp' : 'storage/' . $backgroundImage) }}') no-repeat center center; background-size: cover;">
             <div class="container">
                 <div class="header-heading-part pb-5">
                     <h2 class="text-center display-6 display-lg-4 fw-bold text-black mb-2">
@@ -1291,7 +1291,7 @@
                           src="{{ asset('storage/' . $feature['image']) }}"
                           alt="{{ strip_tags($feature['title']) }}"
                         />
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                         {!! $feature['title'] !!}
                         </h6>
                       </div>
@@ -1308,7 +1308,7 @@
                           src="images/quality-assurance.webp"
                           alt="QUALITY Assurance"
                         />
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                         QUALITY <br>
                         ASSURANCE
                         </h6>
@@ -1322,7 +1322,7 @@
                         class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                       >
                       <img src="images/customized-solution.webp" alt="CUSTOMIZED SOLUTIONS">
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           CUSTOMIZED <br />
                           SOLUTIONS
                         </h6>
@@ -1336,7 +1336,7 @@
                         class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                       >
                       <img src="images/expert-support.webp" alt="EXPERT SUPPORT">
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           EXPERT <br />
                           SUPPORT
                         </h6>
@@ -1352,7 +1352,7 @@
                         class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                       >
                       <img src="images/proven-track-record.webp" alt="PROVEN TRACK RECORD">
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           PROVEN TRACK <br />
                           RECORDS
                         </h6>
@@ -1393,7 +1393,7 @@
                         src="images/quality-assurance.webp"
                         alt="QUALITY Assurance"
                       />
-                      <h6 class="text-center text-md-start">
+                      <h6 class="text-center fw-bold text-md-start">
                       QUALITY <br>
                       ASSURANCE
                       </h6>
@@ -1407,7 +1407,7 @@
                       class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                     >
                     <img src="images/customized-solution.webp" alt="CUSTOMIZED SOLUTIONS">
-                      <h6 class="text-center text-md-start">
+                      <h6 class="text-center fw-bold text-md-start">
                         CUSTOMIZED <br />
                         SOLUTIONS
                       </h6>
@@ -1421,7 +1421,7 @@
                       class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                     >
                     <img src="images/expert-support.webp" alt="EXPERT SUPPORT">
-                      <h6 class="text-center text-md-start">
+                      <h6 class="text-center fw-bold text-md-start">
                         EXPERT <br />
                         SUPPORT
                       </h6>
@@ -1437,7 +1437,7 @@
                       class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                     >
                     <img src="images/proven-track-record.webp" alt="PROVEN TRACK RECORD">
-                      <h6 class="text-center text-md-start">
+                      <h6 class="text-center fw-bold text-md-start">
                         PROVEN TRACK <br />
                         RECORDS
                       </h6>
@@ -1500,7 +1500,7 @@
                       />
                     </div>
                     <div
-                      class="case-study-info d-flex justify-content-between p-lg-5 p-3 gap-2"
+                      class="case-study-info d-flex justify-content-between p-lg-4 p-3 gap-2"
                     >
                       <div class="study-details">
                         <h6 class="color-grey fw-bold fs-6">{{ $slide['right_title'] }}</h6>
@@ -1508,7 +1508,7 @@
                         {{ $slide['subtitle'] }}
                         </h4>
                       </div>
-                      <div class="study-link">
+                      <div class="study-link rotate-90">
                         <a href="{{ $slide['link'] ?? '#' }}"
                           ><svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
                           <g>
@@ -1571,13 +1571,14 @@
                             White Marble Installation
                           </h4>
                         </div>
-                        <div class="study-link">
-                          <a href="{{ config('app.url') . '/blogs' }}"
-                            ><svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
-                            <g>
-                                <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
-                            </g>
-                        </svg></a>
+                        <div class="study-link rotate-90">
+                          <a href="{{ config('app.url') . '/blogs' }}">
+                            <svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
+                              <g>
+                                  <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                              </g>
+                            </svg>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -1595,7 +1596,7 @@
               <div class="blogs_sec py-lg-5 py-2">
                 <div class="mb-lg-5 mb-2 px-lg-5 mx-lg-5">
                   <h2
-                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold text-start"
+                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold text-start text-dark blog-case-heading"
                   >
                     Blogs related to Residential <br />& Commercial Industry
                   </h2>
@@ -1608,27 +1609,23 @@
                 <ul class="padd0">
                   @foreach($blogs->take(3) as $blog)
                   <li class="col-lg-4 mx-3">
-                    <div class="blogs_img">
-                      <img src="{{ asset($blog->featurePhoto) }}" />
-                    </div>
-                    <div class="blogs_contnt">
-                      <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
-                        <div class="top_cont">
-                          <span class="fw-bold">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
-                          <sup class="fw-bold">.</sup>
-                          <span class="fw-bold">4 min read</span>
-                        </div>
-                        <div class="btm_cont">
-                          <h2 >
-                            <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
-                              <strong class="title-blog"
-                                >{{$blog->title}}</strong
-                              ></a
-                            >
-                          </h2>
-                        </div>
-                      </a>
-                    </div>
+                    <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                      <div class="blogs_img">
+                        <img src="{{ asset($blog->featurePhoto) }}" />
+                      </div>
+                      <div class="blogs_contnt">
+                        
+                          <div class="top_cont">
+                            <span class="fw-bold">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
+                            <sup class="fw-bold">.</sup>
+                            <span class="fw-bold">4 min read</span>
+                          </div>
+                          <div class="btm_cont">
+                            <h2><strong class="title-blog">{{$blog->title}}</strong></h2>
+                          </div>
+                      
+                      </div>
+                    </a>
                   </li>
                   @endforeach
                 </ul>
@@ -1746,29 +1743,50 @@
                 {{ $faq['title'] ?? 'FAQs' }}
             </div>
             <div class="faqs_detls row g-0">
-              <div class="col-lg-4 faq_fade_effct">
+              <div class="col-lg-4 faq_fade_effct pt-lg-5">
                 @forelse ($faq['images'] ?? [] as $faqImage)
                   <div class="img">
-                    <img src="{{ asset('storage/' . $faqImage['image']) }}"  alt="{{$faqImage['img_alt'] ?? ''}}"/>
+                    <a href="{{asset('storage/' . $faqImage['image']) }}" data-fancybox="gallery" data-caption="A luxurious room with white marble floors">
+                      <img src="{{ asset('storage/' . $faqImage['image']) }}"  alt="{{$faqImage['img_alt'] ?? ''}}"/>
+                      <p>A luxurious room with white marble floors</p>
+                    </a>
                   </div>
                 @empty
                   <div class="img">
-                    <img src="images/residential-pic-1.webp" />
+                    <a href="{{asset('images/residential-pic-1.webp')}}" data-fancybox="gallery" data-caption="A luxurious room with white marble floors">
+                      <img src="images/residential-pic-1.webp" />
+                      <p>A luxurious room with white marble floors</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/residential-pic-2.webp" />
+                    <a href="{{asset('images/residential-pic-2.webp')}}" data-fancybox="gallery" data-caption="hite marble decor room">
+                      <img src="images/residential-pic-2.webp" />
+                      <p>White marble decor room</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/residential-pic-3.webp" />
+                    <a href="{{asset('images/residential-faq-3.webp')}}" data-fancybox="gallery" data-caption="A luxurious beautiful people with white marbles">
+                      <img src="images/residential-faq-3.webp" />
+                      <p>A luxurious beautiful people with white marbles</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/residential-pic-4.webp" />
+                    <a href="{{asset('images/residential-pic-4.webp')}}" data-fancybox="gallery" data-caption="A Luxurious place with marble flooring">
+                      <img src="images/residential-pic-4.webp" />
+                      <p>A Luxurious place with marble flooring</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/residential-pic-5.webp" />
+                    <a href="{{asset('images/residential-faq-5.webp')}}" data-fancybox="gallery" data-caption="Luxurious room with white marble tiles">
+                      <img src="images/residential-faq-5.webp" />
+                      <p>Luxurious room with white marble tiles</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/residential-pic-6.webp" />
+                    <a href="{{asset('images/residential-pic-6.webp')}}" data-fancybox="gallery" data-caption="A Wall with white marble tiles, installed with TSA PR">
+                      <img src="images/residential-pic-6.webp" />
+                      <p>A Wall with white marble tiles, installed with TSA PR</p>
+                    </a>
                   </div>
                 @endforelse
               </div>
@@ -1782,14 +1800,14 @@
                     @forelse ($faq['questions'] ?? [] as $faq)
                       <div class="accordion-wrapper">
                         <div class="acc-head py-3">
-                          <h6 class="mb-0">{!! $faq['acc_title'] !!} </h6>
+                          <h6 class="mb-0 fw-bold">{!! $faq['acc_title'] !!} </h6>
                         </div>
                         <div class="acc-body"> {!! $faq['acc_body'] !!}</div>
                       </div>
                       @empty
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               What products does RachTR offer for tile
                               installation systems?
                             </h6>
@@ -1806,7 +1824,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               How do RachTR tile adhesives prevent vertical slip
                               during installation?
                             </h6>
@@ -1823,7 +1841,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               What are the benefits of using RachTR grouts?
                             </h6>
                           </div>
@@ -1839,7 +1857,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               Can RachTR polishing systems be used on various
                               types of floors?
                             </h6>
@@ -1856,7 +1874,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               How do RachTR cleaning and maintenance products
                               benefit property owners?
                             </h6>
@@ -1873,7 +1891,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               What support does RachTR provide for product
                               installation and use?
                             </h6>
@@ -1890,7 +1908,7 @@
                         </div>
                         <div class="accordion-wrapper">
                           <div class="acc-head py-3">
-                            <h6 class="mb-0">
+                            <h6 class="mb-0 fw-bold">
                               Where can I purchase RachTR products for my
                               residential or commercial project?
                             </h6>

@@ -363,7 +363,7 @@
                                         which is exorbitantly high.</p>
                                     <p class="pb-5 mb-5">Problem starts immediately and keep on coming at regular
                                         intervals upto 2-3 years which is a...</p>
-                                    <a href="{{ config('app.url') . '/blogs/solutions' }}" target="_blank">View Case Study</a>
+                                    <a href="{{ config('app.url') . '/blogs' }}" target="_blank">View Case Study</a>
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-12">
