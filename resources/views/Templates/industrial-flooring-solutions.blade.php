@@ -101,7 +101,7 @@
                         </p>
                         <p>
                           That’s why RachTR always takes a professional, competitive,
-                          and independent approach to meet your <a href="{{url('/industrial-flooring-solutions/epoxy-flooring-service')}}"></a>epoxy flooring service</a> needs.
+                          and independent approach to meet your <a href="{{url('/industrial-flooring-solutions/epoxy-flooring-service')}}"><span>epoxy flooring service</span></a> needs.
                         </p>
                 @endforelse
                 </div>
@@ -119,8 +119,12 @@
         $subHeading = $typeSlider['sub_title'] ?? '';
         $slides = $typeSlider['slides'] ?? [];
       @endphp
-        <section class="commercial-building-solutions comprnsive_solution" style="background: url(' {{ asset(!empty($backgroundImage) ? 'storage/' . $backgroundImage : 'images/stone-process-bg.webp')}} ' ) no-repeat
-                  center center; background-size: cover;">
+        <section class="commercial-building-solutions industrial-solutions-slider comprnsive_solution">
+          <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="bg-video">
+            <source src="{{ asset('videos/industrial_floor_slider_bg.webm') }}" type="video/webm">
+            <source src="{{ asset('videos/industrial_floor_slider_bg.mp4') }}" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
           <div class="container">
             <div class="header-heading-part pb-5">
               <h2 class="text-center display-6 display-lg-4 fw-bold text-black mb-2">
@@ -147,7 +151,7 @@
                   </div>
                   <div class="col-lg-7 col-12 d-flex align-items-center position-relative">
                     <span class="slider-nav-block right-nav">{!! html_entity_decode($slide['right_tab'] ?? '') !!}</span>
-                    <div class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100">
+                    <div class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0">
                       <h3 class="fw-bold m-0 pb-4">{{ $slide['heading'] ?? '' }}</h3>
                       <p class="mb-4 m-0">
                       {{ $slide['intro_paragraph'] ?? '' }}
@@ -190,7 +194,7 @@
                       <span class="slider-nav-block right-nav"
                         >Automotive, Electronics <br> & Metal Industry</span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Food, Beverages & Pharma Industry</h3>
                         <p class="mb-4 m-0">
@@ -220,7 +224,7 @@
                       <span class="slider-nav-block right-nav"
                         >Chemicals & Fertilizers <br />Industry</span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Automotive, Electronics, & Metal Industry</h3>
                         <p class="mb-4 m-0">
@@ -253,7 +257,7 @@
                         >Shipping, Railway  <br />& Aviation Industry
                       </span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Chemicals & Fertilizers Industry</h3>
                         <p class="mb-4 m-0">
@@ -284,7 +288,7 @@
                         >Swimming <br />Pools
                       </span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Shipping, Railway & Aviation Industry</h3>
                         <p class="mb-4 m-0">
@@ -313,7 +317,7 @@
                       <span class="slider-nav-block right-nav"
                         > Food, Beverages & <br /> Pharma Industry</span>
                       <div
-                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100"
+                        class="case_studies_contn solution-slide-block d-flex flex-column justify-content-center align-items-start h-100 w-100 m-0"
                       >
                         <h3 class="fw-bold m-0 pb-4">Warehousing & Logistics</h3>
                         <p class="mb-4 m-0">
@@ -658,7 +662,7 @@
                         src="{{ asset('storage/' . $feature['image']) }}"
                         alt="{{ strip_tags($feature['title']) }}"
                       />
-                      <h6 class="text-center text-md-start">
+                      <h6 class="text-center fw-bold text-md-start">
                       {!! $feature['title'] !!}
                       </h6>
                     </div>
@@ -675,7 +679,7 @@
                           src="images/quality-assurance.webp"
                           alt="QUALITY ASSURANCE"
                         />
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           QUALITY <br />
                           ASSURANCE
                         </h6>
@@ -692,7 +696,7 @@
                           src="images/customized-solution.webp"
                           alt="RANGE OF OPTIONS"
                         />
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           RANGE OF <br> OPTIONS
                         </h6>
                       </div>
@@ -705,7 +709,7 @@
                         class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                       >
                         <img src="images/innovative-products.webp" alt="INNOVATIVE PRODUCTS" />
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           INNOVATIVE <br />
                           PRODUCTS
                         </h6>
@@ -722,7 +726,7 @@
                           src="images/technical-support.webp"
                           alt="TECHNICAL SUPPORT"
                         />
-                        <h6 class="text-center text-md-start">
+                        <h6 class="text-center fw-bold text-md-start">
                           TECHNICAL <br />
                           SUPPORT
                         </h6>
@@ -761,7 +765,7 @@
                       src="images/quality-assurance.webp"
                       alt="QUALITY ASSURANCE"
                     />
-                    <h6 class="text-center text-md-start">
+                    <h6 class="text-center fw-bold text-md-start">
                       QUALITY <br />
                       ASSURANCE
                     </h6>
@@ -778,7 +782,7 @@
                       src="images/customized-solution.webp"
                       alt="RANGE OF OPTIONS"
                     />
-                    <h6 class="text-center text-md-start">
+                    <h6 class="text-center fw-bold text-md-start">
                       RANGE OF <br> OPTIONS
                     </h6>
                   </div>
@@ -791,7 +795,7 @@
                     class="d-flex flex-column flex-md-row gap-3 mb-lg-4 mb-3 align-items-center"
                   >
                     <img src="images/innovative-products.webp" alt="INNOVATIVE PRODUCTS" />
-                    <h6 class="text-center text-md-start">
+                    <h6 class="text-center fw-bold text-md-start">
                       INNOVATIVE <br />
                       PRODUCTS
                     </h6>
@@ -808,7 +812,7 @@
                       src="images/technical-support.webp"
                       alt="TECHNICAL SUPPORT"
                     />
-                    <h6 class="text-center text-md-start">
+                    <h6 class="text-center fw-bold text-md-start">
                       TECHNICAL <br />
                       SUPPORT
                     </h6>
@@ -837,9 +841,9 @@
                 <div class="case_studies row g-0">
                   <div class="col-md-4 col-12 order-2 order-md-1">
                     <div class="case_studies_contn">
-                      <h5 class="fw-bold pb-2">
+                      <h3 class="fw-bold pb-2">
                       {{ $slide['left_title'] }}
-                      </h5>
+                      </h3>
                       @foreach ($slide['paragraphs'] ?? [] as $para)
                         <p class="pb--md-5 mb-md--5">{{ $para['text'] }}</p>
                       @endforeach
@@ -879,9 +883,13 @@
                           </h4>
                         </div>
                         <div class="study-link">
-                          <a href="{{ $slide['link'] ?? '#' }}" target="_blank"
-                            ><img src="images/arrow-icon.webp" alt="Arrow"
-                          /></a>
+                          <a href="{{ $slide['link'] ?? '#' }}" target="_blank">
+                            <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rf06 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
+                                <g>
+                                    <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
+                                </g>
+                            </svg>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -891,9 +899,9 @@
                   <div class="case_studies row g-0">
                     <div class="col-md-4 col-12 order-2 order-md-1">
                       <div class="case_studies_contn">
-                        <h5 class="fw-bold pb-2">
+                        <h3 class="fw-bold pb-2">
                           Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor
-                        </h5>
+                        </h3>
                         <p class="pb--md-5 mb-md--5">
                           Delhivery, since 2011, is a top e-commerce logistics provider in India, handling last-mile delivery, warehousing, and freight. Its tech and network are vital for Indian e-commerce.
                         </p>
@@ -931,9 +939,13 @@
                             </h4>
                           </div>
                           <div class="study-link">
-                            <a href="{{ asset('/pdfFile/Delhivery_carousel.pdf')}}" target="_blank"
-                              ><img src="images/arrow-icon.webp" alt="Arrow"
-                            /></a>
+                            <a href="{{ asset('/pdfFile/Delhivery_carousel.pdf')}}" target="_blank">
+                              <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rf06 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
+                                <g>
+                                    <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
+                                </g>
+                              </svg>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -942,9 +954,9 @@
                   <div class="case_studies row g-0">
                     <div class="col-md-4 col-12 order-2 order-md-1">
                       <div class="case_studies_contn">
-                        <h5 class="fw-bold pb-2">
+                        <h3 class="fw-bold pb-2">
                           Epoxy Flooring Solution on Oil-Prone Areas for Welspun
-                        </h5>
+                        </h3>
                         <p class="pb--md-5 mb-md--5">
                           Welspun, a global leader in textiles, offers high-quality home textiles & flooring solutions. Their diverse reach and focus on innovation & sustainability set them apart. They aim to be a top brand, prioritizing customer experience and social responsibility.
                         </p>
@@ -982,9 +994,13 @@
                             </h4>
                           </div>
                           <div class="study-link">
-                            <a href="{{asset('pdfFile/Welpsun_carousel.pdf')}}" target="_blank"
-                              ><img src="images/arrow-icon.webp" alt="Arrow"
-                            /></a>
+                            <a href="{{asset('pdfFile/Welpsun_carousel.pdf')}}" target="_blank">
+                              <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rf06 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
+                                <g>
+                                    <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
+                                </g>
+                              </svg>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -993,9 +1009,9 @@
                   <div class="case_studies row g-0">
                     <div class="col-md-4 col-12 order-2 order-md-1">
                       <div class="case_studies_contn">
-                        <h5 class="fw-bold pb-2">
+                        <h3 class="fw-bold pb-2">
                           Achieved a Seamless and Hygienic Flooring Solution at FMCG Factory, Haridwar
-                        </h5>
+                        </h3>
                         <p class="pb--md-5 mb-md--5">
                           FMCG Haridwar, a prominent player in the food industry, required a seamless flooring solution to inhibit microorganism growth and ensure product safety.
                         </p>
@@ -1035,9 +1051,13 @@
                             </h4>
                           </div>
                           <div class="study-link">
-                            <a href="{{ asset('pdfFile/Case_study_ITC.pdf')}}" target="_blank"
-                              ><img src="images/arrow-icon.webp" alt="Arrow"
-                            /></a>
+                            <a href="{{ asset('pdfFile/Case_study_ITC.pdf')}}" target="_blank">
+                              <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rf06 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
+                                <g>
+                                    <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
+                                </g>
+                              </svg>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -1056,7 +1076,7 @@
               <div class="blogs_sec py-lg-5 py-2">
                 <div class="mb-lg-5 mb-2 px-lg-5 mx-lg-5">
                   <h2
-                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold text-start"
+                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold blog-case-heading text-dark text-start"
                   >
                     Blogs related to Industrial  <br /> Flooring Industry
                   </h2>
@@ -1070,31 +1090,23 @@
                   @php $blogs = $blogs->take(2); @endphp
                   @foreach($blogs as $blog)
                   <li>
-                    <div class="blogs_img">
-                      <img
-                        src="{{$blog->featurePhoto}}"
-                      />
-                    </div>
-                    <div class="blogs_contnt">
-                      <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
-                        <div class="top_cont">
-                          <span class="fw-bold">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
-                          <sup class="fw-bold">.</sup>
-                          <span class="fw-bold">2 min read</span>
-                        </div>
-                        <div class="btm_cont">
-                          <h5>
-                            <a
-                              href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}"
-                            >
-                              <strong class="title-blog"
-                                >{{$blog->title}}</strong
-                              ></a
-                            >
-                          </h5>
-                        </div>
-                      </a>
-                    </div>
+                    <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                      <div class="blogs_img">
+                        <img
+                          src="{{$blog->featurePhoto}}"
+                        />
+                      </div>
+                      <div class="blogs_contnt">
+                          <div class="top_cont">
+                            <span class="fw-bold">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
+                            <sup class="fw-bold">.</sup>
+                            <span class="fw-bold">2 min read</span>
+                          </div>
+                          <div class="btm_cont">
+                            <h5><strong class="title-blog">{{$blog->title}}</strong></h5>
+                          </div>
+                      </div>
+                    </a>
                   </li>
                   @endforeach
                 </ul>
@@ -1212,32 +1224,56 @@
               
             </div>
             <div class="faqs_detls row g-0">
-              <div class="col-lg-4 faq_fade_effct">
+              <div class="col-lg-4 faq_fade_effct pt-lg-5">
                 @forelse ($faq['images'] ?? [] as $faqImage)
                   <div class="img">
-                    <img src="{{ asset('storage/' . $faqImage['image']) }}" alt="{{$faqImage['img_alt'] ?? ''}}" />
+                    <a href="{{asset('storage/' . $faqImage['image']) }}" data-fancybox="gallery" data-caption="A luxurious room with white marble floors">
+                      <img src="{{ asset('storage/' . $faqImage['image']) }}" alt="{{$faqImage['img_alt'] ?? ''}}" />
+                      <p></p>
+                    </a>
                   </div>
                  @empty
                   <div class="img">
+                    <a href="{{asset('images/industry-solution-pic1.webp') }}" data-fancybox="gallery" data-caption="Green Industrial Epoxy Flooring RachTR">
                     <img src="images/industry-solution-pic1.webp" />
+                    <p>Green Industrial Epoxy Flooring RachTR</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/industry-solution-pic2.webp" />
+                    <a href="{{asset('images/industry-solution-pic2.webp') }}" data-fancybox="gallery" data-caption="An individual applying grey epoxy flooring">
+                      <img src="images/industry-solution-pic2.webp" />
+                      <p>An individual applying grey epoxy flooring</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/industry-solution-pic3.webp" />
+                    <a href="{{asset('images/industry-faq-3.webp') }}" data-fancybox="gallery" data-caption="RachTR's team performing epoxy flooring activities">
+                      <img src="images/industry-faq-3.webp" />
+                      <p>RachTR's team performing epoxy flooring activities</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/industry-solution-pic4.webp" />
+                    <a href="{{asset('images/industry-solution-pic4.webp') }}" data-fancybox="gallery" data-caption="RachTR's team applying Epoxy flooring in an industry">
+                      <img src="images/industry-solution-pic4.webp" />
+                      <p>RachTR's team applying Epoxy flooring in an industry</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/industry-solution-pic5.webp" />
+                    <a href="{{asset('images/industry-faq-5.webp') }}" data-fancybox="gallery" data-caption="An individual applying blue color epoxy flooring">
+                      <img src="images/industry-faq-5.webp" />
+                      <p>An individual applying blue color epoxy flooring</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/industry-solution-pic6.webp" />
+                    <a href="{{asset('images/industry-solution-pic6.webp') }}" data-fancybox="gallery" data-caption="Process before applying RachTR's epoxy flooring">
+                      <img src="images/industry-solution-pic6.webp" />
+                      <p>Process before applying RachTR's epoxy flooring</p>
+                    </a>
                   </div>
                   <div class="img">
-                    <img src="images/industry-solution-pic7.webp" />
+                    <a href="{{asset('images/industry-solution-pic7.webp') }}" data-fancybox="gallery" data-caption="Blue RachTR Epoxy Flooring in Welspun">
+                      <img src="images/industry-solution-pic7.webp" />
+                      <p>Blue RachTR Epoxy Flooring in Welspun</p>
+                    </a>
                   </div>
                 @endforelse
               </div>
@@ -1251,7 +1287,7 @@
                       @forelse($faq['questions'] ?? [] as $faq)
                       <div class="accordion-wrapper">
                         <div class="acc-head py-3">
-                          <h6 class="mb-0">
+                          <h6 class="mb-0 fw-bold">
                           {!! $faq['acc_title'] !!} 
                           </h6>
                         </div>
@@ -1262,7 +1298,7 @@
                         @empty
                           <div class="accordion-wrapper">
                             <div class="acc-head py-3">
-                              <h6 class="mb-0">
+                              <h6 class="mb-0 fw-bold">
                                 What types of industrial flooring solutions does RachTR offer?
                               </h6>
                             </div>
@@ -1274,7 +1310,7 @@
                           </div>
                           <div class="accordion-wrapper">
                             <div class="acc-head py-3">
-                              <h6 class="mb-0">
+                              <h6 class="mb-0 fw-bold">
                                 What are the benefits of using Epoxy Flooring in industrial settings?
                               </h6>
                             </div>
@@ -1286,7 +1322,7 @@
                           </div>
                           <div class="accordion-wrapper">
                             <div class="acc-head py-3">
-                              <h6 class="mb-0">
+                              <h6 class="mb-0 fw-bold">
                                 How does PU Flooring differ from Epoxy Flooring?
                               </h6>
                             </div>
@@ -1298,7 +1334,7 @@
                           </div>
                           <div class="accordion-wrapper">
                             <div class="acc-head py-3">
-                              <h6 class="mb-0">
+                              <h6 class="mb-0 fw-bold">
                               What industries can benefit from RachTR's industrial flooring solutions?
                               </h6>
                             </div>
@@ -1310,7 +1346,7 @@
                           </div>
                           <div class="accordion-wrapper">
                             <div class="acc-head py-3">
-                              <h6 class="mb-0">
+                              <h6 class="mb-0 fw-bold">
                                 Are RachTR's flooring solutions resistant to chemicals and stains?
                               </h6>
                             </div>
@@ -1322,7 +1358,7 @@
                           </div>
                           <div class="accordion-wrapper">
                             <div class="acc-head py-3">
-                              <h6 class="mb-0">
+                              <h6 class="mb-0 fw-bold">
                                 How do RachTR's flooring solutions contribute to safety in the workplace?
                               </h6>
                             </div>
@@ -1334,7 +1370,7 @@
                           </div>
                           <div class="accordion-wrapper">
                             <div class="acc-head py-3">
-                              <h6 class="mb-0">
+                              <h6 class="mb-0 fw-bold">
                                 Can RachTR's flooring solutions withstand heavy machinery and high traffic?
                               </h6>
                             </div>
@@ -1346,7 +1382,7 @@
                           </div>
                           <div class="accordion-wrapper">
                             <div class="acc-head py-3">
-                              <h6 class="mb-0">
+                              <h6 class="mb-0 fw-bold">
                                 How do RachTR's flooring solutions ensure hygiene in the food and pharmaceutical industries?
 
                               </h6>
@@ -1359,7 +1395,7 @@
                           </div>
                           <div class="accordion-wrapper">
                             <div class="acc-head py-3">
-                              <h6 class="mb-0">
+                              <h6 class="mb-0 fw-bold">
                               How do I get a free quote for RachTR epoxy flooring?
                               </h6>
                             </div>

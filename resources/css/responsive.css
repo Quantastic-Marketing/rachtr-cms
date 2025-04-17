@@ -561,7 +561,7 @@
     .commercial-comprnsive .case_studies_downd .downd_img img{
       border-radius: 10px;
     }
-
+    .stone-processing-solutions .case_studies .case_studies_downd img,.industrial-solutions-slider .case_studies .case_studies_downd img {max-height: 200px}
     
   }
   
@@ -645,7 +645,6 @@
     .faqs .faqs_headng h2 {
       font-size: 28px;
     }
-
     .comprnsive_solution .cmp_solutn_heding h3{
       font-size: 26px;
     }
@@ -674,6 +673,8 @@
     .header .menuBar-wrap div.search-container:first-of-type input{
       width:96px;
     }
+    .blog-case-heading{font-size:28px !important;}
+    .comprnsive_solution .case_studies .case_studies_contn h3{line-height:24px;}
   }
 
   @media (max-width:499px){
@@ -714,6 +715,7 @@
     .header .menuBar-wrap div.search-container:first-of-type input{
       width:80px;
     }
+    .blog-case-heading{font-size:24px !important;}
   }
   
   @media (max-width: 480px) {

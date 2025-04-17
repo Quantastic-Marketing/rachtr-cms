@@ -476,7 +476,7 @@
                 <div class="case_studies row g-0">
                    <div class="col-lg-4 col-md-12">
                       <div class="case_studies_contn">
-                          <h5 class="fw-bold pb-2">Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor</h5>
+                          <h3 class="fw-bold pb-2">Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor</h3>
                           <p class="pb-5 mb-5">Delhivery, since 2011, is a top e-commerce logistics provider in India, handling last-mile delivery, warehousing, and freight. Its tech and network are vital for Indian e-commerce.</p>
                           <a href="{{asset('pdfFile/Delhivery_carousel.pdf')}}" target="_blank">View Case Study</a>
                        </div>
@@ -496,11 +496,13 @@
                                  </li>
                                 <li>
                                    <div class="icon py-2">
-                                         <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rer9 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
-                                            <g>
-                                                <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
-                                            </g>
-                                        </svg>
+                                        <a href="{{asset('pdfFile/Delhivery_carousel.pdf')}}" target="_blank">
+                                            <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rer9 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
+                                                <g>
+                                                    <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
+                                                </g>
+                                            </svg>
+                                        </a>    
                                     </div> 
                                 </li>
                              </ul> 
@@ -512,7 +514,7 @@
                 <div class="case_studies row g-0">
                    <div class="col-lg-4 col-md-12 lft-cont">
                       <div class="case_studies_contn">
-                          <h5 class="fw-bold pb-2">Epoxy Flooring Solution on Oil-Prone Areas for Welspun</h5>
+                          <h3 class="fw-bold pb-2">Epoxy Flooring Solution on Oil-Prone Areas for Welspun</h3>
                           <p class="pb-5 mb-5">Welspun, a global leader in textiles, offers high-quality home textiles & flooring solutions. Their diverse reach and focus on innovation & sustainability set them apart. They aim to be a top brand, prioritizing customer experience and social responsibility.</p>
                           <a href="{{ asset('pdfFile/Welpsun_carousel.pdf') }}" target="_blank">View Case Study</a>
                        </div>
@@ -532,12 +534,14 @@
                                  </li>
                                 <li>
                                    <div class="icon py-2">
+                                    <a href="{{ asset('pdfFile/Welpsun_carousel.pdf') }}" target="_blank">
                                         <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rf06 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
                                             <g>
                                                 <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
                                             </g>
                                         </svg>
-                                    </div> 
+                                    </a>
+                                   </div> 
                                 </li>
                              </ul> 
                              <i class="clear"></i> 
@@ -548,7 +552,7 @@
                 <div class="case_studies row g-0">
                    <div class="col-lg-4 col-md-12 lft-cont">
                       <div class="case_studies_contn">
-                          <h5 class="fw-bold pb-2">White Marble being difficult to install, as white marble is susceptible to stains, yellowness of joints, etc.</h5>
+                          <h3 class="fw-bold pb-2">White Marble being difficult to install, as white marble is susceptible to stains, yellowness of joints, etc.</h3>
                           <p>8/10 contractors refuse to install white marble owing to project failure rate which is exorbitantly high.</p>
                           <p class="pb-5 mb-5">Problem starts immediately and keep on coming at regular intervals upto 2-3 years which is a...</p>
                           <a href="#" target="_blank">View Case Study</a>
@@ -567,14 +571,16 @@
                                          <h5 class="fw-bold py-2">White Marble Installation</h5>
                                      </div>
                                  </li>
-                                <li>
+                                <li class="rotate-90">
                                    <div class="icon py-2">
-                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rer9 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
+                                    <a href="#" target="_blank">
+                                        <svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
                                             <g>
-                                                <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
+                                                <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
                                             </g>
                                         </svg>
-                                    </div> 
+                                    </a>
+                                   </div> 
                                 </li>
                              </ul> 
                              <i class="clear"></i> 
@@ -585,7 +591,7 @@
                 <div class="case_studies row g-0">
                    <div class="col-lg-4 col-md-12 lft-cont">
                       <div class="case_studies_contn">
-                          <h5 class="fw-bold pb-2">Achieved a Seamless and Hygienic Flooring Solution at FMCG Factory, Haridwar</h5>
+                          <h3 class="fw-bold pb-2">Achieved a Seamless and Hygienic Flooring Solution at FMCG Factory, Haridwar</h3>
                           <p>FMCG Haridwar, a prominent player in the food industry, required a seamless flooring solution to inhibit microorganism growth and ensure product safety.</p>
                           <p class="pb-2 mb-2">The existing epoxy flooring was damaged, and the plant operations could not be halted, necessitating a swift, dust-free maintenance solution.</p>
                           <a href="{{ asset('pdfFile/Case_study_ITC.pdf')}}" target="_blank">View Case Study</a>
@@ -606,11 +612,13 @@
                                  </li>
                                 <li>
                                    <div class="icon py-2">
-                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rer9 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
-                                        <g>
-                                            <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
-                                        </g>
-                                    </svg>
+                                    <a href="{{ asset('pdfFile/Case_study_ITC.pdf')}}" target="_blank">
+                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rer9 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
+                                            <g>
+                                                <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
+                                            </g>
+                                        </svg>
+                                    </a>
                                    </div> 
                                 </li>
                              </ul> 
@@ -622,7 +630,7 @@
                 <div class="case_studies row g-0">
                    <div class="col-lg-4 col-md-12 lft-cont">
                       <div class="case_studies_contn">
-                          <h5 class="fw-bold pb-2">Successful Delivery of Complex Flooring in Just 3 Days for Escorts Kubota</h5>
+                          <h3 class="fw-bold pb-2">Successful Delivery of Complex Flooring in Just 3 Days for Escorts Kubota</h3>
                           <p>We had just 72 hours to transform a large industrial space for Escorts Kubota into a showroom-ready floor, complete with intricate designs, multiple colors, and precision-aligned white lines.</p>
                           <p class="pb-2 mb-2">Read more to know how we successfully delivered complex flooring for Escorts Kubota in record time</p>
                           <a href="{{ config('app.url') . '/blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}" target="_blank">View Case Study</a>
@@ -641,14 +649,16 @@
                                          <h5 class="fw-bold py-2">Delivered Complex Flooring in Just 3 Days for Escorts Kubota</h5>
                                      </div>
                                  </li>
-                                <li>
-                                   <div class="icon py-2">
-                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="16.378 16.378 167.244 167.244" viewBox="16.378 16.378 167.244 167.244" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lyo12rer9 svg [data-color="1"] {fill: #EF6E25;}</style></defs>
-                                                <g>
-                                                    <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z" fill="#010107" data-color="1"></path>
-                                                </g>
-                                            </svg>
-                             </div> 
+                                <li class="rotate-90">
+                                   <div class="icon  py-2">
+                                     <a href="{{ config('app.url') . '/blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}" target="_blank">
+                                        <svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
+                                            <g>
+                                                <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                                            </g>
+                                        </svg>
+                                     </a>
+                                   </div> 
                                 </li>
                              </ul> 
                              <i class="clear"></i> 
@@ -667,7 +677,7 @@
               <div class="row g-0">
                   <div class="col-lg-12">
                      <div class="blogs_sec py-5">
-                         <h2 class="fw-bold">Blogs</h2>
+                         <h2 class="fw-bold text-center blog-case-heading py-2 pb-lg-5">Blogs</h2>
                          <ul class="padd0">
                             @foreach($blogs->take(3) as $blog)                           
                             <li class="col-lg-4 mx-3">
@@ -711,30 +721,39 @@
                     <div class="col-lg-4 faq_fade_effct">
                        <div class="img">
                            <img src="images/faq-1.webp" loading="lazy" />
+                           <p>Marble Tile Coating</p>
                         </div>
                         <div class="img">
                            <img src="images/faq-2.webp" loading="lazy" />
+                           <p>RachTR Stone Processing Industry</p>
                         </div>
                         <div class="img">
                            <img src="images/faq-3.webp" loading="lazy" />
+                           <p>A person applying RachTR MLE 33 a solvent free, two components, medium viscosity epoxy system for map</p>
                         </div>
                         <div class="img">
                            <img src="images/faq-4.webp" loading="lazy" />
+                           <p>Marble Tile Polishing</p>
                         </div>
                         <div class="img">
                            <img src="images/faq-5.webp" loading="lazy" />
+                           <p>Installing marble tile with tile adhesive on the wall</p>
                         </div>
                         <div class="img">
-                           <img src="images/faq-6.webp" loading="lazy" />
+                           <img src="images/faq-home-6.webp" loading="lazy" />
+                           <p>Marble Slab Curing</p>
                         </div>
                         <div class="img">
                            <img src="images/faq-7.webp" loading="lazy" />
+                           <p>RachTR Stone Processing Industry Solutions</p>
                         </div>
                         <div class="img">
                            <img src="images/faq-8.webp" loading="lazy" />
+                           <p>A man applying epoxy to the floor</p>
                         </div>
                         <div class="img">
                            <img src="images/faq-9.webp" loading="lazy" />
+                           <p>A person applying a layer of epoxy on the floor</p>
                         </div>
                     </div>
                     <div class="col-lg-7">
