@@ -659,7 +659,7 @@
                         <h2 class="fw-bold">Experience the <br> <span>RachTR</span> Difference</h2>
                     </div>
                     <div class="row g-0">
-                        <div class="col-12 col-lg-6 pe-md-3 order-2 order-lg-1">
+                        <div class="col-12 col-lg-6 pe-md-3 order-2 order-lg-1  ps-lg-4">
                             <div class="form-container">
                                 <h3>Request a Custom Epoxy Flooring Solution</h3>
                                 <div class="note-wrapper">
