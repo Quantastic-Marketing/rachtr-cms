@@ -680,6 +680,9 @@
     }
     .blog-case-heading{font-size:28px !important;}
     .comprnsive_solution .case_studies .case_studies_contn h3{line-height:24px;}
+    .bnr_sldr.service-banner .item .banner-sec {
+      height: 387px;
+    }
   }
 
   @media (max-width:499px){

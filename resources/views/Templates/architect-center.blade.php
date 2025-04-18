@@ -24,7 +24,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-10">
                         <div class="row d-flex">
-                            <div class="col-lg-6 order-2 py-3">
+                            <div class="col-lg-6 pt-lg-0 ps-lg-0 order-2 py-3 pe-5">
                                 <div class="image-container">
                                     <!-- <div class="background-box"></div> -->
                                     <img src="{{ asset('images/innovation.webp')}}" alt="Modern Architect Center with sleek glass buildings and innovative design">
@@ -250,8 +250,8 @@
                         <div class="case_studies row g-0">
                             <div class="col-lg-4 col-md-12">
                                 <div class="case_studies_contn">
-                                    <h5 class="fw-bold pb-2">Successful Restoration of Delhivery's Warehouse Damaged
-                                        Concrete Floor</h5>
+                                    <h3 class="fw-bold pb-2">Successful Restoration of Delhivery's Warehouse Damaged
+                                        Concrete Floor</h3>
                                     <p class="pb-5 mb-5">Delhivery, since 2011, is a top e-commerce logistics provider
                                         in India, handling last-mile delivery, warehousing, and freight. Its tech and
                                         network are vital for Indian e-commerce.</p>
@@ -275,24 +275,26 @@
                                             </li>
                                             <li>
                                                 <div class="icon py-2">
-                                                    <svg preserveAspectRatio="xMidYMid meet"
-                                                        data-bbox="16.378 16.378 167.244 167.244"
-                                                        viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
-                                                        xmlns="http://www.w3.org/2000/svg" data-type="color"
-                                                        role="presentation" aria-hidden="true" aria-label="">
-                                                        <defs>
-                                                            <style>
-                                                                #comp-lyo12rer9 svg [data-color="1"] {
-                                                                    fill: #EF6E25;
-                                                                }
-                                                            </style>
-                                                        </defs>
-                                                        <g>
-                                                            <path
-                                                                d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
-                                                                fill="#010107" data-color="1"></path>
-                                                        </g>
-                                                    </svg>
+                                                    <a href="{{asset('pdfFile/Delhivery_carousel.pdf')}}" target="_blank">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="16.378 16.378 167.244 167.244"
+                                                            viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lyo12rer9 svg [data-color="1"] {
+                                                                        fill: #EF6E25;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                    fill="#010107" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -304,7 +306,7 @@
                         <div class="case_studies row g-0">
                             <div class="col-lg-4 col-md-12 lft-cont">
                                 <div class="case_studies_contn">
-                                    <h5 class="fw-bold pb-2">Epoxy Flooring Solution on Oil-Prone Areas for Welspun</h5>
+                                    <h3 class="fw-bold pb-2">Epoxy Flooring Solution on Oil-Prone Areas for Welspun</h3>
                                     <p class="pb-5 mb-5">Welspun, a global leader in textiles, offers high-quality home
                                         textiles & flooring solutions. Their diverse reach and focus on innovation &
                                         sustainability set them apart. They aim to be a top brand, prioritizing customer
@@ -328,24 +330,26 @@
                                             </li>
                                             <li>
                                                 <div class="icon py-2">
-                                                    <svg preserveAspectRatio="xMidYMid meet"
-                                                        data-bbox="16.378 16.378 167.244 167.244"
-                                                        viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
-                                                        xmlns="http://www.w3.org/2000/svg" data-type="color"
-                                                        role="presentation" aria-hidden="true" aria-label="">
-                                                        <defs>
-                                                            <style>
-                                                                #comp-lyo12rf06 svg [data-color="1"] {
-                                                                    fill: #EF6E25;
-                                                                }
-                                                            </style>
-                                                        </defs>
-                                                        <g>
-                                                            <path
-                                                                d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
-                                                                fill="#010107" data-color="1"></path>
-                                                        </g>
-                                                    </svg>
+                                                    <a href="{{asset('pdfFile/Welpsun_carousel.pdf')}}" target="_blank">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="16.378 16.378 167.244 167.244"
+                                                            viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lyo12rf06 svg [data-color="1"] {
+                                                                        fill: #EF6E25;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                    fill="#010107" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -357,8 +361,8 @@
                         <div class="case_studies row g-0">
                             <div class="col-lg-4 col-md-12 lft-cont">
                                 <div class="case_studies_contn">
-                                    <h5 class="fw-bold pb-2">White Marble being difficult to install, as white marble is
-                                        susceptible to stains, yellowness of joints, etc.</h5>
+                                    <h3 class="fw-bold pb-2">White Marble being difficult to install, as white marble is
+                                        susceptible to stains, yellowness of joints, etc.</h3>
                                     <p>8/10 contractors refuse to install white marble owing to project failure rate
                                         which is exorbitantly high.</p>
                                     <p class="pb-5 mb-5">Problem starts immediately and keep on coming at regular
@@ -379,26 +383,15 @@
                                                     <h5 class="fw-bold py-2">White Marble Installation</h5>
                                                 </div>
                                             </li>
-                                            <li>
+                                            <li class="rotate-90">
                                                 <div class="icon py-2">
-                                                    <svg preserveAspectRatio="xMidYMid meet"
-                                                        data-bbox="16.378 16.378 167.244 167.244"
-                                                        viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
-                                                        xmlns="http://www.w3.org/2000/svg" data-type="color"
-                                                        role="presentation" aria-hidden="true" aria-label="">
-                                                        <defs>
-                                                            <style>
-                                                                #comp-lyo12rer9 svg [data-color="1"] {
-                                                                    fill: #EF6E25;
-                                                                }
-                                                            </style>
-                                                        </defs>
-                                                        <g>
-                                                            <path
-                                                                d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
-                                                                fill="#010107" data-color="1"></path>
-                                                        </g>
-                                                    </svg>
+                                                    <a href="{{ config('app.url') . '/blogs' }}">
+                                                        <svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
+                                                            <g>
+                                                                <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -410,8 +403,8 @@
                         <div class="case_studies row g-0">
                             <div class="col-lg-4 col-md-12 lft-cont">
                                 <div class="case_studies_contn">
-                                    <h5 class="fw-bold pb-2">Achieved a Seamless and Hygienic Flooring Solution at FMCG
-                                        Factory, Haridwar</h5>
+                                    <h3 class="fw-bold pb-2">Achieved a Seamless and Hygienic Flooring Solution at FMCG
+                                        Factory, Haridwar</h3>
                                     <p>FMCG Haridwar, a prominent player in the food industry, required a seamless
                                         flooring solution to inhibit microorganism growth and ensure product safety.</p>
                                     <p class="pb-2 mb-2">The existing epoxy flooring was damaged, and the plant
@@ -437,24 +430,26 @@
                                             </li>
                                             <li>
                                                 <div class="icon py-2">
-                                                    <svg preserveAspectRatio="xMidYMid meet"
-                                                        data-bbox="16.378 16.378 167.244 167.244"
-                                                        viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
-                                                        xmlns="http://www.w3.org/2000/svg" data-type="color"
-                                                        role="presentation" aria-hidden="true" aria-label="">
-                                                        <defs>
-                                                            <style>
-                                                                #comp-lyo12rer9 svg [data-color="1"] {
-                                                                    fill: #EF6E25;
-                                                                }
-                                                            </style>
-                                                        </defs>
-                                                        <g>
-                                                            <path
-                                                                d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
-                                                                fill="#010107" data-color="1"></path>
-                                                        </g>
-                                                    </svg>
+                                                    <a href="{{asset('pdfFile/Case_study_ITC.pdf')}}" target="_blank">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="16.378 16.378 167.244 167.244"
+                                                            viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lyo12rer9 svg [data-color="1"] {
+                                                                        fill: #EF6E25;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                    fill="#010107" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -466,8 +461,8 @@
                         <div class="case_studies row g-0">
                             <div class="col-lg-4 col-md-12 lft-cont">
                                 <div class="case_studies_contn">
-                                    <h5 class="fw-bold pb-2">Successful Delivery of Complex Flooring in Just 3 Days for
-                                        Escorts Kubota</h5>
+                                    <h3 class="fw-bold pb-2">Successful Delivery of Complex Flooring in Just 3 Days for
+                                        Escorts Kubota</h3>
                                     <p>We had just 72 hours to transform a large industrial space for Escorts Kubota
                                         into a showroom-ready floor, complete with intricate designs, multiple colors,
                                         and precision-aligned white lines.</p>
@@ -491,26 +486,15 @@
                                                         for Escorts Kubota</h5>
                                                 </div>
                                             </li>
-                                            <li>
+                                            <li class="rotate-90">
                                                 <div class="icon py-2">
-                                                    <svg preserveAspectRatio="xMidYMid meet"
-                                                        data-bbox="16.378 16.378 167.244 167.244"
-                                                        viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
-                                                        xmlns="http://www.w3.org/2000/svg" data-type="color"
-                                                        role="presentation" aria-hidden="true" aria-label="">
-                                                        <defs>
-                                                            <style>
-                                                                #comp-lyo12rer9 svg [data-color="1"] {
-                                                                    fill: #EF6E25;
-                                                                }
-                                                            </style>
-                                                        </defs>
-                                                        <g>
-                                                            <path
-                                                                d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
-                                                                fill="#010107" data-color="1"></path>
-                                                        </g>
-                                                    </svg>
+                                                    <a href="{{ config('app.url') . '/blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}">
+                                                        <svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
+                                                            <g>
+                                                                <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -713,7 +697,7 @@
                     <!-- Left Section (White Background) -->
                     <div class="col-lg-6 collab-left d-flex flex-column justify-content-center">
                         <div class="row">
-                            <div class="col-md-9 col-xxl-6 me-xxl-4">
+                            <div class="col-md-9 col-xxl-6">
                                 <h2 class="fw-bold">Collaboration <span class="color-orange">Opportunities</span></h2>
                                  <p>Partner with RachTR for your next project and benefit from our collaborative approach.</p>
                             </div>

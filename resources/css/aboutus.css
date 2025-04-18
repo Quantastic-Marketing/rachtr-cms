@@ -69,7 +69,7 @@
 }
 
 .about-points .point-card{
-        width: 70%;
+        width: 79%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -167,7 +167,7 @@
 
 .founder-section .founder-position {
     font-size: 16px;
-    color: #666;
+    font-weight: bold;
 }
 
 .founder-section .founder-card:hover {
@@ -267,7 +267,6 @@
 
 .mentor-section .mentor-details {
     font-size: 0.9rem;
-    color: #666;
     max-width: 280px;
     margin: 0 auto 15px;
     line-height: 1.4;
@@ -299,6 +298,8 @@
 .cta-section .cta-box .cta-text{
     color: #ffffff;
     margin: 0;
+    font-weight: bold;
+    font-size: 32px;
 }
 
 .cta-section .cta-box  .cta-button {
@@ -339,6 +340,9 @@
     }
     .about-banner{
         margin-top: 56px;
+    }
+    .cta-section .cta-box .cta-text{
+        font-size: 28px;
     }
 }
 
