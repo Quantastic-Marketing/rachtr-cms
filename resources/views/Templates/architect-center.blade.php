@@ -215,16 +215,16 @@
                                         <img src= "{{ asset($blog->featurePhoto) }}" alt="{{$blog->title}}" />
                                     </div>
                                     <div class="letst_advermnt_contnt">
-                                        <div class="top_cont m-0 ms-2 mt-2">
-                                            <span>{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
-                                            <sup>.</sup>
-                                            <span>5 min read</span>
-                                        </div>
-                                        <div class="btm_cont">
-                                            <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                                        <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                                            <div class="top_cont m-0 ms-2 mt-2">
+                                                <span>{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
+                                                <sup>.</sup>
+                                                <span>5 min read</span>
+                                            </div>
+                                            <div class="btm_cont">
                                                 <h2 class="title-blog  ms-2"><strong>{{$blog->title}}</strong></h2>
-                                            </a>
-                                        </div>
+                                            </div>
+                                        </a>
                                     </div>
                                 </li>
                                 @endforeach
