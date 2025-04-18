@@ -12,8 +12,14 @@ class Post extends BasePost
 
     public function toSearchableArray()
     {
+        $cleanBody = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $this->body);
+        $cleanBody = preg_replace('/style=("|\')(.*?)("|\')/is', '', $cleanBody);
+        $cleanBody = preg_replace('/<img[^>]+\>/i', '', $cleanBody);
+        $textOnlyBody = strip_tags($cleanBody);
+
         return [
-            'title' => $this->title
+            'title' => $this->title,
+            'body' => $textOnlyBody,
         ];
     }
 
