@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <section class="about-solution innovation-solutions py-3 py-sm-5">
+      <section class="about-solution industrial-about innovation-solutions py-3 py-sm-5">
         <div class="container">
           <div class="row align-items-center d-flex">
             <div class="col-md-11">
@@ -68,14 +68,14 @@
                 >
                 @if(isset($about['heading']))
                   <h2
-                      class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4"
+                      class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4 p-lg-0"
                     >
                       {{ Str::before($about['heading'], $about['highlight_text']) }}
                       <span style="color: #ef6e25">{{ $about['highlight_text'] }}</span>
                       {{ Str::after($about['heading'], $about['highlight_text']) }}
                     </h2>
                 @else
-                  <h2 class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4 ms-0">
+                  <h2 class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4 ms-0 p-lg-0">
                     Welcome to  <span style="color: #ef6e25">RachTR</span><br /> Industrial
                     Flooring Solutions
                   </h2>
