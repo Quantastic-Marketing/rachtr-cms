@@ -503,6 +503,9 @@
   .header .menuBar-wrap div.search-container{
     width:300px;
   }
+  .blogs .blogs_sec .blogs_img {
+    height: 215px;
+    }
   }
   
   @media (max-width: 768px) {
@@ -562,7 +565,9 @@
       border-radius: 10px;
     }
     .stone-processing-solutions .case_studies .case_studies_downd img,.industrial-solutions-slider .case_studies .case_studies_downd img {max-height: 200px}
-    
+    .blogs .blogs_sec .blogs_img {
+      height: 100%;
+      }
   }
   
   @media (max-width: 767px) {
