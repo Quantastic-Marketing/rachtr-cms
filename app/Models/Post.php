@@ -14,7 +14,7 @@ class Post extends BasePost
     {
         $cleanBody = preg_replace('/<style\b[^>]*>(.*?)<\/style>/is', '', $this->body);
         $cleanBody = preg_replace('/style=("|\')(.*?)("|\')/is', '', $cleanBody);
-        $cleanBody = preg_replace('/<img[^>]+\>/i', '', $cleanBody);
+        $cleanBody = preg_replace('/<img\b[^>]*>/i', '', $cleanBody);
         $textOnlyBody = strip_tags($cleanBody);
 
         return [
