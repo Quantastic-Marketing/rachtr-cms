@@ -100,8 +100,8 @@
                                         </div>
                                         <div class="col-md-10">
                                             <a href="{{route('filamentblog.post.show', ['post' => $blog->slug]) }}">
-                                               <h3 x-html="highlightText('{{ $blog->title ?? 'Blog Title' }}')">{{ $blog->title ?? 'Blog Title'}}</h3>
-                                               <p x-html="highlightText('{{ Str::limit(strip_tags(html_entity_decode($blog->body)), 150) }}')">{{Str::limit(strip_tags(html_entity_decode($blog->body)), 150) ?? 'Blog Body'}}</p>
+                                               <h3 x-html="highlightText(`{{ $blog->title ?? 'Blog Title' }}`)">{{ $blog->title ?? 'Blog Title'}}</h3>
+                                               <p x-html="highlightText(`{{ Str::limit(strip_tags(html_entity_decode($blog->body)), 150) }}`)">{{Str::limit(strip_tags(html_entity_decode($blog->body)), 150) ?? 'Blog Body'}}</p>
                                             </a>
                                         </div>
                                     
