@@ -730,8 +730,8 @@
                         <h2 class="slide-title">Architectural Marvels of 2024</h2>
                     <div class="marvels-slider">
                     <div class="slide-container">
-                        <div class="row w-100 align-items-center">
-                            <div class="col-12 col-lg-5 pe-0">
+                        <div class="row w-100 align-items-stretch">
+                            <div class="col-12 col-lg-5 pe-0 d-flex">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
                                         <a href= "{{ asset('images/slideImage.webp')}}" data-fancybox="gallery-1">
@@ -760,7 +760,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-12 col-lg-7 p-0">
+                            <div class="col-12 col-lg-7 p-0 d-flex">
                                 <div class="slide-card">
                                     <h3 class="highlight-text">Zaishui Art Museum, China</h3>
 
@@ -1023,8 +1023,8 @@
                     </div>
 
                     <div class="slide-container">
-                        <div class="row w-100 align-items-center">
-                            <div class="col-12 col-lg-5 pe-0">
+                        <div class="row w-100 align-items-stretch">
+                            <div class="col-12 col-lg-5 pe-0  d-flex">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
                                         <a href= "{{ asset('images/tree-1.webp')}}" data-fancybox="gallery-2">
@@ -1059,7 +1059,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-12 col-lg-7 p-0">
+                            <div class="col-12 col-lg-7 p-0  d-flex">
                                 <div class="slide-card">
                                     <h3 class="highlight-text">House in the Trees</h3>
 
@@ -1319,8 +1319,8 @@
                     </div>
 
                     <div class="slide-container">
-                        <div class="row w-100 align-items-center">
-                            <div class="col-12 col-lg-5 pe-0">
+                        <div class="row w-100 align-items-stretch">
+                            <div class="col-12 col-lg-5 pe-0  d-flex">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
                                         <a href= "{{ asset('images/bluff-1.webp') }}" data-fancybox="gallery-3">
@@ -1355,7 +1355,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-12 col-lg-7 p-0">
+                            <div class="col-12 col-lg-7 p-0  d-flex">
                                 <div class="slide-card">
                                     <h3 class="highlight-text">House of Bluff by Chaoffice</h3>
 
@@ -1550,8 +1550,8 @@
                     </div>
 
                     <div class="slide-container">
-                        <div class="row w-100 align-items-center">
-                            <div class="col-12 col-lg-5 pe-0">
+                        <div class="row w-100 align-items-stretch">
+                            <div class="col-12 col-lg-5 pe-0 d-flex">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
                                         <a href= "{{ asset('images/slide2-pic1.webp') }}" data-fancybox="gallery-4">
@@ -1604,7 +1604,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-12 col-lg-7 p-0">
+                            <div class="col-12 col-lg-7 p-0 d-flex">
                                 <div class="slide-card">
                                     <h3 class="highlight-text">Vaazh House</h3>
 
@@ -1865,8 +1865,8 @@
                     </div>
 
                     <div class="slide-container">
-                        <div class="row w-100 align-items-center">
-                            <div class="col-12 col-lg-5 pe-0">
+                        <div class="row w-100 align-items-stretch">
+                            <div class="col-12 col-lg-5 pe-0 d-flex">
                                 <div class="marvel-image-slider">
                                     <div class="image-container">
                                         <a href= "{{ asset('images/delugen-1.webp') }}" data-fancybox="gallery-5">
@@ -1908,7 +1908,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-12 col-lg-7 p-0">
+                            <div class="col-12 col-lg-7 p-0 d-flex">
                                 <div class="slide-card">
                                     <h3 class="highlight-text">Expo Cultural Park Greenhouse Garden</h3>
 
