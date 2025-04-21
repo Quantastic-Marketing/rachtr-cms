@@ -20,6 +20,7 @@
             <!-- Sidebar -->
             <div class="col-lg-2 sidebar">
                 <h5>Browse by</h5>
+                <hr>
                 @if(!empty($categories))
                     <ul>
                         <li><a href="{{ route('all-products' ,['slug' => 'all-products']) }}" class="{{ 'all-products' == $slug ? 'active text-decoration-underline' : '' }}">All Products</a></li>
