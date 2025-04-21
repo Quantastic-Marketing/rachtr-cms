@@ -10,21 +10,21 @@
     <div class="product-container container">
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">{{ ucfirst(str_replace('-', ' ', last(request()->segments()))) }}</li>
+            <ol class="breadcrumb ms-4">
+                <li class="breadcrumb-item m-0 text-dark"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active m-0 text-dark">{{ ucfirst(str_replace('-', ' ', last(request()->segments()))) }}</li>
             </ol>
         </nav>
 
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-lg-3 sidebar">
+            <div class="col-lg-2 sidebar">
                 <h5>Browse by</h5>
                 @if(!empty($categories))
                     <ul>
-                        <li><a href="{{ route('all-products' ,['slug' => 'all-products']) }}" class="{{ 'all-products' == $slug ? 'active' : '' }}">All Products</a></li>
+                        <li><a href="{{ route('all-products' ,['slug' => 'all-products']) }}" class="{{ 'all-products' == $slug ? 'active text-decoration-underline' : '' }}">All Products</a></li>
                         @foreach($categories as $category)
-                            <li><a href="{{ route('all-products',['slug' => $category->slug]) }}" class="{{ $category->slug == $slug ? 'active' : '' }}" >{{$category->name}}</a></li>
+                            <li ><a href="{{ route('all-products',['slug' => $category->slug]) }}" class="{{ $category->slug == $slug ? 'active text-decoration-underline' : '' }} fw-bold" >{{$category->name}}</a></li>
                         @endforeach
                     </ul>
                 @endif

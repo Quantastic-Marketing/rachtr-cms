@@ -190,7 +190,13 @@
     .hero-section h1 {
         font-size: 28px;
     }
-    
+    .breadcrumb {
+        align-items: center;
+        justify-content: center;
+    }
+    .sidebar h5 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -208,5 +214,8 @@
 @media (max-width:499px){
     .hero-section h1 {
         font-size: 24px;
+    }
+    .sidebar li {
+        text-align: end;
     }
 }
