@@ -23,7 +23,7 @@
                 <hr>
                 @if(!empty($categories))
                     <ul>
-                        <li><a href="{{ route('all-products' ,['slug' => 'all-products']) }}" class="{{ 'all-products' == $slug ? 'active text-decoration-underline' : '' }}">All Products</a></li>
+                        <li><a href="{{ route('all-products' ,['slug' => 'all-products']) }}" class="{{ 'all-products' == $slug ? 'active text-decoration-underline' : '' }} fw-bold">All Products</a></li>
                         @foreach($categories as $category)
                             <li ><a href="{{ route('all-products',['slug' => $category->slug]) }}" class="{{ $category->slug == $slug ? 'active text-decoration-underline' : '' }} fw-bold" >{{$category->name}}</a></li>
                         @endforeach
