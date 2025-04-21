@@ -30,7 +30,7 @@
     border-right: 1px solid #eee;
 }
 
-.sidebar h5 {
+.sidebar h3 {
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -194,7 +194,7 @@
         align-items: center;
         justify-content: center;
     }
-    .sidebar h5 {
+    .sidebar h3 {
         text-align: center;
     }
 }

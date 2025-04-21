@@ -19,7 +19,7 @@
         <div class="row">
             <!-- Sidebar -->
             <div class="col-lg-2 sidebar">
-                <h5>Browse by</h5>
+                <h3 class="fw-bold">Browse by</h3>
                 <hr>
                 @if(!empty($categories))
                     <ul>
@@ -42,7 +42,10 @@
                             <li><a class="dropdown-item" href="#">Recommended</a></li>
                             <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
                             <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
-                            <li><a class="dropdown-item" href="#">Newest</a></li>
+                            <li><a class="dropdown-item" href="{{ request()->fullUrlWithQuery(['sort' => 'newest']) }}">Newest</a></li>
+                            <li><a class="dropdown-item" href="{{ request()->fullUrlWithQuery(['sort' => 'az']) }}">Sort A - Z</a></li>
+                            <li><a class="dropdown-item" href="{{ request()->fullUrlWithQuery(['sort' => 'za']) }}">Sort Z - A</a></li>
+                            
                         </ul>
                     </div>
                 </div>

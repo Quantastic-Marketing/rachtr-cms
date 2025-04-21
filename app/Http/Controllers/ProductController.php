@@ -34,21 +34,31 @@ class ProductController extends Controller
         public function getAllProducts(Request $request,$slug){
 
             $page = $request->query('page', 1);
+            $sort = $request->query('sort', 'az');
             try{
                 
                 $categories = Category::select('name','slug')->get();
                 if ($slug === 'all-products' || $slug === 'sproducts') {
                     
-                    $products = Cache::remember("all_products_page_{$page}", 600, function () {
-                        return Product::select('name', 'slug','content')->paginate(10);
+                    $products = Cache::remember("all_products_page_{$page}_{$sort}", 600, function () use ($sort) {
+                        return Product::select('name', 'slug','content')
+                                        ->when($sort === 'az', fn($q) => $q->orderBy('name', 'asc'))
+                                        ->when($sort === 'za', fn($q) => $q->orderBy('name', 'desc'))
+                                        ->when($sort === 'newest', fn($q) => $q->orderBy('created_at', 'desc'))
+                                        ->paginate(10);
                     });
 
                 } else {
                         // Cache category-specific products
-                        $products = Cache::remember("category_{$slug}_products", 600, function () use ($slug) {
-                            return Product::whereHas('categories', function ($query) use ($slug) {
+                        $products = Cache::remember("category_{$slug}_products_{$sort}", 600, function () use ($slug,$sort) {
+                            return Product::whereHas('categories', function ($query) use ($slug,$sort) {
                                 $query->where('slug', $slug);
-                            })->select('name', 'slug', 'content')->get(); 
+                            })
+                            ->select('name', 'slug', 'content')
+                            ->when($sort === 'az', fn($q) => $q->orderBy('name', 'asc'))
+                            ->when($sort === 'za', fn($q) => $q->orderBy('name', 'desc'))
+                            ->when($sort === 'newest', fn($q) => $q->orderBy('created_at', 'desc'))
+                            ->get(); 
                         });
             
                        
