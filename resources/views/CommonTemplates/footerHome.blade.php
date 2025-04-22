@@ -119,11 +119,11 @@
                        <div class="social_icon">
                            <p class="mb-2">FOLLOW US</p>
                            <ul>
-                               <li><a href="https://www.instagram.com/rachtr_/" target="_blank"><img src=" {{ asset('images/instagram.webp') }} "/></a></li>
-                               <li><a href="https://www.linkedin.com/company/rachtr/" target="_blank"><img src=" {{ asset('images/linkdin.webp') }} "/></a></li>
-                               <li><a href="https://www.facebook.com/rachtr1" target="_blank"><img src=" {{ asset('images/facebook.webp') }} "/></a></li>
-                               <li><a href="https://x.com/Rachtr1" target="_blank"><img src=" {{ asset('images/twitter.webp') }} "/></a></li>
-                               <li><a href="https://www.youtube.com/channel/UCU5-owLC-ataazxOK0_sb8w" target="_blank"><img src=" {{ asset('images/youtube.webp') }} "/></a></li>
+                               <li><a href="https://www.instagram.com/rachtr_/" target="_blank"><img src=" {{ asset('images/instagram.webp') }} " alt="RachTR Logo"/></a></li>
+                               <li><a href="https://www.linkedin.com/company/rachtr/" target="_blank"><img src=" {{ asset('images/linkdin.webp') }} " alt="RachTR Instagram"/></a></li>
+                               <li><a href="https://www.facebook.com/rachtr1" target="_blank"><img src=" {{ asset('images/facebook.webp') }} " alt="RachTR Facebook"/></a></li>
+                               <li><a href="https://x.com/Rachtr1" target="_blank"><img src=" {{ asset('images/twitter.webp') }} " alt="RachTR Twitter"/></a></li>
+                               <li><a href="https://www.youtube.com/channel/UCU5-owLC-ataazxOK0_sb8w" target="_blank"><img src=" {{ asset('images/youtube.webp') }}" alt="RachTR Youtube"/></a></li>
                            </ul>
                        </div>
                        <div class="careers_btn">
