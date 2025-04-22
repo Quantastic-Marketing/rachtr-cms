@@ -976,7 +976,7 @@
                               alt="RachTR Stone Power"
                             />
                           </figure>
-                          <h6 class="text-center heading-underline">
+                          <h6 class="text-center heading-underline text-black fw-bold fs-6">
                             RachTR Stone Power
                           </h6>
                         </a>
