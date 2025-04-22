@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <meta name="google-site-verification" content="LLHnCxL0ply51MwNKvI7mbYW7yFJQ1GK6g_DrijdgMU" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
@@ -115,11 +116,13 @@
         gtag('config', 'G-FZT2PX2KST');
         </script>
 
-<meta name="google-site-verification" content="CH-Fx7-BhdxpR3zCWKu8yDohtQt5iGrXBd4oDnjFdHs" />
+
 
     </head>
 
     <body  x-data="{ query: new URLSearchParams(window.location.search).get('query') || '' }">
+        
+    <meta name="google-site-verification" content="LLHnCxL0ply51MwNKvI7mbYW7yFJQ1GK6g_DrijdgMU" />
         
             @include('CommonTemplates.headerHome')
 
@@ -182,7 +185,6 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
 
-        <meta name="google-site-verification" content="CH-Fx7-BhdxpR3zCWKu8yDohtQt5iGrXBd4oDnjFdHs" />
     </body>
 
     </html>
