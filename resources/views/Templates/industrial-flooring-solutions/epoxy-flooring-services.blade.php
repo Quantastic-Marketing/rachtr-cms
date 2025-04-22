@@ -14,8 +14,7 @@
                       <div class="content col-md-9">
                           <div class="container">
                               <div class="content-details ms-0">
-                                   <h1 class="fw-bold">Upgrade to <span>RachTR</span><br>
-                                    for durable, sleek Industrial <span>Epoxy</span> flooring</h1>
+                                   <h1 class="fw-bold">Industrial <span>Epoxy</span> flooring Services</h1>
                                    <p>Upgrade your floors with RachTR's high-performance epoxy coatings. Designed for superior strength, chemical resistance, and easy maintenance.
                                 </p>
                                     
@@ -82,7 +81,7 @@
                             <div class="col-12">
                                 <div class="heading-holder py-2">
                                     <h2 class="fw-bold">Built to Last:<br>
-                                       <span>Benefits of RachTR Epoxy Flooring</span></h2>
+                                       <span>Benefits of Epoxy Flooring Services</span></h2>
                                     <p>Experience the superior performance and lasting beauty of floors designed for diverse conditions.</p>
                                 </div>
                                 <div class="benefits-blocks">
@@ -147,7 +146,7 @@
                                     </div>
                                 </div>
                                 <div class="benefits-note mx-md-5 px-md-5 px-3 px-sm-5">
-                                    <p>When considering epoxy flooring price per sq ft, these factors play a critical role in determining the overall budget for your industrial epoxy flooring project.</p>
+                                    <p>When considering <a href="{{ config('app.url') .'/industrial-flooring-solutions/epoxy-flooring-cost-price'}}">epoxy flooring price per sq ft </a>, these factors play a critical role in determining the overall budget for your industrial epoxy flooring project.</p>
                                     <p><a href="{{ config('app.url') .'/industrial-flooring-solutions/epoxy-flooring-cost-price'}}">Click here</a> to get a customized epoxy flooring quote!</p>
                                 </div>
                             </div>
@@ -406,7 +405,7 @@
                 <div class="common-faq-block">
                     <div class="heading-holder py-5 text-center">
                         <h2 class="fw-bold">Common FAQs related to <br>
-                           <span>RachTR Epoxy Solutions</span> </h2>
+                           <span>RachTR Epoxy Flooring Solutions</span> </h2>
                     </div>
                     <div class="faq-block  ">
                     <div class="faq-block px-md-5 mx-md-5 px-sm-3 mx-sm-3">

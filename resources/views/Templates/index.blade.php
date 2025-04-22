@@ -33,32 +33,6 @@
                <div class="item">
                   <div class="banner-sec">
                       <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
-                            <source id="#movie1" src="{{ asset('videos/file-1.webm') }}" type="video/webm">
-                            <source id="#movie1" src="{{ asset('videos/file-1.mp4') }}" type="video/mp4">
-                      </video>
-                      <div class="banner_overlay col-lg-12">
-                         <div class="content">
-                             <div class="container">
-                                 <div class="content-details ms-0">
-                                      <h2 class="fw-bold" >Building Communities, Brick by Brick</h2>
-                                      <p>RachTR empowers builders, architects, and artisans with high-performance coatings and adhesives. Together, we're shaping India's built environment.</p>
-                                      <p class="pt-0 p-xxl-0 m-xxl-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p>
-                                 </div>
-                                 <div class="content-list ms-0">
-                                    <ul>
-                                        <li><a href="{{ config('app.url') . '/residential-commercial-building'}}">⦿ Residential & Commercial Buildings</a></li>
-                                        <li><a href="{{ config('app.url') . '/stone-processing-industry'}}">⦿ Stone Processing Industry</a></li>
-                                        <li><a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">⦿ Industrial Flooring</a></li>
-                                     </ul>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="item">
-                  <div class="banner-sec">
-                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
                             <source id="#movie1" src="{{ asset('videos/trust_bg.webm') }}" type="video/webm">
                             <source id="#movie1" src="{{ asset('videos/trust_bg.mp4') }}" type="video/mp4">
                       </video>
@@ -81,6 +55,32 @@
                          </div>
                      </div>
                   </div>  
+               </div>
+               <div class="item">
+                  <div class="banner-sec">
+                      <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="desktop">
+                            <source id="#movie1" src="{{ asset('videos/file-1.webm') }}" type="video/webm">
+                            <source id="#movie1" src="{{ asset('videos/file-1.mp4') }}" type="video/mp4">
+                      </video>
+                      <div class="banner_overlay col-lg-12">
+                         <div class="content">
+                             <div class="container">
+                                 <div class="content-details ms-0">
+                                      <h2 class="fw-bold" >Building Communities, Brick by Brick</h2>
+                                      <p>RachTR empowers builders, architects, and artisans with high-performance coatings and adhesives. Together, we're shaping India's built environment.</p>
+                                      <p class="pt-0 p-xxl-0 m-xxl-0"><span class="wht">#Rach</span><span class="org">TRibe</span></p>
+                                 </div>
+                                 <div class="content-list ms-0">
+                                    <ul>
+                                        <li><a href="{{ config('app.url') . '/residential-commercial-building'}}">⦿ Residential & Commercial Buildings</a></li>
+                                        <li><a href="{{ config('app.url') . '/stone-processing-industry'}}">⦿ Stone Processing Industry</a></li>
+                                        <li><a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">⦿ Industrial Flooring</a></li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                  </div>
                </div>
                <div class="item">
                   <div class="banner-sec"> 
@@ -217,7 +217,7 @@
                                       </div>
                                       <div class="blog_tranprnt">
                                           <div class="blogs_icon">
-                                            <a href="{{ route('filamentblog.post.index')}}">
+                                            <a href="#innovative-research">
                                               <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155" viewBox="20 22.5 160 155" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9g83n7 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
                                                 <g>
                                                     <path d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z" fill="#FF5200" data-color="1"></path>
@@ -281,7 +281,7 @@
      <!-- This is a section-2 close -->
     
     <!-- This is a section-3 open -->
-      <section class="intive_res_dev py-5">
+      <section class="intive_res_dev innovative-research py-5">
           <div class="container">
               <div class="row g-0">
                   <div class="col-lg-12">
@@ -555,7 +555,7 @@
                           <h3 class="fw-bold pb-2">White Marble being difficult to install, as white marble is susceptible to stains, yellowness of joints, etc.</h3>
                           <p>8/10 contractors refuse to install white marble owing to project failure rate which is exorbitantly high.</p>
                           <p class="pb-5 mb-5">Problem starts immediately and keep on coming at regular intervals upto 2-3 years which is a...</p>
-                          <a href="#" target="_blank">View Case Study</a>
+                          <a href="{{ config('app.url') . '/blogs/white-marble-installation-methodology'}}" target="_blank">View Case Study</a>
                        </div>
                    </div>
                    <div class="col-lg-7 col-md-12">
@@ -573,7 +573,7 @@
                                  </li>
                                 <li class="rotate-90">
                                    <div class="icon py-2">
-                                    <a href="#" target="_blank">
+                                    <a href="{{ config('app.url') . '/blogs/white-marble-installation-methodology'}}" target="_blank">
                                         <svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
                                             <g>
                                                 <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>

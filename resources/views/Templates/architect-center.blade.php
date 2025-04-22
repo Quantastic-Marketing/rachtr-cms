@@ -1171,7 +1171,7 @@
                                                     </div>
                                                     <div class="icon-desc d-flex flex-column m-0 ms-2 ">
                                                         <p class="m-0"><strong>Built:</strong></p>
-                                                        <p class="m-0"> 2022</p>
+                                                        <p class="m-0">2022</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1308,8 +1308,8 @@
                                         <div class="icon-desc-2 d-flex flex-column m-0 ms-4 ms-md-5 ">
                                             <p class="m-0"><strong>Awards:</strong></p>
                                             <ul class="d-flex flex-column">
-                                                <li class="text-start m-0">Featured on ArchDaily: Celebrated for its innovative integration with nature.</li>
-                                                <li class="text-start m-0">Showcased on Arkitera: Praised for its harmonious blend with the surrounding landscape</li>
+                                                <li class="text-start m-0"><strong>Featured on ArchDaily:</strong> Celebrated for its innovative integration with nature.</li>
+                                                <li class="text-start m-0"><strong>Showcased on Arkitera:</strong> Praised for its harmonious blend with the surrounding landscape</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1356,8 +1356,8 @@
 
                             </div>
                             <div class="col-12 col-lg-7 p-0  d-flex">
-                                <div class="slide-card">
-                                    <h3 class="highlight-text">House of Bluff by Chaoffice</h3>
+                                <div class="slide-card justify-content-center d-flex flex-column">
+                                    <h3 class="highlight-text ms-0">House of Bluff by Chaoffice</h3>
 
                                     <div class="row">
                                         <div class="icon-list d-flex flex-column flex-md-row  flex-md-wrap gy-4 ">
@@ -1610,7 +1610,7 @@
 
                                     <div class="row">
                                         <div class="icon-list d-flex flex-column flex-md-row  flex-md-wrap gy-4 ">
-                                        <div class="col-md-6 m-0 ">
+                                            <div class="col-md-6 m-0 ">
                                                 <div class="icon-text d-flex ">
                                                     <div class="icon-circle">
                                                         <svg preserveAspectRatio="xMidYMid meet"
@@ -1675,7 +1675,50 @@
 
                                                 </div>
                                             </div>
+                                            <div class="col-md-6 m-0">
+                                                <div class="icon-text d-flex gap-2">
+                                                    <div class="icon-circle m-0">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="20.9 60.914 160.1 80.286"
+                                                            viewBox="20.9 60.914 160.1 80.286" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-m5v5y3xa svg [data-color="1"] {
+                                                                        fill: #FFFFFF;
+                                                                    }
 
+                                                                    #comp-m5v5y3xa svg [data-color="2"] {
+                                                                        fill: #FFFFFF;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M157.6 67.6c-.3-.8-1-1.4-1.9-1.4h-16.6l.9-2.7c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-1.3 3.9h-20.1l.9-2.7c.3-1-.2-2.2-1.3-2.5s-2.2.2-2.5 1.3l-1.3 3.9H90.4l.9-2.7c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-1.3 3.9H66.1l.9-2.7c.3-1-.2-2.2-1.3-2.5-1-.3-2.2.2-2.5 1.3l-1.3 3.9H46.2c-.9 0-1.6.6-1.9 1.4l-23.3 71c-.2.6-.1 1.3.3 1.8s1 .8 1.6.8H179c.6 0 1.2-.3 1.6-.8s.5-1.2.3-1.8l-23.3-71zm-86.9 69.6h-45l22-67h12.9l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h14l-22 67h-59zm63.3 0l21.1-64.4 21.1 64.4H134z"
+                                                                    fill="#C7E3E3" data-color="1"></path>
+                                                                <path
+                                                                    d="M57.7 92.2l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5H46c-1.1 0-2 .9-2 2s.9 2 2 2h6.2l5.5-4.1z"
+                                                                    fill="#C7E3E3" data-color="1"></path>
+                                                                <path
+                                                                    d="M136 92.2h-6.1l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5h-19.8l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5H81.8l3-9.2c.3-1-.2-2.2-1.3-2.5-1-.3-2.2.2-2.5 1.3l-3.4 10.5 2.9 4h19.8l-5.2 16H75.2l-5.5 4-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h19.8l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h19.8l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h8c1.1 0 2-.9 2-2s-.9-2-2-2h-6.7l5.2-16h7.4c1.1 0 2-.9 2-2s-.7-2-1.8-2zm-16.9 20H99.3l5.2-16h19.8l-5.2 16z"
+                                                                    fill="#C7E3E3" data-color="1"></path>
+                                                                <path
+                                                                    d="M46.9 112.2H40c-1.1 0-2 .9-2 2s.9 2 2 2h5.6l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5-2.9-3.9z"
+                                                                    fill="#C7E3E3" data-color="1"></path>
+                                                                <path
+                                                                    d="M74.3 114.9l.9-2.6 3.2-9.8 2.5-7.6c.2-.6.1-1.3-.3-1.8s-1-.8-1.6-.8H54.9c-.9 0-1.6.6-1.9 1.4l-.9 2.6-1.6 5-4.1 12.4c-.2.6-.1 1.3.3 1.8s1 .8 1.6.8h24c1-.1 1.8-.6 2-1.4zM56.4 96.2h19.8l-1.4 4.4-3.8 11.6H51.2l5.2-16z"
+                                                                    fill="#FF8762" data-color="2"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="icon-desc-1 d-flex flex-column m-0 ms-2 ">
+                                                        <p class="m-0"><strong>Built:</strong></p>
+                                                        <p class="m-0">2024</p>
+                                                    </div>
+                                                </div>
+                                            </div> 
                                             <div class="col-md-6 m-0 ">
                                                 <div class="icon-text d-flex ">
                                                     <div class="icon-circle">
@@ -1786,50 +1829,6 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-6 m-0">
-                                                <div class="icon-text d-flex gap-2">
-                                                    <div class="icon-circle m-0">
-                                                        <svg preserveAspectRatio="xMidYMid meet"
-                                                            data-bbox="20.9 60.914 160.1 80.286"
-                                                            viewBox="20.9 60.914 160.1 80.286" height="200" width="200"
-                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
-                                                            role="presentation" aria-hidden="true" aria-label="">
-                                                            <defs>
-                                                                <style>
-                                                                    #comp-m5v5y3xa svg [data-color="1"] {
-                                                                        fill: #FFFFFF;
-                                                                    }
-
-                                                                    #comp-m5v5y3xa svg [data-color="2"] {
-                                                                        fill: #FFFFFF;
-                                                                    }
-                                                                </style>
-                                                            </defs>
-                                                            <g>
-                                                                <path
-                                                                    d="M157.6 67.6c-.3-.8-1-1.4-1.9-1.4h-16.6l.9-2.7c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-1.3 3.9h-20.1l.9-2.7c.3-1-.2-2.2-1.3-2.5s-2.2.2-2.5 1.3l-1.3 3.9H90.4l.9-2.7c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-1.3 3.9H66.1l.9-2.7c.3-1-.2-2.2-1.3-2.5-1-.3-2.2.2-2.5 1.3l-1.3 3.9H46.2c-.9 0-1.6.6-1.9 1.4l-23.3 71c-.2.6-.1 1.3.3 1.8s1 .8 1.6.8H179c.6 0 1.2-.3 1.6-.8s.5-1.2.3-1.8l-23.3-71zm-86.9 69.6h-45l22-67h12.9l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h14l-22 67h-59zm63.3 0l21.1-64.4 21.1 64.4H134z"
-                                                                    fill="#C7E3E3" data-color="1"></path>
-                                                                <path
-                                                                    d="M57.7 92.2l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5H46c-1.1 0-2 .9-2 2s.9 2 2 2h6.2l5.5-4.1z"
-                                                                    fill="#C7E3E3" data-color="1"></path>
-                                                                <path
-                                                                    d="M136 92.2h-6.1l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5h-19.8l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5H81.8l3-9.2c.3-1-.2-2.2-1.3-2.5-1-.3-2.2.2-2.5 1.3l-3.4 10.5 2.9 4h19.8l-5.2 16H75.2l-5.5 4-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h19.8l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h19.8l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h8c1.1 0 2-.9 2-2s-.9-2-2-2h-6.7l5.2-16h7.4c1.1 0 2-.9 2-2s-.7-2-1.8-2zm-16.9 20H99.3l5.2-16h19.8l-5.2 16z"
-                                                                    fill="#C7E3E3" data-color="1"></path>
-                                                                <path
-                                                                    d="M46.9 112.2H40c-1.1 0-2 .9-2 2s.9 2 2 2h5.6l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5-2.9-3.9z"
-                                                                    fill="#C7E3E3" data-color="1"></path>
-                                                                <path
-                                                                    d="M74.3 114.9l.9-2.6 3.2-9.8 2.5-7.6c.2-.6.1-1.3-.3-1.8s-1-.8-1.6-.8H54.9c-.9 0-1.6.6-1.9 1.4l-.9 2.6-1.6 5-4.1 12.4c-.2.6-.1 1.3.3 1.8s1 .8 1.6.8h24c1-.1 1.8-.6 2-1.4zM56.4 96.2h19.8l-1.4 4.4-3.8 11.6H51.2l5.2-16z"
-                                                                    fill="#FF8762" data-color="2"></path>
-                                                            </g>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="icon-desc-1 d-flex flex-column m-0 ms-2 ">
-                                                        <p class="m-0"><strong>Built:</strong></p>
-                                                        <p class="m-0">2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
 
@@ -1854,8 +1853,8 @@
                                         <div class="icon-desc-2 d-flex flex-column m-0 ms-4 ms-md-5 ">
                                             <p class="m-0"><strong>Awards:</strong></p>
                                             <ul class="d-flex flex-column">
-                                                <li class="text-start m-0">Featured on ArchDaily: Recognized for its innovative design blending tradition and modernity.</li>
-                                                <li class="text-start m-0">Showcased on Arkitera: Praised for its respectful integration with the local ecosystem and climate.</li>
+                                                <li class="text-start m-0"><strong>Featured on ArchDaily:</strong> Recognized for its innovative design blending tradition and modernity.</li>
+                                                <li class="text-start m-0"><strong>Showcased on Arkitera:</strong> Praised for its respectful integration with the local ecosystem and climate.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1914,7 +1913,7 @@
 
                                     <div class="row">
                                         <div class="icon-list d-flex flex-column flex-md-row  flex-md-wrap gy-4 ">
-                                        <div class="col-md-6 m-0 ">
+                                            <div class="col-md-6 m-0 ">
                                                 <div class="icon-text d-flex ">
                                                     <div class="icon-circle">
                                                         <svg preserveAspectRatio="xMidYMid meet"
@@ -1980,6 +1979,51 @@
                                                 </div>
                                             </div>
 
+                                            <div class="col-md-6 m-0">
+                                                <div class="icon-text d-flex gap-2">
+                                                    <div class="icon-circle m-0">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="20.9 60.914 160.1 80.286"
+                                                            viewBox="20.9 60.914 160.1 80.286" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-m5v5y3xa svg [data-color="1"] {
+                                                                        fill: #FFFFFF;
+                                                                    }
+
+                                                                    #comp-m5v5y3xa svg [data-color="2"] {
+                                                                        fill: #FFFFFF;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M157.6 67.6c-.3-.8-1-1.4-1.9-1.4h-16.6l.9-2.7c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-1.3 3.9h-20.1l.9-2.7c.3-1-.2-2.2-1.3-2.5s-2.2.2-2.5 1.3l-1.3 3.9H90.4l.9-2.7c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-1.3 3.9H66.1l.9-2.7c.3-1-.2-2.2-1.3-2.5-1-.3-2.2.2-2.5 1.3l-1.3 3.9H46.2c-.9 0-1.6.6-1.9 1.4l-23.3 71c-.2.6-.1 1.3.3 1.8s1 .8 1.6.8H179c.6 0 1.2-.3 1.6-.8s.5-1.2.3-1.8l-23.3-71zm-86.9 69.6h-45l22-67h12.9l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h14l-22 67h-59zm63.3 0l21.1-64.4 21.1 64.4H134z"
+                                                                    fill="#C7E3E3" data-color="1"></path>
+                                                                <path
+                                                                    d="M57.7 92.2l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5H46c-1.1 0-2 .9-2 2s.9 2 2 2h6.2l5.5-4.1z"
+                                                                    fill="#C7E3E3" data-color="1"></path>
+                                                                <path
+                                                                    d="M136 92.2h-6.1l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5h-19.8l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5H81.8l3-9.2c.3-1-.2-2.2-1.3-2.5-1-.3-2.2.2-2.5 1.3l-3.4 10.5 2.9 4h19.8l-5.2 16H75.2l-5.5 4-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h19.8l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h19.8l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h8c1.1 0 2-.9 2-2s-.9-2-2-2h-6.7l5.2-16h7.4c1.1 0 2-.9 2-2s-.7-2-1.8-2zm-16.9 20H99.3l5.2-16h19.8l-5.2 16z"
+                                                                    fill="#C7E3E3" data-color="1"></path>
+                                                                <path
+                                                                    d="M46.9 112.2H40c-1.1 0-2 .9-2 2s.9 2 2 2h5.6l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5-2.9-3.9z"
+                                                                    fill="#C7E3E3" data-color="1"></path>
+                                                                <path
+                                                                    d="M74.3 114.9l.9-2.6 3.2-9.8 2.5-7.6c.2-.6.1-1.3-.3-1.8s-1-.8-1.6-.8H54.9c-.9 0-1.6.6-1.9 1.4l-.9 2.6-1.6 5-4.1 12.4c-.2.6-.1 1.3.3 1.8s1 .8 1.6.8h24c1-.1 1.8-.6 2-1.4zM56.4 96.2h19.8l-1.4 4.4-3.8 11.6H51.2l5.2-16z"
+                                                                    fill="#FF8762" data-color="2"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="icon-desc-1 d-flex flex-column m-0 ms-2 ">
+                                                        <p class="m-0"><strong>Built:</strong></p>
+                                                        <p class="m-0">2024</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
                                             <div class="col-md-6 m-0 ">
                                                 <div class="icon-text d-flex ">
                                                     <div class="icon-circle">
@@ -2090,50 +2134,6 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-6 m-0">
-                                                <div class="icon-text d-flex gap-2">
-                                                    <div class="icon-circle m-0">
-                                                        <svg preserveAspectRatio="xMidYMid meet"
-                                                            data-bbox="20.9 60.914 160.1 80.286"
-                                                            viewBox="20.9 60.914 160.1 80.286" height="200" width="200"
-                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
-                                                            role="presentation" aria-hidden="true" aria-label="">
-                                                            <defs>
-                                                                <style>
-                                                                    #comp-m5v5y3xa svg [data-color="1"] {
-                                                                        fill: #FFFFFF;
-                                                                    }
-
-                                                                    #comp-m5v5y3xa svg [data-color="2"] {
-                                                                        fill: #FFFFFF;
-                                                                    }
-                                                                </style>
-                                                            </defs>
-                                                            <g>
-                                                                <path
-                                                                    d="M157.6 67.6c-.3-.8-1-1.4-1.9-1.4h-16.6l.9-2.7c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-1.3 3.9h-20.1l.9-2.7c.3-1-.2-2.2-1.3-2.5s-2.2.2-2.5 1.3l-1.3 3.9H90.4l.9-2.7c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-1.3 3.9H66.1l.9-2.7c.3-1-.2-2.2-1.3-2.5-1-.3-2.2.2-2.5 1.3l-1.3 3.9H46.2c-.9 0-1.6.6-1.9 1.4l-23.3 71c-.2.6-.1 1.3.3 1.8s1 .8 1.6.8H179c.6 0 1.2-.3 1.6-.8s.5-1.2.3-1.8l-23.3-71zm-86.9 69.6h-45l22-67h12.9l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h20.1l-.9 2.7c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l1.3-3.9h14l-22 67h-59zm63.3 0l21.1-64.4 21.1 64.4H134z"
-                                                                    fill="#C7E3E3" data-color="1"></path>
-                                                                <path
-                                                                    d="M57.7 92.2l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5H46c-1.1 0-2 .9-2 2s.9 2 2 2h6.2l5.5-4.1z"
-                                                                    fill="#C7E3E3" data-color="1"></path>
-                                                                <path
-                                                                    d="M136 92.2h-6.1l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5h-19.8l3-9.2c.3-1-.2-2.2-1.3-2.5-1.1-.3-2.2.2-2.5 1.3l-3.4 10.5H81.8l3-9.2c.3-1-.2-2.2-1.3-2.5-1-.3-2.2.2-2.5 1.3l-3.4 10.5 2.9 4h19.8l-5.2 16H75.2l-5.5 4-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h19.8l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h19.8l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5h8c1.1 0 2-.9 2-2s-.9-2-2-2h-6.7l5.2-16h7.4c1.1 0 2-.9 2-2s-.7-2-1.8-2zm-16.9 20H99.3l5.2-16h19.8l-5.2 16z"
-                                                                    fill="#C7E3E3" data-color="1"></path>
-                                                                <path
-                                                                    d="M46.9 112.2H40c-1.1 0-2 .9-2 2s.9 2 2 2h5.6l-4 12.2c-.3 1 .2 2.2 1.3 2.5.2.1.4.1.6.1.8 0 1.6-.5 1.9-1.4l4.4-13.5-2.9-3.9z"
-                                                                    fill="#C7E3E3" data-color="1"></path>
-                                                                <path
-                                                                    d="M74.3 114.9l.9-2.6 3.2-9.8 2.5-7.6c.2-.6.1-1.3-.3-1.8s-1-.8-1.6-.8H54.9c-.9 0-1.6.6-1.9 1.4l-.9 2.6-1.6 5-4.1 12.4c-.2.6-.1 1.3.3 1.8s1 .8 1.6.8h24c1-.1 1.8-.6 2-1.4zM56.4 96.2h19.8l-1.4 4.4-3.8 11.6H51.2l5.2-16z"
-                                                                    fill="#FF8762" data-color="2"></path>
-                                                            </g>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="icon-desc-1 d-flex flex-column m-0 ms-2 ">
-                                                        <p class="m-0"><strong>Built:</strong></p>
-                                                        <p class="m-0">2024</p>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
 
