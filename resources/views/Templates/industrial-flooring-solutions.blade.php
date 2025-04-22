@@ -455,172 +455,152 @@
                 <div class="epoxy-flooring-block-lists">
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/3010product.webp"
-                          alt="RachTR Floor 3010 N"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/rachtr-floor-3010-n' }}"
-                          class="text-black fs-6 fw-bold"
-                          >RachTR Floor 3010 N</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/rachtr-floor-3010-n' }}">
+                        <figure>
+                          <img
+                            src="images/3010product.webp"
+                            alt="RachTR Floor 3010 N"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          RachTR Floor 3010 N
+                        </h6>
+                      </a>
                     </div>
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/RachTR-EC-500.webp"
-                          alt="RachTR EC 500"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/rachtr-ec-500' }}"
-                          class="text-black fs-6 fw-bold"
-                          >RachTR EC 500</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/rachtr-ec-500' }}">
+                        <figure>
+                          <img
+                            src="images/RachTR-EC-500.webp"
+                            alt="RachTR EC 500"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                        RachTR EC 500
+                        </h6>
+                      </a>
                     </div>
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/RachTR-Floor-2010-N.webp"
-                          alt="RachTR Floor 2010 N"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/rachtr-floor-2010-n' }}"
-                          class="text-black fs-6 fw-bold"
-                          >RachTR Floor 2010 N</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/rachtr-floor-2010-n' }}">
+                        <figure>
+                          <img
+                            src="images/RachTR-Floor-2010-N.webp"
+                            alt="RachTR Floor 2010 N"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          RachTR Floor 2010 N
+                        </h6>
+                      </a>
                     </div>
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/Screed-EP-81.webp"
-                          alt="Screed EP 81"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/screed-ep-81' }}"
-                          class="text-black fs-6 fw-bold"
-                          >Screed EP 81</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/screed-ep-81' }}">
+                        <figure>
+                          <img
+                            src="images/Screed-EP-81.webp"
+                            alt="Screed EP 81"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          Screed EP 81
+                        </h6>
+                      </a>
                     </div>
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/Screed-EP-91.webp"
-                          alt="Screed EP 91"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/screed-ep-91' }}"
-                          class="text-black fs-6 fw-bold"
-                          >Screed EP 91</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/screed-ep-91' }}">
+                        <figure>
+                          <img
+                            src="images/Screed-EP-91.webp"
+                            alt="Screed EP 91"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          Screed EP 91
+                        </h6>
+                      </a>
                     </div>
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/RachTR-Floor-1010-N.webp"
-                          alt="RachTR Floor 1010 N"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/rachtr-floor-1010-n'}}"
-                          class="text-black fs-6 fw-bold"
-                          >RachTR Floor 1010 N</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/rachtr-floor-1010-n'}}">
+                        <figure>
+                          <img
+                            src="images/RachTR-Floor-1010-N.webp"
+                            alt="RachTR Floor 1010 N"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          RachTR Floor 1010 N
+                        </h6>
+                      </a>
                     </div>
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/RachTR-EP-402.webp"
-                          alt="RachTR EP 402"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/rachtr-ep-402' }}"
-                          class="text-black fs-6 fw-bold"
-                          >RachTR EP 402</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/rachtr-ep-402' }}">
+                        <figure>
+                          <img
+                            src="images/RachTR-EP-402.webp"
+                            alt="RachTR EP 402"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          RachTR EP 402
+                        </h6>
+                      </a>
                     </div>
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/RachTR-EC-250.webp"
-                          alt="RachTR EC 250"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/rachtr-ec-250' }}"
-                          class="text-black fs-6 fw-bold"
-                          >RachTR EC 250</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/rachtr-ec-250' }}">
+                        <figure>
+                          <img
+                            src="images/RachTR-EC-250.webp"
+                            alt="RachTR EC 250"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          RachTR EC 250
+                        </h6>
+                      </a>
                     </div>
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/RachTR-Floor-Screed-EP-85.webp"
-                          alt="RachTR Floor Screed EP 85"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/rachtr-floor-screed-ep-85'}}"
-                          class="text-black fs-6 fw-bold"
-                          >RachTR Floor Screed EP 85</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/rachtr-floor-screed-ep-85'}}">
+                        <figure>
+                          <img
+                            src="images/RachTR-Floor-Screed-EP-85.webp"
+                            alt="RachTR Floor Screed EP 85"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          RachTR Floor Screed EP 85
+                        </h6>
+                      </a>
                     </div>
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <figure>
-                        <img
-                          src="images/RachTR-EP-101.webp"
-                          alt="RachTR EP 101"
-                        />
-                      </figure>
-                      <h6 class="text-center heading-underline">
-                        <a
-                          href="{{ config('app.url') . '/product-page/rachtr-ep-101' }}"
-                          class="text-black fs-6 fw-bold"
-                          >RachTR EP 101</a
-                        >
-                      </h6>
+                      <a href="{{ config('app.url') . '/product-page/rachtr-ep-101' }}">
+                        <figure>
+                          <img
+                            src="images/RachTR-EP-101.webp"
+                            alt="RachTR EP 101"
+                          />
+                        </figure>
+                        <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          RachTR EP 101
+                        </h6>
+                      </a>
                     </div>
                   </div>
 
