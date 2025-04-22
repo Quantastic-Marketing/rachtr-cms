@@ -134,9 +134,14 @@
     text-align: center;
 }
 
-.system-overview .content >*{
+.system-overview .content p,.system-overview .content ul,.system-overview .content li{
     font-size: 18px;
 }
+
+.system-overview .content h2{
+    font-size: 24px;
+}
+
 
 .product-list-faq .accordion-wrapper {
   border-bottom: 1px solid #0057E1;
