@@ -984,38 +984,34 @@
                     </div>
                     <div class="col-6 col-lg-3">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-Top-Fill.webp"
-                            class="big-height"
-                            alt="RachTR Top Fill"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-top-fill' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR Top Fill</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-top-fill' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-Top-Fill.webp"
+                              class="big-height"
+                              alt="RachTR Top Fill"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR Top Fill
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-Epoxy-201-L.webp"
-                            class="big-height"
-                            alt="RachTR Epoxy 201 L"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-epoxy-201-l' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR Epoxy 201 L</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-epoxy-201-l' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-Epoxy-201-L.webp"
+                              class="big-height"
+                              alt="RachTR Epoxy 201 L"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR Epoxy 201 L
+                          </h6>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -1039,118 +1035,104 @@
                   <div class="row justify-content-start">
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <figure>
-                          <img src="images/RachTR-BLEEDX.webp" alt="RachTR BLEEDX" />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-bleedx' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR BLEEDX</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-bleedx' }}">
+                          <figure>
+                            <img src="images/RachTR-BLEEDX.webp" alt="RachTR BLEEDX" />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR BLEEDX
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-TOP-SEAL.webp"
-                            alt="RachTR TOP SEAL"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-top-seal' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR TOP SEAL</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-top-seal' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-TOP-SEAL.webp"
+                              alt="RachTR TOP SEAL"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR TOP SEAL
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-COLOR-ENHANCER.webp"
-                            alt="RachTR COLOR ENHANCER"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-color-enhancer' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR COLOR ENHANCER</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-color-enhancer' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-COLOR-ENHANCER.webp"
+                              alt="RachTR COLOR ENHANCER"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR COLOR ENHANCER
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-BACK-SEAL.webp"
-                            alt="RachTR BACK SEAL"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-back-seal' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR BACK SEAL</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-back-seal' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-BACK-SEAL.webp"
+                              alt="RachTR BACK SEAL"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR BACK SEAL
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-DEFENDOR.webp"
-                            alt="RachTR DEFENDOR"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-defendor' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR DEFENDOR</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-defendor' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-DEFENDOR.webp"
+                              alt="RachTR DEFENDOR"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR DEFENDOR
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-WL-BARRIER.webp"
-                            alt="RachTR WL BARRIER"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-wl-barrier' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR WL BARRIER</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-wl-barrier' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-WL-BARRIER.webp"
+                              alt="RachTR WL BARRIER"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR WL BARRIER
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-SS-SEALER.webp"
-                            alt="RachTR SS SEALER"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-ss-sealer' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR SS SEALER</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-ss-sealer' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-SS-SEALER.webp"
+                              alt="RachTR SS SEALER"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR SS SEALER
+                          </h6>
+                      </a>
                       </div>
                     </div>
                     <div class="col-md-3 d-md-block d-none"></div>
@@ -1175,74 +1157,66 @@
                   <div class="row">
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-Stain-R.webp"
-                            class="fixed-height"
-                            alt="RachTR Stain R"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-stain-r' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR Stain R</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-stain-r' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-Stain-R.webp"
+                              class="fixed-height"
+                              alt="RachTR Stain R"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR Stain R
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-XC-4.webp"
-                            class="fixed-height"
-                            alt="RachTR XC 4"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-xc-4' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR XC 4</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-xc-4' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-XC-4.webp"
+                              class="fixed-height"
+                              alt="RachTR XC 4"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR XC 4
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-XC-1.webp"
-                            class="fixed-height"
-                            alt="RachTR XC 1"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-xc-1' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR XC 1</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-xc-1' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-XC-1.webp"
+                              class="fixed-height"
+                              alt="RachTR XC 1"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR XC 1
+                          </h6>
+                        </a>
                       </div>
                     </div>
                     <div class="col-6 col-lg-3">
                       <div class="offer-product">
-                        <figure>
-                          <img
-                            src="images/RachTR-XC-2.webp"
-                            class="fixed-height"
-                            alt="RachTR XC 2"
-                          />
-                        </figure>
-                        <h6 class="text-center heading-underline">
-                          <a
-                            href="{{ config('app.url') . '/product-page/rachtr-xc-2' }}"
-                            class="text-black fs-6 fw-bold"
-                            >RachTR XC 2</a
-                          >
-                        </h6>
+                        <a href="{{ config('app.url') . '/product-page/rachtr-xc-2' }}">
+                          <figure>
+                            <img
+                              src="images/RachTR-XC-2.webp"
+                              class="fixed-height"
+                              alt="RachTR XC 2"
+                            />
+                          </figure>
+                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                            RachTR XC 2
+                          </h6>
+                        </a>
                       </div>
                     </div>
                   </div>
