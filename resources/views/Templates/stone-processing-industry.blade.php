@@ -1436,7 +1436,7 @@
                             <p>
                               RachTR stone processing products can be purchased
                               through our authorized distributors or you can
-                              <a href="contact-us.html"
+                              <a href="{{ config('app.url') . '/contact-us'}}"
                                 ><span class="color-orange">contact us</span></a
                               >
                               directly. For bulk orders and customized solutions,

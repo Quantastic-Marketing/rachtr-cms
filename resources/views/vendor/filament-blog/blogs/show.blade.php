@@ -113,7 +113,7 @@
                                 <p>Updated : {{ $post->updated_at->diffForHumans() }}</p>
                             </div>
                             <div class="image-wrapper py-2">
-                                <img class="w-100 h-100 object-fit-cover" src="{{$post->feature_photo}}" alt="">
+                                <img class="w-100 h-100 object-fit-cover" src="{{$post->feature_photo}}" alt="{{$post->photo_alt_text}}">
                             </div>
 
                             <div class="blog-body py-5">
