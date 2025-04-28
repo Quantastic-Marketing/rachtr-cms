@@ -155,7 +155,44 @@
                     </div>
                 </section>
             </div>
-            <div class="col-12 order-1 order-md-2">
+            @if(!empty($page['content']) && !empty($page['content']['application']))
+                @php
+                    $pageContent = $page->content;
+                    $sectionData = $pageContent['application'] ?? [];
+                @endphp
+            <div class="col-12 order-3 order-md-2">
+                <section class="applications-of-epoxy py-5" style="background: #f5f5f5;">
+                    <div class="container">
+                        <div class="row applc-epoxy-cont">
+                            <div class="col-12 col-md-10 d-flex flex-column gap-3 px-5 px-md-2">
+                                @if(!empty($sectionData['heading']))
+                                    <h2 class="text-center fw-bold">{{ $sectionData['heading'] }}</h2>
+                                @endif
+                                @if(!empty($sectionData['section_intro']))
+                                    @foreach($sectionData['section_intro'] as $intro)
+                                        {!! $intro['paragraph'] ?? '' !!}
+                                    @endforeach
+                                @endif
+                                @if(!empty($sectionData['application_list']))
+                                    <ul>
+                                        @foreach($sectionData['application_list'] as $item)
+                                            <li>{!! $item['list'] ?? '' !!}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+
+                                @if(!empty($sectionData['section_outro']))
+                                    @foreach($sectionData['section_outro'] as $outro)
+                                        {!! $outro['paragraph'] ?? '' !!}
+                                    @endforeach
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            @endif
+            <div class="col-12 order-1 order-md-3">
                 <section class="comprnsive_solution py-5">   
                     <div class="container">
                         <div class="row g-0">

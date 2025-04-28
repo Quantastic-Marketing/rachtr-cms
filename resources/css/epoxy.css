@@ -487,7 +487,8 @@
 .section-ordering .build-to-last .heading-holder h2,
 .locations-served .locations-block .heading-holder h2,
 .experience-rachtr .experience-content .heading-holder h2,
-.common-faqs .common-faq-block .heading-holder h2{
+.common-faqs .common-faq-block .heading-holder h2,
+.applications-of-epoxy .applc-epoxy-cont h2{
     font-size: 34px;
 }
 
@@ -497,6 +498,14 @@
     color: #ffffff;
 }
 
+.applications-of-epoxy .applc-epoxy-cont ul{
+    padding: revert;
+    text-align: unset;
+}
+
+.applications-of-epoxy .applc-epoxy-cont ul li{
+    list-style: disc;
+}
 
 
 @media (max-width: 1239px) {
@@ -524,7 +533,8 @@
     .section-ordering .build-to-last .heading-holder h2,
     .locations-served .locations-block .heading-holder h2,
     .experience-rachtr .experience-content .heading-holder h2,
-    .common-faqs .common-faq-block .heading-holder h2{
+    .common-faqs .common-faq-block .heading-holder h2,
+    .applications-of-epoxy .applc-epoxy-cont h2{
         font-size: 24px;
     }
     
