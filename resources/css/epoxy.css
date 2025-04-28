@@ -507,7 +507,9 @@
     list-style: disc;
 }
 
-
+.applications-of-epoxy .applc-epoxy-cont a{
+    text-decoration: underline;
+}
 @media (max-width: 1239px) {
     .case-studies-item .slick-dots {
         /* bottom: 0; */
