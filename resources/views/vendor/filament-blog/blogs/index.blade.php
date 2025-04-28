@@ -26,7 +26,8 @@
                 'resources/css/puFloor.css',
                 'resources/css/blog.css',
                 'resources/js/cdn.min.js',
-                'resources/js/micromodal.min.js'
+                'resources/js/micromodal.min.js',
+                'resources/js/header.js',
             ])
         <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon_img.webp') }}">
 

@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use App\Http\Controllers\PageController;
 
 class ProductController extends Controller
 {
@@ -38,7 +39,7 @@ class ProductController extends Controller
             try{
                 
                 $categories = Category::select('name','slug')->get();
-                if ($slug === 'all-products' || $slug === 'sproducts') {
+                if ($slug === 'all-products' || $slug === 'products') {
                     
                     $products = Cache::remember("all_products_page_{$page}_{$sort}", 600, function () use ($sort) {
                         return Product::select('name', 'slug','content')
@@ -73,5 +74,28 @@ class ProductController extends Controller
             
             
         }
+
+        public function getSearchResultsDropdown(Request $request)
+        {
+            try {
+                $query = trim($request->query('query'));
+                $products = [];
+                $blogs = [];
+                if (!empty($query)) {
+                    $products = $products = Product::search($query)->take(3)->get();
+                    $blogs = Post::search($query)->take(3)->get();
+                } 
+
+                return response()->json([
+                    'products' => $products,
+                    'blogs' => $blogs,
+                ],200);
+            } catch(\Exception $e) {
+                \Log::error('Error fetching search results: ' . $e->getMessage());
+                return response()->json(['error' => 'Something went wrong! Please try again later.'], 500);
+            }
+        }
+
+        
 
 }

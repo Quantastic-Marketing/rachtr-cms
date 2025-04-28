@@ -33,6 +33,7 @@ export default defineConfig({
                 'resources/js/micromodal.min.js',
                 'resources/js/customTab.js',
                 'resources/js/forms.js',
+                'resources/js/header.js',
                 'resources/js/fallback.js',
             ],  
             refresh: true,

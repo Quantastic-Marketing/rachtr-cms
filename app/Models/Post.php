@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
-use Firefly\FilamentBlog\Models\Post as BasePost;
 use Illuminate\Database\Eloquent\Model;
+use Firefly\FilamentBlog\Models\Post as BasePost;
 
 class Post extends BasePost
 {
     use Searchable;
+    protected $appends = ['feature_photo'];
 
     public function toSearchableArray()
     {
@@ -19,7 +21,7 @@ class Post extends BasePost
 
         return [
             'title' => $this->title,
-            'body' => $textOnlyBody,
+            'body' => Str::limit($textOnlyBody, 10000),
         ];
     }
 

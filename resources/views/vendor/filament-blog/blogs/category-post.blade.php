@@ -54,7 +54,8 @@
                 'resources/css/blog.css',
                 'resources/css/blogArchive.css',
                 'resources/js/cdn.min.js',
-                'resources/js/micromodal.min.js'
+                'resources/js/micromodal.min.js',
+                'resources/js/header.js',
             ])
         <link rel="shotcut icon" type="image/x-icon" href="{{ asset('images/favicon_img.webp') }}">
 
