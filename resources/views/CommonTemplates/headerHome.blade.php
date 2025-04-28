@@ -53,7 +53,7 @@
                                                 </div>
                                                 <div class="result-info">
                                                   <h4>{{$product->name}}</h4>
-                                                  <p>{{Str::limit(strip_tags($product->product_desc),25)}}</p>
+                                                  <p>{{Str::limit(strip_tags(html_entity_decode($product->product_desc)),25)}}</p>
                                                 </div>
                                               </a>
                                             </div>
@@ -126,7 +126,7 @@
                                               </div>
                                               <div class="result-info">
                                                 <h4>{{$product->name}}</h4>
-                                                <p>{{Str::limit(strip_tags($product->product_desc),25)}}</p>
+                                                <p>{{Str::limit(strip_tags(html_entity_decode($product->product_desc)),25)}}</p>
                                               </div>
                                             </a>
                                           </div>
