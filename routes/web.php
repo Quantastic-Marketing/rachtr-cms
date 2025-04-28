@@ -17,7 +17,7 @@ Route::post('/connect', [FormController::class, 'addConnectDetail'])->name('conn
 Route::post('/cvform', [FormController::class, 'addCvDetail'])->name('cvform');
 Route::post('/submit-epoxy-form', [FormController::class, 'addEpoxyDetail'])->name('epoxyForm');
 Route::get('/category/{slug}',[ProductController::class,'getAllProducts'])->name('all-products');
-Route::get('/product-lists', [ProductController::class, 'index'])->name ('product-lists');
+Route::get('/product-lists', [ProductController::class, 'index'])->name('product-lists');
 Route::get('/search/products', [ProductController::class, 'loadMoreProducts'])->name ('search-product');
 Route::get('/publish-blogs',[PageController::class, 'publishPendingPosts'] );
 Route::get('/post/{slug}', function ($slug) {

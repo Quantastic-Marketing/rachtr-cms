@@ -74,6 +74,7 @@
                 'resources/js/cdn.min.js',
                 'resources/js/micromodal.min.js',
                 'resources/js/customTab.js',
+                'resources/js/header.js',
                 'resources/js/forms.js'
 
             ])

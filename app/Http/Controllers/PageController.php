@@ -8,6 +8,7 @@ use App\Models\Product;
 use Spatie\Sitemap\Sitemap;
 use Illuminate\Http\Request;
 use Spatie\Sitemap\Tags\Url;
+use App\Models\ProductsSection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Response;
 use Firefly\FilamentBlog\Enums\PostStatus;
@@ -27,6 +28,7 @@ class PageController extends Controller
                 if (!$pageDetails) {
                     return view('fallback');
                 }
+                // $trendingProducts = $trendingProducts = $this->getTrendingProduct();
                 return view('layouts.app',['page' => $pageDetails,'templatePath'=>'Templates.index' ,'blogs' => $blogs]);
             } else {
                 $currentSlug = collect(explode('/', $slug))->last();
@@ -82,7 +84,7 @@ class PageController extends Controller
                         ->keyBy('id');
                     }
                 }
-                
+
                 return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products'=>$products,'blogs' => $blogs,'parentName' => $parentName]);
             }
         }catch(Exception $e){
@@ -97,6 +99,7 @@ class PageController extends Controller
             if(!$product){
                 return view('fallback');
             }
+            
             return view('layouts.app',['page'=>$product,'template'=>$product->template]);
         }catch(Expression $e){
             \Log::error('Product load error: ' . $e->getMessage());
@@ -208,6 +211,31 @@ class PageController extends Controller
                 'success' => false,
                 'message' => 'Error updating posts: ' . $e->getMessage()
             ], 500);
+        }
+    }
+
+    public static function getTrendingProduct()
+    {
+        try {
+            $trendingProducts = ProductsSection::where('name', 'trending')->first();
+            if($trendingProducts){
+                $trendingProducts = $products = Cache::remember('header_trending_products', 600, function () use ($trendingProducts) {
+                    return Product::whereIn('id', $trendingProducts->product_ids)
+                        ->select([
+                            'id',
+                            'name',
+                            'slug',
+                            'content->product_desc as product_desc',
+                            'content->product_images as product_images'
+                        ])
+                        ->get()
+                        ->keyBy('id');
+                });
+            }
+        return  $trendingProducts ?? collect();
+        } catch (\Exception $e) {
+            \Log::error('Error fetching latest products: ' . $e->getMessage());
+            return null;
         }
     }
 
