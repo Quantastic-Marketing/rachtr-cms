@@ -39,7 +39,7 @@
                             Sort by: Recommended
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Recommended</a></li>
+                            <li><a class="dropdown-item" href="{{ request()->fullUrlWithQuery(['sort' => 'recommended']) }}">Recommended</a></li>
                             <li><a class="dropdown-item" href="#">Price: Low to High</a></li>
                             <li><a class="dropdown-item" href="#">Price: High to Low</a></li>
                             <li><a class="dropdown-item" href="{{ request()->fullUrlWithQuery(['sort' => 'newest']) }}">Newest</a></li>
@@ -50,8 +50,8 @@
                     </div>
                 </div>
                 
-     
-                @if($products)
+                
+                @if($products->count() > 0)
                 <div class="row">
                     <!-- Product 1 -->
 
@@ -83,6 +83,10 @@
                     @endif
 
                 </div>
+                @else
+                    <div class="text-center">
+                        <h2>Not a valid category</h2>
+                    </div>
                 @endif
 
                 @if(($slug === 'all-products' || $slug === 'products') && $products->hasMorePages())
