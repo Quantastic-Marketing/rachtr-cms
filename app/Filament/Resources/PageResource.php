@@ -639,41 +639,11 @@ class PageResource extends Resource
                     TextInput::make('content.application.heading')
                         ->label('Section Heading')
                         ->placeholder('Enter the heading'),
-
-                    Repeater::make('content.application.section_intro')
-                        ->label('Introduction Paragraphs')
-                        ->schema([
-                            RichEditor::make('paragraph')
+                    
+                    RichEditor::make('content.application.paragraph')
                                 ->label('Paragraph')
-                                ->toolbarButtons([
-                                    'bold', 'italic', 'underline', 'bulletList', 'orderedList'
-                                ])
                                 ->placeholder('Intro paragraph about Epoxy Flooring Applications.'),
-                        ])
-                        ->columns(1),
-
-                    Repeater::make('content.application.application_list')
-                        ->label('Applications List')
-                        ->schema([
-                            RichEditor::make('list')
-                                ->label('Application Description')
-                                ->placeholder('e.g. Epoxy flooring provides a seamless, durable surface...')
-                                ->toolbarButtons(['bold', 'italic', 'underline', 'bulletList', 'orderedList']),
-                        ])
-                        ->columns(1),
-
-                    Repeater::make('content.application.section_outro')
-                        ->label('Outro Paragraphs')
-                        ->schema([
-                            RichEditor::make('paragraph')
-                                ->label('Paragraph')
-                                ->toolbarButtons([
-                                    'bold', 'italic', 'underline', 'bulletList', 'orderedList'
-                                ])
-                                ->placeholder('Closing paragraph about price and benefits'),
-                        ])
-                        ->columns(1),
-                ]),
+                    ]),
         ];
     }
 }

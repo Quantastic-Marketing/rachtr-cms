@@ -168,23 +168,8 @@
                                 @if(!empty($sectionData['heading']))
                                     <h2 class="text-center fw-bold">{{ $sectionData['heading'] }}</h2>
                                 @endif
-                                @if(!empty($sectionData['section_intro']))
-                                    @foreach($sectionData['section_intro'] as $intro)
-                                        {!! $intro['paragraph'] ?? '' !!}
-                                    @endforeach
-                                @endif
-                                @if(!empty($sectionData['application_list']))
-                                    <ul>
-                                        @foreach($sectionData['application_list'] as $item)
-                                            <li>{!! $item['list'] ?? '' !!}</li>
-                                        @endforeach
-                                    </ul>
-                                @endif
-
-                                @if(!empty($sectionData['section_outro']))
-                                    @foreach($sectionData['section_outro'] as $outro)
-                                        {!! $outro['paragraph'] ?? '' !!}
-                                    @endforeach
+                                @if(!empty($sectionData['paragraph']))
+                                        {!! $sectionData['paragraph'] ?? '' !!}
                                 @endif
                             </div>
                         </div>
