@@ -132,4 +132,32 @@ class ProductController extends Controller
             }
         }
 
+        
+        public function getTrendingProducts(Request $request)
+        {
+            try {
+                $products = Cache::remember('header_trending_products', 600, function () {
+                    $section = ProductsSection::where('name', 'trending')->first();
+                    if (!$section || empty($section->product_ids)) {
+                        return [];
+                    }
+
+                    return Product::whereIn('id', $section->product_ids)
+                                    ->select([
+                                        'id',
+                                        'name',
+                                        'slug',
+                                        'content'
+                                    ])
+                                    ->get();
+                });
+                \Log::info('Trending products fetched successfully.' . json_encode($products));
+
+                return response()->json(['products' => $products], 200);
+            } catch (\Exception $e) {
+                \Log::error('Error fetching trending products: ' . $e->getMessage());
+                return response()->json(['products' => []], 500);
+            }
+        }
+
 }

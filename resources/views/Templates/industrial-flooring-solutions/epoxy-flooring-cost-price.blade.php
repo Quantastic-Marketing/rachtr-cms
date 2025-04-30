@@ -82,7 +82,7 @@
                                 <h2 class="fw-bold">What is <span>Epoxy Flooring?</span> </h2>
                             </div>
                             <div class="text-holder">
-                                <p> <strong>Epoxy Flooring</strong> is a type of synthetic resin floor system, in which especially formulated epoxy coatings are laid on top of concrete substrates as a form of protection and decoration layer.</p>
+                                <p> <a href="{{config('app.url') . '/epoxy-flooring-services'}}"><strong>Epoxy Flooring</strong></a> is a type of synthetic resin floor system, in which especially formulated epoxy coatings are laid on top of concrete substrates as a form of protection and decoration layer.</p>
                                 <p>It transforms a plain concrete slab into a smooth, finished surface that can have customized properties, as per requirement, like -</p>
                                 <ul class="text-list d-flex flex-column ms-2">
                                     <li class="point-style">Chemical Resistance, including Acid-Resistant or Solvent Resistance</li>
@@ -125,7 +125,7 @@
                             <h2 class="fw-bold">Epoxy Flooring Solutions for <span>Multiple Industries</span></h2>
                         </div>
                         <div class="text-content px-md-5 mx-md-5 text-center">
-                            <p>We at RachTR specialize in providing high-quality epoxy flooring solutions for a variety of industries. Our services are tailored to meet the unique needs of <strong>epoxy flooring for warehouses, pharma industries, metal fabrication, food and beverages, electronics, chemical, and automobile industries.</strong></p>
+                            <p>We at RachTR specialize in providing high-quality <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-products'}}">epoxy flooring solutions</a> for a variety of industries. Our services are tailored to meet the unique needs of <strong>epoxy flooring for warehouses, pharma industries, metal fabrication, food and beverages, electronics, chemical, and automobile industries.</strong></p>
                         </div>
                         <div class="solutions-list">
                             <div class="solution">
@@ -250,7 +250,7 @@
                         <div class="components-factors text-center">
                             <p>Components and Factors</p>
                             <div class="component-text">
-                                <p>Epoxy flooring cost is crucial when planning installation. It's calculated per square foot or meter and varies based on area size, installation complexity, and material quality. Get an accurate estimate from RachTR to stay within budget.</p>
+                                <p><a href="{{ config('app.url') . '/epoxy-flooring-cost-price'}}">Epoxy flooring cost</a> is crucial when planning installation. It's calculated per square foot or meter and varies based on area size, installation complexity, and material quality. Get an accurate estimate from RachTR to stay within budget.</p>
                             </div>
                         </div>
                         <div class="components text-center pt-5 pt-md-0">
