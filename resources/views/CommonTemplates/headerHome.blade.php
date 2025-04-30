@@ -1,27 +1,7 @@
-
 @php
     use App\Models\CommonComponents;
     use App\Models\Pages;
-    use App\Models\ProductsSection;
-    use App\Models\Product;
-    use Illuminate\Support\Facades\Cache;
     $headerContent = CommonComponents::where('name', 'headerHome')->value('content') ?? [];
-
-    $trendingProducts = ProductsSection::where('name', 'trending')->first();
-            if($trendingProducts){
-                $trendingProducts = Cache::remember('header_trending_products', 600, function () use ($trendingProducts) {
-                    return Product::whereIn('id', $trendingProducts->product_ids)
-                        ->select([
-                            'id',
-                            'name',
-                            'slug',
-                            'content->product_desc as product_desc',
-                            'content->product_images as product_images'
-                        ])
-                        ->get()
-                        ->keyBy('id');
-                });
-              }
 @endphp
 @if(!empty($headerContent))
   <div class="header">
@@ -42,22 +22,8 @@
                                   <div class="search-dropdown" id="mobile-searchDropdown">
                                         <h3 class="trending-title">Trending Products</h3>
                                         <div class="search-results" id="mobile-search-results">
-                                          @foreach($trendingProducts as $product)
-                                            <div class="result-item">
-                                              <a href="{{ route('product.page', ['slug' => $product->slug]) }}">
-                                                @php
-                                                    $images = json_decode($product->product_images, true);
-                                                @endphp
-                                                <div class="result-image">
-                                                  <img src="{{ asset('storage/' .  $images[0]['product_image'] ) }}" alt="{{$product->name}}">
-                                                </div>
-                                                <div class="result-info">
-                                                  <h4>{{$product->name}}</h4>
-                                                  <p>{{Str::limit(strip_tags(html_entity_decode($product->product_desc)),25)}}</p>
-                                                </div>
-                                              </a>
-                                            </div>
-                                          @endforeach
+                                          
+                                          
                                         </div>
                                       </div>
 
@@ -115,22 +81,7 @@
                                     <div class="search-dropdown" id="searchDropdown">
                                       <h3 class="trending-title">Trending Products</h3>
                                       <div class="search-results" id="search-results">
-                                        @foreach($trendingProducts as $product)
-                                          <div class="result-item">
-                                            <a href="{{ route('product.page', ['slug' => $product->slug]) }}">
-                                              @php
-                                                  $images = json_decode($product->product_images, true);
-                                              @endphp
-                                              <div class="result-image">
-                                                <img src="{{ asset('storage/' .  $images[0]['product_image'] ) }}" alt="{{$product->name}}">
-                                              </div>
-                                              <div class="result-info">
-                                                <h4>{{$product->name}}</h4>
-                                                <p>{{Str::limit(strip_tags(html_entity_decode($product->product_desc)),25)}}</p>
-                                              </div>
-                                            </a>
-                                          </div>
-                                        @endforeach
+                                       
                                       </div>
                                     </div>
 

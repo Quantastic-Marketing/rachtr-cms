@@ -32,9 +32,11 @@ class SearchContainer {
 
     handleSearchFocus() {
         this.wrapper.classList.add('focused');
-        if (this.results.innerHTML.trim().length > 0) {
-            this.dropdown.style.display = 'block';
-            return;
+        this.dropdown.style.display = 'block';
+        if (this.results.innerHTML.trim().length <= 0) {
+            // this.dropdown.style.display = 'block';
+            this.fetchTrendingProducts();
+            // return;
         }
         this.showDropdown();
     }
@@ -105,6 +107,42 @@ class SearchContainer {
         }
     }
 
+    async fetchTrendingProducts() {
+        // prevent double fetching
+        if (this.trendingLoaded) return;
+        // this.trendingLoaded = true;
+    
+        this.results.innerHTML = '<div class="loading">Loading trending products...</div>';
+        try {
+            const response = await fetch('/api/trending-products', {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            });
+    
+            if (!response.ok) throw new Error('Failed to fetch trending products');
+    
+            const data = await response.json();
+            console.log('Trending products:', data);
+            if (data.products && Object.keys(data.products).length > 0) {
+                const productsArray = Object.values(data.products);
+                this.results.innerHTML = productsArray.map(p => this.createProductHTML(p)).join('');
+            } else {
+                console.warn('No trending products found');
+                console.log('Trending products data :', data.products);
+                this.results.innerHTML = '<div class="no-results">No trending products found.</div>';
+            }
+    
+        } catch (err) {
+            console.error('Trending error:', err);
+            this.results.innerHTML = '<div class="error">Could not load trending products.</div>';
+        } finally {
+            this.trendingLoaded = true;
+        }
+    }
+
     updateSearchResults(data) {
         if (data.products && data.products.length > 0) {
             this.productResultsContainer.innerHTML = data.products.map(product => this.createProductHTML(product)).join('');
@@ -128,7 +166,7 @@ class SearchContainer {
             <div class="result-item">
                 <a href="/product-page/${product.slug}">
                     <div class="result-image">
-                        <img src="${imageUrl}" alt="${product.name}">
+                        <img src="${imageUrl}" alt="${product.name}" width="50" height="50">
                     </div>
                     <div class="result-info">
                         <h4>${product.name}</h4>
@@ -147,7 +185,7 @@ class SearchContainer {
             <div class="result-item">
                 <a href="blogs/${blog.slug}">
                     <div class="result-image">
-                        <img src="${blog.feature_photo}" alt="${blog.title}">
+                        <img src="${blog.feature_photo}" alt="${blog.title}" width="50" height="50">
                     </div>
                     <div class="result-info">
                         <h4>${this.stripTags(blog.title || '').substring(0, 15) + '...'}</h4>

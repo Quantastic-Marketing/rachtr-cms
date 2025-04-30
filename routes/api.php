@@ -9,3 +9,4 @@ use App\Http\Controllers\ProductController;
 // })->middleware('auth:sanctum');
 
 Route::get('/product-lists', [ProductController::class, 'getSearchResultsDropdown'])->name('product-lists-api');
+Route::get('/trending-products', [ProductController::class, 'getTrendingProducts']);
