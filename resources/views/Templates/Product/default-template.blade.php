@@ -85,8 +85,8 @@
             
         </div>
         <div class="download-sec text-center mt-4 py-5 d-flex justify-content-center gap-2 gap-md-5">
-            <a href="{{ isset($product->content['download_sheet']) ? asset('/storage/'.$product->content['download_sheet']) : '#' }}" class="btn btn-dark p-2 p-md-3 m-0">DOWNLOAD DATA SHEET</a>
-            <a href="{{ isset($product->content['download_cert']) ? asset('/storage/'.$product->content['download_cert']) : '#' }}" class="btn btn-dark p-2 p-md-3 m-0">DOWNLOAD CERTIFICATE</a>
+            <a href="{{ isset($product->content['download_sheet']) ? asset('/storage/'.$product->content['download_sheet']) : '#' }}" class="btn btn-dark p-2 p-md-3 m-0" target="_blank">DOWNLOAD DATA SHEET</a>
+            <a href="{{ isset($product->content['download_cert']) ? asset('/storage/'.$product->content['download_cert']) : '#' }}" class="btn btn-dark p-2 p-md-3 m-0" target="_blank">DOWNLOAD CERTIFICATE</a>
         </div>
        </section>
        @endif
