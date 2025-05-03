@@ -98,11 +98,13 @@ class ProductResource extends Resource
                                     ->label('Upload Sheets')
                                     ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']) // Allow PDF & Word
                                     ->maxSize(5120) // Optional: Limit file size (5MB)
+                                    ->preserveFilenames()
                                     ->directory('products'),
                                 FileUpload::make('content.download_cert')
                                     ->label('Upload Certificate')
                                     ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']) // Allow PDF & Word
                                     ->maxSize(5120) // Optional: Limit file size (5MB)
+                                    ->preserveFilenames()
                                     ->directory('products')
                             
                             ])
