@@ -119,7 +119,19 @@
                <div class="row g-0">
                    <div class="col-lg-4">
                        <div class="about_techTr_img">
-                        <img src="images/about-RachTr-499.webp" srcset="images/about-RachTr-499.webp 499w, images/about-RachTr-780.webp 768w, images/about-RachTr.webp 1299w" sizes="(max-width: 600px) 100vw, 50vw" width="320" height="180" alt="About rachtr image">
+                        <img src="images/about-RachTr-499.webp" 
+                             srcset="images/about-RachTr-499.webp 499w, 
+                                     images/about-RachTr-780.webp 768w, 
+                                     images/about-RachTr.webp 1299w" 
+                             sizes="(max-width: 499px) 45vw, 
+                                    (max-width: 780px) 55vw, 
+                                    1299px" 
+                             width="320" 
+                             height="440" 
+                             alt="About rachtr image"
+                             decoding="async"
+                             fetchpriority="high">
+                            
                        </div>
                    </div>
                    <div class="col-lg-6 ps-0">
@@ -193,7 +205,7 @@
       <!-- This is a section-1 close -->
         
      <!-- This is a section-2 open -->
-        <section class="our_strengths py-5">
+        <section class="our_strengths homepg_projects py-5">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
@@ -209,7 +221,17 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
-                                        <img src="images/Innovative%20Research%20&%20Development.webp"/>
+                                      <img 
+                                            src="{{ asset('/images/Innovative%20Research%20&%20Development-380.webp') }}" 
+                                            srcset="{{ asset('/images/Innovative%20Research%20&%20Development-320.webp') }} 320w, 
+                                                    {{ asset('/images/Innovative%20Research%20&%20Development-380.webp') }} 380w, 
+                                                    {{ asset('/images/Innovative%20Research%20&%20Development-640.webp') }} 640w" 
+                                            sizes="(max-width: 480px) 25vw, 
+                                                   (max-width: 600px) 35vw, 
+                                                   (max-width: 1200px) 33vw, 380px" 
+                                            width="380" 
+                                            height="210" 
+                                            alt="Innovative Research & Development">
                                       </div>
                                       <div class="projects_txt">
                                         <h6 class="fw-bold">Innovative Research & Development</h6>
@@ -231,7 +253,18 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12 mx-5">
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
-                                        <img src="images/Advanced%20Manufacturing.webp"/>
+                                      <img 
+                                            src="{{ asset('images/Advanced%20manufacturing-380x.webp') }}" 
+                                            srcset="{{ asset('images/Advanced%20manufacturing-320x.webp') }} 320w, 
+                                                    {{ asset('images/Advanced%20manufacturing-380x.webp') }} 380w, 
+                                                    {{ asset('images/Advanced%20manufacturing-640x.webp') }} 640w" 
+                                            sizes="(max-width: 480px) 25vw, 
+                                                   (max-width: 600px) 35vw, 
+                                                   (max-width: 1200px) 33vw, 380px" 
+                                            width="380" 
+                                            height="210" 
+                                            alt="Advanced Manufacturing">
+                                      
                                       </div>
                                       <div class="projects_txt">
                                         <h6 class="fw-bold">Advanced Manufacturing</h6>
@@ -253,7 +286,17 @@
                                 <li class="col-lg-4 col-md-4 col-sm-12">
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
-                                        <img src="images/Comprehensive%20Solutions.webp"/>
+                                        <img 
+                                            src="{{ asset('/images/Comprehensive%20Solutions-380x.webp') }}" 
+                                            srcset="{{ asset('/images/Comprehensive%20Solutions-320x.webp') }} 320w, 
+                                                    {{ asset('/images/Comprehensive%20Solutions-380x.webp') }} 380w, 
+                                                    {{ asset('/images/Comprehensive%20Solutions-640x.webp') }} 640w" 
+                                            sizes="(max-width: 480px) 25vw, 
+                                                   (max-width: 600px) 35vw, 
+                                                   (max-width: 1200px) 33vw, 380px"  
+                                            width="380" 
+                                            height="210" 
+                                            alt="Comprehensive Solutions">
                                       </div>
                                       <div class="projects_txt">
                                         <h6 class="fw-bold">Comprehensive Solutions</h6>
@@ -303,7 +346,7 @@
                             @foreach($blogs->skip(max(0, $blogs->count() - 3))->take(3) as $blog)
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
-                                    <img src="{{asset($blog->featurePhoto)}}" alt="blog picture" loading="lazy"/>
+                                    <img src="{{asset($blog->featurePhoto)}}" alt="blog picture" loading="lazy" width="300" height="300"/>
                                 </div>
                                 <div class="letst_advermnt_contnt">
                                     <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
@@ -484,7 +527,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/delhivery.webp" loading="lazy"/>
+                             <img src="images/delhivery.webp" loading="lazy"  width="750" height="470"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -522,7 +565,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/welspun%20epoxy.webp" loading="lazy"/>
+                             <img src="images/welspun%20epoxy.webp" loading="lazy"  width="750" height="470"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -561,7 +604,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/Perfect-White-Marble.webp" loading="lazy"/>
+                             <img src="images/Perfect-White-Marble.webp" loading="lazy"  width="750" height="470"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -600,7 +643,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/itc%20before%20after%20rachtr.webp" alt="Rachtr Image" loading="lazy"/>
+                             <img src="images/itc%20before%20after%20rachtr.webp" alt="Rachtr Image" loading="lazy"  width="750" height="470"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -639,7 +682,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/Escort%20Kubota%20Blog%20Banner.webp" loading="lazy"/>
+                             <img src="images/Escort%20Kubota%20Blog%20Banner.webp" loading="lazy"  width="750" height="470"/>
                           </div>
                           <div class="downd_txt px-4 py-4">
                              <ul>
@@ -683,7 +726,7 @@
                             <li class="col-lg-4 mx-3">
                                 <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}" class="d-block text-decoration-none text-dark h-100 m-0">
                                     <div class="blogs_img">
-                                        <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture" loading="lazy"/>
+                                        <img src="{{ asset($blog->featurePhoto) }}" alt="blog picture" loading="lazy" width="30" height="30"/>
                                     </div>
                                     <div class="blogs_contnt">
                                         <div class="top_cont">
