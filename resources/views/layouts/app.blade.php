@@ -41,7 +41,11 @@
 
             
 
-
+            @if(request()->is('/'))
+                <link rel="preload" as="image" href="https://www.rachtr.com/images/about-RachTr-780.webp" imagesrcset="https://www.rachtr.com/images/about-RachTr-499.webp 499w, https://www.rachtr.com/images/about-RachTr-780.webp 768w" imagesizes="(max-width: 499px) 45vw, 
+                                    (max-width: 780px) 55vw, 
+                                    1299px" type="image/webp">  
+            @endif
                             <!-- Preload Google Fonts (critical for typography) -->
                 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
                 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"></noscript>
