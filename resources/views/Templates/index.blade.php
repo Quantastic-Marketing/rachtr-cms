@@ -254,10 +254,10 @@
                                   <div class="projects_blogs">
                                       <div class="projects_img pb-1">
                                       <img 
-                                            src="{{ asset('images/Advanced%20manufacturing-380x.webp') }}" 
-                                            srcset="{{ asset('images/Advanced%20manufacturing-320x.webp') }} 320w, 
-                                                    {{ asset('images/Advanced%20manufacturing-380x.webp') }} 380w, 
-                                                    {{ asset('images/Advanced%20manufacturing-640x.webp') }} 640w" 
+                                            src="{{ asset('images/Advanced%20Manufacturing-380x.webp') }}" 
+                                            srcset="{{ asset('images/Advanced%20Manufacturing-320x.webp') }} 320w, 
+                                                    {{ asset('images/Advanced%20Manufacturing-380x.webp') }} 380w, 
+                                                    {{ asset('images/Advanced%20Manufacturing-640x.webp') }} 640w" 
                                             sizes="(max-width: 480px) 25vw, 
                                                    (max-width: 600px) 35vw, 
                                                    (max-width: 1200px) 33vw, 380px" 
