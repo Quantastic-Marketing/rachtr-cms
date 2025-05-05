@@ -6,6 +6,7 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/js/app.js',
+                'resources/css/app.css',
                 'resources/css/bootstrap.min.css',
                 'resources/css/style.css',
                 'resources/css/responsive.css',
@@ -39,6 +40,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    assetsInclude: ['**/*.woff2'],
     
     
 

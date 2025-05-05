@@ -47,8 +47,8 @@
                                     1299px" type="image/webp">  
             @endif
                             <!-- Preload Google Fonts (critical for typography) -->
-                <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-                <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"></noscript>
+                <!-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+                <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"></noscript> -->
 
                 <!-- Preload Font Awesome (if used above the fold) -->
                 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -58,6 +58,7 @@
                 
             @vite([
                 'resources/js/app.js',
+                'resources/css/app.css',
                 'resources/css/bootstrap.min.css',
                 'resources/css/jquery.fancybox.min.css',
                 'resources/css/slick.css',
