@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <meta name="msvalidate.01" content="8C0F176F0755630859963DA6D5140F0A" />
+        <meta http-equiv='content-language' content='en-gb'>
         @php
             $seo = $post->seoDetail ?? (object)[];
             $seoTitle = $seo->title ?? config('app.name');
