@@ -333,6 +333,8 @@ class PageResource extends Resource
             'industrial-flooring-solutions' => self::industrialTemplate(),
             'stone-processing-industry' => self::industrialTemplate(),
             'epoxy-flooring-services' => self::epoxyTemplate(),
+            'epoxy-flooring-cost-price' =>self::epoxyTemplate(),
+            'pu-flooring' =>self::puFlooringTemplate(),
             default => self::defaultTemplate(),
         };
     }
@@ -643,6 +645,26 @@ class PageResource extends Resource
                     RichEditor::make('content.application.paragraph')
                                 ->label('Paragraph')
                                 ->placeholder('Intro paragraph about Epoxy Flooring Applications.'),
+                    ]),
+        ];
+    }
+
+    public static function puFlooringTemplate(): array
+    {
+        return [
+                Section::make('PU Flooring Faq Section')
+                ->schema([
+                    TextInput::make('content.faq_section.heading')
+                        ->label('Section Heading')
+                        ->placeholder('Enter the heading'),
+                    
+                    Repeater::make('content.faq_section.faqs')
+                        ->label('Faq Section')
+                        ->schema([
+                            RichEditor::make('acc_title')->label('Title for FAQ'),
+                            RichEditor::make('acc_body')->label('Dropdown description for FAQ'),
+                        ])
+                        ->addActionLabel('Adds FAQ Accordion'),
                     ]),
         ];
     }

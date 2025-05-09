@@ -1,7 +1,7 @@
-
-
-    <div class="wrapper">
-     
+<div class="wrapper">
+@php 
+    $pageContent = $page->content;
+@endphp
        <section class="pu-banner banner">
         <div class="row g-0">
         <div class="col-lg-12">
@@ -175,6 +175,38 @@
                 
             </div>
         </section>
+
+        @if(!empty($pageContent['faq_section']))
+        <section class="product-list-faq faqs py-lg-4 py-3 pb-lg-5 pb-3">
+                <div class="container faqs_detls">
+                <div class="heading-holder py-lg-5 py-3 text-center">
+                    <h2 class="fs-1 fw-bold ">{{!empty($pageContent['faq_section']['heading']) ? $pageContent['faq_section']['heading'] : 'FAQs'}}</h2>
+                </div>
+        
+                <div class="row">
+                    <div
+                    class="col-md-9 mt-4"
+                    style="overflow-y: visible; height: auto"
+                    >
+                    <!-- tab-1 Open -->
+                    <div  class="tab-content current">
+                        @foreach($pageContent['faq_section']['faqs'] as $faq)
+                        <div class="accordion-wrapper">
+                        <div class="acc-head py-3 pb-3 fw-bold">
+                            {!! trim($faq['acc_title'] ?? '') !!}
+                        </div>
+                        <div class="acc-body">
+                        {!! trim($faq['acc_body'] ?? '') !!}
+                        </div>
+                        </div>
+                        @endforeach
+                    </div>
+                    <!-- tab-2 close -->
+                    </div>
+                </div>
+                </div>
+        </section>
+        @endif
 
    </div>
 
