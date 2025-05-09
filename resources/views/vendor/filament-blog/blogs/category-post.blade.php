@@ -4,6 +4,7 @@
         <meta name="google-site-verification" content="LLHnCxL0ply51MwNKvI7mbYW7yFJQ1GK6g_DrijdgMU" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="msvalidate.01" content="8C0F176F0755630859963DA6D5140F0A" />
         @php
             $seo = $page->seoDetail ?? (object)[];
             $seoTitle = $seo->title ?? config('app.name');

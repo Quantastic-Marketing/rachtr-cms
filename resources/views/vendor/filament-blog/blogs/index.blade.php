@@ -10,6 +10,7 @@
             <meta name="keywords" content="epoxy flooring blogs,tile adhesive blog,blogs">
             <link rel="canonical" href="https://www.rachtr.com/blogs">
             <meta name="robots" content="index,follow">
+            <meta name="msvalidate.01" content="8C0F176F0755630859963DA6D5140F0A" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script  src="{{ asset('js/jquery.min.js') }}" type="text/jscript"></script>
