@@ -1,3 +1,4 @@
+const baseUrl = document.getElementById('searchWrap')?.dataset.appUrl || '';
 class SearchContainer {
     constructor({
         inputId,
@@ -125,7 +126,6 @@ class SearchContainer {
             if (!response.ok) throw new Error('Failed to fetch trending products');
     
             const data = await response.json();
-            console.log('Trending products:', data);
             if (data.products && Object.keys(data.products).length > 0) {
                 const productsArray = Object.values(data.products);
                 this.results.innerHTML = productsArray.map(p => this.createProductHTML(p)).join('');
@@ -183,16 +183,16 @@ class SearchContainer {
 
         return `
             <div class="result-item">
-                <a href="blogs/${blog.slug}">
-                    <div class="result-image">
-                        <img src="${blog.feature_photo}" alt="${blog.title}" width="50" height="50">
-                    </div>
-                    <div class="result-info">
-                        <h4>${this.stripTags(blog.title || '').substring(0, 15) + '...'}</h4>
-                        <p>${this.escapeHTML(description)}</p>
-                    </div>
-                </a>
-            </div>
+            <a href="${baseUrl}/blogs/${blog.slug}">
+                <div class="result-image">
+                    <img src="${blog.feature_photo}" alt="${blog.title}" width="50" height="50">
+                </div>
+                <div class="result-info">
+                    <h4>${this.stripTags(blog.title || '').substring(0, 15) + '...'}</h4>
+                    <p>${this.escapeHTML(description)}</p>
+                </div>
+            </a>
+            </div>  
         `;
     }
 
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile search container
     
-
+   
     const initMobileSearch = () => {
         if (window.innerWidth <= 1238) {
             // Check if mobile search elements exist
