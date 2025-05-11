@@ -164,51 +164,7 @@ $(document).ready(function () {
     ]
 
   });
-  // banner slider js close   
-
-  // Adv Manufacturing slider open
-
-  $('.multiple-items').slick({
-    infinite: true,
-    dots: true,
-    arrows: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-
-    responsive: [
-
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true
-
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
-
-  // Adv Manufacturing slider close        
+  // banner slider js close         
 
   // FAQ slider open    
 
@@ -520,6 +476,67 @@ handleSlider();
 // Run on window resize
 $(window).on('resize', function () {
   handleSlider();
+});
+
+
+function initResponsiveSlick() {
+  const $carousel = $('.multiple-items');
+
+  if ($(window).width() <= 600) {
+    if (!$carousel.hasClass('slick-initialized')) {
+      $carousel.slick({
+        mobileFirst: true,
+        infinite: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+    }
+  } else {
+    if (!$carousel.hasClass('slick-initialized')) {
+      $carousel.slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    }
+  }
+}
+
+// Optional: destroy Slick before re-initializing to avoid duplication
+function destroySlickIfNeeded() {
+  const $carousel = $('.multiple-items');
+  if ($carousel.hasClass('slick-initialized')) {
+    $carousel.slick('unslick');
+  }
+}
+
+function setupCarousel() {
+  destroySlickIfNeeded();
+  initResponsiveSlick();
+}
+
+$(window).on('load resize', function () {
+  setTimeout(setupCarousel, 100); // delay ensures viewport is accurate
 });
 
 $(document).ready(function() {

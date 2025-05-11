@@ -510,6 +510,12 @@
 .applications-of-epoxy .applc-epoxy-cont a{
     text-decoration: underline;
 }
+
+.epoxy-floor-cost .epoxy-floor-content .components-factors .component-text a{
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 600;
+}
 @media (max-width: 1239px) {
     .case-studies-item .slick-dots {
         /* bottom: 0; */
@@ -542,6 +548,9 @@
     
     .epoxy-service-banner .banner-sec .banner_overlay .content-details h1{
         font-size: 24px;
+    }
+    .comprnsive_solution .case_studies .case_studies_contn a {
+        margin-bottom: 10px;
     }
 }
 @media (min-width:480px) and  (max-width:768px) {
@@ -819,7 +828,12 @@
     .get-free-quote .get-free-content .banner-buttons {
         width: 85%;
     }
-
+    .get-free-quote .get-free-content .banner-buttons  button:first-of-type{
+        padding: 8px !important;
+        font-size: 14px !important;
+        justify-content: space-around;
+    }
+    
 
 }
 

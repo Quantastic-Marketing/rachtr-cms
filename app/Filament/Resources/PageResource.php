@@ -15,9 +15,11 @@ use RalphJSmit\Filament\SEO\SEO;
 use App\Models\Pages as PageModel;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Tabs;
+use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Select;
 use App\Filament\Components\CustomSEO;
 use Filament\Forms\Components\Section;
+use FilamentTiptapEditor\TiptapEditor;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Tabs\Tab;
@@ -646,6 +648,24 @@ class PageResource extends Resource
                                 ->label('Paragraph')
                                 ->placeholder('Intro paragraph about Epoxy Flooring Applications.'),
                     ]),
+                Section::make('Epoxy Flooring FAQ Section')
+                    ->schema([
+                        TextInput::make('content.faq_section_content.heading')
+                            ->label('Section Heading')
+                            ->placeholder('Enter the heading'),
+                        Repeater::make('content.faq_section_content.faqs')
+                            ->label('Faq Section')
+                            ->schema([
+                                RichEditor::make('acc_title')->label('Title for FAQ'),
+                                TiptapEditor::make('acc_body')
+                                        ->profile('default')
+                                        ->disableFloatingMenus()
+                                        ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem'])
+                                        ->columnSpanFull(),
+                            ])
+                            ->addActionLabel('Adds FAQ Accordion')
+                        ]),
+               
         ];
     }
 

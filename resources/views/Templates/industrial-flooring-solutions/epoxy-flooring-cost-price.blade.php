@@ -1,4 +1,7 @@
 <div class="wrapper"> 
+@php
+        $pageContent = $page->content;
+    @endphp
        <div class=" cost-price-banner bnr_sldr">
         <div class="row g-0">
         <div class="col-lg-12">
@@ -781,17 +784,30 @@
      </section>    
        <!-- This is a section-8 close  -->
 
-               <!-- This is a section-8 open -->   
+               <!-- This is a section-8 open --> 
      <section class="common-faqs py-5">   
         <div class="container">
             <div class="row g-0">
                 <div class="common-faq-block">
                     <div class="heading-holder py-5 text-center">
-                        <h2 class="fw-bold">Common FAQs related to <br>
-                           <span>RachTR Epoxy Solutions</span> </h2>
+                        <h2 class="fw-bold">
+                            {!! isset($pageContent['faq_section_content']['heading']) && !empty($pageContent['faq_section_content']['heading']) 
+                            ? trim($pageContent['faq_section_content']['heading']) 
+                            : 'Common FAQs related to <span>RachTR Epoxy Solutions</span>' !!}
+                        </h2>
                     </div>
                     <div class="faq-block  ">
                     <div class="faq-block px-md-5 mx-md-5 px-sm-3 mx-sm-3">
+                    @forelse($pageContent['faq_section_content']['faqs'] ?? [] as $faq)
+                        <div class="accordion-wrapper">
+                                <div class="acc-head py-4">
+                                {!! trim($faq['acc_title'] ?? '') !!}
+                                </div>
+                                <div class="acc-body">
+                                {!! trim($faq['acc_body'] ?? '') !!}
+                                </div>
+                        </div>
+                    @empty
                         <div class="accordion-wrapper">
                             <div class="acc-head py-4">
                               <h6 class="mb-0 fw-bold">What are the benefits of RachTR epoxy flooring?</h6>
@@ -885,16 +901,17 @@
                                 <p>Simply fill out the form by clicking <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-services#epoxy-form-sec' }}"  class="org" target="_blank">here</a>, and a RachTR representative will contact you to discuss your project and provide a free quote.</p>
                             </div>
                         </div>
+                    @endforelse
                     </div>
                 </div>
                 
             </div> 
         </div>
-     </section>    
+     </section> 
        <!-- This is a section-8 close  -->
 
         <!-- This is a section-9 open -->   
-     <section class="get-free-quote py-5" style=" background: url({{asset('images/get-free-quote-bg.webp')}});">   
+     <section class="get-free-quote py-5" style=" background: url({{asset('images/get-free-quote-bg.webp')}});background-repeat: no-repeat;background-position: center;background-size: cover;">   
         <div class="container">
             <div class="row g-0">
                 <div class="col-12">
