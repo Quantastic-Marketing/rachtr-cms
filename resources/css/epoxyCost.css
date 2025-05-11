@@ -374,7 +374,7 @@
 .what-is-epoxy .why-epoxy-content .heading-holder h2,
 .epoxy-solutions .epoxy-solution-content .heading-holder h2,
 .factors-of-epoxy h2,
-.colors-available h2{
+.colors-available h3{
    font-size:34px;
 }
 
@@ -408,7 +408,7 @@
     .what-is-epoxy .why-epoxy-content .heading-holder h2,
     .epoxy-solutions .epoxy-solution-content .heading-holder h2,
     .factors-of-epoxy h2,
-    .colors-available h2{
+    .colors-available h3{
         font-size:24px;
     }
     
