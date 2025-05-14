@@ -318,7 +318,7 @@
                             <div class="col-lg-7 col-md-12">
                                 <div class="case_studies_downd">
                                     <div class="downd_img">
-                                        <img src="{{ asset('images/welspun%20epoxy.webp')}}" />
+                                        <img src="{{ asset('images/welspun%20epoxy.webp')}}" alt="Epoxy flooring solution for Welspun"/>
                                     </div>
                                     <div class="downd_txt px-5 py-4">
                                         <ul>
@@ -373,7 +373,7 @@
                             <div class="col-lg-7 col-md-12">
                                 <div class="case_studies_downd">
                                     <div class="downd_img">
-                                        <img src="{{ asset('images/Perfect-White-Marble.webp')}}" />
+                                        <img src="{{ asset('images/Perfect-White-Marble.webp')}}" alt="Perfect White Marble"/>
                                     </div>
                                     <div class="downd_txt px-5 py-4">
                                         <ul>
@@ -417,7 +417,7 @@
                             <div class="col-lg-7 col-md-12">
                                 <div class="case_studies_downd">
                                     <div class="downd_img">
-                                        <img src="{{ asset('images/itc%20before%20after%20rachtr.webp')}}" />
+                                        <img src="{{ asset('images/itc%20before%20after%20rachtr.webp')}}" alt="Before and After applying epoxy flooring in ITC, Haridwar"/>
                                     </div>
                                     <div class="downd_txt px-5 py-4">
                                         <ul>

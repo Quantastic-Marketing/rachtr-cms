@@ -952,6 +952,7 @@
                           <div class="downd_img">
                             <img
                               src="images/Epoxy-Flooring-Solution-for-Welspun.webp"
+                              alt="Epoxy flooring solution for Welspun"
                             />
                           </div>
                         </div>
@@ -964,6 +965,7 @@
                         <div class="downd_img">
                           <img
                             src="images/Epoxy-Flooring-Solution-for-Welspun.webp"
+                            alt="Epoxy flooring solution for Welspun"
                           />
                         </div>
                         <div
@@ -1009,6 +1011,7 @@
                           <div class="downd_img">
                             <img
                               src="images/Hygienic-Flooring-Solution-for-FMCG-Factory-Haridwar.webp"
+                              alt="Hygienic flooring solution for FMCG factory in Haridwar "
                             />
                           </div>
                         </div>
@@ -1021,6 +1024,7 @@
                         <div class="downd_img">
                           <img
                             src="images/Hygienic-Flooring-Solution-for-FMCG-Factory-Haridwar.webp"
+                            alt="Hygienic flooring solution for FMCG factory in Haridwar "
                           />
                         </div>
                         <div
