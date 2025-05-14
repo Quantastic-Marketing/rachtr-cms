@@ -346,7 +346,7 @@
                             @foreach($blogs->skip(max(0, $blogs->count() - 3))->take(3) as $blog)
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
-                                    <img src="{{asset($blog->featurePhoto)}}" alt="blog picture" loading="lazy" width="300" height="300"/>
+                                    <img src="{{asset($blog->featurePhoto)}}" alt="{{$blog->title}}" loading="lazy" width="300" height="300"/>
                                 </div>
                                 <div class="letst_advermnt_contnt">
                                     <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
@@ -527,7 +527,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/delhivery.webp" loading="lazy"  width="750" height="470"/>
+                             <img src="images/delhivery.webp" loading="lazy" alt="Dehivery"  width="750" height="470"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -565,7 +565,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/welspun%20epoxy.webp" loading="lazy"  width="750" height="470"/>
+                             <img src="images/welspun%20epoxy.webp" loading="lazy" alt="welspun epoxy" width="750" height="470"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -604,7 +604,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/Perfect-White-Marble.webp" loading="lazy"  width="750" height="470"/>
+                             <img src="images/Perfect-White-Marble.webp" loading="lazy" alt="perfect white marble"  width="750" height="470"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>
@@ -643,7 +643,7 @@
                    <div class="col-lg-7 col-md-12">
                        <div class="case_studies_downd">
                           <div class="downd_img">
-                             <img src="images/itc%20before%20after%20rachtr.webp" alt="Rachtr Image" loading="lazy"  width="750" height="470"/>
+                             <img src="images/itc%20before%20after%20rachtr.webp" alt="ITC before and after epoxy solution Image" loading="lazy"  width="750" height="470"/>
                           </div>
                           <div class="downd_txt px-5 py-4">
                              <ul>

@@ -193,7 +193,7 @@
                                       <a href="#" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/welspun_pro_img.webp')}}"/>
+                                           <img src="{{ asset('images/welspun_pro_img.webp')}}" alt="Before and After applying epoxy flooring in Welspun"/>
                                         </div>
                                         <!-- <div class="before-block">Before</div>
                                         <div class="after-block">After</div> -->
@@ -219,17 +219,17 @@
                                       <a href="#" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/itc_project_img.webp')}}"/>
+                                           <img src="{{ asset('images/itc_project_img.webp')}}" alt="Before and After applying epoxy flooring in ITC, Haridwar"/>
                                         </div>
                                         <!-- <div class="before-block">Before</div>
                                         <div class="after-block">After</div> -->
                                      </div>
                                    </div>
                                </div>
-                               <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
+                               <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block" >
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="{{ asset('images/itc_project_img.webp')}}"/>
+                                         <img src="{{ asset('images/itc_project_img.webp')}}" alt="Before and After applying epoxy flooring in ITC, Haridwar"/>
                                       </div>
                                       <!-- <div class="before-block">Before</div>
                                       <div class="after-block">After</div> -->
@@ -245,7 +245,7 @@
                                       <a href="#" target="_blank">View Case Study</a>
                                       <div class="case_studies_downd d-md-none">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/faridabad_proj_img.webp')}}"/>
+                                           <img src="{{ asset('images/faridabad_proj_img.webp')}}" alt="Before and After applying epoxy flooring in Faridabad"/>
                                         </div>
                                         <!-- <div class="before-block">Before</div>
                                         <div class="after-block">After</div> -->
@@ -255,7 +255,7 @@
                                <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
                                    <div class="case_studies_downd">
                                       <div class="downd_img">
-                                         <img src="{{ asset('images/faridabad_proj_img.webp')}}"/>
+                                         <img src="{{ asset('images/faridabad_proj_img.webp')}}" alt="Before and After applying epoxy flooring in Faridabad"/>
                                       </div>
                                       <!-- <div class="before-block">Before</div>
                                       <div class="after-block">After</div> -->
