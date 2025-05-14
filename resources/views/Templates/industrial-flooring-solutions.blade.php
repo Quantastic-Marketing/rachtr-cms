@@ -895,6 +895,7 @@
                           <div class="downd_img">
                             <img
                               src="images/Restoration-of-Delhivery-Damaged-Floor.webp"
+                              alt="Restoration of Delhivery's damaged floor"
                             />
                           </div>
                         </div>
@@ -907,6 +908,7 @@
                         <div class="downd_img">
                           <img
                             src="images/Restoration-of-Delhivery-Damaged-Floor.webp"
+                            alt="Restoration of Delhivery's damaged floor"
                           />
                         </div>
                         <div
@@ -1215,43 +1217,43 @@
                  @empty
                   <div class="img">
                     <a href="{{asset('images/industry-solution-pic1.webp') }}" data-fancybox="gallery" data-caption="Green Industrial Epoxy Flooring RachTR">
-                    <img src="images/industry-solution-pic1.webp" />
+                    <img src="images/industry-solution-pic1.webp" alt="RachTR's green industrial epoxy flooring"/>
                     <p>Green Industrial Epoxy Flooring RachTR</p>
                     </a>
                   </div>
                   <div class="img">
                     <a href="{{asset('images/industry-solution-pic2.webp') }}" data-fancybox="gallery" data-caption="An individual applying grey epoxy flooring">
-                      <img src="images/industry-solution-pic2.webp" />
+                      <img src="images/industry-solution-pic2.webp" alt="An individual applying grey epoxy flooring"/>
                       <p>An individual applying grey epoxy flooring</p>
                     </a>
                   </div>
                   <div class="img">
                     <a href="{{asset('images/industry-faq-3.webp') }}" data-fancybox="gallery" data-caption="RachTR's team performing epoxy flooring activities">
-                      <img src="images/industry-faq-3.webp" />
+                      <img src="images/industry-faq-3.webp" alt="RachTR's team performing epoxy flooring activities"/>
                       <p>RachTR's team performing epoxy flooring activities</p>
                     </a>
                   </div>
                   <div class="img">
                     <a href="{{asset('images/industry-solution-pic4.webp') }}" data-fancybox="gallery" data-caption="RachTR's team applying Epoxy flooring in an industry">
-                      <img src="images/industry-solution-pic4.webp" />
+                      <img src="images/industry-solution-pic4.webp" alt="RachTR's team applying epoxy flooring in a factory"/>
                       <p>RachTR's team applying Epoxy flooring in an industry</p>
                     </a>
                   </div>
                   <div class="img">
                     <a href="{{asset('images/industry-faq-5.webp') }}" data-fancybox="gallery" data-caption="An individual applying blue color epoxy flooring">
-                      <img src="images/industry-faq-5.webp" />
+                      <img src="images/industry-faq-5.webp" alt="An individual applying blue color epoxy flooring"/>
                       <p>An individual applying blue color epoxy flooring</p>
                     </a>
                   </div>
                   <div class="img">
                     <a href="{{asset('images/industry-solution-pic6.webp') }}" data-fancybox="gallery" data-caption="Process before applying RachTR's epoxy flooring">
-                      <img src="images/industry-solution-pic6.webp" />
+                      <img src="images/industry-solution-pic6.webp" alt="Process before applying RachTR's epoxy flooring "/>
                       <p>Process before applying RachTR's epoxy flooring</p>
                     </a>
                   </div>
                   <div class="img">
                     <a href="{{asset('images/industry-solution-pic7.webp') }}" data-fancybox="gallery" data-caption="Blue RachTR Epoxy Flooring in Welspun">
-                      <img src="images/industry-solution-pic7.webp" />
+                      <img src="images/industry-solution-pic7.webp" alt="Blue RachTR epoxy flooring in Welspun"/>
                       <p>Blue RachTR Epoxy Flooring in Welspun</p>
                     </a>
                   </div>

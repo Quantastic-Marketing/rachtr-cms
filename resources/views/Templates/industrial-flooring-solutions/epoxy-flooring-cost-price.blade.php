@@ -102,14 +102,14 @@
                 </div>
                 <div class="col-lg-6 me-0">
                     <div class="epoxy-img">
-                        <img src="{{ asset('images/what-epoxy.webp') }}" alt="">
+                        <img src="{{ asset('images/what-epoxy.webp') }}" alt="An individual applying grey color epoxy flooring">
                         <div class="bg-overlay"></div>
                         <div class="image-top">
                             <div class="bg-img-wrapper d-none d-lg-block">
                                 <img src="{{ asset('images/image-removebg-preview.webp') }}" alt="overlay">
                             </div>
                             <div class="bg-img-wrapper d-block d-lg-none">
-                                <img src="{{ asset('images/image-mob.webp') }}" class="w-77" alt="">
+                                <img src="{{ asset('images/image-mob.webp') }}" class="w-77" alt="Epoxy flooring layers">
                             </div>
                         </div>
                         
@@ -749,23 +749,23 @@
                             <div class="container">
                                 <div class="experience-fade-efct experience-slide">
                                     <div class="img">
-                                        <img src="{{ asset ('images/epoxy_floor.webp') }}"/>
+                                        <img src="{{ asset ('images/epoxy_floor.webp') }}" alt="Epoxy Flooring Process"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="{{ asset ('images/mortar.webp') }}"/>
+                                        <img src="{{ asset ('images/mortar.webp') }}" alt="Mortar"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="{{ asset ('images/primer.webp') }}"/>
+                                        <img src="{{ asset ('images/primer.webp') }}" alt="primer"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="{{ asset('images/screed.webp') }}"/>
+                                        <img src="{{ asset('images/screed.webp') }}" alt="Screed"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="{{ asset('images/topcoat.webp') }}"/>
+                                        <img src="{{ asset('images/topcoat.webp') }}" alt="Top Coat"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                  </div>
