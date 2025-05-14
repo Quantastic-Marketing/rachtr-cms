@@ -17,6 +17,7 @@ use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
 use App\Filament\Components\CustomSEO;
 use Filament\Forms\Components\Section;
 use FilamentTiptapEditor\TiptapEditor;
@@ -206,6 +207,27 @@ class PageResource extends Resource
                                                         ->multiple()
                                                         ->required(),
                                                 ]),
+                                            Section::make('Popular Search Content For Footer')
+                                                    ->schema([
+                                                    Repeater::make('content.popular_searches')
+                                                            ->label('Search Items')
+                                                            ->schema([
+                                                                TextInput::make('label')
+                                                                    ->required()
+                                                                    ->label('Search Label - The title of the search block')
+                                                                    ->placeholder('Enter the label'),
+
+                                                                TextInput::make('url')
+                                                                    ->label('Link')
+                                                                    ->placeholder('https://www.rachtr.com/')
+                                                                    ->url(),
+
+                                                                Toggle::make('is_active')
+                                                                    ->label('Active')
+                                                                    ->default(true),
+                                                            ])->reorderable(true)
+                                                    ->addActionLabel('Add Search Item')
+                                                            ]),    
                                         ])
                                         ->hidden(fn (callable $get) => !$get('content.is_product_list')),
                                 ]),
@@ -632,6 +654,27 @@ class PageResource extends Resource
                                 ]),
 
                         ]),
+                Section::make('Popular Search Content For Footer')
+                    ->schema([
+                       Repeater::make('content.popular_searches')
+                            ->label('Search Items')
+                            ->schema([
+                                TextInput::make('label')
+                                    ->required()
+                                    ->label('Search Label - The title of the search block')
+                                    ->placeholder('Enter the label'),
+
+                                TextInput::make('url')
+                                    ->label('Link')
+                                    ->placeholder('https://www.rachtr.com/')
+                                    ->url(),
+
+                                Toggle::make('is_active')
+                                    ->label('Active')
+                                    ->default(true),
+                            ])->reorderable(true)
+                    ->addActionLabel('Add Search Item')
+                            ]),
         ];
     }
 
@@ -665,6 +708,28 @@ class PageResource extends Resource
                             ])
                             ->addActionLabel('Adds FAQ Accordion')
                         ]),
+                Section::make('Popular Search Content For Footer')
+                    ->schema([
+                       Repeater::make('content.popular_searches')
+                            ->label('Search Items')
+                            ->schema([
+                                TextInput::make('label')
+                                    ->required()
+                                    ->label('Search Label - The title of the search block')
+                                    ->placeholder('Enter the label'),
+
+                                TextInput::make('url')
+                                    ->label('Link')
+                                    ->placeholder('https://www.rachtr.com/')
+                                    ->url(),
+
+                                Toggle::make('is_active')
+                                    ->label('Active')
+                                    ->default(true),
+                            ])->reorderable(true)
+                    ->addActionLabel('Add Search Item')
+                    ])
+                    ,
                
         ];
     }

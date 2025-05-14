@@ -346,7 +346,7 @@
                             @foreach($blogs->skip(max(0, $blogs->count() - 3))->take(3) as $blog)
                             <li class="col-lg-4 mx-3">
                                 <div class="letst_advermnt_img">
-                                    <img src="{{asset($blog->featurePhoto)}}" alt="{{$blog->title}}" loading="lazy" width="300" height="300"/>
+                                    <img src="{{asset($blog->featurePhoto)}}" alt="blog picture" loading="lazy" width="300" height="300"/>
                                 </div>
                                 <div class="letst_advermnt_contnt">
                                     <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
