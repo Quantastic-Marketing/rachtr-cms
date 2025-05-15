@@ -221,6 +221,10 @@ class PageResource extends Resource
                                     Section::make('Add Blogs for Page')
                                         ->description('Select blogs for the page')
                                         ->schema([
+                                            TextInput::make('content.blog-heading')
+                                                        ->label('Add a section heading for blog'),
+                                            TextArea::make('content.blog-sub-heading')
+                                                        ->label('Add a section sub heading for blog'),
                                             Select::make('content.blogs')
                                                 ->label('Select Blogs')
                                                 ->options(Post::pluck('title', 'id'))

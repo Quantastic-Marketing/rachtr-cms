@@ -3,6 +3,7 @@
     @php
         $pageContent = $page->content;
         $sectionData = $pageContent['application'] ?? [];
+        $blogHeading = $pageContent['blog-heading'] ?? [] ;
     @endphp
        <div class="epoxy-service-banner bnr_sldr">
         <div class="row g-0">
@@ -270,8 +271,57 @@
     
            </div>
        </div>
-       
-      
+    @if(!empty($pageContent['blogs']))
+      <section class="blogs bg-white">
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-lg-12">
+              <div class="blogs_sec py-lg-5 py-2">
+                <div class="mb-lg-5 mb-2 px-lg-5 mx-lg-5">
+                  <h2
+                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold text-start text-dark blog-case-heading"
+                  >
+                {!! $blogHeading ?? 'Blogs related to Epoxy Flooring Services' !!}     </h2>
+                @if($pageContent['blog-sub-heading'])
+                  <p class="color-black">
+                    {!! $pageContent['blog-sub-heading'] ?? '' !!}
+                  </p>
+                @endif
+                </div>
+                <ul class="padd0">
+                  @foreach($blogs->take(3) as $blog)
+                  <li class="col-lg-4 mx-3">
+                    <a href="{{ route('filamentblog.post.show', ['post' => $blog->slug]) }}">
+                      <div class="blogs_img">
+                        <img src="{{ asset($blog->featurePhoto) }}" alt="{{$blog->title}}"/>
+                      </div>
+                      <div class="blogs_contnt">
+                        
+                          <div class="top_cont">
+                            <span class="fw-bold">{{ \Carbon\Carbon::parse($blog->published_at)->format('M d')}}</span>
+                            <sup class="fw-bold">.</sup>
+                            <span class="fw-bold">4 min read</span>
+                          </div>
+                          <div class="btm_cont">
+                            <h2><strong class="title-blog">{{$blog->title}}</strong></h2>
+                          </div>
+                      
+                      </div>
+                    </a>
+                  </li>
+                  @endforeach
+                </ul>
+                <div class="view_btn col-lg-3 py-lg-5 py-3">
+                  <a href="{{ config('app.url') . '/blogs'}}" target="_blank"
+                    >VIEW ALL</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>   
+    @endif
      <section class="locations-served pt-5">   
         <div class="container">
             <div class="row g-0">
