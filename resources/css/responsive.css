@@ -786,6 +786,9 @@
  {
     padding: 15px 0px;
 }
+    .offer-product figure img.big-height {
+        height: 130px;
+    }
   }
   
   @media (max-width: 480px) {
