@@ -104,7 +104,7 @@
                 @endif
             @endforeach
         @endif
-        <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon_img.ico') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
         <!-- Google Tag Manager -->
         <script async defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
