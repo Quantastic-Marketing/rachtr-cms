@@ -590,7 +590,7 @@
                 <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
                   ​BLOCK REINFORCEMENT SYSTEM
                 </h3>
-                <p class="text-center fs-6 w-70">
+                <p class="text-center fs-6">
                   RachTR's Block Reinforcement System protects and strengthens
                   stone and marble during processing with advanced epoxy adhesives
                   and vacuum infusion technology, ensuring durability and
@@ -601,7 +601,7 @@
               <div
                 class="offer-product-lists six-col-block bg-white px-3 py-4 mb-3 mb-lg-5"
               >
-                <div class="row mx-auto w-80">
+                <div class="row mx-auto">
                   <div class="col-6 col-lg-4 mb-4 mb-lg-0">
                     <div class="offer-product">
                       <figure>
@@ -660,7 +660,7 @@
                   RESIN LINE & CRACK REPAIRING SYSTEMS
                 </h3>
 
-                <p class="text-center fs-6 w-70">
+                <p class="text-center fs-6">
                   RachTR's Resin Line & Crack Repairing Systems offer
                   UV-resistant, non-yellowing solutions for durable stone repairs,
                   including bleeding-free formulations and fast-curing adhesives.
@@ -822,7 +822,7 @@
                 <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
                   COLOR & GLOSS ENHANCER SYSTEMS
                 </h3>
-                <p class="text-center fs-6 w-70">
+                <p class="text-center fs-6">
                   RachTR's Color & Gloss Enhancer Systems intensify the beauty of
                   granites with deep penetration and vibrant, long-lasting
                   results.
@@ -832,7 +832,7 @@
               <div
                 class="offer-product-lists six-col-block bg-white px-3 py-4 mb-3 mb-lg-5"
               >
-                <div class="row mx-auto w-80">
+                <div class="row mx-auto">
                   <div class="col-6 col-lg-4 mb-4 mb-lg-0">
                     <div class="offer-product">
                       <figure>

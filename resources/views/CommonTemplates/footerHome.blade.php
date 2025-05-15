@@ -5,17 +5,12 @@
 <section class="footer"> 
         <div class="container">
             <div class="row g-0">
-                @if(!empty($searchItems))
+                @if(!empty($searchItems) && is_string($searchItems))
                 <div class="popular-searches">
                     <div class="container">
                         <h5>Popular Searches</h5>     
                         <div class="search-tags">
-                            @foreach($searchItems as $item)
-                            <a href="{{ $item['url'] ?? '#' }}">{{ $item['label'] ?? '' }}</a>
-                                @if (!$loop->last)
-                                <span class="text-white">|</span>
-                                @endif
-                            @endforeach
+                            {!! trim($searchItems ?? '') !!}
                         </div>
                     </div>
                 </div>

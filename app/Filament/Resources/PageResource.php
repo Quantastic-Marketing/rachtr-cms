@@ -181,8 +181,9 @@ class PageResource extends Resource
                                             Repeater::make('content.faq_section')
                                                 ->label('Faq Section')
                                                 ->schema([
+                                                    Grid::make(2)->schema([
                                                     RichEditor::make('acc_title')->label('Title for FAQ')->required(),
-                                                    RichEditor::make('acc_body')->label('Dropdown description for FAQ')->required(),
+                                                    RichEditor::make('acc_body')->label('Dropdown description for FAQ')->required()]),
                                                 ])
                                                 ->addActionLabel('Adds FAQ Accordion')
                                                 ->hidden(fn (callable $get) => !$get('has_faq')),
@@ -207,27 +208,10 @@ class PageResource extends Resource
                                                         ->multiple()
                                                         ->required(),
                                                 ]),
-                                            Section::make('Popular Search Content For Footer')
-                                                    ->schema([
-                                                    Repeater::make('content.popular_searches')
-                                                            ->label('Search Items')
-                                                            ->schema([
-                                                                TextInput::make('label')
-                                                                    ->required()
-                                                                    ->label('Search Label - The title of the search block')
-                                                                    ->placeholder('Enter the label'),
-
-                                                                TextInput::make('url')
-                                                                    ->label('Link')
-                                                                    ->placeholder('https://www.rachtr.com/')
-                                                                    ->url(),
-
-                                                                Toggle::make('is_active')
-                                                                    ->label('Active')
-                                                                    ->default(true),
-                                                            ])->reorderable(true)
-                                                    ->addActionLabel('Add Search Item')
-                                                            ]),    
+                                                RichEditor::make('content.popular_searches')
+                                                            ->label('Popular Searches')
+                                                                    ->columnSpanFull(),
+                                                            
                                         ])
                                         ->hidden(fn (callable $get) => !$get('content.is_product_list')),
                                 ]),
@@ -649,32 +633,16 @@ class PageResource extends Resource
                             Repeater::make('content.faq.questions')
                                 ->label('FAQ Blocks')
                                 ->schema([
-                                    RichEditor::make('acc_title')->label('Title for FAQ'),
-                                    RichEditor::make('acc_body')->label('Dropdown description for FAQ'),
+                                    Grid::make(2)->schema([
+                                        RichEditor::make('acc_title')->label('Title for FAQ'),
+                                        RichEditor::make('acc_body')->label('Dropdown description for FAQ'),
+                                    ]),
                                 ]),
 
                         ]),
-                Section::make('Popular Search Content For Footer')
-                    ->schema([
-                       Repeater::make('content.popular_searches')
-                            ->label('Search Items')
-                            ->schema([
-                                TextInput::make('label')
-                                    ->required()
-                                    ->label('Search Label - The title of the search block')
-                                    ->placeholder('Enter the label'),
-
-                                TextInput::make('url')
-                                    ->label('Link')
-                                    ->placeholder('https://www.rachtr.com/')
-                                    ->url(),
-
-                                Toggle::make('is_active')
-                                    ->label('Active')
-                                    ->default(true),
-                            ])->reorderable(true)
-                    ->addActionLabel('Add Search Item')
-                            ]),
+                RichEditor::make('content.popular_searches')
+                                                            ->label('Popular Searches')
+                                                                    ->columnSpanFull(),
         ];
     }
 
@@ -699,37 +667,19 @@ class PageResource extends Resource
                         Repeater::make('content.faq_section_content.faqs')
                             ->label('Faq Section')
                             ->schema([
+                                Grid::make(2)->schema([
                                 RichEditor::make('acc_title')->label('Title for FAQ'),
                                 TiptapEditor::make('acc_body')
                                         ->profile('default')
                                         ->disableFloatingMenus()
                                         ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem'])
-                                        ->columnSpanFull(),
+                                         ]),
                             ])
                             ->addActionLabel('Adds FAQ Accordion')
                         ]),
-                Section::make('Popular Search Content For Footer')
-                    ->schema([
-                       Repeater::make('content.popular_searches')
-                            ->label('Search Items')
-                            ->schema([
-                                TextInput::make('label')
-                                    ->required()
-                                    ->label('Search Label - The title of the search block')
-                                    ->placeholder('Enter the label'),
-
-                                TextInput::make('url')
-                                    ->label('Link')
-                                    ->placeholder('https://www.rachtr.com/')
-                                    ->url(),
-
-                                Toggle::make('is_active')
-                                    ->label('Active')
-                                    ->default(true),
-                            ])->reorderable(true)
-                    ->addActionLabel('Add Search Item')
-                    ])
-                    ,
+                RichEditor::make('content.popular_searches')
+                                                            ->label('Popular Searches')
+                                                                    ->columnSpanFull(),
                
         ];
     }
