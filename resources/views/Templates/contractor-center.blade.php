@@ -11,7 +11,7 @@
                     <img src="{{ asset('images/loor_mob_bg.webp') }}" alt="img background" class=" d-block d-md-none">
                 </div>
                 <div class="heading-holder">
-                    <h1 class="fw-bold">CONTRACT CENTER</h1>
+                    <h1 class="fw-bold">CONTRACTOR CENTER</h1>
                     <p>Welcome to the RachTR Contractor Center, a dedicated hub designed to support contractors and builders in executing exceptional construction projects.</p>
                 </div>
             </div>                   

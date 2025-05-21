@@ -128,8 +128,11 @@
                         {{ empty($mainHeading) ? 'Residential Commercial Building' : $mainHeading }} <span style="color: #ef6e25">Solutions</span>
                     </h2>
                     @if($subHeading)
-                        <h5 class="text-black text-center fw-bold">{{ empty($subHeading) ? 'Where Quality Matters' : $subHeading }}</h5>
+                        <h5 class="text-black text-center fw-bold">{{$subHeading }}</h5>
+                    @else
+                        <h5 class="text-black text-center fw-bold">Where Quality Matters</h5>
                     @endif
+
                 </div>
 
                 <div class="case-studies-item mx-lg-5">
@@ -816,7 +819,7 @@
 
                 <div class="header-part mb-lg-5 mb-4">
                   <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">GROUTS</h4>
-                  <p class="text-center fs-6 w-70">
+                  <p class="text-center fs-6 px-md-5">
                     With our epoxy grout, you get a seamless finish that resists
                     stains and is easy to clean, enhancing the appearance of your
                     tiles.
@@ -941,7 +944,7 @@
                     POLISHING SYSTEMS
                   </h3>
 
-                  <p class="text-center fs-6 w-70">
+                  <p class="text-center fs-6 px-md-5">
                     Achieve a brilliant shine and smooth finish for your marble
                     surfaces with our advanced marble tile polish, bringing out the
                     natural beauty of the stone.
@@ -1024,7 +1027,7 @@
                     PROTECTION SYSTEMS​
                   </h3>
 
-                  <p class="text-center fs-6 w-70">
+                  <p class="text-center fs-6 px-md-5">
                     Protect your marble surfaces from stains, moisture, and wear
                     with our range of marble sealers, extending the life of your
                     installations and preserving their elegance.
@@ -1146,7 +1149,7 @@
                     CLEANING AND MAINTENANCE
                   </h3>
 
-                  <p class="text-center fs-6 w-70">
+                  <p class="text-center fs-6 px-md-5">
                     Keep your marble surfaces pristine with our effective marble
                     cleaners, designed to remove dirt, grime, and stains without
                     damaging the stone.
@@ -1564,7 +1567,7 @@
                   <h2
                     class="mb-3 pb-2 display-6 display-lg-4 fw-bold text-start text-dark blog-case-heading"
                   >
-                    Blogs related to Residential <br />& Commercial Industry
+                    Blogs related to Residential & Commercial Industry
                   </h2>
                   <p class="color-black">
                     Check out some of our informative blog posts, research and
@@ -1698,7 +1701,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section>  
 
 
       <section class="faqs bg-white pb-5">
@@ -1706,7 +1709,7 @@
           <div class="row g-0">
             <div class="faqs_headng col-lg-12 py-lg-5 py-4">
               <h2 class="mb-4 fw-bold">{{ $faq['title'] ?? 'FAQs' }}</h2>
-                {{ $faq['title'] ?? 'FAQs' }}
+                {{ $faq['title'] ?? "Find answers to common questions about RachTR's products, services, ordering process, and technical inquiries." }}
             </div>
             <div class="faqs_detls row g-0">
               <div class="col-lg-4 faq_fade_effct pt-lg-5">
