@@ -577,7 +577,7 @@
                                         <div class="projects_txt">
                                             <p>Location: Surat</p>
                                             <p>Architect: Ajit Jariwala</p>
-                                            <p>Contractor: Quality Civl Decor, Mumba</p>
+                                            <p>Contractor: Quality Civl Decor, Mumbai</p>
                                         </div>
 
                                     </div>

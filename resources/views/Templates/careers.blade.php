@@ -194,9 +194,9 @@
                     <div class="col-lg-7 collab-right d-flex flex-column justify-content-center">
                         <div class="row p-lg-5">
                             <div class="col-md-9  ">
-                                <p>If you don’t see a position that matches your skills right now, we encourage you to send us your resume for future consideration..</p>
+                                <p>If you don’t see a position that matches your skills right now, we encourage you to send us your resume for future consideration.</p>
                                 <hr class="my-2" style="color: #ffffff; width: 50px;">
-                                <p>Click on the button below or reach out to us at info@rachtr.com and we'll be happy to assist you.
+                                <p>Click on the button below or reach out to us at <a href="mailto:info@rachtr.com">info@rachtr.com</a> and we'll be happy to assist you.
                                 </p>
                                 <a href="mailto:info@rachtr.com" class="cta-btn cta-btn-style mt-3">Reach out Now !</a>
                             </div>
