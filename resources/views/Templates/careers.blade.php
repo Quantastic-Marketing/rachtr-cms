@@ -198,7 +198,7 @@
                                 <hr class="my-2" style="color: #ffffff; width: 50px;">
                                 <p>Click on the button below or reach out to us at info@rachtr.com and we'll be happy to assist you.
                                 </p>
-                                <a href="mailto:info@rachtr.com" class="cta-btn mt-3">Reach out Now !</a>
+                                <a href="mailto:info@rachtr.com" class="cta-btn cta-btn-style mt-3">Reach out Now !</a>
                             </div>
                         </div>
                         
