@@ -428,10 +428,19 @@ align-self: baseline;
     font-size: 34px;
  }
 
-.carrer-collaborate .collaboration .collab-section .collab-right a:hover{
+.carrer-collaborate .collaboration .collab-section .collab-right .cta-button:hover{
     background-color: #fff;
     color: #000;
     letter-spacing: 2px;
+}
+.carrer-collaborate .collaboration .collab-section .collab-right p a{
+    all:unset;
+    color: #ffffff;
+}
+.carrer-collaborate .collaboration .collab-section .collab-right p a:hover{
+    text-decoration: underline;
+    
+    cursor: pointer;
 }
 
 
