@@ -11,9 +11,9 @@
                 </div>
                 <div class="banner-content">
                     <div class="heading-holder">
-                        <h2 class="fw-bold">Be a part of <span>#RachTRibe</span></h2>
+                        <h2 class="fw-bold">Be a part of <span>#RachTR</span>ibe</h2>
                     </div>
-                    <p class="text-center">Discover career opportunities. Check out our current job openings and apply today to take the step towards an exciting new career with RachTR.</p>
+                    <p class="text-center">Discover career opportunities. Check out our current job openings and apply today to take the next step towards an exciting new career with RachTR.</p>
                     <button class="btn btn-primary" onclick="window.location.href='{{ url('/upload-cv') }}'">Upload your CV</button>
                 </div>
             </div>                   
@@ -75,7 +75,7 @@
                             <p>We believe in fostering a culture of collaboration, creativity, and continuous learning.
                                 At RachTR, you’ll find a workplace where you can grow both personally and
                                 professionally. ​</p>
-                            <p>We understand that our team members are our greatest asset, we strive to create an
+                            <p>We understand that our team members are our greatest asset.We strive to create an
                                 environment that supports their well-being.</p>
                             <p class="mb-0"><strong>Our goal is to ensure that our team feels valued and supported, in and out of the
                                 workplace</strong> </p>
