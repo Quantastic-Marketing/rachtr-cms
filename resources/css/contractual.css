@@ -6,7 +6,7 @@
 }
 
 .contact-banner .banner-section .heading-holder {
-    width: 77%;
+    width: 70%;
     left: 0;
     right: 0;
 }
@@ -118,6 +118,7 @@
 
     .contact-contract .banner-section .heading-holder {
         text-align: left;
+        width:85%;
     }
     .contact-contract .heading-holder h1 {
         align-self: flex-start;
