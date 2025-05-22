@@ -58,6 +58,7 @@
     margin: 0;
     text-align: start;
     list-style-type: circle;
+    font-weight: 400;
 }
 
 .product-section .product-left-part  .product-slider {
