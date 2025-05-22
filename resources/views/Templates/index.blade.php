@@ -804,7 +804,7 @@
                             <div class="select-dropdown">
                                 <select id="select-box">
                                     <option text="General" value="tab-1">General</option>
-                                    <option text="Residential & Commercial Building" value="tab-2"> Residential & Commercial Building</option>
+                                    <option text="Residential & Commercial Building" value="tab-2">Residential & Commercial Building</option>
                                     <option text="Stone Processing Industry" value="tab-3">Stone Processing Industry</option>
                                     <option text="Industrial Flooring" value="tab-4">Industrial Flooring</option>
                                 </select>
@@ -812,7 +812,7 @@
                             
                             <ul class="tabs">
                                 <li class="tab current" data-tab="tab-1">General</li>
-                                <li class="tab" data-tab="tab-2">GeneralResidential & Commercial Building</li>
+                                <li class="tab" data-tab="tab-2">Residential & Commercial Building</li>
                                 <li class="tab" data-tab="tab-3">Stone Processing Industry</li>
                                 <li class="tab" data-tab="tab-4">Industrial Flooring</li>
                             </ul>
