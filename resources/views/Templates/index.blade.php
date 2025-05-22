@@ -804,7 +804,7 @@
                             <div class="select-dropdown">
                                 <select id="select-box">
                                     <option text="General" value="tab-1">General</option>
-                                    <option text="GeneralResidential & Commercial Building" value="tab-2">Residential & Commercial Building</option>
+                                    <option text="GeneralResidential & Commercial Building" value="tab-2"> Residential & Commercial Building</option>
                                     <option text="Stone Processing Industry" value="tab-3">Stone Processing Industry</option>
                                     <option text="Industrial Flooring" value="tab-4">Industrial Flooring</option>
                                 </select>
