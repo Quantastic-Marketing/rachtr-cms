@@ -324,7 +324,7 @@
      <!-- This is a section-2 close -->
     
     <!-- This is a section-3 open -->
-      <section class="intive_res_dev innovative-research py-5">
+      <section class="intive_res_dev innovative-research py-5" id="innovative-research">
           <div class="container">
               <div class="row g-0">
                   <div class="col-lg-12">
