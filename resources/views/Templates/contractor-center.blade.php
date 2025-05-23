@@ -53,7 +53,7 @@
                     <div class="col-lg-10 col-md-10 col-sm-12">
                         <div class="our_strengths_contnt">
                             <h2 class="pb-3 fw-bold">Our <span class="org">Industries</span></h2>
-                            <p>Innovative Solutions For Every Industrial Challenge</p>
+                            <p>Innovative Solutions for Every Industrial Challenge</p>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12">
