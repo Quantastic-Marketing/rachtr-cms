@@ -414,18 +414,18 @@
     font-size: 18px;
     line-height: 19.8px;
 }
-.colab-arch .collab-section .collab-left h2{
+.collaboration .collab-section .collab-left h2{
     font-size: 45px;
     line-height: 63px;
 }
-.colab-arch  .collab-section .collab-left p{
+.collaboration  .collab-section .collab-left p{
     color: #000000;
     line-height: normal;
     font-size: 16px;
     width: 400px;
 }
 
-.colab-arch .collab-section .collab-right p{
+.collaboration .collab-section .collab-right p{
     font-size:16px;
     line-height: 28.8px;
 }
@@ -518,7 +518,7 @@
     {
         font-size: 24px;
     }
-    .colab-arch .collab-section .collab-left h2 {
+    .collaboration .collab-section .collab-left h2 {
         line-height: 36px;
     }
     .arch-solution .heading-holder h2
@@ -531,7 +531,7 @@
     .projects_blogs{
         max-width: 440px;
     }
-    .colab-arch  .collab-section .collab-left p{
+    .collaboration  .collab-section .collab-left p{
     width: 100%;
     }
 }

@@ -84,12 +84,8 @@
     padding:21px 0;
 }
 .contact-contract .heading-holder h1{
-    font-size:42px;
-}
-
-.contract-innvo .heading-holder h2,
-.application-videos .application-content h2 {
-    font-size: 34px;
+    font-size:40px;
+    line-height:56px;
 }
 
 .collaboration .collab-section .collab-right a:hover{
@@ -98,6 +94,27 @@
     letter-spacing: 2px;
    
 }
+.contact-contract .heading-holder p{
+    line-height:normal;
+}
+
+.contract-innvo p{
+    color: #000;
+}
+.contract-sec .any_projects ul li div.projects_blogs .projects_txt h6 {
+    font-size: 18px;
+    line-height: 25.2px;
+}
+.application-videos .application-content h2{
+    font-size:38px;
+    line-height: 53.2px;
+}
+.application-videos .application-content p{
+    font-size:16px;
+    line-height: 22.4px;
+    color: #000;
+}
+
 
 @media (max-width:998px){
     .contact-contract {
@@ -140,5 +157,39 @@
     .contact-contract {
         margin-top: 36px;
     }
+    .contact-contract .heading-holder h1,
+    .innovation-solutions .heading-holder h2 {
+        font-size:19px;
+        line-height:26.6px;
+    }
+    .contact-contract .heading-holder p{
+        font-size:12px;
+    }
+
+    .contact-contract p,
+     .contract-sec .our_strengths_contnt p,
+     .contract-sec .any_projects ul li div.projects_blogs .projects_txtp{
+        font-size: 12px;
+        line-height: 16.8px;
+    }
     
+    .contract-sec .our_strengths_contnt h2 {
+        font-size:21px;
+        line-height: 29.4px;
+    }
+    .contract-sec .any_projects ul li div.projects_blogs .projects_txt h6 {
+    font-size: 14px;
+    line-height: 19.6px;
+    }
+    .application-videos .application-content h2{
+    font-size:23px;
+    line-height: 32.2px;
+    }
+    .application-videos .application-content p{
+        font-size:11px;
+        line-height: 15.4px;
+    }
+    .collaboration .collab-section .collab-left p {
+    width: 100%;
+    }
  }
