@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use RalphJSmit\Filament\SEO\SEO;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
+use FilamentTiptapEditor\TiptapEditor;
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
@@ -86,7 +87,8 @@ class ProductResource extends Resource
                                     ->schema([
                                         TextInput::make('benefit_title')->label('Title for benefit'),
                                         
-                                        RichEditor::make('benefit_body')->label('Dropdown description for benefit'),
+                                        TiptapEditor::make('benefit_body')->label('Dropdown description for benefit')
+                                        ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem']),
                                     ])
                                     ->columns(1)
                                     ->defaultItems(0)

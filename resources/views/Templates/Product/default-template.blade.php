@@ -68,8 +68,8 @@
                                             </div>
                                         @endisset
                                         @if(!empty($benefit['benefit_body']))
-                                            <div class="acc-body">
-                                            {!! str($benefit['benefit_body'])->sanitizeHtml() !!}
+                                            <div class="acc-body rich-content" >
+                                            {!! $benefit['benefit_body'] !!}
                                                
                                             </div>
                                         @endif
