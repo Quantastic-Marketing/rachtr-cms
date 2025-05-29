@@ -812,13 +812,34 @@
     font-size: 12px;
     line-height: 16.8px;
 }
-    .about_techTr .about_techTr_content h2, .our_strengths .our_strengths_contnt h2{
+    .about_techTr .about_techTr_content h2, 
+    .our_strengths .our_strengths_contnt h2,
+    .intive_res_dev .res_dev_contnt h2 {
         font-size: 20px;
         line-height:28px;
     }
     .our_strengths .our_strengths_contnt p{
       font-size: 13px;
       line-height: 18.2px;
+    }
+    .our_strengths .any_projects ul li div.projects_blogs .projects_txt h6 {
+    font-size: 13px;
+    line-height: 18.2px;
+    }
+    .our_strengths .any_projects ul li div.projects_blogs .projects_txt p ,
+    .intive_res_dev .res_dev_contnt .res_dev_txt p,
+    .advce_manufrng .advce_manufrng_contnt p,
+    .multiple-items li p {
+        font-size: 11px;
+        line-height: 15.4px;
+    }
+    .advce_manufrng .advce_manufrng_contnt h2 {
+    font-size: 19px;
+    line-height: 26.6px;
+    }
+    .multiple-items li h6 {
+        font-size: 14px;
+        line-height: 15.4px;
     }
   }
   
