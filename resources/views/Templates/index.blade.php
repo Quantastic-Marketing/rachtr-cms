@@ -16,7 +16,7 @@
                              <div class="container">
                                  <div class="content-details ms-0">
                                       <h1 class="fw-bold" ><span class="org">RachTR,</span><br/>World-Class Quality, <br/>Made for Local Conditions</h1>
-                                      <p style="font-size: 22px;line-height: 30.8px">Coatings & Adhesives Designed for<br/> Diverse Conditions</p>
+                                      <p class="first-slide">Coatings & Adhesives Designed for<br/> Diverse Conditions</p>
                                  </div>
                                  <div class="content-list ms-0">
                                     <ul>

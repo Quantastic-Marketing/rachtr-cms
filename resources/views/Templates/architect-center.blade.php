@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 px-4 order-1">
-                                <div class="heading-holder">
+                                <div class="heading-holder pb-4">
                                     <h2 class="fw-bold">Innovative Solutions for Architects</h2>
                                 </div>
                                 <p> <strong>At RachTR</strong>, we understand the unique challenges and demands faced by
@@ -187,7 +187,7 @@
         <!-- This is a section-2 close -->
 
         <!-- This is a section-3 open -->
-        <section class="intive_res_dev py-5">
+        <section class="arch-intive intive_res_dev py-5">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-12">
@@ -691,7 +691,7 @@
         </section>
         <!-- This is a section-2 close -->
 
-        <div class="collaboration">
+        <div class="collaboration colab-arch">
             <div class="container-fluid">
                 <div class="row collab-section">
                     <!-- Left Section (White Background) -->
@@ -707,7 +707,7 @@
                     <!-- Right Section (Black Background) -->
                     <div class="col-lg-6 collab-right d-flex flex-column justify-content-center">
                         <div class="row">
-                            <div class="col-md-9 col-xxl-7 ">
+                            <div class="col-md-10 ">
                                 <p>We work closely with contractors to develop customized solutions that meet the specific needs and
                                     challenges of each project.</p>
                                 <hr class="my-2" style="border-color: #E87722; width: 50px;">
@@ -990,7 +990,7 @@
 
 
 
-                                    <ul class="d-flex flex-column ms-4 py-3">
+                                    <ul class="d-flex flex-column  middle-points ms-4 py-3">
                                         <li class="text-start"><strong>Seamless integration with nature:</strong> Built
                                             on an artificial lake with a flowing, undulating roof that creates a calm,
                                             immersive experience.</li>
@@ -1289,7 +1289,7 @@
 
 
 
-                                    <ul class="d-flex flex-column ms-4 py-3">
+                                    <ul class="d-flex flex-column  middle-points  ms-4 py-3">
                                         <li class="text-start"><strong>Skyline Serenity: </strong>Raised 7 meters, offering breathtaking treetop views and preserving natural life below.</li>
                                         <li class="text-start"><strong>Nature-Infused Design:</strong> Expansive windows seamlessly connect the interior with the lush forest, creating a tranquil, immersive environment.</li>
                                     </ul>
@@ -1520,7 +1520,7 @@
 
 
 
-                                    <ul class="d-flex flex-column ms-4 py-3">
+                                    <ul class="d-flex flex-column  middle-points  ms-4 py-3">
                                         <li class="text-start"><strong>Wasteland to Retreat:</strong> Transforms a neglected site into a vibrant living space with expansive indoor and outdoor areas.</li>
                                         <li class="text-start"><strong>Joyful Living:</strong> Includes an open-air bath, swing, slide, and spiral staircase that blur the line between indoors and outdoors.</li>
                                     </ul>
@@ -1834,7 +1834,7 @@
 
 
 
-                                    <ul class="d-flex flex-column ms-4 py-3">
+                                    <ul class="d-flex flex-column  middle-points  ms-4 py-3">
                                         <li class="text-start"><strong> Curved Wall:</strong> Sculptural, functional, and sun-shielding, winding gracefully through the courtyard.</li>
                                         <li class="text-start"><strong>Indoor-Outdoor Flow:</strong>  Seamless living spaces that connect with nature, promoting natural ventilation.</li>
                                     </ul>
@@ -2139,7 +2139,7 @@
 
 
 
-                                    <ul class="d-flex flex-column ms-4 py-3">
+                                    <ul class="d-flex flex-column  middle-points  ms-4 py-3">
                                         <li class="text-start"><strong>Zero-Energy Design: </strong> The greenhouse operates as a zero-energy building, utilizing energy-efficient systems and natural ventilation.</li>
                                         <li class="text-start">Distinct Climate Zones: Divided into three pavilions—desert, tropical rainforest, and flower garden—each reflecting a unique climate.</li>
                                     </ul>

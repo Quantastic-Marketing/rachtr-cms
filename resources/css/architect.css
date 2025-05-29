@@ -21,7 +21,8 @@
 }
 
 .innovation-solutions .heading-holder h2 {
-    font-size: 24px;
+    font-size: 25px;
+    line-height: 22.4px;
 }
 
 .innovation-solutions .image-container img {
@@ -363,10 +364,8 @@
     object-fit: cover;
 }
 
-.architect-banner .banner-section .heading-holder h1,
-.architect-our .our_strengths_contnt h2,
+
 .architect-center .cmp_solutn_heding h2,
-.architectural-marvels .slide-title,
 .collaboration .collab-section .collab-left h2
 {
     font-size: 42px;
@@ -379,6 +378,75 @@
     content: '';
 }
 
+.architect-banner .banner-section .heading-holder h1{
+    line-height: 58.8px;
+    font-size: 42px;
+}
+.architect-banner .banner-section .heading-holder p{
+    line-height: normal;
+}
+
+.arch-solution p{
+    color:#000000;
+    font-size:16px;
+    line-height:22.4px;
+}
+.architect-our .our_strengths_contnt h2,
+.arch-intive  .res_dev_contnt h2,
+.architect-center .cmp_solutn_heding h2,
+.architectural-marvels .slide-title{
+    font-size:45px;
+    line-height: 49.6px;
+}
+.architect-our .our_strengths_contnt p{
+    font-size:18px;
+    line-height: 25.2px;
+}
+.architect-our .any_projects ul li div.projects_blogs .projects_txt h6 {
+    font-size: 18px;
+    line-height: 25.2px;
+}
+.architect-our .any_projects ul li div.projects_blogs .projects_txt p {
+    font-size: 14px;
+    line-height: 19.6px;
+}
+.our-industries .any_projects ul li div.projects_blogs .projects_txt p{
+    font-size: 18px;
+    line-height: 19.8px;
+}
+.colab-arch .collab-section .collab-left h2{
+    font-size: 45px;
+    line-height: 63px;
+}
+.colab-arch  .collab-section .collab-left p{
+    color: #000000;
+    line-height: normal;
+    font-size: 16px;
+    width: 400px;
+}
+
+.colab-arch .collab-section .collab-right p{
+    font-size:16px;
+    line-height: 28.8px;
+}
+
+.slide-card h3 {
+    font-size: 25px;
+    line-height: 27.5px;
+}
+.icon-desc p,.icon-desc-2 p,.icon-desc-1 p{
+    font-size: 14px;
+    line-height: 19.6px;
+}
+.icon-desc p strong,.icon-desc-1 p strong,.icon-desc-2 p strong{
+    font-size: 16px;
+    line-height: 22.4px;
+}
+
+.middle-points  li{
+    font-size:15px;
+    line-height:21px;
+}
 
 @media (max-width:1220px) {
     /* .blog_list {
@@ -450,11 +518,21 @@
     {
         font-size: 24px;
     }
+    .colab-arch .collab-section .collab-left h2 {
+        line-height: 36px;
+    }
+    .arch-solution .heading-holder h2
+    {
+        line-height: 31.4px;
+    }
 }
 
 @media (max-width:576px){
     .projects_blogs{
         max-width: 440px;
+    }
+    .colab-arch  .collab-section .collab-left p{
+    width: 100%;
     }
 }
 

@@ -729,7 +729,23 @@
     .blogs .blogs_sec ul li {
       height: 217px;
     }
-
+    .first-slide{
+      font-size:12px;
+      line-height:16.8px;
+    }
+    .homepg-banner .banner-sec .banner_overlay .content-details h1 {
+      line-height: 23.8px;
+      font-size:17px;
+    }
+    .content-details p:first-of-type
+    {
+        font-size: 11px !important;
+        line-height: 15.4px;
+    }
+    .homepg-banner .banner-sec .banner_overlay .content-details h2 {
+        font-size: 17px;
+        line-height: 23.8px;
+    }
     .accordion-wrapper .acc-head h6{
       font-weight:bold;
     }
@@ -789,6 +805,21 @@
     .offer-product figure img.big-height {
         height: 130px;
     }
+    .about_techTr .about_techTr_content .thr_principles .thr_principles_dtl .thr_principles-contnt p,
+    .about_techTr .about_techTr_content p,
+    .our_strengths .our_strengths_contnt p
+ {
+    font-size: 12px;
+    line-height: 16.8px;
+}
+    .about_techTr .about_techTr_content h2, .our_strengths .our_strengths_contnt h2{
+        font-size: 20px;
+        line-height:28px;
+    }
+    .our_strengths .our_strengths_contnt p{
+      font-size: 13px;
+      line-height: 18.2px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -831,7 +862,7 @@
       font-size: 20px;
     }
     .bnr_sldr .item .banner-sec .banner_overlay .content .content-details p {
-      font-size: 12px;
+      /* font-size: 12px; */
       padding: 0;
     }
     .bnr_sldr .item .banner-sec .banner_overlay .content .content-details p span {
@@ -912,6 +943,10 @@
       height: 30px;
       width:70px;
     }
+    .content-details p:nth-of-type(2) {
+    font-size: 13px;
+    line-height: 18.2px;
+}
     
   }
 
