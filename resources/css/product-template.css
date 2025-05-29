@@ -29,7 +29,7 @@
 
 .btn-dark {
     padding: 10px 20px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .product-section .product-features .product-feature-block .accordion-wrapper .acc-head::after {
@@ -180,6 +180,9 @@
 .product-section .product-features .product-feature-block .accordion-wrapper .acc-head:hover{
     cursor: pointer;
     color: #F18B51;
+}
+.product-section .product-features .product-feature-block .accordion-wrapper .acc-head h6{
+    line-height: 20px;
 }
 @media (min-width:1240px) {
     .product-section .container {

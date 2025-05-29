@@ -58,7 +58,7 @@
                     @endisset
 
                     @if(!empty($product->content['product_benefits']))
-                        <div class="product-features faq-block">
+                        <div class="product-features faq-block mt-lg-5">
                             <div class="product-feature-block faq-block">
                                 @foreach($product->content['product_benefits'] as $benefit)
                                     <div class="accordion-wrapper">
