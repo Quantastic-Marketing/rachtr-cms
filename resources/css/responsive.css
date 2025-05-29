@@ -757,9 +757,11 @@
       padding: 20% 0 0 3%;
       }
       .service-banner .banner-sec .banner_overlay .content-details h1{
-        font-size:20px;
+        font-size:16px;
+        line-height:22.4px;
+        width:70%;
       }
-    .about-solution h2,
+
     .commercial-building-solutions .header-heading-part h2,
     .why-trust-rachtr-section .why-trust-inner-block h2,
     .blogs .blogs_sec h2,
@@ -841,6 +843,83 @@
         font-size: 14px;
         line-height: 15.4px;
     }
+     .service-banner .banner-sec .banner_overlay .content-details p{
+        font-size: 11px;
+        line-height: 14.3px;
+     }
+     
+    .about-solution h2{
+      font-size:15px;
+      line-height:21px;
+    }
+    .abt-sol p{
+      font-size:12px !important;
+      line-height:16.8px !important;
+    }
+    .residential .header-heading-part h2,.residential .header-heading-part h5{
+      font-size: 19px;
+      line-height: 17.1px;
+    }
+    .residential .case_studies .case_studies_contn h3 {
+        line-height: 25.2px;
+        font-size:18px;
+    }
+    .residential .case_studies .case_studies_contn p {
+        line-height: 15.4px;
+        font-size:11px;
+    }
+    .custom-list
+    {
+        line-height: 20.9px;
+            font-size:11px; 
+    }
+    .why-trust-rachtr-section .why-trust-inner-block h2{
+        font-size: 18px;
+        line-height: 23.4px;
+    }
+    .why-trust-rachtr-section .why-trust-inner-block h6 {
+        font-size: 15px;
+        line-height: 21px;
+    }
+    .why-trust-rachtr-section .why-trust-inner-block p {
+    font-size: 12px;
+    line-height: 16.8px;
+  }
+  .product-we-offer-section h2 {
+        font-size: 22px;
+        line-height:28.6px;
+    }
+    .product-offer-block .header-part h3, .product-offer-block .header-part h4 {
+      font-size: 18px;
+      line-height: 25.2px;
+    }
+    .product-offer-block .header-part p {
+        font-size: 12px;
+        line-height: 20.4px;
+    }
+    .commercial-comprnsive .case_studies_contn h5 {
+      font-size: 13px;
+      line-height: 18.2px;
+    }
+    .commercial-comprnsive .case_studies_contn p {
+        font-size: 11px !important;
+        line-height: 15.4px !important;
+    }
+    .res-blogs h2{
+      font-size:20px;
+      line-height:22px;
+    }
+    .res-blogs .blogs_sec h2:not(ul h2){
+      font-size:20px !important;
+      line-height:22px !important;
+    }
+    .res-blogs .blogs_sec p,  
+     .res-faqs .faq_headng {
+      font-size:11px;
+      line-height:15.4px;
+    }
+    .our-clients .clients-content .heading-holder h2{font-size:20px;}
+    .res-faqs .faqs_headng h2{font-size:22px !important;line-height:24.2px !important;}
   }
   
   @media (max-width: 480px) {
