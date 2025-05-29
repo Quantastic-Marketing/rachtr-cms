@@ -44,7 +44,7 @@
                     @isset($product->name)
                         <h2 class="py-2 product-title color-orange d-lg-none fs-3 text-left">{{$product->name}}</h2>
                     @endisset
-                    <div class="py-3">
+                    <div class="py-3" style="color: #000000;">
                         @if(!empty($product->content['product_desc']))
                             {!! $product->content['product_desc'] !!}
                         @endif
