@@ -71,12 +71,12 @@
                     </div>
                     <div class="col-lg-6 py-lg-5 d-flex flex-column align-items-end align-self-end">
                         <div class="life-at-content d-flex flex-column gap-lg-2 gap-xl-3 text-center text-lg-start">
-                            <h2 class="heading-holder text-center text-lg-start mb-3 m-lg-0 fw-bold ">LIFE AT RACHTR</h2>
+                            <h2 class="heading-holder text-center text-lg-start mb-3 m-lg-0 fw-bold ">Life at RachTR</h2>
                             <p>We believe in fostering a culture of collaboration, creativity, and continuous learning.
                                 At RachTR, you’ll find a workplace where you can grow both personally and
                                 professionally. ​</p>
                             <p>We understand that our team members are our greatest asset.We strive to create an
-                                environment that supports their well-being.</p>
+                                environment that supports their wssell-being.</p>
                             <p class="mb-0"><strong>Our goal is to ensure that our team feels valued and supported, in and out of the
                                 workplace</strong> </p>
                             
