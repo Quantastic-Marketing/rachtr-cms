@@ -249,6 +249,8 @@
     .product-section .download-sec a{
         font-size: 11px;
     }
-
+    .product-page .product-title {
+     width: 320px;
+    }
 
 }
