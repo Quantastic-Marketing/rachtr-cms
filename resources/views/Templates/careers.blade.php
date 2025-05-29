@@ -76,7 +76,7 @@
                                 At RachTR, you’ll find a workplace where you can grow both personally and
                                 professionally. ​</p>
                             <p>We understand that our team members are our greatest asset.We strive to create an
-                                environment that supports their wssell-being.</p>
+                                environment that supports their well-being.</p>
                             <p class="mb-0"><strong>Our goal is to ensure that our team feels valued and supported, in and out of the
                                 workplace</strong> </p>
                             
@@ -96,7 +96,7 @@
                     <!-- <div class="row "> -->
                         <div class="col-12 col-lg-8 p-lg-3">
                             <div class="text-content p-0 p-lg-5">
-                                <h1 class="main-heading">Why be a part of <span class="hashtag">#RachTRibe</span>?</h1>
+                                <h1 class="main-heading">Why be a part of <span class="hashtag">#RachTR</span>ibe?</h1>
                                 <div class="why-at-video d-block d-lg-none">
                                     <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   tabindex="-1"  style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;">
                                         <source src="{{ asset('videos/carrer_video.webm') }}" type="video/webm">
