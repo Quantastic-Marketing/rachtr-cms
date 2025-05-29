@@ -44,7 +44,7 @@
         </div>
 
       
-        <section class="about-solution innovation-solutions py-3 py-sm-5">
+        <section class="about-solution abt-sol innovation-solutions py-3 py-sm-5">
           <div class="container">
             <div class="row align-items-center d-flex">
               <div class="col-md-10">
@@ -70,7 +70,7 @@
                   >
                   @if(isset($about['heading']))
                     <h2
-                      class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4"
+                      class="lh-lg-base lh-small  fw-bold mb-4"
                     >
                       {{ Str::before($about['heading'], $about['highlight_text']) }}
                       <span style="color: #ef6e25">{{ $about['highlight_text'] }}</span>
@@ -78,7 +78,7 @@
                     </h2>
                   @else
                   <h2
-                      class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4"
+                      class="lh-lg-base lh-small fw-bold mb-4"
                     >
                       Welcome to
                       <span style="color: #ef6e25">RachTR</span>
@@ -124,7 +124,7 @@
         <section class="commercial-building-solutions residential comprnsive_solution" style="background: url('{{ asset( empty ($backgroundImage) ? 'images/commercial-building-solutions.webp' : 'storage/' . $backgroundImage) }}') no-repeat center center; background-size: cover;">
             <div class="container">
                 <div class="header-heading-part pb-5">
-                    <h2 class="text-center display-6 display-lg-4 fw-bold text-black mb-2">
+                    <h2 class="text-center  fw-bold text-black mb-2">
                         {{ empty($mainHeading) ? 'Residential Commercial Building' : $mainHeading }} <span style="color: #ef6e25">Solutions</span>
                     </h2>
                     @if($subHeading)
@@ -443,19 +443,19 @@
                 @if($system['product_category'])
                 <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
                     <div class="header-part mb-lg-5 mb-4">
-                      <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                      <h3 class="fw-bold text-center mb-2  color-orange">
                         {{ strtoupper($system['category_title']) ?? '' }}
                       </h3>
     
-                      <p class="text-center fs-6 w-70">
+                      <p class="text-center">
                       {{ $system['description'] ?? '' }}
                       </p>
                     </div>
                   @forelse($system['product_category'] as $productCat)
                      
                         <div class="header-part mb-lg-5 mb-4">
-                          <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">{{$productCat['category_subtitle'] ?? ''}}</h4>
-                          <p class="text-center fs-6 w-70">
+                          <h4 class="text-center mb-lg-4 mb-2 color-orange">{{$productCat['category_subtitle'] ?? ''}}</h4>
+                          <p class="text-center">
                             {{$productCat['description'] ?? ''}}
                           </p>
                         </div>
@@ -475,7 +475,7 @@
                                     <h6 class="text-center heading-underline">
                                       <a
                                         href="{{ config('app.url') . '/product-page/' . $product->slug }}"
-                                        class="text-black fs-6 fw-bold"
+                                        class="text-black fw-bold"
                                         >{{ $product->name }}</a
                                       >
                                     </h6>
@@ -489,13 +489,13 @@
                     @empty
                       <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
                         <div class="header-part mb-lg-5 mb-4">
-                          <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                          <h3 class="fw-bold text-center mb-2 color-orange">
                             INSTALLATION SYSTEMS
                           </h3>
-                          <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">
+                          <h4 class="text-center mb-lg-4 mb-2 color-orange">
                             ​TILE ADHESIVE
                           </h4>
-                          <p class="text-center fs-6">
+                          <p class="text-center">
                             Our high-quality tile adhesive ensures strong and durable bonds,
                             making installations secure and long-lasting.
                           </p>
@@ -579,8 +579,8 @@
                         </div>
 
                         <div class="header-part mb-lg-5 mb-4">
-                          <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">GROUTS</h4>
-                          <p class="text-center fs-6 w-70">
+                          <h4 class="text-center mb-lg-4 mb-2  color-orange">GROUTS</h4>
+                          <p class="text-center">
                             With our epoxy grout, you get a seamless finish that resists
                             stains and is easy to clean, enhancing the appearance of your
                             tiles.
@@ -664,11 +664,11 @@
                 @else
                   <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-3">
                     <div class="header-part mb-lg-5 mb-4">
-                      <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                      <h3 class="fw-bold text-center mb-2  color-orange">
                         {{ strtoupper($system['category_title']) ?? '' }}
                       </h3>
     
-                      <p class="text-center fs-6 w-70">
+                      <p class="text-center">
                       {{ $system['description'] ?? '' }}
                       </p>
                     </div>
@@ -714,13 +714,13 @@
               </h2>
               <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
                 <div class="header-part mb-lg-5 mb-4">
-                  <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                  <h3 class="fw-bold text-center mb-2 color-orange">
                     INSTALLATION SYSTEMS
                   </h3>
-                  <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">
+                  <h4 class="text-center mb-lg-4 mb-2 color-orange">
                     ​TILE ADHESIVE
                   </h4>
-                  <p class="text-center fs-6">
+                  <p class="text-center">
                     Our high-quality tile adhesive ensures strong and durable bonds,
                     making installations secure and long-lasting.
                   </p>
@@ -818,8 +818,8 @@
                 </div>
 
                 <div class="header-part mb-lg-5 mb-4">
-                  <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">GROUTS</h4>
-                  <p class="text-center fs-6 px-md-5">
+                  <h4 class="text-center mb-lg-4 mb-2  color-orange">GROUTS</h4>
+                  <p class="text-center px-md-5">
                     With our epoxy grout, you get a seamless finish that resists
                     stains and is easy to clean, enhancing the appearance of your
                     tiles.
@@ -834,7 +834,7 @@
                           <figure>
                             <img src="images/RACHTR-EG-200.webp" alt="RACHTR EG 200" />
                           </figure>
-                          <h6 class="text-center heading-underline text-black fs-6 fw-bold">
+                          <h6 class="text-center heading-underline text-black fw-bold">
                             RACHTR EG 200
                           </h6>
                         </a>
@@ -940,11 +940,11 @@
 
               <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-3">
                 <div class="header-part mb-lg-5 mb-4">
-                  <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                  <h3 class="fw-bold text-center mb-2 color-orange">
                     POLISHING SYSTEMS
                   </h3>
 
-                  <p class="text-center fs-6 px-md-5">
+                  <p class="text-center px-md-5">
                     Achieve a brilliant shine and smooth finish for your marble
                     surfaces with our advanced marble tile polish, bringing out the
                     natural beauty of the stone.
@@ -1023,11 +1023,11 @@
 
               <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-3 mb-lg-5">
                 <div class="header-part mb-lg-5 mb-4">
-                  <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                  <h3 class="fw-bold text-center mb-2 color-orange">
                     PROTECTION SYSTEMS​
                   </h3>
 
-                  <p class="text-center fs-6 px-md-5">
+                  <p class="text-center px-md-5">
                     Protect your marble surfaces from stains, moisture, and wear
                     with our range of marble sealers, extending the life of your
                     installations and preserving their elegance.
@@ -1145,11 +1145,11 @@
 
               <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-3">
                 <div class="header-part mb-lg-5 mb-4">
-                  <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                  <h3 class="fw-bold text-center mb-2 color-orange">
                     CLEANING AND MAINTENANCE
                   </h3>
 
-                  <p class="text-center fs-6 px-md-5">
+                  <p class="text-center px-md-5">
                     Keep your marble surfaces pristine with our effective marble
                     cleaners, designed to remove dirt, grime, and stains without
                     damaging the stone.
@@ -1241,7 +1241,7 @@
             <div class="container">
               <div class="why-trust-inner-block p-lg-5 p-4">
                 <h2
-                  class="text-left display-6 display-md-3 fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
+                  class="text-left fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
                 >
                 @if(!empty($whyTrust['heading']))
                 {!! html_entity_decode($whyTrust['heading']) !!}
@@ -1264,7 +1264,7 @@
                         {!! $feature['title'] !!}
                         </h6>
                       </div>
-                      <p class="text-black text-center text-md-start fs-6">
+                      <p class="text-black text-center text-md-start ">
                         {{ $feature['description'] }}
                       </p>
                     </div>
@@ -1348,7 +1348,7 @@
             <div class="container">
               <div class="why-trust-inner-block p-lg-5 p-4">
                 <h2
-                  class="text-left display-6 display-md-3 fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
+                  class="text-left  fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
                 >
                   Why Trust <span class="color-orange">RachTR</span> for <br />
                   Residential Commercial Buildings?
@@ -1427,7 +1427,7 @@
         <div class="container">
           <div class="row g-0">
             <div class="cmp_solutn_heding col-lg-8 col-md-12 py-lg-5 py-3">
-              <h2 class="display-6 display-lg-4 fw-bold">
+              <h2 class="fw-bold">
               {!! !empty($caseStudy['heading']) ? html_entity_decode($caseStudy['heading']) : 'Case <span class="color-orange">Studies</span>' !!}
               </h2>
             </div>
@@ -1448,7 +1448,7 @@
                     {{ $slide['left_title'] }}
                     </h5>
                     @foreach ($slide['paragraphs'] ?? [] as $para)
-                      <p class="pb--md-5 mb-md--5">{{ $para['text'] }}</p>
+                      <p class="{{ $loop->last ? 'pb-md-5 mb-md-5' : '' }}">{{ $para['text'] }}</p>
                     @endforeach
                     <a
                       href="{{ $slide['link'] ?? '#' }}"
@@ -1506,11 +1506,11 @@
                         White Marble being difficult to install, as white marble
                         is suscpetible to stains, yellowness of joints, etc.
                       </h5>
-                      <p class="pb--md-5 mb-md--5">
+                      <p>
                         8/10 contractors refuse to install white marble owing to
                         project failure rate which is exorbitantly high.
                       </p>
-                      <p class="pb--md-5 mb-md--5">
+                      <p class="pb-md-5 mb-md-5">
                         Problem starts immediately and keep on coming at regular
                         intervals upto 2-3 years which is a...
                       </p>
@@ -1558,14 +1558,14 @@
           </div>
         </div>
       </section>
-      <section class="blogs bg-white">
+      <section class="res-blogs blogs bg-white">
         <div class="container">
           <div class="row g-0">
             <div class="col-lg-12">
               <div class="blogs_sec py-lg-5 py-2">
                 <div class="mb-lg-5 mb-2 px-lg-5 mx-lg-5">
                   <h2
-                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold text-start text-dark blog-case-heading"
+                    class="mb-3 pb-2  fw-bold text-start text-dark"
                   >
                     Blogs related to Residential & Commercial Industry
                   </h2>
@@ -1615,7 +1615,7 @@
             <div class="col-12 col-md-12">
               <div class="clients-content row align-items-center">
                 <div class="heading-holder col-12 col-lg-2 mb-4 mb-lg-0">
-                  <h2 class="mb-0 color-orange fs-2 fw-bold">{{ $client['title'] ?? 'Our Clients' }}</h2>
+                  <h2 class="mb-0 color-orange fw-bold">{{ $client['title'] ?? 'Our Clients' }}</h2>
                 </div>
                 <div class="client-slider col-12 col-lg-10">
                   @forelse ($client['companies'] ?? [] as $company)
@@ -1704,7 +1704,7 @@
       </section>  
 
 
-      <section class="faqs bg-white pb-5">
+      <section class="res-faqs faqs bg-white pb-5">
         <div class="container">
           <div class="row g-0">
             <div class="faqs_headng col-lg-12 py-lg-5 py-4">
