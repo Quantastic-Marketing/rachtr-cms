@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-lg-6 py-lg-5 d-flex flex-column align-items-end align-self-end">
                         <div class="life-at-content d-flex flex-column gap-lg-2 gap-xl-3 text-center text-lg-start">
-                            <h2 class="heading-holder text-center text-lg-start mb-3 m-lg-0 fw-bold ">LIFE AT RACHTR</h2>
+                            <h2 class="heading-holder text-center text-lg-start mb-3 m-lg-0 fw-bold ">Life at RachTR</h2>
                             <p>We believe in fostering a culture of collaboration, creativity, and continuous learning.
                                 At RachTR, you’ll find a workplace where you can grow both personally and
                                 professionally. ​</p>
@@ -96,7 +96,7 @@
                     <!-- <div class="row "> -->
                         <div class="col-12 col-lg-8 p-lg-3">
                             <div class="text-content p-0 p-lg-5">
-                                <h1 class="main-heading">Why be a part of <span class="hashtag">#RachTRibe</span>?</h1>
+                                <h1 class="main-heading">Why be a part of <span class="hashtag">#RachTR</span>ibe?</h1>
                                 <div class="why-at-video d-block d-lg-none">
                                     <video id="comp-lzqtq7g24_video" class="K8MSra" crossorigin="anonymous" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   tabindex="-1"  style="height: 100%; width: 100%; object-fit: cover; object-position: center center; opacity: 1;">
                                         <source src="{{ asset('videos/carrer_video.webm') }}" type="video/webm">

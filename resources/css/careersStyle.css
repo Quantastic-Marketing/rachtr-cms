@@ -116,19 +116,22 @@
     font-size: 36px;
     font-weight: 700;
     padding-bottom: 2rem;
+    line-height:50.4px;
 }
 
 .description {
-    color: #333;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    color: #000;
+    font-size: 16px;
+    line-height: 28.8px;
     margin-bottom: 1.5rem;
 }
 
 .join-text {
     font-weight: 600;
-    font-size: 1.2rem;
-    color: #222;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold ;
+    line-height: 28.8px;
 }
 
 
@@ -423,7 +426,7 @@ align-self: baseline;
    line-height: 25px;
 }
 
-.life-at-rachtr .life-at-content .heading-holder,
+
 .current-openings .openings-content .heading-holder h2{
     font-size: 34px;
  }
@@ -434,7 +437,40 @@ align-self: baseline;
     letter-spacing: 2px;
 }
 
+.career-banner .banner-section .banner-content p {
+    line-height: 28.8px;
+    font-size:16px;
+}
 
+.career-banner .banner-section button
+{
+    font-size: 19px;
+    line-height:normal;
+}
+.life-at-rachtr .life-at-content .heading-holder{
+    font-size: 35px;
+    line-height: 54.6px;
+}
+.life-at-rachtr .life-at-content p
+ {
+    line-height: 28.8px;
+    color: #000000;;
+}
+
+.current-openings .openings-content .heading-holder h2 {
+font-size: 38px;
+    line-height: 53.2px;
+}
+
+.current-openings .openings-content .text-part p{
+    font-size: 17px;
+    line-height: 30.6px;
+    color: #000000;
+}
+.carrer-collaborate .collaboration .collab-left h2{
+    font-size: 35px;
+    line-height: 49px;
+}
 
 @media (max-width:1200px) {
     .career-banner .banner-section .banner-content {
@@ -533,5 +569,26 @@ align-self: baseline;
     .life-at-rachtr .slider-container .main-slider .slick-prev:before,
     .life-at-rachtr .slider-container .main-slider .slick-next:before{
         font-size: 75px;
+    }
+    .career-banner .banner-section .heading-holder h2{
+        font-size: 22px;
+        line-height: normal;
+        padding: 0 20px;
+    }
+    .career-banner .banner-section .banner-content p ,
+    .life-at-rachtr .life-at-content p,
+    .text-desc .description,.text-desc .join-text{
+        font-size: 15px;
+        line-height: 27px;
+        color: #000000;
+    }
+    .life-at-rachtr .life-at-content .heading-holder,
+    .rachtribe-section .main-heading{
+        font-size: 23px;
+        line-height: 32.2px;
+    }
+    .current-openings .openings-content .heading-holder h2{
+        font-size: 25px;
+        line-height: 35px;
     }
 }
