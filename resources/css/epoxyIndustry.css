@@ -12,7 +12,7 @@
 }
 .industry-banner .banner-section {
     position: relative;
-    height: 230px;
+    height: 260px;
     margin: 0;
 
 }
@@ -60,6 +60,13 @@
     color: #ffffff;
     text-decoration: underline;
     text-transform: uppercase;
+    font-size:14px;
+    line-height: 19.6px;
+}
+
+.industry-banner .banner-section .heading-holder p{
+    font-size:14px;
+    line-height: 19.6px;
 }
 
 .text-orange{
@@ -102,15 +109,18 @@
 }
 
 .product-card-section .product-title {
-    font-size: 24px;
+    font-size: 27px;
     font-weight: bold;
+    line-height: 37.8px;
+    color: #000;
 }
 
 .product-card-section .product-description {
-    color: #555;
-    font-size: 16px;
+    color: #000;
+    font-size: 14px;
     margin: 16px 0;
     text-align: justify;
+    line-height: 19.6px;
 }
 
 .product-card-section .btn-orange {
@@ -135,7 +145,11 @@
 }
 
 .system-overview .content p,.system-overview .content ul,.system-overview .content li{
-    font-size: 18px;
+    font-size: 19px;
+    color:#000;
+}
+.system-overview .content p{
+    line-height: 26.6px;
 }
 
 .system-overview .content h2{
@@ -168,8 +182,10 @@
     line-height: 1.5em; 
 }
 
-.industry-banner .banner-section .heading-holder h1{
-    font-size: 34px;
+.industry-banner .banner-section .heading-holder h1,
+.product-card-section h2{
+    font-size: 38px;
+    line-height:53.2px;
 }
 
 .product-card-section .product-image-wrapper img{
@@ -178,6 +194,11 @@
     height:100%;
     object-fit:cover;
 }
+
+.product-card-section h2{
+    color: #000;
+}
+
 
 
 @media (max-width:992px){
@@ -214,5 +235,28 @@
     }
     .product-card-section .product-description {
         text-align: left;
+    }
+    .industry-banner .banner-section .heading-holder h1 {
+        font-size: 17px;
+        line-height:23.8px;
+    }
+    .banner-section .heading-holder p{
+        font-size:10px;
+        line-height:14px;
+    }
+
+    .system-overview .content p,.system-overview .content ul,.system-overview .content li,.product-card-section .product-description{
+        font-size: 12px;
+        line-height:16.8px;
+    }
+
+    .product-card-section h2{
+        font-size:23px;
+        list-style: 32.2px;
+    }
+
+    .product-card-section .product-title{
+        font-size:27px;
+        line-height: 37.8px;
     }
 }
