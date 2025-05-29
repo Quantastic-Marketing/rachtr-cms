@@ -33,7 +33,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 px-4 order-1 order-md-2 py-md-5">
-                                        <div class="heading-holder">
+                                        <div class="heading-holder pb-2 pb-md-4">
                                             <h2 class="fw-bold">Innovative Solutions for Contractors</h2>
                                         </div>
                                         <p> At RachTR, we understand the unique challenges and demands faced by contractor.</p>
@@ -52,7 +52,7 @@
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
                         <div class="our_strengths_contnt">
-                            <h2 class="pb-3 fw-bold">Our <span class="org">Industries</span></h2>
+                            <h2 class="pb-3 fw-bold">Our Industries</h2>
                             <p>Innovative Solutions for Every Industrial Challenge</p>
                         </div>
                     </div>
