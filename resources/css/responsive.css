@@ -920,6 +920,23 @@
     }
     .our-clients .clients-content .heading-holder h2{font-size:20px;}
     .res-faqs .faqs_headng h2{font-size:22px !important;line-height:24.2px !important;}
+    #comprehensive_Solution .cmp_solutn_heding h2,#home-faq .faqs_headng h2{font-size:19px;line-height:26.6px;}
+    #comprehensive_Solution .cmp_solutn_heding h3{font-size:18px;line-height:19.8px;}
+    #comprehensive_Solution .cmp_solutn_heding p{font-size:12px;line-height:16.8px;}
+    #comprehensive_Solution .case_studies .case_studies_contn h3{font-size: 14px;line-height:19.6px;} 
+    #comprehensive_Solution .case_studies .case_studies_contn p,#home-faq .faqs_headng p{font-size: 11px;line-height:15.4px;} 
+    #comprehensive_Solution .case_studies .case_studies_contn a{
+        font-size: 11px;
+        line-height: 16px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 60%;
+    } 
+    .bnr_sldr .item .banner-sec .banner_overlay .content {
+        padding: 22% 0 0 3%;
+    }
+    
   }
   
   @media (max-width: 480px) {

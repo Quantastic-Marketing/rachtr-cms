@@ -720,7 +720,7 @@
               <div class="row g-0">
                   <div class="col-lg-12">
                      <div class="blogs_sec py-5">
-                         <h2 class="fw-bold text-center blog-case-heading py-2 pb-lg-5">Blogs</h2>
+                         <h2 class="fw-bold text-center py-2 pb-lg-5">Blogs</h2>
                          <ul class="padd0">
                             @foreach($blogs->take(3) as $blog)                           
                             <li class="col-lg-4 mx-3">
@@ -753,7 +753,7 @@
      </section>      
     <!-- This is a section-7 close -->       
     <!-- This is a section-8 open -->
-     <section class="faqs">
+     <section class="faqs" id="home-faq">
          <div class="container">
                  <div class="row g-0">
                  <div class="faqs_headng col-lg-12 py-5">
