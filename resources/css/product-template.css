@@ -145,8 +145,13 @@
     margin-bottom: 0 !important;
 }
 
+.rich-content {
+  overflow-x: auto;
+}
  .rich-content table {
-    width: 100%;
+    /* width: 100%; */
+    /* min-width: 600px; */
+    width: max-content;
     border-collapse: collapse;
     margin: 1em 0;
     table-layout: auto;
