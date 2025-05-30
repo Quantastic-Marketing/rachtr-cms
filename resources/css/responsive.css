@@ -731,8 +731,8 @@
       height: 217px;
     }
     .first-slide{
-      font-size:12px;
-      line-height:16.8px;
+      font-size:12px !important;
+      line-height:16.8px !important;
     }
     .homepg-banner .banner-sec .banner_overlay .content-details h1 {
       line-height: 23.8px;
