@@ -12,7 +12,7 @@
                 </div>
                 <div class="heading-holder">
                     <h1 class="fw-bold">PU FLOORING</h1>
-                    <p> <span>HOME > </span> <a class="text-decoration-underline text-white" href="">INDUSTRIAL FLOORING</a></p>
+                    <p> <span>HOME &nbsp; &nbsp; &nbsp;> </span> <a class="text-decoration-underline text-white ms-3" href="">INDUSTRIAL FLOORING</a></p>
                 </div>
             </div>
           </div>

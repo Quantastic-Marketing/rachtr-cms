@@ -1283,7 +1283,7 @@
                         </h6>
                       </div>
                       <p class="text-black text-center text-md-start fs-6">
-                        We test our products for quality, performance, durability, and safety.
+                        We test our products for quality, performance, durability, and safety
                       </p>
                     </div>
                     <div class="col-xl-3 col-6">
@@ -1313,7 +1313,7 @@
                       <p class="text-black text-center text-md-start fs-6">
                       Our team of experts provides technical support, application
                       guidance, and product recommendations to help you achieve
-                      professional results.
+                      professional results
                       </p>
                     </div>
                     <div class="col-xl-3 col-6">
@@ -1328,7 +1328,7 @@
                       </div>
                       <p class="text-black text-center text-md-start fs-6">
                       Fill this form if your supervisor team needs a session on the
-                      selection of the right product & application process.
+                      selection of the right product & application process
                       </p>
                     </div>
                   @endforelse

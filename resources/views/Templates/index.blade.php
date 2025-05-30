@@ -41,7 +41,7 @@
                              <div class="container">
                                  <div class="content-details ms-0">
                                       <h2 class="fw-bold" >Built on Trust</h2>
-                                      <p>RachTR is your trusted partner for construction and industrial<br/> solutions. Made for diverse conditions.</p>
+                                      <p>RachTR is your trusted partner for construction and industrial solutions. Made for diverse conditions.</p>
                                       <p class="pt-0"><span class="wht">#Rach</span><span class="org">TRust</span></p> 
                                  </div>
                                  <div class="content-list ms-0">
