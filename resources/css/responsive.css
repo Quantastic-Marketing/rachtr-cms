@@ -720,9 +720,19 @@
     }
     .blog-case-heading{font-size:28px !important;}
     .comprnsive_solution .case_studies .case_studies_contn h3{line-height:24px;}
+    .stone-processing-solutions .case_studies .case_studies_contn h3{width: 100%;text-align: center;}
+    .stone-processing-solutions .case_studies .case_studies_contn p{text-align: center;}
     .bnr_sldr.service-banner .item .banner-sec {
       height: 387px;
     }
+    .stone-blogs h2 {
+      text-align: center;
+    }
+    .stone-blogs p{
+      text-align: center;
+    }
+    .industrial-solutions-slider h3 {text-align: center;width:100%}
+    .industrial-solutions-slider p{text-align: center;}
   }
 
   @media (max-width:499px){
@@ -743,7 +753,7 @@
         font-size: 11px !important;
         line-height: 15.4px;
     }
-    .homepg-banner .banner-sec .banner_overlay .content-details h2 {
+    .homepg-banner .banner-sec .banner_overlay .content-details h2{
         font-size: 17px;
         line-height: 23.8px;
     }
@@ -902,7 +912,8 @@
       font-size: 13px;
       line-height: 18.2px;
     }
-    .commercial-comprnsive .case_studies_contn p {
+    .commercial-comprnsive .case_studies_contn p,
+     .industrial-solutions-slider p {
         font-size: 11px !important;
         line-height: 15.4px !important;
     }
@@ -915,7 +926,9 @@
       line-height:22px !important;
     }
     .res-blogs .blogs_sec p,  
-     .res-faqs .faq_headng {
+     .res-faqs .faq_headng,
+     .stone-blogs p,
+     .industry-why-trust .why-trust-inner-block p{
       font-size:11px;
       line-height:15.4px;
     }
@@ -938,7 +951,110 @@
         padding: 22% 0 0 3%;
     }
     .content-details p:first-of-type {width:100%}
-    
+    .service-solution-hero .banner-sec .banner_overlay .content-details h1{font-size:12px;line-height:16.8px;}
+    .service-solution-hero .banner-sec .banner_overlay .content-details p{font-size:10px;line-height:13px;}
+    .service-solution-hero.service-banner .item .banner-sec {
+        height: 250px;
+    }
+    .stone-sol h2{font-size: 17px !important;line-height: 23.8px !important;}
+    .stone-sol p{font-size: 11px !important;line-height: 15.4px !important;}
+    .stone-processing-solutions h2{line-height: 18px;}
+    .stone-processing-solutions h5{font-size: 13px;line-height: 18px;}
+    .stone-processing-solutions h3 {
+    font-size: 16px;
+    line-height: 22.4px !important;
+}
+  .stone-processing-solutions .case_studies .case_studies_contn p{
+      font-size:11px !important;
+      line-height:15.4px !important;
+    }
+    .stone-product h2{
+      font-size:20px;
+      line-height:26px;
+    }
+    .stone-product .product-offer-block .header-part  p:first-of-type{
+    font-size: 11px;
+    line-height: 18.7px;
+}
+.stone-blogs h2 {
+    font-size: 21px !important;
+    line-height: 29.4px !important;
+}
+  .stone-clients .clients-content .heading-holder h2 {
+        font-size: 28px;
+        line-height: normal;
+    }
+    .stone-faqs .faqs_headng h2 {
+        font-size: 22px !important;
+        line-height: 24.2px !important;
+    }
+    .stone-faqs .faqs_headng p {
+        font-size: 11px !important;
+        line-height: 15.4px !important;
+    }
+    .industrial-about p {
+    font-size: 11px !important;
+    line-height: 15.4px !important;
+}
+.industrial-solutions-slider h2 {
+        font-size: 17px !important;
+        line-height: 23.8px !important;
+    }
+.industrial-solutions-slider h5 {
+    font-size: 16px;
+    line-height: 23.8px;
+}
+.industrial-solutions-slider h3 {
+    font-size: 14px;
+    line-height: 19.6px;
+}
+.indus-product .header-part p:first-of-type {
+        font-size: 11px;
+        line-height: 18.7px;
+    }
+    .industry-why-trust .why-trust-inner-block h2 {
+        font-size: 16px;
+        line-height: 20.8px;
+    }
+       .industry-why-trust .why-trust-inner-block h6 {
+        font-size: 14px;
+        line-height: 19.6px;
+    }
+    .industry-case h2 {
+    font-size: 20px !important;
+    line-height: 22px !important;
+}
+.industry-case .case_studies .case_studies_contn h3 {
+        font-size:14px;
+        line-height:19.6px;
+    }
+    .industry-case  .case_studies .case_studies_contn p {
+        font-size:11px;
+        line-height:15.4px;
+    }
+    .industry-blogs h2 {
+    font-size: 23px !important;
+    line-height: 32.2px !important;
+}
+.industry-blogs p {
+    font-size: 11px;
+    line-height: 15.4px;
+}
+.industry-blogs h5 {
+    font-size: 18px !important;
+    line-height: normal !important;
+}
+    .industry-clients .clients-content .heading-holder h2 {
+        font-size: 22px;
+    }
+    .indus-faqs .faqs_headng h2 {
+        font-size: 22px !important;
+        line-height: 24.2px !important;
+    }
+    .indus-faqs .faqs_headng p {
+        font-size: 11px;
+        line-height: 15.4px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -1066,6 +1182,10 @@
     font-size: 13px;
     line-height: 18.2px;
 }
+.stone-blogs .blogs_sec .blogs_contnt .btm_cont h5 {
+        font-size: 18px;
+        line-height: normal;
+    }
     
   }
 

@@ -73,8 +73,15 @@
 
 .varients-of-pu ul li{
     list-style-type: disc;
+    font-size: 18px;
+    line-height: 36px;      
 }
 
+.varients-of-pu h5
+ {
+        font-size: 20px;
+        line-height: 30px;
+    }
 .flooring-section {
     padding: 50px 0;
 }
@@ -85,7 +92,14 @@
 }
 .flooring-title {
     font-weight: bold;
-    color: #E77530; /* Orange text */
+    color: rgb(239, 110, 37); /* Orange text */
+    font-size: 35px;
+    line-height: normal;
+}
+.flooring-section p{
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #000;
 }
 .flooring-img {
     width: 100%;
@@ -130,7 +144,8 @@
 .section-title {
     text-align: center;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 35px;
+    line-height: normal;
 }
 .highlight {
     color: #EF6E25;
@@ -139,9 +154,16 @@
     text-align: center;
     /* padding: 50px 0; */
 }
+.advantage-section .sub-head{
+    font-size:16px;
+    line-height:normal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 .advantage-box {
     text-align: center;
     padding: 20px;
+    
 }
 .advantage-icon {
     width: 70px;
@@ -161,6 +183,13 @@
 .advantage-title {
     font-weight: bold;
     font-size: 18px;
+    line-height:25.2px;
+    color:#000;
+}
+.advantage-box .sub-head {
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #000;
 }
 
 .advantage-of-pu .advantage-list >*{
@@ -249,11 +278,13 @@
     }
 
     .varients-of-pu h5{
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 21px;
     }
 
     .varients-of-pu ul li{
-        font-size: 13px;
+        font-size: 12px;
+        line-height: 24px;
     }
 
     .flooring-img{
@@ -263,6 +294,7 @@
     .section-title {
         font-size: 18px;
         text-align: start;
+        line-height: normal;
     }
 
     .advantage-title{
@@ -284,5 +316,31 @@
     .first-group{
         flex-direction: row;
     }
+    .varients-of-pu .image-container {
+    width: 351px;
+    height: 210px;
+    margin-bottom: 10px;
+    padding-top: 0;
+}
+.varients-of-pu p{
+    font-size: 12px;
+    line-height: 18px;
+}
+.flooring-title {
+    font-size: 18px;
+    line-height: normal;
+}
+.flooring-section p {
+    font-size: 12px;
+    line-height: 19.2px;
+}
+.advantage-box p{
+    font-size: 14px;
+    line-height: 19.6px;
+}
+.advantage-box .sub-head {
+    font-size: 12px;
+    line-height: 16.8px;
+}
 }
 

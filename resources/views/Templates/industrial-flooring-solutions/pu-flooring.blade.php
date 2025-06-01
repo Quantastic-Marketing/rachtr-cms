@@ -91,7 +91,7 @@
                 <div class="row">
                     <div class="col-12 col-lg-10">
                         <h2 class="section-title">ADVANTAGES OF <span class="color-orange">PU FLOORING</span></h2>
-                        <p class="text-start text-md-center">PU flooring has been used for decades, and over fifty years, it has become the most standard type of surface in the world. With its modern and durable design, it is sure that this floor will serve a long time. Here are some advantages:</p>
+                        <p class="text-start sub-head text-md-center">PU flooring has been used for decades, and over fifty years, it has become the most standard type of surface in the world. With its modern and durable design, it is sure that this floor will serve a long time. Here are some advantages:</p>
                         <div class="row text-center px-3 px-md-0 advantage-list gy-4">
                             <div class="col-12 col-sm-6 col-lg-3 advantage-box d-flex flex-column gap-3 p-0 p-sm-2">
                                 <div class="first-group d-flex flex-sm-column mx-0 gap-3 align-items-center">
@@ -112,7 +112,7 @@
                                     <p class="advantage-title m-0 text-start text-sm-center">Sustainable & <br> Durable</p>
                                 </div>
                                 
-                                <p class="m-0 text-start text-sm-center">It is a more sustainable option than other floorings, durable, and easier to maintain. It’s even resistant to wear and tear.</p>
+                                <p class="m-0 text-start text-sm-center sub-head">It is a more sustainable option than other floorings, durable, and easier to maintain. It’s even resistant to wear and tear.</p>
                             </div>
                             <div class="col-12 col-sm-6 col-lg-3 advantage-box d-flex flex-column gap-3 p-0 p-sm-2">
                                 <div class="first-group d-flex flex-sm-column mx-0 gap-3 align-items-center ">
@@ -128,7 +128,7 @@
                                     <p class="advantage-title m-0 text-start text-sm-center">Fire <br> Resistant</p>
                                 </div>
                                
-                                <p class="m-0 text-start text-sm-center">Polyurethane flooring is also fire-resistant, which means achieving complete evacuation during an emergency is possible.</p>
+                                <p class="m-0 text-start text-sm-center sub-head">Polyurethane flooring is also fire-resistant, which means achieving complete evacuation during an emergency is possible.</p>
                             </div>
                             <div class="col-12 col-sm-6 col-lg-3 advantage-box d-flex flex-column gap-3 p-0 p-sm-2">
                                 <div class="first-group d-flex flex-sm-column mx-0 gap-3 align-items-center">
@@ -151,7 +151,7 @@
                                     </div>
                                     <p class="advantage-title m-0 text-start text-sm-center">Insulation <br> Properties</p>
                                 </div>                          
-                                <p class="m-0 text-start text-sm-center">PU flooring offers excellent sound insulation, ensuring quiet workplaces and commercial spaces even with prolonged use.</p>
+                                <p class="m-0 text-start text-sm-center sub-head">PU flooring offers excellent sound insulation, ensuring quiet workplaces and commercial spaces even with prolonged use.</p>
                             </div>
                             <div class="col-12 col-sm-6 col-lg-3 advantage-box d-flex flex-column gap-3 p-0 p-sm-2">
                                 <div class="first-group d-flex flex-sm-column mx-0 gap-3 align-items-center">
@@ -167,7 +167,7 @@
                                     </div>
                                     <p class="advantage-title m-0 text-start text-sm-center">Moisture<br> Resistant</p>
                                 </div>                               
-                                <p class="m-0 text-start text-sm-center">Polyurethane’s most obvious advantage is its moisture resistance.</p>
+                                <p class="m-0 text-start text-sm-center sub-head">Polyurethane’s most obvious advantage is its moisture resistance.</p>
                             </div>
                         </div>
                     </div>
