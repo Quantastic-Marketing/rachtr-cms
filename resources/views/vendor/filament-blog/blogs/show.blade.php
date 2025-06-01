@@ -96,7 +96,7 @@
                    
                 </div>
                 <div class="heading-holder">
-                    <h3 class="fw-bold color-orange">OUR BLOG</h3>
+                    <h3 class="fw-bold org">OUR BLOG</h3>
                 </div>
             </div>                   
           </div>
@@ -104,15 +104,15 @@
         </div>
     </section>
 
-    <section class=" blogs-content py-5 ">
+    <section class="blogs-content py-5 ">
         <div class="container">
             <div class="row">
                 <!-- Main Blog Section -->
                 <div class="col-lg-8 ">
                     <div class="card border-sm  shadow-md  mb-4">
                         <div class="card-body p-4 p-sm-5">
-                            <div class="blog-content pb-4">
-                                <h1 class="blog-title mt-2">{{$post->title ?? ''}}</h1>
+                            <div class="blog-head pb-4">
+                                <h1 class="fw-bold mt-2">{{$post->title ?? ''}}</h1>
                                 <p>Updated : {{ $post->updated_at->diffForHumans() }}</p>
                             </div>
                             <div class="image-wrapper py-2">

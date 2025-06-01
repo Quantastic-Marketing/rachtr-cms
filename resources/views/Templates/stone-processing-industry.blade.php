@@ -40,7 +40,7 @@
           </div>
         </div>
       </div>
-      <section class="about-solution innovation-solutions py-3 py-sm-5">
+      <section class="about-solution stone-sol innovation-solutions py-3 py-sm-5">
         <div class="container">
           <div class="row align-items-center d-flex">
             <div class="col-md-10">
@@ -66,7 +66,7 @@
                 >
                 @if(isset($about['heading']))
                   <h2
-                      class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4"
+                      class="fw-bold mb-4 heading-holder"
                     >
                       {{ Str::before($about['heading'], $about['highlight_text']) }}
                       <span style="color: #ef6e25">{{ $about['highlight_text'] }}</span>
@@ -74,7 +74,7 @@
                     </h2>
                 @else
                   <h2
-                      class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4"
+                      class="fw-bold mb-4 heading-holder"
                     >
                       Welcome to
                       <span style="color: #ef6e25">RachTR</span> Stone Processing
@@ -127,7 +127,7 @@
           <div class="container">
             <div class="header-heading-part pb-5">
               <h2
-                class="text-center display-6 display-lg-4 fw-bold text-black mb-2"
+                class="text-center fw-bold text-black mb-2"
               >
               @if(!empty($mainHeading))
               {{ $mainHeading }} <span style="color: #ef6e25">Solutions</span>
@@ -137,7 +137,9 @@
               @endif
               </h2>
               @if(!empty($subHeading))
-                        <h5 class="text-black text-center fw-bold">{{ $subHeading ?? 'Where Quality Matters' }}</h5>
+                        <h5 class="text-black text-center fw-bold">{{ $subHeading }}</h5>
+              @else
+                        <h5 class="text-black text-center fw-bold">Where Quality Matters</h5>
               @endif
             </div>
 
@@ -542,7 +544,7 @@
               @else
                 <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
                   <div class="header-part mb-lg-5 mb-4">
-                    <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                    <h3 class="fw-bold text-center mb-2 color-orange">
                     {{ strtoupper($system['category_title']) ?? '' }}
                     </h3>
                     <p class="text-center fs-6 w-70">
@@ -579,7 +581,7 @@
           </div>
         </section>
       @else
-        <section class="product-we-offer-section">
+        <section class="stone-product product-we-offer-section">
           <div class="container">
             <h2 class="text-center text-black mb-lg-5 mb-4 fw-bold">
               Products
@@ -587,10 +589,10 @@
             </h2>
             <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
               <div class="header-part mb-lg-5 mb-4">
-                <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                <h3 class="fw-bold text-center mb-2 color-orange">
                   ​BLOCK REINFORCEMENT SYSTEM
                 </h3>
-                <p class="text-center fs-6">
+                <p class="text-center">
                   RachTR's Block Reinforcement System protects and strengthens
                   stone and marble during processing with advanced epoxy adhesives
                   and vacuum infusion technology, ensuring durability and
@@ -656,11 +658,11 @@
 
             <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-3">
               <div class="header-part mb-lg-5 mb-4">
-                <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                <h3 class="fw-bold text-center mb-2 color-orange">
                   RESIN LINE & CRACK REPAIRING SYSTEMS
                 </h3>
 
-                <p class="text-center fs-6">
+                <p class="text-center">
                   RachTR's Resin Line & Crack Repairing Systems offer
                   UV-resistant, non-yellowing solutions for durable stone repairs,
                   including bleeding-free formulations and fast-curing adhesives.
@@ -819,10 +821,10 @@
 
             <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
               <div class="header-part mb-lg-5 mb-4">
-                <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                <h3 class="fw-bold text-center mb-2 color-orange">
                   COLOR & GLOSS ENHANCER SYSTEMS
                 </h3>
-                <p class="text-center fs-6">
+                <p class="text-center">
                   RachTR's Color & Gloss Enhancer Systems intensify the beauty of
                   granites with deep penetration and vibrant, long-lasting
                   results.
@@ -889,7 +891,7 @@
           <div class="container">
             <div class="why-trust-inner-block p-lg-5 p-4">
               <h2
-                class="text-left display-6 display-md-3 fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
+                class="text-left fw-bold text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
               >
               @if(!empty($whyTrust['heading']))
               {!! html_entity_decode($whyTrust['heading'] ?? '') !!}
@@ -1087,14 +1089,14 @@
         </section>
       @endif
 
-      <section class="blogs bg-white">
+      <section class="stone-blogs blogs bg-white">
         <div class="container">
           <div class="row g-0">
             <div class="col-lg-12">
               <div class="blogs_sec py-lg-5 py-2">
                 <div class="mb-lg-5 mb-2 px-lg-5 mx-lg-5">
                   <h2
-                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold blog-case-heading text-dark text-start"
+                    class="mb-3 pb-2  fw-bold text-dark"
                   >
                     Blogs related to
                     <span class="color-orange">Stone Processing Industry</span>
@@ -1136,15 +1138,15 @@
         </div>
       </section>
 
-      <section class="our-clients py-lg-5 py-3 bg-grey">
+      <section class="stone-clients our-clients py-lg-5 py-3 bg-grey">
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-12">
               <div class="clients-content row align-items-center">
-                <div class="heading-holder col-12 col-lg-2 mb-4 mb-lg-0">
-                  <h2 class="mb-0 color-orange fs-2 fw-bold">{{ $client['title'] ?? 'Our Clients' }}</h2>
+                <div class="heading-holder col-12 col-lg-3 mb-4 mb-lg-0">
+                  <h2 class="mb-0 color-orange  fw-bold">{{ $client['title'] ?? 'Our Clients' }}</h2>
                 </div>
-                <div class="client-slider col-12 col-lg-10">
+                <div class="client-slider col-12 col-lg-9">
                   @forelse ($client['companies'] ?? [] as $company)
                     <div class="client-slide">
                       <img src="{{ asset('storage/' . ($company['image'] ?? '')) }}" alt="{{$company['img_alt'] ?? 'Image Alt' }}" />
@@ -1231,12 +1233,12 @@
       </section>
 
 
-      <section class="faqs bg-white pb-5">
+      <section class="stone-faqs faqs bg-white pb-5">
         <div class="container">
           <div class="row g-0">
             <div class="faqs_headng col-lg-12 py-lg-5 py-4">
               <h2 class="mb-4 fw-bold">{{ $faq['title'] ?? 'FAQs' }}</h2>
-              {{ $faq['title'] ?? 'FAQs' }}
+              <p>{{ $faq['title'] ?? "Find answers to common questions about RachTR's products, services, ordering process, and technical inquiries." }}</p>
             </div>
             <div class="faqs_detls row g-0">
               <div class="col-lg-4 faq_fade_effct pt-lg-5">

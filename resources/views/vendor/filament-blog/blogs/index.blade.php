@@ -91,7 +91,7 @@
                             </a>
                             <div class="card-body p-4 p-sm-5 m-0">
                                 <div class="blog-content pb-4">
-                                    <p class="fs-12 text-muted mb-1">{{ \Carbon\Carbon::parse($post->published_at)->format('M d')}}</p>
+                                    <span class="mb-1 date-text">{{ \Carbon\Carbon::parse($post->published_at)->format('M d')}}</span><br>
                                     @foreach ($post->categories as $category)
                                         <a href="{{route('filamentblog.category.post',['category' => $category->slug])}}" class="blog-category">{{$category->name}}</a>
                                     @endforeach

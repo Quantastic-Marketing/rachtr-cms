@@ -1241,7 +1241,7 @@
             <div class="container">
               <div class="why-trust-inner-block p-lg-5 p-4">
                 <h2
-                  class="text-left fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
+                  class="text-left fw-bold text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
                 >
                 @if(!empty($whyTrust['heading']))
                 {!! html_entity_decode($whyTrust['heading']) !!}
@@ -1614,10 +1614,10 @@
           <div class="row">
             <div class="col-12 col-md-12">
               <div class="clients-content row align-items-center">
-                <div class="heading-holder col-12 col-lg-2 mb-4 mb-lg-0">
+                <div class="heading-holder col-12 col-lg-3 mb-4 mb-lg-0">
                   <h2 class="mb-0 color-orange fw-bold">{{ $client['title'] ?? 'Our Clients' }}</h2>
                 </div>
-                <div class="client-slider col-12 col-lg-10">
+                <div class="client-slider col-12 col-lg-9">
                   @forelse ($client['companies'] ?? [] as $company)
                     <div class="client-slide">
                       <img src="{{ asset('storage/' . ($company['image'] ?? '')) }}" alt="{{$company['img_alt'] ?? 'Image Alt' }}" />
@@ -1709,7 +1709,7 @@
           <div class="row g-0">
             <div class="faqs_headng col-lg-12 py-lg-5 py-4">
               <h2 class="mb-4 fw-bold">{{ $faq['title'] ?? 'FAQs' }}</h2>
-                {{ $faq['title'] ?? "Find answers to common questions about RachTR's products, services, ordering process, and technical inquiries." }}
+                <p>{{ $faq['title'] ?? "Find answers to common questions about RachTR's products, services, ordering process, and technical inquiries." }}</p>
             </div>
             <div class="faqs_detls row g-0">
               <div class="col-lg-4 faq_fade_effct pt-lg-5">

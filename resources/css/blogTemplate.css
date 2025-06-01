@@ -99,7 +99,7 @@
     color: #000000;
     font-weight: 700;
     font-size: 18px;
-    line-height: 20px;
+    line-height:normal;
 }
 .recent-post-card .rec-post-title{
     
@@ -163,9 +163,19 @@
 }
 
 .blog-banner .banner-section .heading-holder h3 {
-    font-size: 38px;
+    font-size: 40px ;
+    line-height: 49.4px;
 }
 
+.blog-head h1{
+    font-size: 40px !important;
+    line-height: 50px !important;
+}
+
+.recent-post-card h2{
+    font-size: 18px;
+    line-height: 27px;
+}
 @media (min-width: 1400px) {
     .blogs-content .container {
         max-width: 1240px;

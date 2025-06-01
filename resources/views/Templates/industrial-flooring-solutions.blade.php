@@ -68,14 +68,14 @@
                 >
                 @if(isset($about['heading']))
                   <h2
-                      class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4 p-lg-0"
+                      class="fw-bold mb-4 p-lg-0"
                     >
                       {{ Str::before($about['heading'], $about['highlight_text']) }}
                       <span style="color: #ef6e25">{{ $about['highlight_text'] }}</span>
                       {{ Str::after($about['heading'], $about['highlight_text']) }}
                     </h2>
                 @else
-                  <h2 class="lh-lg-base lh-small display-6 display-md-3 fw-bold mb-4 ms-0 p-lg-0">
+                  <h2 class="fw-bold mb-4 ms-0 p-lg-0">
                     Welcome to  <span style="color: #ef6e25">RachTR</span><br /> Industrial
                     Flooring Solutions
                   </h2>
@@ -127,7 +127,7 @@
           </video>
           <div class="container">
             <div class="header-heading-part pb-5">
-              <h2 class="text-center display-6 display-lg-4 fw-bold text-black mb-2">
+              <h2 class="text-center  fw-bold text-black mb-2">
                 {{ empty($mainHeading) ? 'Industrial Flooring' : $mainHeading}}
                 <span style="color: #ef6e25">Solutions</span>
               </h2>
@@ -333,29 +333,28 @@
         </section>
 
       @if(!empty($productsOffer))
-        <section class="product-we-offer-section">
+        <section class="product-we-offer-section indus-product">
           <div class="container">
             <h2 class="text-center text-black mb-lg-5 mb-4 fw-bold">
-              Products
-              <span style="color: #ef6e25">We Offer </span>
+              <span style="color: rgb(239, 110, 37)">Products We Offer </span>
             </h2>
 
             @foreach( $productsOffer ?? [] as $system)
               @if($system['product_category'])
                 <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
                     <div class="header-part mb-lg-5 mb-4">
-                      <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                      <h3 class="fw-bold text-center mb-2 color-orange">
                         {{ strtoupper($system['category_title']) ?? '' }}
                       </h3>
     
-                      <p class="text-center fs-6 w-70">
+                      <p class="text-center">
                       {{ $system['description'] ?? '' }}
                       </p>
                     </div>
                     @forelse($system['product_category'] ?? [] as $productCat) 
                         <div class="header-part mb-lg-5 mb-4">
-                          <h4 class="text-center mb-lg-4 mb-2 fs-2 color-orange">{{$productCat['category_subtitle'] ?? ''}}</h4>
-                          <p class="text-center fs-6 w-70">
+                          <h4 class="text-center mb-lg-4 mb-2 color-orange">{{$productCat['category_subtitle'] ?? ''}}</h4>
+                          <p class="text-center">
                             {{$productCat['description'] ?? ''}}
                           </p>
                         </div>
@@ -391,10 +390,10 @@
               @else
               <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
                 <div class="header-part mb-lg-5 mb-4">
-                  <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                  <h3 class="fw-bold text-center mb-2 color-orange">
                   {{ strtoupper($system['category_title']) ?? '' }}
                   </h3>
-                  <p class="text-center fs-6">
+                  <p class="text-center">
                   {{ $system['description'] ?? '' }}
                   </p>
                 </div>
@@ -433,18 +432,17 @@
           </div>
         </section>
       @else
-        <section class="product-we-offer-section">
+        <section class="product-we-offer-section indus-product">
           <div class="container">
-            <h2 class="text-center text-black mb-lg-5 mb-4 fw-bold">
-              Products
-              <span style="color: #ef6e25">We Offer </span>
+            <h2 class="text-center text-black mb-lg-5 mb-4 fw-bold">    
+              <span style="color: #ef6e25">Products We Offer </span>
             </h2>
             <div class="product-offer-block p-lg-5 p-3 bg-fafafa mb-lg-5 mb-4">
               <div class="header-part mb-lg-5 mb-4">
-                <h3 class="fw-bold text-center mb-2 fs-2 color-orange">
+                <h3 class="fw-bold text-center mb-2 color-orange">
                   EPOXY FLOORING PRODUCTS
                 </h3>
-                <p class="text-center fs-6">
+                <p class="text-center">
                   RachTR's Epoxy Flooring Products offer a complete solution for durable and high-performance floors. Our range includes primers for excellent substrate adhesion, screeds for a robust and level base, and top coats for a seamless, glossy finish.
                 </p>
               </div>
@@ -615,7 +613,7 @@
       
 
       @if(!empty($pageContent['why_trust']))
-        <section class="why-trust-rachtr-section">
+        <section class="why-trust-rachtr-section industry-why-trust">
           <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="bg-video">
           <source src="{{ asset( empty($whyTrust['video_webm']) ? 'videos/why-trust.webm' : 'storage/' . $whyTrust['video_webm'] ) }}" type="video/webm">
           <source src="{{ asset(empty($whyTrust['video_mp4']) ? 'videos/why-trust.mp4' : 'storage/' . $whyTrust['video_mp4'] ) }}" type="video/mp4">
@@ -625,7 +623,7 @@
           <div class="container">
             <div class="why-trust-inner-block p-lg-5 p-4">
               <h2
-                class="text-left display-6 display-md-3 fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
+                class="text-left fw-bold text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
               >
               @if(!empty($whyTrust['heading']))
                 {!! html_entity_decode($whyTrust['heading']) !!}
@@ -646,7 +644,7 @@
                       {!! $feature['title'] !!}
                       </h6>
                     </div>
-                    <p class="text-black text-center text-md-start fs-6">
+                    <p class="text-black text-center text-md-start">
                     {{ $feature['description'] }}
                     </p>
                   </div>
@@ -664,7 +662,7 @@
                           ASSURANCE
                         </h6>
                       </div>
-                      <p class="text-black text-center text-md-start fs-6">
+                      <p class="text-black text-center text-md-start">
                         RachTR's industrial flooring is durable and built to last with quality materials and construction methods.
                       </p>
                     </div>
@@ -680,7 +678,7 @@
                           RANGE OF <br> OPTIONS
                         </h6>
                       </div>
-                      <p class="text-black text-center text-md-start fs-6">
+                      <p class="text-black text-center text-md-start">
                         We provide various industrial flooring options to meet your specific needs, including, PU, anti-slip, and chemical-resistant coatings.
                       </p>
                     </div>
@@ -694,7 +692,7 @@
                           PRODUCTS
                         </h6>
                       </div>
-                      <p class="text-black text-center text-md-start fs-6">
+                      <p class="text-black text-center text-md-start">
                         We innovate and offer products like anti-slip coatings, sealants, and epoxy flooring to improve safety and efficiency.
                       </p>
                     </div>
@@ -711,7 +709,7 @@
                           SUPPORT
                         </h6>
                       </div>
-                      <p class="text-black text-center text-md-start fs-6">
+                      <p class="text-black text-center text-md-start">
                         We offer support and training for flooring solutions to ensure your success and satisfaction.
                       </p>
                     </div>
@@ -721,7 +719,7 @@
           </div>
         </section>
       @else
-        <section class="why-trust-rachtr-section">
+        <section class="why-trust-rachtr-section industry-why-trustc">
           <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"   class="bg-video">
           <source src="{{ asset('videos/why-trust.webm') }}" type="video/webm">
           <source src="{{ asset('videos/why-trust.mp4') }}" type="video/mp4">
@@ -731,7 +729,7 @@
           <div class="container">
             <div class="why-trust-inner-block p-lg-5 p-4">
               <h2
-                class="text-left display-6 display-md-3 fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
+                class="text-left fw-bold text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
               >
                 Why Trust <span class="color-orange">RachTR</span> for <br />
                 Industrial Flooring?
@@ -750,7 +748,7 @@
                       ASSURANCE
                     </h6>
                   </div>
-                  <p class="text-black text-center text-md-start fs-6">
+                  <p class="text-black text-center text-md-start ">
                     RachTR's industrial flooring is durable and built to last with quality materials and construction methods.
                   </p>
                 </div>
@@ -766,7 +764,7 @@
                       RANGE OF <br> OPTIONS
                     </h6>
                   </div>
-                  <p class="text-black text-center text-md-start fs-6">
+                  <p class="text-black text-center text-md-start">
                     We provide various industrial flooring options to meet your specific needs, including, PU, anti-slip, and chemical-resistant coatings.
                   </p>
                 </div>
@@ -780,7 +778,7 @@
                       PRODUCTS
                     </h6>
                   </div>
-                  <p class="text-black text-center text-md-start fs-6">
+                  <p class="text-black text-center text-md-start">
                     We innovate and offer products like anti-slip coatings, sealants, and epoxy flooring to improve safety and efficiency.
                   </p>
                 </div>
@@ -797,7 +795,7 @@
                       SUPPORT
                     </h6>
                   </div>
-                  <p class="text-black text-center text-md-start fs-6">
+                  <p class="text-black text-center text-md-start">
                     We offer support and training for flooring solutions to ensure your success and satisfaction.
                   </p>
                 </div>
@@ -808,11 +806,11 @@
       @endif
 
 
-      <section class="comprnsive_solution case-study-block-section py-lg-5 py-3">
+      <section class="comprnsive_solution industry-case  case-study-block-section py-lg-5 py-3">
         <div class="container">
           <div class="row g-0">
             <div class="cmp_solutn_heding col-lg-8 col-md-12 py-lg-5 py-3">
-              <h2 class="display-6 display-lg-4 fw-bold">
+              <h2 class="fw-bold">
               {!! !empty($caseStudy['heading']) ? html_entity_decode($caseStudy['heading']) : 'Case <span class="color-orange">Studies</span>' !!}
               </h2>
             </div>
@@ -825,7 +823,7 @@
                       {{ $slide['left_title'] }}
                       </h3>
                       @foreach ($slide['paragraphs'] ?? [] as $para)
-                        <p class="pb--md-5 mb-md--5">{{ $para['text'] }}</p>
+                        <p class="{{ $loop->last ? 'pb-md-5 mb-md-5' : '' }}">{{ $para['text'] }}</p>
                       @endforeach
                     
                       <a
@@ -857,8 +855,8 @@
                         class="case-study-info d-flex justify-content-between p-lg-5 p-3 gap-2"
                       >
                         <div class="study-details">
-                          <h6 class="color-grey fw-bold fs-6">{{ $slide['right_title'] }}</h6>
-                          <h4 class="color-black fw-bold fs-5 mb-0">
+                          <h6 class="color-grey fw-bold">{{ $slide['right_title'] }}</h6>
+                          <h4 class="color-black fw-bold mb-0">
                           {{ $slide['subtitle'] }}
                           </h4>
                         </div>
@@ -882,7 +880,7 @@
                         <h3 class="fw-bold pb-2">
                           Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor
                         </h3>
-                        <p class="pb--md-5 mb-md--5">
+                        <p class="pb--md-5 mb-md-5">
                           Delhivery, since 2011, is a top e-commerce logistics provider in India, handling last-mile delivery, warehousing, and freight. Its tech and network are vital for Indian e-commerce.
                         </p>
                       
@@ -915,8 +913,8 @@
                           class="case-study-info d-flex justify-content-between p-lg-5 p-3 gap-2"
                         >
                           <div class="study-details">
-                            <h6 class="color-grey fw-bold fs-6">Download Case Study</h6>
-                            <h4 class="color-black fw-bold fs-5 mb-0">
+                            <h6 class="color-grey fw-bold">Download Case Study</h6>
+                            <h4 class="color-black fw-bold mb-0">
                               Restoration of Delhivery's Damaged Floor
                             </h4>
                           </div>
@@ -939,7 +937,7 @@
                         <h3 class="fw-bold pb-2">
                           Epoxy Flooring Solution on Oil-Prone Areas for Welspun
                         </h3>
-                        <p class="pb--md-5 mb-md--5">
+                        <p class="pb-md-5 mb-md-5">
                           Welspun, a global leader in textiles, offers high-quality home textiles & flooring solutions. Their diverse reach and focus on innovation & sustainability set them apart. They aim to be a top brand, prioritizing customer experience and social responsibility.
                         </p>
                       
@@ -972,8 +970,8 @@
                           class="case-study-info d-flex justify-content-between p-lg-5 p-3 gap-2"
                         >
                           <div class="study-details">
-                            <h6 class="color-grey fw-bold fs-6">Download Case Study</h6>
-                            <h4 class="color-black fw-bold fs-5 mb-0">
+                            <h6 class="color-grey fw-bold">Download Case Study</h6>
+                            <h4 class="color-black fw-bold mb-0">
                               Epoxy Flooring Solution for Welspun
                             </h4>
                           </div>
@@ -996,15 +994,16 @@
                         <h3 class="fw-bold pb-2">
                           Achieved a Seamless and Hygienic Flooring Solution at FMCG Factory, Haridwar
                         </h3>
-                        <p class="pb--md-5 mb-md--5">
+                        <p class="pb-md-5">
                           FMCG Haridwar, a prominent player in the food industry, required a seamless flooring solution to inhibit microorganism growth and ensure product safety.
                         </p>
-                        <p class="pb--md-5 mb-md--5">
+                        <p>
                           The existing epoxy flooring was damaged, and the plant operations could not be halted, necessitating a swift, dust-free maintenance solution.
                         </p>
                         <a
                           href="{{ asset('pdfFile/Case_study_ITC.pdf')}}"
                           target="_blank"
+                          style="margin-top: 50px;"
                           >View Case Study</a
                         >
                         <div class="case_studies_downd d-md-none mt-4">
@@ -1031,8 +1030,8 @@
                           class="case-study-info d-flex justify-content-between p-lg-5 p-3 gap-2"
                         >
                           <div class="study-details">
-                            <h6 class="color-grey fw-bold fs-6">Download Case Study</h6>
-                            <h4 class="color-black fw-bold fs-5 mb-0">
+                            <h6 class="color-grey fw-bold">Download Case Study</h6>
+                            <h4 class="color-black fw-bold mb-0">
                               Hygienic Flooring Solution for FMCG Factory, Haridwar
                             </h4>
                           </div>
@@ -1055,14 +1054,14 @@
         </div>
       </section>
 
-      <section class="blogs bg-white">
+      <section class="industry-blogs blogs bg-white">
         <div class="container">
           <div class="row g-0">
             <div class="col-lg-12">
               <div class="blogs_sec py-lg-5 py-2">
                 <div class="mb-lg-5 mb-2 px-lg-5 mx-lg-5">
                   <h2
-                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold blog-case-heading text-dark text-start"
+                    class="mb-3 pb-2 fw-bold text-dark text-start"
                   >
                     Blogs related to Industrial  <br /> Flooring Industry
                   </h2>
@@ -1107,15 +1106,15 @@
         </div>
       </section>
 
-      <section class="our-clients py-lg-5 py-3 bg-grey">
+      <section class="our-clients industry-clients py-lg-5 py-3 bg-grey">
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-12">
               <div class="clients-content row align-items-center">
-                <div class="heading-holder col-12 col-lg-2 mb-4 mb-lg-0">
-                  <h2 class="mb-0 color-orange fs-2 fw-bold">{{ $client['title'] ?? 'Our Clients' }}</h2>
+                <div class="heading-holder col-12 col-lg-3 mb-4 mb-lg-0">
+                  <h2 class="mb-0 color-orange fw-bold">{{ $client['title'] ?? 'Our Clients' }}</h2>
                 </div>
-                <div class="client-slider col-12 col-lg-10">
+                <div class="client-slider col-12 col-lg-9">
                   @forelse ($client['companies'] ?? [] as $company)
                     <div class="client-slide">
                       <img src="{{ asset('storage/' . ($company['image'] ?? '')) }}" alt="{{$company['img_alt'] ?? 'Image Alt' }}" />
@@ -1201,12 +1200,12 @@
         </div>
       </section>
 
-      <section class="faqs bg-white pb-5">
+      <section class="faqs indus-faqs bg-white pb-5">
         <div class="container">
           <div class="row g-0">
             <div class="faqs_headng col-lg-12  py-lg-5 py-4">
               <h2 class="mb-4 fw-bold">{{ $faq['title'] ?? 'FAQs' }}</h2>
-              {{ $faq['title'] ?? 'FAQs' }}
+              <p>{{ $faq['title'] ?? "Find answers to common questions about RachTR's products, services, ordering process, and technical inquiries" }}</p>
               
             </div>
             <div class="faqs_detls row g-0">
