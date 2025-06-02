@@ -78,7 +78,7 @@
                                     </div>
                                     <div class="text-content m-0  text-start text-md-center">
                                         <h4>Expertise</h4>
-                                        <p>4000+ B2B Research  Programs</p>
+                                        <p>4,000+ B2B Research  Programs</p>
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                                     </div>
                                     <div class="text-content m-0  text-start text-md-center">
                                         <h4>Knowledge</h4>
-                                        <p>21 industry verticals & 200,000 professionals</p>
+                                        <p>21 industry verticals & 2,00,000 professionals</p>
                                     </div>
                                 </div>
                             </div>
