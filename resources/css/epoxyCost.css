@@ -160,12 +160,23 @@
 }
 
 .epoxy-floor-cost .epoxy-floor-content .heading-holder h2{
-    font-size: 41px;
+    font-size: 40px;
+    line-height: 50px;
 }
 .epoxy-floor-cost .epoxy-floor-content .components-factors p,
 .epoxy-floor-cost .epoxy-floor-content .components p{
     font-size: 36px;
     font-weight: 700;
+}
+
+.factors-of-epoxy h3{
+    font-size: 22px;
+    line-height: normal;
+}
+.factors-of-epoxy p,.colors-available p{
+    font-size: 18px;
+    line-height: 25.2px;
+    color: #000;
 }
 .epoxy-floor-cost .epoxy-floor-content .components-factors .component-text {
     border: 1px solid white;
@@ -375,14 +386,40 @@
 .epoxy-solutions .epoxy-solution-content .heading-holder h2,
 .factors-of-epoxy h2,
 .colors-available h3{
-   font-size:34px;
+    font-size:38px;
+    line-height: 53.2px;
 }
 
+.what-is-epoxy .why-epoxy-content .text-holder,
+.what-is-epoxy .why-epoxy-content .text-holder p{
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #000000;
+}
+
+.epoxy-solutions .epoxy-solution-content .text-content p{
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #000000;
+}
+
+.epoxy-solutions .epoxy-solution-content .solutions-list .solution p {
+    font-size: 22px;
+    line-height: normal;
+}
+
+
+
 .cost-price-banner .banner-sec .banner_overlay .content-details h1{
-    font-size: 41px;
+    font-size: 40px;
+    line-height: 56px;
     color: #ffffff;
 }
 
+.cost-price-banner .banner-sec .banner_overlay .content-details p{
+    font-size: 22px;
+    line-height: 30.8px;
+}
 .faq-block ul {
     text-align: left !important;
     padding:revert; 
@@ -398,12 +435,23 @@
 }
 
 
+
+@media (max-width:1390px){
+    .cost-price-banner .banner-sec .banner_overlay .content .content-details p {
+    width: 100%;
+}
+}
+
 @media (min-width:1700px){
     .bnr_sldr .item .banner-sec .banner_overlay .content {
         padding: 10% 0 0 0;
     }
 }
-
+@media (min-width: 1400px) {
+    .cost-price-banner .banner-sec .banner_overlay .content {
+        padding: 10% 0 0 2%;
+    }
+}
 @media(max-width:768px){
     .what-is-epoxy .why-epoxy-content .heading-holder h2,
     .epoxy-solutions .epoxy-solution-content .heading-holder h2,
@@ -421,6 +469,51 @@
 
 }
 
+@media (max-width:499px){
+    .cost-price-banner .banner-sec .banner_overlay .content-details h1
+ {
+        font-size: 16px;
+        line-height: 22.4px;
+    }
+    .cost-price-banner .banner-sec .banner_overlay .content .content-details p{
+        font-size: 11px;
+        line-height: 15.4px;
+    }
+    .what-is-epoxy .why-epoxy-content .heading-holder h2, .epoxy-solutions .epoxy-solution-content .heading-holder h2,
+    .colors-available h3 {
+        line-height: 17.1px;
+        font-size: 20px;
+    }
+        .what-is-epoxy .why-epoxy-content .text-holder,
+        .what-is-epoxy .why-epoxy-content .text-holder p ,
+        .epoxy-solutions .epoxy-solution-content .text-content p,
+        .factors-of-epoxy p, .colors-available p{
+        font-size: 12px;
+        line-height: 16.8px;
+    }
+     .epoxy-solutions .epoxy-solution-content .heading-holder h2 {
+        line-height: 27.1px;
+    }
+        .epoxy-solutions .epoxy-solution-content .solutions-list .solution p {
+        font-size: 14px;
+        line-height: 19.6px;    
+    }
+    .epoxy-floor-cost .epoxy-floor-content .heading-holder h2, 
+    .factors-of-epoxy h2{   
+    font-size: 20px;
+    line-height: normal;
+}
+.epoxy-floor-cost .epoxy-floor-content .components-factors p,
+ .epoxy-floor-cost .epoxy-floor-content .components p, 
+ .epoxy-floor-cost .epoxy-floor-content .components h4 ,
+ .factors-of-epoxy h3{
+        font-size: 14px;
+        line-height: 19.6px;
+    }
+    
+    
+      
+}
 @media (max-width:480px) {
     .bnr_sldr .item .banner-sec .banner_overlay .content .content-details h2 {
         font-size: 16px;
@@ -429,20 +522,6 @@
         height: 520px;
     }
 
-    .what-is-epoxy .why-epoxy-content .heading-holder h2,
-     .epoxy-solutions .epoxy-solution-content .heading-holder h2{
-        line-height: 34px;
-        
-    }
-
-    .epoxy-solutions .epoxy-solution-content .heading-holder h2,
-    .epoxy-floor-cost .epoxy-floor-content .heading-holder h2{
-        font-size: 22px;
-    }
-    
-    .what-is-epoxy .why-epoxy-content .text-holder p{
-        font-size: 16px;
-    }
     .what-is-epoxy .epoxy-img .image-top {
         width: 85%;
         left: 31px;
@@ -471,11 +550,6 @@
         width: unset;
     }
 
-    .epoxy-floor-cost .epoxy-floor-content .components-factors p,
-    .epoxy-floor-cost .epoxy-floor-content .components p,
-    .epoxy-floor-cost .epoxy-floor-content .components h4{
-        font-size: 18px;
-    }
     .epoxy-floor-cost .epoxy-floor-content .components-factors .component-text p{
         font-size: 12px;
     }
@@ -513,10 +587,6 @@
     }
     .bnr_sldr .item .banner-sec .banner_overlay .content .content-details h2 {
         margin: 0;
-    }
-    .cost-price-banner .banner-sec .banner_overlay .content-details h1{
-        font-size: 12px;
-        color: #ffffff;
     }
 
     .cost-price-banner .banner-sec .banner_overlay .content-details p{

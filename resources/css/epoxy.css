@@ -53,7 +53,7 @@
 .common-faqs .heading-holder span,
 .bnr_sldr .content-details span,
 .experience-rachtr .heading-holder span{
-    color: #EF6E25;
+    color: rgb(239, 110, 37);
 }
 
 .experience-rachtr .heading-holder{
@@ -126,6 +126,7 @@
 }
 .build-to-last .benefits-card h3{
     font-size: 22px;
+    line-height: normal;
     font-weight: 700;
     color: #EF6E25;
 }
@@ -135,6 +136,7 @@
 }
 .build-to-last .benefits-note p{
    font-size: 18px;
+   line-height: 25.2px;
 }
 .build-to-last .benefits-note a{
     color: #ffffff;
@@ -483,21 +485,67 @@
     content: "■" !important;
 }
 
-.our-clients .clients-content .heading-holder h2,
-.section-ordering .build-to-last .heading-holder h2,
-.locations-served .locations-block .heading-holder h2,
-.experience-rachtr .experience-content .heading-holder h2,
-.common-faqs .common-faq-block .heading-holder h2,
-.applications-of-epoxy .applc-epoxy-cont h2{
-    font-size: 34px;
-}
+
 
 
 .epoxy-service-banner .banner-sec .banner_overlay .content-details h1{
     font-size: 40px;
+    line-height:56px;
     color: #ffffff;
 }
+.epoxy-service-banner .banner-sec .banner_overlay .content-details p{
+    font-size: 22px;
+    line-height:30.8px;
+}
 
+.epoxy-client .clients-content .heading-holder  h2{
+    font-size:40px;
+    line-height: 56px;
+}
+.epoxy-client .clients-content .client-slider{
+    padding-left:20px;
+}
+.section-ordering .build-to-last .heading-holder h2,
+.applications-of-epoxy .applc-epoxy-cont h2,
+.locations-served .locations-block .heading-holder h2,
+.experience-rachtr .experience-content .heading-holder h2
+ {
+    font-size:38px;
+    line-height: 53.2px;
+}
+.section-ordering .build-to-last .heading-holder p,
+.build-to-last .benefits-card p{
+    font-size:18px;
+    line-height: 25.2px;
+}
+.applications-of-epoxy .applc-epoxy-cont p {
+    color: #000;
+}
+
+.epoxy-proj h5{
+    font-size: 20px;
+    line-height: 28px;
+    color: #000;
+}
+.epoxy-proj p{
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #000;
+}
+.epoxy-blogs h2:not(ul h2), .common-faqs .common-faq-block .heading-holder h2{
+    font-size: 45px !important;
+    line-height: 49.5px !important;
+    color: #000;
+}
+.epoxy-blogs p{
+    font-size: 16px ;
+    line-height: 22.4px;
+    color: #000;
+}
+.epoxy-blogs ul h2{
+    font-size: 22px ;
+    line-height: normal;
+}
 .applications-of-epoxy .applc-epoxy-cont ul{
     padding: revert;
     text-align: unset;
@@ -505,6 +553,7 @@
 
 .applications-of-epoxy .applc-epoxy-cont ul li{
     list-style: disc;
+    color: #000;
 }
 
 .applications-of-epoxy .applc-epoxy-cont a{
@@ -537,7 +586,6 @@
         font-size: 24px;
     }
 
-    .our-clients .clients-content .heading-holder h2,
     .section-ordering .build-to-last .heading-holder h2,
     .locations-served .locations-block .heading-holder h2,
     .experience-rachtr .experience-content .heading-holder h2,
@@ -702,6 +750,54 @@
         width: 90%;
         margin-left:18px;
     }
+    .epoxy-service-banner .banner-sec .banner_overlay .content-details h1 {
+        font-size: 16px;
+        line-height: 22.4px;
+    }
+    .epoxy-service-banner .banner-sec .banner_overlay .content-details p ,
+    .epoxy-service-banner .banner-sec .banner_overlay .content .content-list p{
+        font-size: 11px;
+        line-height: 15.4px;
+    }
+    .epoxy-client .clients-content .heading-holder h2{
+        font-size: 20px;
+        line-height: normal;
+    }
+    .epoxy-proj .cmp_solutn_heding h2{
+        font-size: 25px;
+        line-height: 29.7px;
+    }
+.epoxy-proj h5 {
+    font-size: 13px;
+    line-height: 18.2px;
+}
+.epoxy-proj .case_studies .case_studies_contn p,
+.build-to-last .benefits-card p {
+    font-size: 11px;
+    line-height: 15.4px;
+}
+.section-ordering .build-to-last .heading-holder h2,
+.locations-served .locations-block .heading-holder h2,
+.experience-rachtr .experience-content .heading-holder h2{
+    font-size: 22px;
+    line-height: 28.6px;
+}
+.section-ordering .build-to-last .heading-holder p,
+.build-to-last .benefits-note p,
+.epoxy-blogs p{
+    font-size: 12px;
+    line-height: 20.4px;
+}
+.build-to-last .benefits-card h3 {
+    font-size: 15px;
+    line-height: 21px;
+}
+.epoxy-blogs h2:not(ul h2),
+ .common-faqs .common-faq-block .heading-holder h2 {
+    font-size: 20px !important;
+    line-height: 22px !important;
+}
+
 }
 
 @media (max-width:480px) {
@@ -781,10 +877,10 @@
         margin: 20px;
     }
     .build-to-last .benefits-blocks .benefits-card p{
-        font-size: 16px;
+        /* font-size: 16px; */
     }
     .build-to-last .benefits-note p {
-        font-size: 23px;
+        /* font-size: 23px; */
     }
     .build-to-last *:not(:last-child) .benefits-card {
         margin-bottom: 20px;
