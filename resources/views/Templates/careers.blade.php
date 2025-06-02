@@ -149,7 +149,7 @@
                     <div class="col-md-10 col-lg-9">
                         <div class="openings-content">
                             <div class="heading-holder text-center pb-4">
-                                <h2 class="fw-bold"><span class="color-orange">Current Opening</span></h2>
+                                <h2 class="fw-bold"><span class="color-orange">Current Openings</span></h2>
                             </div>
 
                             <div class="text-part justify-content-center text-center d-flex flex-column gap-4">

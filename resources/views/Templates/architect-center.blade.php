@@ -243,8 +243,9 @@
                     <div class="cmp_solutn_heding ps-3 col-md-12 py-5">
                         <h2 class="ps-3 fw-bold">Case Study</h2>
                         <!-- <h3 class="py-4">Check out some of our informative blog posts on topics like construction trends, product knowledge, application tips, etc.</h3> -->
-                        <p class="ps-3">Check out some of our informative blog posts on topics like construction trends,
-                            product knowledge, application tips, etc.</p>
+                        <p class="ps-3">Explore our project showcase to see real-world examples of how architects have utilized RachTR products to create stunning and functional spaces.
+
+</p>
                     </div>
                     <div class="case-studies-item">
                         <div class="case_studies row g-0">
@@ -515,7 +516,7 @@
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
                         <div class="our_strengths_contnt">
-                            <h2 class="pb-3 fw-bold">Projects Showcase</h2>
+                            <h2 class="pb-3 fw-bold">Project Showcase</h2>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -1465,7 +1466,7 @@
                                                     </div>
                                                     <div class="icon-desc-1 d-flex flex-column">
                                                         <p class="m-0"><strong>Location:</strong></p>
-                                                        <p class="m-0">Mentougou District, Beijing, <br> China, Brazil</p>
+                                                        <p class="m-0">Mentougou District, Beijing, <br> China</p>
                                                     </div>
 
                                                 </div>
@@ -2141,7 +2142,7 @@
 
                                     <ul class="d-flex flex-column  middle-points  ms-4 py-3">
                                         <li class="text-start"><strong>Zero-Energy Design: </strong> The greenhouse operates as a zero-energy building, utilizing energy-efficient systems and natural ventilation.</li>
-                                        <li class="text-start">Distinct Climate Zones: Divided into three pavilions—desert, tropical rainforest, and flower garden—each reflecting a unique climate.</li>
+                                        <li class="text-start"><strong>Distinct Climate Zones:</strong> Divided into three pavilions—desert, tropical rainforest, and flower garden—each reflecting a unique climate.</li>
                                     </ul>
 
 
@@ -2158,8 +2159,8 @@
                                         <div class="icon-desc-2 d-flex flex-column m-0 ms-4 ms-md-5 ">
                                             <p class="m-0"><strong>Awards:</strong></p>
                                             <ul class="d-flex flex-column">
-                                                <li class="text-start m-0">1st Prize in Competition: Awarded for its innovative design and sustainability approach in 2019.</li>
-                                                <li class="text-start m-0"> Architectural Excellence: Celebrated for creatively integrating industrial heritage with natural beauty.</li>
+                                                <li class="text-start m-0"><strong>1st Prize in Competition:</strong> Awarded for its innovative design and sustainability approach in 2019.</li>
+                                                <li class="text-start m-0"><strong> Architectural Excellence:</strong> Celebrated for creatively integrating industrial heritage with natural beauty.</li>
                                             </ul>
                                         </div>
                                     </div>

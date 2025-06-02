@@ -121,6 +121,7 @@
     margin: 16px 0;
     text-align: justify;
     line-height: 19.6px;
+    word-break: break-all;
 }
 
 .product-card-section .btn-orange {
