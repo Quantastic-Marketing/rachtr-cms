@@ -129,7 +129,7 @@
                                                     </svg>
                                                 </div>
                                                 <h3>Anti Skid</h3>
-                                                <p>Anti-skid formula minimizes the risk of slips and falls, creating a safer environmen</p>
+                                                <p>Anti-skid formula minimizes the risk of slips and falls, creating a safer environment</p>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -327,7 +327,7 @@
             <div class="row g-0">
                 <div class="locations-block d-flex flex-column justify-content-center align-items-center gap-5">
                     <div class="heading-holder">
-                        <h2 class="fw-bold"><span>Location's</span>  We've served</h2>
+                        <h2 class="fw-bold"><span>Locations</span>  We've served</h2>
                      </div>
                      <div class="location-img ps-md-5">
                         <img src="{{ asset('images/location-img.webp') }}" alt="loaction-map">
@@ -517,19 +517,19 @@
                                                 The cost of epoxy flooring is typically priced per square foot (Rs. / sq. ft.) or per square meter (Rs. / sq. meter).<br>
                                                 <strong>Several factors influence the total cost of your project, including:</strong>
                                                 <ul>
-                                                <li>Surface on which it is being done - - if it is Plain concrete floor(pcc), or RCC, or Old Epoxy floor,</li>  
+                                                <li>Surface on which it is being done - if it is Plain concrete floor(pcc), or RCC, or Old Epoxy floor,</li>  
                                                 <li>Undulations in the surface,</li> 
-                                                <li>Properties required from Epoxy flooring</li> 
-                                                <li>Type of Surface preparation Required</li>
-                                                <li>Area or size of the floor size</li> 
+                                                <li>Properties required from Epoxy flooring,</li> 
+                                                <li>Type of Surface preparation Required,</li>
+                                                <li>Area or size of the floor size.</li> 
                                                 </ul>
                                                 <strong>And cost has three component:</strong>
                                                 <ul>
                                                 <li>Material or epoxy coatings cost,</li>  
                                                 <li>Application charges or labor cost,</li> 
-                                                <li>Surface preparation or treatment cost</li>
+                                                <li>Surface preparation or treatment cost.</li>
                                                 </ul>
-                                                To know more about the pricing, you can visit our page by clicking <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-services?utm_source=gads_Q_faq_section_price_details_epoxy&utm_medium=gads_Q_faq_section_price_details_epoxy&utm_campaign=gads_Q_faq_section_price_details_epoxy' }}"  class="org" target="_blank">here</a>
+                                                To know more about the pricing, you can visit our page by clicking <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-services?utm_source=gads_Q_faq_section_price_details_epoxy&utm_medium=gads_Q_faq_section_price_details_epoxy&utm_campaign=gads_Q_faq_section_price_details_epoxy' }}"  class="org" target="_blank">here.</a>
                                             </p>
                                         </div>
                                     </div>

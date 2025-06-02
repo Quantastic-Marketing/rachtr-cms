@@ -83,7 +83,58 @@
 .button-div {
     width:50%;
 }
+.custom-select-yellow {
+    /* border: 1px solid black; Normal black border */
+    background-color: transparent;
+}
 
+/* Style the options – text yellow */
+.custom-select-yellow option {
+    color: #FCE488;
+}
+
+/* Optional: Add yellow border only when focused */
+.custom-select-yellow:focus {
+    /* border-color: #FCE488; */
+    outline: none;
+    /* box-shadow: 0 0 0 2px #FCE488; */
+}
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select-wrapper select {
+    width: 100%;
+    padding-right: 30px; /* space for arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+}
+
+.custom-select-wrapper select option {
+    color: yellow;
+}
+
+
+
+/* Arrow styling */
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    pointer-events: none;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+    color: #000;
+    font-size: 25px;
+}
+
+/* Rotate arrow when active */
+.custom-select-wrapper.active .custom-arrow {
+    transform: translateY(-50%) rotate(90deg);
+}
 @media(max-width:998px){
     .contact-banner{
         margin-top: 56px;
@@ -127,6 +178,7 @@
     font-size: 14px;
     line-height: 19.6px;
 }
+
 }
 /* .contact-map iframe{
     width: 100%;

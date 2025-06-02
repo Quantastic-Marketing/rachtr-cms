@@ -77,14 +77,16 @@
                                     <div class="mb-4">
                                         <input type="tel" class="form-control" pattern="[6-9]\d{9}" title="Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9" name="Phone" placeholder="Phone Number" required>
                                     </div>
-                                    <div class="mb-4">
-                                        <select class="form-control" name="Profession" required>
+                                    <div class="mb-4 custom-select-wrapper">
+                                        <select class="form-control custom-select-yellow" id="professionSelect" name="Profession" required>
                                             <option value="" disabled selected>Profession</option>
-                                            <option>Student</option>
-                                            <option>Engineer</option>
-                                            <option>Business</option>
-                                            <option>Other</option>
+                                            <option>Architect</option>
+                                            <option>Owner</option>
+                                            <option>Contractor</option>
+                                            <option>Distributor</option>
+                                            <option>Others</option>
                                         </select>
+                                        <span class="custom-arrow">&gt;</span>
                                     </div>
                                     <div class="mb-4">
                                         <input type="email" name="Email" class="form-control" placeholder="Email id" required>
@@ -201,5 +203,18 @@
      
    
    </div>
+   <script>
+    const selectWrapper = document.querySelector('.custom-select-wrapper');
+    const select = document.getElementById('professionSelect');
+
+    // Toggle class on focus/blur
+    select.addEventListener('focus', () => {
+        selectWrapper.classList.add('active');
+    });
+
+    select.addEventListener('blur', () => {
+        selectWrapper.classList.remove('active');
+    });
+</script>
     
 

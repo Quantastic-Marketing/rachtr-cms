@@ -220,7 +220,7 @@
                         <div class="mentor-img-container">
                             <img src="images/mishra.webp" alt="Prof. P.K Mishra" class="mentor-img">
                         </div>
-                        <h3 class="mentor-name">PROF. P.K MISHRA</h3>
+                        <h3 class="mentor-name">PROF. P.K. MISHRA</h3>
                         <p class="mentor-details">Vice Chancellor AKTU University<br>Professor - IIT - BHU - Chem. Engg</p>
                         <a href="https://www.linkedin.com/in/pradeep-kumar-mishra-3399243/" class="social-icon" aria-label="LinkedIn">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
