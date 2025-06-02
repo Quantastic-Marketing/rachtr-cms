@@ -43,7 +43,7 @@
         <!-- This is a banner close -->
          
              <!-- This is a client open -->
-       <section class="our-clients py-5">
+       <section class="our-clients epoxy-client py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-11">
@@ -545,7 +545,7 @@
        </section>
        
 
-        <section class="comprnsive_solution py-5">   
+        <section class="comprnsive_solution epoxy-proj py-5">   
                     <div class="container">
                         <div class="row g-0">
                             <div class="cmp_solutn_heding col-lg-8 col-md-12 py-5">
@@ -635,7 +635,7 @@
                     </div>
         </section> 
     @if(!empty($pageContent['blogs']))
-     <section class="blogs bg-white">
+     <section class="blogs epoxy-blogs bg-white">
         <div class="container">
           <div class="row g-0">
             <div class="col-lg-12">

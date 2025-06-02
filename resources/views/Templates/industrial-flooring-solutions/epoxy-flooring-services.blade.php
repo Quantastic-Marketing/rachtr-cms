@@ -44,7 +44,7 @@
         <!-- This is a banner close -->
          
              <!-- This is a client open -->
-       <section class="our-clients py-5">
+       <section class="our-clients epoxy-client py-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-11">
@@ -178,7 +178,7 @@
             </div>
             @endif
             <div class="col-12 order-1 order-md-3">
-                <section class="comprnsive_solution py-5">   
+                <section class="comprnsive_solution epoxy-proj py-5">   
                     <div class="container">
                         <div class="row g-0">
                             <div class="cmp_solutn_heding col-lg-8 col-md-12 py-5">
@@ -272,14 +272,14 @@
            </div>
        </div>
     @if(!empty($pageContent['blogs']))
-      <section class="blogs bg-white">
+      <section class="blogs epoxy-blogs bg-white">
         <div class="container">
           <div class="row g-0">
             <div class="col-lg-12">
               <div class="blogs_sec py-lg-5 py-2">
                 <div class="mb-lg-5 mb-2 px-lg-5 mx-lg-5">
                   <h2
-                    class="mb-3 pb-2 display-6 display-lg-4 fw-bold text-start text-dark blog-case-heading"
+                    class="mb-3 pb-2 fw-bold text-start text-dark"
                   >
                 {!! $blogHeading ?? 'Blogs related to Epoxy Flooring Services' !!}     </h2>
                 @if($pageContent['blog-sub-heading'])
