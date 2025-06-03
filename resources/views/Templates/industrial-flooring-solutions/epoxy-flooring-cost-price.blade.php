@@ -433,7 +433,7 @@
 
         <div class="container factor-img py-5">
             <div class="image-wrapper">
-                <img src="{{ asset('images/epoxy_diag.webp') }}" alt="diagram">
+                <img src="{{ asset('images/factorsdiag.webp') }}" alt="diagram">
             </div>
         </div>
 
