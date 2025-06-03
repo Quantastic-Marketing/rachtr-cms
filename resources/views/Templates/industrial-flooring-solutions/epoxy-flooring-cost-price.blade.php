@@ -806,7 +806,7 @@
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
-                                        <img src="{{ asset ('images/primer.webp') }}" alt="primer"/>
+                                        <img src="{{ asset ('images/primer_epoxy.webp') }}" alt="primer"/>
                                         <div class="img_overlay"></div>
                                      </div>
                                      <div class="img">
