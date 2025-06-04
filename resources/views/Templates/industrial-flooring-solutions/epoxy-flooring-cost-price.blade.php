@@ -433,7 +433,7 @@
 
         <div class="container factor-img py-5">
             <div class="image-wrapper">
-                <img src="{{ asset('images/factorsdiag.webp') }}" alt="diagram">
+                <img src="{{ asset('images/epoxy_diag.webp') }}" alt="diagram">
             </div>
         </div>
 
@@ -881,16 +881,16 @@
                                     <strong>Several factors influence the total cost of your project, including:</strong>
                                     <ul>
                                        <li>Surface on which it is being done - - if it is Plain concrete floor(pcc), or RCC, or Old Epoxy floor,</li>  
-                                       <li>Undulations in the surface,</li> 
+                                       <li>Undulations in the surface</li> 
                                        <li>Properties required from Epoxy flooring,</li> 
-                                       <li>Type of Surface preparation Required,</li>
-                                       <li>Area or size of the floor size.</li> 
+                                       <li>Type of Surface preparation Required</li>
+                                       <li>Area or size of the floor size</li> 
                                     </ul>
                                     <strong>And cost has three component:</strong>
                                     <ul>
-                                       <li>Material or epoxy coatings cost,</li>  
-                                       <li>Application charges or labor cost,</li> 
-                                       <li>Surface preparation or treatment cost.</li>
+                                       <li>Material or epoxy coatings cost</li>  
+                                       <li>Application charges or labor cost</li> 
+                                       <li>Surface preparation or treatment cost</li>
                                     </ul>
                                     To know more about the pricing, you can visit our page by clicking <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-services?utm_source=gads_Q_faq_section_price_details_epoxy&utm_medium=gads_Q_faq_section_price_details_epoxy&utm_campaign=gads_Q_faq_section_price_details_epoxy' }}" class="org" target="_blank">here.</a>
                                 </p>
