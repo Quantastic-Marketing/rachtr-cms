@@ -449,7 +449,7 @@
 }
 @media (min-width: 1400px) {
     .cost-price-banner .banner-sec .banner_overlay .content {
-        padding: 10% 0 0 2%;
+        padding: 10% 0 0 2% !important;
     }
 }
 @media(max-width:768px){
