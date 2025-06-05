@@ -311,12 +311,16 @@
                 <div class="col-lg-6 collab-right d-flex flex-column justify-content-center">
                     <div class="row">
                         <div class="col-md-9 col-xxl-7 ">
+                            @if(!empty($collaboration['collab_right_content']))
+                                 {!! html_entity_decode($collaboration['collab_right_content']) !!}
+                            @else
                             <p>We work closely with contractors to develop customized solutions that meet the specific needs and
                                 challenges of each project.</p>
-                            <hr class="my-2" style="border-color: #E87722; width: 50px;">
+                            <hr class="my-2 custome-hr-style">
                             <p>We’re here to help you achieve your construction goals with innovative and reliable solutions.
                             </p>
-                            <a href="tel:+91-124-4453999" class="cta-btn mt-3">Call us Now</a>
+                            @endif
+                            <a href="tel: {{ $collaboration['collab_phone'] ?? +91-124-4453999}}" class="cta-btn mt-3">{{ $collaboration['collab_btn'] ??'Call us Now'}}</a>
                         </div>
                     </div>
                 </div>

@@ -694,20 +694,58 @@ class PageResource extends Resource
     public static function puFlooringTemplate(): array
     {
         return [
-                Section::make('PU Flooring Faq Section')
-                ->schema([
-                    TextInput::make('content.faq_section.heading')
-                        ->label('Section Heading')
-                        ->placeholder('Enter the heading'),
-                    
-                    Repeater::make('content.faq_section.faqs')
-                        ->label('Faq Section')
-                        ->schema([
-                            RichEditor::make('acc_title')->label('Title for FAQ'),
-                            RichEditor::make('acc_body')->label('Dropdown description for FAQ'),
-                        ])
-                        ->addActionLabel('Adds FAQ Accordion'),
+                Section::make('Banner Section')
+                    ->schema([
+                        FileUpload::make('content.banner.banner_image_desktop')->disk('public')->directory('images')->image()->label('Desktop Banner Image'),
+                        FileUpload::make('content.banner.banner_image_mobile')->disk('public')->directory('images')->image()->label('Mobile Banner Image'),
+                        TextInput::make('content.banner.banner_heading')->label('Banner Heading'),
+                        TextInput::make('content.banner.breadcrumb_text')->label('Breadcrumb Text'),
+                        TextInput::make('content.banner.breadcrumb_link')->url()->label('Breadcrumb Link'),
                     ]),
+                Section::make('PU Flooring Description')
+                    ->schema([
+                        FileUpload::make('content.puFlooring.image')->disk('public')->directory('images')->image()->label('PU Flooring Image'),
+                        TextInput::make('content.puFlooring.image_alt')->label('Image Alt Text'),
+                        TipTapEditor::make('content.puFlooring.description')->label('PU Flooring Description'),
+                    ]),
+                Section::make('Flooring Section')
+                    ->schema([
+                        TextInput::make('content.flooring.pu_concrete_title')->label('PU Concrete Title'),
+                        RichEditor::make('content.flooring.pu_concrete_description')->label('PU Concrete Description'),
+                        FileUpload::make('content.flooring.pu_concrete_image')->disk('public')->directory('images')->image()->label('PU Concrete Image'),
+
+                        TextInput::make('content.flooring.polyurea_flooring_title')->label('Polyurea Flooring Title'),
+                        RichEditor::make('content.flooring.polyurea_flooring_description')->label('Polyurea Flooring Description'),
+                        FileUpload::make('content.flooring.polyurea_flooring_image')->disk('public')->directory('images')->image()->label('Polyurea Flooring Image'),
+                    ]),
+                Section::make('Advantages Section')
+                    ->schema([
+                        Repeater::make('content.advantages.adv')
+                            ->schema([
+                                TextArea::make('icon')->label('Highlight Icon'),
+                                TextInput::make('title')->label('Advantage Title'),
+                                Textarea::make('description')->label('Advantage Description'),
+                            ])
+                            ->columns(2)
+                            ->label('Advantages'),
+
+                        TextInput::make('content.advantages.title')->label('Title for Advantages'),
+                        TextArea::make('content.advantages.subhead')->label('Subhead for Advantages'),
+                    ]),
+                Section::make('PU Flooring Faq Section')
+                    ->schema([
+                        TextInput::make('content.faq_sections.heading')
+                            ->label('Section Heading')
+                            ->placeholder('Enter the heading'),
+                        
+                        Repeater::make('content.faq_sections.faqs')
+                            ->label('Faq Section')
+                            ->schema([
+                                RichEditor::make('acc_title')->label('Title for FAQ'),
+                                RichEditor::make('acc_body')->label('Dropdown description for FAQ'),
+                            ])
+                            ->addActionLabel('Adds FAQ Accordion'),
+                        ]),
         ];
     }
 
@@ -760,6 +798,7 @@ class PageResource extends Resource
                     RichEditor::make('content.collaboration.collab_left_content')->label('Left Content'),
                     RichEditor::make('content.collaboration.collab_right_content')->label('Right Content'),
                     TextInput::make('content.collaboration.collab_phone')->label('Phone Number'),
+                    TextInput::make('content.collaboration.collab_btn')->label('Button Text'),
                 ])->collapsible(),
         ];
     }

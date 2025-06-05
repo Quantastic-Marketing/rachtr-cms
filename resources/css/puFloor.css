@@ -71,10 +71,17 @@
     width: 75%;
 }
 
+.varients-of-pu ul{
+    display: flex;
+    flex-direction: column;
+}
 .varients-of-pu ul li{
     list-style-type: disc;
     font-size: 18px;
-    line-height: 36px;      
+    line-height: 36px;
+    margin: 0;
+    text-align: start;
+    margin-left: 20px;    
 }
 
 .varients-of-pu h5
@@ -206,7 +213,15 @@
     font-weight: 700;
 }
 
-
+.varients-of-pu ul li p{
+    margin-bottom: 0;   
+     font-size: 18px;
+    line-height: 36px; 
+}
+.varients-of-pu p:last-of-type{
+    font-size: 20px;
+    line-height: 30px; 
+}
 
 @media (max-width:998px){
     /* .advantage-title br{
