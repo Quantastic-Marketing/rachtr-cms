@@ -347,6 +347,9 @@ class PageResource extends Resource
             'epoxy-flooring-services' => self::epoxyTemplate(),
             'epoxy-flooring-cost-price' =>self::epoxyTemplate(),
             'pu-flooring' =>self::puFlooringTemplate(),
+            'contractor-center' => self::contractorTemplate(),
+            'about-us' => self::aboutTemplate(),
+            'careers' => self::careerTemplate(),
             default => self::defaultTemplate(),
         };
     }
@@ -705,6 +708,169 @@ class PageResource extends Resource
                         ])
                         ->addActionLabel('Adds FAQ Accordion'),
                     ]),
+        ];
+    }
+
+    public static function contractorTemplate(): array
+    {
+        return [
+            Section::make('Contractor Center')
+                ->schema([
+                    TextInput::make('content.banner.banner_heading')->label('Banner Heading'),
+                    TextInput::make('content.banner.banner_alt')->label('Banner Image Alt'),
+                    RichEditor::make('content.banner.banner_desc')->label('Banner Description'),
+                    FileUpload::make('content.banner.banner_desktop')->directory('images')->disk('public')->label('Banner Image Desktop'),
+                    FileUpload::make('content.banner.banner_mobile')->directory('images')->disk('public')->label('Banner Image Mobile'),
+                ]),
+            Section::make('Innovative Solutions')
+                ->schema([
+                    TextInput::make('content.solutions.innovative_heading')->label('Section Heading'),
+                    RichEditor::make('content.solutions.innovative_description')->label('Section Description'),
+                    FileUpload::make('content.solutions.innovative_image')->directory('images')->disk('public')->label('Section Image'),
+                    TextInput::make('content.solutions.innovative_image_alt')->label('Section Image Alt'),
+                ])->collapsible(),
+            Section::make('Our Industries')
+                ->schema([
+                    TextInput::make('content.industries.industries_heading')->label('Industries Heading'),
+                    TextInput::make('content.industries.industries_subheading')->label('Industries Subheading'),
+                    Repeater::make('content.industries.industries_items')
+                        ->schema([
+                            TextInput::make('title')->label('Title'),
+                            RichEditor::make('description')->label('Description'),
+                            FileUpload::make('video_webm')->directory('videos')->disk('public')->acceptedFileTypes(['video/webm'])->label('Video (WEBM)'),
+                            FileUpload::make('video_mp4')->directory('videos')->disk('public')->acceptedFileTypes(['video/mp4'])->label('Video (MP4)'),
+                            TextInput::make('link')->label('Link'),
+                        ])->columns(2),
+                ])->collapsible(),
+            Section::make('Application Videos')
+                ->schema([
+                    TextInput::make('content.application.app_videos_heading')->label('Videos Heading'),
+                    RichEditor::make('content.application.app_videos_description')->label('Videos Description'),
+                    Repeater::make('content.application.app_videos')
+                        ->schema([
+                            FileUpload::make('thumbnail')->directory('images')->disk('public')->label('Thumbnail Image'),
+                            TextInput::make('video_title')->label('Thumbnail Image Alt'),
+                            TextInput::make('video_link')->label('Video Link'),
+                        ])->columns(2),
+                    FileUpload::make('content.application.app_videos_bg_image')->directory('images')->disk('public')->label('Videos Background Image'),
+                ])->collapsible(),
+            Section::make('Collaboration Opportunities')
+                ->schema([
+                    TextInput::make('content.collaboration.collab_heading')->label('Collaboration Heading'),
+                    RichEditor::make('content.collaboration.collab_left_content')->label('Left Content'),
+                    RichEditor::make('content.collaboration.collab_right_content')->label('Right Content'),
+                    TextInput::make('content.collaboration.collab_phone')->label('Phone Number'),
+                ])->collapsible(),
+        ];
+    }
+
+    public static function aboutTemplate(): array
+    {
+         return [
+             Section::make('About Us Banner Section')
+                ->schema([
+                    TextInput::make('content.banner.banner_heading')->label('Banner Heading'),
+                    FileUpload::make('content.banner.banner_image_desktop')->image()->directory('images')->disk('public')->label('Banner Image Desktop'),
+                    FileUpload::make('content.banner.banner_image_mobile')->image()->directory('images')->disk('public')->label('Banner Image Mobile'),
+                ]),
+            Section::make('About Us Banner Section')
+                ->schema([
+                    // TextInput::make('content.about.heading')->label('About section Heading'),
+                    TextInput::make('content.about.image_alt')->label('About section image alt tag'),
+                    FileUpload::make('content.about.image')->image()->directory('images')->disk('public')->label('About section image'),
+                    RichEditor::make('content.about.desc')->label('About us desc'),
+                ]),
+             Section::make('Highlights Section')
+                ->schema([
+                      Repeater::make('content.highlights')
+                        ->schema([
+                            TextInput::make('title')->label('Highlight Title'),
+                            RichEditor::make('description')->label('Highlight Description'),
+                            TextArea::make('icon')
+                                ->label('Highlight Icon')
+                        ])->columns(2),
+                ]),
+          
+            Section::make('Founders Section')
+            ->schema([
+                      TextInput::make('content.founders.heading')->label('Founders Section Heading'),
+                      Repeater::make('content.founders.founder')
+                        ->schema([
+                            FileUpload::make('image')->image()->directory('images')->disk('public')->label('Image of founder'),
+                            TextInput::make('name')->label('Founder Name'),
+                            TextInput::make('position')->label('Founder Position'),
+                            TextArea::make('bio')->label('Founder Bio'),
+                            TextInput::make('linkedin')->url()->label('Founder Linkedin Link'),
+                        ])->columns(2),
+
+                ]),
+            Section::make('Metors Section')
+            ->schema([ 
+                    TextInput::make('content.mentors.heading')->label('Founders Section Heading'),
+                    Repeater::make('content.mentors.mentor')
+                        ->schema([
+                            FileUpload::make('image')->image()->directory('images')->disk('public')->label('Mentor Image'),
+                            TextInput::make('name')->label('HighMentor Name'),
+                            Textarea::make('details')->rows(2)->label('Mentor Details'),
+                            TextInput::make('linkedin')->label('Linkedin link of mentor')->url(),
+                        ])->columns(2),
+                ]),
+
+            TextInput::make('content.cta_heading')->label('Call to Action Heading'),
+            TextInput::make('content.cta_button_text')->label('Call to Action Button Text'),
+            TextInput::make('content.cta_whatsapp_link')->label('Call to Action WhatsApp Link')
+                ->url()
+                ->placeholder('https://wa.me/1234567890?text=Hello%20RachTR%20Team'),
+         ];
+    }
+
+     public static function careerTemplate(): array
+    {
+        return [
+            Section::make('Career Banner')
+                ->schema([
+                    TextInput::make('content.banner.heading')->label('Banner Heading')->placeholder('to get the text in orage color just put it inside span tag'),
+                    Textarea::make('content.banner.description')->label('Banner Description'),
+                    FileUpload::make('content.banner.image')->image()->directory('images')->disk('public')->label('Banner Image'),
+                    TextInput::make('content.banner.button_text')->label('Banner Button Text'),
+                    TextInput::make('content.banner.button_link')->url()->label('Banner Button Link'),
+                ]),
+
+            Section::make('Life at RachTR Section')
+                ->schema([
+                    TextInput::make('content.about.heading')->label('Life at rachtr (About rachtr) Section Heading'),
+                    RichEditor::make('content.about.description')->label('Description'),
+                    Repeater::make('content.about.gallery')
+                        ->schema([
+                            FileUpload::make('image')->image()->directory('images')->disk('public')->label('Gallery Image'),
+                            TextInput::make('alt_text')->label('Alt Text'),
+                        ])->columns(2),
+                ]),
+
+            Section::make('Why be a part of RachTRibe')
+                ->schema([
+                    TextInput::make('content.rachtribe.heading')->label('Section Heading'),
+                    RichEditor::make('content.rachtribe.description')->label('Section Description'),
+                    FileUpload::make('content.rachtribe.video_webm')->directory('videos')->disk('public')->acceptedFileTypes(['video/webm'])->label('Video WEBM'),
+                    FileUpload::make('content.rachtribe.video_mp4')->directory('videos')->disk('public')->acceptedFileTypes(['video/mp4'])->label('Video MP4'),
+                ]),
+
+            Section::make('Current Openings Section')
+                ->schema([
+                    TextInput::make('content.openings.heading')->label('Current Openings Heading'),
+                    RichEditor::make('content.openings.description')->label('Openings Description'),
+                    TextInput::make('content.openings.job_board_link')->label('Job Board iFrame Link'),
+                ]),
+
+            Section::make('Collaboration Call to Action')
+                ->schema([
+                    TextInput::make('content.collaborate.heading')->label('Heading'),
+                    RichEditor::make('content.collaborate.description')->label('Description at the left section'),
+                    RichEditor::make('content.collaborate.desc_right1')->label('Description at the right section'),
+                    RichEditor::make('content.collaborate.desc_right2')->label('Description at the right section 2'),
+                    TextInput::make('content.collaborate.cta_text')->label('CTA Button Text'),
+                    TextInput::make('content.collaborate.email')->email()->label('Email for Inquiries'),
+                ]),
         ];
     }
 }
