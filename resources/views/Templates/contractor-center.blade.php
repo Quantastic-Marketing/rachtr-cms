@@ -1,20 +1,29 @@
 
 
     <div class="wrapper"> 
+        @php 
+            $pageContent = $page->content ?? [];
+            $banner = $pageContent['banner'] ?? [];
+            $solutions = $pageContent['solutions'] ?? [];
+            $industries = $pageContent['industries'] ?? [];
+            $application = $pageContent['application'] ?? [];
+            $collaboration = $pageContent['collaboration'] ?? [];
+        @endphp
+
 
        <section class="contact-contract contact-banner banner">
         <div class="row g-0">
         <div class="col-lg-12">  
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="{{ asset('images/contractual_bg.webp') }}" alt="img background" class="d-none d-md-block">
-                    <img src="{{ asset('images/loor_mob_bg.webp') }}" alt="img background" class=" d-block d-md-none">
+                    <img src="{{ !empty($banner['banner_desktop'])  ? asset('storage/' . $banner['banner_desktop']) : asset('images/contractual_bg.webp') }}" alt="{{ $banner['banner_alt'] ?? 'Contractor center' }}" class="d-none d-md-block">
+                    <img src="{{ !empty($banner['banner_mobile'] ) ? asset('storage/' . $banner['banner_mobile']) : asset('images/loor_mob_bg.webp') }}" alt="{{ $banner['banner_alt'] ?? 'Contractor center' }}" class=" d-block d-md-none">
                 </div>
                 <div class="heading-holder">
-                    <h1 class="fw-bold">CONTRACTOR CENTER</h1>
-                    <p>Welcome to the RachTR Contractor Center, a dedicated hub designed to support contractors and builders in executing exceptional construction projects.</p>
+                    <h1 class="fw-bold">{!! $banner['banner_heading'] ?? 'CONTRACTOR CENTER' !!}</h1>
+                    <p>{!! $banner['banner_desc'] ?? 'Welcome to the RachTR Contractor Center, a dedicated hub designed to support contractors and builders in executing exceptional construction projects.' !!}</p>
                 </div>
-            </div>                   
+            </div>
           </div>
          
         </div>
@@ -28,17 +37,15 @@
                                     <div class="col-lg-6 order-2 order-md-1 py-3">
                                         <div class="image-container">
                                             <!-- <div class="background-box"></div> -->
-                                            <img src="{{ asset('images/contract_innovation.webp') }}"  alt="PU Flooring">
+                                            <img src="{{ !empty($solutions['innovative_image']) ? asset('storage/' . $solutions['innovative_image']) : asset('images/contract_innovation.webp') }}"  alt="{{ $solutions['innovative_image_alt'] ?? 'PU Flooring' }}">
                                             <!-- <div class="overlay-box"></div> -->
                                         </div>
                                     </div>
                                     <div class="col-lg-6 px-4 order-1 order-md-2 py-md-5">
                                         <div class="heading-holder pb-2 pb-md-4">
-                                            <h2 class="fw-bold">Innovative Solutions for Contractors</h2>
+                                            <h2 class="fw-bold">{{ $solutions['innovative_heading'] ?? 'Innovative Solutions for Contractors' }}</h2>
                                         </div>
-                                        <p> At RachTR, we understand the unique challenges and demands faced by contractor.</p>
-                                        <p><strong>Our Contractor Center</strong>  offers a <strong>range of resources </strong> and <strong>expertise</strong>  to help you achieve outstanding results with our advanced industrial solutions and products.</p>
-                                        <p>Our extensive portfolio of products includes advanced industrial flooring, construction chemicals, and surface care solutions tailored to meet the highest standards of quality, durability, and efficiency.</p>
+                                         {!! $solutions['innovative_description'] ?? '<p>At RachTR, we understand the unique challenges and demands faced by contractors.</p><p><strong>Our Contractor Center</strong> offers a <strong>range of resources</strong> and <strong>expertise</strong> to help you achieve outstanding results with our advanced industrial solutions and products.</p><p>Our extensive portfolio of products includes advanced industrial flooring, construction chemicals, and surface care solutions tailored to meet the highest standards of quality, durability, and efficiency.</p>' !!}
                                     </div>
                                 </div>
                             </div>
@@ -52,29 +59,29 @@
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
                         <div class="our_strengths_contnt">
-                            <h2 class="pb-3 fw-bold">Our Industries</h2>
-                            <p>Innovative Solutions for Every Industrial Challenge</p>
+                            <h2 class="pb-3 fw-bold">{!! $industries['industries_heading'] ?? 'Our <span class="org">Industries</span>' !!}</h2>
+                            <p>{!! $industries['industries_subheading'] ?? 'Innovative Solutions For Every Industrial Challenge' !!}</p>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="any_projects pt-5">
                         <ul class="col-lg-12 col-md-12 col-sm-12">
-                                <li class="col-lg-4 col-md-4 col-sm-12">
+                            @forelse($industries['industries_items'] ?? [] as $item)
+                                <li class="col-lg-4 col-md-4 col-sm-12 {{ $loop->iteration === 2 ? 'mx-5' : '' }}">
                                     <div class="projects_blogs">
                                         <div class="projects_img pb-1">
                                             <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"  >
-                                            <source src="{{asset('videos/video-showcase-2.webm') }}" type="video/webm">
-                                            <source src="{{asset('videos/video-showcase-2.mp4') }}" type="video/mp4">
+                                            <source src="{{ asset('storage/' . $item['video_webm']) }}" type="video/webm">
+                                            <source src="{{ asset('storage/' . $item['video_mp4']) }}" type="video/mp4">
                                             </video>
                                         </div>
                                         <div class="projects_txt">
-                                            <h6 class="fw-bold">Residential & Commercial Buildings</h6>
-                                            <p>From dream homes to iconic landmarks, RachTR offers reliable solutions
-                                                for all your building needs.</p>
+                                            <h6 class="fw-bold">{!! $item['title'] !!}</h6>
+                                            {!! $item['description'] !!}
                                         </div>
                                         <div class="blog_tranprnt">
                                             <div class="blogs_icon">
-                                                <a href="{{ config('app.url') . '/residential-commercial-building'}}">
+                                                <a href="{{ $item['link'] }}">
                                                     <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155"
                                                         viewBox="20 22.5 160 155" height="200" width="200"
                                                         xmlns="http://www.w3.org/2000/svg" data-type="color"
@@ -97,82 +104,122 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="col-lg-4 col-md-4 col-sm-12 mx-5">
-                                    <div class="projects_blogs">
-                                        <div class="projects_img pb-1">
-                                            <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"  >
-                                            <source src="{{asset('videos/video-showcase-1.webm') }}" type="video/webm">
-                                            <source src="{{asset('videos/video-showcase-1.mp4') }}" type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="projects_txt">
-                                            <h6 class="fw-bold">Stone Processing Industry</h6>
-                                            <p>Enhance the beauty and durability of natural stone with our specialized
-                                                coatings and adhesives.</p>
-                                        </div>
-                                        <div class="blog_tranprnt">
-                                            <div class="blogs_icon">
-                                                <a href="{{ config('app.url') . '/stone-processing-industry'}}">
-                                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155"
-                                                        viewBox="20 22.5 160 155" height="200" width="200"
-                                                        xmlns="http://www.w3.org/2000/svg" data-type="color"
-                                                        role="presentation" aria-hidden="true" aria-label="">
-                                                        <defs>
-                                                            <style>
-                                                                #comp-lu9g83n7 svg [data-color="1"] {
-                                                                    fill: #FFFFFF;
-                                                                }
-                                                            </style>
-                                                        </defs>
-                                                        <g>
-                                                            <path
-                                                                d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z"
-                                                                fill="#FF5200" data-color="1"></path>
-                                                        </g>
-                                                    </svg>
-                                                </a>
+                                @empty
+                                    <li class="col-lg-4 col-md-4 col-sm-12">
+                                        <div class="projects_blogs">
+                                            <div class="projects_img pb-1">
+                                                <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"  >
+                                                <source src="{{asset('videos/video-showcase-2.webm') }}" type="video/webm">
+                                                <source src="{{asset('videos/video-showcase-2.mp4') }}" type="video/mp4">
+                                                </video>
+                                            </div>
+                                            <div class="projects_txt">
+                                                <h6 class="fw-bold">Residential & Commercial Buildings</h6>
+                                                <p>From dream homes to iconic landmarks, RachTR offers reliable solutions
+                                                    for all your building needs.</p>
+                                            </div>
+                                            <div class="blog_tranprnt">
+                                                <div class="blogs_icon">
+                                                    <a href="{{ config('app.url') . '/residential-commercial-building'}}">
+                                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155"
+                                                            viewBox="20 22.5 160 155" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lu9g83n7 svg [data-color="1"] {
+                                                                        fill: #FFFFFF;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z"
+                                                                    fill="#FF5200" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="col-lg-4 col-md-4 col-sm-12">
-                                    <div class="projects_blogs">
-                                        <div class="projects_img pb-1">
-                                            <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"  >
-                                                <source src="{{asset('videos/video-showcase-3.webm') }}" type="video/webm">
-                                                <source src="{{asset('videos/video-showcase-3.mp4') }}" type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <div class="projects_txt">
-                                            <h6 class="fw-bold">Industrial Flooring</h6>
-                                            <p>Ensure high-performance and safety for your industrial spaces with our
-                                                robust flooring solutions. </p>
-                                        </div>
-                                        <div class="blog_tranprnt">
-                                            <div class="blogs_icon">
-                                                <a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">
-                                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155"
-                                                        viewBox="20 22.5 160 155" height="200" width="200"
-                                                        xmlns="http://www.w3.org/2000/svg" data-type="color"
-                                                        role="presentation" aria-hidden="true" aria-label="">
-                                                        <defs>
-                                                            <style>
-                                                                #comp-lu9g83n7 svg [data-color="1"] {
-                                                                    fill: #FFFFFF;
-                                                                }
-                                                            </style>
-                                                        </defs>
-                                                        <g>
-                                                            <path
-                                                                d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z"
-                                                                fill="#FF5200" data-color="1"></path>
-                                                        </g>
-                                                    </svg>
-                                                </a>
+                                    </li>
+                                    <li class="col-lg-4 col-md-4 col-sm-12 mx-5">
+                                        <div class="projects_blogs">
+                                            <div class="projects_img pb-1">
+                                                <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"  >
+                                                <source src="{{asset('videos/video-showcase-1.webm') }}" type="video/webm">
+                                                <source src="{{asset('videos/video-showcase-1.mp4') }}" type="video/mp4">
+                                                </video>
+                                            </div>
+                                            <div class="projects_txt">
+                                                <h6 class="fw-bold">Stone Processing Industry</h6>
+                                                <p>Enhance the beauty and durability of natural stone with our specialized
+                                                    coatings and adhesives.</p>
+                                            </div>
+                                            <div class="blog_tranprnt">
+                                                <div class="blogs_icon">
+                                                    <a href="{{ config('app.url') . '/stone-processing-industry'}}">
+                                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155"
+                                                            viewBox="20 22.5 160 155" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lu9g83n7 svg [data-color="1"] {
+                                                                        fill: #FFFFFF;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z"
+                                                                    fill="#FF5200" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                    <li class="col-lg-4 col-md-4 col-sm-12">
+                                        <div class="projects_blogs">
+                                            <div class="projects_img pb-1">
+                                                <video preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video"  >
+                                                    <source src="{{asset('videos/video-showcase-3.webm') }}" type="video/webm">
+                                                    <source src="{{asset('videos/video-showcase-3.mp4') }}" type="video/mp4">
+                                                </video>
+                                            </div>
+                                            <div class="projects_txt">
+                                                <h6 class="fw-bold">Industrial Flooring</h6>
+                                                <p>Ensure high-performance and safety for your industrial spaces with our
+                                                    robust flooring solutions. </p>
+                                            </div>
+                                            <div class="blog_tranprnt">
+                                                <div class="blogs_icon">
+                                                    <a href="{{ config('app.url') . '/industrial-flooring-solutions'}}">
+                                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 22.5 160 155"
+                                                            viewBox="20 22.5 160 155" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lu9g83n7 svg [data-color="1"] {
+                                                                        fill: #FFFFFF;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M180 58.079V177.5H65.019v-19.127h81.689L20 36.276 33.317 22.5l127.404 122.89V58.079H180z"
+                                                                    fill="#FF5200" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                            @endforelse
                             </ul>
                         </div>
                     </div>
@@ -189,49 +236,56 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="application-content">
-                            <h2 class="ms-5 fw-bold">Application Videos</h2>
-                            <p class="ms-5">Watch our videos to learn more about RachTR's products, application techniques, customer testimonials, and industry insights.</p>
-                            <div class="app-video-slider">
-                                <div class="app-video mx-1">
-                                    <a href="https://www.youtube.com/embed/GG7zBf_A2Nk" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-1.webp')}}" alt="">
-                                    </a>
-                                </div>
-                                <div class="app-video mx-1 ">
-                                    <a href="https://www.youtube.com/embed/lHCzLmkVm-M" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-2.webp')}}" alt="">
-                                    </a>
-                                </div>
-                                <div class="app-video mx-1">
-                                    <a href="https://www.youtube.com/embed/lHCzLmkVm-M" data-fancybox="gallery">
-                                    <img src="{{asset('images/thumbnail-3.webp')}}" alt="">
-                                    </a>
-                                </div>
-                                <div class="app-video mx-1">
-                                    <a href="{{asset('videos/adani-ahemdabad.webm')}}" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-4.webp')}}" alt="">
-                                    </a>
-                                </div>
-                                <div class="app-video mx-1">
-                                    <a href="{{asset('videos/Lake-Estate-Nagpur.webm')}}" data-fancybox="gallery">
-                                     <img src="{{asset('images/thumbnail-5.webp')}}" alt="">
-                                    </a>
-                                </div>
-                                <div class="app-video mx-1">
-                                    <a href="{{asset('videos/Surat-Bunglow.webm')}}" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-6.webp')}}" alt="">
-                                    </a>             
-                                </div>
-                                <div class="app-video mx-1">
-                                    <a href="{{asset('videos/Travertine-Punjab.webm')}}" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-7.webp')}}" alt="">
-                                    </a>             
-                                </div>
-                                <div class="app-video mx-1">
-                                    <a href="{{asset('videos/Lemon-Tree.webm')}}" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-9.webp')}}" alt="">
-                                    </a>
-                                </div>
+                            <h2 class="ms-5 fw-bold">{!! $application['app_videos_heading'] ?? 'Application Videos' !!}</h2>
+                                {!! $application['app_videos_description'] ?? '<p class="ms-5">Watch our videos to learn more about RachTR\'s products, application techniques, customer testimonials, and industry insights.</p>' !!}                            <div class="app-video-slider">
+                                @forelse($application['app_videos'] ?? [] as $video)
+                                    <div class="app-video mx-1">
+                                        <a href="{{ $video['video_link'] }}" data-fancybox="gallery">
+                                            <img src="{{ asset('storage/' . $video['thumbnail']) }}" alt="{{ $video['video_title'] }}">
+                                        </a>
+                                    </div>
+                                @empty
+                                    <div class="app-video mx-1">
+                                        <a href="https://www.youtube.com/embed/GG7zBf_A2Nk" data-fancybox="gallery">
+                                            <img src="{{asset('images/thumbnail-1.webp')}}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="app-video mx-1 ">
+                                        <a href="https://www.youtube.com/embed/lHCzLmkVm-M" data-fancybox="gallery">
+                                            <img src="{{asset('images/thumbnail-2.webp')}}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="app-video mx-1">
+                                        <a href="https://www.youtube.com/embed/lHCzLmkVm-M" data-fancybox="gallery">
+                                        <img src="{{asset('images/thumbnail-3.webp')}}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="app-video mx-1">
+                                        <a href="{{asset('videos/adani-ahemdabad.webm')}}" data-fancybox="gallery">
+                                            <img src="{{asset('images/thumbnail-4.webp')}}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="app-video mx-1">
+                                        <a href="{{asset('videos/Lake-Estate-Nagpur.webm')}}" data-fancybox="gallery">
+                                        <img src="{{asset('images/thumbnail-5.webp')}}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="app-video mx-1">
+                                        <a href="{{asset('videos/Surat-Bunglow.webm')}}" data-fancybox="gallery">
+                                            <img src="{{asset('images/thumbnail-6.webp')}}" alt="">
+                                        </a>             
+                                    </div>
+                                    <div class="app-video mx-1">
+                                        <a href="{{asset('videos/Travertine-Punjab.webm')}}" data-fancybox="gallery">
+                                            <img src="{{asset('images/thumbnail-7.webp')}}" alt="">
+                                        </a>             
+                                    </div>
+                                    <div class="app-video mx-1">
+                                        <a href="{{asset('videos/Lemon-Tree.webm')}}" data-fancybox="gallery">
+                                            <img src="{{asset('images/thumbnail-9.webp')}}" alt="">
+                                        </a>
+                                    </div>
+                                @endforelse
                             </div>
                         </div>
 
@@ -247,8 +301,8 @@
                 <div class="col-lg-6 collab-left d-flex flex-column justify-content-center">
                     <div class="row">
                         <div class="col-md-9 col-xxl-7 ">
-                            <h2 class="fw-bold">Collaboration <span class="color-orange">Opportunities</span></h2>
-                             <p>Partner with RachTR for your next project and benefit from our collaborative approach.</p>
+                            <h2 class="fw-bold">{!! $collaboration['collab_heading'] ?? 'Collaboration <span class="color-orange">Opportunities</span>' !!}</h2>
+                             {!! $collaboration['collab_left_content'] ?? '<p>Partner with RachTR for your next project and benefit from our collaborative approach.</p>' !!}
                         </div>
                     </div>  
                 </div>
