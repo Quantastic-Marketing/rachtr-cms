@@ -423,7 +423,7 @@
                          </div>
                          <div class="detls ps-4">
                              <h6 class="fw-bold">Delivering Best-in-Class Quality with</h6>
-                             <p class="mb-0">Trusted Brands and Imported Raw Materials</p>
+                             <p class="mb-0">trusted brands and imported raw materials</p>
                         </div>
                       </li>
                       <li class="col-lg-4 px-4">
