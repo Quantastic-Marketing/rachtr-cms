@@ -132,6 +132,89 @@
             </div>
         </section>
 
+
+        <section class="py-5 certified-excellence">
+         <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="h1 fw-bold mb-4">CERTIFIED EXCELLENCE</h2>
+                        <div class="orange-line mx-auto mb-4"></div>
+                    </div>
+                    
+                    <!-- First Row: Content and Image -->
+                    <div class="row align-items-center mb-5">
+                        <div class="col-lg-8 col-md-7 mb-4 mb-md-0">
+                            <p class="">
+                                The company's product line is <span class="fw-semibold text-orange">GreenPro certified</span>, 
+                                which is a Type–1 Ecolabel. This authenticates the fact that our products, materials, and 
+                                technologies are environmentally responsible. It ensures minimum ecological impact throughout 
+                                construction, operation, and maintenance of buildings and factories.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 col-md-5 text-center">
+                            <div class="p-4">
+                                <div class="greenpro-logo rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                                     <img src="images/green-pro-logo.webp" alt="GreenPro Certified" class="img-fluid">
+                                </div>
+                                <h5 class="fw-semibold mb-2">GreenPro Certified</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Row: Benefits -->
+                    <div class="row">
+                        <div class="col-12 px-md-4">
+                            <h4 class="h5 fw-bold mb-4 text-center">Benefits:</h4>
+                            <div class="row benefits-list g-3">
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="benefit-card d-flex align-items-center p-3 h-100">
+                                        <div class="benefit-icon flex-shrink-0">
+                                            <img src="images/icon_1.png" alt="Tick Mark" class="tick-icon">
+                                        </div>
+                                        <span class="benefit-text">Improved environmental quality</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="benefit-card d-flex align-items-center p-3 h-100">
+                                        <div class="benefit-icon flex-shrink-0">
+                                            <img src="images/icon_5.png" alt="Tick Mark" class="tick-icon">
+                                        </div>
+                                        <span class="benefit-text">Better customer satisfaction</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="benefit-card d-flex align-items-center p-3 h-100">
+                                        <div class="benefit-icon flex-shrink-0">
+                                            <img src="images/icon_3.png" alt="Tick Mark" class="tick-icon">
+                                        </div>
+                                        <span class="benefit-text">Hygienic and safe environment</span>
+                                    </div>
+                                </div> 
+                                <div class="col-6 col-md-3 col-lg-2">
+                                    <div class="benefit-card d-flex align-items-center p-3 h-100">
+                                        <div class="benefit-icon flex-shrink-0">
+                                            <img src="images/icon_2.png" alt="Tick Mark" class="tick-icon">
+                                        </div>
+                                        <span class="benefit-text">Cost-effective approach</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 col-lg-2"> 
+                                    <div class="benefit-card d-flex align-items-center p-3 h-100">
+                                        <div class="benefit-icon flex-shrink-0">
+                                            <img src="images/icon_4.png" alt="Tick Mark" class="tick-icon">
+                                        </div>
+                                        <span class="benefit-text">Responsible manufacturing techniques</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </section>
+
         <section class="founder-section">
             <div class="container">
                 <h2 class="founder-title">{{ $founders['heading'] ?? 'FOUNDERS'}}</h2>
