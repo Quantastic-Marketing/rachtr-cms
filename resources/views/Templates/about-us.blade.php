@@ -186,7 +186,7 @@
                                 <div class="col-6 col-md-3 col-lg-2">
                                     <div class="benefit-card d-flex align-items-center p-3 h-100">
                                         <div class="benefit-icon flex-shrink-0">
-                                            <img src="images/icon_3.png" alt="Tick Mark" class="tick-icon">
+                                            <img src="images/icon_4.png" alt="Tick Mark" class="tick-icon">
                                         </div>
                                         <span class="benefit-text">Hygienic and safe environment</span>
                                     </div>
@@ -194,7 +194,7 @@
                                 <div class="col-6 col-md-3 col-lg-2">
                                     <div class="benefit-card d-flex align-items-center p-3 h-100">
                                         <div class="benefit-icon flex-shrink-0">
-                                            <img src="images/icon_2.png" alt="Tick Mark" class="tick-icon">
+                                            <img src="images/icon_3.png" alt="Tick Mark" class="tick-icon">
                                         </div>
                                         <span class="benefit-text">Cost-effective approach</span>
                                     </div>
@@ -202,7 +202,7 @@
                                 <div class="col-6 col-md-3 col-lg-2"> 
                                     <div class="benefit-card d-flex align-items-center p-3 h-100">
                                         <div class="benefit-icon flex-shrink-0">
-                                            <img src="images/icon_4.png" alt="Tick Mark" class="tick-icon">
+                                            <img src="images/icon_2.png" alt="Tick Mark" class="tick-icon">
                                         </div>
                                         <span class="benefit-text">Responsible manufacturing techniques</span>
                                     </div>
