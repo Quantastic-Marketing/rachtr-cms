@@ -511,7 +511,7 @@
         <div class="container">
             <div class="row g-0">
                 <div class="cmp_solutn_heding col-lg-8 col-md-12 py-5">
-                    <h2 class="fw-bold">Comprehensive Solutions</h2>
+                    <h2 class="fw-bold">Comprehensive Solution</h2>
                     <h3 class="py-4 fw-bold">Case Studies</h3>
                     <p class="px-5">Check out some of our informative blog posts on topics like construction trends, product knowledge, application tips, etc.</p>
                 </div>
