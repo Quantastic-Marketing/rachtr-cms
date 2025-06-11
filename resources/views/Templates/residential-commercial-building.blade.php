@@ -81,7 +81,7 @@
                       class="lh-lg-base lh-small fw-bold mb-4"
                     >
                       Welcome to
-                      <span style="color: #ef6e25">RachTR</span>
+                      <span style="color: #ef6e25">RachTR's</span>
                       Residential & Commercial Buildings Solutions
                     </h2>
                   @endif
@@ -1567,7 +1567,7 @@
                   <h2
                     class="mb-3 pb-2  fw-bold text-start text-dark"
                   >
-                    Blogs related to Residential & Commercial Industry
+                    Blogs related to the Residential & Commercial Industry
                   </h2>
                   <p class="color-black">
                     Check out some of our informative blog posts, research and
