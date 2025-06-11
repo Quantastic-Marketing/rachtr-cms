@@ -77,7 +77,7 @@
                       class="fw-bold mb-4 heading-holder"
                     >
                       Welcome to
-                      <span style="color: #ef6e25">RachTR</span> Stone Processing
+                      <span style="color: #ef6e25">RachTR's</span> Stone Processing
                       Industry Solutions
                     </h2>
                 @endif
@@ -1098,7 +1098,7 @@
                   <h2
                     class="mb-3 pb-2  fw-bold text-dark"
                   >
-                    Blogs related to
+                    Blogs related to the
                     <span class="color-orange">Stone Processing Industry</span>
                   </h2>
                   <p class="color-black">
