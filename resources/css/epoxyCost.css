@@ -15,6 +15,16 @@
     margin-left: 15px;
 }
 
+.what-is-epoxy .why-epoxy-content .text-holder ul{
+    list-style-type: disc;
+    text-align: revert;
+    padding: revert;
+}
+
+.what-is-epoxy .why-epoxy-content .text-holder li{
+    list-style:disc;
+}
+
 .what-is-epoxy .epoxy-img{
     width: 100%;
     height: 100%;
@@ -271,12 +281,17 @@
 }
 
 
-.info-box {
+.factors-of-epoxy .factor-lists .factor .factor-box .info-box {
    
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
     box-shadow: 11px 11px 0 rgba(0, 0, 0, 0.2);
+}
+.factors-of-epoxy .factor-lists .factor .factor-box .info-box p{
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #000000;
 }
 
 .factor-lists{
@@ -434,7 +449,9 @@
     object-fit: cover;
 }
 
-
+.epoxy-client .clients-content .client-slider {
+        width: 79%;
+    }
 
 @media (max-width:1390px){
     .cost-price-banner .banner-sec .banner_overlay .content .content-details p {
