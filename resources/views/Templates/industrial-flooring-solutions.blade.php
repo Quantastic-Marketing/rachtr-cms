@@ -881,7 +881,7 @@
                           Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor
                         </h3>
                         <p class="pb--md-5 mb-md-5">
-                          Delhivery, since 2011, is a top e-commerce logistics provider in India, handling last-mile delivery, warehousing, and freight. Its tech and network are vital for Indian e-commerce.
+                          Since 2011, Delhivery has been a top e-commerce logistics provider, handling last-mile delivery, warehousing, and freight. Its tech and network are vital for Indian e-commerce.
                         </p>
                       
                         <a

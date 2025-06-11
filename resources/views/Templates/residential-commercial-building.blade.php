@@ -103,8 +103,8 @@
                     @forelse($about['paragraphs'] ?? [] as $para)
                       <p>{{ $para['text'] }}</p>
                       @empty
-                       <p>Flooring is the major highlight for any residential or commercial building project. However, selection of right chemicals for stones and tiles flooring is a major challenge.</p>
-                       <p>RachTR provides the best solutions for all kind of marbles, stones & tiles and all application area, which results in a hassle-free experience both during and after flooring work and a perfect floor.</p>
+                       <p>Flooring is the major highlight for any residential or commercial building project. However, selection of the right chemicals for stones and tiles flooring is a major challenge.</p>
+                       <p>RachTR provides the best solutions for all kinds of marbles, stones & tiles and all application areas, which results in a hassle-free experience both during and after flooring work and a perfect floor.</p>
                     @endforelse
                   </div>
                 </div>
@@ -1247,7 +1247,7 @@
                 {!! html_entity_decode($whyTrust['heading']) !!}
                 @else
                   Why Trust <span class="color-orange">RachTR</span> for <br />
-                  Residential Commercial Buildings?
+                  Residential & Commercial Buildings?
                 @endif
                 </h2>
                 <div class="row">
