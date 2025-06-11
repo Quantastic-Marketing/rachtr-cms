@@ -13,6 +13,7 @@ use App\Models\CommonComponents;
 use Filament\Resources\Resource;
 use RalphJSmit\Filament\SEO\SEO;
 use App\Models\Pages as PageModel;
+use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Group;
@@ -31,6 +32,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\ColorPicker;
 use App\Filament\Resources\PageResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PageResource\RelationManagers;
@@ -656,15 +658,307 @@ class PageResource extends Resource
     public static function epoxyTemplate(): array
     {
         return [
+                Section::make('Banner Section')
+                    ->schema([
+                        Grid::make(2)->schema([
+                            FileUpload::make('content.banner.video_webm')->disk('public')->acceptedFileTypes(['video/webm'])->directory('videos')->label('Webm Banner Video'),
+                            FileUpload::make('content.banner.video_mp4')->disk('public')->acceptedFileTypes(['video/mp4'])->directory('videos')->label('Mp4 Banner Video')
+                        ]),
+                        TextInput::make('content.banner.heading')->label('Banner Heading')->hint('Use <span>RachTR</span> where needed to highlight in orange.'),
+                        RichEditor::make('content.banner.subhead')
+                                    ->label('description')
+                                    ->placeholder('description para.'),
+                        TextInput::make('content.banner.get_btn_text')->label('Get a Quote Button Text')
+                                    ->placeholder('Get a Quote'),
+                        Grid::make(2)->schema([
+                            TextInput::make('content.banner.whatsapp_btn')->label('Whatsapp Button Text'),
+                            TextInput::make('content.banner.whatsapp_link')->label('Whatsapp Link')
+                        ]),
+                        RichEditor::make('content.banner.note')->label('Note for the banner'),
+                    ]),
+                Section::make('Clients Section')
+                    ->schema([
+                        TextInput::make('content.clients.heading')->label('Section Heading')->hint('to highlight use <span>highlight word</span>'),
+                        Repeater::make('content.clients.client')
+                            ->schema([
+                                Grid::make(2)->schema([
+                                    FileUpload::make('client_image')->image()->label('Client Image')->disk('public')->directory('images'),
+                                    TextInput::make('client_name')->label('Client Image alt text'),
+                                ]),
+                            ])
+                            ->columns(2)
+                            ->label('Client Images'),
+                    ]),
                 Section::make('Epoxy Flooring Applications Section')
-                ->schema([
-                    TextInput::make('content.application.heading')
-                        ->label('Section Heading')
-                        ->placeholder('Enter the heading'),
-                    
-                    RichEditor::make('content.application.paragraph')
-                                ->label('Paragraph')
-                                ->placeholder('Intro paragraph about Epoxy Flooring Applications.'),
+                    ->schema([
+                        TextInput::make('content.application.heading')
+                            ->label('Section Heading')
+                            ->placeholder('Enter the heading')
+                            ->hint('to highlight use <span>highlight word</span>'),
+                        
+                        RichEditor::make('content.application.paragraph')
+                                    ->label('Paragraph')
+                                    ->placeholder('Intro paragraph about Epoxy Flooring Applications.'),
+                        ]),
+                 Section::make('Built to Last Section')
+                    ->schema([
+                        FileUpload::make('content.build.built_image')->image()->label('Built to Last Image')->disk('public')->directory('images'),
+                        TextInput::make('content.build.built_title')->label('Built to Last Title'),
+                        Textarea::make('content.build.built_description')->label('Built to Last Description'),
+                        Repeater::make('content.build.built_benefits')
+                            ->schema([
+                                TextArea::make('benefit_icon')->label('Benefit Icon'),
+                                TextInput::make('benefit_title')->label('Benefit Title'),
+                                Textarea::make('benefit_description')->label('Benefit Description'),
+                            ])
+                            ->columns(2)
+                            ->label('Benefits'),
+                        RichEditor::make('content.build.built_note')->label('Build to last below para')->columnSpanFull(),
+                    ]),
+                Section::make('What is Epoxy flooring Section')
+                    ->schema([
+                        TextInput::make('content.whatepoxy.heading')
+                            ->label('Section Heading')
+                            ->placeholder('Enter the heading')
+                            ->hint('to highlight use <span>highlight word</span>'),
+                        
+                        RichEditor::make('content.whatepoxy.paragraph')
+                                    ->label('Content /description for the section')
+                                    ->placeholder('Intro paragraph about Epoxy Flooring Applications.'),
+                        Grid::make(2)->schema([
+                                    FileUpload::make('content.whatepoxy.image')->image()->label('Section Image')->disk('public')->directory('images'),
+                                    TextInput::make('content.whatepoxy.img_alt')->label('Image alt text'),
+                                    FileUpload::make('content.whatepoxy.overlay_img_desk')->image()->label('Overlay Desktop Image')->disk('public')->directory('images'),
+                                    FileUpload::make('content.whatepoxy.overlay_img_mob')->image()->label('Overlay Mobile Image')->disk('public')->directory('images'),
+                                ]),
+                        ]),
+                Section::make('Epoxy flooring Solutions Section')
+                    ->schema([
+                        TextInput::make('content.epoxysol.heading')
+                            ->label('Section Heading')
+                            ->placeholder('Enter the heading')
+                            ->hint('to highlight use <span>highlight word</span>'),
+                        
+                        RichEditor::make('content.epoxysol.paragraph')
+                                    ->label('Content /description for the section')
+                                    ->placeholder('Intro paragraph about Epoxy Flooring Solutions.'),
+                        Repeater::make('content.epoxysol.solutions')
+                            ->schema([
+                                TextArea::make('icon')->label('Solution Icon'),
+                                TextInput::make('title')->label('Solution Title'),
+                            ])
+                            ->columns(2)
+                            ->label('Solution points'),
+                        ]),
+                Section::make('Epoxy flooring Cost  Section')
+                    ->schema([
+                        TextInput::make('content.epoxycost.heading')
+                            ->label('Section Heading')
+                            ->placeholder('Enter the heading')
+                            ->hint('to highlight use <span>highlight word</span>'),
+                        FileUpload::make('content.epoxycost.bg')
+                                        ->label('Background Image')
+                                        ->disk('public')
+                                        ->directory('images')
+                                        ->image()
+                                        ->imageEditor(),
+                        Card::make([
+                            TextInput::make('content.epoxycost.subhead1')
+                                ->label('Section Subheading')
+                                ->placeholder('Enter the heading'),
+                            RichEditor::make('content.epoxycost.paragraph1')
+                                        ->label('Content /description for the current subhead')
+                                        ->placeholder('Intro paragraph about Epoxy Flooring Solutions.'),
+                        ])->label('Subsection 1'),
+                        Card::make([
+                            TextInput::make('content.epoxycost.subhead2')
+                                ->label('Section Subheading 2')
+                                ->placeholder('Enter the heading'),
+                            TextArea::make('content.epoxycost.paragraph2')
+                                        ->label('Content /description for the current subhead')
+                                        ->placeholder('Intro paragraph about Epoxy Flooring Solutions.'),
+                            Grid::make(2)->schema([
+                                FileUpload::make('content.epoxycost.image')
+                                            ->label('Mobile Image')
+                                            ->disk('public')
+                                            ->directory('images')
+                                            ->image()
+                                            ->imageEditor(),
+                                TextInput::make('content.epoxycost.imgalt')
+                                        ->label('Image alt text')
+                                        ->placeholder('Enter the Text'),
+                            ]),
+                            Repeater::make('content.epoxycost.solutions')
+                                ->schema([
+                                    Grid::make(2)->schema([
+                                        TextArea::make('icon')->label('Icon'),
+                                        TextInput::make('title')->label('Title'),
+                                    ])
+                                ])
+                                ->columns(2)
+                                ->label('Solution points'),
+                         ])->label('Subsection 2 & Solutions'),
+                        ]),
+                Section::make('Factors affecting the industrial Section')
+                    ->schema([
+                        TextInput::make('content.factors.heading')
+                            ->label('Section Heading')
+                            ->placeholder('Enter the heading')
+                            ->hint('to highlight use <span>highlight word</span>'),
+                        TextInput::make('content.factors.subhead')
+                            ->label('Section SubHeading')
+                            ->placeholder('Enter the heading'),
+                        RichEditor::make('content.factors.paragraph')
+                                    ->label('Content /description for the section')
+                                    ->placeholder('Intro paragraph about Epoxy Flooring Applications.'),
+                        Repeater::make('content.factors.factor')
+                                ->schema([
+                                    Grid::make(2)->schema([
+                                        TextInput::make('number')->label('factor number')
+                                            ->placeholder('#FFFFFF'),
+                                        TextInput::make('title')->label('factor title')
+                                            ->placeholder('#FFFFFF'),
+                                        TextInput::make('subhead')->label('factor subheading')
+                                            ->placeholder('RAL 7034'),
+                                        Richeditor::make('desc')->label('factor description')
+                                            ->placeholder('RAL 7034'),
+                                    ])
+                                ])
+                                ->columns(2)
+                                ->label('Factors Block'),
+                        Grid::make(2)->schema([
+                            FileUpload::make('content.factors.image')
+                                    ->label('Epoxy Image')
+                                    ->disk('public')
+                                    ->directory('images')
+                                    ->image()
+                                    ->imageEditor(), 
+                            TextInput::make('content.factors.image_alt')
+                                ->label('Factor Image Alg')
+                                ->placeholder('Enter the heading'),  
+                            ])
+                        ]),
+                Section::make('Color shades available Section')
+                    ->schema([
+                        TextInput::make('content.color.heading')
+                            ->label('Section Heading')
+                            ->placeholder('Enter the heading')
+                            ->hint('to highlight use <span>highlight word</span>'),
+                        
+                        RichEditor::make('content.color.paragraph')
+                                    ->label('Content /description for the section')
+                                    ->placeholder('Intro paragraph about Epoxy Flooring Applications.'),
+                        Repeater::make('content.color.colors')
+                                ->schema([
+                                    Grid::make(2)->schema([
+                                        ColorPicker::make('color')->label('color code')
+                                            ->placeholder('#FFFFFF'),
+                                        TextInput::make('name')->label('color Nmae')
+                                            ->placeholder('RAL 7034'),
+                                        FileUpload::make('image')
+                                            ->label('Color Image')
+                                            ->disk('public')
+                                            ->directory('images')
+                                            ->image()
+                                            ->imageEditor(), 
+                                    ])
+                                ])
+                                ->columns(2)
+                                ->label('Colors Block'),
+                        ]),
+                Section::make('Our Project section: ')
+                        ->description('Add the details or projects slider/block')
+                        ->schema([
+                            TextInput::make('content.project.heading')
+                                    ->label('Section Heading')
+                                    ->hint('Use <br> and <span class="org">RachTR</span> where needed.'),
+                            Repeater::make('content.project.slides')
+                                        ->label('Projects')
+                                        ->schema([
+                                            TextInput::make('title')
+                                                ->label('Title'),
+                                            RichEditor::make('description')
+                                                ->label('Sub Title'),
+                                            Grid::make(2)->schema([
+                                                TextInput::make('btn')
+                                                    ->label('Add read more/ view more button text'),
+                                                TextInput::make('link')
+                                                    ->label('Add read more/ view more Link')
+                                                    ->url()
+                                                    ->default('/blogs'),
+                                            ]),
+                                            Grid::make(2)->schema([
+                                                FileUpload::make('image')
+                                                    ->label('Mobile Image')
+                                                    ->disk('public')
+                                                    ->directory('images')
+                                                    ->image()
+                                                    ->imageEditor(),
+                                                TextInput::make('img_alt')
+                                                    ->label('Image alt attribute')
+                                            ]),
+                                        ])
+                                        ->addActionLabel('Add Project Slide')
+                                        ->orderable()
+                                        ->collapsed()
+                                        ->cloneable()
+                                        ->default([])
+                        ]),
+                Section::make('Locations served Section')
+                        ->schema([
+                            TextInput::make('content.location.heading')->label('Loactions served Title'),
+                            Grid::make(2)->schema([
+                                FileUpload::make('content.location.image')
+                                                    ->label('Mobile Image')
+                                                    ->disk('public')
+                                                    ->directory('images')
+                                                    ->image()
+                                                    ->imageEditor(),
+                                TextInput::make('content.location.img_alt')
+                                                    ->label('Image alt attribute')
+                            ])
+                        ]),
+                Section::make('Experience Rachtr Section')
+                        ->schema([
+                            TextInput::make('content.experience.heading')->label('Experience Rachtr Section Title')->hint('Use <br> and <span class="org">RachTR</span> where needed to highlight in orange.'),
+                            TextInput::make('content.experience.formHeading')->label('Experience Rachtr Form Title'),
+                            TextInput::make('content.experience.formNote')->label('Experience Rachtr Form Note'),
+
+                            Repeater::make('content.experience.images')
+                                ->label('Image Slider part')
+                                ->schema([
+                                    Grid::make(2)->schema([
+                                        FileUpload::make('image')
+                                                    ->label('Image')
+                                                    ->disk('public')
+                                                    ->directory('images')
+                                                    ->image()
+                                                    ->imageEditor(),
+                                        TextInput::make('img_alt')
+                                                    ->label('Image alt attribute')
+                                    ]),
+                                ])
+                                ->addActionLabel('Adds Image')
+                        ]),
+                 Section::make('Get Quote Section')
+                    ->schema([
+                        TextInput::make('content.quote.heading')->label('Section Heading'),
+                        Grid::make(2)->schema([
+                                FileUpload::make('content.quote.image')
+                                                    ->label('Mobile Image')
+                                                    ->disk('public')
+                                                    ->directory('images')
+                                                    ->image()
+                                                    ->imageEditor(),
+                                TextInput::make('content.quote.img_alt')
+                                                    ->label('Image alt attribute')
+                        ]),
+                        TextInput::make('content.quote.get_btn_text')->label('Get a Quote Button Text')
+                                    ->placeholder('Get a Quote'),
+                        Grid::make(2)->schema([
+                            TextInput::make('content.quote.whatsapp_btn')->label('Whatsapp Button Text'),
+                            TextInput::make('content.quote.whatsapp_link')->label('Whatsapp Link')
+                        ]),
                     ]),
                 Section::make('Epoxy Flooring FAQ Section')
                     ->schema([
@@ -684,9 +978,7 @@ class PageResource extends Resource
                             ])
                             ->addActionLabel('Adds FAQ Accordion')
                         ]),
-                RichEditor::make('content.popular_searches')
-                                                            ->label('Popular Searches')
-                                                                    ->columnSpanFull(),
+                RichEditor::make('content.popular_searches')->label('Popular Searches')->columnSpanFull(),
                
         ];
     }

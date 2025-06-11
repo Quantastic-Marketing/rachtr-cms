@@ -1,45 +1,63 @@
 <div class="wrapper"> 
 @php
         $pageContent = $page->content;
+        $blogHeading = $pageContent['blog-heading'] ?? [] ;
+        $banner = $pageContent['banner'] ?? [];
+        $experience = $pageContent['experience'] ?? [];
+        $location = $pageContent['location'] ?? [];
+        $ourProjects = $pageContent['project'] ?? [];
+        $clients = $pageContent['clients'] ?? [];
+        $build = $pageContent['build'] ?? [];
+        $quote = $pageContent['quote'] ?? [];
+        $epoxySol = $pageContent['epoxysol'] ?? [];
+        $epoxyCost = $pageContent['epoxycost'] ?? [];
+        $factors = $pageContent['factors'] ?? [];
+        $colors = $pageContent['color'] ?? [];
+        $whatEpoxy = $pageContent['whatepoxy'] ?? [];
     @endphp
        <div class=" cost-price-banner bnr_sldr">
-        <div class="row g-0">
-        <div class="col-lg-12">
-           <div class="item">
-               <div class="banner-sec">
-                   <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" class="desktop">
-                         <source id="#movie1" src="{{ asset('videos/banner-video.webm') }}" type="video/webm">
-                         <source id="#movie1" src="{{ asset('videos/banner-video.mp4') }}" type="video/mp4">
-                   </video>
-                   <div class="banner_overlay col-lg-12">
-                      <div class="content col-lg-9 col-md-12">
-                          <div class="container">
-                              <div class="content-details ms-0">
-                                   <h1 class="fw-bold">Revamp Your Industrial Space with <br>
-                                    <span> Durable Epoxy Flooring Solutions</span></h1>
-                                   <p>RachTR offers durable and cost-effective epoxy flooring solutions for automobile, pharmaceutical, electronics, food & beverages, metal fabrications, chemical industry, and warehouses & godowns.</p>
-                                   <p>Our seamless non-slip surface is easy to clean and can withstand heavy traffic, enhancing the safety and functionality of your workspace.</p>
-                                   <p>Choose RachTR for the best industrial epoxy flooring solutions.</p>
-
-
-                              </div>
-                              <div class="banner-buttons d-flex  gap-md-3 py-md-5 gap-2 py-3">
-                                <button type="button" class="btn btn-primary w-auto p-md-3 text-normal fs-md-6 d-flex align-items-center gap-1 gap-md-2" onclick="window.open('https://wa.link/xdnyq9', '_blank')"><i class="fa fa-whatsapp fs-3"></i>
-                                    CHAT WITH US ON WHATSAPP</button>
-                                <button type="button" class="btn btn-outline-light fw-bold" id="openFormBtn">GET AN INSTANT QUOTE</button>
-                              </div>
-                              <div class="content-list ms-0 pt-md-5 pt-3">
-                                     <p> *<span>Note:</span>RachTR doesn’t do Residential Interior Epoxy Flooring projects!</p>
-                              </div>
-                          </div> 
-                      </div>
-                  </div>
-              </div> 
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="item">
+                    <div class="banner-sec">
+                        <video width="100%" height="100%" preload="none" loop="true" autoplay="true" playsinline="true" muted="true" mediatype="video" class="desktop">
+                                <source id="#movie1" src="{{ !empty($banner['video_webm']) ? asset('storage/' . $banner['video_webm']) : asset('videos/banner-video.webm') }}" type="video/webm">
+                                <source id="#movie1" src="{{ !empty($banner['video_mp4']) ? asset('storage/' . $banner['video_mp4']) : asset('videos/banner-video.mp4') }}" type="video/mp4">
+                        </video>
+                        <div class="banner_overlay col-lg-12">
+                            <div class="content col-lg-9 col-md-12">
+                                <div class="container">
+                                    <div class="content-details ms-0">
+                                        <h1 class="fw-bold">{!! $banner['heading'] ?? 'Revamp Your Industrial Space with <br>
+                                            <span> Durable Epoxy Flooring Solutions</span>' !!}</h1>
+                                            @if(!empty($banner['subhead']))
+                                                {!! $banner['subhead'] !!}
+                                            @else
+                                            <p>RachTR offers durable and cost-effective epoxy flooring solutions for automobile, pharmaceutical, electronics, food & beverages, metal fabrications, chemical industry, and warehouses & godowns.</p>
+                                            <p>Our seamless non-slip surface is easy to clean and can withstand heavy traffic, enhancing the safety and functionality of your workspace.</p>
+                                            <p>Choose RachTR for the best industrial epoxy flooring solutions.</p>
+                                        @endif
+                                    </div>
+                                    <div class="banner-buttons d-flex  gap-md-3 py-md-5 gap-2 py-3">
+                                        <button type="button" class="btn btn-primary w-auto p-md-3 text-normal fs-md-6 d-flex align-items-center gap-1 gap-md-2" onclick="window.open('{{ $banner['whatsapp_link'] ?? 'https://wa.link/xdnyq9' }}', '_blank')"><i class="fa fa-whatsapp fs-3"></i>
+                                            {{ $banner['whatsapp_btn'] ?? 'CHAT WITH US ON WHATSAPP'}}</button>
+                                        <button type="button" class="btn btn-outline-light fw-bold" id="openFormBtn">{{ $banner['get_btn_text'] ?? 'GET AN INSTANT QUOTE'}}</button>
+                                    </div>
+                                    <div class="content-list ms-0 pt-md-5 pt-3">
+                                            @if(!empty($banner['note']))
+                                                {!! $banner['note'] !!}
+                                            @else
+                                            <p> *<span>Note:</span>RachTR doesn’t do Residential Interior Epoxy Flooring projects!</p>
+                                            @endif
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div> 
+                    </div>
+                </div>
             </div>
-          </div>
-         
-        </div>
-        </div>
+       </div>
         <!-- This is a banner close -->
          
              <!-- This is a client open -->
@@ -49,30 +67,36 @@
                 <div class="col-12 col-md-11">
                     <div class="clients-content ms-md-3">
                         <div class="heading-holder pb-3">
-                            <h2 class="fw-bold">Our <span>clients</span></h2>
+                            <h2 class="fw-bold">{!! $clients['heading'] ?? 'Our <span>clients</span>' !!}</h2>
                         </div>
                         <div class="client-slider">
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-1.webp') }}" alt="Client 1"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-2.webp') }}" alt="Client 2"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-3.webp') }}" alt="Client 3"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-4.webp') }}" alt="Client 4"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-5.webp') }}" alt="Client 5"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-6.webp') }}" alt="Client 6"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-7.webp') }}" alt="Client 7"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-8.webp') }}" alt="Client 8"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-9.webp') }}" alt="Client 9"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-10.webp') }}" alt="Client 10"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-11.webp') }}" alt="Client 11"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-12.webp') }}" alt="Client 12"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-13.webp') }}" alt="Client 13"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-14.webp') }}" alt="Client 14"></div>
-                            <div class="client-slide"><img src="{{ asset('images/client-slide-15.webp') }}" alt="Client 15  "></div>
+                            @forelse($clients['client'] ?? [] as $client)
+                                @if(!empty($client['client_image']))
+                                    <div class="client-slide"><img src="{{ asset('storage/' . $client['client_image']) }}" alt="{{ $client['client_name'] ?? 'Client Logo'}}"></div>
+                                @endif
+                            @empty
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-1.webp') }}" alt="Client 1"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-2.webp') }}" alt="Client 2"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-3.webp') }}" alt="Wipro"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-4.webp') }}" alt="Parle"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-5.webp') }}" alt="britannia"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-6.webp') }}" alt="Patanjali"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-7.webp') }}" alt="JBM"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-8.webp') }}" alt="Client 8"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-9.webp') }}" alt="Honeywell"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-10.webp') }}" alt="Client 10"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-11.webp') }}" alt="Delhivery"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-12.webp') }}" alt="Honda"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-13.webp') }}" alt="BKT"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-14.webp') }}" alt="Client 14"></div>
+                                <div class="client-slide"><img src="{{ asset('images/client-slide-15.webp') }}" alt="Client 15"></div>
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+       </section>
        <!-- This is a client close -->
 
        <section class="what-is-epoxy">
@@ -82,19 +106,23 @@
                     <div class="container py-5">
                         <div class="why-epoxy-content d-flex flex-column gap-3">
                             <div class="heading-holder m-0">
-                                <h2 class="fw-bold">What is <span>Epoxy Flooring?</span> </h2>
+                                <h2 class="fw-bold">{!! $whatEpoxy['heading'] ?? 'What is <span>Epoxy Flooring?</span> ' !!}</h2>
                             </div>
                             <div class="text-holder">
-                                <p> <a href="{{config('app.url') . '/epoxy-flooring-services'}}"><strong>Epoxy Flooring</strong></a> is a type of synthetic resin floor system, in which especially formulated epoxy coatings are laid on top of concrete substrates as a form of protection and decoration layer.</p>
-                                <p>It transforms a plain concrete slab into a smooth, finished surface that can have customized properties, as per requirement, like -</p>
-                                <ul class="text-list d-flex flex-column ms-2">
-                                    <li class="point-style">Chemical Resistance, including Acid-Resistance or Solvent Resistance</li>
-                                    <li class="point-style">Oil resistance</li>
-                                    <li class="point-style">Moisture Resistance</li>
-                                    <li class="point-style">Anti-Skid or Non-Slip Property </li>
-                                    <li class="point-style">Anti-Static Property</li>
-                                    <li class="point-style">Electro static Discharge (ESD) Flooring</li>
-                                </ul>
+                                @if(!empty($whatEpoxy['paragraph']))
+                                    {!! $whatEpoxy['paragraph'] !!}
+                                @else
+                                    <p> <a href="{{config('app.url') . '/epoxy-flooring-services'}}"><strong>Epoxy Flooring</strong></a> is a type of synthetic resin floor system, in which especially formulated epoxy coatings are laid on top of concrete substrates as a form of protection and decoration layer.</p>
+                                    <p>It transforms a plain concrete slab into a smooth, finished surface that can have customized properties, as per requirement, like -</p>
+                                    <ul class="text-list d-flex flex-column ms-2">
+                                        <li class="point-style">Chemical Resistance, including Acid-Resistance or Solvent Resistance</li>
+                                        <li class="point-style">Oil resistance</li>
+                                        <li class="point-style">Moisture Resistance</li>
+                                        <li class="point-style">Anti-Skid or Non-Slip Property </li>
+                                        <li class="point-style">Anti-Static Property</li>
+                                        <li class="point-style">Electro static Discharge (ESD) Flooring</li>
+                                    </ul>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -102,14 +130,14 @@
                 </div>
                 <div class="col-lg-6 me-0">
                     <div class="epoxy-img">
-                        <img src="{{ asset('images/what-epoxy.webp') }}" alt="An individual applying grey color epoxy flooring">
+                        <img src="{{ !empty($whatEpoxy['image']) ? asset('storage/' . $whatEpoxy['image'] ) : asset('images/what-epoxy.webp') }}" alt="{{ $whatEpoxy['img_alt'] ?? 'An individual applying grey color epoxy flooring'}}">
                         <div class="bg-overlay"></div>
                         <div class="image-top">
                             <div class="bg-img-wrapper d-none d-lg-block">
-                                <img src="{{ asset('images/image-removebg-preview.webp') }}" alt="overlay">
+                                <img src="{{ !empty($whatEpoxy['overlay_img_desk']) ? asset('storage/' . $whatEpoxy['overlay_img_desk'])  : asset('images/image-removebg-preview.webp') }}" alt="overlay">
                             </div>
                             <div class="bg-img-wrapper d-block d-lg-none">
-                                <img src="{{ asset('images/image-mob.webp') }}" class="w-77" alt="Epoxy flooring layers">
+                                <img src="{{ !empty($whatEpoxy['overlay_img_mob']) ? asset('storage/' . $whatEpoxy['overlay_img_mob'])  : asset('images/image-mob.webp') }}" class="w-77" alt="Epoxy flooring layers">
                             </div>
                         </div>
                         
@@ -125,115 +153,128 @@
                 <div class="col-12">
                     <div class="epoxy-solution-content">
                         <div class="heading-holder">
-                            <h2 class="fw-bold">Epoxy Flooring Solutions for <span>Multiple Industries</span></h2>
+                            <h2 class="fw-bold">{!! $epoxySol['heading'] ?? 'Epoxy Flooring Solutions for <span>Multiple Industries</span>' !!}</h2>
                         </div>
                         <div class="text-content px-md-5 mx-md-5 text-center">
-                            <p>We at RachTR specialize in providing high-quality <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-products'}}">epoxy flooring solutions</a> for a variety of industries. Our services are tailored to meet the unique needs of <strong>epoxy flooring for warehouses, pharma industries, metal fabrication, food and beverages, electronics, chemical, and automobile industries.</strong></p>
+                            @if(!empty($epoxySol['paragraph']))
+                                {!! $epoxySol['paragraph'] !!}
+                            @else
+                                <p>We at RachTR specialize in providing high-quality <a href="{{ config('app.url') . '/industrial-flooring-solutions/epoxy-flooring-products'}}">epoxy flooring solutions</a> for a variety of industries. Our services are tailored to meet the unique needs of <strong>epoxy flooring for warehouses, pharma industries, metal fabrication, food and beverages, electronics, chemical, and automobile industries.</strong></p>
+                            @endif
                         </div>
                         <div class="solutions-list">
-                            <div class="solution">
-                                <div class="img-wrapper">
-                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="34 67 132 66" viewBox="34 67 132 66" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-m0hv4dz65 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
-                                        <g>
-                                            <path d="M117.468 122.055c-5.837 0-12.299-.015-18.756-.03-8.17-.017-16.323-.038-23.193-.026l-.008-5.5c6.864-.013 15.033.007 23.214.026 8.278.019 16.573.036 23.531.026l.011 5.5c-1.54.003-3.145.004-4.799.004z" fill="#F99410" data-color="1"></path>
-                                            <path d="M50.504 122.001L48.016 122c-6.899 0-11.632-3.733-13.326-10.51-1.562-6.251-.365-18.75 2.511-26.227a2.75 2.75 0 0 1 2.566-1.763h7.886c2.583-1.854 4.908-3.695 7.161-5.481C62.276 72.107 68.722 67 78.265 67h21.563c12.275 0 22.95 8.324 31.821 16.664C144.425 85.741 166 93.598 166 102.75v16.5a2.75 2.75 0 0 1-2.75 2.75h-16.499v-5.5H160.5v-13.75c0-3.419-15.08-11.517-30.517-13.78a2.758 2.758 0 0 1-1.494-.725C116.857 77.209 108.285 72.5 99.827 72.5H78.265c-7.628 0-12.834 4.124-20.037 9.83-2.515 1.993-5.117 4.054-8.113 6.167a2.747 2.747 0 0 1-1.584.503h-6.809c-2.198 7.015-2.765 16.883-1.696 21.155 1.082 4.329 3.621 6.345 7.99 6.345l2.491.001-.003 5.5z" fill="#F99410" data-color="1"></path>
-                                            <path d="M116.763 94.5H72.765c-.729 0-1.429-.29-1.944-.806l-8.25-8.25 3.888-3.889L73.904 89h42.332l5.01-1.997 2.036 5.111-5.5 2.191a2.76 2.76 0 0 1-1.019.195z" fill="#F99410" data-color="1"></path>
-                                            <path d="M134.637 133c-8.34 0-15.124-6.785-15.124-15.125s6.785-15.125 15.124-15.125c8.34 0 15.124 6.785 15.124 15.125S142.977 133 134.637 133zm0-24.75c-5.306 0-9.625 4.318-9.625 9.625s4.318 9.625 9.625 9.625 9.625-4.318 9.625-9.625-4.319-9.625-9.625-9.625z" fill="#F99410" data-color="1"></path>
-                                            <path d="M63.141 133c-8.34 0-15.124-6.785-15.124-15.125s6.785-15.125 15.124-15.125 15.124 6.785 15.124 15.125S71.48 133 63.141 133zm0-24.75c-5.306 0-9.625 4.318-9.625 9.625s4.318 9.625 9.625 9.625 9.625-4.318 9.625-9.625-4.319-9.625-9.625-9.625z" fill="#F99410" data-color="1"></path>
-                                        </g>
-                                    </svg>
+                            @forelse($epoxySol['solutions'] ?? [] as $sol)
+                                <div class="solution">
+                                    <div class="img-wrapper">
+                                        {!! $sol['icon'] !!}
+                                    </div>
+                                    <p>{!! $sol['title'] !!}</p>
                                 </div>
-                                 
-                                <p>AutoMobile</p>
-                            </div>
-                            <div class="solution">
-                                <div class="img-wrapper">
-                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="30.6 39.7 139.1 117" viewBox="30.6 39.7 139.1 117" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-m0hv4dz84 svg [data-color="1"] {fill: #FFFFFF;}
-                                        #comp-m0hv4dz84 svg [data-color="2"] {fill: #FFFFFF;}</style></defs>
+                            @empty
+                                <div class="solution">
+                                    <div class="img-wrapper">
+                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="34 67 132 66" viewBox="34 67 132 66" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-m0hv4dz65 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
                                             <g>
-                                                <path d="M58.7 39.7h-8.3c-10.9 0-19.8 8.9-19.8 19.8v36.2h47.9V59.6c0-11-8.9-19.8-19.8-19.9zm10.9 26c-.9.4-1.9.2-2.6-.5-.4-.4-.7-1-.7-1.6 0-3-1.5-5.8-3.9-7.5-1.4-1-3-1.7-4.8-1.8-.7 0-1.4-.1-2.1-.5-.9-.6-1.2-1.6-1-2.6.3-1.1 1.3-1.8 2.4-1.7 7.5.1 13.5 6 13.9 13.4.2 1.5-.2 2.3-1.2 2.8z" fill="#2289e8" data-color="1"></path>
-                                                <path d="M128.9 66.3c-22.5.1-40.7 18.3-40.8 40.8.1 22.5 18.3 40.7 40.8 40.8 22.5-.1 40.7-18.3 40.8-40.8-.1-22.5-18.3-40.7-40.8-40.8zm24.3 26l-43.6 37.1c-1.7 1.5-4.3 1.3-5.8-.4-1.5-1.7-1.3-4.3.4-5.8l.1-.1L147.8 86c1.7-1.5 4.3-1.3 5.8.4 1.6 1.7 1.4 4.3-.4 5.9 0-.1 0-.1 0 0z" fill="#2289e8" data-color="1"></path>
-                                                <path d="M30.6 100.7v36.2c0 10.9 8.9 19.8 19.8 19.8h8.3c10.9 0 19.8-8.9 19.8-19.8v-36.2H30.6z" fill="#6dd1ca" data-color="2"></path>
+                                                <path d="M117.468 122.055c-5.837 0-12.299-.015-18.756-.03-8.17-.017-16.323-.038-23.193-.026l-.008-5.5c6.864-.013 15.033.007 23.214.026 8.278.019 16.573.036 23.531.026l.011 5.5c-1.54.003-3.145.004-4.799.004z" fill="#F99410" data-color="1"></path>
+                                                <path d="M50.504 122.001L48.016 122c-6.899 0-11.632-3.733-13.326-10.51-1.562-6.251-.365-18.75 2.511-26.227a2.75 2.75 0 0 1 2.566-1.763h7.886c2.583-1.854 4.908-3.695 7.161-5.481C62.276 72.107 68.722 67 78.265 67h21.563c12.275 0 22.95 8.324 31.821 16.664C144.425 85.741 166 93.598 166 102.75v16.5a2.75 2.75 0 0 1-2.75 2.75h-16.499v-5.5H160.5v-13.75c0-3.419-15.08-11.517-30.517-13.78a2.758 2.758 0 0 1-1.494-.725C116.857 77.209 108.285 72.5 99.827 72.5H78.265c-7.628 0-12.834 4.124-20.037 9.83-2.515 1.993-5.117 4.054-8.113 6.167a2.747 2.747 0 0 1-1.584.503h-6.809c-2.198 7.015-2.765 16.883-1.696 21.155 1.082 4.329 3.621 6.345 7.99 6.345l2.491.001-.003 5.5z" fill="#F99410" data-color="1"></path>
+                                                <path d="M116.763 94.5H72.765c-.729 0-1.429-.29-1.944-.806l-8.25-8.25 3.888-3.889L73.904 89h42.332l5.01-1.997 2.036 5.111-5.5 2.191a2.76 2.76 0 0 1-1.019.195z" fill="#F99410" data-color="1"></path>
+                                                <path d="M134.637 133c-8.34 0-15.124-6.785-15.124-15.125s6.785-15.125 15.124-15.125c8.34 0 15.124 6.785 15.124 15.125S142.977 133 134.637 133zm0-24.75c-5.306 0-9.625 4.318-9.625 9.625s4.318 9.625 9.625 9.625 9.625-4.318 9.625-9.625-4.319-9.625-9.625-9.625z" fill="#F99410" data-color="1"></path>
+                                                <path d="M63.141 133c-8.34 0-15.124-6.785-15.124-15.125s6.785-15.125 15.124-15.125 15.124 6.785 15.124 15.125S71.48 133 63.141 133zm0-24.75c-5.306 0-9.625 4.318-9.625 9.625s4.318 9.625 9.625 9.625 9.625-4.318 9.625-9.625-4.319-9.625-9.625-9.625z" fill="#F99410" data-color="1"></path>
                                             </g>
                                         </svg>
+                                    </div>
+                                    
+                                    <p>AutoMobile</p>
                                 </div>
-                                 
-                                <p>Pharmaceutical</p>
-                            </div>
-                            <div class="solution">
-                                <div class="img-wrapper">
-                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="20.198 20.811 159.04 159.04" viewBox="20.198 20.811 159.04 159.04" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-m0hv4dzb3 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
-                                        <g>
-                                            <path d="M99.718 20.811c-32.299 0-61.151 19.283-73.504 49.127a78.968 78.968 0 0 0-3.467 10.349 79.739 79.739 0 0 0-2.549 20.044c0 43.848 35.673 79.52 79.52 79.52s79.52-35.672 79.52-79.52c0-43.847-35.673-79.52-79.52-79.52zm34.719 38.313c2.03 0 3.681 1.651 3.681 3.681s-1.651 3.681-3.681 3.681c-2.029 0-3.68-1.651-3.68-3.681s1.651-3.681 3.68-3.681zm-60.365 97.471c-2.03 0-3.681-1.65-3.681-3.68s1.651-3.682 3.681-3.682c2.029 0 3.68 1.652 3.68 3.682s-1.651 3.68-3.68 3.68zm75.764.777l-22.751-.014v-11.142c3.122-.794 5.449-3.605 5.449-6.971 0-3.979-3.237-7.217-7.216-7.217s-7.216 3.238-7.216 7.217c0 3.366 2.326 6.177 5.449 6.971v11.14c-13.07-.006-16.269-.004-17.164.025v-.009c-1.484 0-2.591-.413-3.386-1.262-1.718-1.837-1.521-5.123-1.514-5.28l-.001-14.419c-.08-2.72-.956-4.809-2.605-6.207-2.246-1.907-5.057-1.764-5.764-1.693H74.494c-.78-3.143-3.603-5.488-6.984-5.488-3.979 0-7.216 3.237-7.216 7.216s3.237 7.215 7.216 7.215c3.351 0 6.151-2.307 6.959-5.408h18.747l.223-.014c.02-.005 1.904-.211 3.173.882.84.725 1.291 1.937 1.34 3.549l.005 14.238c-.015.195-.322 4.826 2.444 7.806 1.48 1.593 3.495 2.401 5.986 2.401l.226-.005c.734-.007 4.294-.021 18.263-.01l20.653.013c-12.746 9.664-28.617 15.411-45.81 15.411a75.668 75.668 0 0 1-23.879-3.865v-12.564c3.122-.794 5.448-3.605 5.448-6.971 0-3.979-3.237-7.217-7.216-7.217s-7.216 3.238-7.216 7.217c0 3.366 2.326 6.177 5.449 6.971v11.292c-11.637-4.518-21.887-11.82-29.939-21.089l-.009-45.897c-.003-.04-.06-.967.698-1.768.939-.994 2.789-1.504 5.394-1.45l27.163-.002c.386.013 3.771.101 6.085-2.216 1.401-1.402 2.056-3.309 1.948-5.587v-7.535c3.127-.79 5.458-3.605 5.458-6.974 0-3.979-3.237-7.216-7.216-7.216s-7.216 3.237-7.216 7.216c0 3.362 2.321 6.171 5.439 6.969l.001 7.623c.062 1.336-.233 2.316-.904 2.995-1.238 1.254-3.424 1.194-3.515 1.193H48.479c-3.701-.045-6.431.829-8.084 2.654-1.607 1.773-1.603 3.773-1.565 4.339v41.307c-9.478-12.677-15.096-28.398-15.096-45.408 0-6.263.781-12.48 2.287-18.501h28.541c.117.009.318.019.582.019 1.239 0 3.874-.236 5.816-2.06 1.579-1.482 2.323-3.594 2.214-6.277l-.037.001c.161-1.622.142-5.616.059-16.507 3.146-.778 5.494-3.603 5.494-6.985 0-3.979-3.237-7.216-7.216-7.216s-7.216 3.237-7.216 7.216c0 3.349 2.303 6.146 5.401 6.957.04 6.006.07 13.665.023 15.836l-.072.072.032.771c.065 1.604-.301 2.796-1.089 3.545-1.374 1.308-3.719 1.107-3.736 1.105l-27.793-.009c.718-2.372 1.512-4.724 2.456-7.006 9.032-21.819 27.296-37.718 49.199-43.99l.002 22.777c-.011.212-.234 5.234 2.928 8.533 1.776 1.853 4.171 2.767 7.187 2.751h16.493l.179-.009c.058-.002 1.449-.107 2.638 1.062 1.515 1.488 2.171 4.444 1.895 8.666v33.25c-3.089.816-5.384 3.609-5.384 6.951 0 3.979 3.237 7.217 7.216 7.217s7.216-3.238 7.216-7.217c0-3.389-2.357-6.22-5.513-6.991l-.003-33.093c.352-5.308-.67-9.141-3.038-11.392-2.167-2.061-4.646-2.027-5.283-1.979H88.781c-2.052-.016-3.517-.52-4.605-1.649-2.105-2.181-1.964-5.886-1.961-6.009v-10.9h24.899c.794 3.122 3.606 5.449 6.971 5.449 3.979 0 7.216-3.237 7.216-7.216s-3.237-7.216-7.216-7.216c-3.366 0-6.178 2.326-6.971 5.448H82.215v-9.362a76.511 76.511 0 0 1 17.504-2.029c11.799 0 22.978 2.704 32.951 7.524v23.964c-3.122.794-5.448 3.606-5.448 6.971 0 3.979 3.237 7.216 7.216 7.216s7.216-3.237 7.216-7.216c0-3.366-2.326-6.178-5.449-6.971V33.702a76.333 76.333 0 0 1 14.146 10.034l.003 31.927c-.009.154-.175 3.799 2.208 6.446 1.443 1.604 3.451 2.481 5.965 2.608l.173.002.066-.002c.407-.016 1.674-.042 2.476.761.42.42.68 1.061.81 1.873-3.07.83-5.347 3.611-5.347 6.94 0 3.979 3.237 7.216 7.216 7.216s7.216-3.237 7.216-7.216c0-3.395-2.364-6.23-5.527-6.996-.194-1.801-.809-3.256-1.867-4.315-1.243-1.244-2.941-1.859-5.038-1.794-4.792-.243-4.858-4.494-4.82-5.429V47.113c13.481 13.719 21.817 32.51 21.817 53.218a75.539 75.539 0 0 1-5.413 28.11l-19.841.003c-1.596.119-6.178.003-8.103-1.795-.566-.528-.83-1.153-.83-1.968V93.193c3.122-.794 5.449-3.606 5.449-6.971 0-3.979-3.237-7.216-7.216-7.216s-7.216 3.237-7.216 7.216c0 3.366 2.326 6.178 5.449 6.971v31.488c0 1.788.678 3.364 1.958 4.557 2.631 2.451 7.209 2.776 9.417 2.776a17.5 17.5 0 0 0 1.216-.038h18.2a76.349 76.349 0 0 1-18.936 25.396zm-24.518-14.446a3.684 3.684 0 0 1-3.681-3.68c0-2.03 1.651-3.682 3.681-3.682s3.681 1.652 3.681 3.682a3.685 3.685 0 0 1-3.681 3.68zm-54.127-12.688c0 2.03-1.651 3.68-3.681 3.68a3.684 3.684 0 0 1-3.681-3.68c0-2.03 1.651-3.68 3.681-3.68 2.03 0 3.681 1.65 3.681 3.68zm7.014-51.579a3.685 3.685 0 0 1 3.68-3.681 3.685 3.685 0 0 1 3.681 3.681 3.685 3.685 0 0 1-3.681 3.681 3.685 3.685 0 0 1-3.68-3.681zM57.792 50.02a3.685 3.685 0 0 1 3.68-3.681c2.03 0 3.681 1.651 3.681 3.681s-1.651 3.681-3.681 3.681a3.685 3.685 0 0 1-3.68-3.681zm57.723 61.261a3.686 3.686 0 0 1-3.681 3.682c-2.029 0-3.68-1.652-3.68-3.682s1.651-3.68 3.68-3.68c2.03 0 3.681 1.65 3.681 3.68zm-5.111-73.776a3.685 3.685 0 0 1 3.681-3.68 3.685 3.685 0 0 1 3.681 3.68 3.685 3.685 0 0 1-3.681 3.681 3.685 3.685 0 0 1-3.681-3.681zm57.199 56.786a3.685 3.685 0 0 1-3.681 3.68 3.684 3.684 0 0 1-3.68-3.68 3.685 3.685 0 0 1 3.68-3.681 3.685 3.685 0 0 1 3.681 3.681zm-27.854-4.388c-2.03 0-3.681-1.651-3.681-3.681s1.651-3.681 3.681-3.681c2.03 0 3.681 1.651 3.681 3.681s-1.651 3.681-3.681 3.681z" fill="#00FF00" data-color="1"></path>
-                                        </g>
-                                    </svg>
+                                <div class="solution">
+                                    <div class="img-wrapper">
+                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="30.6 39.7 139.1 117" viewBox="30.6 39.7 139.1 117" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-m0hv4dz84 svg [data-color="1"] {fill: #FFFFFF;}
+                                            #comp-m0hv4dz84 svg [data-color="2"] {fill: #FFFFFF;}</style></defs>
+                                                <g>
+                                                    <path d="M58.7 39.7h-8.3c-10.9 0-19.8 8.9-19.8 19.8v36.2h47.9V59.6c0-11-8.9-19.8-19.8-19.9zm10.9 26c-.9.4-1.9.2-2.6-.5-.4-.4-.7-1-.7-1.6 0-3-1.5-5.8-3.9-7.5-1.4-1-3-1.7-4.8-1.8-.7 0-1.4-.1-2.1-.5-.9-.6-1.2-1.6-1-2.6.3-1.1 1.3-1.8 2.4-1.7 7.5.1 13.5 6 13.9 13.4.2 1.5-.2 2.3-1.2 2.8z" fill="#2289e8" data-color="1"></path>
+                                                    <path d="M128.9 66.3c-22.5.1-40.7 18.3-40.8 40.8.1 22.5 18.3 40.7 40.8 40.8 22.5-.1 40.7-18.3 40.8-40.8-.1-22.5-18.3-40.7-40.8-40.8zm24.3 26l-43.6 37.1c-1.7 1.5-4.3 1.3-5.8-.4-1.5-1.7-1.3-4.3.4-5.8l.1-.1L147.8 86c1.7-1.5 4.3-1.3 5.8.4 1.6 1.7 1.4 4.3-.4 5.9 0-.1 0-.1 0 0z" fill="#2289e8" data-color="1"></path>
+                                                    <path d="M30.6 100.7v36.2c0 10.9 8.9 19.8 19.8 19.8h8.3c10.9 0 19.8-8.9 19.8-19.8v-36.2H30.6z" fill="#6dd1ca" data-color="2"></path>
+                                                </g>
+                                            </svg>
+                                    </div>
+                                    
+                                    <p>Pharmaceutical</p>
                                 </div>
-                                 
-                                <p>Electronics</p>
-                            </div>
-                            <div class="solution">
-                                <div class="img-wrapper">
-                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="-0.018 -0.011 36.109 36.171" viewBox="-0.018 -0.011 36.109 36.171" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
-                                        <g>
+                                <div class="solution">
+                                    <div class="img-wrapper">
+                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="20.198 20.811 159.04 159.04" viewBox="20.198 20.811 159.04 159.04" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-m0hv4dzb3 svg [data-color="1"] {fill: #FFFFFF;}</style></defs>
                                             <g>
-                                                <path d="M19.82 19.27v2.05a15 15 0 0 0 0 2.42 2.88 2.88 0 0 1-1.34 2.74.63.63 0 0 1-.89 0 1.42 1.42 0 0 1-.12-.13c-1.23-1.11-1.23-1.11-1.23-2.77v-4.29l-.61-.07a2.21 2.21 0 0 1-2.32-2.42v-4.66c-.09-.09-.14-.18-.21-.21a2.43 2.43 0 0 1-1.44-2.48V1.08H1.19a2.09 2.09 0 0 1-.71 0A.83.83 0 0 1 0 .6.47.47 0 0 1 .46 0h34.4a5.72 5.72 0 0 1 .72 0 .52.52 0 0 1 .51.53.49.49 0 0 1-.51.52H24.4V9.5a2.36 2.36 0 0 1-1.22 2.33l-.42.24v4.68a2.23 2.23 0 0 1-2.36 2.47Zm-7-18.15v8.57c0 .9.44 1.27 1.39 1.27h7.65c1.15 0 1.51-.35 1.52-1.5V1.71c0-.19-.06-.39-.09-.59Zm3.73 11v2.72a.47.47 0 0 1-.53.49.5.5 0 0 1-.51-.51V12.1h-.94c-.05.1-.1.15-.1.2v4.68c0 .79.44 1.16 1.28 1.17h4.68c.91 0 1.33-.41 1.35-1.32v-4.4a1.51 1.51 0 0 0-.11-.38l-.94.05v2.4a.84.84 0 0 1-.09.51.79.79 0 0 1-.58.27.67.67 0 0 1-.37-.51v-2.43c0-.08-.07-.16-.12-.28h-.86v3.64a1.4 1.4 0 0 1-.06.62.65.65 0 0 1-.45.34.65.65 0 0 1-.46-.34 1.4 1.4 0 0 1-.06-.62v-3c0-.23-.06-.45-.09-.67Zm.82 7.15v4.68a1.4 1.4 0 0 0 .63 1.39 1.47 1.47 0 0 0 .81-1.53c-.05-1.29 0-2.58 0-3.87a5.56 5.56 0 0 0-.07-.69Z"></path>
-                                                <path d="M18.05 36.16H5.42c-.5 0-.63-.16-.67-.65V25.46c0-.58.12-.68.68-.71s1 0 1.54 0h2.34a1.54 1.54 0 0 1 1.26.52c1.44 1.53 2.92 3 4.37 4.54a1.54 1.54 0 0 0 1.25.55h3.87a1.36 1.36 0 0 0 1.1-.48c1.47-1.54 3-3.05 4.43-4.6a1.53 1.53 0 0 1 1.26-.53h3.6c1 0 1.07.11 1.07 1.11v9.18c0 1-.07 1.08-1.07 1.08ZM30.3 25.85h-3a1.55 1.55 0 0 0-1.3.55c-1.42 1.5-2.89 3-4.31 4.47a1.79 1.79 0 0 1-1.42.6h-4.59a1.56 1.56 0 0 1-1.26-.55c-1.17-1.24-2.43-2.41-3.54-3.71a3.27 3.27 0 0 0-3.25-1.37 8.82 8.82 0 0 1-1.26 0 4.89 4.89 0 0 0-.57.08A82 82 0 0 0 5.85 35c1.75.16 23.79.09 24.45-.09Z"></path>
-                                                <path d="M18 28.92a2.88 2.88 0 0 1-3-1.26c-1-1.17-2.1-2.23-3.15-3.33a8.88 8.88 0 0 1-.42-.47.42.42 0 0 1 0-.64.49.49 0 0 1 .72-.07 4.78 4.78 0 0 1 .45.45c1.2 1.26 2.41 2.51 3.59 3.78a1.26 1.26 0 0 0 1.09.48 6.33 6.33 0 0 0 2-.09 5.12 5.12 0 0 0 1.42-1.34c1-1 1.9-2 2.86-3 .44-.47.71-.52 1-.26s.22.55-.21 1C23 25.62 21.59 27 20.23 28.48a1.24 1.24 0 0 1-1 .45c-.41-.03-.8-.01-1.23-.01Z"></path>
-                                                <path d="M15.5 5v1.62c0 .34-.17.59-.54.57a.49.49 0 0 1-.48-.55V3.31a.45.45 0 0 1 .45-.47c.31 0 .54.12.55.45V5Z"></path>
-                                                <path d="M15 8.08c.31 0 .5.25.5.62a.53.53 0 0 1-.53.59c-.3 0-.5-.26-.5-.63s.21-.59.53-.58Z"></path>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                                 
-                                <p>Food and Beverages</p>
-                            </div>
-                            <div class="solution">
-                                <div class="img-wrapper">
-                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="-0.018 -0.011 36.109 36.171" viewBox="-0.018 -0.011 36.109 36.171" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
-                                        <g>
-                                            <g>
-                                                <path d="M19.82 19.27v2.05a15 15 0 0 0 0 2.42 2.88 2.88 0 0 1-1.34 2.74.63.63 0 0 1-.89 0 1.42 1.42 0 0 1-.12-.13c-1.23-1.11-1.23-1.11-1.23-2.77v-4.29l-.61-.07a2.21 2.21 0 0 1-2.32-2.42v-4.66c-.09-.09-.14-.18-.21-.21a2.43 2.43 0 0 1-1.44-2.48V1.08H1.19a2.09 2.09 0 0 1-.71 0A.83.83 0 0 1 0 .6.47.47 0 0 1 .46 0h34.4a5.72 5.72 0 0 1 .72 0 .52.52 0 0 1 .51.53.49.49 0 0 1-.51.52H24.4V9.5a2.36 2.36 0 0 1-1.22 2.33l-.42.24v4.68a2.23 2.23 0 0 1-2.36 2.47Zm-7-18.15v8.57c0 .9.44 1.27 1.39 1.27h7.65c1.15 0 1.51-.35 1.52-1.5V1.71c0-.19-.06-.39-.09-.59Zm3.73 11v2.72a.47.47 0 0 1-.53.49.5.5 0 0 1-.51-.51V12.1h-.94c-.05.1-.1.15-.1.2v4.68c0 .79.44 1.16 1.28 1.17h4.68c.91 0 1.33-.41 1.35-1.32v-4.4a1.51 1.51 0 0 0-.11-.38l-.94.05v2.4a.84.84 0 0 1-.09.51.79.79 0 0 1-.58.27.67.67 0 0 1-.37-.51v-2.43c0-.08-.07-.16-.12-.28h-.86v3.64a1.4 1.4 0 0 1-.06.62.65.65 0 0 1-.45.34.65.65 0 0 1-.46-.34 1.4 1.4 0 0 1-.06-.62v-3c0-.23-.06-.45-.09-.67Zm.82 7.15v4.68a1.4 1.4 0 0 0 .63 1.39 1.47 1.47 0 0 0 .81-1.53c-.05-1.29 0-2.58 0-3.87a5.56 5.56 0 0 0-.07-.69Z"></path>
-                                                <path d="M18.05 36.16H5.42c-.5 0-.63-.16-.67-.65V25.46c0-.58.12-.68.68-.71s1 0 1.54 0h2.34a1.54 1.54 0 0 1 1.26.52c1.44 1.53 2.92 3 4.37 4.54a1.54 1.54 0 0 0 1.25.55h3.87a1.36 1.36 0 0 0 1.1-.48c1.47-1.54 3-3.05 4.43-4.6a1.53 1.53 0 0 1 1.26-.53h3.6c1 0 1.07.11 1.07 1.11v9.18c0 1-.07 1.08-1.07 1.08ZM30.3 25.85h-3a1.55 1.55 0 0 0-1.3.55c-1.42 1.5-2.89 3-4.31 4.47a1.79 1.79 0 0 1-1.42.6h-4.59a1.56 1.56 0 0 1-1.26-.55c-1.17-1.24-2.43-2.41-3.54-3.71a3.27 3.27 0 0 0-3.25-1.37 8.82 8.82 0 0 1-1.26 0 4.89 4.89 0 0 0-.57.08A82 82 0 0 0 5.85 35c1.75.16 23.79.09 24.45-.09Z"></path>
-                                                <path d="M18 28.92a2.88 2.88 0 0 1-3-1.26c-1-1.17-2.1-2.23-3.15-3.33a8.88 8.88 0 0 1-.42-.47.42.42 0 0 1 0-.64.49.49 0 0 1 .72-.07 4.78 4.78 0 0 1 .45.45c1.2 1.26 2.41 2.51 3.59 3.78a1.26 1.26 0 0 0 1.09.48 6.33 6.33 0 0 0 2-.09 5.12 5.12 0 0 0 1.42-1.34c1-1 1.9-2 2.86-3 .44-.47.71-.52 1-.26s.22.55-.21 1C23 25.62 21.59 27 20.23 28.48a1.24 1.24 0 0 1-1 .45c-.41-.03-.8-.01-1.23-.01Z"></path>
-                                                <path d="M15.5 5v1.62c0 .34-.17.59-.54.57a.49.49 0 0 1-.48-.55V3.31a.45.45 0 0 1 .45-.47c.31 0 .54.12.55.45V5Z"></path>
-                                                <path d="M15 8.08c.31 0 .5.25.5.62a.53.53 0 0 1-.53.59c-.3 0-.5-.26-.5-.63s.21-.59.53-.58Z"></path>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                                 
-                                <p>Metal Fabrication</p>
-                            </div>
-                            <div class="solution">
-                                <div class="img-wrapper">
-                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="43 38 114 124" viewBox="43 38 114 124" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-m0hv4dzg1 svg [data-color="1"] {fill: #FFFFFF;}
-                                        #comp-m0hv4dzg1 svg [data-color="2"] {fill: #FFFFFF;}</style></defs>
-                                            <g>
-                                                <path fill="#00c5a2" d="M90.3 38v8.8H69.6V38h20.7z" data-color="1"></path>
-                                                <path d="M157 69h-46.3l.3 33.8c-4-5.6-9.6-10.1-16.3-12.8V61.9h10.2v-8.8H55.1v8.8h11.3v28.2C52.2 95.8 43 109.3 43 124.7c0 20.6 16.8 37.3 37.5 37.3 13.1 0 24.6-6.7 31.3-16.8 2 9.5 10 16.6 19.3 16.6 5 0 9.7-2.1 13.3-5.8.1-.1.2-.3.4-.4 3.6-4 5.6-9.3 5.5-14.9l-.6-62.7h7.2v-9h.1zm-76.5 84.2c-15.8 0-28.6-12.8-28.6-28.5 0-12.6 8.1-23.5 20.2-27.2l3.1-1V61.9h10.6v34.6l3.1 1c11.7 3.6 19.7 14 20.1 26.1H93.7v8.8h14.4c-3.4 11.9-14.5 20.8-27.6 20.8zM143 98.6h-12.6v8.8h12.7l.3 33.3c.1 3.6-1.2 7-3.5 9.5-2.4 2.4-5.4 3.9-8.7 4-6.9 0-12.7-6.1-12.8-13.6l-.5-62.7h25l.1 20.7z" fill="#0063a0" data-color="2"></path>
-                                                <path fill="#00c5a2" d="M143.1 107.4h-12.7v-8.8H143l.1 8.8z" data-color="1"></path>
-                                                <path d="M93.7 132.5H108c.7-2.5 1.1-5.2 1.1-8v-1H93.7v9z" fill="#00c5a2" data-color="1"></path>
+                                                <path d="M99.718 20.811c-32.299 0-61.151 19.283-73.504 49.127a78.968 78.968 0 0 0-3.467 10.349 79.739 79.739 0 0 0-2.549 20.044c0 43.848 35.673 79.52 79.52 79.52s79.52-35.672 79.52-79.52c0-43.847-35.673-79.52-79.52-79.52zm34.719 38.313c2.03 0 3.681 1.651 3.681 3.681s-1.651 3.681-3.681 3.681c-2.029 0-3.68-1.651-3.68-3.681s1.651-3.681 3.68-3.681zm-60.365 97.471c-2.03 0-3.681-1.65-3.681-3.68s1.651-3.682 3.681-3.682c2.029 0 3.68 1.652 3.68 3.682s-1.651 3.68-3.68 3.68zm75.764.777l-22.751-.014v-11.142c3.122-.794 5.449-3.605 5.449-6.971 0-3.979-3.237-7.217-7.216-7.217s-7.216 3.238-7.216 7.217c0 3.366 2.326 6.177 5.449 6.971v11.14c-13.07-.006-16.269-.004-17.164.025v-.009c-1.484 0-2.591-.413-3.386-1.262-1.718-1.837-1.521-5.123-1.514-5.28l-.001-14.419c-.08-2.72-.956-4.809-2.605-6.207-2.246-1.907-5.057-1.764-5.764-1.693H74.494c-.78-3.143-3.603-5.488-6.984-5.488-3.979 0-7.216 3.237-7.216 7.216s3.237 7.215 7.216 7.215c3.351 0 6.151-2.307 6.959-5.408h18.747l.223-.014c.02-.005 1.904-.211 3.173.882.84.725 1.291 1.937 1.34 3.549l.005 14.238c-.015.195-.322 4.826 2.444 7.806 1.48 1.593 3.495 2.401 5.986 2.401l.226-.005c.734-.007 4.294-.021 18.263-.01l20.653.013c-12.746 9.664-28.617 15.411-45.81 15.411a75.668 75.668 0 0 1-23.879-3.865v-12.564c3.122-.794 5.448-3.605 5.448-6.971 0-3.979-3.237-7.217-7.216-7.217s-7.216 3.238-7.216 7.217c0 3.366 2.326 6.177 5.449 6.971v11.292c-11.637-4.518-21.887-11.82-29.939-21.089l-.009-45.897c-.003-.04-.06-.967.698-1.768.939-.994 2.789-1.504 5.394-1.45l27.163-.002c.386.013 3.771.101 6.085-2.216 1.401-1.402 2.056-3.309 1.948-5.587v-7.535c3.127-.79 5.458-3.605 5.458-6.974 0-3.979-3.237-7.216-7.216-7.216s-7.216 3.237-7.216 7.216c0 3.362 2.321 6.171 5.439 6.969l.001 7.623c.062 1.336-.233 2.316-.904 2.995-1.238 1.254-3.424 1.194-3.515 1.193H48.479c-3.701-.045-6.431.829-8.084 2.654-1.607 1.773-1.603 3.773-1.565 4.339v41.307c-9.478-12.677-15.096-28.398-15.096-45.408 0-6.263.781-12.48 2.287-18.501h28.541c.117.009.318.019.582.019 1.239 0 3.874-.236 5.816-2.06 1.579-1.482 2.323-3.594 2.214-6.277l-.037.001c.161-1.622.142-5.616.059-16.507 3.146-.778 5.494-3.603 5.494-6.985 0-3.979-3.237-7.216-7.216-7.216s-7.216 3.237-7.216 7.216c0 3.349 2.303 6.146 5.401 6.957.04 6.006.07 13.665.023 15.836l-.072.072.032.771c.065 1.604-.301 2.796-1.089 3.545-1.374 1.308-3.719 1.107-3.736 1.105l-27.793-.009c.718-2.372 1.512-4.724 2.456-7.006 9.032-21.819 27.296-37.718 49.199-43.99l.002 22.777c-.011.212-.234 5.234 2.928 8.533 1.776 1.853 4.171 2.767 7.187 2.751h16.493l.179-.009c.058-.002 1.449-.107 2.638 1.062 1.515 1.488 2.171 4.444 1.895 8.666v33.25c-3.089.816-5.384 3.609-5.384 6.951 0 3.979 3.237 7.217 7.216 7.217s7.216-3.238 7.216-7.217c0-3.389-2.357-6.22-5.513-6.991l-.003-33.093c.352-5.308-.67-9.141-3.038-11.392-2.167-2.061-4.646-2.027-5.283-1.979H88.781c-2.052-.016-3.517-.52-4.605-1.649-2.105-2.181-1.964-5.886-1.961-6.009v-10.9h24.899c.794 3.122 3.606 5.449 6.971 5.449 3.979 0 7.216-3.237 7.216-7.216s-3.237-7.216-7.216-7.216c-3.366 0-6.178 2.326-6.971 5.448H82.215v-9.362a76.511 76.511 0 0 1 17.504-2.029c11.799 0 22.978 2.704 32.951 7.524v23.964c-3.122.794-5.448 3.606-5.448 6.971 0 3.979 3.237 7.216 7.216 7.216s7.216-3.237 7.216-7.216c0-3.366-2.326-6.178-5.449-6.971V33.702a76.333 76.333 0 0 1 14.146 10.034l.003 31.927c-.009.154-.175 3.799 2.208 6.446 1.443 1.604 3.451 2.481 5.965 2.608l.173.002.066-.002c.407-.016 1.674-.042 2.476.761.42.42.68 1.061.81 1.873-3.07.83-5.347 3.611-5.347 6.94 0 3.979 3.237 7.216 7.216 7.216s7.216-3.237 7.216-7.216c0-3.395-2.364-6.23-5.527-6.996-.194-1.801-.809-3.256-1.867-4.315-1.243-1.244-2.941-1.859-5.038-1.794-4.792-.243-4.858-4.494-4.82-5.429V47.113c13.481 13.719 21.817 32.51 21.817 53.218a75.539 75.539 0 0 1-5.413 28.11l-19.841.003c-1.596.119-6.178.003-8.103-1.795-.566-.528-.83-1.153-.83-1.968V93.193c3.122-.794 5.449-3.606 5.449-6.971 0-3.979-3.237-7.216-7.216-7.216s-7.216 3.237-7.216 7.216c0 3.366 2.326 6.178 5.449 6.971v31.488c0 1.788.678 3.364 1.958 4.557 2.631 2.451 7.209 2.776 9.417 2.776a17.5 17.5 0 0 0 1.216-.038h18.2a76.349 76.349 0 0 1-18.936 25.396zm-24.518-14.446a3.684 3.684 0 0 1-3.681-3.68c0-2.03 1.651-3.682 3.681-3.682s3.681 1.652 3.681 3.682a3.685 3.685 0 0 1-3.681 3.68zm-54.127-12.688c0 2.03-1.651 3.68-3.681 3.68a3.684 3.684 0 0 1-3.681-3.68c0-2.03 1.651-3.68 3.681-3.68 2.03 0 3.681 1.65 3.681 3.68zm7.014-51.579a3.685 3.685 0 0 1 3.68-3.681 3.685 3.685 0 0 1 3.681 3.681 3.685 3.685 0 0 1-3.681 3.681 3.685 3.685 0 0 1-3.68-3.681zM57.792 50.02a3.685 3.685 0 0 1 3.68-3.681c2.03 0 3.681 1.651 3.681 3.681s-1.651 3.681-3.681 3.681a3.685 3.685 0 0 1-3.68-3.681zm57.723 61.261a3.686 3.686 0 0 1-3.681 3.682c-2.029 0-3.68-1.652-3.68-3.682s1.651-3.68 3.68-3.68c2.03 0 3.681 1.65 3.681 3.68zm-5.111-73.776a3.685 3.685 0 0 1 3.681-3.68 3.685 3.685 0 0 1 3.681 3.68 3.685 3.685 0 0 1-3.681 3.681 3.685 3.685 0 0 1-3.681-3.681zm57.199 56.786a3.685 3.685 0 0 1-3.681 3.68 3.684 3.684 0 0 1-3.68-3.68 3.685 3.685 0 0 1 3.68-3.681 3.685 3.685 0 0 1 3.681 3.681zm-27.854-4.388c-2.03 0-3.681-1.651-3.681-3.681s1.651-3.681 3.681-3.681c2.03 0 3.681 1.651 3.681 3.681s-1.651 3.681-3.681 3.681z" fill="#00FF00" data-color="1"></path>
                                             </g>
                                         </svg>
+                                    </div>
+                                    
+                                    <p>Electronics</p>
                                 </div>
-                                 
-                                <p>Chemical Industry</p>
-                            </div>
-                            <div class="solution">
-                                <div class="img-wrapper">
-                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0.002 38.96 38.498" viewBox="0 0.002 38.96 38.498" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
-                                        <g>
+                                <div class="solution">
+                                    <div class="img-wrapper">
+                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="-0.018 -0.011 36.109 36.171" viewBox="-0.018 -0.011 36.109 36.171" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
                                             <g>
-                                                <path d="M0 38.38v-1.14l2.06-.1V12.69A1.86 1.86 0 0 1 3 10.94C8.14 7.47 13.29 4 18.44.46c.9-.61.91-.61 1.82 0q7.81 5.21 15.63 10.4a1.67 1.67 0 0 1 .86 1.59v24.74h2.21v1.11c-.71.2-37.16.29-38.96.08ZM19.43 1.43c-.15.07-.24.09-.32.14Q11.48 6.78 3.82 12a1.07 1.07 0 0 0-.46 1v23.5a6.83 6.83 0 0 0 .07.68h3.63c.18 0 .36 0 .56-.06V15.66H6.25a.64.64 0 0 1-.73-.66v-2.25a.65.65 0 0 1 .74-.67h26.22c.64 0 .78.16.8.78s0 1.38 0 2.07-.12.72-.8.75h-1.29v4.12h2.28c.7 0 .87.2.91.9v16.42h1.07a3.39 3.39 0 0 0 0-.35V12.7a1 1 0 0 0-.55-1c-1.24-.8-2.46-1.62-3.68-2.44Zm10.39 14.4c-1.24-.2-20.13-.15-20.77.05v21.25h6.86v-7.67c0-1 .07-1.07 1.07-1.07h6.57c.28 0 .55 0 .91-.05v-7.26c0-1.2.1-1.3 1.26-1.3h4.1Zm-4 20.8H33v-6.88h-1.14v3c0 .76-.2.93-1 .95s-1.76 0-2.63 0c-1.2 0-1.25 0-1.26-1.3v-2.67h-1.15Zm6-15.5v2.72c0 1.09-.11 1.19-1.17 1.2h-2.4C27 25 27 25 27 23.76v-2.6h-1.18v6.9H33v-6.93Zm-8.58 8.61v3.07c0 .69-.23.86-.85.87H19.1a.68.68 0 0 1-.75-.76v-3.17h-1.12v6.9h7.17v-6.91ZM6.84 14.27H32l-.1-.83H6.84Zm23.7 6.87h-2.18v2.54h2.18ZM19.76 32.31h2.16v-2.57h-2.16Zm8.59-2.58v2.58h2.23v-2.58Z"></path>
-                                                <path d="M19.31 6.39h1.88A1.77 1.77 0 0 1 23 8.19 1.76 1.76 0 0 1 21.14 10h-3.85a1.75 1.75 0 0 1-1.78-1.79 1.77 1.77 0 0 1 1.74-1.81h2.06Zm-.08 1.35h-1.78c-.36 0-.62.15-.64.53s.26.56.62.56H21c.4 0 .7-.17.69-.59s-.38-.5-.76-.5Z"></path>
+                                                <g>
+                                                    <path d="M19.82 19.27v2.05a15 15 0 0 0 0 2.42 2.88 2.88 0 0 1-1.34 2.74.63.63 0 0 1-.89 0 1.42 1.42 0 0 1-.12-.13c-1.23-1.11-1.23-1.11-1.23-2.77v-4.29l-.61-.07a2.21 2.21 0 0 1-2.32-2.42v-4.66c-.09-.09-.14-.18-.21-.21a2.43 2.43 0 0 1-1.44-2.48V1.08H1.19a2.09 2.09 0 0 1-.71 0A.83.83 0 0 1 0 .6.47.47 0 0 1 .46 0h34.4a5.72 5.72 0 0 1 .72 0 .52.52 0 0 1 .51.53.49.49 0 0 1-.51.52H24.4V9.5a2.36 2.36 0 0 1-1.22 2.33l-.42.24v4.68a2.23 2.23 0 0 1-2.36 2.47Zm-7-18.15v8.57c0 .9.44 1.27 1.39 1.27h7.65c1.15 0 1.51-.35 1.52-1.5V1.71c0-.19-.06-.39-.09-.59Zm3.73 11v2.72a.47.47 0 0 1-.53.49.5.5 0 0 1-.51-.51V12.1h-.94c-.05.1-.1.15-.1.2v4.68c0 .79.44 1.16 1.28 1.17h4.68c.91 0 1.33-.41 1.35-1.32v-4.4a1.51 1.51 0 0 0-.11-.38l-.94.05v2.4a.84.84 0 0 1-.09.51.79.79 0 0 1-.58.27.67.67 0 0 1-.37-.51v-2.43c0-.08-.07-.16-.12-.28h-.86v3.64a1.4 1.4 0 0 1-.06.62.65.65 0 0 1-.45.34.65.65 0 0 1-.46-.34 1.4 1.4 0 0 1-.06-.62v-3c0-.23-.06-.45-.09-.67Zm.82 7.15v4.68a1.4 1.4 0 0 0 .63 1.39 1.47 1.47 0 0 0 .81-1.53c-.05-1.29 0-2.58 0-3.87a5.56 5.56 0 0 0-.07-.69Z"></path>
+                                                    <path d="M18.05 36.16H5.42c-.5 0-.63-.16-.67-.65V25.46c0-.58.12-.68.68-.71s1 0 1.54 0h2.34a1.54 1.54 0 0 1 1.26.52c1.44 1.53 2.92 3 4.37 4.54a1.54 1.54 0 0 0 1.25.55h3.87a1.36 1.36 0 0 0 1.1-.48c1.47-1.54 3-3.05 4.43-4.6a1.53 1.53 0 0 1 1.26-.53h3.6c1 0 1.07.11 1.07 1.11v9.18c0 1-.07 1.08-1.07 1.08ZM30.3 25.85h-3a1.55 1.55 0 0 0-1.3.55c-1.42 1.5-2.89 3-4.31 4.47a1.79 1.79 0 0 1-1.42.6h-4.59a1.56 1.56 0 0 1-1.26-.55c-1.17-1.24-2.43-2.41-3.54-3.71a3.27 3.27 0 0 0-3.25-1.37 8.82 8.82 0 0 1-1.26 0 4.89 4.89 0 0 0-.57.08A82 82 0 0 0 5.85 35c1.75.16 23.79.09 24.45-.09Z"></path>
+                                                    <path d="M18 28.92a2.88 2.88 0 0 1-3-1.26c-1-1.17-2.1-2.23-3.15-3.33a8.88 8.88 0 0 1-.42-.47.42.42 0 0 1 0-.64.49.49 0 0 1 .72-.07 4.78 4.78 0 0 1 .45.45c1.2 1.26 2.41 2.51 3.59 3.78a1.26 1.26 0 0 0 1.09.48 6.33 6.33 0 0 0 2-.09 5.12 5.12 0 0 0 1.42-1.34c1-1 1.9-2 2.86-3 .44-.47.71-.52 1-.26s.22.55-.21 1C23 25.62 21.59 27 20.23 28.48a1.24 1.24 0 0 1-1 .45c-.41-.03-.8-.01-1.23-.01Z"></path>
+                                                    <path d="M15.5 5v1.62c0 .34-.17.59-.54.57a.49.49 0 0 1-.48-.55V3.31a.45.45 0 0 1 .45-.47c.31 0 .54.12.55.45V5Z"></path>
+                                                    <path d="M15 8.08c.31 0 .5.25.5.62a.53.53 0 0 1-.53.59c-.3 0-.5-.26-.5-.63s.21-.59.53-.58Z"></path>
+                                                </g>
                                             </g>
-                                        </g>
-                                    </svg>
+                                        </svg>
+                                    </div>
+                                    
+                                    <p>Food and Beverages</p>
                                 </div>
-                                 
-                                <p>Warehouse and Godowns</p>
-                            </div>
+                                <div class="solution">
+                                    <div class="img-wrapper">
+                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="-0.018 -0.011 36.109 36.171" viewBox="-0.018 -0.011 36.109 36.171" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
+                                            <g>
+                                                <g>
+                                                    <path d="M19.82 19.27v2.05a15 15 0 0 0 0 2.42 2.88 2.88 0 0 1-1.34 2.74.63.63 0 0 1-.89 0 1.42 1.42 0 0 1-.12-.13c-1.23-1.11-1.23-1.11-1.23-2.77v-4.29l-.61-.07a2.21 2.21 0 0 1-2.32-2.42v-4.66c-.09-.09-.14-.18-.21-.21a2.43 2.43 0 0 1-1.44-2.48V1.08H1.19a2.09 2.09 0 0 1-.71 0A.83.83 0 0 1 0 .6.47.47 0 0 1 .46 0h34.4a5.72 5.72 0 0 1 .72 0 .52.52 0 0 1 .51.53.49.49 0 0 1-.51.52H24.4V9.5a2.36 2.36 0 0 1-1.22 2.33l-.42.24v4.68a2.23 2.23 0 0 1-2.36 2.47Zm-7-18.15v8.57c0 .9.44 1.27 1.39 1.27h7.65c1.15 0 1.51-.35 1.52-1.5V1.71c0-.19-.06-.39-.09-.59Zm3.73 11v2.72a.47.47 0 0 1-.53.49.5.5 0 0 1-.51-.51V12.1h-.94c-.05.1-.1.15-.1.2v4.68c0 .79.44 1.16 1.28 1.17h4.68c.91 0 1.33-.41 1.35-1.32v-4.4a1.51 1.51 0 0 0-.11-.38l-.94.05v2.4a.84.84 0 0 1-.09.51.79.79 0 0 1-.58.27.67.67 0 0 1-.37-.51v-2.43c0-.08-.07-.16-.12-.28h-.86v3.64a1.4 1.4 0 0 1-.06.62.65.65 0 0 1-.45.34.65.65 0 0 1-.46-.34 1.4 1.4 0 0 1-.06-.62v-3c0-.23-.06-.45-.09-.67Zm.82 7.15v4.68a1.4 1.4 0 0 0 .63 1.39 1.47 1.47 0 0 0 .81-1.53c-.05-1.29 0-2.58 0-3.87a5.56 5.56 0 0 0-.07-.69Z"></path>
+                                                    <path d="M18.05 36.16H5.42c-.5 0-.63-.16-.67-.65V25.46c0-.58.12-.68.68-.71s1 0 1.54 0h2.34a1.54 1.54 0 0 1 1.26.52c1.44 1.53 2.92 3 4.37 4.54a1.54 1.54 0 0 0 1.25.55h3.87a1.36 1.36 0 0 0 1.1-.48c1.47-1.54 3-3.05 4.43-4.6a1.53 1.53 0 0 1 1.26-.53h3.6c1 0 1.07.11 1.07 1.11v9.18c0 1-.07 1.08-1.07 1.08ZM30.3 25.85h-3a1.55 1.55 0 0 0-1.3.55c-1.42 1.5-2.89 3-4.31 4.47a1.79 1.79 0 0 1-1.42.6h-4.59a1.56 1.56 0 0 1-1.26-.55c-1.17-1.24-2.43-2.41-3.54-3.71a3.27 3.27 0 0 0-3.25-1.37 8.82 8.82 0 0 1-1.26 0 4.89 4.89 0 0 0-.57.08A82 82 0 0 0 5.85 35c1.75.16 23.79.09 24.45-.09Z"></path>
+                                                    <path d="M18 28.92a2.88 2.88 0 0 1-3-1.26c-1-1.17-2.1-2.23-3.15-3.33a8.88 8.88 0 0 1-.42-.47.42.42 0 0 1 0-.64.49.49 0 0 1 .72-.07 4.78 4.78 0 0 1 .45.45c1.2 1.26 2.41 2.51 3.59 3.78a1.26 1.26 0 0 0 1.09.48 6.33 6.33 0 0 0 2-.09 5.12 5.12 0 0 0 1.42-1.34c1-1 1.9-2 2.86-3 .44-.47.71-.52 1-.26s.22.55-.21 1C23 25.62 21.59 27 20.23 28.48a1.24 1.24 0 0 1-1 .45c-.41-.03-.8-.01-1.23-.01Z"></path>
+                                                    <path d="M15.5 5v1.62c0 .34-.17.59-.54.57a.49.49 0 0 1-.48-.55V3.31a.45.45 0 0 1 .45-.47c.31 0 .54.12.55.45V5Z"></path>
+                                                    <path d="M15 8.08c.31 0 .5.25.5.62a.53.53 0 0 1-.53.59c-.3 0-.5-.26-.5-.63s.21-.59.53-.58Z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    
+                                    <p>Metal Fabrication</p>
+                                </div>
+                                <div class="solution">
+                                    <div class="img-wrapper">
+                                            <svg preserveAspectRatio="xMidYMid meet" data-bbox="43 38 114 124" viewBox="43 38 114 124" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-m0hv4dzg1 svg [data-color="1"] {fill: #FFFFFF;}
+                                                #comp-m0hv4dzg1 svg [data-color="2"] {fill: #FFFFFF;}</style></defs>
+                                                    <g>
+                                                        <path fill="#00c5a2" d="M90.3 38v8.8H69.6V38h20.7z" data-color="1"></path>
+                                                        <path d="M157 69h-46.3l.3 33.8c-4-5.6-9.6-10.1-16.3-12.8V61.9h10.2v-8.8H55.1v8.8h11.3v28.2C52.2 95.8 43 109.3 43 124.7c0 20.6 16.8 37.3 37.5 37.3 13.1 0 24.6-6.7 31.3-16.8 2 9.5 10 16.6 19.3 16.6 5 0 9.7-2.1 13.3-5.8.1-.1.2-.3.4-.4 3.6-4 5.6-9.3 5.5-14.9l-.6-62.7h7.2v-9h.1zm-76.5 84.2c-15.8 0-28.6-12.8-28.6-28.5 0-12.6 8.1-23.5 20.2-27.2l3.1-1V61.9h10.6v34.6l3.1 1c11.7 3.6 19.7 14 20.1 26.1H93.7v8.8h14.4c-3.4 11.9-14.5 20.8-27.6 20.8zM143 98.6h-12.6v8.8h12.7l.3 33.3c.1 3.6-1.2 7-3.5 9.5-2.4 2.4-5.4 3.9-8.7 4-6.9 0-12.7-6.1-12.8-13.6l-.5-62.7h25l.1 20.7z" fill="#0063a0" data-color="2"></path>
+                                                        <path fill="#00c5a2" d="M143.1 107.4h-12.7v-8.8H143l.1 8.8z" data-color="1"></path>
+                                                        <path d="M93.7 132.5H108c.7-2.5 1.1-5.2 1.1-8v-1H93.7v9z" fill="#00c5a2" data-color="1"></path>
+                                                    </g>
+                                                </svg>
+                                    </div>
+                                    
+                                    <p>Chemical Industry</p>
+                                </div>
+                                <div class="solution">
+                                    <div class="img-wrapper">
+                                        <svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0.002 38.96 38.498" viewBox="0 0.002 38.96 38.498" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
+                                            <g>
+                                                <g>
+                                                    <path d="M0 38.38v-1.14l2.06-.1V12.69A1.86 1.86 0 0 1 3 10.94C8.14 7.47 13.29 4 18.44.46c.9-.61.91-.61 1.82 0q7.81 5.21 15.63 10.4a1.67 1.67 0 0 1 .86 1.59v24.74h2.21v1.11c-.71.2-37.16.29-38.96.08ZM19.43 1.43c-.15.07-.24.09-.32.14Q11.48 6.78 3.82 12a1.07 1.07 0 0 0-.46 1v23.5a6.83 6.83 0 0 0 .07.68h3.63c.18 0 .36 0 .56-.06V15.66H6.25a.64.64 0 0 1-.73-.66v-2.25a.65.65 0 0 1 .74-.67h26.22c.64 0 .78.16.8.78s0 1.38 0 2.07-.12.72-.8.75h-1.29v4.12h2.28c.7 0 .87.2.91.9v16.42h1.07a3.39 3.39 0 0 0 0-.35V12.7a1 1 0 0 0-.55-1c-1.24-.8-2.46-1.62-3.68-2.44Zm10.39 14.4c-1.24-.2-20.13-.15-20.77.05v21.25h6.86v-7.67c0-1 .07-1.07 1.07-1.07h6.57c.28 0 .55 0 .91-.05v-7.26c0-1.2.1-1.3 1.26-1.3h4.1Zm-4 20.8H33v-6.88h-1.14v3c0 .76-.2.93-1 .95s-1.76 0-2.63 0c-1.2 0-1.25 0-1.26-1.3v-2.67h-1.15Zm6-15.5v2.72c0 1.09-.11 1.19-1.17 1.2h-2.4C27 25 27 25 27 23.76v-2.6h-1.18v6.9H33v-6.93Zm-8.58 8.61v3.07c0 .69-.23.86-.85.87H19.1a.68.68 0 0 1-.75-.76v-3.17h-1.12v6.9h7.17v-6.91ZM6.84 14.27H32l-.1-.83H6.84Zm23.7 6.87h-2.18v2.54h2.18ZM19.76 32.31h2.16v-2.57h-2.16Zm8.59-2.58v2.58h2.23v-2.58Z"></path>
+                                                    <path d="M19.31 6.39h1.88A1.77 1.77 0 0 1 23 8.19 1.76 1.76 0 0 1 21.14 10h-3.85a1.75 1.75 0 0 1-1.78-1.79 1.77 1.77 0 0 1 1.74-1.81h2.06Zm-.08 1.35h-1.78c-.36 0-.62.15-.64.53s.26.56.62.56H21c.4 0 .7-.17.69-.59s-.38-.5-.76-.5Z"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    
+                                    <p>Warehouse and Godowns</p>
+                                </div>
+                            @endforelse
                         </div>
                     </div>
                 </div>
@@ -242,71 +283,84 @@
         </div>
        </section>
 
-       <section class="epoxy-floor-cost position-relative py-5" style="background: url('{{ asset('images/y-floor-bg.webp') }}'); ">
+       <section class="epoxy-floor-cost position-relative py-5" style="background: url('{{ !empty($epoxyCost['bg']) ? asset('storage/' . $epoxyCost['bg']) :  asset('images/y-floor-bg.webp') }}'); ">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="epoxy-floor-content d-flex flex-column  position-relative z-1 text-white gap-1 gap-md-5">
                         <div class="heading-holder text-center">
-                            <h2 class="fw-bold"> <span>EPOXY FLOORING COST:</span> </h2>
+                            <h2 class="fw-bold">{!! $epoxyCost['heading'] ?? ' <span>EPOXY FLOORING COST:</span>' !!} </h2>
                         </div>
                         <div class="components-factors text-center">
-                            <p>Components and Factors</p>
+                        <p>{!! $epoxyCost['subhead1'] ?? 'Components and Factors' !!}</p>
                             <div class="component-text">
-                                <p><a href="{{ config('app.url') . '/epoxy-flooring-cost-price'}}">Epoxy flooring cost</a> is crucial when planning installation. It's calculated per square foot or meter and varies based on area size, installation complexity, and material quality. Get an accurate estimate from RachTR to stay within budget.</p>
+                                @if(!empty($epoxyCost['paragraph1']))
+                                    {!! $epoxyCost['paragraph1'] !!}
+                                @else
+                                    <p><a href="{{ config('app.url') . '/epoxy-flooring-cost-price'}}">Epoxy flooring cost</a> is crucial when planning installation. It's calculated per square foot or meter and varies based on area size, installation complexity, and material quality. Get an accurate estimate from RachTR to stay within budget.</p>
+                                @endif
                             </div>
                         </div>
                         <div class="components text-center pt-5 pt-md-0">
-                            <p>Components</p>
-                            <h4>Major Components of Cost in Industrial Flooring</h4>
+                            <p>{!! $epoxyCost['subhead2'] ?? 'Components' !!}</p>
+                            <h4>{!! $epoxyCost['paragraph2'] ?? 'Major Components of Cost in Industrial Flooring' !!}</h4>
                             <div class="row pt-4">
                                 <div class="col-12 col-md-6">
-                                    <img src="{{ asset('images/epoxy_cost_svg_img.webp')}}" alt="epoxy cost img">
+                                    <img src="{{ !empty($epoxyCost['image']) ? asset('storage/' . $epoxyCost['image']) :  asset('images/epoxy_cost_svg_img.webp')}}" alt="{{ $epoxyCost['imgalt'] ?? 'epoxy cost image'}}">
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="component-list">
-                                        <div class="component">
-                                            <div class="img-wrapper">
-                                                <svg preserveAspectRatio="none" data-bbox="0.022 0 198.618 174" viewBox="0.022 0 198.618 174" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
-                                                    <g>
-                                                        <g>
-                                                            <path d="M99.57 0h86.53c2.18 0 4.37 0 6.54.12 3.62.26 5.93 2 5.93 5.9 0 7.75.21 15.51-.1 23.24-.07 1.85-1.39 4.55-2.89 5.25-3.46 1.61-3.48 4.41-3.64 7.23q-1 18.12-1.84 36.27-1.83 42.47-3.54 84.93c-.42 10.2-1.34 11.06-11.56 11.06H23c-9.42-.09-10.49-1.06-10.89-10.26-.72-16.69-1.38-33.39-2.09-50.08-1-22.5-1.89-45-3-67.5-.2-4.79.7-10.16-5.48-12.84-1-.45-1.38-3.44-1.43-5.27C0 21.52 0 15 .07 8.44.17 1.21 1.11.19 8.68.15 36.55 0 64.42 0 92.3 0Zm-83 35.91c2 42.67 3.92 85 5.87 127.34H176.2c2-42.64 3.89-84.82 5.83-127.14h-21.15v17.25c0 3.41-.55 6.48-4.59 7-3.1.44-5-2.32-5.16-7.17-.08-2.9 0-5.82 0-8.72s-.28-5.6-.43-8.46h-14.46c-.18 2.77.25 5.19-.62 7s-3 4.29-4.7 4.35-3.92-2.28-4.84-4.11c-1-2-.76-4.6-1.11-7.37Zm-5.82-11.24h177.07V10.81H10.12c0 3.29-.07 5.92 0 8.55.09 1.64.39 3.29.63 5.31"></path>
-                                                            <path d="M98.64 142.4c-20.09-.41-35.71-18.51-31.93-38.19A62.3 62.3 0 0 1 75.4 83c5.16-8.09 11.8-15.28 18.22-22.49 4.51-5.06 7-5.19 11.34-.06a324 324 0 0 1 21.65 28.05 35.27 35.27 0 0 1 5.44 26.39 33.24 33.24 0 0 1-33.41 27.51m.7-73.12C89.6 79.37 80.88 89.36 77.1 102.54a23.14 23.14 0 1 0 44.38-.3c-3.88-12.91-12.4-22.78-22.14-32.96"></path>
-                                                        </g>
-                                                    </g>
-                                                </svg>
+                                        @forelse($epoxyCost['solutions'] ?? [] as $solution)
+                                            <div class="component">
+                                                <div class="img-wrapper">
+                                                    {!! $solution['icon'] !!}
+                                                </div>
+                                                <p>{{ $solution['title'] }}</p> 
                                             </div>
-                                            <p>Material or epoxy coatings cost</p> 
-                                        </div>
-                                        <div class="component">
-                                            <div class="img-wrapper">
-                                                <svg preserveAspectRatio="none" data-bbox="0 0.076 237 219.434" viewBox="0 0.076 237 219.434" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
-                                                    <g>
+                                        @empty
+                                            <div class="component">
+                                                <div class="img-wrapper">
+                                                    <svg preserveAspectRatio="none" data-bbox="0.022 0 198.618 174" viewBox="0.022 0 198.618 174" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
                                                         <g>
-                                                            <path d="M170.27 94.93c5.74-2.16 5.21-6.44 5.36-10.37.63-17 0-17.71-16.62-17.72-12 0-24 .11-36.06 0-9.5-.13-10.6-1.21-10.69-10.18-.06-5.65.73-11.26-5.58-14.78-1.39-.78-1.74-4.2-1.8-6.42-.21-7.67-.3-15.36 0-23 .29-7.94 4.8-12.53 11.48-12.38 6.23.15 10.6 4.59 10.91 12 .35 8 .31 16 0 24-.1 2.44-1.06 6-2.82 7-6.65 4-4.46 9.38-3.62 15.73 13.35 0 26.33.54 39.23-.13 17.88-.92 24.6 4.28 23.92 23.95-.37 10.47-2.37 18.48-14.09 21.44-.29 1.44-.72 3-.9 4.59-.65 6-4.46 7.4-9.84 7.36-17-.15-34.06 0-51.09 0-9 0-18-.18-27.05.06-5.55.14-8.8-1.75-9.8-7.53-.31-1.78-2-3.67-3.6-4.8-4.47-3.24-5-5.42-.42-7.64 2.93-1.43 3.94-2.79 4.27-5.72.65-5.86 4.48-7.33 9.91-7.3 25.38.15 50.76 0 76.14.08 9.54-.09 9.54.01 12.76 11.76"></path>
-                                                            <path d="M159.3 218.58H81.75c1.15-2.33 2-4.31 3-6.13 7.15-12 14.57-23.85 21.41-36a24.9 24.9 0 0 0 2.8-11.29c.33-13.3.13-26.61.13-40.75H131c0 11.8.56 23.4-.17 34.92-.6 9.56 2.4 17.49 7.36 25.24 6.98 10.82 13.62 21.87 21.11 34.01"></path>
-                                                            <path d="M0 218.58c21.74-12.79 42.49-24.72 63-37.11C82.54 169.61 78.6 176 79.06 154c.19-9 .11-18 .2-27a13.5 13.5 0 0 1 .74-2.66h20.48c.14 2.84.38 6 .43 9.19.08 4.66 0 9.33 0 14 0 25.3 0 25.28-15.32 45.14-5.27 6.85-10.55 13.71-15.55 20.77-2.93 4.13-6.25 6.08-11.61 6-18.65-.27-37.32 0-56 .07a14.3 14.3 0 0 1-2.43-.93"></path>
-                                                            <path d="M139.27 124h21.09c.26 2.85.71 5.69.73 8.54.09 10.32.4 20.67-.11 31-.31 6.46 1.72 10.26 7.5 13.54 21.11 12 41.89 24.56 62.78 36.93a16 16 0 0 1 5.74 5.38h-11c-15 0-30-.07-45 0-4.24 0-7.35-.9-10.09-4.76-9.42-13.3-19.42-26.18-29-39.38a13.5 13.5 0 0 1-2.55-7.25c-.21-14.33-.09-28.63-.09-44"></path>
+                                                            <g>
+                                                                <path d="M99.57 0h86.53c2.18 0 4.37 0 6.54.12 3.62.26 5.93 2 5.93 5.9 0 7.75.21 15.51-.1 23.24-.07 1.85-1.39 4.55-2.89 5.25-3.46 1.61-3.48 4.41-3.64 7.23q-1 18.12-1.84 36.27-1.83 42.47-3.54 84.93c-.42 10.2-1.34 11.06-11.56 11.06H23c-9.42-.09-10.49-1.06-10.89-10.26-.72-16.69-1.38-33.39-2.09-50.08-1-22.5-1.89-45-3-67.5-.2-4.79.7-10.16-5.48-12.84-1-.45-1.38-3.44-1.43-5.27C0 21.52 0 15 .07 8.44.17 1.21 1.11.19 8.68.15 36.55 0 64.42 0 92.3 0Zm-83 35.91c2 42.67 3.92 85 5.87 127.34H176.2c2-42.64 3.89-84.82 5.83-127.14h-21.15v17.25c0 3.41-.55 6.48-4.59 7-3.1.44-5-2.32-5.16-7.17-.08-2.9 0-5.82 0-8.72s-.28-5.6-.43-8.46h-14.46c-.18 2.77.25 5.19-.62 7s-3 4.29-4.7 4.35-3.92-2.28-4.84-4.11c-1-2-.76-4.6-1.11-7.37Zm-5.82-11.24h177.07V10.81H10.12c0 3.29-.07 5.92 0 8.55.09 1.64.39 3.29.63 5.31"></path>
+                                                                <path d="M98.64 142.4c-20.09-.41-35.71-18.51-31.93-38.19A62.3 62.3 0 0 1 75.4 83c5.16-8.09 11.8-15.28 18.22-22.49 4.51-5.06 7-5.19 11.34-.06a324 324 0 0 1 21.65 28.05 35.27 35.27 0 0 1 5.44 26.39 33.24 33.24 0 0 1-33.41 27.51m.7-73.12C89.6 79.37 80.88 89.36 77.1 102.54a23.14 23.14 0 1 0 44.38-.3c-3.88-12.91-12.4-22.78-22.14-32.96"></path>
+                                                            </g>
                                                         </g>
-                                                    </g>
-                                                </svg>
+                                                    </svg>
+                                                </div>
+                                                <p>Material or epoxy coatings cost</p> 
                                             </div>
-                                            <p>Application charges or labor cost</p> 
-                                        </div>
-                                        <div class="component">
-                                            <div class="img-wrapper">
-                                                <svg preserveAspectRatio="none" data-bbox="0.001 -0.045 262.829 244.335" viewBox="0.001 -0.045 262.829 244.335" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
-                                                    <g>
+                                            <div class="component">
+                                                <div class="img-wrapper">
+                                                    <svg preserveAspectRatio="none" data-bbox="0 0.076 237 219.434" viewBox="0 0.076 237 219.434" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
                                                         <g>
-                                                            <path d="M120.38 143.14c-5.71 1-10.87 1-15.12-3.24-.67-.68-2.26-.52-3.43-.59a7.7 7.7 0 0 0-1.83.44c-4.53 1-7.93-1.78-11.85-3.16-3.42-1.2-7.9.84-11.51-.09-4.59-1.18-6.78-5.36-7.44-10.08-1-7.47-6.55-11.48-13.36-8.71-6.59 2.68-12.68 6.57-19 9.94-7.42 4-14.69 8.26-22.31 11.77-3.11 1.43-7 1.35-10.53 1.63a3.43 3.43 0 0 1-3.9-3.92c.19-1.47 2-3.81 3.24-3.9 12.73-.92 22.25-8.56 32.36-15 8.42-5.36 17-10.33 28-10.53l.42-7.2c-9.69-2.2-18.85-4.65-28.17-6.17-3-.48-6.69.94-9.54 2.48-7.28 3.93-14.52 3.31-22 1.13C1.7 97.17-.47 96 .09 92.83s3.06-3.7 5.91-3.25c2.07.34 4.13.73 7.14 1.27 2.8-10.85 5.61-21.54 8.59-32.91C17 56.7 12.72 55.61 8.5 54.5c-5.36-1.42-7.22-3.16-6.56-6.1s3-3.53 8.63-2.24c2.47.57 4.87 1.56 7.36 1.89a26.83 26.83 0 0 1 19.38 11.72c3.42 4.92 8.31 5.94 14.67 6.34l-11.32-13.6Q22.83 31.09 5 9.65C1.35 5.26 1 3 3.39 1s4.33-1.26 8.2 3.36Q30.72 27.2 49.72 50.14c1.07 1.3 2.23 2.52 2.77 3.13 8 0 15.41-.64 22.64.21 5.74.67 11.4 2.82 16.84 5 4.4 1.74 5.62 4.59 3.91 7.18-2.28 3.45-5 1.9-7.7.36-8.44-4.89-17.54-5.02-27.53-4.35 3.56 5.76 7.35 8.92 13.62 10.13C96.23 76 118 81 139.92 85.69c.77.17 1.56.22 3.94.55-2.28-2.72-3.59-4.42-5.06-6a6 6 0 0 0-2.23-1.16c-17.19-6.63-30.51-18.31-42.48-31.95-7.52-8.57-18.82-9.86-28.39-3.79-2.47 1.56-4.63 2.34-6.61-.23S58.6 38 60.68 36.6a25.7 25.7 0 0 1 8.45-4c3.85-.93 7.9-1 12.73-1.52-4-6.3-7.74-12.29-11.5-18.29-1.35-2.14-2.73-4.27-4-6.48a3.84 3.84 0 0 1 1.35-5.5c2.22-1.56 4-.59 5.55 1.1A22 22 0 0 1 75.48 5c2.61 4.1 5.43 8.09 7.73 12.36 8.65 16.06 21.35 28.76 34.15 41.35 2.63 2.58 6.28 4.17 9.58 6a118 118 0 0 0 11.86 6c7.73 3.19 12.47 8.48 13 17.53 10.31 2.27 20.53 4.69 30.84 6.7a13.56 13.56 0 0 1 9.57 6.28c13 19.78 26.19 39.4 39.32 59.07a30.6 30.6 0 0 1 2.33 3.77c1.8 3.8.52 6.45-3.67 6.55-10.55.23-21.13.26-31.68-.1-1.74-.06-3.95-2.17-5-3.91a46.7 46.7 0 0 1-4.14-9.92 19.56 19.56 0 0 0-10.92-12.5c-8.41-3.82-17.07-7.14-25.78-10.26-3.77-1.35-5-.18-5.46 3.7-.13 1.05 0 2.12-.12 3.17-.56 6.86-4.34 11.59-10.23 12.84-6.26 1.32-11.36-1.1-14.83-7.08-.5-.92-.9-1.89-1.65-3.41m36-45.16-95.8-20.44c-1.1 4.51-2 8.3-3.11 12.66l96 21.59c1.01-4.79 1.89-8.92 2.94-13.79Zm65.23 64.28a7.8 7.8 0 0 0-.38-1.9q-17.81-26.9-35.69-53.73a7.52 7.52 0 0 0-3.74-3.12c-5.43-1.4-11-2.39-17-3.63l-3 13.53c2.36.68 4.15 1.64 6 1.64 12.16 0 17.37 7.3 20.88 17.85 3.35 10.1 8.19 19.7 12.31 29.36ZM71.79 113.88c10.69 1 20.35 1.6 29.91 2.94 8.8 1.24 17.57 3.52 24.26 9.74 4.5 4.19 9.5 3.36 14.2 2.54 3.88-.67 3-5.48 4.14-8.49.19-.5-.09-1.17-.2-2.21l-71.31-16c-.37 4.24-.67 7.68-1 11.48m108.59 20.32c-2.8-3.7-2-8.18-6.88-9.24-5.77-1.24-11.51-2.61-17.28-3.88-3-.67-3.74.91-3.36 3.51ZM22.54 88.58c5-.91 8.26-2.23 8.72-7.26a27.4 27.4 0 0 1 1.95-7.27c1.68-4.34.27-7.21-4.37-9.56-2.09 8-4.11 15.73-6.3 24.09m16.36-2.52 10.15 2.17c1.13-4.53 2.07-8.29 3.15-12.59L42 73.39c-1.09 4.61-2 8.34-3.1 12.67M139 138.64h-9.55c-1.08 3.85.61 6.23 3.79 6.72 3.86.64 5.22-2.26 5.76-6.72m-43.65-14.31c-1.84 3-2.27 5.8 1.11 6.9 4.05 1.31 4.4-2.36 5.73-5.52Zm23.76 7.39-8.14-3.9c-1.7 3.4-.83 5.55 1.76 6.77s4.82.76 6.38-2.87m-33.57-8.14h-7.25c-.88 3.1.18 5.21 2.84 5.44 3.02.27 4.15-2.02 4.41-5.44"></path>
-                                                            <path d="M131.4 244.29H6c-3.26-.13-5.17-1.85-5.18-5.14q-.09-18.37 0-36.76c0-3.33 2-5 5.17-5.17 1.89-.12 3.79-.06 5.69-.06H257.4c3.61.06 5.43 1.9 5.43 5.51v36.12c0 3.59-1.75 5.49-5.42 5.5h-5.7Zm-121.63-8.8h243.94v-29.37H9.77Z"></path>
-                                                            <path d="M189.77 177.12c3.08 1.15 5.84 1.74 8.09 3.13 3.07 1.91 5.61 2.08 8.74.1 5.47-3.45 11.26-3.57 16.72.05 3.1 2.06 5.64 1.89 8.68-.09 5.25-3.42 10.69-3.29 16.16-.18 1.81 1 4.1 1.29 5.73 2.49 1.29 1 2.79 3 2.58 4.25s-2.39 3.37-3.68 3.36a17.2 17.2 0 0 1-7.75-2.07c-3.54-1.95-6.53-2.09-10 .16a13.14 13.14 0 0 1-14.95 0c-3.46-2.19-6.47-2.27-10-.09a13.51 13.51 0 0 1-15.5-.15c-3.22-2.12-6.11-1.81-9.47-.07a21.9 21.9 0 0 1-8.34 2.19c-1.08.07-2.83-1.81-3.29-3.14-.36-1 .47-3.33 1.38-3.77 4.9-2.29 9.97-4.17 14.9-6.17"></path>
+                                                            <g>
+                                                                <path d="M170.27 94.93c5.74-2.16 5.21-6.44 5.36-10.37.63-17 0-17.71-16.62-17.72-12 0-24 .11-36.06 0-9.5-.13-10.6-1.21-10.69-10.18-.06-5.65.73-11.26-5.58-14.78-1.39-.78-1.74-4.2-1.8-6.42-.21-7.67-.3-15.36 0-23 .29-7.94 4.8-12.53 11.48-12.38 6.23.15 10.6 4.59 10.91 12 .35 8 .31 16 0 24-.1 2.44-1.06 6-2.82 7-6.65 4-4.46 9.38-3.62 15.73 13.35 0 26.33.54 39.23-.13 17.88-.92 24.6 4.28 23.92 23.95-.37 10.47-2.37 18.48-14.09 21.44-.29 1.44-.72 3-.9 4.59-.65 6-4.46 7.4-9.84 7.36-17-.15-34.06 0-51.09 0-9 0-18-.18-27.05.06-5.55.14-8.8-1.75-9.8-7.53-.31-1.78-2-3.67-3.6-4.8-4.47-3.24-5-5.42-.42-7.64 2.93-1.43 3.94-2.79 4.27-5.72.65-5.86 4.48-7.33 9.91-7.3 25.38.15 50.76 0 76.14.08 9.54-.09 9.54.01 12.76 11.76"></path>
+                                                                <path d="M159.3 218.58H81.75c1.15-2.33 2-4.31 3-6.13 7.15-12 14.57-23.85 21.41-36a24.9 24.9 0 0 0 2.8-11.29c.33-13.3.13-26.61.13-40.75H131c0 11.8.56 23.4-.17 34.92-.6 9.56 2.4 17.49 7.36 25.24 6.98 10.82 13.62 21.87 21.11 34.01"></path>
+                                                                <path d="M0 218.58c21.74-12.79 42.49-24.72 63-37.11C82.54 169.61 78.6 176 79.06 154c.19-9 .11-18 .2-27a13.5 13.5 0 0 1 .74-2.66h20.48c.14 2.84.38 6 .43 9.19.08 4.66 0 9.33 0 14 0 25.3 0 25.28-15.32 45.14-5.27 6.85-10.55 13.71-15.55 20.77-2.93 4.13-6.25 6.08-11.61 6-18.65-.27-37.32 0-56 .07a14.3 14.3 0 0 1-2.43-.93"></path>
+                                                                <path d="M139.27 124h21.09c.26 2.85.71 5.69.73 8.54.09 10.32.4 20.67-.11 31-.31 6.46 1.72 10.26 7.5 13.54 21.11 12 41.89 24.56 62.78 36.93a16 16 0 0 1 5.74 5.38h-11c-15 0-30-.07-45 0-4.24 0-7.35-.9-10.09-4.76-9.42-13.3-19.42-26.18-29-39.38a13.5 13.5 0 0 1-2.55-7.25c-.21-14.33-.09-28.63-.09-44"></path>
+                                                            </g>
                                                         </g>
-                                                    </g>
-                                                </svg>
+                                                    </svg>
+                                                </div>
+                                                <p>Application charges or labor cost</p> 
                                             </div>
-                                            <p>Surface preperation or treatment cost</p> 
-                                        </div>
+                                            <div class="component">
+                                                <div class="img-wrapper">
+                                                    <svg preserveAspectRatio="none" data-bbox="0.001 -0.045 262.829 244.335" viewBox="0.001 -0.045 262.829 244.335" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
+                                                        <g>
+                                                            <g>
+                                                                <path d="M120.38 143.14c-5.71 1-10.87 1-15.12-3.24-.67-.68-2.26-.52-3.43-.59a7.7 7.7 0 0 0-1.83.44c-4.53 1-7.93-1.78-11.85-3.16-3.42-1.2-7.9.84-11.51-.09-4.59-1.18-6.78-5.36-7.44-10.08-1-7.47-6.55-11.48-13.36-8.71-6.59 2.68-12.68 6.57-19 9.94-7.42 4-14.69 8.26-22.31 11.77-3.11 1.43-7 1.35-10.53 1.63a3.43 3.43 0 0 1-3.9-3.92c.19-1.47 2-3.81 3.24-3.9 12.73-.92 22.25-8.56 32.36-15 8.42-5.36 17-10.33 28-10.53l.42-7.2c-9.69-2.2-18.85-4.65-28.17-6.17-3-.48-6.69.94-9.54 2.48-7.28 3.93-14.52 3.31-22 1.13C1.7 97.17-.47 96 .09 92.83s3.06-3.7 5.91-3.25c2.07.34 4.13.73 7.14 1.27 2.8-10.85 5.61-21.54 8.59-32.91C17 56.7 12.72 55.61 8.5 54.5c-5.36-1.42-7.22-3.16-6.56-6.1s3-3.53 8.63-2.24c2.47.57 4.87 1.56 7.36 1.89a26.83 26.83 0 0 1 19.38 11.72c3.42 4.92 8.31 5.94 14.67 6.34l-11.32-13.6Q22.83 31.09 5 9.65C1.35 5.26 1 3 3.39 1s4.33-1.26 8.2 3.36Q30.72 27.2 49.72 50.14c1.07 1.3 2.23 2.52 2.77 3.13 8 0 15.41-.64 22.64.21 5.74.67 11.4 2.82 16.84 5 4.4 1.74 5.62 4.59 3.91 7.18-2.28 3.45-5 1.9-7.7.36-8.44-4.89-17.54-5.02-27.53-4.35 3.56 5.76 7.35 8.92 13.62 10.13C96.23 76 118 81 139.92 85.69c.77.17 1.56.22 3.94.55-2.28-2.72-3.59-4.42-5.06-6a6 6 0 0 0-2.23-1.16c-17.19-6.63-30.51-18.31-42.48-31.95-7.52-8.57-18.82-9.86-28.39-3.79-2.47 1.56-4.63 2.34-6.61-.23S58.6 38 60.68 36.6a25.7 25.7 0 0 1 8.45-4c3.85-.93 7.9-1 12.73-1.52-4-6.3-7.74-12.29-11.5-18.29-1.35-2.14-2.73-4.27-4-6.48a3.84 3.84 0 0 1 1.35-5.5c2.22-1.56 4-.59 5.55 1.1A22 22 0 0 1 75.48 5c2.61 4.1 5.43 8.09 7.73 12.36 8.65 16.06 21.35 28.76 34.15 41.35 2.63 2.58 6.28 4.17 9.58 6a118 118 0 0 0 11.86 6c7.73 3.19 12.47 8.48 13 17.53 10.31 2.27 20.53 4.69 30.84 6.7a13.56 13.56 0 0 1 9.57 6.28c13 19.78 26.19 39.4 39.32 59.07a30.6 30.6 0 0 1 2.33 3.77c1.8 3.8.52 6.45-3.67 6.55-10.55.23-21.13.26-31.68-.1-1.74-.06-3.95-2.17-5-3.91a46.7 46.7 0 0 1-4.14-9.92 19.56 19.56 0 0 0-10.92-12.5c-8.41-3.82-17.07-7.14-25.78-10.26-3.77-1.35-5-.18-5.46 3.7-.13 1.05 0 2.12-.12 3.17-.56 6.86-4.34 11.59-10.23 12.84-6.26 1.32-11.36-1.1-14.83-7.08-.5-.92-.9-1.89-1.65-3.41m36-45.16-95.8-20.44c-1.1 4.51-2 8.3-3.11 12.66l96 21.59c1.01-4.79 1.89-8.92 2.94-13.79Zm65.23 64.28a7.8 7.8 0 0 0-.38-1.9q-17.81-26.9-35.69-53.73a7.52 7.52 0 0 0-3.74-3.12c-5.43-1.4-11-2.39-17-3.63l-3 13.53c2.36.68 4.15 1.64 6 1.64 12.16 0 17.37 7.3 20.88 17.85 3.35 10.1 8.19 19.7 12.31 29.36ZM71.79 113.88c10.69 1 20.35 1.6 29.91 2.94 8.8 1.24 17.57 3.52 24.26 9.74 4.5 4.19 9.5 3.36 14.2 2.54 3.88-.67 3-5.48 4.14-8.49.19-.5-.09-1.17-.2-2.21l-71.31-16c-.37 4.24-.67 7.68-1 11.48m108.59 20.32c-2.8-3.7-2-8.18-6.88-9.24-5.77-1.24-11.51-2.61-17.28-3.88-3-.67-3.74.91-3.36 3.51ZM22.54 88.58c5-.91 8.26-2.23 8.72-7.26a27.4 27.4 0 0 1 1.95-7.27c1.68-4.34.27-7.21-4.37-9.56-2.09 8-4.11 15.73-6.3 24.09m16.36-2.52 10.15 2.17c1.13-4.53 2.07-8.29 3.15-12.59L42 73.39c-1.09 4.61-2 8.34-3.1 12.67M139 138.64h-9.55c-1.08 3.85.61 6.23 3.79 6.72 3.86.64 5.22-2.26 5.76-6.72m-43.65-14.31c-1.84 3-2.27 5.8 1.11 6.9 4.05 1.31 4.4-2.36 5.73-5.52Zm23.76 7.39-8.14-3.9c-1.7 3.4-.83 5.55 1.76 6.77s4.82.76 6.38-2.87m-33.57-8.14h-7.25c-.88 3.1.18 5.21 2.84 5.44 3.02.27 4.15-2.02 4.41-5.44"></path>
+                                                                <path d="M131.4 244.29H6c-3.26-.13-5.17-1.85-5.18-5.14q-.09-18.37 0-36.76c0-3.33 2-5 5.17-5.17 1.89-.12 3.79-.06 5.69-.06H257.4c3.61.06 5.43 1.9 5.43 5.51v36.12c0 3.59-1.75 5.49-5.42 5.5h-5.7Zm-121.63-8.8h243.94v-29.37H9.77Z"></path>
+                                                                <path d="M189.77 177.12c3.08 1.15 5.84 1.74 8.09 3.13 3.07 1.91 5.61 2.08 8.74.1 5.47-3.45 11.26-3.57 16.72.05 3.1 2.06 5.64 1.89 8.68-.09 5.25-3.42 10.69-3.29 16.16-.18 1.81 1 4.1 1.29 5.73 2.49 1.29 1 2.79 3 2.58 4.25s-2.39 3.37-3.68 3.36a17.2 17.2 0 0 1-7.75-2.07c-3.54-1.95-6.53-2.09-10 .16a13.14 13.14 0 0 1-14.95 0c-3.46-2.19-6.47-2.27-10-.09a13.51 13.51 0 0 1-15.5-.15c-3.22-2.12-6.11-1.81-9.47-.07a21.9 21.9 0 0 1-8.34 2.19c-1.08.07-2.83-1.81-3.29-3.14-.36-1 .47-3.33 1.38-3.77 4.9-2.29 9.97-4.17 14.9-6.17"></path>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <p>Surface preperation or treatment cost</p> 
+                                            </div>
+                                        @endforelse
                                     </div> 
                                 </div>
                             </div>
@@ -320,12 +374,16 @@
 
        <section class="factors-of-epoxy py-5">
         <div class="container text-center">
-            <h2 class="fw-bold">FACTORS AFFECTING THE INDUSTRIAL</h2>
-            <h3 class="text-orange fw-bold">EPOXY FLOORING COST</h3>
-            <p>
-                When planning industrial epoxy flooring, understanding cost factors is essential. At RachTR, we offer solutions tailored to industries like automobile, pharmaceutical, chemical, and electronics.
-            </p>
-            <p class="fw-semibold">Here’s what influences the cost of industrial epoxy flooring, including considerations like the epoxy flooring price per sq ft:</p>
+            <h2 class="fw-bold">{!! $factors['heading'] ?? 'FACTORS AFFECTING THE INDUSTRIAL' !!}</h2>
+            <h3 class="text-orange fw-bold">{{ $factors['subhead'] ?? 'EPOXY FLOORING COST'}}</h3>
+            @if(!empty($factors['paragraph']))
+                {!! $factors['paragraph'] !!}
+            @else
+                <p>
+                    When planning industrial epoxy flooring, understanding cost factors is essential. At RachTR, we offer solutions tailored to industries like automobile, pharmaceutical, chemical, and electronics.
+                </p>
+                <p class="fw-semibold">Here’s what influences the cost of industrial epoxy flooring, including considerations like the epoxy flooring price per sq ft:</p>
+            @endif
         </div>
 
         <div class="container mt-4">
@@ -333,98 +391,108 @@
                 <div class="col-lg-10 m-0 w-100">
                     <div class="p-sm-4 factor-bg-style">
                         <div class="factor-lists gy-4">
-
                             <!-- Cost Factors -->
-                            <div class="factor">
-                                <div class="factor-box">
-                                    <div class="first-part d-flex justify-content-center align-items-center gap-3">
-                                        <span class="factor-number">01</span>
-                                        <div class="group1 d-flex flex-column text-start">
-                                            <h5 class="fw-bold  m-0">Industry Type</h5>
-                                            <p class="m-0">Different industries have specific needs.</p>
-                                        </div> 
+                            @forelse($factors['factor'] ?? []  as  $factor)
+                                <div class="factor">
+                                    <div class="factor-box">
+                                        <div class="first-part d-flex justify-content-center gap-3">
+                                            <span class="factor-number">{{ $factor['number'] }}</span>
+                                            <div class="group1 d-flex flex-column text-start">
+                                                <h5 class="fw-bold  m-0">{{ $factor['title'] }}</h5>
+                                                <p class="m-0">{{ $factor['subhead'] }}</p>
+                                            </div> 
+                                        </div>
+                                        <div class="info-box m-0">
+                                            {!! $factor['desc'] !!}
+                                        </div>
                                     </div>
-                                    <div class="info-box m-0">Pharmaceutical industries require anti-microbial, seamless, and easy-to-clean surfaces to maintain hygiene standards.</div>
                                 </div>
-                            </div>
-
-                            <div class="factor">
-                                <div class="factor-box">
-                                    <div class="first-part d-flex justify-content-center  gap-3">
-                                        <span class="factor-number">02</span>
-                                        <div class="group1 d-flex flex-column text-start">
-                                            <h5 class="fw-bold  m-0">Specific Requirements</h5>
-                                            <p class="m-0">Additional features like ESD control or chemical resistance can increase costs.</p>
-                                        </div> 
+                            @empty
+                                <div class="factor">
+                                    <div class="factor-box">
+                                        <div class="first-part d-flex justify-content-center align-items-center gap-3">
+                                            <span class="factor-number">01</span>
+                                            <div class="group1 d-flex flex-column text-start">
+                                                <h5 class="fw-bold  m-0">Industry Type</h5>
+                                                <p class="m-0">Different industries have specific needs.</p>
+                                            </div> 
+                                        </div>
+                                        <div class="info-box m-0">Pharmaceutical industries require anti-microbial, seamless, and easy-to-clean surfaces to maintain hygiene standards.</div>
                                     </div>
-                                    <div class="info-box m-0">Electronics manufacturing floors need anti skid properties.</div>
                                 </div>
-                            </div>
-
-                            <div class="factor">
-                                <div class="factor-box">
-                                    <div class="first-part d-flex justify-content-center gap-3">
-                                        <span class="factor-number">03</span>
-                                        <div class="group1 d-flex flex-column text-start">
-                                            <h5 class="fw-bold  m-0">Quantity & Floor Size</h5>
-                                            <p class="m-0">Larger areas often get bulk discounts, reducing epoxy  flooring costs per unit.</p>
-                                        </div> 
+                                <div class="factor">
+                                    <div class="factor-box">
+                                        <div class="first-part d-flex justify-content-center  gap-3">
+                                            <span class="factor-number">02</span>
+                                            <div class="group1 d-flex flex-column text-start">
+                                                <h5 class="fw-bold  m-0">Specific Requirements</h5>
+                                                <p class="m-0">Additional features like ESD control or chemical resistance can increase costs.</p>
+                                            </div> 
+                                        </div>
+                                        <div class="info-box m-0">Electronics manufacturing floors need anti skid properties.</div>
                                     </div>
-                                    <div class="info-box m-0">Large warehouses get better rates compared to smaller factories.</div>
                                 </div>
-                            </div>
-
-                            <div class="factor">
-                                <div class="factor-box">
-                                    <div class="first-part d-flex justify-content-center  gap-3">
-                                        <span class="factor-number">04</span>
-                                        <div class="group1 d-flex flex-column text-start">
-                                            <h5 class="fw-bold  m-0">Material/Chemistry</h5>
-                                            <p class="m-0">Material choice significantly affects costs. Epoxy flooring is cost-effective; polyurethane (PU Flooring) options add durability, but costs more.</p>
-                                        </div> 
+                                <div class="factor">
+                                    <div class="factor-box">
+                                        <div class="first-part d-flex justify-content-center gap-3">
+                                            <span class="factor-number">03</span>
+                                            <div class="group1 d-flex flex-column text-start">
+                                                <h5 class="fw-bold  m-0">Quantity & Floor Size</h5>
+                                                <p class="m-0">Larger areas often get bulk discounts, reducing epoxy  flooring costs per unit.</p>
+                                            </div> 
+                                        </div>
+                                        <div class="info-box m-0">Large warehouses get better rates compared to smaller factories.</div>
                                     </div>
-                                    <div class="info-box m-0">Epoxy flooring is affordable, while PU flooring is ideal for heavy-duty areas..</div>
                                 </div>
-                            </div>
-
-                            <div class="factor">
-                                <div class="factor-box">
-                                    <div class="first-part d-flex justify-content-center gap-3">
-                                        <span class="factor-number">05</span>
-                                        <div class="group1 d-flex flex-column text-start">
-                                            <h5 class="fw-bold  m-0">Thickness Needed</h5>
-                                            <p class="m-0">Thicker floors enhance durability but raise costs.</p>
-                                        </div> 
+                                <div class="factor">
+                                    <div class="factor-box">
+                                        <div class="first-part d-flex justify-content-center  gap-3">
+                                            <span class="factor-number">04</span>
+                                            <div class="group1 d-flex flex-column text-start">
+                                                <h5 class="fw-bold  m-0">Material/Chemistry</h5>
+                                                <p class="m-0">Material choice significantly affects costs. Epoxy flooring is cost-effective; polyurethane (PU Flooring) options add durability, but costs more.</p>
+                                            </div> 
+                                        </div>
+                                        <div class="info-box m-0">Epoxy flooring is affordable, while PU flooring is ideal for heavy-duty areas..</div>
                                     </div>
-                                    <div class="info-box m-0"> Heavy machinery areas may need thicker epoxy flooring to withstand impact, adding to the expense.</div>
                                 </div>
-                            </div>
-
-                            <div class="factor">
-                                <div class="factor-box">
-                                    <div class="first-part d-flex justify-content-center  gap-3">
-                                        <span class="factor-number">06</span>
-                                        <div class="group1 d-flex flex-column text-start">
-                                            <h5 class="fw-bold  m-0">Surface Preparation</h5>
-                                            <p class="m-0">The condition of the existing surface impacts prep costs.</p>
-                                        </div> 
+                                <div class="factor">
+                                    <div class="factor-box">
+                                        <div class="first-part d-flex justify-content-center gap-3">
+                                            <span class="factor-number">05</span>
+                                            <div class="group1 d-flex flex-column text-start">
+                                                <h5 class="fw-bold  m-0">Thickness Needed</h5>
+                                                <p class="m-0">Thicker floors enhance durability but raise costs.</p>
+                                            </div> 
+                                        </div>
+                                        <div class="info-box m-0"> Heavy machinery areas may need thicker epoxy flooring to withstand impact, adding to the expense.</div>
                                     </div>
-                                    <div class="info-box m-0">Fresh RCC surfaces require minimal prep, unlike older surfaces needing leveling.</div>
                                 </div>
-                            </div>
-
-                            <div class="factor">
-                                <div class="factor-box">
-                                    <div class="first-part d-flex justify-content-center gap-3">
-                                        <span class="factor-number">07</span>
-                                        <div class="group1 d-flex flex-column text-start">
-                                            <h5 class="fw-bold  m-0">Surface Undulations</h5>
-                                            <p class="m-0">Uneven floors require leveling, increasing costs.</p>
-                                        </div> 
+                                <div class="factor">
+                                    <div class="factor-box">
+                                        <div class="first-part d-flex justify-content-center  gap-3">
+                                            <span class="factor-number">06</span>
+                                            <div class="group1 d-flex flex-column text-start">
+                                                <h5 class="fw-bold  m-0">Surface Preparation</h5>
+                                                <p class="m-0">The condition of the existing surface impacts prep costs.</p>
+                                            </div> 
+                                        </div>
+                                        <div class="info-box m-0">Fresh RCC surfaces require minimal prep, unlike older surfaces needing leveling.</div>
                                     </div>
-                                    <div class="info-box m-0">Electronics manufacturing floors with undulations need extra prep for stability.</div>
                                 </div>
-                            </div>
+                                <div class="factor">
+                                    <div class="factor-box">
+                                        <div class="first-part d-flex justify-content-center gap-3">
+                                            <span class="factor-number">07</span>
+                                            <div class="group1 d-flex flex-column text-start">
+                                                <h5 class="fw-bold  m-0">Surface Undulations</h5>
+                                                <p class="m-0">Uneven floors require leveling, increasing costs.</p>
+                                            </div> 
+                                        </div>
+                                        <div class="info-box m-0">Electronics manufacturing floors with undulations need extra prep for stability.</div>
+                                    </div>
+                                </div>             
+                            @endforelse
                         </div> <!-- row -->
                     </div> <!-- content box -->
                 </div> <!-- col -->
@@ -433,7 +501,7 @@
 
         <div class="container factor-img py-5">
             <div class="image-wrapper">
-                <img src="{{ asset('images/epoxy_diag.webp') }}" alt="diagram">
+                <img src="{{ !empty($factors['image']) ? asset('storage/' . $factors['image'] ) : asset('images/epoxy_diag.webp') }}" alt="{{ $factors['img_alt'] ?? 'factors affecting cost price'}}">
             </div>
         </div>
 
@@ -441,103 +509,108 @@
 
        <section class="colors-available">
         <div class="container text-center py-5">
-            <h3 class="fw-bold text-uppercase">Color Shades Available</h3>
-            <p>Our epoxy flooring color palette offers <strong>over 40+ Ready-to-Use Shades</strong> and <strong>Custom Colors</strong> to choose from.<br>
-            Whether you're looking for a bold or a subtle touch, we have the perfect shade for your industrial space.</p>
-            <p>Our colors are designed to complement any setting and provide a durable and long-lasting finish.</p>
-    
+            <h3 class="fw-bold text-uppercase">{!! $colors['heading'] ?? 'Color Shades Available' !!}</h3>
+            @if(!empty($colors['paragraph']))
+                {!! $colors['paragraph'] !!}
+            @else
+                <p>Our epoxy flooring color palette offers <strong>over 40+ Ready-to-Use Shades</strong> and <strong>Custom Colors</strong> to choose from.<br>
+                Whether you're looking for a bold or a subtle touch, we have the perfect shade for your industrial space.</p>
+                <p>Our colors are designed to complement any setting and provide a durable and long-lasting finish.</p>
+            @endif                                   
             <div class="row mt-4 new-color gap-3 mx-auto justify-content-center">
-                    <div class="color-box" style="background-color: #A31D1D;">
-                        <a href="{{ asset('images/ral7035.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
-                            <p class="d-flex justify-content-center align-items-center h-100 ">RAL 7034</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-                
-                    <div class="color-box" style="background-color: #C7C7C7;">
-                        <a href="{{ asset('images/ral7035.webp')}}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
-                            <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 7035</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-               
-                    <div class="color-box" style="background-color: #808080;">
-                        <a href="{{ asset('images/RAL7037.webp')}}" data-fancybox="gallery" data-caption="Single image"class="w-100 h-100">
-                            <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 7037</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-                
-                    <div class="color-box" style="background-color: #A0A0A0;">
-                        <a href="{{ asset('images/RAL7040.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
-                            <p class="d-flex justify-content-center align-items-center h-100 ">RAL 7040</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-           
-                    <div class="color-box" style="background-color: #5F9237;">
-                        <a href="{{ asset('images/Ral6018.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
-                            <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 6018</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-           
-                    <div class="color-box" style="background-color: #006B39;">
-                        <a href="{{ asset('images/ral6029.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
-                            <p class="d-flex justify-content-center align-items-center h-100 ">RAL 6029</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-        
-                    <div class="color-box" style="background-color: #008F32;">
-                        <a href="{{ asset('images/ral6037.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
-                            <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 6037</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-               
-                    <div class="color-box" style="background-color: #004F91;">
-                        <a href="{{ asset('images/ral5005.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
-                            <p class="d-flex justify-content-center align-items-center h-100 ">RAL 5005</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-                
-                    <div class="color-box" style="background-color: #0077C8;">
-                        <a href="{{ asset('images/ral5012.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
-                            <p class="d-flex justify-content-center align-items-center h-100 ">RAL 5012</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-                
-                    <div class="color-box" style="background-color: #005FAD;">
-                        <a href="{{ asset('images/ral5015.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
-                            <p class="d-flex justify-content-center align-items-center h-100 ">RAL 5015</p>
-                            <button class="heart-btn">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
-                            </button>
-                        </a>
-                    </div>
-                
-                
+                    @forelse($colors['colors'] ?? [] as $color)
+                      @if(!empty($color['image']))
+                        <div class="color-box" style="background-color: {{ $color['color'] ?? '#A31D1D'}};">
+                            <a href="{{ asset('storage/' . $color['image']) }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex justify-content-center align-items-center h-100 ">{{$color['name']}}</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        @endif
+                    @empty                        
+                        <div class="color-box" style="background-color: #A31D1D;">
+                            <a href="{{ asset('images/ral7035.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex justify-content-center align-items-center h-100 ">RAL 7034</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="color-box" style="background-color: #C7C7C7;">
+                            <a href="{{ asset('images/ral7035.webp')}}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 7035</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="color-box" style="background-color: #808080;">
+                            <a href="{{ asset('images/RAL7037.webp')}}" data-fancybox="gallery" data-caption="Single image"class="w-100 h-100">
+                                <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 7037</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="color-box" style="background-color: #A0A0A0;">
+                            <a href="{{ asset('images/RAL7040.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex justify-content-center align-items-center h-100 ">RAL 7040</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="color-box" style="background-color: #5F9237;">
+                            <a href="{{ asset('images/Ral6018.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 6018</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="color-box" style="background-color: #006B39;">
+                            <a href="{{ asset('images/ral6029.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex justify-content-center align-items-center h-100 ">RAL 6029</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="color-box" style="background-color: #008F32;">
+                            <a href="{{ asset('images/ral6037.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex  justify-content-center align-items-center h-100 ">RAL 6037</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="color-box" style="background-color: #004F91;">
+                            <a href="{{ asset('images/ral5005.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex justify-content-center align-items-center h-100 ">RAL 5005</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="color-box" style="background-color: #0077C8;">
+                            <a href="{{ asset('images/ral5012.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex justify-content-center align-items-center h-100 ">RAL 5012</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="color-box" style="background-color: #005FAD;">
+                            <a href="{{ asset('images/ral5015.webp') }}" data-fancybox="gallery" data-caption="Single image" class="w-100 h-100">
+                                <p class="d-flex justify-content-center align-items-center h-100 ">RAL 5015</p>
+                                <button class="heart-btn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.9219,8.4561 C20.5569,6.2411 18.8899,4.4871 16.7729,4.0901 C14.9729,3.7521 13.1989,4.3791 11.9999,5.7381 C10.8009,4.3791 9.0259,3.7521 7.2269,4.0901 C5.1099,4.4871 3.4429,6.2411 3.0779,8.4561 C2.9219,9.4021 3.0039,10.3711 3.3159,11.2571 C4.2969,14.3921 9.1369,17.8931 11.1729,19.2541 C11.4249,19.4221 11.7139,19.5061 12.0019,19.5061 C12.2909,19.5061 12.5789,19.4221 12.8309,19.2541 C14.8669,17.8931 19.7109,14.3871 20.6809,11.2661 C20.9959,10.3781 21.0789,9.4061 20.9219,8.4561" fill-rule="evenodd"></path></svg>
+                                </button>
+                            </a>
+                        </div>
+                    @endforelse
             </div>
             <!-- <div class="row mt-3 new-color gap-3">
             </div> -->
@@ -549,87 +622,115 @@
                     <div class="container">
                         <div class="row g-0">
                             <div class="cmp_solutn_heding col-lg-8 col-md-12 py-5">
-                                <h2 class="fw-bold">Our Projects</h2>
+                                <h2 class="fw-bold">{!! $ourProjects['heading'] ?? 'Our Projects' !!}</h2>
                             </div>
                            <div class="case-studies-item">
-                            <div class="case_studies row g-0">
-                               <div class="col-md-4 col-12 order-2 order-md-1">
-                                  <div class="case_studies_contn">
-                                      <h5 class="fw-bold pb-2">RachTR solves Welspun's Epoxy Flooring debonding issue caused by excessive oil</h5>
-                                      <p class="pb--md-5 mb-md--5">Welspun were facing issues of excessive oil on the floor, which caused the debonding between epoxy flooring and concrete.</p>
-                                      <p class="pb--md-5 mb-md--5">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
-                                      <a href="#" target="_blank">View Case Study</a>
-                                      <div class="case_studies_downd d-md-none">
+                            @forelse($ourProjects['slides'] ?? [] as $project)
+                                <div class="case_studies row g-0">
+                                    <div class="col-md-4 col-12 order-2 order-md-1">
+                                        <div class="case_studies_contn">
+                                            <h5 class="fw-bold pb-2">{!! $project['title'] !!}</h5>
+                                             {!! $project['description'] !!}
+                                            <a href="{!! $project['link'] !!}" target="_blank">{!! $project['btn'] !!}</a>
+                                            <div class="case_studies_downd d-md-none">
+                                                <div class="downd_img">
+                                                <img src="{{ asset('storage/' . $project['image'])  }}" alt="{{ $project['img_alt'] ?? 'Our project Image'}}"/>
+                                                </div>
+                                                <!-- <div class="before-block">Before</div>
+                                                <div class="after-block">After</div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
+                                        <div class="case_studies_downd">
+                                            <div class="downd_img">
+                                                <img src="{{ asset('storage/' . $project['image'])  }}" alt="{{ $project['img_alt'] ?? 'Our project Image'}}"/>
+                                            </div>
+                                            <!-- <div class="before-block">Before</div>
+                                            <div class="after-block">After</div> -->
+                                        </div>
+                                    </div>    
+                                </div>
+                            @empty
+                                <div class="case_studies row g-0">
+                                <div class="col-md-4 col-12 order-2 order-md-1">
+                                    <div class="case_studies_contn">
+                                        <h5 class="fw-bold pb-2">RachTR solves Welspun's Epoxy Flooring debonding issue caused by excessive oil</h5>
+                                        <p class="pb--md-5 mb-md--5">Welspun were facing issues of excessive oil on the floor, which caused the debonding between epoxy flooring and concrete.</p>
+                                        <p class="pb--md-5 mb-md--5">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
+                                        <a href="#" target="_blank">View Case Study</a>
+                                        <div class="case_studies_downd d-md-none">
+                                            <div class="downd_img">
+                                            <img src="{{ asset('images/welspun_pro_img.webp')}}"/>
+                                            </div>
+                                            <!-- <div class="before-block">Before</div>
+                                            <div class="after-block">After</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
+                                    <div class="case_studies_downd">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/welspun_pro_img.webp')}}"/>
+                                            <img src="{{ asset('images/welspun_pro_img.webp')}}"/>
                                         </div>
                                         <!-- <div class="before-block">Before</div>
                                         <div class="after-block">After</div> -->
-                                     </div>
-                                   </div>
-                               </div>
-                               <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
-                                   <div class="case_studies_downd">
-                                      <div class="downd_img">
-                                         <img src="{{ asset('images/welspun_pro_img.webp')}}"/>
-                                      </div>
-                                      <!-- <div class="before-block">Before</div>
-                                      <div class="after-block">After</div> -->
-                                   </div>
-                              </div>    
-                            </div>
-                            <div class="case_studies row g-0">
-                               <div class="col-md-4 col-12 order-2 order-md-1">
-                                  <div class="case_studies_contn">
-                                      <h5 class="fw-bold pb-2">RachTR completed Epoxy Flooring at ITC, Haridwar</h5>
-                                      <p class="pb--md-5 mb-md--5">ITC facility at Haridwar faced themselves with issues of broken tiles and slippery surface which often caused an issue for the workers at the facility.</p>
-                                      <p class="pb--md-5 mb-md--5">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
-                                      <a href="#" target="_blank">View Case Study</a>
-                                      <div class="case_studies_downd d-md-none">
+                                    </div>
+                                </div>    
+                                </div>
+                                <div class="case_studies row g-0">
+                                <div class="col-md-4 col-12 order-2 order-md-1">
+                                    <div class="case_studies_contn">
+                                        <h5 class="fw-bold pb-2">RachTR completed Epoxy Flooring at ITC, Haridwar</h5>
+                                        <p class="pb--md-5 mb-md--5">ITC facility at Haridwar faced themselves with issues of broken tiles and slippery surface which often caused an issue for the workers at the facility.</p>
+                                        <p class="pb--md-5 mb-md--5">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
+                                        <a href="#" target="_blank">View Case Study</a>
+                                        <div class="case_studies_downd d-md-none">
+                                            <div class="downd_img">
+                                            <img src="{{ asset('images/itc_project_img.webp')}}"/>
+                                            </div>
+                                            <!-- <div class="before-block">Before</div>
+                                            <div class="after-block">After</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
+                                    <div class="case_studies_downd">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/itc_project_img.webp')}}"/>
+                                            <img src="{{ asset('images/itc_project_img.webp')}}"/>
                                         </div>
                                         <!-- <div class="before-block">Before</div>
                                         <div class="after-block">After</div> -->
-                                     </div>
-                                   </div>
-                               </div>
-                               <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
-                                   <div class="case_studies_downd">
-                                      <div class="downd_img">
-                                         <img src="{{ asset('images/itc_project_img.webp')}}"/>
-                                      </div>
-                                      <!-- <div class="before-block">Before</div>
-                                      <div class="after-block">After</div> -->
-                                   </div>
-                              </div>    
-                            </div>
-                            <div class="case_studies row g-0">
-                               <div class="col-md-4 col-12 order-2 order-md-1">
-                                  <div class="case_studies_contn">
-                                      <h5 class="fw-bold pb-2">Epoxy flooring installation for a Delhivery warehouse in Faridabad</h5>
-                                      <p class="pb--md-5 mb-md--5">Delhivery, a logistics company, likely faced the challenge of needing a durable and chemical-resistant floor for one of their warehouses in Faridabad.</p>
-                                      <p class="pb-2 mb-2">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
-                                      <a href="#" target="_blank">View Case Study</a>
-                                      <div class="case_studies_downd d-md-none">
+                                    </div>
+                                </div>    
+                                </div>
+                                <div class="case_studies row g-0">
+                                <div class="col-md-4 col-12 order-2 order-md-1">
+                                    <div class="case_studies_contn">
+                                        <h5 class="fw-bold pb-2">Epoxy flooring installation for a Delhivery warehouse in Faridabad</h5>
+                                        <p class="pb--md-5 mb-md--5">Delhivery, a logistics company, likely faced the challenge of needing a durable and chemical-resistant floor for one of their warehouses in Faridabad.</p>
+                                        <p class="pb-2 mb-2">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
+                                        <a href="#" target="_blank">View Case Study</a>
+                                        <div class="case_studies_downd d-md-none">
+                                            <div class="downd_img">
+                                            <img src="{{ asset('images/faridabad_proj_img.webp')}}"/>
+                                            </div>
+                                            <!-- <div class="before-block">Before</div>
+                                            <div class="after-block">After</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
+                                    <div class="case_studies_downd">
                                         <div class="downd_img">
-                                           <img src="{{ asset('images/faridabad_proj_img.webp')}}"/>
+                                            <img src="{{ asset('images/faridabad_proj_img.webp')}}"/>
                                         </div>
                                         <!-- <div class="before-block">Before</div>
                                         <div class="after-block">After</div> -->
-                                     </div>
-                                   </div>
-                               </div>
-                               <div class="col-md-7 col-12 order-1 order-md-2 d-none d-md-block">
-                                   <div class="case_studies_downd">
-                                      <div class="downd_img">
-                                         <img src="{{ asset('images/faridabad_proj_img.webp')}}"/>
-                                      </div>
-                                      <!-- <div class="before-block">Before</div>
-                                      <div class="after-block">After</div> -->
-                                   </div>
-                              </div>    
-                            </div>
+                                    </div>
+                                </div>    
+                                </div>
+                            @endforelse
                            </div>
                         </div> 
                     </div>
@@ -691,10 +792,10 @@
             <div class="row g-0">
                 <div class="locations-block d-flex flex-column justify-content-center align-items-center gap-5">
                     <div class="heading-holder">
-                        <h2 class="fw-bold"><span>Locations</span>  We've served</h2>
+                        <h2 class="fw-bold">{!! $location['heading'] ?? "<span>Locations</span>  We've served" !!}</h2>
                      </div>
                      <div class="location-img ps-md-5">
-                        <img src="{{ asset('images/location-img.webp') }}" alt="loaction-map">
+                        <img src="{{ !empty($location['image']) ? asset('storage/' . $location['image']) : asset('images/location-img.webp') }}" alt="{{ $location['img_alt'] ?? 'loaction-map'}}">
                      </div>
                 </div>   
             </div> 
@@ -708,14 +809,18 @@
             <div class="row g-0">
                 <div class="experience-content d-flex flex-column gap-5">
                     <div class="heading-holder">
-                        <h2 class="fw-bold">Experience the <br> <span>RachTR</span> Difference</h2>
+                        <h2 class="fw-bold">{!! $experience['heading'] ?? 'Experience the <br> <span>RachTR</span> Difference' !!}</h2>
                     </div>
                     <div class="row g-0">
                         <div class="col-12 col-lg-6 pe-md-3 order-2 order-lg-1  ps-lg-4">
                             <div class="form-container">
-                                <h3>Request a Custom Epoxy Flooring Solution</h3>
+                                <h3>{!! $experience['formHeading'] ?? 'Request a Custom Epoxy Flooring Solution' !!}</h3>
                                 <div class="note-wrapper">
+                                @if(!empty($experience['formNote']))
+                                    <p class="note">{!! $experience['formNote'] !!}</p>
+                                @else
                                     <p class="note">*Note: RachTR doesn’t do Residential Interior Epoxy Flooring projects!</p>
+                                @endif
                                 </div>
                             
                                 <form class="epoxy-form" class="px-5 py-3" action="/submit-epoxy-form" method="POST">
@@ -797,7 +902,13 @@
                         <div class="col-12 col-lg-6 order-1 order-lg-2">
                             <div class="container">
                                 <div class="experience-fade-efct experience-slide">
-                                    <div class="img">
+                                    @forelse($experience['images'] ?? [] as $image)
+                                        <div class="img">
+                                            <img src="{{ asset('storage/' . $image['image']) }}" alt="{{ $image['img_alt'] ?? 'Epoxy Flooring Process'}}"/>
+                                            <div class="img_overlay"></div>
+                                        </div>
+                                    @empty
+                                     <div class="img">
                                         <img src="{{ asset ('images/epoxy_floor.webp') }}" alt="Epoxy Flooring Process"/>
                                         <div class="img_overlay"></div>
                                      </div>
@@ -817,6 +928,7 @@
                                         <img src="{{ asset('images/topcoat.webp') }}" alt="Top Coat"/>
                                         <div class="img_overlay"></div>
                                      </div>
+                                    @endforelse
                                  </div>
                             </div>
                                 
@@ -960,19 +1072,19 @@
        <!-- This is a section-8 close  -->
 
         <!-- This is a section-9 open -->   
-     <section class="get-free-quote py-5" style=" background: url({{asset('images/get-free-quote-bg.webp')}});background-repeat: no-repeat;background-position: center;background-size: cover;">   
+     <section class="get-free-quote py-5" style=" background: url({{ !empty($quote['image']) ? asset('storage/' . $quote['image']) : asset('images/get-free-quote-bg.webp')}});background-repeat: no-repeat;background-position: center;background-size: cover;">   
         <div class="container">
             <div class="row g-0">
                 <div class="col-12">
                     <div class="get-free-content d-flex flex-column">
                         <div class="heading-holder pt-5 text-center">
-                            <h2 class="fw-bold">Don't Wait! Get a Free Quote & <br>
-                                Transform Your Floors Today</h2>
+                            <h2 class="fw-bold">{!! $quote['heading'] ?? "Don't Wait! Get a Free Quote & <br>
+                                Transform Your Floors Today" !!}</h2>
                         </div>
                         <div class="banner-buttons d-flex justify-content-center gap-3 py-5 flex-column flex-md-row">
-                            <button type="button" class="btn btn-primary w-auto p-3 text-normal fs-6 d-flex align-items-center gap-2 justify-center" onclick="window.open('https://wa.link/xdnyq9', '_blank')"><i class="fa fa-whatsapp fs-3 m-0"></i>
-                                CHAT WITH US ON WHATSAPP</button>
-                            <button type="button" class="btn btn-outline-light fw-bold" id="openFormBtn">GET AN INSTANT QUOTE</button>
+                            <button type="button" class="btn btn-primary w-auto p-3 text-normal fs-6 d-flex align-items-center gap-2 justify-center" onclick="window.open('{{ $quote['whatsapp_link'] ?? 'https://wa.link/xdnyq9' }}', '_blank')"><i class="fa fa-whatsapp fs-3 m-0"></i>
+                                {{ $quote['whatsapp_btn'] ?? 'CHAT WITH US ON WHATSAPP'}}</button>
+                            <button type="button" class="btn btn-outline-light fw-bold" id="openFormBtn">{{ $quote['get_btn_text'] ?? 'GET AN INSTANT QUOTE'}}</button>
                         </div>
                     </div>
                 </div>
