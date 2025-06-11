@@ -1351,7 +1351,7 @@
                   class="text-left  fw-bold lh-lg-lg lh-sm text-black pb-lg-3 pb-2 mb-lg-5 mb-4"
                 >
                   Why Trust <span class="color-orange">RachTR</span> for <br />
-                  Residential Commercial Buildings?
+                  Residential & Commercial Buildings?
                 </h2>
                 <div class="row">
                   <div class="col-xl-3 col-6">
