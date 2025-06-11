@@ -76,7 +76,7 @@
                     </h2>
                 @else
                   <h2 class="fw-bold mb-4 ms-0 p-lg-0">
-                    Welcome to  <span style="color: #ef6e25">RachTR</span><br /> Industrial
+                    Welcome to  <span style="color: #ef6e25">RachTR's</span><br /> Industrial
                     Flooring Solutions
                   </h2>
                 @endif
@@ -1063,7 +1063,7 @@
                   <h2
                     class="mb-3 pb-2 fw-bold text-dark text-start"
                   >
-                    Blogs related to Industrial  <br /> Flooring Industry
+                    Blogs related to the Industrial  <br /> Flooring Industry
                   </h2>
                   <p class="color-black">
                     Check out some of our informative blog posts, research and guides on topics related to Industrial Flooring.
