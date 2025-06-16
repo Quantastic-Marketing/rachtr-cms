@@ -13,10 +13,7 @@
             $seoAuthor = $seo->author ?? 'Rachtr';
             $canonicalUrl = $seo->canonical_url ?? url()->current();
             $seoImage = $seo->image ?? asset('images/default-image.jpg');
-
-            $metaData = json_decode($seo->meta ?? '{}', true);
-            $focusKeywords = isset($metaData['focus_keywords']) ? implode(', ', $metaData['focus_keywords']) : 'rachtr';
-
+            $focusKeywords = isset($seo->keywords) ? implode(', ', $seo->keywords) : 'rachtr';
             $currentPath = request()->path();
         @endphp
         <title>{{ $seoTitle }}</title>
