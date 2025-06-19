@@ -17,6 +17,7 @@ use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Group;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use App\Filament\Components\CustomSEO;
@@ -27,6 +28,7 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Tabs\Tab;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
+use Illuminate\Support\Facades\Storage;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
@@ -352,6 +354,7 @@ class PageResource extends Resource
             'contractor-center' => self::contractorTemplate(),
             'about-us' => self::aboutTemplate(),
             'careers' => self::careerTemplate(),
+            'architect-center' => self::architectTemplate(),
             default => self::defaultTemplate(),
         };
     }
@@ -1135,7 +1138,7 @@ class PageResource extends Resource
                         ])->columns(2),
 
                 ]),
-            Section::make('Metors Section')
+            Section::make('Mentors Section')
             ->schema([ 
                     TextInput::make('content.mentors.heading')->label('Founders Section Heading'),
                     Repeater::make('content.mentors.mentor')
@@ -1202,6 +1205,149 @@ class PageResource extends Resource
                     TextInput::make('content.collaborate.cta_text')->label('CTA Button Text'),
                     TextInput::make('content.collaborate.email')->email()->label('Email for Inquiries'),
                 ]),
+        ];
+    }
+
+    public static function architectTemplate(): array
+    {
+        return [
+            Section::make('Architect Center Section')
+                ->schema([
+                    TextInput::make('content.banner.banner_heading')->label('Banner Heading'),
+                    TextInput::make('content.banner.banner_alt')->label('Banner Image Alt'),
+                    RichEditor::make('content.banner.banner_desc')->label('Banner Description'),
+                    FileUpload::make('content.banner.banner_desktop')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Banner Image Desktop'),
+                    FileUpload::make('content.banner.banner_mobile')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Banner Image Mobile'),
+                ]),
+            Section::make('Innovative Solutions Section')
+                ->schema([
+                    TextInput::make('content.solutions.innovative_heading')->label('Section Heading'),
+                    RichEditor::make('content.solutions.innovative_description')->label('Section Description'),
+                    FileUpload::make('content.solutions.innovative_image')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Section Image'),
+                    TextInput::make('content.solutions.innovative_image_alt')->label('Section Image Alt'),
+                ])->collapsible(),
+            Section::make('Our Industries Section')
+                ->schema([
+                    TextInput::make('content.industries.industries_heading')->label('Industries Heading'),
+                    TextInput::make('content.industries.industries_subheading')->label('Industries Subheading'),
+                    Repeater::make('content.industries.industries_items')
+                        ->schema([
+                            TextInput::make('title')->label('Title'),
+                            RichEditor::make('description')->label('Description'),
+                            FileUpload::make('video_webm')->directory('videos')->disk('public')->acceptedFileTypes(['video/webm'])->label('Video (WEBM)'),
+                            FileUpload::make('video_mp4')->directory('videos')->disk('public')->acceptedFileTypes(['video/mp4'])->label('Video (MP4)'),
+                            TextInput::make('link')->label('Link'),
+                        ])->columns(2),
+                ])->collapsible(),
+            Section::make('Case Studies section: ')
+                        ->description('Add the details or case studies slider/block')
+                        ->schema([
+                            TextInput::make('content.case_study.heading')
+                                    ->label('Section Heading')
+                                    ->hint('Use <br> and <span class="color-orange">RachTR</span> where needed.'),
+                            RichEditor::make('content.case_study.description')
+                                    ->label('Section Description'),
+                            Repeater::make('content.case_study.slides')
+                                        ->label('Case Studies')
+                                        ->schema([
+                                            TextInput::make('right_title')
+                                                ->label('Right block Title'),
+
+                                            Textarea::make('subtitle')
+                                                ->label('Right Block Sub Title')
+                                                ->rows(2),
+                                            TextInput::make('left_title')
+                                                ->label('Left block Title'),
+                                            Repeater::make('paragraphs')
+                                                ->label('Case study left block descrption')
+                                                ->schema([
+                                                    Textarea::make('text')
+                                                        ->label('Paragraph Text')
+                                                        ->rows(3),
+                                                ])
+                                                ->defaultItems(2)
+                                                ->addActionLabel('Add Paragraph'),
+
+                                            TextInput::make('link')
+                                                ->label('External Link')
+                                                ->placeholder('Paste a URL if available')
+                                                ->reactive(),
+
+                                            FileUpload::make('fallback_file')
+                                                ->label('Or Upload a File')
+                                                ->directory('pdfFile') // your desired storage directory
+                                                ->disk('public')
+                                                ->hint('⚠️ Note: Uploading a file with the same name will replace the existing one. Rename the file before uploading to avoid this.')
+                                                ->acceptedFileTypes(['application/pdf'])
+                                                ->reactive()
+                                                ->preserveFilenames(),
+                                            TextInput::make('img_alt')
+                                                ->label('Image alt attribute'),
+
+                                            FileUpload::make('image_desktop')
+                                                ->label('Desktop Image')
+                                                ->disk('public')
+                                                ->directory('images')
+                                                ->image()
+                                                ->acceptedFileTypes(['image/webp'])
+                                                ->imageEditor(),
+                                        ])
+                                        ->columns(2)
+                                        ->addActionLabel('Add Case Study')
+                                        ->orderable()
+                                        ->collapsed()
+                                        ->cloneable()
+                        ]),
+            Section::make('Projects showcase section')
+                ->schema([
+                    TextInput::make('content.showcase.heading')->label('Project Showcase Heading'),
+                    Repeater::make('content.showcase.items')
+                        ->schema([
+                            RichEditor::make('description')->label('Description'),
+                            Repeater::make('images')->schema([
+                                Grid::make(2)->schema([
+                                    FileUpload::make('image')->directory('images')->disk('public')->image()->acceptedFileTypes(['image/webp'])->label('Project Image'),
+                                    TextInput::make('img_alt')->label('Image alt'),
+                                ])
+                            ]),
+                        ])->columns(2),
+                ])->collapsible(),
+            Section::make('Collaboration Opportunities')
+                ->schema([
+                    TextInput::make('content.collaboration.collab_heading')->label('Collaboration Heading'),
+                    RichEditor::make('content.collaboration.collab_left_content')->label('Left Content'),
+                    RichEditor::make('content.collaboration.collab_right_content')->label('Right Content'),
+                    TextInput::make('content.collaboration.collab_phone')->label('Phone Number'),
+                    TextInput::make('content.collaboration.collab_btn')->label('Button Text'),
+                ])->collapsible(),
+            Section::make('Architect Marvel Section')
+                ->schema([
+                    TextInput::make('content.architect.heading')->label('Architect marvels Heading'),
+                    Repeater::make('content.architect.marvels')->schema([
+                                TextInput::make('heading')->label('Heading of the marvel slide'),
+                                Repeater::make('details')->schema([
+                                    Grid::make(3)->schema([
+                                        TextArea::make('icon')->label('Highlight Icon'),
+                                        TextInput::make('heading')->label('Detail heading'),
+                                        TextInput::make('desc')->label('Detail Description')
+                                    ]),
+                                ]),
+                                RichEditor::make('para')->label('Description para for the marvel slide'),
+                                Grid::make(3)->schema([
+                                    TextInput::make('awards_text')->label('titlefor the awards pointer')->hint('titlefor the awards pointer - by default it is "Awards"'),
+                                    TextArea::make('awards_icon')->label('Awards Icon'),
+                                    RichEditor::make('awards_desc')->label('Description para for the awards pointer')
+                                ]),
+                                 Repeater::make('images')->schema([
+                                    Grid::make(2)->schema([
+                                        FileUpload::make('image')->directory('images')->disk('public')->image()->acceptedFileTypes(['image/webp'])->label('Marvel Image'),
+                                        TextInput::make('img_alt')->label('Image alt'),
+                                    ])
+                                ]),
+                            ]),
+                    
+                ])->collapsible(),
+            
         ];
     }
 }
