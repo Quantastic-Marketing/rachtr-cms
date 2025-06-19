@@ -27,7 +27,7 @@
           </div>
          
         </div>
-    </section>
+       </section>
         <!-- This is a banner close -->
             <section class="contract-innvo innovation-solutions py-3 py-sm-5">
                 <div class="container">
