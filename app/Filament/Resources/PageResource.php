@@ -344,7 +344,7 @@ class PageResource extends Resource
     public static function getSchemaBySlug(string $slug): array
     {
         return match ($slug) {
-            '/' => self::defaultTemplate(),
+            '/' => self::homeTemplate(),
             'residential-commercial-building' => self::industrialTemplate(),
             'industrial-flooring-solutions' => self::industrialTemplate(),
             'stone-processing-industry' => self::industrialTemplate(),
@@ -1347,6 +1347,188 @@ class PageResource extends Resource
                             ]),
                     
                 ])->collapsible(),
+            
+        ];
+    }
+
+    public static function homeTemplate(): array 
+    {
+        return [
+            Section::make('Banner Section')
+                    ->schema([
+                        Repeater::make('content.banner.slides')
+                            ->label('Banner Slides')
+                            ->schema([
+                                Grid::make(2)->schema([
+                                    FileUpload::make('video_webm')->disk('public')->acceptedFileTypes(['video/webm'])->directory('videos')->label('Webm Banner Video'),
+                                    FileUpload::make('video_mp4')->disk('public')->acceptedFileTypes(['video/mp4'])->directory('videos')->label('Mp4 Banner Video')
+                                ]),
+                                TextInput::make('heading')->label('Banner Heading')->hint('Use <span>RachTR</span> where needed to highlight in orange.'),
+                                RichEditor::make('subhead')
+                                            ->label('description')
+                                            ->placeholder('description para.'),
+                                RichEditor::make('subhead2')
+                                            ->label('HashTag')
+                                            ->placeholder('#RachTribe'),
+                                RichEditor::make('links')
+                                    ->label('Bottom Links'),
+                            ]),
+                    ]),
+            
+            Section::make('About us Section')
+                ->schema([
+                    TextInput::make('content.about.heading')->label('Section Heading'),
+                    RichEditor::make('content.about.description')->label('Section Description'),
+                    Grid::make(2)->schema([
+                        FileUpload::make('content.about.image')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Section Image - dimension (480-500)'),
+                        FileUpload::make('content.about.image_768')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Section Image - dimension (750-800)'),
+                        FileUpload::make('content.about.image_1299')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Section Image - dimension (900-1000)'),
+                        TextInput::make('content.about.img_alt')->label('Section Image Alt')
+                        ]),
+                    Repeater::make('content.about.pointers')
+                        ->label('Pointers')
+                        ->schema([
+                            Grid::make(2)->schema([
+                                TextArea::make('icon')->label('Highlight Icon (svg code)'),
+                                RichEditor::make('text')->label('Section Description')->hint('Use <br> and to highlight use <span class="org"> word to highlight</span> where needed.'),
+                                        ]),
+                                    ]),
+                ])->collapsible(),
+
+            Section::make('Our Strengths Section')
+                ->schema([
+                    TextInput::make('content.strength.heading')->label('Our Strengths Heading'),
+                    RichEditor::make('content.strength.subheading')->label('Our Strengths Subheading'),
+                    Repeater::make('content.strength.items')
+                        ->schema([
+                            TextInput::make('title')->label('Title'),
+                            RichEditor::make('description')->label('Description'),
+                            FileUpload::make('image')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Image (WEBp) - 320px'),
+                            FileUpload::make('image_380')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Image (WEBp) - 380px'),
+                            FileUpload::make('image_620')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Image (WEBp) - 620px'),
+                            TextInput::make('img_alt')->label('Image Alt Text'),
+                            TextInput::make('link')->label('Id of section to show. (here it has id of the section  of its name.)'),
+                        ])->columns(2),
+                ])->collapsible(),
+
+            Section::make('Innovative Research  and Development Section')
+                 ->description('Id of this section: #innovative-research')
+                ->schema([
+                    TextInput::make('content.innov.heading')->label('Innovative Research Heading'),
+                    RichEditor::make('content.innov.subheading')->label('Innovative Research Subheading'),
+                    TextInput::make('content.innov.link')->label('Link to be shown in view all button')->url()->placeholder('https://example.com'),
+                ])->collapsible(),
+
+            Section::make('Advanced Manufacturing Section')
+                ->description('Id of this section: #advce_manufrng')
+                ->schema([
+                    TextInput::make('content.advanced.heading')->label('Advanced Manufacturing Heading'),
+                    RichEditor::make('content.advanced.subheading')->label('Advanced Manufacturing Subheading'),
+                    Grid::make(2)->schema([
+                                    FileUpload::make('content.advanced.video_webm')->disk('public')->acceptedFileTypes(['video/webm'])->directory('videos')->label('Webm Banner Video'),
+                                    FileUpload::make('content.advanced.video_mp4')->disk('public')->acceptedFileTypes(['video/mp4'])->directory('videos')->label('Mp4 Banner Video')
+                                ]),
+                    Repeater::make('content.advanced.items')
+                        ->label('Advanced Manufacturing Pointers')
+                        ->schema([
+                            TextInput::make('title')->label('Title'),
+                            TextInput::make('sub_head')->label('Subheading'),
+                            TextArea::make('icon')->label('Highlight Icon (svg code)'),
+                        ])->columns(2),
+                ])->collapsible(),
+
+            Section::make('Case Studies section: ')
+                        ->description('Add the details or case studies slider/block. Id of the section : #comprehensive_Solution')
+                        ->schema([
+                            TextInput::make('content.case_study.mainHeading')
+                                    ->label('Section Main Heading')
+                                    ->hint('Use <br> and <span class="org">RachTR</span> where needed.'),
+                            TextInput::make('content.case_study.heading')
+                                    ->label('Section Heading')
+                                    ->hint('Use <br> and <span class="org">RachTR</span> where needed.'),
+                            RichEditor::make('content.case_study.description')
+                                    ->label('Section Description'),
+                            Repeater::make('content.case_study.slides')
+                                        ->label('Case Studies')
+                                        ->schema([
+                                            TextInput::make('right_title')
+                                                ->label('Right block Title'),
+
+                                            Textarea::make('subtitle')
+                                                ->label('Right Block Sub Title')
+                                                ->rows(2),
+                                            TextInput::make('left_title')
+                                                ->label('Left block Title'),
+                                             RichEditor::make('left_para')
+                                                ->label('Left Block Description'),
+                                            TextInput::make('link')
+                                                ->label('External Link')
+                                                ->placeholder('Paste a URL if available')
+                                                ->reactive(),
+
+                                            FileUpload::make('fallback_file')
+                                                ->label('Or Upload a File')
+                                                ->directory('pdfFile') // your desired storage directory
+                                                ->disk('public')
+                                                ->hint('⚠️ Note: Uploading a file with the same name will replace the existing one. Rename the file before uploading to avoid this.')
+                                                ->acceptedFileTypes(['application/pdf'])
+                                                ->reactive()
+                                                ->preserveFilenames(),
+                                            TextInput::make('img_alt')
+                                                ->label('Image alt attribute'),
+
+                                            FileUpload::make('image_desktop')
+                                                ->label('Desktop Image')
+                                                ->disk('public')
+                                                ->directory('images')
+                                                ->image()
+                                                ->acceptedFileTypes(['image/webp'])
+                                                ->imageEditor(),
+                                        ])
+                                        ->columns(2)
+                                        ->addActionLabel('Add Case Study')
+                                        ->orderable()
+                                        ->collapsed()
+                                        ->cloneable()
+                        ])->collapsible(),
+
+            Section::make('Blogs Section')
+                    ->schema([
+                        TextInput::make('content.blogSection.heading')
+                                    ->label('Section Heading')
+                                    ->hint('Use <br> and <span class="org">RachTR</span> where needed.'),
+                    ])->collapsible(),
+
+            Section::make('FAQs Section')
+                    ->schema([
+                        TextInput::make('content.faqHome.heading')
+                                    ->label('Section Heading')
+                                    ->hint('Use <br> and <span class="org">RachTR</span> where needed.'),
+                        RichEditor::make('content.faqHome.description')->label('Section Description'),
+                        Repeater::make('content.faqHome.images')
+                            ->schema([
+                                Grid::make(3)->schema([
+                                    TextInput::make('title')->label('Image Title'),
+                                    FileUpload::make('image')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Image (WEBp)'),
+                                    TextInput::make('img_alt')->label('Image Alt Tag'),
+                                ]),
+                            ])->columns(2),
+                        Repeater::make('content.faqHome.faqTabs')
+                            ->schema([
+                                TextInput::make('heading')
+                                    ->label('FAQ Tab Heading')
+                                    ->hint('Use <br> if needed'),
+                                Repeater::make('faqContent')
+                                    ->label('FAQ Content')
+                                    ->schema([
+                                        Grid::make(2)->schema([
+                                            TextArea::make('acc_title')->label('Title for FAQ'),
+                                            RichEditor::make('acc_body')->label('Dropdown description for FAQ')
+                                            ])
+                                    ]),
+                            ])->columns(2),
+                        
+                    ])->collapsible(),
             
         ];
     }
