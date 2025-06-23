@@ -1,7 +1,7 @@
 # RachTR CMS 
 
 This is a custom Content Management System (CMS) built for the RachTR website using the Laravel framework and the Filament admin panel. It provides a comprehensive interface for managing website content, including pages, products, blog posts, categories, SEO settings, and more.
-Link to documention: [Rachtr Docs]([https://filamentphp.com/](https://drive.google.com/file/d/1YEQnMr_z2Xlu6gX193duL0FfRdKsUCHt/view?usp=sharing))
+Link to documention: [Rachtr Docs](https://drive.google.com/file/d/1YEQnMr_z2Xlu6gX193duL0FfRdKsUCHt/view?usp=sharing)
 
 ## Table of Contents
 
