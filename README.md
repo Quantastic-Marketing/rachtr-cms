@@ -264,6 +264,7 @@ Here is the documentation for the **Resources** section of your README file, for
       * [show.blade.php](#showbladephpp)
       * [category-post.blade.php](#category-postbladephp)
       * [all-post.blade.php & tag-post.blade.php](#all-postbladephp--tag-postbladephp)
+* [Javascript Files](#javascript-files)
 
 ---
 
@@ -777,6 +778,78 @@ This template is used for displaying posts belonging to a specific category.
 These files serve niche filtering purposes.
 -   **`all-post.blade.php`**: Renders a listing of all blog posts, typically without the same pagination limits as the index, for a comprehensive overview.
 -   **`tag-post.blade.php`**: Displays a filtered list of posts that share a specific tag.
+
+---
+
+### JavaScript Files
+
+This section details the functionality of the key JavaScript files responsible for front-end interactivity, form handling, and dynamic content loading.
+
+#### `resources/js/header.js`
+
+-   **Purpose:** This file contains all the logic for the interactive search bar found in the website's header, for both desktop and mobile views. It uses a class-based structure (`SearchContainer`) to manage state and interactions.
+-   **Detailed Workflow:**
+    1.  **Initialization:** On page load, it initializes a `SearchContainer` instance for the desktop search bar (`#searchWrap`) and another for the mobile version (`#mobile-searchWrap`), if present.
+    2.  **On Focus (`handleSearchFocus`)**: When a user clicks or focuses on the search input:
+        -   The main dropdown container becomes visible.
+        -   If the dropdown is empty, it triggers an AJAX `fetch` request to the `/api/trending-products` endpoint. This is handled by `ProductController@getTrendingProducts` and populates the initial view with a cached list of trending products.
+    3.  **On Input (`handleSearchInput`)**: When a user types into the search bar:
+        -   **Debouncing:** It uses a 300ms debounce timer (`setTimeout`) to prevent sending an AJAX request on every keystroke, improving performance.
+        -   **Loading State:** It immediately shows a loading state in the results dropdown.
+        -   **AJAX Call:** After the debounce delay, it sends a `fetch` request to `/api/product-lists?query={user_input}`. This API endpoint is handled by `ProductController@getSearchResultsDropdown`.
+    4.  **Rendering Results (`updateSearchResults`)**:
+        -   The JSON response from the API (containing `products` and `blogs` arrays) is received.
+        -   The `createProductHTML` and `createBlogHTML` methods generate the HTML for each result item.
+        -   The respective results containers (`#product-results`, `#blog-results`) are updated with the new HTML. If no results are found, a "No results found" message is displayed.
+
+---
+
+#### `resources/js/forms.js`
+
+-   **Purpose:** This file centralizes all AJAX-based form submission logic for the entire website. It provides a consistent user experience with loading states and modal feedback.
+-   **Key Libraries:** It depends on `micromodal.min.js` for displaying success and error modals, and Google's reCAPTCHA v3 script for spam protection.
+-   **Detailed Workflow (for all forms):**
+    1.  **Event Listener:** An event listener is attached to the `submit` event of each form (`#connect-form`, `#uploadcv-form`, `.epoxy-form`, `#contact-form`).
+    2.  **Prevent Default:** It calls `event.preventDefault()` to stop the standard browser form submission.
+    3.  **Disable Button:** The submit button is immediately disabled to prevent duplicate submissions.
+    4.  **reCAPTCHA Execution:** It calls `grecaptcha.execute()` to get a unique, single-use token for spam verification.
+    5.  **Fetch API:** It uses the `fetch` API to send a `POST` request to the form's specified action URL (e.g., `/contact-submit`). The form data is sent as a `FormData` object, which includes the `recaptcha_token`.
+    6.  **Handle Response:**
+        -   On a successful JSON response (`{ "success": true }`), it populates and shows the `#success-modal`. The form is then reset.
+        -   On a failure (`{ "success": false }`), it populates the `#error-modal` with the error message from the server and displays it.
+    7.  **Re-enable Button:** The submit button is re-enabled in the `finally` block, ensuring the user can try again if the submission failed.
+-   **Specific Form Logic:**
+    -   **`#uploadcv-form`:** Includes additional client-side validation to check if the uploaded file has a valid extension (`.pdf`, `.doc`, `.docx`) before proceeding with the submission.
+
+---
+
+#### `resources/js/custom.js`
+
+-   **Purpose:** This file contains various jQuery-based scripts for initializing UI components and handling smaller, page-specific interactions.
+-   **Key Functionalities:**
+    -   **Sliders (Slick.js):**
+        -   Initializes all Slick sliders used across the site, including product galleries, the main banner, case studies, client logos, and FAQ image carousels.
+        -   Includes responsive configurations to change slider behavior on different screen sizes (e.g., the blog slider only activates on mobile).
+    -   **Lightboxes (Fancybox):**
+        -   Initializes Fancybox for all image galleries, identified by `data-fancybox` attributes. It sets up different gallery groups (e.g., `gallery-1`, `surat-gallery`) to ensure lightboxes are scoped correctly.
+    -   **Accordions:**
+        -   Provides the core logic for all accordion elements (like those in the FAQs) by toggling the `active` class and using `slideToggle()` on `.acc-head` clicks.
+    -   **Mobile Navigation:**
+        -   Handles the custom dropdown logic for the mobile navigation menu. It intercepts the first click on a parent `<li>` to open the submenu and allows the link to be followed only on a subsequent click.
+    -   **UI Helpers:**
+        -   **Heart/Like Buttons:** Attaches click listeners to `.heart-btn` and `.like-btn` to toggle a class or update a visual counter. **This is a front-end only visual interaction with no backend persistence.**
+        -   **CV Upload Filename:** Updates a text element to show the name of the file selected in the CV upload form.
+    -   **Legacy Code:** This file contains an AJAX-based `$('#load-more')` click handler which is currently not in use and has been superseded by other methods.
+
+---
+
+#### `resources/js/customTab.js`
+
+-   **Purpose:** This script provides the specific JavaScript logic for the tabbed interface on the search results page (`search.blade.php`).
+-   **Key Functionalities:**
+    -   **Manual Tab Switching:** Implements the core logic to switch between the "All," "Products," and "Blog Posts" tabs by manually toggling `active` classes on tab links and content panes.
+    -   **"View All" Button Integration:** It enhances user experience by making the "View All" buttons within the "All" tab act as navigation. For example, clicking "View All" in the products section will automatically switch the user to the "Products" tab to see the complete list.
+    -   **Search Input Clear:** Adds a simple click handler to the clear button to empty the search input field.
 ## Contributing
 
 (Add any specific contribution guidelines here if applicable, otherwise remove or keep generic).
