@@ -241,15 +241,16 @@ Here is the documentation for the **Resources** section of your README file, for
     * [PageController](#pagecontrollerphp)
     * [ProductController](#productcontrollerphp)
 * [Models](#models)
-    * [Pages Model](#pages_model)
-    * [Post Model](#post_model)
-    * [Product Model](#product_model)
-    * [ProductSection Model](#productsection_model)
-    * [Seo Model](#seo_model)
-    * [Redirects Model](#redirects_model)
-    * [Category Model](#category_model)
-    * [CommmonComponents Model](#commoncomponents_model)
-    * [User Model](#user_model)
+    * [Pages Model](#pages-model)
+    * [Post Model](#post-model)
+    * [Product Model](#product-model)
+    * [ProductSection Model](#productsection-model)
+    * [Seo Model](#seo-model)
+    * [Redirects Model](#redirects-model)
+    * [Category Model](#category-model)
+    * [CommmonComponents Model](#commoncomponents-model)
+    * [User Model](#user-model)
+*[Views & Frontend - Blade Tenmplates](#views-&-frontend-blade-tenmplates)
 
 ---
 
@@ -682,6 +683,87 @@ The `User` model handles user authentication and authorization, primarily for th
 -   **Functionality:**
     -   The `canComment()` method is included to support blog commenting functionality provided by the Firefly package.
 
+
+## Views & Frontend - Blade Tenmplates
+
+This section outlines the structure and purpose of the Blade templates and front-end assets that render the RachTR website. The system uses a combination of convention-based routing, dynamic templates, and reusable components.
+
+### Directory Structure
+
+The `resources/views` directory is organized as follows:
+
+-   **`CommonTemplates/`**: Contains Blade partials for reusable UI components that are shared across multiple pages, such as the site header (`headerHome.blade.php`) and footer (`footerHome.blade.php`).
+-   **`fallback.blade.php`**: A custom 404 error page that is displayed when a route or page slug is not found.
+-   **`Templates/`**: This is the primary directory for all page-specific layouts. The CMS uses a convention-based approach to render templates from this folder.
+    -   **Nested Structure:** The directory structure mirrors the URL slug hierarchy. For a page with a URL like `/solutions/epoxy-flooring`, the system will look for a template at `resources/views/Templates/solutions/epoxy-flooring.blade.php`.
+    -   **`Templates/Product/`**: Contains templates specifically for rendering product detail pages.
+-   **`vendor/filament-blog/`**: Contains Blade views that have been overridden from the `firefly/filament-blog` package. These files control the layout and appearance of the blog index, individual posts, and category pages.
+-   **`layouts/app.blade.php`**: The master layout file that wraps almost every page on the site.
+
+### Core Layouts
+
+#### `layouts/app.blade.php`
+This Blade file acts as the universal layout template used to render all dynamic CMS-driven pages across the RachTR website, with the exception of blog-related pages. It is automatically loaded for every route and serves as the foundational HTML structure into which different types of content are injected based on the URL and route parameters.
+
+-   **SEO Integration:** Dynamically sets all critical SEO metadata (`title`, `description`, `keywords`, Open Graph tags, Twitter Card metadata, `canonical` URL, and `robots` tag) by reading from the `$page->seo` object, falling back to sensible defaults when values are not present.
+-   **Structured Data:** Renders inline JSON-LD schemas from the `schema_data` array stored in the page model.
+-   **Asset Management:** Loads all CSS and JavaScript assets via Vite. It includes core libraries (Bootstrap, Slick, Fancybox) and page-specific styles to ensure efficient loading.
+-   **Dynamic Content Routing:** This file contains the primary logic for rendering the correct content template. It checks the request path to determine if it's a product page (`*product-page*`), a search results page (`*product-lists*`), or a category listing (`*category*`). Based on the path, it includes the appropriate Blade partial. For all other standard pages, it renders the layout specified by the `$templatePath` variable.
+-   **Shared Components:** It includes the global header and footer from `CommonTemplates` and defines the site-wide success/error modals triggered during form submissions using Micromodal.
+
+### Template-Specific Views
+
+#### `Templates/` Directory
+This directory holds the unique Blade templates for content pages. The naming and folder structure **must** match the URL slug defined in the `Pages` resource in Filament.
+
+-   **Example-1:** A page with the slug `about-us` must have a corresponding template at `resources/views/Templates/about-us.blade.php`.
+-   **Example-2:** A page with the slug `industrial-flooring-solutions/pu-flooring` must have a corresponding template at `resources/views/Templates/industrial-flooring-solutions/pu-flooring.blade.php`.
+-   Basically the templates uder this are the views that are rendered for each page and based on the file path and slug correctness both file path and the slug should match only then the file will be rendered else it will be taken as a 404 page or typo.
+
+#### `Templates/product_list.blade.php`
+A generic and reusable template for pages flagged as a "Product List" in the CMS (e.g., Installation Systems, Polishing Systems). It renders a banner and body content controlled by the `Pages` model's JSON `content` field. The Blade file serves as a reusable "scaffolding" for this page type.
+
+#### `Templates/search.blade.php`
+This Blade file powers the dynamic search results page.
+-   **Trigger:** It is rendered when a user submits a search from the header, handled by `ProductController@index`.
+-   **Backend Logic:** The controller uses Laravel Scout with Algolia to fetch matching products and blog posts.
+-   **Frontend Interaction:**
+    -   The page uses **Alpine.js** to manage a tabbed layout: "All," "Products," and "Blog Posts," with live counts for each.
+    -   The "All" tab shows a preview of the top results for both content types.
+    -   The "Products" tab includes an Alpine.js-powered sidebar for category-based filtering.
+    -   All relevant data (`productsData`, `categoriesData`, `postsData`) is serialized into JavaScript variables to enable this client-side interactivity without further server calls.
+    -   A JavaScript function highlights the search query within the results for better user visibility.
+    -   Both the Products and Blog Posts tabs feature a "Load More" button for paginated reveal.
+
+#### `fallback.blade.php`
+This is the custom 404 "Not Found" page. It features a Lottie animation and a link back to the homepage, providing a better user experience than a standard server error page.
+
+### Blog Views (`vendor/filament-blog/`)
+
+These views override the default templates from the `firefly/filament-blog` package to provide a custom look and feel for the RachTR blog. The rendering is handled by the package's routes, not the `BlogController`.
+
+> **Note:** The file at `resources/views/Blog/blog-template.blade.php` is deprecated and not in use.
+
+#### `index.blade.php`
+This is the main landing page for the blog (`/blogs`).
+-   **Functionality:** It displays a paginated list of all published blog posts. Each post is rendered as a card showing its feature image, publication date, categories, title, and a snippet of the body. Pagination is handled by a custom Blade partial.
+-   **SEO:** Contains static, hardcoded SEO metadata specifically for the main blog landing page.
+
+#### `show.blade.php`
+This template renders an individual blog post.
+-   **Functionality:** Displays the full post content, including the title, publication date, feature image, and sanitized HTML body. It also includes social sharing links and category tags.
+-   **Related Posts:** It features a "Recent Posts" section at the bottom, which dynamically pulls related posts using the `relatedPosts()` method on the `Post` model.
+-   **SEO:** Dynamically injects all SEO metadata from the post's associated `Seo` model record.
+
+#### `category-post.blade.php`
+This template is used for displaying posts belonging to a specific category.
+-   **Functionality:** Similar to `index.blade.php`, but the `$posts` collection passed to it is pre-filtered by the selected category.
+-   **SEO:** The SEO metadata is dynamically populated based on the category being viewed.
+
+#### `all-post.blade.php` & `tag-post.blade.php`
+These files serve niche filtering purposes.
+-   **`all-post.blade.php`**: Renders a listing of all blog posts, typically without the same pagination limits as the index, for a comprehensive overview.
+-   **`tag-post.blade.php`**: Displays a filtered list of posts that share a specific tag.
 ## Contributing
 
 (Add any specific contribution guidelines here if applicable, otherwise remove or keep generic).
