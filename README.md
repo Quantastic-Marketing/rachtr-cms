@@ -217,6 +217,300 @@ RachTR CMS is designed to manage the content for the RachTR website. It leverage
 *   An observer (`app/Observers/PageObserver.php`) exists containing logic to automatically rename/move Blade template files in `resources/views/Templates/` when a page's slug or parent is changed in the CMS.
 *   **Note:** This observer is **currently disabled** as its registration is commented out in `AppServiceProvider`. If this functionality is desired in the future, the observer needs to be registered.
 
+
+Excellent! Thank you for the confirmation. All my assumptions are correct, which means I can now provide you with accurate and detailed documentation.
+
+Here is the documentation for the **Resources** section of your README file, formatted for GitHub Markdown.
+
+***
+
+# Detailed Rachtr Components:
+
+## Table of Contents
+* [Filament Admin Panel](#filament-admin-panel)
+  * [Resources](#resources)
+    * [Page Resource](#page-resource)
+    * [Category Resource](#category-resource)
+    * [Redirect Resource](#redirect-resource)
+    * [Product Section Resource (Product Tags)](#product-section-resource-product-tags)
+    * [Product Resource](#product-resource)
+    * [Common Component Resource](#common-component-resource)
+* [Controllers](#controllers)
+    * [BlogController](#blogcontroller.php)
+    * [FormController](#formcontroller.php)
+    * [PageController](#pagecontroller.php)
+    * [ProductController](#productcontroller.php)
+
+---
+
+## Filament Admin Panel
+
+The admin panel is built using [Filament](https://filamentphp.com/), providing a robust and developer-friendly interface for managing all website content.
+
+## Resources
+
+This section details the purpose and functionality of each Filament Resource, which corresponds to a section in the admin panel's navigation.
+
+### Page Resource
+
+#### Purpose
+The **Page Resource** is the core of the content management system, used for creating, viewing, updating, and deleting all the informational and structural pages of the website (e.g., 'About Us', 'Contact Us', industry solution pages, product listing pages).
+
+#### Key Features & Implementation Details
+
+*   **Standard Page Fields:** Manages fundamental page data like `title`, `slug`, `status` (Draft, Published, Archived), and parent-child relationships for creating URL structures (e.g., `/support-center/architect-center`).
+*   **Homepage Management:** Includes a toggle (`is_homepage`) to designate a single page as the website's homepage. The `Pages` model contains logic to ensure only one page can be the homepage at any given time.
+*   **SEO Management:** Integrates with the `ralphjsmit/laravel-seo` package, providing dedicated fields for SEO Title, Description, Canonical URL, and meta robot tags.
+*   **Dynamic Content Fields with `getSchemaBySlug()`:** This is a key architectural feature. The fields available for a page's content change dynamically based on its slug. This is handled by the `getSchemaBySlug(string $slug): array` method within `PageResource.php`.
+    *   **How it Works:** The main form schema calls `self::getSchemaBySlug($get('slug') ?? 'default')` within an 'Additional Content' tab.
+    *   This method uses a `match` statement to return a specific array of Filament form components tailored to the needs of that particular page.
+    *   **Example:** For a page with the slug `about-us`, it returns the schema from the `aboutTemplate()` method, which includes fields for the banner, founder details, and highlights.
+    *   **Important for Developers:** To create a new page with a unique content structure, you must:
+        1.  Add a new `case` to the `match` statement in `getSchemaBySlug()`.
+        2.  Create a corresponding `public static function` (e.g., `newTemplate(): array`) that returns the desired Filament form schema.
+*   **Template-based Rendering:** The front end uses a convention-over-configuration approach to render pages. The `PageController` determines which Blade view to use based on the page's full slug.
+    *   **Convention:** A page with slug `/industrial-flooring-solutions/epoxy-flooring-services` will attempt to render the view at `resources/views/Templates/industrial-flooring-solutions/epoxy-flooring-services.blade.php`.
+    *   **Developer Action:** When adding a new page that requires a unique layout, a corresponding Blade file must be created in the `resources/views/Templates` directory, mirroring the URL structure.
+
+---
+
+### Category Resource
+
+#### Purpose
+The **Category Resource** (`Product Categories` in the navigation) is a straightforward CRUD interface for managing product categories. These categories are used to organize products and allow for filtering on the front end.
+
+#### Key Features & Implementation Details
+*   **Fields:** Manages `name`, `slug`, and a `description` for each category.
+*   **Relationships:** A `Category` has a many-to-many relationship with the `Product` model. In the `ProductResource`, these categories can be assigned to a product.
+
+---
+
+### Redirect Resource
+
+#### Purpose
+The **Redirect Resource** is an essential SEO and user experience tool. It allows administrators to create and manage 301 (permanent) redirects from old or non-existent URLs to new, active pages.
+
+#### Key Features & Implementation Details
+*   **Functionality:** Provides a simple form with two fields: `Old URL` and `New URL`.
+*   **Middleware:** The `app/Http/Middleware/RedirectIfOldUrl.php` middleware intercepts incoming requests. It checks if the requested path exists in the `redirects` table as an `old_url`. If a match is found, it performs a 301 redirect to the corresponding `new_url`.
+*   **Usage:** Primarily used to fix 404 errors for pages that have been moved or renamed, preserving link equity and preventing user frustration.
+
+---
+
+### Product Section Resource (Product Tags)
+
+#### Purpose
+The **Product Section Resource** (labeled `Product Tags` in the navigation) acts as a manual product grouping or tagging system. It allows the creation of curated product collections that can be used for special sections on the website, such as "Trending Products" or "Recommended for You."
+
+#### Key Features & Implementation Details
+*   **Fields:** Consists of a `name` for the section (e.g., `trending`) and a multi-select dropdown to associate multiple `products`.
+*   **Usage on Frontend:** The `PageController` contains a `getTrendingProduct()` method which fetches the `ProductsSection` named 'trending', retrieves the associated product IDs, and then queries the `Product` model to display them. This pattern can be replicated for other sections.
+
+---
+
+### Product Resource
+
+#### Purpose
+The **Product Resource** is for managing all product information, including details, images, technical documents, and SEO data.
+
+#### Key Features & Implementation Details
+*   **Core Fields:** Manages product `name`, `slug`, `template` (default), and category assignments.
+*   **Content Fields:** Utilizes a JSON `content` column for flexible data, managed via Filament `Repeater` and `RichEditor` components for:
+    *   Product Images (gallery)
+    *   Benefits (accordion)
+    *   Description
+*   **File Uploads (Data Sheets & Certificates):**
+    *   Allows uploading of PDF and Word documents for technical data sheets and certificates.
+    *   ⚠️ **Important Note:** The `FileUpload` component uses `->preserveFilenames()`. This means if a file with the **same name** as an existing one is uploaded for **any product**, it will overwrite the old file in the `storage/app/public/products` directory. To avoid this, **ensure all uploaded datasheets and certificates have a unique name**, preferably including the product name/SKU (e.g., `rachtr-floor-3010-n-datasheet.pdf`).
+
+---
+
+### Common Component Resource
+
+#### Purpose
+The **Common Component Resource** allows for the management of reusable website components, primarily the **Header** and **Footer**. This is a powerful feature that enables content editors to update navigation menus and logos without requiring developer intervention.
+
+#### Key Features & Implementation Details
+*   **Component Types:** Uses a `Select` field to define the component `type` (Header or Footer).
+*   **Dynamic Content:** The `content` field is a flexible JSON-based schema built with `Repeater` components. For the header, this allows for building nested navigation menus with dynamic links and text.
+*   **Integration:**
+    *   In the `PageResource`, `Select` fields (`header_id` and `footer_id`) allow an editor to choose which header and footer to display on a specific page.
+    *   The frontend Blade layouts (`headerHome.blade.php`, `footerHome.blade.php`) then fetch the content from the selected `CommonComponents` model and render it dynamically. This decouples the site's navigation from hardcoded templates.
+
+## Controllers
+
+### BlogController.php
+
+##### Purpose
+This controller is primarily responsible for rendering individual blog posts and includes a custom utility for back-dating posts.
+
+##### Methods
+
+**`show($slug)`**
+- **Parameters:**
+  - `$slug` (string): The URL slug of the blog post to be displayed.
+- **Description:**
+  Fetches a single published blog post from the database using its slug and renders the main blog post template.
+- **Logic/Workflow:**
+  1.  Receives the `$slug` from the route.
+  2.  Queries the `Post` model using `where('slug', $slug)->where('status', 'published')->firstOrFail()`.
+  3.  If no post is found, Laravel automatically throws a `ModelNotFoundException`, which results in a 404 page.
+  4.  If a post is found, it is passed to the `Blog.blog-template.blade.php` view for rendering.
+- **Returns:** An `Illuminate\View\View` instance.
+
+**`updatePublishedDates()`**
+- **Parameters:** None.
+- **Description:**
+  A custom utility method designed to update the `published_at` timestamp of a blog post to a date in the past. This is useful for content scheduling or importing older posts while preserving their original publication date.
+- **Logic/Workflow:**
+  1.  **Trigger:** This method is manually triggered by visiting the `/update-slug` route.
+  2.  **Title Format:** The user must first edit a blog post in Filament and prefix its title with a date in the format `[YYYY-MM-DD]` or `[YYYY-MM-DD HH:MM AM/PM]`. Example: `[2024-01-15] My Awesome Blog Post Title`.
+  3.  **Query:** The method queries for all posts where the title starts with `[` and ends with `]`.
+  4.  **Processing:** It iterates through the found posts, using a regular expression to parse the date and the new title.
+  5.  **Database Update:** It updates the `published_at` field with the parsed date and updates the `title` field to remove the date prefix.
+- **Returns:** A JSON response confirming that the update process has completed.
+
+---
+
+### FormController.php
+
+#### Purpose
+This controller centralizes the handling of all front-end form submissions. It ensures a consistent process for validation, spam protection, and data forwarding.
+
+#### Common Workflow for All Methods
+1.  **Validation:** Laravel's `Validator` is used to check for required fields and correct data formats (e.g., `email`, `string`).
+2.  **reCAPTCHA v3 Verification:** It sends the `recaptcha_token` from the form to Google's `siteverify` API. It checks for a success status, a `submit` action, and a score above `0.5` to prevent spam.
+3.  **Webhook Integration:** Validated data is sent via an HTTP POST request to an external **Google Apps Script** URL. This script is responsible for processing the data (e.g., adding a row to a Google Sheet).
+4.  **JSON Response:** The controller returns a standardized JSON response (`{ "success": true/false, "message": "..." }`) which is handled by the front-end JavaScript to display success or error modals.
+
+#### Methods
+
+**`addContactDetail(Request $request)`**
+- **Parameters:** `Illuminate\Http\Request $request` object containing form data (`Name`, `Phone`, `Email`, `Profession`, etc.) and `recaptcha_token`.
+- **Description:** Handles the main product inquiry/contact form submission.
+- **Returns:** JSON response indicating success or failure.
+
+**`addConnectDetail(Request $request)`**
+- **Parameters:** `Illuminate\Http.Request $request` object containing form data (`Name`, `Phone`, `Email`, etc.) and `recaptcha_token`.
+- **Description:** Handles a minimal "Let’s Connect" form submission.
+- **Returns:** JSON response indicating success or failure.
+
+**`addCvDetail(Request $request)`**
+- **Parameters:** `Illuminate\Http\Request $request` object containing form data and a file upload named `cv`.
+- **Description:** Manages career/CV submissions.
+- **Logic/Workflow:**
+  1.  Performs standard validation plus file validation for mime types (`pdf`, `doc`, `docx`) and size (max 2MB).
+  2.  After successful reCAPTCHA verification, it stores the uploaded file in `storage/app/public/cvs`.
+  3.  It constructs a public URL for the stored file and appends it to the form data as `CV Link`.
+  4.  It sends all data, including the file attachment, to the Google Apps Script endpoint using `Http::attach`.
+- **Returns:** JSON response indicating success or failure.
+
+**`addEpoxyDetail(Request $request)`**
+- **Parameters:** `Illuminate\Http.Request $request` object containing epoxy flooring inquiry data.
+- **Description:** Captures and processes detailed inquiries for epoxy flooring solutions.
+- **Returns:** JSON response indicating success or failure.
+
+---
+
+### PageController.php
+
+#### Purpose
+The primary controller for rendering the website's pages. It handles routing, data fetching, and template selection based on URL slugs.
+
+#### Methods
+
+**`getPage($slug = null)`**
+- **Parameters:**
+  - `$slug` (string, optional): The full URL slug from the request, defaults to `null` for the homepage.
+- **Description:**
+  This is the main "catch-all" method for displaying pages. It dynamically determines which content and template to load based on the URL.
+- **Logic/Workflow:**
+  1.  **Homepage:** If `$slug` is `null` or `/`, it queries the `Pages` table for the entry where `is_homepage` is `true`.
+  2.  **Child Pages:** For any other slug, it parses only the **last segment** of the URL slug (e.g., for `/path/to/page`, it queries for a page with the slug `page`). This allows for nested URL structures.
+  3.  **Template Selection:**
+      - If the fetched page has the `is_product_list` flag set to true, it sets `$templatePath` to the generic `Templates.product_list` view.
+      - Otherwise, it dynamically constructs the template path based on the full slug (e.g., `/about-us` maps to `Templates.about-us.blade.php`).
+  4.  **Data Fetching:** It checks the page's JSON `content` for product or blog IDs (under keys like `sections`, `systems`, or `blogs`) and fetches the corresponding models from the database.
+  5.  **Rendering:** It passes all fetched data (`$page`, `$products`, `$blogs`, etc.) to the `layouts.app` view, which then includes the appropriate `$templatePath`.
+- **Returns:** An `Illuminate\View\View` instance or a 404 error page if no page or template is found.
+
+**`getProductPage($slug)`**
+- **Parameters:**
+  - `$slug` (string): The unique slug for a product.
+- **Description:** Renders a single product detail page.
+- **Logic/Workflow:**
+  1.  Queries the `Product` model for an entry matching the `$slug`.
+  2.  Eager loads the associated SEO data using `with('seo')`.
+  3.  If found, it passes the `$product` object to the `layouts.app` view. The view uses the `template` attribute from the product to include the correct product detail template (e.g., `Templates.Product.default-template.blade.php`).
+- **Returns:** An `Illuminate\View\View` instance or a 404 error page.
+
+**`getSitemap()`**
+- **Parameters:** None.
+- **Description:** Generates and returns the `sitemap.xml` for SEO purposes.
+- **Logic/Workflow:**
+  1.  Uses the `spatie/laravel-sitemap` package.
+  2.  Queries all published `Pages`, `Products`, and `Posts`.
+  3.  Constructs the full, absolute URL for each item. For nested pages, it recursively builds the full slug.
+  4.  Writes the final XML to `public/sitemap.xml` and returns the file as a response.
+- **Returns:** An `Illuminate\Http\Response` with the XML content.
+
+**`publishPendingPosts()`**
+- **Parameters:** None.
+- **Description:** A utility function to batch-update the status of all blog posts from `PENDING` to `PUBLISHED`.
+- **Returns:** JSON response indicating the number of updated rows.
+
+**`getTrendingProduct()`**
+- **Parameters:** None.
+- **Description:** A helper method to fetch products marked as "trending" for use on the front end.
+- **Performance:** Caches the query result for 10 minutes using the key `header_trending_products` to reduce database queries on every page load.
+- **Returns:** An Eloquent `Collection` of products or an empty collection.
+
+---
+
+### ProductController.php
+
+#### Purpose
+This controller manages product-related displays, including the main search page, category listings, and AJAX endpoints for search functionality.
+
+#### Methods
+
+**`index(Request $request)`**
+- **Parameters:** `Illuminate\Http\Request $request` which may contain a `query` parameter.
+- **Description:** Handles the main search results page at `/product-lists`.
+- **Logic/Workflow:**
+  - **With Query:** If a `query` parameter exists, it uses Laravel Scout to search Algolia for matching `Product` and `Post` models.
+  - **Without Query:** If no query is provided, it returns a paginated list of all products and posts.
+- **Returns:** A view (`layouts.app`) populated with search results or paginated items.
+
+**`getAllProducts(Request $request, $slug)`**
+- **Parameters:**
+  - `Illuminate\Http\Request $request`: Contains optional `page` and `sort` query parameters.
+  - `$slug` (string): The slug for the category to display, or `all-products`.
+- **Description:** Renders product listing pages, filtered by category and sorted as requested.
+- **Performance:** Caching is applied to the database queries for 10 minutes. The cache key is dynamic and includes the slug, page number, and sort order to ensure unique results are cached (e.g., `category_installation-systems_products_az`).
+- **Returns:** A view (`layouts.app`) with the filtered and paginated product data.
+
+**`getSearchResultsDropdown(Request $request)`**
+- **Parameters:** `Illuminate\Http\Request $request` containing a `query` parameter.
+- **Description:** An API endpoint that provides a lightweight JSON response for the instant search dropdown in the site header.
+- **Logic/Workflow:**
+  1.  Takes the `query` string from the request.
+  2.  Uses Algolia search to fetch the top 3 matching `Product` and `Post` results.
+- **Returns:** A JSON object containing `products` and `blogs` arrays.
+
+**`getRecommendedProducts(Request $request)`**
+- **Parameters:** `Illuminate\Http\Request $request`.
+- **Description:** Fetches products that have been manually curated in the "Product Tags" resource under the name `recommended`.
+- **Performance:** The list of recommended product IDs is cached for 10 minutes. The paginated results are also cached separately to optimize performance.
+- **Returns:** A paginated collection of products.
+
+**`getTrendingProducts(Request $request)`**
+- **Parameters:** `Illuminate\Http\Request $request`.
+- **Description:** An API endpoint that fetches products marked as `trending` from the "Product Tags" resource.
+- **Performance:** Results are cached for 10 minutes under the key `header_trending_products`.
+- **Returns:** A JSON response containing an array of trending products.
+
+
 ## Contributing
 
 (Add any specific contribution guidelines here if applicable, otherwise remove or keep generic).
