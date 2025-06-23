@@ -240,6 +240,16 @@ Here is the documentation for the **Resources** section of your README file, for
     * [FormController](#formcontrollerphp)
     * [PageController](#pagecontrollerphp)
     * [ProductController](#productcontrollerphp)
+* [Models](#models)
+    * [Pages Model](#pages_model)
+    * [Post Model](#post_model)
+    * [Product Model](#product_model)
+    * [ProductSection Model](#productsection_model)
+    * [Seo Model](#seo_model)
+    * [Redirects Model](#redirects_model)
+    * [Category Model](#category_model)
+    * [CommmonComponents Model](#commoncomponents_model)
+    * [User Model](#user_model)
 
 ---
 
@@ -510,6 +520,149 @@ This controller manages product-related displays, including the main search page
 - **Performance:** Results are cached for 10 minutes under the key `header_trending_products`.
 - **Returns:** A JSON response containing an array of trending products.
 
+
+## Models
+
+This section provides a detailed overview of the primary Eloquent models used in the RachTR application. These models define the data structure, relationships, and business logic for the core entities managed by the CMS.
+
+### Pages Model
+
+#### Purpose
+The `Pages` model represents dynamic pages on the site, such as 'About Us', 'Contact', and other content-driven pages. It is the backbone of the CMS's page management functionality.
+
+#### Key Features & Implementation Details
+-   **Relationships:**
+    -   `parent()` / `children()`: A self-referencing `belongsTo` / `hasMany` relationship that enables a parent-child hierarchy for creating nested page URLs (e.g., `/solutions/epoxy`).
+    -   `header()` / `footer()`: `belongsTo` relationships linking a page to a specific `CommonComponents` record for its header and footer.
+    -   `seo()`: A polymorphic `morphOne` relationship to the `Seo` model, allowing each page to have its own unique SEO metadata.
+-   **Attributes & Accessors:**
+    -   `is_homepage` (boolean): A flag to designate a single page as the website's homepage.
+    -   `content` & `schema_data` (array): Cast to arrays, these JSON columns store flexible, unstructured data managed through the Filament panel.
+    -   `getFullSlugAttribute()`: A custom accessor that dynamically generates the full URL slug by concatenating the parent's slug with its own (e.g., `parent-slug/child-slug`).
+-   **Business Logic:**
+    -   A `boot()` method contains a `saving` event listener that enforces a site-wide rule: only one page can have `is_homepage` set to `true`. When a page is saved as the homepage, all other pages are automatically updated to remove the flag.
+
+---
+
+### Product Model
+
+#### Purpose
+The `Product` model represents an individual product in the catalog. It is a feature-rich model that handles product data, search indexing, and media management.
+
+#### Key Features & Implementation Details
+-   **Traits:**
+    -   `Laravel\Scout\Searchable`: Enables full-text search capabilities, configured to work with Algolia.
+    -   `RalphJSmit\Laravel\SEO\Support\HasSEO`: Integrates with the SEO package.
+-   **Relationships:**
+    -   `categories()`: A `belongsToMany` relationship to the `Category` model.
+    -   `seo()`: A polymorphic `morphOne` relationship to the `Seo` model.
+-   **Searchability:**
+    -   The `toSearchableArray()` method defines which data is sent to the Algolia index. It includes the product's `name`, `slug`, and a JSON-encoded version of its `content`.
+-   **Model Events & File Management:**
+    -   The `booted()` method contains critical logic for maintaining data integrity and storage cleanliness:
+        -   **`updated` event:** When a product's `content` is updated, it triggers a `deleteRemovedImages()` method to automatically delete any old images, datasheets, or certificates from the `storage` directory that are no longer referenced. This prevents orphaned files on update.
+        -   **`saved` & `deleted` events:** These events automatically clear relevant caches (`categories_with_products`, `products_name_slug`) to ensure the front end always displays up-to-date information.
+    -   ⚠️ **Developer Note on Deletion:** The current implementation does **not** automatically delete associated files from storage when a `Product` record is deleted entirely. An observer or a `deleting` model event would need to be implemented to add this functionality and prevent orphaned files upon product deletion.
+
+---
+
+### ProductsSection Model
+
+#### Purpose
+The `ProductsSection` model is used to create manually curated groups of products. Instead of relying on dynamic categories, administrators can use this to create specific, named collections for promotional or navigational purposes.
+
+#### Key Features & Implementation Details
+-   **Fields:**
+    -   `name` (string): The unique identifier for the section (e.g., `trending`, `recommended`).
+    -   `product_ids` (array): A JSON column that stores an array of product IDs belonging to this section. It is automatically cast to an array in Laravel.
+-   **Usage:**
+    -   **Trending Products:** Used to populate the "Trending Products" list that appears on the search bar hover/focus (`ProductController@getTrendingProducts`).
+    -   **Recommended Filter:** Used to populate the "Recommended" filter option on category and product listing pages (`ProductController@getRecommendedProducts`).
+
+---
+
+### Redirect Model
+
+#### Purpose
+The `Redirect` model handles permanent (301) URL redirects. It is a simple but powerful tool for SEO and user experience, ensuring that outdated or changed URLs point to the correct new pages.
+
+#### Key Features & Implementation Details
+-   **Fields:**
+    -   `old_url` (string): The old path that should trigger a redirect.
+    -   `new_url` (string): The new destination path.
+-   **Integration:** This model is used by the `RedirectIfOldUrl` middleware, which intercepts incoming requests and performs a 301 redirect if a match is found in the `redirects` table.
+
+---
+
+### Seo Model
+
+#### Purpose
+This model extends the `RalphJSmit\Laravel\SEO\Models\SEO` base class to store and manage all SEO-related metadata for other models in the application.
+
+#### Key Features & Implementation Details
+-   **Polymorphic Relationship:** It is designed to be attached to any Eloquent model (e.g., `Page`, `Product`, `Post`) via a `morphOne` relationship. This allows for a centralized and reusable SEO system.
+-   **Fields:**
+    -   `title`, `description`, `robots`, `canonical_url`: Standard meta tags.
+    -   `meta` (JSON): A flexible field for storing additional metadata, such as `focus_keywords`.
+
+---
+
+### Post Model
+
+#### Purpose
+The `Post` model represents a blog post. It extends the `BasePost` class from the `firefly/filament-blog` package and adds custom search functionality.
+
+#### Key Features & Implementation Details
+-   **Traits:**
+    -   `Laravel\Scout\Searchable`: Enables full-text search via Algolia.
+-   **Searchability:**
+    -   `toSearchableArray()`: This method is customized to prepare data for indexing. It sanitizes the post's HTML `body` by stripping out style tags, inline styles, and images before sending it to Algolia. This ensures the search index contains clean, relevant text.
+    -   `searchableAs()`: Configures the model to use a specific Algolia index named `fblog_posts`.
+-   **Attributes:**
+    -   `$appends = ['feature_photo']`: Exposes a `feature_photo` attribute. This accessor is inherited from the parent `BasePost` class and provides a convenient URL to the post's main image.
+
+---
+
+### Category Model
+
+#### Purpose
+Represents a product category, used for organizing and filtering products.
+
+#### Key Features & Implementation Details
+-   **Relationships:**
+    -   `products()`: A `belongsToMany` relationship to the `Product` model, linked via the `category_product` pivot table.
+-   **Performance:**
+    -   The `booted()` method includes `saved` and `deleted` hooks that automatically clear the `categories_with_products` cache. This ensures that any changes to categories or their product associations are immediately reflected on the front end.
+
+---
+
+### CommonComponents Model
+
+#### Purpose
+Represents reusable layout blocks, such as the website's header and footer. This allows for centralized management of shared UI elements like navigation menus.
+
+#### Key Features & Implementation Details
+-   **Fields:**
+    -   `type` (enum): Defines the component type (e.g., `header` or `footer`).
+    -   `content` (JSON): Stores the component's data, such as navigation links and logo paths, in a flexible format. The attribute is cast to an array.
+-   **Relationships:**
+    -   `pagesAsHeader()` / `pagesAsFooter()`: `hasMany` relationships to the `Pages` model, allowing a single component to be used across multiple pages.
+
+---
+
+### User Model
+
+#### Purpose
+The `User` model handles user authentication and authorization, primarily for the Filament admin panel.
+
+#### Key Features & Implementation Details
+-   **Interfaces & Traits:**
+    -   Implements `Filament\Models\Contracts\FilamentUser` to integrate with Filament's authentication system.
+    -   Uses the `Firefly\FilamentBlog\Traits\HasBlog` trait, enabling users to be authors of blog posts.
+-   **Authorization:**
+    -   The `canAccessPanel()` method contains critical security logic. It restricts access to the Filament admin panel to only those users whose email address ends with `@quantastic.in`.
+-   **Functionality:**
+    -   The `canComment()` method is included to support blog commenting functionality provided by the Firefly package.
 
 ## Contributing
 
