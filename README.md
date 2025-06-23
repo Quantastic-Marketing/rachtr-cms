@@ -265,6 +265,7 @@ Here is the documentation for the **Resources** section of your README file, for
       * [category-post.blade.php](#category-postbladephp)
       * [all-post.blade.php & tag-post.blade.php](#all-postbladephp--tag-postbladephp)
 * [Javascript Files](#javascript-files)
+* [Database Schema](#database-schema)
 
 ---
 
@@ -851,6 +852,163 @@ This section details the functionality of the key JavaScript files responsible f
     -   **Manual Tab Switching:** Implements the core logic to switch between the "All," "Products," and "Blog Posts" tabs by manually toggling `active` classes on tab links and content panes.
     -   **"View All" Button Integration:** It enhances user experience by making the "View All" buttons within the "All" tab act as navigation. For example, clicking "View All" in the products section will automatically switch the user to the "Products" tab to see the complete list.
     -   **Search Input Clear:** Adds a simple click handler to the clear button to empty the search input field.
+
+---
+
+### Database Schema
+
+This section details the structure of the database tables used in the application. The schema is defined by the migration files located in the `database/migrations` directory.
+
+---
+
+#### `users` table
+*   **Purpose:** Stores user accounts, primarily for access to the Filament admin panel.
+*   **Migration:** `0001_01_01_000000_create_users_table.php`
+
+| Column            | Type                | Modifiers                           | Description                               |
+| ----------------- | ------------------- | ----------------------------------- | ----------------------------------------- |
+| `id`              | `bigIncrements`     | `Primary Key`                       | Unique identifier for the user.           |
+| `name`            | `string`            |                                     | User's full name.                         |
+| `email`           | `string`            | `Unique`                            | User's email address (used for login).    |
+| `email_verified_at`| `timestamp`         | `Nullable`                          | Timestamp when the email was verified.    |
+| `password`        | `string`            |                                     | Hashed password for the user.             |
+| `remember_token`  | `rememberToken`     |                                     | Token for "remember me" functionality.    |
+| `timestamps`      | `timestamps`        |                                     | `created_at` and `updated_at` timestamps. |
+
+---
+
+#### `pages` table
+*   **Purpose:** Stores all CMS-managed pages.
+*   **Migration:** `2025_02_28_063733_create_pages_table.php` & subsequent modifications.
+
+| Column      | Type                | Modifiers                           | Description                                                                 |
+| ----------- | ------------------- | ----------------------------------- | --------------------------------------------------------------------------- |
+| `id`        | `bigIncrements`     | `Primary Key`                       | Unique identifier for the page.                                             |
+| `title`     | `string`            |                                     | The main title of the page.                                                 |
+| `slug`      | `string`            | `Unique`, `Nullable`                | URL-friendly slug for the page.                                             |
+| `parent_id` | `foreignId`         | `Nullable`, `Constrained`           | Foreign key to `pages.id` for creating nested page hierarchies.             |
+| `header_id` | `unsignedBigInteger`| `Foreign Key`                       | Foreign key to `common_components.id` for the page's header.                |
+| `footer_id` | `unsignedBigInteger`| `Foreign Key`                       | Foreign key to `common_components.id` for the page's footer.                |
+| `status`    | `enum`              | `Default: 'draft'`                  | The publication status (`draft`, `published`, `archived`).                  |
+| `is_homepage`| `boolean`           | `Default: false`                    | A flag to mark the page as the website's homepage.                          |
+| `schema_data`| `json`              | `Nullable`                          | Stores an array of JSON-LD schema objects for SEO.                          |
+| `content`   | `json`              | `Nullable`                          | Stores all dynamic page content in a flexible JSON structure.               |
+| `timestamps`| `timestamps`        |                                     | `created_at` and `updated_at` timestamps.                                   |
+
+---
+
+#### `products` table
+*   **Purpose:** Stores all product information for the catalog.
+*   **Migration:** `2025_03_01_095537_create_products_table.php` & subsequent modifications.
+
+| Column        | Type          | Modifiers          | Description                                                                 |
+| ------------- | ------------- | ------------------ | --------------------------------------------------------------------------- |
+| `id`          | `bigIncrements` | `Primary Key`      | Unique identifier for the product.                                          |
+| `name`        | `string`      |                    | The name of the product.                                                    |
+| `slug`        | `string`      | `Unique`           | URL-friendly slug for the product page.                                     |
+| `template`    | `enum`        |                    | Defines the Blade template to use for rendering the product detail page.    |
+| `content`     | `json`        |                    | Stores flexible product data (images, benefits, description, file paths).   |
+| `is_active`   | `boolean`     | `Default: true`    | A flag to enable or disable the product on the front end.                   |
+| `schema_data` | `json`        | `Nullable`         | Stores an array of JSON-LD schema objects for SEO.                          |
+| `timestamps`  | `timestamps`  |                    | `created_at` and `updated_at` timestamps.                                   |
+
+---
+
+#### `categories` table
+*   **Purpose:** Stores product categories used for organization and filtering.
+*   **Migration:** `2025_03_21_143020_create_categories_table.php`
+
+| Column      | Type          | Modifiers     | Description                                |
+| ----------- | ------------- | ------------- | ------------------------------------------ |
+| `id`        | `bigIncrements` | `Primary Key` | Unique identifier for the category.        |
+| `name`      | `string`      | `Unique`      | The name of the category.                  |
+| `slug`      | `string`      | `Unique`      | URL-friendly slug for the category.        |
+| `description`| `text`        | `Nullable`    | A short description of the category.       |
+| `timestamps`| `timestamps`  |               | `created_at` and `updated_at` timestamps.  |
+
+---
+
+#### `category_product` pivot table
+*   **Purpose:** The pivot table for the many-to-many relationship between `products` and `categories`.
+*   **Migration:** `2025_03_21_143633_create_category_product_table.php`
+
+| Column       | Type        | Modifiers     | Description                                     |
+| ------------ | ----------- | ------------- | ----------------------------------------------- |
+| `id`         | `bigIncrements` | `Primary Key` | Unique identifier for the relationship.         |
+| `product_id` | `foreignId`   | `Constrained` | Foreign key referencing the `products` table.   |
+| `category_id`| `foreignId`   | `Constrained` | Foreign key referencing the `categories` table. |
+| `timestamps` | `timestamps`  |               | `created_at` and `updated_at` timestamps.       |
+
+---
+
+#### `common_components` table
+*   **Purpose:** Stores reusable UI components like headers and footers.
+*   **Migration:** `2025_02_28_063732_create_common_components_table.php`
+
+| Column     | Type          | Modifiers     | Description                                                         |
+| ---------- | ------------- | ------------- | ------------------------------------------------------------------- |
+| `id`       | `bigIncrements` | `Primary Key` | Unique identifier for the component.                                |
+| `name`     | `string`      |               | The internal name of the component (e.g., `Header Home`).           |
+| `type`     | `enum`        |               | The type of component (`header`, `footer`).                         |
+| `content`  | `json`        | `Nullable`    | Stores the component's dynamic content (e.g., navigation links).    |
+| `timestamps`| `timestamps`  |               | `created_at` and `updated_at` timestamps.                           |
+
+---
+
+#### `products_sections` table
+*   **Purpose:** Stores manually curated product groupings (e.g., "Trending", "Recommended").
+*   **Migration:** `2025_04_24_112354_create_products_sections_table.php`
+
+| Column      | Type          | Modifiers     | Description                                                           |
+| ----------- | ------------- | ------------- | --------------------------------------------------------------------- |
+| `id`        | `bigIncrements` | `Primary Key` | Unique identifier for the section.                                    |
+| `name`      | `string`      | `Unique`      | The name of the section (e.g., `trending`).                           |
+| `product_ids`| `json`        | `Nullable`    | A JSON array containing the IDs of the products in this section.      |
+| `timestamps`| `timestamps`  |               | `created_at` and `updated_at` timestamps.                             |
+
+---
+
+#### `redirects` table
+*   **Purpose:** Stores URL redirection rules to handle old or changed links.
+*   **Migration:** `2025_04_07_165205_create_redirects_table.php`
+
+| Column   | Type          | Modifiers     | Description                          |
+| -------- | ------------- | ------------- | ------------------------------------ |
+| `id`     | `bigIncrements` | `Primary Key` | Unique identifier for the redirect.  |
+| `old_url`| `string`      | `Unique`      | The source URL path to be redirected.|
+| `new_url`| `string`      |               | The destination URL path.            |
+| `timestamps`| `timestamps`  |             | `created_at` and `updated_at` timestamps. |
+
+---
+
+#### `seo` table
+*   **Purpose:** Stores SEO metadata for various models polymorphically.
+*   **Migration:** `2025_02_28_140140_create_seo_table.php` & subsequent modifications.
+
+| Column        | Type          | Modifiers             | Description                                                   |
+| ------------- | ------------- | --------------------- | ------------------------------------------------------------- |
+| `id`          | `bigIncrements` | `Primary Key`         | Unique identifier for the SEO entry.                          |
+| `model_type`  | `string`      | `Polymorphic`         | The class name of the related model (e.g., `App\Models\Page`).|
+| `model_id`    | `bigInteger`  | `Polymorphic`         | The ID of the related model record.                           |
+| `title`       | `string`      | `Nullable`            | The SEO title tag.                                            |
+| `description` | `longText`    | `Nullable`            | The meta description tag.                                     |
+| `meta`        | `json`        | `Nullable`            | Stores additional meta-information like focus keywords.       |
+| `robots`      | `string`      | `Nullable`            | The content for the meta robots tag (e.g., `index, follow`).  |
+| `canonical_url`| `string`      | `Nullable`            | The canonical URL for the page.                               |
+| `timestamps`  | `timestamps`  |                       | `created_at` and `updated_at` timestamps.                     |
+
+---
+
+#### Blog Tables (from `firefly/filament-blog`)
+*   **Purpose:** These tables are created and managed by the Filament-Blog package to handle all aspects of the blog.
+*   **Migration:** `2025_03_04_113413_create_blog_tables.php`
+*   **Key Tables:**
+    *   **`fblog_posts`:** Stores the main content of each blog post, including title, slug, body, status, and author (`user_id`).
+    *   **`fblog_categories`:** Stores blog post categories.
+    *   **`fblog_tags`:** Stores tags that can be applied to posts.
+    *   **`fblog_comments`:** Stores user comments on posts.
+    *   **`fblog_seo_details`:** Stores SEO metadata specific to blog posts.
+    *   **Pivot tables** (`fblog_category_fblog_post`, `fblog_post_fblog_tag`) manage the relationships between posts, categories, and tags.
 ## Contributing
 
 (Add any specific contribution guidelines here if applicable, otherwise remove or keep generic).
