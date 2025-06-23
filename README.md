@@ -236,10 +236,10 @@ Here is the documentation for the **Resources** section of your README file, for
     * [Product Resource](#product-resource)
     * [Common Component Resource](#common-component-resource)
 * [Controllers](#controllers)
-    * [BlogController](#blogcontroller.php)
-    * [FormController](#formcontroller.php)
-    * [PageController](#pagecontroller.php)
-    * [ProductController](#productcontroller.php)
+    * [BlogController](#blogcontrollerphp)
+    * [FormController](#formcontrollerphp)
+    * [PageController](#pagecontrollerphp)
+    * [ProductController](#productcontrollerphp)
 
 ---
 
