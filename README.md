@@ -250,7 +250,20 @@ Here is the documentation for the **Resources** section of your README file, for
     * [Category Model](#category-model)
     * [CommmonComponents Model](#commoncomponents-model)
     * [User Model](#user-model)
-* [Views & Frontend - Blade Tenmplates](#views-&-frontend-blade-tenmplates)
+* [Views & Frontend - Blade Templates](#views--frontend---blade-templates)
+    * [Directory Structure](#directory-structure)
+    * [Core Layouts](#core-layouts)
+      * [Layouts -> app.blade.php](#layoutsappbladephp)
+    * [Template Specific Views](#template-specific-views)
+      * [Templates/ Directory](#templates-directory)
+      * [Templates/product_list.blade.php](#templatesproduct_listbladephp)
+      * [Templates/search.blade.php](#templatessearchbladephp)
+      * [Fallback template](#fallbackbladephp)
+    * [Blogs Views](#blog-views-vendorfilament-blog)
+      * [index.blade.php](#indexbladephp)
+      * [show.blade.php](#showbladephpp)
+      * [category-post.blade.php](#category-postbladephp)
+      * [all-post.blade.php & tag-post.blade.php](#all-postbladephp--tag-postbladephp)
 
 ---
 
