@@ -531,6 +531,17 @@ This section provides a detailed overview of the primary Eloquent models used in
 The `Pages` model represents dynamic pages on the site, such as 'About Us', 'Contact', and other content-driven pages. It is the backbone of the CMS's page management functionality.
 
 #### Key Features & Implementation Details
+-   **Fields:**
+    -   `title`:Used as the visible page title and often shown in meta tags or page headers.
+    -   `slug`: Determines the page’s public URL. For example, a page with the slug about-us is accessible at /about-us or, if it's nested, /parent-slug/about-us.
+    -   `parent_id`: Enables nested URLs and breadcrumb logic (e.g., /solutions/architecture).
+    -   `header_id` integer (nullable, foreign key to pages.id): Controls which header layout appears on the frontend for this page.
+    -   `footer_id` integer (nullable, foreign key to pages.id): Used to display a consistent footer or vary it across different sections of the site.
+    -   `is_homepage` (boolean) :Only one page can have this flag set to true. Automatically resets others on save.
+    -   `status` (enum): Helps determine whether the page should be shown to the public or is still being worked on.
+    -   `schema_data` (array) : This field is basically a json and is used to get the different schemas in the head section of the product page. give in this format.
+    -   `content` (array):  Powers the modular sections of the page—e.g., hero banners, testimonials, forms, etc.—through the Filament CMS.
+   
 -   **Relationships:**
     -   `parent()` / `children()`: A self-referencing `belongsTo` / `hasMany` relationship that enables a parent-child hierarchy for creating nested page URLs (e.g., `/solutions/epoxy`).
     -   `header()` / `footer()`: `belongsTo` relationships linking a page to a specific `CommonComponents` record for its header and footer.
@@ -550,6 +561,13 @@ The `Pages` model represents dynamic pages on the site, such as 'About Us', 'Con
 The `Product` model represents an individual product in the catalog. It is a feature-rich model that handles product data, search indexing, and media management.
 
 #### Key Features & Implementation Details
+-   **Fields:**
+    -   `name` (string): Name of the Product.
+    -   `slug` (string): The urls lug for this product(unique).
+    -   `template` (string): Choose the template that should be applied to it ( Currently only defauilt-template is there but once a new template or different template for selective product is there then you can add it from here for that product ).
+    -   `content` (array): It is a json based field that stores the content for each section in K-V pairs.
+    -   `is_active` (boolean): A field that is used to check if the page is to be shown or not.
+    -   `schema_data` (array) : This field is basically a json and is used to get the different schemas in the head section of the product page. give in this format   
 -   **Traits:**
     -   `Laravel\Scout\Searchable`: Enables full-text search capabilities, configured to work with Algolia.
     -   `RalphJSmit\Laravel\SEO\Support\HasSEO`: Integrates with the SEO package.
