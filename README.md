@@ -697,7 +697,7 @@ The `User` model handles user authentication and authorization, primarily for th
     -   The `canComment()` method is included to support blog commenting functionality provided by the Firefly package.
 
 
-## Views & Frontend - Blade Tenmplates
+## Views & Frontend - Blade Templates
 
 This section outlines the structure and purpose of the Blade templates and front-end assets that render the RachTR website. The system uses a combination of convention-based routing, dynamic templates, and reusable components.
 
