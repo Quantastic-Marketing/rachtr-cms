@@ -781,6 +781,7 @@ These files serve niche filtering purposes.
 
 ---
 
+
 ### JavaScript Files
 
 This section details the functionality of the key JavaScript files responsible for front-end interactivity, form handling, and dynamic content loading.
