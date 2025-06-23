@@ -1047,6 +1047,23 @@ These routes are designed to be consumed by front-end JavaScript (e.g., for AJAX
 | `GET`  | `/api/product-lists` | `ProductController@getSearchResultsDropdown` | `product-lists-api` | API  | JSON        | Provides instant search results for the header search bar. Returns top 3 matching products and blogs.       |
 | `GET`  | `/api/trending-products`| `ProductController@getTrendingProducts`  | -                   | API  | JSON        | Returns a cached list of products marked as "trending". Used to populate the initial view of the search dropdown. |
 
+---
+
+#### Filament Blog Routes (from `firefly/filament-blog` package)
+
+These routes are registered by the Filament-Blog package and handle all blog-related functionality. The default prefix is `/blogs`.
+
+| Method | URI                                | Controller Action                         | Route Name                 | Type | Return Type     | Description                                                                 |
+| :----- | :--------------------------------- | :---------------------------------------- | :------------------------- | :--- | :-------------- | :-------------------------------------------------------------------------- |
+| `GET`  | `blogs`                            | `PostController@index`                    | `filamentblog.post.index`  | Web  | View            | Displays the main blog landing page with paginated posts.                   |
+| `GET`  | `blogs/all`                        | `PostController@allPosts`                 | `filamentblog.post.all`    | Web  | View            | Displays a paginated list of all blog posts.                                |
+| `GET`  | `blogs/search`                     | `PostController@search`                   | `filamentblog.post.search` | Web  | View            | Displays search results for blog posts based on a `query` parameter.        |
+| `GET`  | `blogs/{post:slug}`                | `PostController@show`                     | `filamentblog.post.show`   | Web  | View            | Displays a single blog post by its slug.                                    |
+| `GET`  | `blogs/categories/{category:slug}` | `CategoryController@posts`                | `filamentblog.category.post`| Web  | View            | Displays all blog posts belonging to a specific category.                   |
+| `GET`  | `blogs/tags/{tag:slug}`            | `TagController@posts`                     | `filamentblog.tag.post`    | Web  | View            | Displays all blog posts associated with a specific tag.                     |
+| `POST` | `blogs/subscribe`                  | `PostController@subscribe`                | `filamentblog.post.subscribe`| Web  | Redirect/JSON   | Handles newsletter subscription form submissions.                           |
+| `POST` | `blogs/posts/{post:slug}/comment`  | `CommentController@store`                 | `filamentblog.comment.store`| Web  | Redirect/JSON   | Handles the submission of a new comment on a blog post. (Requires auth).    |
+
 
 ## Contributing
 
