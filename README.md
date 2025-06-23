@@ -250,7 +250,7 @@ Here is the documentation for the **Resources** section of your README file, for
     * [Category Model](#category-model)
     * [CommmonComponents Model](#commoncomponents-model)
     * [User Model](#user-model)
-*[Views & Frontend - Blade Tenmplates](#views-&-frontend-blade-tenmplates)
+* [Views & Frontend - Blade Tenmplates](#views-&-frontend-blade-tenmplates)
 
 ---
 
