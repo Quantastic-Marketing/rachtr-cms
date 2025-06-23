@@ -1009,6 +1009,45 @@ This section details the structure of the database tables used in the applicatio
     *   **`fblog_comments`:** Stores user comments on posts.
     *   **`fblog_seo_details`:** Stores SEO metadata specific to blog posts.
     *   **Pivot tables** (`fblog_category_fblog_post`, `fblog_post_fblog_tag`) manage the relationships between posts, categories, and tags.
+
+
+***
+
+### Routes & API Endpoints
+
+This section outlines all the web and API routes defined in the application, their purpose, and what they return.
+
+#### Web Routes (`routes/web.php`)
+
+These routes handle the page rendering and form submissions for the main website.
+
+| Method | URI                               | Controller Action                         | Route Name  | Type | Return Type | Description                                                                                              |
+| :----- | :-------------------------------- | :---------------------------------------- | :---------- | :--- | :---------- | :------------------------------------------------------------------------------------------------------- |
+| `GET`  | `/update-slug`                    | `BlogController@updatePublishedDates`     | -           | Web  | JSON        | A utility route to update the publish dates of specially-formatted blog posts.                           |
+| `GET`  | `/product-page/{slug}`            | `PageController@getProductPage`           | `product.page` | Web  | View        | Displays a single product detail page based on its slug.                                                 |
+| `GET`  | `/sitemap.xml`                    | `PageController@getSiteMap`               | -           | Web  | XML         | Generates and serves the website's sitemap.                                                              |
+| `POST` | `/contact-submit`                 | `FormController@addContactDetail`         | `contact`   | Web  | JSON        | Handles submissions from the main contact/product inquiry form.                                          |
+| `POST` | `/connect`                        | `FormController@addConnectDetail`         | `connect`   | Web  | JSON        | Handles submissions from the simple "Let's Connect" form.                                                |
+| `POST` | `/cvform`                         | `FormController@addCvDetail`              | `cvform`    | Web  | JSON        | Handles submissions from the career/CV upload form.                                                      |
+| `POST` | `/submit-epoxy-form`              | `FormController@addEpoxyDetail`           | `epoxyForm` | Web  | JSON        | Handles submissions from the detailed epoxy flooring inquiry form.                                       |
+| `GET`  | `/category/{slug}`                | `ProductController@getAllProducts`        | `all-products` | Web  | View        | Displays a list of products filtered by a specific category slug.                                        |
+| `GET`  | `/product-lists`                  | `ProductController@index`                 | `product-lists`| Web  | View        | Serves as the main search results page. Displays all products/blogs or filtered results based on a query.  |
+| `GET`  | `/publish-blogs`                  | `PageController@publishPendingPosts`      | -           | Web  | JSON        | A utility route to batch-publish all pending blog posts.                                                 |
+| `GET`  | `/post/{slug}`                    | (Closure)                                 | -           | Web  | Redirect    | Permanently redirects old `/post/{slug}` URLs to the new `/blogs/{slug}` format for SEO.                 |
+| `GET`  | `/blog/page/{page}`               | (Closure)                                 | -           | Web  | Redirect    | Permanently redirects old paginated blog URLs to the new `?page=` query format.                          |
+| `GET`  | `/{slug?}`                        | `PageController@getPage`                  | -           | Web  | View        | The main "catch-all" route that renders all CMS-driven pages based on their full slug.                   |
+| `ANY`  | (Fallback)                        | (Closure)                                 | -           | Web  | View        | A fallback route that catches any undefined URLs and displays a custom 404 page.                         |
+
+#### API Routes (`routes/api.php`)
+
+These routes are designed to be consumed by front-end JavaScript (e.g., for AJAX calls) and return JSON data.
+
+| Method | URI                  | Controller Action                        | Route Name          | Type | Return Type | Description                                                                                                   |
+| :----- | :------------------- | :--------------------------------------- | :------------------ | :--- | :---------- | :------------------------------------------------------------------------------------------------------------ |
+| `GET`  | `/api/product-lists` | `ProductController@getSearchResultsDropdown` | `product-lists-api` | API  | JSON        | Provides instant search results for the header search bar. Returns top 3 matching products and blogs.       |
+| `GET`  | `/api/trending-products`| `ProductController@getTrendingProducts`  | -                   | API  | JSON        | Returns a cached list of products marked as "trending". Used to populate the initial view of the search dropdown. |
+
+
 ## Contributing
 
 (Add any specific contribution guidelines here if applicable, otherwise remove or keep generic).
