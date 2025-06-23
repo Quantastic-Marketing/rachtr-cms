@@ -265,7 +265,21 @@ Here is the documentation for the **Resources** section of your README file, for
       * [category-post.blade.php](#category-postbladephp)
       * [all-post.blade.php & tag-post.blade.php](#all-postbladephp--tag-postbladephp)
 * [Javascript Files](#javascript-files)
+* [Routes & API Endpoints](#routes--api-endpoints)
+  * [Web Routes](#web-routes-routeswebphp)
+  * [API Routes](#api-routes-routesapiphp)
+  * [Filament Blog Routes](#filament-blog-routes-from-fireflyfilament-blog-package)
 * [Database Schema](#database-schema)
+  * [users table](#users-table)
+  * [pages table](#pages-table)
+  * [products table](#products-table)
+  * [categories table](#categories-table)
+  * [category_product pivot table](#category_product-pivot-table)
+  * [common_components table](#common_components-table)
+  * [products_sections table](#products_sections-table)
+  * [redirects table](#redirects-table)
+  * [seo table](#seo-table)
+  * [Blog Tables](#blog-tables-from-fireflyfilament-blog)
 
 ---
 
