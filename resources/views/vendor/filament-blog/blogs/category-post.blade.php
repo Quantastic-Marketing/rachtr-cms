@@ -90,14 +90,18 @@
           
       <section class="blog-banner banner">
         <div class="row g-0">
-        <div class="col-lg-12">  
+        <div class="col-lg-12"> 
+                @php
+                    $slug = request()->segment(count(request()->segments()));
+                    $title = ucwords(str_replace('-', ' ', $slug));
+                @endphp
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="images/blog-bg.webp" alt="img background">
-                   
+                    <img src="{{asset('images/blog-bg.webp')}}" alt="{{ $title . ' banner' }}">
                 </div>
+                
                 <div class="heading-holder">
-                    <h1 class="fw-bold">BLOGS & ARTICLES</h1>
+                    <h1 class="fw-bold">{{$title}}</h1>
                 </div>
             </div>                   
           </div>
