@@ -886,7 +886,7 @@
 
       @if(!empty($pageContent['why_trust']))
         <section class="why-trust-rachtr-section">
-          <img src="{{ isset($whyTrust['bg_image']) ? asset('storage/' . $whyTrust['bg_image']) : asset('images/why-trust-bg.webp') }}" class="bg-cover bg-video" alt="{{$whyTrust['img_alt'] ?? ''}}" />
+          <img src="{{ isset($whyTrust['bg_image']) ? asset('storage/' . $whyTrust['bg_image']) : asset('images/why-trust-bg.webp') }}" class="bg-cover bg-video" alt="{{$whyTrust['img_alt'] ?? 'Why trust RachTR background'}}" />
           <div class="overlay"></div>
           <div class="container">
             <div class="why-trust-inner-block p-lg-5 p-4">

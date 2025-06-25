@@ -247,42 +247,42 @@
                                 @empty
                                     <div class="app-video mx-1">
                                         <a href="https://www.youtube.com/embed/GG7zBf_A2Nk" data-fancybox="gallery">
-                                            <img src="{{asset('images/thumbnail-1.webp')}}" alt="">
+                                            <img src="{{asset('images/thumbnail-1.webp')}}" alt="A person using tile adhesive">
                                         </a>
                                     </div>
                                     <div class="app-video mx-1 ">
                                         <a href="https://www.youtube.com/embed/lHCzLmkVm-M" data-fancybox="gallery">
-                                            <img src="{{asset('images/thumbnail-2.webp')}}" alt="">
+                                            <img src="{{asset('images/thumbnail-2.webp')}}" alt="A person applying adhesive on stone">
                                         </a>
                                     </div>
                                     <div class="app-video mx-1">
                                         <a href="https://www.youtube.com/embed/lHCzLmkVm-M" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-3.webp')}}" alt="">
+                                        <img src="{{asset('images/thumbnail-3.webp')}}" alt="Epoxy flooring top coat on a surface">
                                         </a>
                                     </div>
                                     <div class="app-video mx-1">
                                         <a href="{{asset('videos/adani-ahemdabad.webm')}}" data-fancybox="gallery">
-                                            <img src="{{asset('images/thumbnail-4.webp')}}" alt="">
+                                            <img src="{{asset('images/thumbnail-4.webp')}}" alt="RachTR products have been used on Adani Inspire Business Park in Ahemdabad">
                                         </a>
                                     </div>
                                     <div class="app-video mx-1">
                                         <a href="{{asset('videos/Lake-Estate-Nagpur.webm')}}" data-fancybox="gallery">
-                                        <img src="{{asset('images/thumbnail-5.webp')}}" alt="">
+                                        <img src="{{asset('images/thumbnail-5.webp')}}" alt="Upcoming project of RachTR at Nagpur">
                                         </a>
                                     </div>
                                     <div class="app-video mx-1">
                                         <a href="{{asset('videos/Surat-Bunglow.webm')}}" data-fancybox="gallery">
-                                            <img src="{{asset('images/thumbnail-6.webp')}}" alt="">
+                                            <img src="{{asset('images/thumbnail-6.webp')}}" alt="Bunglow in Surat">
                                         </a>             
                                     </div>
                                     <div class="app-video mx-1">
                                         <a href="{{asset('videos/Travertine-Punjab.webm')}}" data-fancybox="gallery">
-                                            <img src="{{asset('images/thumbnail-7.webp')}}" alt="">
+                                            <img src="{{asset('images/thumbnail-7.webp')}}" alt="RachTR applied top seal on travertine stone in Punjab">
                                         </a>             
                                     </div>
                                     <div class="app-video mx-1">
                                         <a href="{{asset('videos/Lemon-Tree.webm')}}" data-fancybox="gallery">
-                                            <img src="{{asset('images/thumbnail-9.webp')}}" alt="">
+                                            <img src="{{asset('images/thumbnail-9.webp')}}" alt="RachTR products used at Hotel Lemon Tree, Agra">
                                         </a>
                                     </div>
                                 @endforelse
