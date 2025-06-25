@@ -4,11 +4,20 @@
         <meta name="google-site-verification" content="LLHnCxL0ply51MwNKvI7mbYW7yFJQ1GK6g_DrijdgMU" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        <title>RachTR Blog | Insights on Industrial Flooring, Epoxy, and More</title>
-            <meta name="description" content="Explore the RachTR blog for expert insights on industrial flooring, epoxy solutions, and construction technologies. Learn about the latest trends in commercial and residential flooring.">
-            <meta name="author" content="Ramakant Pandey">
+        @php
+            $page = request()->get('page');
+            $pageSuffix = ($page && $page > 1) ? ' - Page ' . $page : '';
+        @endphp
+
+        <title>RachTR Blog | Insights on Industrial Flooring, Epoxy, and More {{ $pageSuffix }}</title>
+        <meta name="description" content="Explore the RachTR blog for expert insights on industrial flooring, epoxy solutions, and construction technologies. Learn about the latest trends in commercial and residential flooring {{ $pageSuffix }}.">
+            @php
+                $currentUrl = url()->current();
+                $query = request()->getQueryString();
+                $fullUrl = $query ? "$currentUrl?$query" : $currentUrl;
+            @endphp
             <meta name="keywords" content="epoxy flooring blogs,tile adhesive blog,blogs">
-            <link rel="canonical" href="https://www.rachtr.com/blogs">
+            <link rel="canonical" href="{{ $fullUrl }}">
             <meta name="robots" content="index,follow">
             <meta name="msvalidate.01" content="8C0F176F0755630859963DA6D5140F0A" />
             <meta http-equiv='content-language' content='en-gb'>
