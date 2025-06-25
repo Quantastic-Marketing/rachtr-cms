@@ -365,6 +365,14 @@ nav ul.pagination li {
     .blog-banner .banner-section .image-wrapper{
         height: 180px;
     }
+    .blogs-content h2 {
+        line-height: 28px !important;
+    }
+    
+    .blog-head h1 {
+        font-size: 22px !important;
+        line-height: 30.8px !important;
+    }
 }
 
 

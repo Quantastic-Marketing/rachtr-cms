@@ -176,6 +176,10 @@
     font-size: 18px;
     line-height: 27px;
 }
+
+.blog-body table td{
+    padding: 10px !important;
+}
 @media (min-width: 1400px) {
     .blogs-content .container {
         max-width: 1240px;
@@ -234,6 +238,13 @@
     }
     .border-sm {
         border: none !important;
+    }
+    .blog-head h1 {
+        font-size: 22px !important;
+        line-height: 30.8px !important;
+    }
+    .blog-body table td{
+        padding: 5px !important;
     }
 }
 
