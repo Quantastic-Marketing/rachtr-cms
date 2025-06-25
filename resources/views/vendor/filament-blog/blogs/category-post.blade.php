@@ -8,21 +8,23 @@
         <meta http-equiv='content-language' content='en-gb'>
         @php
             $seo = $page->seoDetail ?? (object)[];
-            $seoTitle = $seo->title ?? config('app.name');
-            $seoDescription = $seo->description ?? 'Rachtr';
             $seoAuthor = $seo->author ?? 'Rachtr';
-            $canonicalUrl = $seo->canonical_url ?? url()->current();
             $seoImage = $seo->image ?? asset('images/default-image.jpg');
 
-            $metaData = json_decode($seo->meta ?? '{}', true);
-            $focusKeywords = isset($metaData['focus_keywords']) ? implode(', ', $metaData['focus_keywords']) : 'rachtr';
+            $category = \App\Models\BlogCategory::whereSlug(request()->segment(3))->first();
 
+            $seoTitle = $category->seo_title ?? $category->name;
+            $seoDescription = $category->seo_description ?? "Read blog posts under the {$category->name} category.";
+            $seoKeywords = is_array($category->seo_keywords) && count($category->seo_keywords)
+                            ? implode(', ', $category->seo_keywords)
+                            : str_replace(' ', ',', $category->name);
+            $canonicalUrl = $category->canonical_url ?? url()->current();
             $currentPath = request()->path();
         @endphp
         <title>{{ $seoTitle }}</title>
             <meta name="description" content="{{ $seoDescription }}">
             <meta name="author" content="{{ $seoAuthor }}">
-            <meta name="keywords" content="{{ $focusKeywords }}">
+            <meta name="keywords" content="{{ $seoKeywords }}">
             <link rel="canonical" href="{{ $canonicalUrl }}">
 
             <!-- Open Graph (Facebook, LinkedIn) -->
