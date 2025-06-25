@@ -679,42 +679,42 @@
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project-slide-2.webp')}}"
                                                         data-fancybox="gallery" data-caption="Surat">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Marble flooring in Surat" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project-slide-2.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project-slide-3.webp')}}"
                                                         data-fancybox="gallery" data-caption="Surat">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Modern interior with marble flooring, staircase, and tall curtains." data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project-slide-3.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href=" {{asset('images/project-slide-4.webp')}}"
                                                         data-fancybox="gallery" data-caption="Surat">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Garden with tiled flooring and swimming pool" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project-slide-4.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project-slide-5.webp')}}"
                                                         data-fancybox="gallery" data-caption="Surat">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Sapcious garden with tiled flooring" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project-slide-5.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project-slide-6.webp')}}"
                                                         data-fancybox="gallery" data-caption="Surat">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Room with white marble flooring in Surat" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project-slide-6.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project-slide-7.webp')}}"
                                                         data-fancybox="gallery" data-caption="Surat">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Tile flooring in Surat" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project-slide-7.webp')}}">
                                                     </a>
                                                 </div>
@@ -740,15 +740,15 @@
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project2-slide-2.webp')}}"
                                                         data-fancybox="surat-gallery" data-caption="Surat">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
-                                                            src=" {{asset('images/project2-slide-2.webp')}}">
+                                                        <img data-ssr-src-done="true" fetchpriority="high"
+                                                            src=" {{asset('images/project2-slide-2.webp')}}" alt="Marble flooring in a luxurious living room in Surat">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project2-slide-3.webp')}}"
                                                         data-fancybox="surat-gallery" data-caption="Surat">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
-                                                            src=" {{asset('images/project2-slide-3.webp')}}">
+                                                        <img data-ssr-src-done="true" fetchpriority="high"
+                                                            src=" {{asset('images/project2-slide-3.webp')}}" alt="Elegant hallway with marble flooring, floral wall art, and decorative statues.">
                                                     </a>
                                                 </div>
                                             </div>
@@ -773,49 +773,49 @@
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project3-slide-2.webp')}}"
                                                         data-fancybox="Palacia-gallery" data-caption="Palacia">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Room with glossy marble flooring in Jaipur" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project3-slide-2.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project3-slide-3.webp')}}"
                                                         data-fancybox="Palacia-gallery" data-caption="Palacia">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Marble flooring in Jaipur" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project3-slide-3.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href=" {{asset('images/project3-slide-4.webp')}}"
                                                         data-fancybox="Palacia-gallery" data-caption="Palacia">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Tile flooring in a washroom in Jaipur" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project3-slide-4.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project3-slide-5.webp')}}"
                                                         data-fancybox="Palacia-gallery" data-caption="Palacia">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Tile flooring in a washroom in Jaipur" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project3-slide-5.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project3-slide-6.webp')}}"
                                                         data-fancybox="Palacia-gallery" data-caption="Palacia">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Shower area with marble walls and glass enclosure" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project3-slide-6.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project3-slide-7.webp')}}"
                                                         data-fancybox="Palacia-gallery" data-caption="Palacia">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="White marble home temple in Palacia, Jaipur" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project3-slide-7.webp')}}">
                                                     </a>
                                                 </div>
                                                 <div class="project-slide">
                                                     <a href="{{asset('images/project3-slide-8.webp')}}"
                                                         data-fancybox="Palacia-gallery" data-caption="Palacia">
-                                                        <img alt="" data-ssr-src-done="true" fetchpriority="high"
+                                                        <img alt="Glossy marble flooring near large glass window in a bright room" data-ssr-src-done="true" fetchpriority="high"
                                                             src=" {{asset('images/project3-slide-8.webp')}}">
                                                     </a>
                                                 </div>
