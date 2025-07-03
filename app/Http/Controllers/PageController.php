@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Pages;
 use App\Models\Product;
+use App\Models\Category;
 use Spatie\Sitemap\Sitemap;
+use App\Models\BlogCategory;
 use Illuminate\Http\Request;
 use Spatie\Sitemap\Tags\Url;
 use App\Models\ProductsSection;
@@ -160,7 +162,6 @@ class PageController extends Controller
                 $sitemap->add(Url::create($url)
                     ->setLastModificationDate($product->updated_at)
                     ->setPriority(0.6));
-                \Log::info('Added Product to sitemap', ['url' => $url]);
             }
 
             // Add Blog Posts
@@ -171,7 +172,26 @@ class PageController extends Controller
                 $sitemap->add(Url::create($url)
                     ->setLastModificationDate($post->updated_at)
                     ->setPriority(0.5));
-                \Log::info('Added Blog Post to sitemap', ['url' => $url]);
+            }
+
+            //Add Blog Categories
+            $blogCategories = BlogCategory::select(['slug', 'updated_at'])->get();
+            foreach ($blogCategories as $category) {
+                $url = "{$baseUrl}/blogs/categories/{$category->slug}";
+                $sitemap->add(Url::create($url)
+                    ->setLastModificationDate($category->updated_at ?? now())
+                    ->setPriority(0.4));
+                \Log::info('Added Blog Category to sitemap', ['url' => $url]);
+            }
+
+            //Add Product Categories
+            $productCategories = Category::select(['slug', 'updated_at'])->get();
+            foreach ($productCategories as $category) {
+                $url = "{$baseUrl}/category/{$category->slug}";
+                $sitemap->add(Url::create($url)
+                    ->setLastModificationDate($category->updated_at ?? now())
+                    ->setPriority(0.5));
+                \Log::info('Added Product Category to sitemap', ['url' => $url]);
             }
 
             // Save Sitemap
