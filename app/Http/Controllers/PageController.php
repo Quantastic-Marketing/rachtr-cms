@@ -185,6 +185,9 @@ class PageController extends Controller
             }
 
             //Add Product Categories
+            $sitemap->add(Url::create("{$baseUrl}/category/all-products")
+                    ->setLastModificationDate($category->updated_at ?? now())
+                    ->setPriority(0.5));
             $productCategories = Category::select(['slug', 'updated_at'])->get();
             foreach ($productCategories as $category) {
                 $url = "{$baseUrl}/category/{$category->slug}";
