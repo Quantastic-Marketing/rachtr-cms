@@ -195,7 +195,7 @@
                                     @else
                                         <p><strong>RachTR </strong> is committed to your growth. We offer numerous opportunities for career advancement through mentorship programs, professional development workshops, and cross-functional projects.</p>
                                         <p>Whether you’re just starting your career or looking to take the next step, RachTR provides a platform for you to excel.</p>
-                                        <p><strong>To apply, check the available job board below:</strong></p>
+                                        <!-- <p><strong>To apply, check the available job board below:</strong></p> -->
                                     @endif
                                 </div>
                             </div>
@@ -204,7 +204,7 @@
                 </div>
         </section>
 
-        <section class="opening-form mb-5 mx-md-5">
+        <section class="opening-form mb-5 mx-md-5" style="display: none;">
             <div class="container px-3 px-md-5">
                 <div class="row">
                     <div class="col-lg-11 col-xl-10">
