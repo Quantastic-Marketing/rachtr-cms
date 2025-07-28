@@ -21,7 +21,7 @@
                         <h2 class="fw-bold">{!! $banner['heading'] ?? 'Be a part of <span>#RachTR</span>ibe' !!}</h2>
                     </div>
                     <p class="text-center">{{ $banner['description'] ?? 'Discover career opportunities. Check out our current job openings and apply today to take the next step towards an exciting new career with RachTR.' }}</p>
-                    <button class="btn btn-primary" onclick="window.location.href='{{ $banner['button_link'] ?? url('/upload-cv') }}'">{{ $banner['button_text'] ?? 'Upload your CV' }}</button>
+                    <button class="btn btn-primary" onclick="window.open('{{ $banner['button_link'] ?? url('/upload-cv') }}', '_blank')">{{ $banner['button_text'] ?? 'Upload your CV' }}</button>
                 </div>
             </div>                   
           </div>
