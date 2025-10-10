@@ -52,7 +52,7 @@
                         </svg>
                       </div>
                       <div class="adress">
-                       <p class="ps-2"><strong>RachTR Chemicals Private Limited,</strong> 4th Floor, Unit No 413/414/415, Spaze Boulevard, Above Kia Showroom, Sector 47, Gurgaon - 122018</p>
+                       <p class="ps-2"><strong>RachTR Chemicals Private Limited,</strong> 4th Floor, Unit No 413/414, Spaze Boulevard, Above Kia Showroom, Sector 47, Gurgaon - 122018</p>
                       </div>
                   </div>
                   <div class="contact row g-0 py-5">
