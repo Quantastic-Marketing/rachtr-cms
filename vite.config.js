@@ -30,6 +30,8 @@ export default defineConfig({
                 'resources/css/blogTemplate.css',
                 'resources/css/blogArchive.css',
                 'resources/css/fallback.css',
+                'resources/css/epoxyflooring.css',
+                'resources/css/tileAdhesive.css',
                 'resources/js/cdn.min.js',
                 'resources/js/micromodal.min.js',
                 'resources/js/customTab.js',

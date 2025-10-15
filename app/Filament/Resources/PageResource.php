@@ -355,6 +355,7 @@ class PageResource extends Resource
             'about-us' => self::aboutTemplate(),
             'careers' => self::careerTemplate(),
             'architect-center' => self::architectTemplate(),
+            'epoxy-flooring' => self::epoxyFlooringTemplate(),
             default => self::defaultTemplate(),
         };
     }
@@ -703,7 +704,7 @@ class PageResource extends Resource
                                     ->label('Paragraph')
                                     ->placeholder('Intro paragraph about Epoxy Flooring Applications.'),
                         ]),
-                 Section::make('Built to Last Section')
+                Section::make('Built to Last Section')
                     ->schema([
                         FileUpload::make('content.build.built_image')->image()->label('Built to Last Image')->disk('public')->directory('images'),
                         TextInput::make('content.build.built_title')->label('Built to Last Title'),
@@ -1530,6 +1531,168 @@ class PageResource extends Resource
                         
                     ])->collapsible(),
             
+        ];
+    }
+
+    public static function epoxyFlooringTemplate(): array
+    {
+        return [
+            Section::make('Epoxy Flooring Template Banner Section')
+                ->schema([
+                    TextInput::make('content.banner.banner_heading')->label('Banner Heading'),
+                    TextInput::make('content.banner.banner_alt')->label('Banner Image Alt'),
+                    RichEditor::make('content.banner.banner_desc')->label('Banner Description'),
+                    FileUpload::make('content.banner.banner_desktop')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Banner Image Desktop'),
+                    FileUpload::make('content.banner.banner_mobile')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Banner Image Mobile'),
+                ]),
+            Section::make('Epoxy Flooring Template Introduction Section')
+                ->schema([
+                    TextInput::make('content.solutions.innovative_heading')->label('Section Heading'),
+                    RichEditor::make('content.solutions.innovative_description')->label('Section Description'),
+                    FileUpload::make('content.solutions.innovative_image')->directory('images')->disk('public')->acceptedFileTypes(['image/webp'])->label('Section Image'),
+                    TextInput::make('content.solutions.innovative_image_alt')->label('Section Image Alt'),
+                ])->collapsible(),
+           Section::make('Built to Last Section')
+                    ->schema([
+                        FileUpload::make('content.build.built_image')->image()->label('Built to Last Image')->disk('public')->directory('images'),
+                        TextInput::make('content.build.built_title')->label('Built to Last Title'),
+                        Textarea::make('content.build.built_description')->label('Built to Last Description'),
+                        Repeater::make('content.build.built_benefits')
+                            ->schema([
+                                TextArea::make('benefit_icon')->label('Benefit Icon'),
+                                TextInput::make('benefit_title')->label('Benefit Title'),
+                                Textarea::make('benefit_description')->label('Benefit Description'),
+                            ])
+                            ->columns(2)
+                            ->label('Benefits'),
+                        RichEditor::make('content.build.built_note')->label('Build to last below para')->columnSpanFull(),
+                    ]),
+            Section::make('Projects showcase section')
+                ->schema([
+                    TextInput::make('content.showcase.heading')->label('Project Showcase Heading'),
+                    Repeater::make('content.showcase.items')
+                        ->schema([
+                            RichEditor::make('description')->label('Description'),
+                            Repeater::make('images')->schema([
+                                Grid::make(2)->schema([
+                                    FileUpload::make('image')->directory('images')->disk('public')->image()->acceptedFileTypes(['image/webp'])->label('Project Image'),
+                                    TextInput::make('img_alt')->label('Image alt'),
+                                ])
+                            ]),
+                        ])->columns(2),
+                ])->collapsible(),
+            Section::make('Our Project section: ')
+                        ->description('Add the details or projects slider/block')
+                        ->schema([
+                            TextInput::make('content.project.heading')
+                                    ->label('Section Heading')
+                                    ->hint('Use <br> and <span class="org">RachTR</span> where needed.'),
+                            Repeater::make('content.project.slides')
+                                        ->label('Projects')
+                                        ->schema([
+                                            TextInput::make('title')
+                                                ->label('Title'),
+                                            RichEditor::make('description')
+                                                ->label('Sub Title'),
+                                            Grid::make(2)->schema([
+                                                TextInput::make('btn')
+                                                    ->label('Add read more/ view more button text'),
+                                                TextInput::make('link')
+                                                    ->label('Add read more/ view more Link')
+                                                    ->url()
+                                                    ->default('/blogs'),
+                                            ]),
+                                            Grid::make(2)->schema([
+                                                FileUpload::make('image')
+                                                    ->label('Mobile Image')
+                                                    ->disk('public')
+                                                    ->directory('images')
+                                                    ->image()
+                                                    ->imageEditor(),
+                                                TextInput::make('img_alt')
+                                                    ->label('Image alt attribute')
+                                            ]),
+                                        ])
+                                        ->addActionLabel('Add Project Slide')
+                                        ->orderable()
+                                        ->collapsed()
+                                        ->cloneable()
+                                        ->default([])
+                        ]),
+            Section::make('Locations served Section')
+                        ->schema([
+                            TextInput::make('content.location.heading')->label('Loactions served Title'),
+                            Grid::make(2)->schema([
+                                FileUpload::make('content.location.image')
+                                                    ->label('Mobile Image')
+                                                    ->disk('public')
+                                                    ->directory('images')
+                                                    ->image()
+                                                    ->imageEditor(),
+                                TextInput::make('content.location.img_alt')
+                                                    ->label('Image alt attribute')
+                            ])
+                        ]),
+            Section::make('Experience Rachtr Section')
+                        ->schema([
+                            TextInput::make('content.experience.heading')->label('Experience Rachtr Section Title')->hint('Use <br> and <span class="org">RachTR</span> where needed to highlight in orange.'),
+                            TextInput::make('content.experience.formHeading')->label('Experience Rachtr Form Title'),
+                            TextInput::make('content.experience.formNote')->label('Experience Rachtr Form Note'),
+
+                            Repeater::make('content.experience.images')
+                                ->label('Image Slider part')
+                                ->schema([
+                                    Grid::make(2)->schema([
+                                        FileUpload::make('image')
+                                                    ->label('Image')
+                                                    ->disk('public')
+                                                    ->directory('images')
+                                                    ->image()
+                                                    ->imageEditor(),
+                                        TextInput::make('img_alt')
+                                                    ->label('Image alt attribute')
+                                    ]),
+                                ])
+                                ->addActionLabel('Adds Image')
+                        ]),
+            Section::make('Get Quote Section')
+                    ->schema([
+                        TextInput::make('content.quote.heading')->label('Section Heading'),
+                        Grid::make(2)->schema([
+                                FileUpload::make('content.quote.image')
+                                                    ->label('Mobile Image')
+                                                    ->disk('public')
+                                                    ->directory('images')
+                                                    ->image()
+                                                    ->imageEditor(),
+                                TextInput::make('content.quote.img_alt')
+                                                    ->label('Image alt attribute')
+                        ]),
+                        TextInput::make('content.quote.get_btn_text')->label('Get a Quote Button Text')
+                                    ->placeholder('Get a Quote'),
+                        Grid::make(2)->schema([
+                            TextInput::make('content.quote.whatsapp_btn')->label('Whatsapp Button Text'),
+                            TextInput::make('content.quote.whatsapp_link')->label('Whatsapp Link')
+                        ]),
+                    ])->collapsible(),
+            Section::make('Epoxy Flooring FAQ Section')
+                    ->schema([
+                        TextInput::make('content.faq_section_content.heading')
+                            ->label('Section Heading')
+                            ->placeholder('Enter the heading'),
+                        Repeater::make('content.faq_section_content.faqs')
+                            ->label('Faq Section')
+                            ->schema([
+                                Grid::make(2)->schema([
+                                RichEditor::make('acc_title')->label('Title for FAQ'),
+                                TiptapEditor::make('acc_body')
+                                        ->profile('default')
+                                        ->disableFloatingMenus()
+                                        ->extraInputAttributes(['style' => 'max-height: 30rem; min-height: 24rem'])
+                                         ]),
+                            ])
+                            ->addActionLabel('Adds FAQ Accordion')
+                        ])->collapsible(),
         ];
     }
 }

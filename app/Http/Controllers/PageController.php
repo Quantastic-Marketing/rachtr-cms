@@ -86,7 +86,6 @@ class PageController extends Controller
                         ->keyBy('id');
                     }
                 }
-
                 return view("layouts.app",['page' => $pageDetails,'templatePath'=>$templatePath,'products'=>$products,'blogs' => $blogs,'parentName' => $parentName]);
             }
         }catch(Exception $e){

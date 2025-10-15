@@ -77,6 +77,7 @@
                 'resources/css/epoxyIndustry.css',
                 'resources/css/allProduct.css',
                 'resources/css/search.css',
+                'resources/css/epoxyflooring.css',
                 'resources/js/cdn.min.js',
                 'resources/js/micromodal.min.js',
                 'resources/js/customTab.js',
@@ -85,10 +86,16 @@
 
             ])
 
-            @if(request()->is('*epoxy-flooring*'))
+            @if(request()->is('*epoxy-flooring*') || request()->is('*epoxy*') )
                 @vite([
                     'resources/css/epoxy.css',
                     'resources/css/epoxyCost.css'
+                    ])
+            @endif
+
+            @if(request()->is('*tile-adhesive*') )
+                @vite([
+                'resources/css/tileAdhesive.css',
                     ])
             @endif
 

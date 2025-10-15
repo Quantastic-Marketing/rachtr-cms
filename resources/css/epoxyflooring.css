@@ -1,0 +1,371 @@
+.epoxy-flooring-info-section {
+    background-color: #EEEEEE;
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.epoxy-flooring-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.epoxy-flooring-title {
+    font-size: 38px;
+    line-height: 55px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.epoxy-flooring-description {
+    font-size: 22px;
+    /* font-weight: 700; */
+    line-height: 33px;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.epoxy-flooring-custom-note {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 33px;
+    color: #EF6E25;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Tablet Styles - Below 768px */
+@media screen and (max-width: 768px) {
+    .epoxy-flooring-info-section {
+        padding: 60px 15px;
+    }
+
+    .epoxy-flooring-container {
+        padding: 0 20px;
+    }
+
+    .epoxy-flooring-title {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .epoxy-flooring-description {
+        line-height: 22px;
+        margin-bottom: 18px;
+    }
+
+    .epoxy-flooring-custom-note {
+        line-height: 22px;
+        margin-top: 20px;
+    }
+}
+
+/* Mobile Styles - Below 499px */
+@media screen and (max-width: 499px) {
+    .epoxy-flooring-info-section {
+        padding: 40px 10px;
+    }
+
+    .epoxy-flooring-container {
+        padding: 0 15px;
+    }
+
+    .epoxy-flooring-title {
+        font-size: 20px;
+        line-height: 17.1px;
+        margin-bottom: 15px;
+    }
+
+    .epoxy-flooring-description {
+        font-size: 11px;
+        line-height: 15.4px;
+        margin-bottom: 12px;
+    }
+
+    .epoxy-flooring-custom-note {
+        font-size: 11px;
+        line-height: 15.4px;
+        margin-top: 15px;
+    }
+}
+
+.epoxy-types-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.epoxy-types-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.epoxy-types-heading {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.epoxy-types-slider-wrapper {
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+    padding: 0 50px;
+}
+
+.epoxy-types-slick-slider {
+    width: 100%;
+}
+
+.epoxy-types-slide-item {
+    padding: 0 15px;
+    outline: none;
+}
+
+.epoxy-types-slide-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.epoxy-types-slick-slider .slick-prev,
+.epoxy-types-slick-slider .slick-next {
+    background: none;
+    border: none;
+    color: #EF6E25;
+    font-size: 44px;
+    line-height: 1;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.epoxy-types-slick-slider .slick-prev:before,
+.epoxy-types-slick-slider .slick-next:before {
+    content: none;
+}
+
+.epoxy-types-slick-slider .slick-prev {
+    left: -50px;
+}
+
+.epoxy-types-slick-slider .slick-next {
+    right: -50px;
+}
+
+
+
+.epoxy-types-slick-slider .slick-dots {
+    margin-top: 20px; /* Add spacing between dots and table */
+}
+.epoxy-types-slick-slider .slick-dots li button:before {
+    color: #000000;
+    opacity: 0.3;
+    font-size: 12px;
+}
+
+.epoxy-types-slick-slider .slick-dots li.slick-active button:before {
+    color: #EF6E25;
+    opacity: 1;
+}
+
+.epoxy-types-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.epoxy-types-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.epoxy-types-table-head {
+    background-color: #EF6E25;
+}
+
+.epoxy-types-header-row {
+    border-bottom: 3px solid #000000;
+}
+
+.epoxy-types-column-type,
+.epoxy-types-column-bestfor,
+.epoxy-types-column-features {
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    /* font-weight: 700; */
+    color: #ffffff;
+    line-height: 33px;
+}
+
+.epoxy-types-table-body {
+    background-color: #ffffff;
+}
+
+.epoxy-types-data-row {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+.epoxy-types-data-row:hover {
+    background-color: #f9f9f9;
+}
+
+.epoxy-types-data-row:last-child {
+    border-bottom: none;
+}
+
+.epoxy-types-cell-type,
+.epoxy-types-cell-bestfor,
+.epoxy-types-cell-features {
+    padding: 18px 20px;
+    font-size: 18px;
+    /* font-weight: 700; */
+    color: #000000;
+    line-height: 33px;
+    vertical-align: top;
+}
+
+.epoxy-types-cell-type {
+    font-weight: 400;
+    color: #EF6E25;
+}
+
+    .epoxy-proj .cmp_solutn_heding h2 {
+        font-size: 25px;
+        line-height: 29.7px;
+        padding: 0 10px;
+    }
+
+/* Tablet Styles - Below 768px */
+@media screen and (max-width: 768px) {
+    .epoxy-types-section {
+        padding: 60px 15px;
+    }
+
+    .epoxy-types-container {
+        padding: 0 20px;
+    }
+
+    .epoxy-types-heading {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .epoxy-types-slider-wrapper {
+        margin-bottom: 35px;
+        padding: 0 40px;
+    }
+
+    .epoxy-types-slick-slider .slick-prev {
+        left: -40px;
+    }
+
+    .epoxy-types-slick-slider .slick-next {
+        right: -40px;
+    }
+
+    .epoxy-types-slick-slider .slick-prev:before,
+    .epoxy-types-slick-slider .slick-next:before {
+        font-size: 36px;
+    }
+
+    .epoxy-types-column-type,
+    .epoxy-types-column-bestfor,
+    .epoxy-types-column-features {
+        padding: 15px 12px;
+        line-height: 22px;
+    }
+
+    .epoxy-types-cell-type,
+    .epoxy-types-cell-bestfor,
+    .epoxy-types-cell-features {
+        padding: 14px 12px;
+        line-height: 22px;
+    }
+
+    .epoxy-types-table-wrapper {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .epoxy-types-comparison-table {
+        min-width: 600px;
+    }
+}
+
+/* Mobile Styles - Below 499px */
+@media screen and (max-width: 499px) {
+    .epoxy-types-section {
+        padding: 40px 10px;
+    }
+
+    .epoxy-types-container {
+        padding: 0 15px;
+    }
+
+    .epoxy-types-heading {
+        font-size: 20px;
+        line-height: 17.1px;
+        margin-bottom: 20px;
+    }
+
+    .epoxy-types-slider-wrapper {
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+
+    .epoxy-types-slide-item {
+        padding: 0 10px;
+    }
+
+    .epoxy-types-slide-image {
+        border-radius: 4px;
+    }
+
+    .epoxy-types-slick-slider .slick-dots li button:before {
+        font-size: 8px;
+    }
+    .epoxy-types-slick-slider .slick-dots {
+        margin-bottom: 20px;
+        position: relative;
+        margin-top: -21px;
+    }
+
+    .epoxy-types-column-type,
+    .epoxy-types-column-bestfor,
+    .epoxy-types-column-features {
+        padding: 10px 8px;
+        font-size: 11px;
+        line-height: 15.4px;
+    }
+
+    .epoxy-types-cell-type,
+    .epoxy-types-cell-bestfor,
+    .epoxy-types-cell-features {
+        padding: 10px 8px;
+        font-size: 11px;
+        line-height: 15.4px;
+    }
+
+    .epoxy-types-comparison-table {
+        min-width: 500px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+}
