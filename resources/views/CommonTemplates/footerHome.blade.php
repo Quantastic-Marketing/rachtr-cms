@@ -17,7 +17,7 @@
                 @endif
                 <div class="col-lg-6 ml-0">
                   <div class="ftr_logo pt-5 pb-4">
-                     <img src=" {{ asset('images/btm-logo.webp') }}" alt="footer Logo" loading="lazy"/>  
+                     <img src=" https://www.rachtr.com/images/btm-logo.webp" alt="footer Logo" loading="lazy"/>  
                   </div>
                   <div class="form_sec mbl py-5">
                         <h3 class="fw-bold py-2">GET IN TOUCH</h3>
@@ -57,7 +57,7 @@
                   </div>
                   <div class="contact row g-0 py-5">
                       <ul class="">
-                         <li>
+                         <li>   
                              <div class="icon">
                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="27.001 26.499 146.002 147" viewBox="27.001 26.499 146.002 147" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-label=""><defs><style>#comp-lu9kzg2v svg [data-color="1"] {fill: #EF6E25;}</style></defs>
                                         <g>
