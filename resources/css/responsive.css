@@ -369,6 +369,13 @@
     }
   }
   
+  @media (max-width:1240px) and (min-width: 991px){
+    .footer .follow_us .careers_btn {
+       float: unset;
+       margin: 20px 0;
+    }
+  }
+  
   @media (max-width: 1024px) {
     .epoxy-flooring-block-lists {
       grid-template-columns: repeat(4, 1fr);
@@ -402,6 +409,12 @@
       padding: 10px;
   }
   .content-details p:first-of-type {width:100%}
+  }
+
+  @media (max-width:1020px) and (min-width: 991px){
+    .footer .contact ul li {
+      display: flex;
+    }
   }
   
   @media (max-width: 992px) {
