@@ -141,7 +141,7 @@
                            </ul>
                        </div>
                        <div class="careers_btn">
-                       <a href="{{ url('/careers') }}" target="_blank">CAREERS</a>
+                       <a href="{{ url('/careers') }}" target="_blank">Join The RachTRibe</a>
                        </div> 
                        <div class="copyright-bottom pt-2">
                         <span><a href="{{ asset('pdfFile/ISO_RachTR.pdf')}}" target="_blank">>> ISO 9001:2015</a></span>
