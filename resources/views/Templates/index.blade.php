@@ -211,7 +211,7 @@
                            
                            <div class="thr_principles">
                              @forelse($about['pointers'] ?? [] as $principle)
-                                <div class="thr_principles_dtl">
+                                 <div class="thr_principles_dtl">
                                    <div class="thr_principles-icon rounded me-5">
                                        <span>
                                         {!! $principle['icon'] !!}
