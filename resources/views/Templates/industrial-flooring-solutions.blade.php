@@ -373,7 +373,7 @@
                                     </figure>
                                     <h6 class="text-center heading-underline">
                                       <a
-                                        href="{{ config('app.url') . '/product-page/' . $product->slug }}"
+                                        href="{{ config('app.url') . 'product-page/' . $product->slug }}"
                                         class="text-black fs-6 fw-bold"
                                         >{{ $product->name }}</a
                                       >
@@ -413,7 +413,7 @@
                             </figure>
                             <h6 class="text-center heading-underline">
                               <a
-                                href="{{ config('app.url') . '/product-page/' . $product->slug }}"
+                                href="{{ config('app.url') . 'product-page/' . $product->slug }}"
                                 class="text-black fs-6 fw-bold"
                                 >{{ $product->name }}</a
                               >
@@ -453,7 +453,7 @@
                 <div class="epoxy-flooring-block-lists">
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/rachtr-floor-3010-n' }}">
+                      <a href="{{ config('app.url') . 'product-page/rachtr-floor-3010-n' }}">
                         <figure>
                           <img
                             src="images/3010product.webp"
@@ -468,7 +468,7 @@
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/rachtr-ec-500' }}">
+                      <a href="{{ config('app.url') . 'product-page/rachtr-ec-500' }}">
                         <figure>
                           <img
                             src="images/RachTR-EC-500.webp"
@@ -483,7 +483,7 @@
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/rachtr-floor-2010-n' }}">
+                      <a href="{{ config('app.url') . 'product-page/rachtr-floor-2010-n' }}">
                         <figure>
                           <img
                             src="images/RachTR-Floor-2010-N.webp"
@@ -498,7 +498,7 @@
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/screed-ep-81' }}">
+                      <a href="{{ config('app.url') . 'product-page/screed-ep-81' }}">
                         <figure>
                           <img
                             src="images/Screed-EP-81.webp"
@@ -513,7 +513,7 @@
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/screed-ep-91' }}">
+                      <a href="{{ config('app.url') . 'product-page/screed-ep-91' }}">
                         <figure>
                           <img
                             src="images/Screed-EP-91.webp"
@@ -528,7 +528,7 @@
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/rachtr-floor-1010-n'}}">
+                      <a href="{{ config('app.url') . 'product-page/rachtr-floor-1010-n'}}">
                         <figure>
                           <img
                             src="images/RachTR-Floor-1010-N.webp"
@@ -543,7 +543,7 @@
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/rachtr-ep-402' }}">
+                      <a href="{{ config('app.url') . 'product-page/rachtr-ep-402' }}">
                         <figure>
                           <img
                             src="images/RachTR-EP-402.webp"
@@ -558,7 +558,7 @@
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/rachtr-ec-250' }}">
+                      <a href="{{ config('app.url') . 'product-page/rachtr-ec-250' }}">
                         <figure>
                           <img
                             src="images/RachTR-EC-250.webp"
@@ -573,7 +573,7 @@
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/rachtr-floor-screed-ep-85'}}">
+                      <a href="{{ config('app.url') . 'product-page/rachtr-floor-screed-ep-85'}}">
                         <figure>
                           <img
                             src="images/RachTR-Floor-Screed-EP-85.webp"
@@ -588,7 +588,7 @@
                   </div>
                   <div class="epoxy-block-view">
                     <div class="offer-product">
-                      <a href="{{ config('app.url') . '/product-page/rachtr-ep-101' }}">
+                      <a href="{{ config('app.url') . 'product-page/rachtr-ep-101' }}">
                         <figure>
                           <img
                             src="images/RachTR-EP-101.webp"

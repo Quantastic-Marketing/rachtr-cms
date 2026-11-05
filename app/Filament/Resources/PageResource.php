@@ -1299,6 +1299,88 @@ class PageResource extends Resource
                                         ->collapsed()
                                         ->cloneable()
                         ]),
+            //new section added by dewansh for new case study section sep-11 2026
+            Section::make('Case Studies section 2: ')
+                        ->description('Add the details or case studies slider/block')
+                        ->schema([
+                            TextInput::make('content.case_study_2.heading')
+                                    ->label('Section Heading')
+                                    ->hint('Use <br> and <span class="color-orange">RachTR</span> where needed.'),
+                            RichEditor::make('content.case_study_2.description')
+                                    ->label('Section Description'),
+                            Repeater::make('content.case_study_2.slides')
+                                        ->label('Case Studies')
+                                        ->schema([
+                                            TextInput::make('right_title')
+                                                ->label('Right block Title'),
+
+                                            Textarea::make('subtitle')
+                                                ->label('Right Block Sub Title')
+                                                ->rows(2),
+                                            TextInput::make('left_title')
+                                                ->label('Left block Title'),
+                                            Repeater::make('paragraphs')
+                                                ->label('Case study left block descrption')
+                                                ->schema([
+                                                    Textarea::make('text')
+                                                        ->label('Paragraph Text')
+                                                        ->rows(3),
+                                                ])
+                                                ->defaultItems(2)
+                                                ->addActionLabel('Add Paragraph'),
+                                            /*
+                                            TextInput::make('link')
+                                                ->label('External Link')
+                                                ->placeholder('Paste a URL if available')
+                                                ->reactive(),
+
+                                            FileUpload::make('fallback_file')
+                                                ->label('Or Upload a File')
+                                                ->directory('pdfFile') // your desired storage directory
+                                                ->disk('public')
+                                                ->hint('⚠️ Note: Uploading a file with the same name will replace the existing one. Rename the file before uploading to avoid this.')
+                                                ->acceptedFileTypes(['application/pdf'])
+                                                ->reactive()
+                                                ->preserveFilenames(),
+                                            */
+                                             
+                                               
+                                            TextInput::make('img_alt')
+                                                ->label('Image alt attribute'),
+
+                                            FileUpload::make('image_desktop')
+                                                ->label('Desktop Image')
+                                                ->disk('public')
+                                                ->directory('images')
+                                                ->image()
+                                                ->acceptedFileTypes(['image/webp'])
+                                                ->imageEditor(),
+
+                                            Repeater::make('images')
+                                            ->label('Case Study 2 Gallery Images')
+                                            ->schema([
+                                                FileUpload::make('image')
+                                                    ->label('Image')
+                                                    ->directory('images')
+                                                    ->disk('public')
+                                                    ->image()
+                                                    ->acceptedFileTypes([
+                                                        'image/webp',
+                                                        'image/jpeg',
+                                                        'image/png',
+                                                        'image/jpg',
+                                                    ])
+                                                    ->imageEditor(),
+                                            ])
+                                            ->addActionLabel('Add Image')
+                                            ->columnSpanFull(), 
+                                        ])
+                                        ->columns(2)
+                                        ->addActionLabel('Add Case Study')
+                                        ->orderable()
+                                        ->collapsed()
+                                        ->cloneable()
+                        ]),
             Section::make('Projects showcase section')
                 ->schema([
                     TextInput::make('content.showcase.heading')->label('Project Showcase Heading'),

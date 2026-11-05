@@ -51,7 +51,7 @@
                 </div>
             </section>
         @endif
-
+        
         @if(isset($pageContent['sections']))
             @foreach($pageContent['sections'] as $index => $section)
              @if(!empty($section['products']))
@@ -66,7 +66,7 @@
                             @foreach($section['products'] as $productId)
                                 @php
                                     $product = $products[$productId] ?? null;
-                                    
+                                    $productImage = '';
                                     if($product){
                                             $productImage = optional(json_decode($product->product_images, true))[0]['product_image'] ?? null; 
                                             $descriptionHtml = html_entity_decode($product->product_desc ?? 'No description available');
