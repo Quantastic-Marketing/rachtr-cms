@@ -92,7 +92,7 @@
                                                     {{$productDescription}}
                                                 </p>
                                                 
-                                                    {{-- <a href="{{ route('product.page', ['slug' => $product->slug]) }}" class="btn btn-orange">READ MORE</a> --}}
+                                                
                                                 @if($product)
                                                     <a href="{{ route('product.page', ['slug' => $product->slug]) }}" class="btn btn-orange">READ MORE</a>
                                                 @endif
