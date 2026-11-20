@@ -8,7 +8,9 @@
             $showcase = $pageContent['showcase'] ?? [];
             $archMarvels = $pageContent['architect'] ?? [];
             $caseStudy = $pageContent['case_study'] ?? [];
+            $caseStudy2 = $pageContent['case_study_2'] ?? [];
         @endphp
+        <!-- above caseStudy2 is added by dewansh for new case study section -->
         <section class="architect-banner banner">
             <div class="row g-0">
                 <div class="col-lg-12">
@@ -62,9 +64,2002 @@
                 </div>
             </div>
         </section>
+        
+        <!-- This is a section-7 open -->
+ 
+        <!-- This is a new section-6 closed section added by dewansh close -->
+
+        <!-- new client changes start -->
+        <!-- This is a new section-6  open added by dewansh on sep-14 -->
+        <!-- This is a new section-6 open added by dewansh on sep-14 -->
+        <!-- This is a new section-6 open added by dewansh on sep-14 -->
+
+         <!-- <section class="architect-center comprnsive_solution py-5">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="cmp_solutn_heding ps-3 col-md-12 py-5">
+                        <h2 class="ps-3 fw-bold">Making the Impossible Possible</h2>
+                    </div>
+                    <div class="case-studies-item">
+                        <div class="case_studies row g-0">
+                            <div class="col-lg-4 col-md-12">
+                                <div class="case_studies_contn">
+                                    <h3 class="fw-bold pb-2">Insights from Architect Shweta Sardana on achieving better project outcomes with RachTR’s support and solutions.</h3>
+        
+                                    <a href="{{asset('pdfFile/Case Study.pdf')}}"
+                                        target="_blank">View Case Study</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-12">
+                                <div class="case_studies_downd">
+                                    <div class="downd_img">
+                                        <img src="{{ asset('images/1777978713773864.jpg')}}" alt="Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor" />
+                                    </div>
+                                    <div class="downd_txt px-5 py-4">
+                                        <ul>
+                                            <li>
+                                                <div class="txt">
+                                                    <span>Download Case Study</span>
+                                                    <h5 class="fw-bold py-2">
+                                                    </h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon py-2">
+                                                    <a href="{{asset('pdfFile/Case Study.pdf')}}" target="_blank">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="16.378 16.378 167.244 167.244"
+                                                            viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lyo12rer9 svg [data-color="1"] {
+                                                                        fill: #EF6E25;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                    fill="#010107" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <i class="clear"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case_studies row g-0">
+                            <div class="col-lg-4 col-md-12 lft-cont">
+                                <div class="case_studies_contn">
+                                    <h3 class="fw-bold pb-2">Learn how RachTR products helped architect Jigar Talati in achieving superior finishes</h3>
+                                    <a href="{{asset('pdfFile/Rachtr_Final_New_2.pdf')}}" target="_blank">View Case Study</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-12">
+                                <div class="case_studies_downd">
+                                    <div class="downd_img">
+                                        <img src="{{ asset('images/Rachtr_Final_New_2.webp')}}" alt="Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor" />
+                                    </div>
+                                    <div class="downd_txt px-5 py-4">
+                                        <ul>
+                                            <li>
+                                                <div class="txt">
+                                                    <span>Download Case Study</span>
+                                                    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon py-2">
+                                                    <a href="{{asset('pdfFile/Rachtr_Final_New_2.pdf')}}" target="_blank">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="16.378 16.378 167.244 167.244"
+                                                            viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lyo12rer9 svg [data-color="1"] {
+                                                                        fill: #EF6E25;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                    fill="#010107" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <i class="clear"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case_studies row g-0">
+                            <div class="col-lg-4 col-md-12 lft-cont">
+                                <div class="case_studies_contn">
+                                    <h3 class="fw-bold pb-2">A vision this refined deserves materials that deliver equally refined results. In this showcase, Architect Venu Gopal highlights how RachTR’s Stone Power and Topfill helped achieve seamless finishes, lasting durability, and premium aesthetics.</h3>
+                                    <a href="{{asset('pdfFile/RachTR_Venu_Gopal.pdf')}}" target="_blank">View Case Study</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-12">
+                                <div class="case_studies_downd">
+                                    <div class="downd_img">
+                                        <img src="{{ asset('images/venu_gopal_case_study.webp')}}" alt="Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor" />
+                                    </div>
+                                    <div class="downd_txt px-5 py-4">
+                                        <ul>
+                                            <li>
+                                                <div class="txt">
+                                                    <span>Download Case Study</span>
+                                                    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon py-2">
+                                                    <a href="{{asset('pdfFile/RachTR_Venu_Gopal.pdf')}}" target="_blank">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="16.378 16.378 167.244 167.244"
+                                                            viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lyo12rer9 svg [data-color="1"] {
+                                                                        fill: #EF6E25;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                    fill="#010107" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <i class="clear"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section> -->
+        
+<section class="architect-center comprnsive_solution py-5">
+    <div class="container">
+        <div class="row g-0">
+
+            <div class="cmp_solutn_heding ps-3 col-md-12 py-5">
+
+                <h2 class="ps-3 fw-bold">
+                    {!! !empty($caseStudy2['heading'])
+                        ? html_entity_decode($caseStudy2['heading'])
+                        : 'Case Study' !!}
+                </h2>
+
+                @if(!empty($caseStudy2['description']))
+                    {!! $caseStudy2['description'] !!}
+                @endif
+
+            </div>
+
+            <div class="case-studies-item">
+
+                @forelse($caseStudy2['slides'] ?? [] as $slideIndex => $slide)
+
+                    @php
+                        $caseStudyImages = $slide['images'] ?? [];
+                        $caseStudyModalId = 'caseStudyModal' . $slideIndex;
+                    @endphp
+
+                    <div class="case_studies row g-0">
+
+                        <!-- LEFT CONTENT -->
+                        <div class="col-lg-4 col-md-12">
+
+                            <div class="case_studies_contn">
+
+                                <h3 class="fw-bold pb-2">
+                                    {{ $slide['left_title'] }}
+                                </h3>
+
+                                @foreach ($slide['paragraphs'] ?? [] as $para)
+
+                                    <p class="{{ $loop->last ? 'pb-md-5 mb-md-5' : '' }}">
+                                        {{ $para['text'] }}
+                                    </p>
+
+                                @endforeach
+
+                                @php
+                                    $finalUrl = '';
+
+                                    if (!empty($slide['link'])) {
+                                        $finalUrl = $slide['link'];
+                                    } elseif (!empty($slide['fallback_file'])) {
+                                        $finalUrl = config('app.url') . '/storage/' . ltrim($slide['fallback_file'], '/');
+                                    }
+                                @endphp
+
+                                <!-- VIEW CASE STUDY BUTTON -->
+                                @if(count($caseStudyImages) > 0)
+
+                                    <a href="javascript:void(0);"
+                                       class="case-study-view-btn"
+                                       data-bs-toggle="modal"
+                                       data-bs-target="#{{ $caseStudyModalId }}">
+
+                                        View Case Study
+                                    </a>
+
+                                @else
+
+                                    <a href="{{ $finalUrl ?: '#' }}"
+                                       target="_blank"
+                                       class="case-study-view-btn">
+
+                                        View Case Study
+                                    </a>
+
+                                @endif
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- RIGHT CONTENT -->
+                        <div class="col-lg-7 col-md-12">
+
+                            <div class="case_studies_downd">
+
+                                <!-- DESKTOP IMAGE -->
+                                <div class="downd_img">
+
+                                    @if(!empty($slide['image_desktop']))
+
+                                        <img
+                                            src="{{ asset('storage/' . $slide['image_desktop']) }}"
+                                            alt="{{ $slide['img_alt'] ?? '' }}"
+                                        />
+
+                                    @endif
+
+                                </div>
+
+
+                                <div class="downd_txt px-5 py-4">
+
+                                    <ul>
+
+                                        <li>
+                                            <div class="txt">
+
+                                                <span>
+                                                    {{ $slide['right_title'] }}
+                                                </span>
+
+                                                <h5 class="fw-bold py-2">
+                                                    {{ $slide['subtitle'] }}
+                                                </h5>
+
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+
+                                            <div class="icon py-2">
+
+                                                @if(count($caseStudyImages) > 0)
+
+                                                    <a href="javascript:void(0);"
+                                                       class="case-study-zoom-trigger"
+                                                       data-bs-toggle="modal"
+                                                       data-bs-target="#{{ $caseStudyModalId }}"
+                                                       aria-label="View Case Study Images">
+
+                                                        <!-- ORIGINAL SVG RESTORED -->
+                                                        <!-- <svg preserveAspectRatio="xMidYMid meet"
+                                                             data-bbox="16.378 16.378 167.244 167.244"
+                                                             viewBox="16.378 16.378 167.244 167.244"
+                                                             height="200"
+                                                             width="200"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             data-type="color"
+                                                             role="presentation"
+                                                             aria-hidden="true"
+                                                             aria-label="">
+
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lyo12rer9 svg [data-color="1"] {
+                                                                        fill: #EF6E25;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+
+                                                            <g>
+                                                                <path d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                      fill="#010107"
+                                                                      data-color="1">
+                                                                </path>
+                                                            </g>
+
+                                                        </svg> -->
+
+                                                    </a>
+
+                                                @endif
+
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+
+                                    <i class="clear"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                @empty
+
+                @endforelse
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- This is a new section-6 closed section added by dewansh close -->
+
+
+
+{{-- ========================================================= --}}
+{{-- CASE STUDY MODALS --}}
+{{-- IMPORTANT: MODALS ARE OUTSIDE .case-studies-item --}}
+{{-- ========================================================= --}}
+
+@foreach($caseStudy2['slides'] ?? [] as $slideIndex => $slide)
+
+    @php
+        $caseStudyImages = $slide['images'] ?? [];
+        $caseStudyModalId = 'caseStudyModal' . $slideIndex;
+    @endphp
+
+    @if(!empty($caseStudyImages))
+
+        <div class="modal fade case-study-modal"
+             id="{{ $caseStudyModalId }}"
+             tabindex="-1"
+             aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered">
+
+                <div class="modal-content">
+
+
+                    <!-- ================================================= -->
+                    <!-- MODAL HEADER -->
+                    <!-- ================================================= -->
+
+                    <div class="case-study-modal-header">
+
+                        <!-- ZOOM CONTROLS -->
+                        <div class="case-study-zoom-controls">
+
+                            <!-- ZOOM OUT -->
+                            <button
+                                type="button"
+                                class="zoom-control-btn zoom-out-btn"
+                                title="Zoom Out"
+                                aria-label="Zoom Out">
+
+                                <span>−</span>
+
+                            </button>
+
+
+                            <!-- RESET -->
+                            <button
+                                type="button"
+                                class="zoom-control-btn zoom-reset-btn"
+                                title="Reset Zoom"
+                                aria-label="Reset Zoom">
+
+                                <span>↺</span>
+
+                            </button>
+
+
+                            <!-- ZOOM IN -->
+                            <button
+                                type="button"
+                                class="zoom-control-btn zoom-in-btn"
+                                title="Zoom In"
+                                aria-label="Zoom In">
+
+                                <span>+</span>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- CLOSE BUTTON -->
+                        <button
+                            type="button"
+                            class="case-study-close-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close">
+
+                            <span>×</span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- ================================================= -->
+                    <!-- MODAL BODY -->
+                    <!-- ================================================= -->
+
+                    <div class="case-study-modal-body">
+
+                        <div
+                            id="caseStudyCarousel{{ $slideIndex }}"
+                            class="carousel slide case-study-carousel"
+                            data-bs-interval="false">
+
+                            <div class="carousel-inner">
+
+                                @foreach($caseStudyImages as $imageIndex => $imageData)
+
+                                    @if(!empty($imageData['image']))
+
+                                        <div class="carousel-item {{ $imageIndex === 0 ? 'active' : '' }}">
+
+                                            <div class="case-study-image-wrapper">
+
+                                                <img
+                                                    src="{{ asset('storage/' . $imageData['image']) }}"
+                                                    alt="{{ $slide['img_alt'] ?? 'Case Study Image' }}"
+                                                    class="case-study-modal-image"
+                                                    draggable="false"
+                                                />
+
+                                            </div>
+
+                                        </div>
+
+                                    @endif
+
+                                @endforeach
+
+                            </div>
+
+
+                            @if(count($caseStudyImages) > 1)
+
+                                <!-- PREVIOUS -->
+                                <button
+                                    class="carousel-control-prev case-study-carousel-control"
+                                    type="button"
+                                    data-bs-target="#caseStudyCarousel{{ $slideIndex }}"
+                                    data-bs-slide="prev">
+
+                                    <span class="case-study-arrow">
+                                        <span>‹</span>
+                                    </span>
+
+                                    <span class="visually-hidden">
+                                        Previous
+                                    </span>
+
+                                </button>
+
+
+                                <!-- NEXT -->
+                                <button
+                                    class="carousel-control-next case-study-carousel-control"
+                                    type="button"
+                                    data-bs-target="#caseStudyCarousel{{ $slideIndex }}"
+                                    data-bs-slide="next">
+
+                                    <span class="case-study-arrow">
+                                        <span>›</span>
+                                    </span>
+
+                                    <span class="visually-hidden">
+                                        Next
+                                    </span>
+
+                                </button>
+
+                            @endif
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    @endif
+
+@endforeach
+
+
+
+<style>
+
+/* =========================================================
+   CASE STUDY MODAL
+   ========================================================= */
+
+.case-study-modal {
+    --case-modal-width: 960px;
+    --case-modal-height: 650px;
+}
+
+
+/* =========================================================
+   MODAL DIALOG
+   ========================================================= */
+
+.case-study-modal .modal-dialog {
+    max-width: var(--case-modal-width);
+    width: calc(100% - 30px);
+
+    margin: 1.75rem auto;
+}
+
+
+/* =========================================================
+   MODAL CONTENT
+   ========================================================= */
+
+.case-study-modal .modal-content {
+
+    width: 100%;
+    height: var(--case-modal-height);
+
+    border: 0;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45),
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.case-study-modal-header {
+
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30, 30, 30, 0.98),
+            rgba(12, 12, 12, 0.98)
+        );
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   ZOOM CONTROLS
+   ========================================================= */
+
+.case-study-zoom-controls {
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-right: 48px;
+}
+
+
+.zoom-control-btn {
+
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid rgba(255,255,255,0.14);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.07);
+
+    color: #fff;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.zoom-control-btn:hover {
+
+    background: #fff;
+
+    color: #111;
+
+    border-color: #fff;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 18px rgba(255,255,255,0.18);
+}
+
+
+.zoom-control-btn:active {
+
+    transform: scale(0.92);
+}
+
+
+/* PLUS / MINUS */
+
+.zoom-in-btn span,
+.zoom-out-btn span {
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    font-weight: 300;
+}
+
+
+/* RESET */
+
+.zoom-reset-btn span {
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.case-study-close-btn {
+
+    position: absolute;
+
+    top: 16px;
+    right: 18px;
+
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid rgba(255,255,255,0.14);
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.07);
+
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    z-index: 30;
+}
+
+
+.case-study-close-btn span {
+
+    font-size: 25px;
+
+    font-weight: 200;
+
+    line-height: 1;
+
+    margin-top: -2px;
+}
+
+
+.case-study-close-btn:hover {
+
+    background: #fff;
+
+    color: #111;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   MODAL BODY
+   ========================================================= */
+
+.case-study-modal-body {
+
+    width: 100%;
+
+    height: calc(
+        var(--case-modal-height) - 68px
+    );
+
+    padding: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #242424 0%,
+            #141414 65%,
+            #0c0c0c 100%
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CAROUSEL
+   ========================================================= */
+
+.case-study-carousel {
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+.case-study-carousel .carousel-inner {
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+.case-study-carousel .carousel-item {
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+   ========================================================= */
+
+.case-study-image-wrapper {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding: 12px 70px;
+
+    cursor: grab;
+
+    position: relative;
+}
+
+
+.case-study-image-wrapper:active {
+
+    cursor: grabbing;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.case-study-modal-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+    transform:
+        translate3d(0, 0, 0)
+        scale(1);
+
+    transform-origin: center center;
+
+    transition:
+        transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    will-change: transform;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| IMPORTANT
+|--------------------------------------------------------------------------
+| When image is zoomed, remove the transition while dragging.
+*/
+
+.case-study-modal-image.is-dragging {
+
+    transition: none;
+}
+
+
+/* =========================================================
+   CAROUSEL ARROWS
+   ========================================================= */
+
+.case-study-carousel-control {
+
+    width: 64px !important;
+
+    opacity: 1 !important;
+
+    top: 50% !important;
+
+    bottom: auto !important;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+}
+
+
+.case-study-carousel-control.carousel-control-prev {
+
+    left: 4px;
+}
+
+
+.case-study-carousel-control.carousel-control-next {
+
+    right: 4px;
+}
+
+
+.case-study-arrow {
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.96);
+
+    color: #111;
+
+    border: 1px solid rgba(0,0,0,0.15);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+
+    transition: all 0.2s ease;
+}
+
+
+.case-study-arrow span {
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    line-height: 0;
+
+    margin-top: -5px;
+}
+
+
+.case-study-carousel-control:hover .case-study-arrow {
+
+    background: #111;
+
+    color: #fff;
+
+    border-color: #fff;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .case-study-modal {
+
+        --case-modal-width: 95vw;
+
+        --case-modal-height: 75vh;
+    }
+
+
+    .case-study-modal .modal-dialog {
+
+        width: 95vw;
+
+        max-width: 95vw;
+    }
+
+
+    .case-study-modal-header {
+
+        height: 62px;
+
+        padding: 0 14px;
+    }
+
+
+    .case-study-modal-body {
+
+        height: calc(
+            var(--case-modal-height) - 62px
+        );
+    }
+
+
+    .case-study-image-wrapper {
+
+        padding: 10px 55px;
+    }
+
+
+    .case-study-zoom-controls {
+
+        margin-right: 48px;
+    }
+
+
+    .zoom-control-btn {
+
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .case-study-arrow {
+
+        width: 42px;
+
+        height: 42px;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .case-study-modal {
+
+        --case-modal-height: 70vh;
+    }
+
+
+    .case-study-modal .modal-dialog {
+
+        width: 96vw;
+
+        max-width: 96vw;
+
+        margin: 0.75rem auto;
+    }
+
+
+    .case-study-modal .modal-content {
+
+        border-radius: 14px;
+    }
+
+
+    .case-study-zoom-controls {
+
+        gap: 4px;
+
+        margin-right: 45px;
+    }
+
+
+    .zoom-control-btn {
+
+        width: 31px;
+
+        height: 31px;
+    }
+
+
+    .zoom-in-btn span,
+    .zoom-out-btn span {
+
+        font-size: 19px;
+    }
+
+
+    .zoom-reset-btn span {
+
+        font-size: 17px;
+    }
+
+
+    .case-study-image-wrapper {
+
+        padding: 8px 48px;
+    }
+
+
+    .case-study-arrow {
+
+        width: 38px;
+
+        height: 38px;
+    }
+
+
+    .case-study-arrow span {
+
+        font-size: 31px;
+    }
+
+}
+
+</style>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    /*
+    |--------------------------------------------------------------------------
+    | CASE STUDY IMAGE ZOOM
+    |--------------------------------------------------------------------------
+    */
+
+    document.querySelectorAll('.case-study-modal').forEach(function (modal) {
+
+        let currentZoom = 1;
+
+        let translateX = 0;
+        let translateY = 0;
+
+        const minZoom = 1;
+        const maxZoom = 3;
+        const zoomStep = 0.25;
+
+
+        const zoomInBtn =
+            modal.querySelector('.zoom-in-btn');
+
+        const zoomOutBtn =
+            modal.querySelector('.zoom-out-btn');
+
+        const zoomResetBtn =
+            modal.querySelector('.zoom-reset-btn');
+
+
+        const carousel =
+            modal.querySelector('.case-study-carousel');
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Get Active Image
+        |--------------------------------------------------------------------------
+        */
+
+        function getActiveImage() {
+
+            return modal.querySelector(
+                '.carousel-item.active .case-study-modal-image'
+            );
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Get Active Image Wrapper
+        |--------------------------------------------------------------------------
+        */
+
+        function getActiveWrapper() {
+
+            const image = getActiveImage();
+
+            if (!image) {
+                return null;
+            }
+
+            return image.closest(
+                '.case-study-image-wrapper'
+            );
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Apply Transform
+        |--------------------------------------------------------------------------
+        */
+
+        function applyTransform(image, animate = true) {
+
+            if (!image) {
+                return;
+            }
+
+
+            image.style.transition =
+                animate
+                    ? 'transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1)'
+                    : 'none';
+
+
+            image.style.transform =
+                'translate3d(' +
+                translateX +
+                'px, ' +
+                translateY +
+                'px, 0) scale(' +
+                currentZoom +
+                ')';
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Reset Zoom
+        |--------------------------------------------------------------------------
+        */
+
+        function resetZoom() {
+
+            currentZoom = 1;
+
+            translateX = 0;
+            translateY = 0;
+
+
+            modal.querySelectorAll(
+                '.case-study-modal-image'
+            ).forEach(function (image) {
+
+                image.style.transition =
+                    'transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1)';
+
+                image.style.transform =
+                    'translate3d(0, 0, 0) scale(1)';
+
+            });
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | ZOOM AT MOUSE POSITION
+        |--------------------------------------------------------------------------
+        */
+
+        function zoomAtPoint(newZoom, clientX, clientY) {
+
+            const image = getActiveImage();
+
+            const wrapper = getActiveWrapper();
+
+            if (!image || !wrapper) {
+                return;
+            }
+
+
+            const oldZoom = currentZoom;
+
+
+            if (newZoom === oldZoom) {
+                return;
+            }
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Mouse position relative to wrapper center
+            |--------------------------------------------------------------------------
+            */
+
+            const wrapperRect =
+                wrapper.getBoundingClientRect();
+
+
+            const pointX =
+                clientX -
+                (wrapperRect.left + wrapperRect.width / 2);
+
+
+            const pointY =
+                clientY -
+                (wrapperRect.top + wrapperRect.height / 2);
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Keep point under mouse while zooming
+            |--------------------------------------------------------------------------
+            */
+
+            const zoomRatio =
+                newZoom / oldZoom;
+
+
+            translateX =
+                pointX -
+                (pointX - translateX) * zoomRatio;
+
+
+            translateY =
+                pointY -
+                (pointY - translateY) * zoomRatio;
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | If zoom returns to 1
+            |--------------------------------------------------------------------------
+            */
+
+            if (newZoom === 1) {
+
+                translateX = 0;
+                translateY = 0;
+
+            }
+
+
+            currentZoom = newZoom;
+
+
+            applyTransform(image);
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | ZOOM IN BUTTON
+        |--------------------------------------------------------------------------
+        */
+
+        if (zoomInBtn) {
+
+            zoomInBtn.addEventListener(
+                'click',
+                function (event) {
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+
+                    const wrapper =
+                        getActiveWrapper();
+
+
+                    if (!wrapper) {
+                        return;
+                    }
+
+
+                    const rect =
+                        wrapper.getBoundingClientRect();
+
+
+                    let mouseX =
+                        wrapper.dataset.mouseX
+                            ? parseFloat(wrapper.dataset.mouseX)
+                            : rect.left + rect.width / 2;
+
+
+                    let mouseY =
+                        wrapper.dataset.mouseY
+                            ? parseFloat(wrapper.dataset.mouseY)
+                            : rect.top + rect.height / 2;
+
+
+                    const newZoom =
+                        Math.min(
+                            currentZoom + zoomStep,
+                            maxZoom
+                        );
+
+
+                    zoomAtPoint(
+                        newZoom,
+                        mouseX,
+                        mouseY
+                    );
+
+                }
+            );
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | ZOOM OUT BUTTON
+        |--------------------------------------------------------------------------
+        */
+
+        if (zoomOutBtn) {
+
+            zoomOutBtn.addEventListener(
+                'click',
+                function (event) {
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+
+                    const wrapper =
+                        getActiveWrapper();
+
+
+                    if (!wrapper) {
+                        return;
+                    }
+
+
+                    const rect =
+                        wrapper.getBoundingClientRect();
+
+
+                    let mouseX =
+                        wrapper.dataset.mouseX
+                            ? parseFloat(wrapper.dataset.mouseX)
+                            : rect.left + rect.width / 2;
+
+
+                    let mouseY =
+                        wrapper.dataset.mouseY
+                            ? parseFloat(wrapper.dataset.mouseY)
+                            : rect.top + rect.height / 2;
+
+
+                    const newZoom =
+                        Math.max(
+                            currentZoom - zoomStep,
+                            minZoom
+                        );
+
+
+                    zoomAtPoint(
+                        newZoom,
+                        mouseX,
+                        mouseY
+                    );
+
+                }
+            );
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | RESET BUTTON
+        |--------------------------------------------------------------------------
+        */
+
+        if (zoomResetBtn) {
+
+            zoomResetBtn.addEventListener(
+                'click',
+                function (event) {
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+                    resetZoom();
+
+                }
+            );
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | RESET WHEN MODAL OPENS
+        |--------------------------------------------------------------------------
+        */
+
+        modal.addEventListener(
+            'shown.bs.modal',
+            function () {
+
+                resetZoom();
+
+            }
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | RESET WHEN CAROUSEL IMAGE CHANGES
+        |--------------------------------------------------------------------------
+        */
+
+        if (carousel) {
+
+            carousel.addEventListener(
+                'slid.bs.carousel',
+                function () {
+
+                    resetZoom();
+
+                }
+            );
+
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | TRACK MOUSE POSITION
+        |--------------------------------------------------------------------------
+        */
+
+        modal.addEventListener(
+            'mousemove',
+            function (event) {
+
+                const wrapper =
+                    getActiveWrapper();
+
+
+                if (!wrapper) {
+                    return;
+                }
+
+
+                const rect =
+                    wrapper.getBoundingClientRect();
+
+
+                if (
+                    event.clientX >= rect.left &&
+                    event.clientX <= rect.right &&
+                    event.clientY >= rect.top &&
+                    event.clientY <= rect.bottom
+                ) {
+
+                    wrapper.dataset.mouseX =
+                        event.clientX;
+
+                    wrapper.dataset.mouseY =
+                        event.clientY;
+
+                }
+
+            }
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | DOUBLE CLICK ZOOM
+        |--------------------------------------------------------------------------
+        */
+
+        modal.addEventListener(
+            'dblclick',
+            function (event) {
+
+                const image =
+                    getActiveImage();
+
+
+                const wrapper =
+                    getActiveWrapper();
+
+
+                if (!image || !wrapper) {
+                    return;
+                }
+
+
+                if (
+                    event.target !== image &&
+                    !event.target.closest(
+                        '.case-study-image-wrapper'
+                    )
+                ) {
+                    return;
+                }
+
+
+                if (currentZoom === 1) {
+
+                    zoomAtPoint(
+                        2,
+                        event.clientX,
+                        event.clientY
+                    );
+
+                } else {
+
+                    resetZoom();
+
+                }
+
+            }
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | MOUSE WHEEL ZOOM
+        |--------------------------------------------------------------------------
+        */
+
+        modal.addEventListener(
+            'wheel',
+            function (event) {
+
+                const image =
+                    getActiveImage();
+
+
+                const wrapper =
+                    getActiveWrapper();
+
+
+                if (!image || !wrapper) {
+                    return;
+                }
+
+
+                if (!modal.classList.contains('show')) {
+                    return;
+                }
+
+
+                const rect =
+                    wrapper.getBoundingClientRect();
+
+
+                if (
+                    event.clientX < rect.left ||
+                    event.clientX > rect.right ||
+                    event.clientY < rect.top ||
+                    event.clientY > rect.bottom
+                ) {
+                    return;
+                }
+
+
+                event.preventDefault();
+
+
+                let newZoom;
+
+
+                if (event.deltaY < 0) {
+
+                    newZoom =
+                        Math.min(
+                            currentZoom + zoomStep,
+                            maxZoom
+                        );
+
+                } else {
+
+                    newZoom =
+                        Math.max(
+                            currentZoom - zoomStep,
+                            minZoom
+                        );
+
+                }
+
+
+                zoomAtPoint(
+                    newZoom,
+                    event.clientX,
+                    event.clientY
+                );
+
+            },
+            {
+                passive: false
+            }
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | DRAG / PAN
+        |--------------------------------------------------------------------------
+        */
+
+        let isDragging = false;
+
+        let startX = 0;
+        let startY = 0;
+
+        let startTranslateX = 0;
+        let startTranslateY = 0;
+
+
+        modal.addEventListener(
+            'mousedown',
+            function (event) {
+
+                const image =
+                    getActiveImage();
+
+
+                if (!image) {
+                    return;
+                }
+
+
+                if (currentZoom <= 1) {
+                    return;
+                }
+
+
+                if (
+                    event.target !== image
+                ) {
+                    return;
+                }
+
+
+                isDragging = true;
+
+
+                startX =
+                    event.clientX;
+
+                startY =
+                    event.clientY;
+
+
+                startTranslateX =
+                    translateX;
+
+                startTranslateY =
+                    translateY;
+
+
+                image.classList.add(
+                    'is-dragging'
+                );
+
+
+                event.preventDefault();
+
+            }
+        );
+
+
+        document.addEventListener(
+            'mousemove',
+            function (event) {
+
+                if (!isDragging) {
+                    return;
+                }
+
+
+                const image =
+                    getActiveImage();
+
+
+                if (!image) {
+                    return;
+                }
+
+
+                translateX =
+                    startTranslateX +
+                    (
+                        event.clientX -
+                        startX
+                    );
+
+
+                translateY =
+                    startTranslateY +
+                    (
+                        event.clientY -
+                        startY
+                    );
+
+
+                applyTransform(
+                    image,
+                    false
+                );
+
+            }
+        );
+
+
+        document.addEventListener(
+            'mouseup',
+            function () {
+
+                if (!isDragging) {
+                    return;
+                }
+
+
+                const image =
+                    getActiveImage();
+
+
+                if (image) {
+
+                    image.classList.remove(
+                        'is-dragging'
+                    );
+
+                }
+
+
+                isDragging = false;
+
+            }
+        );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | PREVENT IMAGE DRAG BROWSER BEHAVIOUR
+        |--------------------------------------------------------------------------
+        */
+
+        modal.querySelectorAll(
+            '.case-study-modal-image'
+        ).forEach(function (image) {
+
+            image.addEventListener(
+                'dragstart',
+                function (event) {
+
+                    event.preventDefault();
+
+                }
+            );
+
+        });
+
+    });
+
+});
+</script>
+<!-- This is a new section-6 closed section added by dewansh close -->
+        <!-- This is a new section-6 closed section added by dewansh close -->                                              
+        <!-- new client changes end  -->
+
+        <!-- <section class="architect-center comprnsive_solution py-5">
+            <div class="container">
+                <div class="row g-0">Case Stud
+                    <div class="cmp_solutn_heding ps-3 col-md-12 py-5">
+                        <h2 class="ps-3 fw-bold">Making the Impossible Possible</h2>
+                    </div>
+                    <div class="case-studies-item">
+                        <div class="case_studies row g-0">
+                            <div class="col-lg-4 col-md-12">
+                                <div class="case_studies_contn">
+                                    <h3 class="fw-bold pb-2">Insights from Architect Shweta Sardana on achieving better project outcomes with RachTR’s support and solutions.</h3>
+                               
+                                    <a href="{{asset('pdfFile/Case Study.pdf')}}"
+                                        target="_blank">View Case Study</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-12">
+                                <div class="case_studies_downd">
+                                    <div class="downd_img">
+                                        <img src="{{ asset('images/1777978713773864.jpg')}}" alt="Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor" />
+                                    </div>
+                                    <div class="downd_txt px-5 py-4">
+                                        <ul>
+                                            <li>
+                                                <div class="txt">
+                                                    <span>Download Case Study</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon py-2">
+                                                    <a href="{{asset('pdfFile/Case Study.pdf')}}" target="_blank">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="16.378 16.378 167.244 167.244"
+                                                            viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lyo12rer9 svg [data-color="1"] {
+                                                                        fill: #EF6E25;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                    fill="#010107" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <i class="clear"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case_studies row g-0">
+                            <div class="col-lg-4 col-md-12 lft-cont">
+                                <div class="case_studies_contn">
+                                    <h3 class="fw-bold pb-2">Epoxy Flooring Solution on Oil-Prone Areas for Welspun</h3>
+                                    <p class="pb-5 mb-5">Welspun, a global leader in textiles, offers high-quality home
+                                        textiles & flooring solutions. Their diverse reach and focus on innovation &
+                                        sustainability set them apart. They aim to be a top brand, prioritizing customer
+                                        experience and social responsibility.</p>
+                                    <a href="{{asset('pdfFile/Welpsun_carousel.pdf')}}"
+                                        target="_blank">View Case Study</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-12">
+                                <div class="case_studies_downd">
+                                    <div class="downd_img">
+                                        <img src="{{ asset('images/welspun%20epoxy.webp')}}" alt="Epoxy flooring solution for Welspun"/>
+                                    </div>
+                                    <div class="downd_txt px-5 py-4">
+                                        <ul>
+                                            <li>
+                                                <div class="txt">
+                                                    <span>Download Case Study</span>
+                                                    <h5 class="fw-bold py-2">Epoxy Flooring Solution for Welspun</h5>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="icon py-2">
+                                                    <a href="{{asset('pdfFile/Welpsun_carousel.pdf')}}" target="_blank">
+                                                        <svg preserveAspectRatio="xMidYMid meet"
+                                                            data-bbox="16.378 16.378 167.244 167.244"
+                                                            viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
+                                                            xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                            role="presentation" aria-hidden="true" aria-label="">
+                                                            <defs>
+                                                                <style>
+                                                                    #comp-lyo12rf06 svg [data-color="1"] {
+                                                                        fill: #EF6E25;
+                                                                    }
+                                                                </style>
+                                                            </defs>
+                                                            <g>
+                                                                <path
+                                                                    d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                    fill="#010107" data-color="1"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <i class="clear"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- This is a section-7 close -->
 
         <!-- This is a section-2 open -->
-        <section class="architect-our our_strengths py-5">
+        <section class="architect-our our_strengths ">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
@@ -254,7 +2249,7 @@
                                         of our products in various construction projects.:</p>
                                 </div>
                                 <div class="res_dev_btn col-lg-3 col-md-3 col-sm-12 pt-4 me-1">
-                                    <a href="{{ config('app.url') . '/blogs' }}"
+                                    <a href="{{ config('app.url') . 'blogs' }}"
                                         target="_blank">VIEW ALL</a>
                                 </div>
                                 <i class="clear"></i>
@@ -295,7 +2290,7 @@
                 <div class="row g-0">
                     <div class="cmp_solutn_heding ps-3 col-md-12 py-5">
                         <h2 class="ps-3 fw-bold">{!! !empty($caseStudy['heading']) ? html_entity_decode($caseStudy['heading']) : 'Case Study' !!}</h2>
-                        <!-- <h3 class="py-4">Check out some of our informative blog posts on topics like construction trends, product knowledge, application tips, etc.</h3> -->
+                        
                          @if(!empty($caseStudy['description']))
                            {!! $caseStudy['description'] !!}                                     
                          @else
@@ -490,7 +2485,7 @@
                                             which is exorbitantly high.</p>
                                         <p class="pb-5 mb-5">Problem starts immediately and keep on coming at regular
                                             intervals upto 2-3 years which is a...</p>
-                                        <a href="{{ config('app.url') . '/blogs' }}" target="_blank">View Case Study</a>
+                                        <a href="{{ config('app.url') . 'blogs' }}" target="_blank">View Case Study</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-7 col-md-12">
@@ -508,7 +2503,7 @@
                                                 </li>
                                                 <li class="rotate-90">
                                                     <div class="icon py-2">
-                                                        <a href="{{ config('app.url') . '/blogs' }}">
+                                                        <a href="{{ config('app.url') . 'blogs' }}">
                                                             <svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
                                                                 <g>
                                                                     <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
@@ -591,7 +2586,7 @@
                                             and precision-aligned white lines.</p>
                                         <p class="pb-2 mb-2">Read more to know how we successfully delivered complex
                                             flooring for Escorts Kubota in record time</p>
-                                        <a href="{{ config('app.url') . '/blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}"
+                                        <a href="{{ config('app.url') . 'blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}"
                                             target="_blank">View Case Study</a>
                                     </div>
                                 </div>
@@ -626,12 +2621,69 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="case_studies row g-0">
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="case_studies_contn">
+                                        <h3 class="fw-bold pb-2">From Recurring Tile Problems to Lasting Performance</h3>
+                                        <p class="pb-5 mb-5">Architect Jigar Talati shares how the right grout solution helped overcome tile installation challenges and deliver lasting durability.</p>
+                                        <a href="{{asset('pdfFile/New Case Study - Jigar Talati 2.pdf')}}"
+                                            target="_blank">View Case Study</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12">
+                                    <div class="case_studies_downd">
+                                        <div class="downd_img">
+                                            <img src="{{ asset('images/recurring tile problems_1.webp')}}" alt="Successful Restoration of Delhivery's Warehouse Damaged Concrete Floor" />
+                                        </div>
+                                        <div class="downd_txt px-5 py-4">
+                                            <ul>
+                                                <li>
+                                                    <div class="txt">
+                                                        <span>Download Case Study</span>
+                                                        
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="icon py-2">
+                                                        <a href="{{asset('pdfFile/New Case Study - Jigar Talati 2.pdf')}}" target="_blank">
+                                                            <svg preserveAspectRatio="xMidYMid meet"
+                                                                data-bbox="16.378 16.378 167.244 167.244"
+                                                                viewBox="16.378 16.378 167.244 167.244" height="200" width="200"
+                                                                xmlns="http://www.w3.org/2000/svg" data-type="color"
+                                                                role="presentation" aria-hidden="true" aria-label="">
+                                                                <defs>
+                                                                    <style>
+                                                                        #comp-lyo12rer9 svg [data-color="1"] {
+                                                                            fill: #EF6E25;
+                                                                        }
+                                                                    </style>
+                                                                </defs>
+                                                                <g>
+                                                                    <path
+                                                                        d="M100 16.378c-46.183 0-83.622 37.438-83.622 83.622 0 46.183 37.439 83.622 83.622 83.622 46.184 0 83.622-37.439 83.622-83.622 0-46.184-37.438-83.622-83.622-83.622zM77.228 94.654a4.955 4.955 0 0 1 7.009 0l8.328 8.328v-36.42a7.435 7.435 0 1 1 14.87 0v36.421l8.329-8.329a4.955 4.955 0 0 1 7.009 0 4.955 4.955 0 0 1 0 7.009l-19.265 19.265-.003.003a4.94 4.94 0 0 1-3.505 1.452 4.942 4.942 0 0 1-3.504-1.451l-19.268-19.267a4.958 4.958 0 0 1 0-7.011zm56.616 42.181c0 2.78-2.275 5.054-5.054 5.054H71.21c-2.78 0-5.054-2.275-5.054-5.054v-1.989c0-2.78 2.275-5.054 5.054-5.054h57.58c2.78 0 5.054 2.275 5.054 5.054v1.989z"
+                                                                        fill="#010107" data-color="1"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <i class="clear"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
                         @endforelse
                     </div>
                 </div>
             </div>
         </section>
         <!-- This is a section-6 close -->
+        
+
+        
 
         <!-- This is a section-2 open -->
         <section class="architect-our our-industries our_strengths py-5">
@@ -873,7 +2925,7 @@
         </div>
         
 
-        <section class="architectural-marvels py-5">
+        <!--<section class="architectural-marvels py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -2383,4 +4435,4 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->

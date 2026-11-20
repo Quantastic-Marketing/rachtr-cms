@@ -955,7 +955,7 @@
                             @endforeach
                           </ul>
                          <div class="view_btn col-lg-3 py-5">
-                             <a href="{{ config('app.url') . '/blogs'}}" target="_blank">VIEW ALL</a>
+                             <a href="{{ config('app.url') . 'blogs'}}" target="_blank">VIEW ALL</a>
                         </div>
                       </div>
                   </div>    

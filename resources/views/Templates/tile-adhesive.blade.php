@@ -314,11 +314,11 @@ $pageContent = $page->content ?? [];
                                 RachTR has established itself as a trusted name in industrial and residential flooring solutions. With advanced formulations and tested durability, our adhesives are designed to withstand Indian weather conditions, heavy footfall, and moisture exposure.
                             </p>
                             <div class="trusted-links">
-                                <a href="#epoxy-flooring" class="btn trusted-link">
+                                <a href="https://www.rachtr.com/industrial-flooring-solutions/epoxy-flooring-products" class="btn trusted-link">
                                     <span class="trusted-link-icon">→</span>
                                     <span class="trusted-link-text">Browse our Epoxy Flooring Solutions</span>
                                 </a>
-                                <a href="#pu-flooring" class="btn trusted-link">
+                                <a href="https://www.rachtr.com/industrial-flooring-solutions/pu-flooring" class="btn trusted-link">
                                     <span class="trusted-link-icon">→</span>
                                     <span class="trusted-link-text">Explore PU Flooring Products</span>
                                 </a>
@@ -378,10 +378,10 @@ $pageContent = $page->content ?? [];
                         </div>
                         </a>
                     </li>
-                                        <li class="col-lg-4 mx-3">
-                        <a href="https://www.rachtr.com/storage/blog-feature-images/rachtr%201200%20x%20626%20(2).png">
+                    <li class="col-lg-4 mx-3">
+                        <a href="https://www.rachtr.com/blogs/tile-vs-natural-stone-understanding-the-difference">
                         <div class="blogs_img">
-                            <img src="https://www.rachtr.com/storage/blog-feature-images/tile%20vs%20natural%20stone%20(1).jpg">
+                            <img src="https://www.rachtr.com/storage/blog-feature-images/tile_vs_natural_stone.jpg">
                         </div>
                         <div class="blogs_contnt">
                             

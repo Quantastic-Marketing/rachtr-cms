@@ -658,7 +658,7 @@
                                         <h5 class="fw-bold pb-2">RachTR solves Welspun's Epoxy Flooring debonding issue caused by excessive oil</h5>
                                         <p class="pb--md-5 mb-md--5">Welspun were facing issues of excessive oil on the floor, which caused the debonding between epoxy flooring and concrete.</p>
                                         <p class="pb--md-5 mb-md--5">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
-                                        <a href="#" target="_blank">View Case Study</a>
+                                        <a href="https://www.rachtr.com/pdfFile/Welpsun_carousel.pdf" target="_blank">View Case Study</a>
                                         <div class="case_studies_downd d-md-none">
                                             <div class="downd_img">
                                             <img src="{{ asset('images/welspun_pro_img.webp')}}"/>
@@ -684,7 +684,7 @@
                                         <h5 class="fw-bold pb-2">RachTR completed Epoxy Flooring at ITC, Haridwar</h5>
                                         <p class="pb--md-5 mb-md--5">ITC facility at Haridwar faced themselves with issues of broken tiles and slippery surface which often caused an issue for the workers at the facility.</p>
                                         <p class="pb--md-5 mb-md--5">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
-                                        <a href="#" target="_blank">View Case Study</a>
+                                        <a href="https://www.rachtr.com/pdfFile/Case_study_ITC.pdf" target="_blank">View Case Study</a>
                                         <div class="case_studies_downd d-md-none">
                                             <div class="downd_img">
                                             <img src="{{ asset('images/itc_project_img.webp')}}"/>
@@ -710,7 +710,7 @@
                                         <h5 class="fw-bold pb-2">Epoxy flooring installation for a Delhivery warehouse in Faridabad</h5>
                                         <p class="pb--md-5 mb-md--5">Delhivery, a logistics company, likely faced the challenge of needing a durable and chemical-resistant floor for one of their warehouses in Faridabad.</p>
                                         <p class="pb-2 mb-2">Check out how RachTR fixed this issue by clicking on the "View Case Study" button.</p>
-                                        <a href="#" target="_blank">View Case Study</a>
+                                        <a href="https://www.rachtr.com/pdfFile/Delhivery_carousel.pdf" target="_blank">View Case Study</a>
                                         <div class="case_studies_downd d-md-none">
                                             <div class="downd_img">
                                             <img src="{{ asset('images/faridabad_proj_img.webp')}}"/>

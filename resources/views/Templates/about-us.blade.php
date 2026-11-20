@@ -262,11 +262,11 @@
                                 <img src="images/sameer.webp" alt="Sameer Jakhar" class="founder-img">
                             </div>
                             <h3 class="founder-name">SAMEER JAKHAR</h3>
-                            <p class="founder-position">Co-Founder - Sales Head</p>
+                            <p class="founder-position">Co-founder - Sales Head</p>
                             <div class="hover-content">
                                 <div class="name-desc">
                                     <p class="founder-name">SAMEER JAKHAR</p>
-                                    <p class="founder-position">Co-Founder - Sales Head</p>
+                                    <p class="founder-position">Co-founder - Sales Head</p>
                                 </div>
                                 <div class="person-info  justify-content-center text-center align-items-center p-3 pt-3">
                                     <a href="https://www.linkedin.com/in/sameer-jakhar-36a7806" class="linkedin-style mb-3"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -298,11 +298,11 @@
                                 <img src="images/abhishek.webp" alt="Abhisek Poddar" class="founder-img">
                             </div>
                             <h3 class="founder-name">ABHISEK PODDAR</h3>
-                            <p class="founder-position">Co-Founder - Operations Head</p>
+                            <p class="founder-position">Co-founder - Operations Head</p>
                             <div class="hover-content">
                                 <div class="name-desc">
                                     <p class="founder-name">ABHISEK PODDAR</p>
-                                    <p class="founder-position">Co-Founder - Operations Head</p>
+                                    <p class="founder-position">Co-founder - Operations Head</p>
                                 </div>
                                 <div class="person-info  justify-content-center text-center align-items-center p-3 pt-3">
                                     <a href="https://www.linkedin.com/in/abhisek-poddar-1bab077" class="linkedin-style mb-3"><i class="fa fa-linkedin" aria-hidden="true"></i></a>

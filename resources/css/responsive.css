@@ -181,8 +181,9 @@
     }
     #showLeft span:nth-child(1) {
       top: 0px;
-      width: 60%;
-      left: -16px;
+      /* width: 60%; */
+      width: 100%;
+      /* left: -16px; */
   }
     #showLeft span:nth-child(2) {
       top: 9px;
@@ -190,13 +191,16 @@
   }
     #showLeft span:nth-child(3) {
       top: 19px;
-      width: 60%;
+      /* width: 60%; */
+      width: 100%;
   }
     #showLeft.open span:nth-child(1) {
       transform: rotate(-140deg);
-      top: 7px;
+      /* top: 7px; */
+      top: 5px;
       left: -12px;
       transition: 0.2s;
+      display: none;
     }
     #showLeft.open span:nth-child(2) {
       transform: rotate(-40deg);
@@ -204,8 +208,10 @@
     }
     #showLeft.open span:nth-child(3) {
       transform: rotate(-140deg);
-      top: 17px;
-      left: 11px;
+      /* top: 17px; */
+       /* top: 14px; */
+        top: 10px;
+      left: 0px;
       transition: 0.2s;
     }
     .bnr_sldr .item .banner-sec .banner_overlay .content {

@@ -474,7 +474,7 @@
                                     </figure>
                                     <h6 class="text-center heading-underline">
                                       <a
-                                        href="{{ config('app.url') . '/product-page/' . $product->slug }}"
+                                        href="{{ config('app.url') . 'product-page/' . $product->slug }}"
                                         class="text-black fw-bold"
                                         >{{ $product->name }}</a
                                       >
@@ -515,7 +515,7 @@
                                 </figure>
                                 <h6 class="text-center heading-underline">
                                   <a
-                                    href="{{ config('app.url') . '/product-page/rachtr-ltx-133'}}"
+                                    href="{{ config('app.url') . 'product-page/rachtr-ltx-133'}}"
                                     class="text-black fs-6 fw-bold"
                                     >RachTR LTX 133</a
                                   >
@@ -532,7 +532,7 @@
                                 </figure>
                                 <h6 class="text-center heading-underline">
                                   <a
-                                    href="{{ config('app.url') . '/product-page/rachtr-adflex-206'}}"
+                                    href="{{ config('app.url') . 'product-page/rachtr-adflex-206'}}"
                                     class="text-black fs-6 fw-bold"
                                     >RachTR AdFlex 206</a
                                   >
@@ -551,7 +551,7 @@
                                 </figure>
                                 <h6 class="text-center heading-underline">
                                   <a
-                                    href="{{ config('app.url') . '/product-page/rachtr-tsa-eco-1' }}"
+                                    href="{{ config('app.url') . 'product-page/rachtr-tsa-eco-1' }}"
                                     class="text-black fs-6 fw-bold"
                                     >RachTR TSA ECO +</a
                                   >
@@ -568,7 +568,7 @@
                                 </figure>
                                 <h6 class="text-center heading-underline">
                                   <a
-                                    href="{{ config('app.url') . '/product-page/rachtr-tsa-eco' }}"
+                                    href="{{ config('app.url') . 'product-page/rachtr-tsa-eco' }}"
                                     class="text-black fs-6 fw-bold"
                                     >RachTR TSA ECO</a
                                   >
@@ -596,7 +596,7 @@
                                 </figure>
                                 <h6 class="text-center heading-underline">
                                   <a
-                                    href="{{ config('app.url') . '/product-page/eg-200' }}"
+                                    href="{{ config('app.url') . 'product-page/eg-200' }}"
                                     class="text-black fs-6 fw-bold"
                                     >RACHTR EG 200</a
                                   >
@@ -613,7 +613,7 @@
                                 </figure>
                                 <h6 class="text-center heading-underline">
                                   <a
-                                    href="{{ config('app.url') . '/product-page/rachtr-pulu-g-30' }}"
+                                    href="{{ config('app.url') . 'product-page/rachtr-pulu-g-30' }}"
                                     class="text-black fs-6 fw-bold"
                                     >RachTR PULU-G 30</a
                                   >
@@ -631,7 +631,7 @@
                                 </figure>
                                 <h6 class="text-center heading-underline">
                                   <a
-                                    href="{{ config('app.url') . '/product-page/rachtr-r-105-thixo' }}"
+                                    href="{{ config('app.url') . 'product-page/rachtr-r-105-thixo' }}"
                                     class="text-black fs-6 fw-bold"
                                     >RachTR R 105 THIXO</a
                                   >
@@ -648,7 +648,7 @@
                                 </figure>
                                 <h6 class="text-center heading-underline">
                                   <a
-                                    href="{{ config('app.url') . '/product-page/rachtr-pulu-75' }}"
+                                    href="{{ config('app.url') . 'product-page/rachtr-pulu-75' }}"
                                     class="text-black fs-6 fw-bold"
                                     >RachTR PULU 75</a
                                   >
@@ -689,7 +689,7 @@
                               </figure>
                               <h6 class="text-center heading-underline">
                                 <a
-                                  href="{{ config('app.url') . '/product-page/' . $product->slug }}"
+                                  href="{{ config('app.url') . 'product-page/' . $product->slug }}"
                                   class="text-black fs-6 fw-bold"
                                   >{{ $product->name }}</a
                                 >
@@ -732,7 +732,7 @@
                   <div class="row">
                     <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-ltx-133'}}" class="">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-ltx-133'}}" class="">
                           <figure>
                             <img
                               src="images/RachTR-LTX-133.webp"
@@ -747,7 +747,7 @@
                     </div>
                     <div class="col-6 col-lg-2 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-adflex-206'}}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-adflex-206'}}">
                           <figure>
                             <img
                               src="images/RachTR-AdFlex-206.webp"
@@ -786,7 +786,7 @@
                     </div>
                     <div class="col-6 col-lg-2 mb-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-tsa-eco-1' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-tsa-eco-1' }}">
                           <figure>
                             <img
                               src="images/RachTR-TSA-ECO-plus.webp"
@@ -801,7 +801,7 @@
                     </div>
                     <div class="col-6 col-lg-2 mb-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-tsa-eco' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-tsa-eco' }}">
                           <figure>
                             <img
                               src="images/RachTR-TSA-ECO.webp"
@@ -830,7 +830,7 @@
                   <div class="row">
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/eg-200' }}">
+                        <a href="{{ config('app.url') . 'product-page/eg-200' }}">
                           <figure>
                             <img src="images/RACHTR-EG-200.webp" alt="RACHTR EG 200" />
                           </figure>
@@ -842,7 +842,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-pulu-g-30' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-pulu-g-30' }}">
                           <figure>
                             <img
                               src="images/RachTR-PULU-G-30.webp"
@@ -881,7 +881,7 @@
                     </div>                
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-r-105-thixo' }}" class="">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-r-105-thixo' }}" class="">
                           <figure>
                             <img
                               src="images/RachTR-R-105-THIXO.webp"
@@ -896,7 +896,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-pulu-75' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-pulu-75' }}">
                           <figure>
                             <img
                               src="images/RachTR-PULU-75.webp"
@@ -955,7 +955,7 @@
                   <div class="row">
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-r-105-liquid' }}" class="">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-r-105-liquid' }}" class="">
                           <figure>
                             <img
                               src="images/RachTR-R-105-LIQUID.webp"
@@ -971,7 +971,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-stone-power' }}" class="">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-stone-power' }}" class="">
                           <figure>
                             <img
                               src="images/RachTR-Stone-Power.webp"
@@ -987,7 +987,7 @@
                     </div>
                     <div class="col-6 col-lg-3">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-top-fill' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-top-fill' }}">
                           <figure>
                             <img
                               src="images/RachTR-Top-Fill.webp"
@@ -1003,7 +1003,7 @@
                     </div>
                     <div class="col-6 col-lg-3">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-epoxy-201-l' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-epoxy-201-l' }}">
                           <figure>
                             <img
                               src="images/RachTR-Epoxy-201-L.webp"
@@ -1038,7 +1038,7 @@
                   <div class="row justify-content-start">
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-bleedx' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-bleedx' }}">
                           <figure>
                             <img src="images/RachTR-BLEEDX.webp" alt="RachTR BLEEDX" />
                           </figure>
@@ -1050,7 +1050,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-top-seal' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-top-seal' }}">
                           <figure>
                             <img
                               src="images/RachTR-TOP-SEAL.webp"
@@ -1065,7 +1065,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-color-enhancer' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-color-enhancer' }}">
                           <figure>
                             <img
                               src="images/RachTR-COLOR-ENHANCER.webp"
@@ -1080,7 +1080,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-back-seal' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-back-seal' }}">
                           <figure>
                             <img
                               src="images/RachTR-BACK-SEAL.webp"
@@ -1095,7 +1095,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-defendor' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-defendor' }}">
                           <figure>
                             <img
                               src="images/RachTR-DEFENDOR.webp"
@@ -1110,7 +1110,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-wl-barrier' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-wl-barrier' }}">
                           <figure>
                             <img
                               src="images/RachTR-WL-BARRIER.webp"
@@ -1125,7 +1125,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-ss-sealer' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-ss-sealer' }}">
                           <figure>
                             <img
                               src="images/RachTR-SS-SEALER.webp"
@@ -1160,7 +1160,7 @@
                   <div class="row">
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-stain-r' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-stain-r' }}">
                           <figure>
                             <img
                               src="images/RachTR-Stain-R.webp"
@@ -1176,7 +1176,7 @@
                     </div>
                     <div class="col-6 col-lg-3 mb-4 mb-lg-0">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-xc-4' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-xc-4' }}">
                           <figure>
                             <img
                               src="images/RachTR-XC-4.webp"
@@ -1192,7 +1192,7 @@
                     </div>
                     <div class="col-6 col-lg-3">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-xc-1' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-xc-1' }}">
                           <figure>
                             <img
                               src="images/RachTR-XC-1.webp"
@@ -1208,7 +1208,7 @@
                     </div>
                     <div class="col-6 col-lg-3">
                       <div class="offer-product">
-                        <a href="{{ config('app.url') . '/product-page/rachtr-xc-2' }}">
+                        <a href="{{ config('app.url') . 'product-page/rachtr-xc-2' }}">
                           <figure>
                             <img
                               src="images/RachTR-XC-2.webp"
@@ -1515,7 +1515,7 @@
                         intervals upto 2-3 years which is a...
                       </p>
                       <a
-                        href="{{ config('app.url') . '/blogs/white-marble-installation-methodology' }}"
+                        href="{{ config('app.url') . 'blogs/white-marble-installation-methodology' }}"
                         target="_blank"
                         >View Case Study</a
                       >
@@ -1541,7 +1541,7 @@
                           </h4>
                         </div>
                         <div class="study-link rotate-90">
-                          <a href="{{ config('app.url') . '/blogs/white-marble-installation-methodology' }}">
+                          <a href="{{ config('app.url') . 'blogs/white-marble-installation-methodology' }}">
                             <svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
                               <g>
                                   <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
@@ -1599,7 +1599,7 @@
                   @endforeach
                 </ul>
                 <div class="view_btn col-lg-3 py-lg-5 py-3">
-                  <a href="{{ config('app.url') . '/blogs'}}" target="_blank"
+                  <a href="{{ config('app.url') . 'blogs'}}" target="_blank"
                     >VIEW ALL</a
                   >
                 </div>

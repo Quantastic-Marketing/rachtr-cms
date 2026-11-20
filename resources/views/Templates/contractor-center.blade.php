@@ -1,5 +1,66 @@
 
 
+    <style>
+        .case-studies-item video {
+            width: 100%;
+            display: block;
+        }
+
+        .small-video1 {
+            height: 360px !important;
+            width: 480px !important;
+            border-radius:11px !important;
+        }
+
+        .contractor-video {
+             width: 100%;
+            max-width: 280px;      /* Smaller width */
+            aspect-ratio: 9 / 16;  /* Portrait ratio */
+            object-fit: contain;   /* Prevent cutting */
+            border-radius: 12px;
+            display: block;
+            margin: 0 auto;
+            background: #000;
+        }
+                /* Smaller controls */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+
+        /* Better mobile responsiveness */
+        @media (max-width: 768px) {
+            .contractor-video {
+                max-width: 100%;
+                height: 180px;
+            }
+        }
+
+        .samvad-video {
+            width: 100%;
+            max-width: 280px;      /* Smaller width */
+            aspect-ratio: 9 / 16;  /* Portrait ratio */
+            object-fit: contain;   /* Prevent cutting */
+            border-radius: 12px;
+            display: block;
+            margin: 0 auto;
+            background: #000;
+        }
+
+        /* Smaller navigation arrows */
+        #samvadVideoSlider .carousel-control-prev,
+        #samvadVideoSlider .carousel-control-next {
+            width: 8%;
+        }
+
+        /* Better mobile responsiveness */
+        @media (max-width: 768px) {
+            .samvad-video {
+                max-width: 220px;
+            }
+        }
+
+    </style>
     <div class="wrapper"> 
         @php 
             $pageContent = $page->content ?? [];
@@ -29,31 +90,291 @@
         </div>
        </section>
         <!-- This is a banner close -->
-            <section class="contract-innvo innovation-solutions py-3 py-sm-5">
-                <div class="container">
-                    <div class="row align-items-center">
-                            <div class="col-md-10">
-                                <div class="row d-flex flex-row-reverse">
-                                    <div class="col-lg-6 order-2 order-md-1 py-3">
-                                        <div class="image-container">
-                                            <!-- <div class="background-box"></div> -->
-                                            <img src="{{ !empty($solutions['innovative_image']) ? asset('storage/' . $solutions['innovative_image']) : asset('images/contract_innovation.webp') }}"  alt="{{ $solutions['innovative_image_alt'] ?? 'PU Flooring' }}">
-                                            <!-- <div class="overlay-box"></div> -->
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 px-4 order-1 order-md-2 py-md-5">
-                                        <div class="heading-holder pb-2 pb-md-4">
-                                            <h2 class="fw-bold">{{ $solutions['innovative_heading'] ?? 'Innovative Solutions for Contractors' }}</h2>
-                                        </div>
-                                         {!! $solutions['innovative_description'] ?? '<p>At RachTR, we understand the unique challenges and demands faced by contractors.</p><p><strong>Our Contractor Center</strong> offers a <strong>range of resources</strong> and <strong>expertise</strong> to help you achieve outstanding results with our advanced industrial solutions and products.</p><p>Our extensive portfolio of products includes advanced industrial flooring, construction chemicals, and surface care solutions tailored to meet the highest standards of quality, durability, and efficiency.</p>' !!}
+        <section class="contract-innvo innovation-solutions py-3 py-sm-5">
+            <div class="container">
+                <div class="row align-items-center">
+                        <div class="col-md-10">
+                            <div class="row d-flex flex-row-reverse">
+                                <div class="col-lg-6 order-2 order-md-1 py-3">
+                                    <div class="image-container">
+                                        <!-- <div class="background-box"></div> -->
+                                        <img src="{{ !empty($solutions['innovative_image']) ? asset('storage/' . $solutions['innovative_image']) : asset('images/contract_innovation.webp') }}"  alt="{{ $solutions['innovative_image_alt'] ?? 'PU Flooring' }}">
+                                        <!-- <div class="overlay-box"></div> -->
                                     </div>
                                 </div>
+                                <div class="col-lg-6 px-4 order-1 order-md-2 py-md-5">
+                                    <div class="heading-holder pb-2 pb-md-4">
+                                        <h2 class="fw-bold">{{ $solutions['innovative_heading'] ?? 'Innovative Solutions for Contractors' }}</h2>
+                                    </div>
+                                        {!! $solutions['innovative_description'] ?? '<p>At RachTR, we understand the unique challenges and demands faced by contractors.</p><p><strong>Our Contractor Center</strong> offers a <strong>range of resources</strong> and <strong>expertise</strong> to help you achieve outstanding results with our advanced industrial solutions and products.</p><p>Our extensive portfolio of products includes advanced industrial flooring, construction chemicals, and surface care solutions tailored to meet the highest standards of quality, durability, and efficiency.</p>' !!}
+                                </div>
                             </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- This is a section-7 open -->
+        <section class="architect-center comprnsive_solution py-5 mb-5">
+            <div class="container">
+
+                <div class="row g-0">
+                    <div class="cmp_solutn_heding ps-3 col-md-12 py-5">
+                        <h2 class="ps-3 fw-bold">Contractor se Seekho</h2>
                     </div>
                 </div>
-            </section>
 
-         <!-- This is a section-2 open -->
+                <div id="contractorVideoSlider"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                    data-bs-interval="5000">
+
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-4 justify-content-center">
+
+                                <div class="col-lg-4 col-md-4 col-12 text-center">
+                                    <video class="contractor-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/Rach tr Brief 2.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/Rach tr Brief 2.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-12 text-center">
+                                    <video class="contractor-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/RachTR EG 150-min.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/RachTR EG 150-min.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-12 text-center">
+                                    <video class="contractor-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/For_a_stronger_min.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/For_a_stronger_min.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <!-- <div class="carousel-item">
+                            <div class="row justify-content-center">
+
+                                <div class="col-lg-6 col-md-6 col-12 text-center">
+                                    <video class="contractor-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/RachTR EG 150-min.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/RachTR EG 150-min.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <!-- Previous Button -->
+                    <!-- <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#contractorVideoSlider"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button> -->
+
+                    <!-- Next Button -->
+                    <!-- <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#contractorVideoSlider"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button> -->
+
+                    <!-- Indicators -->
+                    <!-- <div class="carousel-indicators position-relative mt-4">
+                        <button type="button"
+                            data-bs-target="#contractorVideoSlider"
+                            data-bs-slide-to="0"
+                            class="active"></button>
+
+                        <button type="button"
+                            data-bs-target="#contractorVideoSlider"
+                            data-bs-slide-to="1"></button>
+
+                        <button type="button"
+                            data-bs-target="#contractorVideoSlider"
+                            data-bs-slide-to="2"></button>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </section>
+        <!-- This is a section-7 close -->
+
+
+
+        <!-- This is a section-8 open -->
+        <section class="architect-center comprnsive_solution py-5 mb-5">
+            <div class="container">
+
+                <div class="row g-0">
+                    <div class="cmp_solutn_heding ps-3 col-md-12 py-5">
+                        <h2 class="ps-3 fw-bold">Samvad Mazbooti Ka</h2>
+                    </div>
+                </div>
+
+                <div id="samvadVideoSlider"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                    data-bs-interval="5000">
+
+                    <div class="carousel-inner">
+
+                        <!-- ================= SLIDE 1 ================= -->
+                        <div class="carousel-item active">
+                            <div class="row g-4 justify-content-center">
+
+                                <div class="col-lg-4 col-md-4 col-12 text-center">
+                                    <video class="samvad-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/Rach tr Brief.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/Rach tr Brief.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-12 text-center">
+                                    <video class="samvad-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/Rach tr construction challenges-min.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/Rach tr construction challenges-min.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-12 text-center">
+                                    <video class="samvad-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/पत्थर_को_पीलेपन_से_बचाना_min.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/पत्थर_को_पीलेपन_से_बचाना_min.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ================= SLIDE 2 ================= -->
+                        <!-- <div class="carousel-item">
+                            <div class="row g-4 justify-content-center">
+
+                                <div class="col-lg-4 col-md-4 col-12 text-center">
+                                    <video class="samvad-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/Rach tr Brief.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/Rach tr Brief.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-12 text-center">
+                                    <video class="samvad-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/Rach tr construction challenges-min.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/Rach tr construction challenges-min.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-12 text-center">
+                                    <video class="samvad-video"
+                                        preload="none"
+                                        loop
+                                        autoplay
+                                        playsinline
+                                        muted>
+                                        <source src="{{ asset('videos/पत्थर_को_पीलेपन_से_बचाना_min.webm') }}" type="video/webm">
+                                        <source src="{{ asset('videos/पत्थर_को_पीलेपन_से_बचाना_min.mp4') }}" type="video/mp4">
+                                    </video>
+                                </div>
+
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                    <!-- Previous -->
+                    <!-- <button class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#samvadVideoSlider"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button> -->
+
+                    <!-- Next -->
+                    <!-- <button class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#samvadVideoSlider"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button> -->
+
+                    <!-- Indicators -->
+                    <!-- <div class="carousel-indicators position-relative mt-4">
+                        <button type="button"
+                                data-bs-target="#samvadVideoSlider"
+                                data-bs-slide-to="0"
+                                class="active"></button>
+
+                        <button type="button"
+                                data-bs-target="#samvadVideoSlider"
+                                data-bs-slide-to="1"></button>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </section>
+        <!-- This is a section-8 close -->
+
+        <!-- This is a section-2 open -->
          <section class="contract-sec our_strengths py-5">
             <div class="container">
                 <div class="row g-0">
@@ -226,7 +547,7 @@
                 </div>
             </div>
         </section>
-     <!-- This is a section-2 close -->
+        <!-- This is a section-2 close -->
 
 
      

@@ -11,7 +11,7 @@
         <div class="col-lg-12">
             <div class="banner-section">
                 <div class="image-wrapper">
-                    <img src="{{ !empty($banner['banner_image_desktop']) ? asset('storage/' . $banner['banner_image_desktop']) : asset('images/puFloor-bg.webp') }}" alt="img background" class="d-none d-md-block">
+                    <img src="{{ !empty($banner['banner_image_desktop']) ? asset('storage/' . $banner['banner_image_desktop']) : asset('images/PU-Flooring-Banner-Image.webp') }}" alt="img background" class="d-none d-md-block">
                     <img src="{{ !empty($banner['banner_image_mobile']) ? asset('storage/' . $banner['banner_image_mobile']) : asset('images/loor_mob_bg.webp') }}" alt="img background" class=" d-block d-md-none">
                 </div>
                 <div class="heading-holder">
@@ -44,12 +44,12 @@
                                             <p>Polyurethane (PU) coating is essentially a type of plastic material or polymer that is formed by combining polyols with diisocyanates through the use of necessary catalysts or additives.</p>
                                             <p>Polyurethane coating is an excellent way to add strength and beauty to the floor of our homes, offices, and manufacturing plants.</p>
                                             <p>Polyurethane coating is an excellent solution for floors that need to be waterproof, stain-resistant, or slip-resistant.</p>
-                                            <h5 class="fw-bold">VARIANTS OF PU FLOORING</h5>
+                                            <!-- <h5 class="fw-bold">VARIANTS OF PU FLOORING</h5>
                                             <ul class="d-flex flex-column ms-3">
                                                 <li class="m-0 text-start"><strong>Normal PU Flooring</strong></li>
                                                 <li class="m-0 text-start"><strong>PU Concrete</strong></li>
                                                 <li class="m-0 text-start"><strong>Poly Urea Flooring</strong></li>
-                                            </ul>
+                                            </ul> -->
                                         @endif
                                     </div>
                                 </div>
@@ -57,6 +57,34 @@
                     </div>
                 </div>
             </section>
+
+        <section class="product-card-section py-5" style="background-color: {{ $section['bg_color'] ?? '#ffffff' }};">
+            <div class="container">
+                <div class="row justify-content-center gap-5">
+                    <h2 class="fs-1 fw-bold text-center">PU FLOORING PRODUCTS</h2>
+                        <div class="col-lg-9 px-5">
+                            <div class="row align-items-center product-card">
+                                <div class="col-md-6">
+                                    <div class="product-image-wrapper">
+                                        <img src="{{ asset('storage/01KWVA970HE77GK8CYKVT147E4.png') }}" alt="RachTR PU-CEM20">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="product-details">
+                                        <h2 class="product-title">RachTR PU-CEM20</h2>
+                                        <p class="product-description product-strip">
+                                            RachTR PU-CEM20 is a four-component polyurethane-concrete floor system. This flowable system is applied at a thickness of 6–9 mm and forms a smooth surface.
+                                            RachTR PU-CEM20 is extremely tough and has many physical properties that exceed those of typical concrete.
+                                        </p>
+                                        <a href="{{ route('product.page', ['slug' => 'rachtr-pu-cem20']) }}" class="btn btn-orange">READ MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                </div>
+            </div>
+        </section>
 
         <section class="flooring-section">
             <div class="container-fluid p-0 px-md-4">
