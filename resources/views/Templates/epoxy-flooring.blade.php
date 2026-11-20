@@ -223,7 +223,7 @@ $pageContent = $page->content ?? [];
                                                             </svg>
                                                         </div>
                                                         <h3>Anti Static</h3>
-                                                        <p>RachTR's anti-static properties reduce static build-up, ideal for areas where static discharge can be a concern.
+                                                        <p>RachTR's anti-static properties reduce static build-up, ideal for areas where static discharge can be a concern
                     
                                                         </p>
                                                     </div>
