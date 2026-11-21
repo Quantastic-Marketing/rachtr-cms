@@ -66,7 +66,8 @@
                             <div class="row align-items-center product-card">
                                 <div class="col-md-6">
                                     <div class="product-image-wrapper">
-                                        <img src="{{ asset('storage/01KWVA970HE77GK8CYKVT147E4.png') }}" alt="RachTR PU-CEM20">
+                                       {{-- <img src="{{ asset('storage/01KWVA970HE77GK8CYKVT147E4.png') }}" alt="RachTR PU-CEM20">--}}
+                                       <img src="{{ asset('storage/pu_flooring_rachtr_pu_cem.webp') }}" alt="RachTR PU-CEM20">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
