@@ -2249,7 +2249,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                         of our products in various construction projects.:</p>
                                 </div>
                                 <div class="res_dev_btn col-lg-3 col-md-3 col-sm-12 pt-4 me-1">
-                                    <a href="{{ config('app.url') . 'blogs' }}"
+                                    <a href="{{ config('app.url') . '/blogs' }}"
                                         target="_blank">VIEW ALL</a>
                                 </div>
                                 <i class="clear"></i>
@@ -2485,7 +2485,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                             which is exorbitantly high.</p>
                                         <p class="pb-5 mb-5">Problem starts immediately and keep on coming at regular
                                             intervals upto 2-3 years which is a...</p>
-                                        <a href="{{ config('app.url') . 'blogs' }}" target="_blank">View Case Study</a>
+                                        <a href="{{ config('app.url') . '/blogs' }}" target="_blank">View Case Study</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-7 col-md-12">
@@ -2503,7 +2503,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                                 </li>
                                                 <li class="rotate-90">
                                                     <div class="icon py-2">
-                                                        <a href="{{ config('app.url') . 'blogs' }}">
+                                                        <a href="{{ config('app.url') . '/blogs' }}">
                                                             <svg preserveAspectRatio="none" data-bbox="20 20 160 160" viewBox="20 20 160 160" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="shape" role="presentation" aria-hidden="true" aria-label="">
                                                                 <g>
                                                                     <path d="M100 20c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80zm35.533 91.251l-30.37 28.03a7.27 7.27 0 0 1-2.264 1.434 7.221 7.221 0 0 1-2.697.515c-.066 0-.135 0-.203-.003-1.836.038-3.688-.587-5.144-1.931L64.468 111.25a7.292 7.292 0 0 1-.413-10.305 7.291 7.291 0 0 1 10.305-.413l18.547 17.118V59.185a7.293 7.293 0 1 1 14.586 0v58.098l18.148-16.749a7.293 7.293 0 0 1 9.892 10.717z" clip-rule="evenodd" fill-rule="evenodd"></path>
@@ -2586,7 +2586,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                             and precision-aligned white lines.</p>
                                         <p class="pb-2 mb-2">Read more to know how we successfully delivered complex
                                             flooring for Escorts Kubota in record time</p>
-                                        <a href="{{ config('app.url') . 'blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}"
+                                        <a href="{{ config('app.url') . '/blogs/industrial-epoxy-flooring-in-just-3-days-for-escorts-kubota'}}"
                                             target="_blank">View Case Study</a>
                                     </div>
                                 </div>
