@@ -367,7 +367,7 @@ $pageContent = $page->content ?? [];
         </div>
 
          <!-- This is a section-2 open -->
-        <section class="architect-our our-industries our_strengths py-5">
+        <!-- <section class="architect-our our-industries our_strengths py-5">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
@@ -567,7 +567,9 @@ $pageContent = $page->content ?? [];
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+        
         <!-- This is a section-2 close -->
          <!-- @if(!empty($pageContent['blogs'])) -->
             <!-- <section class="blogs epoxy-blogs bg-white">
