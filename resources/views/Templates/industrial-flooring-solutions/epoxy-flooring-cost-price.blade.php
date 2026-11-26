@@ -358,7 +358,7 @@
                                                         </g>
                                                     </svg>
                                                 </div>
-                                                <p>Surface preperation or treatment cost</p> 
+                                                <p>Surface preparation or treatment cost</p> 
                                             </div>
                                         @endforelse
                                     </div> 

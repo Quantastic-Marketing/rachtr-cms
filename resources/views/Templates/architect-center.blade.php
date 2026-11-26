@@ -2686,7 +2686,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
 
         <!-- This is a section-2 open -->
-        <section class="architect-our our-industries our_strengths py-5">
+        <!-- <section class="architect-our our-industries our_strengths py-5">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-10 col-md-10 col-sm-12">
@@ -2886,7 +2886,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- This is a section-2 close -->
 
         <div class="collaboration colab-arch">
